@@ -1,0 +1,381 @@
+{"pair_id": "surg-2020-002|expo-2021-092", "verdict": "same", "confidence": "high", "reason": "Both on accelerated dynamic average consensus algorithms; Expo tests their performance."}
+{"pair_id": "surg-2020-004|expo-2021-002", "verdict": "same", "confidence": "high", "reason": "Both study sibling influence on language development; Expo specifies bilingual homes."}
+{"pair_id": "surg-2020-007|expo-2021-095", "verdict": "same", "confidence": "high", "reason": "Both are a case study of New York's climate legislation (CLCPA)."}
+{"pair_id": "surg-2020-016|expo-2023-005", "verdict": "unrelated", "confidence": "low", "reason": "Grant on immune responses; Expo on TSC2 variant classification for tuberous sclerosis, no shared entity."}
+{"pair_id": "surg-2020-034|expo-2021-009", "verdict": "same", "confidence": "high", "reason": "Near-identical titles on Ovid's Epistulae ex Ponto and writing nostalgia."}
+{"pair_id": "surg-2020-034|expo-2021-132", "verdict": "same", "confidence": "high", "reason": "Graphic novel explicitly based on the grant-funded study of Epistulae ex Ponto and nostalgia."}
+{"pair_id": "surg-2020-045|expo-2021-100", "verdict": "same", "confidence": "high", "reason": "Both develop a vesicle-based potassium-specific sensor."}
+{"pair_id": "surg-2020-049|expo-2021-012", "verdict": "related", "confidence": "low", "reason": "Both use GANs and Expo cites SURG funding, but Expo is image classification with AC-GANs, not brain graph structure."}
+{"pair_id": "surg-2020-053|expo-2022-010", "verdict": "related", "confidence": "low", "reason": "Grant on Alzheimer's fibril growth; Expo on a proteostasis probe for endocytosis under protein aggregation."}
+{"pair_id": "surg-2020-057|expo-2021-101", "verdict": "related", "confidence": "low", "reason": "Expo extends prior research on Chilean women in the 1988 plebiscite into a Pinochet-Trump comparison."}
+{"pair_id": "surg-2020-065|expo-2021-020", "verdict": "same", "confidence": "high", "reason": "Both on asymmetric systems producing symmetric/stable states (converse symmetry breaking)."}
+{"pair_id": "surg-2020-069|expo-2022-063", "verdict": "unrelated", "confidence": "high", "reason": "Grant on Muslim/Jewish sitcom representation; Expo is a short film on surveillance capitalism."}
+{"pair_id": "surg-2020-071|expo-2022-064", "verdict": "same", "confidence": "high", "reason": "Both identify splice factors driving SCN1A poison exon inclusion."}
+{"pair_id": "surg-2020-072|expo-2021-022", "verdict": "same", "confidence": "high", "reason": "Both study reasons for exercise, body image and mood in women."}
+{"pair_id": "surg-2020-073|expo-2021-023", "verdict": "same", "confidence": "low", "reason": "Bright lab rs-fMRI with breathing (CO2) modulation and SURG cited, but Expo estimates hemodynamic lag rather than denoising CO2 fluctuations."}
+{"pair_id": "surg-2020-085|expo-2022-015", "verdict": "related", "confidence": "low", "reason": "Same Hofstenia niche-signaling work (TGF-beta family, which follistatin antagonizes), but Expo more likely reports the 2021 receptor-signaling grant."}
+{"pair_id": "surg-2020-085|expo-2023-018", "verdict": "related", "confidence": "high", "reason": "Same Hofstenia lab, but Expo quantifies opsin+ neurons in head regeneration, not follistatin signaling."}
+{"pair_id": "surg-2020-097|expo-2021-035", "verdict": "same", "confidence": "low", "reason": "Rapp lab, SURG cited; Expo tests whether accuracy judgments reduce reproduction of false information, a neighbor of the illusory truth effect, not that effect itself."}
+{"pair_id": "surg-2020-106|expo-2021-037", "verdict": "same", "confidence": "high", "reason": "Both on Irish language revitalization."}
+{"pair_id": "surg-2020-109|expo-2021-039", "verdict": "same", "confidence": "high", "reason": "Both on intramolecular hydrogen bonding effects, in phenolic Mannich bases."}
+{"pair_id": "surg-2020-110|expo-2021-040", "verdict": "related", "confidence": "low", "reason": "Same Rapp lab misinformation work cited as SURG-funded, but abstract measures reasons for liking/sharing, not individual differences."}
+{"pair_id": "surg-2020-125|expo-2021-110", "verdict": "same", "confidence": "low", "reason": "Schmidt lab looming-stimulus threat paradigm, SURG cited; Expo is a circuit study and does not describe developing the test."}
+{"pair_id": "surg-2020-137|expo-2021-113", "verdict": "related", "confidence": "low", "reason": "Both use TMR during sleep in Paller lab, but grant targets problem-solving while Expo induces lucid dreaming."}
+{"pair_id": "surg-2020-139|expo-2022-094", "verdict": "same", "confidence": "high", "reason": "Both develop a new selective ornithine aminotransferase (OAT) inactivator."}
+{"pair_id": "surg-2020-144|expo-2021-053", "verdict": "same", "confidence": "high", "reason": "Both observe bilingual book sharing in Latino families (Leyendo Juntos)."}
+{"pair_id": "surg-2020-145|expo-2021-054", "verdict": "same", "confidence": "high", "reason": "Both on melanopsin/ipRGC role in threat learning/anticipation in mice."}
+{"pair_id": "surg-2020-146|expo-2021-056", "verdict": "same", "confidence": "high", "reason": "Both on meaning and efficacy of Traditional Chinese Medicine."}
+{"pair_id": "surg-2020-150|expo-2021-059", "verdict": "same", "confidence": "high", "reason": "Both on gut microbiome and immune/inflammation changes during pregnancy."}
+{"pair_id": "surg-2020-150|expo-2022-020", "verdict": "related", "confidence": "high", "reason": "Same Amato lab gut microbiome work, but Expo studies Hepatitis-B in chimpanzees, not pregnancy."}
+{"pair_id": "surg-2020-154|expo-2021-061", "verdict": "same", "confidence": "low", "reason": "Yoshida lab Maze reading study, SURG cited; Expo tests grammatical sensitivity and only touches prediction in its conclusion."}
+{"pair_id": "surg-2020-156|expo-2021-117", "verdict": "same", "confidence": "low", "reason": "Vague grant title 'Parents and Language'; Expo on parent-toddler joint engagement and vocabulary, SURG cited."}
+{"pair_id": "surg-2020-159|expo-2021-062", "verdict": "related", "confidence": "low", "reason": "Both target MEK4 in Scheidt lab, but grant is PROTAC degradation while Expo synthesizes MEK4 inhibitors."}
+{"pair_id": "surg-2020-166|expo-2021-064", "verdict": "same", "confidence": "high", "reason": "Both on crack formation in drying colloidal drops; Expo builds the image analysis."}
+{"pair_id": "surg-2020-167|expo-2021-065", "verdict": "same", "confidence": "high", "reason": "Both on Hindu nationalism among the Indian American diaspora."}
+{"pair_id": "surg-2020-171|expo-2023-089", "verdict": "related", "confidence": "low", "reason": "Vague grant on characterizing mental illnesses; Expo 3 years later on reward brain function in depression."}
+{"pair_id": "surg-2020-175|expo-2021-066", "verdict": "same", "confidence": "high", "reason": "Identical title: who can be body positive on Instagram."}
+{"pair_id": "surg-2020-175|expo-2022-105", "verdict": "same", "confidence": "high", "reason": "Same title and study of body positivity Instagram posts by model race and size."}
+{"pair_id": "surg-2020-192|expo-2021-137", "verdict": "unrelated", "confidence": "high", "reason": "Grant is an ASD-representation animated short; Expo is an animated Thai folktale adaptation."}
+{"pair_id": "surg-2020-194|expo-2021-070", "verdict": "related", "confidence": "low", "reason": "Both on lipid vesicles for drug delivery in Kamat lab, but Expo studies Ni-NTA nonspecific binding, not pH sensitivity."}
+{"pair_id": "surg-2020-199|expo-2021-138", "verdict": "related", "confidence": "high", "reason": "Both musicals by the same writer, but different works (anxiety disorders musical vs A Bridge to the Moon)."}
+{"pair_id": "surg-2020-200|expo-2022-034", "verdict": "same", "confidence": "high", "reason": "Abstract covers both aims of the continuing cell-free glycoconjugate vaccine project: PglB engineering and in vitro thermostable production."}
+{"pair_id": "surg-2020-202|expo-2022-121", "verdict": "related", "confidence": "low", "reason": "Both on self-assembling molecules in Stupp lab, but Expo is chondrogenic peptide amphiphiles with no IR study."}
+{"pair_id": "surg-2020-202|expo-2023-094", "verdict": "related", "confidence": "low", "reason": "Both on self-assembling molecules in Stupp lab, but Expo is chondrogenic peptide amphiphiles with no IR study."}
+{"pair_id": "surg-2020-205|expo-2021-075", "verdict": "related", "confidence": "low", "reason": "Both auditory, but grant is an optical cochlear implant and Expo is spontaneous AMPA activity in avian auditory neurons."}
+{"pair_id": "surg-2020-209|expo-2021-077", "verdict": "same", "confidence": "high", "reason": "Expo studies how viewers segment and cluster data across chart types, matching the grant's grouping focus; cites SURG."}
+{"pair_id": "surg-2020-219|expo-2022-125", "verdict": "related", "confidence": "low", "reason": "Both on vehicle electrification in Horton lab, but Expo models 30% light-duty fleet air quality, not ride-share."}
+{"pair_id": "surg-2020-220|expo-2021-083", "verdict": "same", "confidence": "high", "reason": "Both on non-native accented speech and preschoolers' language comprehension."}
+{"pair_id": "surg-2020-235|expo-2021-089", "verdict": "same", "confidence": "high", "reason": "Both on food cues and the DMNV in brain-to-gut communication."}
+{"pair_id": "surg-2020-235|expo-2022-133", "verdict": "related", "confidence": "high", "reason": "Expo is a follow-up using gustatory cues after earlier SURG work on visual/olfactory cues."}
+{"pair_id": "surg-2020-246|expo-2021-130", "verdict": "same", "confidence": "high", "reason": "Both on emoji use in interpreting text messages."}
+{"pair_id": "surg-2021-022|expo-2024-022", "verdict": "related", "confidence": "low", "reason": "Rogers lab skin devices, but grant on thermally sensitive adhesives and Expo on transepidermal water loss collection."}
+{"pair_id": "surg-2021-025|expo-2022-046", "verdict": "same", "confidence": "high", "reason": "Both on dual hearing loss and cognitive impairment as dementia risk."}
+{"pair_id": "surg-2021-026|expo-2022-052", "verdict": "same", "confidence": "high", "reason": "Both on women Chinese students' experiences in US colleges."}
+{"pair_id": "surg-2021-029|expo-2022-145", "verdict": "related", "confidence": "low", "reason": "Both on Midwest Asian Americans, but grant on APIDA political coalitions and Expo is a femme/queer narratives zine."}
+{"pair_id": "surg-2021-031|expo-2022-053", "verdict": "same", "confidence": "high", "reason": "Both optimize potent nNOS inhibitors in Silverman lab."}
+{"pair_id": "surg-2021-039|expo-2022-005", "verdict": "same", "confidence": "low", "reason": "Grant title is a fragment ('Identification of possible relationship'); Expo on asthma mortality vs environmental and social factors one year later."}
+{"pair_id": "surg-2021-046|expo-2021-015", "verdict": "same", "confidence": "high", "reason": "Expo is the SURG-funded plan for interviews on gendered and racialized experiences of GQNB students, the grant's exact topic."}
+{"pair_id": "surg-2021-046|expo-2022-009", "verdict": "same", "confidence": "high", "reason": "Expo reports summer 2021 interviews with GQNB students on gender and race."}
+{"pair_id": "surg-2021-051|expo-2022-057", "verdict": "same", "confidence": "low", "reason": "Grant title 'Beyond the Flannel' only implies queer appearance; Expo on presentation and labelling of sexual identity."}
+{"pair_id": "surg-2021-054|expo-2022-012", "verdict": "same", "confidence": "high", "reason": "Both on learning disabilities and children's media."}
+{"pair_id": "surg-2021-069|expo-2022-065", "verdict": "same", "confidence": "high", "reason": "Expo reports summer 2021 study of COVID-19 and education."}
+{"pair_id": "surg-2021-075|expo-2022-141", "verdict": "same", "confidence": "high", "reason": "Expo play explicitly from the URG-funded income inequality play project."}
+{"pair_id": "surg-2021-076|expo-2022-014", "verdict": "same", "confidence": "high", "reason": "Both on LED adoption and public health/air quality."}
+{"pair_id": "surg-2021-085|expo-2022-015", "verdict": "same", "confidence": "low", "reason": "Vague grant on receptor signaling; Expo finds TGF-beta homolog niche signals in Hofstenia regeneration without naming receptors."}
+{"pair_id": "surg-2021-085|expo-2023-018", "verdict": "related", "confidence": "high", "reason": "Same Hofstenia lab, but Expo is on opsin+ neuron scaling in head regeneration."}
+{"pair_id": "surg-2021-088|expo-2022-069", "verdict": "same", "confidence": "high", "reason": "Both on queer Ugandan migration."}
+{"pair_id": "surg-2021-090|expo-2021-029", "verdict": "same", "confidence": "high", "reason": "Both on early limb movements of infants with cerebral palsy in the Moulton/Peyton lab."}
+{"pair_id": "surg-2021-090|expo-2022-070", "verdict": "same", "confidence": "high", "reason": "Both on early movement patterns in infants with cerebral palsy."}
+{"pair_id": "surg-2021-091|expo-2021-031", "verdict": "related", "confidence": "high", "reason": "Both on bacterial microcompartments, but grant on naming protein domains and Expo on an assembly counting pipeline."}
+{"pair_id": "surg-2021-092|expo-2022-072", "verdict": "same", "confidence": "low", "reason": "Broad grant on film and the US racial landscape; Expo is a specific argument about 'Black trauma porn' as Black horror."}
+{"pair_id": "surg-2021-098|expo-2022-076", "verdict": "same", "confidence": "low", "reason": "Grant title truncated ('Intersectionality Between Gut Microbiome'); Expo on spaceflight gut microbiome shifts, no intersection named."}
+{"pair_id": "surg-2021-102|expo-2022-080", "verdict": "same", "confidence": "high", "reason": "Both on chemotherapy (oxaliplatin) effects on proprioception/force matching."}
+{"pair_id": "surg-2021-103|expo-2021-036", "verdict": "related", "confidence": "low", "reason": "Both in Geraci short-range force experiment, but Expo calibrates surface separation rather than source mass, and predates the grant."}
+{"pair_id": "surg-2021-105|expo-2022-081", "verdict": "same", "confidence": "high", "reason": "Both on caregiver internal state (feelings) language and child language."}
+{"pair_id": "surg-2021-107|expo-2021-043", "verdict": "same", "confidence": "high", "reason": "Both on the Tyo lab split-protein circuit for disease biomarker diagnostics; Expo models the same network."}
+{"pair_id": "surg-2021-107|expo-2022-018", "verdict": "same", "confidence": "high", "reason": "Both on split adenylate cyclase protein circuits for disease diagnostics."}
+{"pair_id": "surg-2021-109|expo-2021-041", "verdict": "unrelated", "confidence": "high", "reason": "Grant on pleated origami strength; Expo on circadian timing of sugar and exercise in mice, likely a different Christopher Lee."}
+{"pair_id": "surg-2021-117|expo-2022-084", "verdict": "related", "confidence": "low", "reason": "Both on data visualization, but grant on visual diversity and Expo on visualizations augmenting refutation texts."}
+{"pair_id": "surg-2021-131|expo-2022-089", "verdict": "unrelated", "confidence": "high", "reason": "Grant on social media mindsets; Expo on families' spatial talk during construction play."}
+{"pair_id": "surg-2021-131|expo-2023-022", "verdict": "related", "confidence": "low", "reason": "Both on evaluating social media content, but Expo two years later tests refutation replies to false tweets."}
+{"pair_id": "surg-2021-132|expo-2021-048", "verdict": "same", "confidence": "low", "reason": "Same thread-painted Mississippi landscape practice, but Expo predates the grant and was funded by an AYURG; grant may be a new series."}
+{"pair_id": "surg-2021-132|expo-2021-135", "verdict": "same", "confidence": "high", "reason": "Expo is the threadpainted landscape artwork matching grant 'Threadpainting Light'."}
+{"pair_id": "surg-2021-136|expo-2022-093", "verdict": "same", "confidence": "high", "reason": "Both on the Super Elongation Complex in epidermal differentiation."}
+{"pair_id": "surg-2021-139|expo-2021-047", "verdict": "unrelated", "confidence": "high", "reason": "Grant on ocular imaging of DME; Expo on race in chautauqua entertainment."}
+{"pair_id": "surg-2021-145|expo-2022-098", "verdict": "same", "confidence": "high", "reason": "Both on incubation periods (sleep/awake) and creative problem solving."}
+{"pair_id": "surg-2021-148|expo-2022-099", "verdict": "same", "confidence": "high", "reason": "Both on body positivity in the ballet industry."}
+{"pair_id": "surg-2021-151|expo-2022-024", "verdict": "same", "confidence": "high", "reason": "Same title, Postcolonial Prestige, on Sri Lankan literary prizes."}
+{"pair_id": "surg-2021-156|expo-2022-106", "verdict": "same", "confidence": "high", "reason": "Both on categorizing NYC's Riverside Park."}
+{"pair_id": "surg-2021-157|expo-2024-130", "verdict": "related", "confidence": "low", "reason": "Both on sorbent materials in environmental engineering, but grant tests DWTR and Expo uses manganese oxides for metals, 3 years later."}
+{"pair_id": "surg-2021-165|expo-2022-029", "verdict": "same", "confidence": "high", "reason": "Both on American portrayals of Colombian immigrants."}
+{"pair_id": "surg-2021-165|expo-2022-143", "verdict": "related", "confidence": "high", "reason": "Same student's Colombian theme, but Expo is a short story about Cali protests, not the immigration portrayal research."}
+{"pair_id": "surg-2021-168|expo-2022-115", "verdict": "same", "confidence": "high", "reason": "Both on basal ganglia connectivity in primary progressive aphasia."}
+{"pair_id": "surg-2021-174|expo-2022-033", "verdict": "same", "confidence": "high", "reason": "Both on machine learning detection of SCLC cell phenotypes."}
+{"pair_id": "surg-2021-174|expo-2023-030", "verdict": "unrelated", "confidence": "high", "reason": "Expo is a healthcare education pipeline program, unrelated to SCLC ML."}
+{"pair_id": "surg-2021-176|expo-2022-034", "verdict": "same", "confidence": "high", "reason": "Both on thermostable cell-free glycoconjugate vaccine synthesis."}
+{"pair_id": "surg-2021-181|expo-2022-036", "verdict": "same", "confidence": "high", "reason": "Both on Italian immigrants in Argentina drawing on tango; Expo emphasizes social liminality."}
+{"pair_id": "surg-2021-185|expo-2022-037", "verdict": "same", "confidence": "low", "reason": "Kanatzidis lab low-dimensional lead halides, but grant says 2D perovskites while Expo reports a 0D structure."}
+{"pair_id": "surg-2021-188|expo-2021-122", "verdict": "unrelated", "confidence": "high", "reason": "Grant on product characteristics and price recall; Expo on COVID-19 vaccine attitudes among Native people."}
+{"pair_id": "surg-2021-190|expo-2022-123", "verdict": "same", "confidence": "high", "reason": "Both on family/parenting and child aggression and externalizing psychopathology in Tackett lab."}
+{"pair_id": "surg-2021-199|expo-2022-128", "verdict": "same", "confidence": "high", "reason": "Both synthesize water-soluble dynamic Weak-Link Approach complexes."}
+{"pair_id": "surg-2021-205|expo-2022-038", "verdict": "same", "confidence": "high", "reason": "Both on simultaneous rheology and electrical measurement (rheoelectric) of carbon suspensions."}
+{"pair_id": "surg-2022-004|expo-2023-019", "verdict": "same", "confidence": "high", "reason": "Both on thermal preference adaptation in Drosophila."}
+{"pair_id": "surg-2022-006|expo-2024-006", "verdict": "same", "confidence": "high", "reason": "Both on musical tempo and imagined narratives during listening."}
+{"pair_id": "surg-2022-013|expo-2025-012", "verdict": "unrelated", "confidence": "high", "reason": "Grant is a podcast on Gen Z politicians; Expo is community wildfire response."}
+{"pair_id": "surg-2022-015|expo-2023-003", "verdict": "same", "confidence": "high", "reason": "Both on the modernist/vanguard portrait of Isabel (Chabela) Villasenor."}
+{"pair_id": "surg-2022-019|expo-2023-046", "verdict": "related", "confidence": "low", "reason": "Same Leonard synthetic biology lab, but Expo is flow cytometry analysis software, not model-designed cells."}
+{"pair_id": "surg-2022-021|expo-2025-017", "verdict": "unrelated", "confidence": "high", "reason": "Grant on influencer marketing and tourism; Expo on beauty work and body image."}
+{"pair_id": "surg-2022-032|expo-2023-010", "verdict": "same", "confidence": "high", "reason": "Both on increasing African-American representation in precision medicine via methylation and gene expression analyses."}
+{"pair_id": "surg-2022-032|expo-2024-027", "verdict": "same", "confidence": "high", "reason": "Later version of the same African-American methylation and gene expression (methQTL/eQTM) precision medicine project."}
+{"pair_id": "surg-2022-033|expo-2022-049", "verdict": "related", "confidence": "low", "reason": "Same phosphorylation-code question, but grant names mGluR3 while Expo studies mGluR2."}
+{"pair_id": "surg-2022-036|expo-2022-051", "verdict": "same", "confidence": "low", "reason": "Hartmann lab copper surface antimicrobial efficacy, but Expo has no textiles and predates the grant summer."}
+{"pair_id": "surg-2022-043|expo-2024-035", "verdict": "same", "confidence": "high", "reason": "Both analyze K-pop musical elements including chord progressions."}
+{"pair_id": "surg-2022-044|expo-2022-138", "verdict": "related", "confidence": "low", "reason": "Same classics student, but Expo is digital art of Helen and Menelaus, not Phaedra."}
+{"pair_id": "surg-2022-044|expo-2023-012", "verdict": "related", "confidence": "low", "reason": "Same classics student, but Expo is on fire imagery in Statius' Achilleid, not Phaedra."}
+{"pair_id": "surg-2022-044|expo-2024-036", "verdict": "related", "confidence": "low", "reason": "Same classics student, but Expo is on slavery in Macrobius and Augustine, not Phaedra."}
+{"pair_id": "surg-2022-049|expo-2025-048", "verdict": "unrelated", "confidence": "high", "reason": "Grant on education integration discourse; Expo on Kentucky coal heritage narratives."}
+{"pair_id": "surg-2022-051|expo-2023-055", "verdict": "same", "confidence": "high", "reason": "Both on narratives of mental vs physical health in McAdams lab."}
+{"pair_id": "surg-2022-051|expo-2024-042", "verdict": "same", "confidence": "high", "reason": "Both on self-conceptualized mental vs physical health narratives in McAdams lab."}
+{"pair_id": "surg-2022-056|expo-2022-008", "verdict": "same", "confidence": "low", "reason": "Phillips lab physical activity intervention, but Expo is Fit2ThriveMB for metastatic breast cancer, only 55% on chemotherapy, and predates grant summer."}
+{"pair_id": "surg-2022-058|expo-2022-055", "verdict": "related", "confidence": "low", "reason": "Both on echocardiographic strain, but Expo reconstructs strain data rather than predicting heart failure."}
+{"pair_id": "surg-2022-062|expo-2024-048", "verdict": "unrelated", "confidence": "high", "reason": "Grant on education crowdfunding; Expo on cottagecore and eighteenth-century art."}
+{"pair_id": "surg-2022-063|expo-2021-014", "verdict": "unrelated", "confidence": "high", "reason": "Grant on NFL team building; Expo on symbolic exchanges in Portuguese conversation."}
+{"pair_id": "surg-2022-063|expo-2022-056", "verdict": "unrelated", "confidence": "high", "reason": "Grant on NFL team building; Expo on assortative mating and income inequality in Brazil."}
+{"pair_id": "surg-2022-063|expo-2023-056", "verdict": "unrelated", "confidence": "high", "reason": "Grant on NFL team building; Expo on restaurant employment and business cycles."}
+{"pair_id": "surg-2022-065|expo-2025-058", "verdict": "unrelated", "confidence": "high", "reason": "Grant on adaptive optics for exoplanets; Expo on floodplain carbon sequestration."}
+{"pair_id": "surg-2022-067|expo-2023-058", "verdict": "same", "confidence": "high", "reason": "Both on itch mechanisms in RDEB mouse model involving mast cells and neurons (DRG)."}
+{"pair_id": "surg-2022-076|expo-2022-059", "verdict": "unrelated", "confidence": "high", "reason": "Grant on Mandarin grammaticality illusions; Expo on language use in the film Yi Yi."}
+{"pair_id": "surg-2022-076|expo-2023-064", "verdict": "related", "confidence": "low", "reason": "Both Mandarin syntax in Yoshida lab, but Expo is on locative constructions, not grammaticality illusions."}
+{"pair_id": "surg-2022-078|expo-2022-061", "verdict": "same", "confidence": "high", "reason": "Same team and title on environmental injustice and heavy metals in Chicago."}
+{"pair_id": "surg-2022-078|expo-2023-088", "verdict": "same", "confidence": "high", "reason": "Same team and title on environmental injustice and heavy metals in Chicago."}
+{"pair_id": "surg-2022-080|expo-2025-070", "verdict": "related", "confidence": "low", "reason": "Both on Indigenous water relations, but Expo 3 years later is a wild rice hydrologic study, not youth education."}
+{"pair_id": "surg-2022-087|expo-2023-015", "verdict": "unrelated", "confidence": "high", "reason": "Grant on a PPSU/MNS theranostic device; Expo on cell-free CO2 conversion to acetyl-CoA."}
+{"pair_id": "surg-2022-089|expo-2024-062", "verdict": "same", "confidence": "high", "reason": "Same title on the mechanism of TLR4 signal induction."}
+{"pair_id": "surg-2022-093|expo-2024-064", "verdict": "unrelated", "confidence": "high", "reason": "Grant on SET3C and INO1 transcriptional memory; Expo on Medicaid coverage of GLP-1 drugs."}
+{"pair_id": "surg-2022-099|expo-2024-067", "verdict": "same", "confidence": "low", "reason": "Richards lab battery coatings two years later; Expo is processing-structure of coatings, grant title 'holistic analysis of electrodes' is broad."}
+{"pair_id": "surg-2022-100|expo-2023-017", "verdict": "same", "confidence": "high", "reason": "Grant 'Polymer Science: Curing the Incurable'; Expo on Gianneschi protein-like polymers for incurable neurodegenerative disease."}
+{"pair_id": "surg-2022-101|expo-2023-070", "verdict": "related", "confidence": "low", "reason": "Both on fMRI brain networks in Gratton lab, but Expo is on spatial smoothing in prefrontal cortex, not aging."}
+{"pair_id": "surg-2022-107|expo-2024-075", "verdict": "unrelated", "confidence": "high", "reason": "Grant on native plants and bees; Expo on sea turtle nest microclimate."}
+{"pair_id": "surg-2022-111|expo-2023-072", "verdict": "same", "confidence": "high", "reason": "Expo tests D1/D2 striatal mechanisms of psychosis symptoms beyond D2 antipsychotic targets; same project as the student's 2023 grant."}
+{"pair_id": "surg-2022-112|expo-2021-030", "verdict": "unrelated", "confidence": "high", "reason": "Expo on household survey definitions, unrelated to Drosophila Akh/Hh; likely a different person (Minsoo)."}
+{"pair_id": "surg-2022-112|expo-2024-076", "verdict": "same", "confidence": "high", "reason": "Expo abstract assays AKH and Hh pathway effects on fat body calcium levels, the grant's exact topic despite the broader title."}
+{"pair_id": "surg-2022-116|expo-2023-078", "verdict": "same", "confidence": "high", "reason": "Both on alcohol laws and Northwestern campus drinking culture."}
+{"pair_id": "surg-2022-128|expo-2023-021", "verdict": "unrelated", "confidence": "high", "reason": "Grant on busking; Expo is an autoethnography of activism."}
+{"pair_id": "surg-2022-134|expo-2023-085", "verdict": "unrelated", "confidence": "high", "reason": "Grant on brain-behavior links to responsiveness; Expo on minority participation in Parkinson's research."}
+{"pair_id": "surg-2022-135|expo-2024-106", "verdict": "same", "confidence": "high", "reason": "Both on Chinese loans/investments in Kenya."}
+{"pair_id": "surg-2022-136|expo-2022-091", "verdict": "related", "confidence": "low", "reason": "Both plausibly plastic surgery work, but grant is an educational video guide and Expo studies diabetes and wound complications."}
+{"pair_id": "surg-2022-144|expo-2023-026", "verdict": "same", "confidence": "high", "reason": "Both on peptide amphiphile spread in the brain after injection."}
+{"pair_id": "surg-2022-145|expo-2023-087", "verdict": "same", "confidence": "low", "reason": "Gurari lab tactile deficits post-stroke, but Expo is a scoping review of assessments rather than a study of signal flow."}
+{"pair_id": "surg-2022-150|expo-2022-101", "verdict": "same", "confidence": "high", "reason": "Both on synthesis of plasmonic copper photocatalysts."}
+{"pair_id": "surg-2022-153|expo-2022-103", "verdict": "same", "confidence": "high", "reason": "Same title on measuring risk-sharing in Thailand."}
+{"pair_id": "surg-2022-153|expo-2023-028", "verdict": "same", "confidence": "high", "reason": "Same title on measuring risk-sharing in Thailand, extended to peri-urban areas."}
+{"pair_id": "surg-2022-161|expo-2024-138", "verdict": "related", "confidence": "low", "reason": "Both on language in autism in Losh lab, but Expo is automated narrative analysis, not prosody."}
+{"pair_id": "surg-2022-169|expo-2021-129", "verdict": "same", "confidence": "low", "reason": "Same pentagon-folding polyhedra problem, but Expo predates the grant by a year and was URAP-funded; grant may be a later stage."}
+{"pair_id": "surg-2022-173|expo-2024-145", "verdict": "same", "confidence": "high", "reason": "Both on queer-inclusive health education."}
+{"pair_id": "surg-2022-175|expo-2022-117", "verdict": "related", "confidence": "high", "reason": "Same Duncan reproductive aging lab, but Expo is ovarian follicles in macaques, not the mouse oviduct."}
+{"pair_id": "surg-2022-176|expo-2023-033", "verdict": "same", "confidence": "high", "reason": "Identical title: factor analysis of neuroticism."}
+{"pair_id": "surg-2022-182|expo-2022-121", "verdict": "same", "confidence": "high", "reason": "Both on chondroitin sulfate-mimetic peptide amphiphile cell coatings."}
+{"pair_id": "surg-2022-182|expo-2023-094", "verdict": "same", "confidence": "high", "reason": "Both on chondroitin sulfate-mimetic peptide amphiphile cell coatings."}
+{"pair_id": "surg-2022-184|expo-2023-095", "verdict": "same", "confidence": "high", "reason": "Same title on Berlin's divided-city legacy for its orchestras."}
+{"pair_id": "surg-2022-191|expo-2024-158", "verdict": "same", "confidence": "high", "reason": "Both on TLR/MyD88 innate immune mechanisms in transfusion alloimmunization."}
+{"pair_id": "surg-2022-195|expo-2024-162", "verdict": "unrelated", "confidence": "high", "reason": "Grant on infant competence; Expo on stress and adolescent identity development."}
+{"pair_id": "surg-2022-200|expo-2023-036", "verdict": "same", "confidence": "high", "reason": "Both on perception of bisexual people in relationships."}
+{"pair_id": "surg-2022-200|expo-2024-166", "verdict": "related", "confidence": "high", "reason": "Follow-up on bisexual individuals' own comfort with partners, not others' perceptions."}
+{"pair_id": "surg-2022-202|expo-2023-101", "verdict": "same", "confidence": "high", "reason": "Expo on William Jones at the Field Museum, funded by a SURG in Native and Indigenous Studies; fits colonial roots of Chicago anthropology."}
+{"pair_id": "surg-2022-207|expo-2023-102", "verdict": "same", "confidence": "high", "reason": "Both build a sample of young Type Ia supernovae from ZTF."}
+{"pair_id": "surg-2022-209|expo-2024-176", "verdict": "related", "confidence": "low", "reason": "Both on infant development, but grant on maternal depression and Expo on infant irritability and language."}
+{"pair_id": "surg-2022-210|expo-2023-104", "verdict": "same", "confidence": "high", "reason": "Same study of how trans students define having sex."}
+{"pair_id": "surg-2022-210|expo-2025-221", "verdict": "related", "confidence": "high", "reason": "Same student's trans health work, but Expo is on community gender-affirming care."}
+{"pair_id": "surg-2022-213|expo-2023-039", "verdict": "same", "confidence": "high", "reason": "Both on maternal stress, infant gut microbiota and health."}
+{"pair_id": "surg-2022-214|expo-2021-089", "verdict": "related", "confidence": "high", "reason": "Earlier Beutler lab food-cue/DMNV project, not high-carbohydrate diet and AgRP neurons."}
+{"pair_id": "surg-2022-214|expo-2022-133", "verdict": "related", "confidence": "high", "reason": "Same Beutler lab, but Expo is on gustatory food cues and brain-to-gut signaling, not high-carbohydrate diet and AgRP neurons."}
+{"pair_id": "surg-2022-218|expo-2023-106", "verdict": "same", "confidence": "low", "reason": "Gurari lab tactile signal flow via fMRI force stimulator, but Expo does not study muscle activation."}
+{"pair_id": "surg-2023-006|expo-2024-005", "verdict": "same", "confidence": "high", "reason": "Identical title on Muslim representation in middle-grade and YA fiction."}
+{"pair_id": "surg-2023-012|expo-2024-008", "verdict": "same", "confidence": "low", "reason": "Same Korean immigrant diet acculturation and gut microbiome question, but grant names Chicago and Expo samples New York/New Jersey."}
+{"pair_id": "surg-2023-018|expo-2023-004", "verdict": "related", "confidence": "low", "reason": "Both on public green spaces, but grant on botanical gardens and Expo on Black park use."}
+{"pair_id": "surg-2023-019|expo-2024-011", "verdict": "same", "confidence": "high", "reason": "Identical title on non-traditional recumbent tricycle steering."}
+{"pair_id": "surg-2023-019|expo-2024-089", "verdict": "same", "confidence": "high", "reason": "Identical title on non-traditional recumbent tricycle steering."}
+{"pair_id": "surg-2023-020|expo-2023-046", "verdict": "unrelated", "confidence": "high", "reason": "Grant on evolving virtual robots; Expo is flow cytometry analysis software."}
+{"pair_id": "surg-2023-021|expo-2025-017", "verdict": "related", "confidence": "low", "reason": "Both on appearance psychology in Engeln lab, but grant develops a attractiveness locus of control measure and Expo studies beauty work."}
+{"pair_id": "surg-2023-024|expo-2023-006", "verdict": "same", "confidence": "high", "reason": "Both on signaling peptides moving on dynamic nanofibers to activate integrin receptors in Stupp lab."}
+{"pair_id": "surg-2023-028|expo-2024-018", "verdict": "same", "confidence": "high", "reason": "Both on mouse planning in a robot-predator foraging task in MacIver lab."}
+{"pair_id": "surg-2023-029|expo-2024-019", "verdict": "same", "confidence": "high", "reason": "Identical title: Poetry Creating a Pathway to the Past."}
+{"pair_id": "surg-2023-032|expo-2024-021", "verdict": "same", "confidence": "high", "reason": "Both on identity development and psychopathology in children and young adolescents."}
+{"pair_id": "surg-2023-032|expo-2025-023", "verdict": "related", "confidence": "low", "reason": "Same sample of 184 children, but Expo adds parenting and ethnic identity moderation, a later extension."}
+{"pair_id": "surg-2023-037|expo-2023-010", "verdict": "same", "confidence": "high", "reason": "Both on DNA methylation and gene expression in African-Americans for precision medicine."}
+{"pair_id": "surg-2023-037|expo-2024-027", "verdict": "same", "confidence": "high", "reason": "Both on DNA methylation effects on gene expression (methQTL/eQTM) in African Americans."}
+{"pair_id": "surg-2023-038|expo-2022-046", "verdict": "same", "confidence": "high", "reason": "Near-identical title on hearing loss as a modifiable dementia risk factor."}
+{"pair_id": "surg-2023-041|expo-2024-029", "verdict": "same", "confidence": "low", "reason": "Wasielewski lab radical pair qubits, but Expo synthesizes a nitrogen-free pair and reports kinetics, not coherence measurements."}
+{"pair_id": "surg-2023-042|expo-2024-030", "verdict": "same", "confidence": "high", "reason": "Both on simulated average convergence of distributed optimization algorithms in Freeman lab."}
+{"pair_id": "surg-2023-043|expo-2025-035", "verdict": "same", "confidence": "low", "reason": "George lab high-throughput KCNT1 variant screening two years later; Expo uses thallium efflux and does not mention deep mutational scanning."}
+{"pair_id": "surg-2023-045|expo-2025-033", "verdict": "same", "confidence": "low", "reason": "Sageman lab foraminifera calcium isotopes, but Expo reports only planktic records, not contemporaneous planktic and benthic."}
+{"pair_id": "surg-2023-047|expo-2021-008", "verdict": "unrelated", "confidence": "high", "reason": "Expo on implicit motor sequence learning, unrelated to glioblastoma L-2-HG."}
+{"pair_id": "surg-2023-047|expo-2024-031", "verdict": "same", "confidence": "high", "reason": "Both on L-2-hydroxyglutarate in glioblastoma temozolomide resistance."}
+{"pair_id": "surg-2023-047|expo-2025-036", "verdict": "related", "confidence": "high", "reason": "Same Ahmed GBM lab, but Expo is on vimentin localization, not L-2-HG."}
+{"pair_id": "surg-2023-047|expo-2026-026", "verdict": "related", "confidence": "high", "reason": "Same Ahmed GBM TMZ resistance work, but Expo is on vimentin, not L-2-HG."}
+{"pair_id": "surg-2023-049|expo-2024-033", "verdict": "related", "confidence": "low", "reason": "Same student in mouse navigation/planning labs, but Expo is the Oasis foraging paradigm, not mPFC inhibition and working memory."}
+{"pair_id": "surg-2023-049|expo-2025-037", "verdict": "related", "confidence": "low", "reason": "Same mouse planning research line, but Expo studies peeking behavior in BotEvade, not mPFC inhibition."}
+{"pair_id": "surg-2023-049|expo-2026-030", "verdict": "related", "confidence": "low", "reason": "Same mouse planning research line, but Expo isolates dynamic threat effects, not mPFC inhibition."}
+{"pair_id": "surg-2023-052|expo-2022-138", "verdict": "related", "confidence": "low", "reason": "Same classics student, but Expo is digital art of Helen and Menelaus, not Saturnalia slavery."}
+{"pair_id": "surg-2023-052|expo-2023-012", "verdict": "related", "confidence": "low", "reason": "Same classics student, but Expo is on fire imagery in Statius' Achilleid."}
+{"pair_id": "surg-2023-052|expo-2024-036", "verdict": "same", "confidence": "high", "reason": "Both on depictions of slavery in Macrobius' Saturnalia."}
+{"pair_id": "surg-2023-055|expo-2024-039", "verdict": "same", "confidence": "high", "reason": "Identical title on depersonalization/derealization disorder in oil painting."}
+{"pair_id": "surg-2023-055|expo-2025-043", "verdict": "unrelated", "confidence": "high", "reason": "Expo on oxygen emission lines in high-redshift galaxies, unrelated to DDD painting."}
+{"pair_id": "surg-2023-064|expo-2025-050", "verdict": "same", "confidence": "high", "reason": "Both on evolving perceived risk (of childbirth) among professionals and public in the UK since 1993."}
+{"pair_id": "surg-2023-064|expo-2025-123", "verdict": "same", "confidence": "high", "reason": "Both on evolving perceived risk (of childbirth) among professionals and public in the UK since 1993."}
+{"pair_id": "surg-2023-067|expo-2024-045", "verdict": "unrelated", "confidence": "high", "reason": "Grant on mouse chronic pain pose estimation; Expo on EMG ankle torque decoding for exoskeletons."}
+{"pair_id": "surg-2023-070|expo-2024-047", "verdict": "same", "confidence": "high", "reason": "Identical title on high-throughput amino acid coupling in protein domains."}
+{"pair_id": "surg-2023-072|expo-2025-056", "verdict": "same", "confidence": "high", "reason": "Both on Rwandan radio drama (Ikinamico) preserving Kinyarwanda."}
+{"pair_id": "surg-2023-084|expo-2024-052", "verdict": "same", "confidence": "high", "reason": "Both on cyclical voluntary exercise in an Alzheimer's (5xFAD) mouse model."}
+{"pair_id": "surg-2023-086|expo-2023-065", "verdict": "related", "confidence": "high", "reason": "Same Haase lab, but Expo is on sadness/anger and empathic accuracy in marital conflict."}
+{"pair_id": "surg-2023-086|expo-2024-053", "verdict": "same", "confidence": "high", "reason": "Both on emotional acceptance in older adults responding to loss."}
+{"pair_id": "surg-2023-086|expo-2025-065", "verdict": "related", "confidence": "high", "reason": "Same Haase lab, but Expo is on assent/negation language in relationships."}
+{"pair_id": "surg-2023-088|expo-2024-054", "verdict": "related", "confidence": "low", "reason": "Same menstrual pain cohort, but Expo examines autonomic activity during bladder distension rather than multisensory hypersensitivity."}
+{"pair_id": "surg-2023-088|expo-2025-066", "verdict": "related", "confidence": "high", "reason": "Same menstrual pain cohort, but Expo is on medication use and absences."}
+{"pair_id": "surg-2023-092|expo-2024-056", "verdict": "same", "confidence": "high", "reason": "Both use biogenic silica to reconstruct primary productivity in south Greenland lakes."}
+{"pair_id": "surg-2023-093|expo-2025-067", "verdict": "unrelated", "confidence": "low", "reason": "Both chemistry, but grant is a crown ether azobenzene photoswitch and Expo is rubber upcycling via dynamic bonds."}
+{"pair_id": "surg-2023-102|expo-2025-079", "verdict": "unrelated", "confidence": "high", "reason": "Grant on lung cancer circadian metabolism; Expo on EMS psychiatric protocols."}
+{"pair_id": "surg-2023-116|expo-2024-068", "verdict": "same", "confidence": "high", "reason": "Both on personality and leadership outcomes in Tackett lab."}
+{"pair_id": "surg-2023-119|expo-2022-068", "verdict": "unrelated", "confidence": "high", "reason": "Grant on C. elegans proteostasis and aversive behavior; Expo on muscle clock and diabetes in mice."}
+{"pair_id": "surg-2023-120|expo-2025-088", "verdict": "unrelated", "confidence": "high", "reason": "Grant on identity via alternate reality gaming; Expo on Cold War shortwave radio."}
+{"pair_id": "surg-2023-123|expo-2024-072", "verdict": "same", "confidence": "high", "reason": "Near-identical title on how narrative media addressed COVID-19."}
+{"pair_id": "surg-2023-126|expo-2024-074", "verdict": "same", "confidence": "high", "reason": "Both on narrative identity in older adults' perceptions of aging."}
+{"pair_id": "surg-2023-127|expo-2024-075", "verdict": "related", "confidence": "low", "reason": "Both on sea turtle nest conditions, but grant on predator exclusion devices for green turtles and Expo on Olive Ridley nest microclimate."}
+{"pair_id": "surg-2023-129|expo-2023-072", "verdict": "same", "confidence": "high", "reason": "Identical title on D1/D2 spiny projection neurons and schizophrenia symptoms."}
+{"pair_id": "surg-2023-130|expo-2021-030", "verdict": "unrelated", "confidence": "high", "reason": "Expo on household survey definitions, unrelated to Drosophila Hh; likely a different person (Minsoo)."}
+{"pair_id": "surg-2023-130|expo-2024-076", "verdict": "same", "confidence": "high", "reason": "Both on Hh signaling repressing calcium in the Drosophila fat body."}
+{"pair_id": "surg-2023-131|expo-2021-032", "verdict": "related", "confidence": "low", "reason": "Earlier work in same CP lab on isolated finger movement, a precursor to the grant's independent joint movement study."}
+{"pair_id": "surg-2023-131|expo-2022-071", "verdict": "related", "confidence": "high", "reason": "Same infant CP lab, but Expo is on parent stress and infant development."}
+{"pair_id": "surg-2023-133|expo-2024-079", "verdict": "same", "confidence": "high", "reason": "Both a bioethical analysis of physician-assisted death."}
+{"pair_id": "surg-2023-134|expo-2024-081", "verdict": "same", "confidence": "high", "reason": "Both on motion sickness research in the Lee lab."}
+{"pair_id": "surg-2023-140|expo-2024-083", "verdict": "same", "confidence": "high", "reason": "Both on vested interest and source expertise in retraction effects."}
+{"pair_id": "surg-2023-140|expo-2025-111", "verdict": "related", "confidence": "high", "reason": "Same continued-influence research line, but Expo tests source valence rather than vested interest."}
+{"pair_id": "surg-2023-141|expo-2023-019", "verdict": "same", "confidence": "high", "reason": "Identical title on temperature preference adaptation in Drosophila."}
+{"pair_id": "surg-2023-144|expo-2023-079", "verdict": "related", "confidence": "low", "reason": "Both on SERCA2 dysfunction in Darier's disease, but Expo tests SERCA activators rather than characterizing regulin expression."}
+{"pair_id": "surg-2023-145|expo-2024-087", "verdict": "same", "confidence": "high", "reason": "Both on STAT3-JAK2 fusion function in PCAETCL."}
+{"pair_id": "surg-2023-149|expo-2025-122", "verdict": "unrelated", "confidence": "high", "reason": "Grant on H. pylori in the Philippines; Expo on greenspace and social cohesion in Evanston."}
+{"pair_id": "surg-2023-156|expo-2023-081", "verdict": "related", "confidence": "low", "reason": "Both on modifiable dementia risk in French lab, but Expo analyzes social determinants in NHIS rather than population attributable fractions."}
+{"pair_id": "surg-2023-162|expo-2024-097", "verdict": "related", "confidence": "low", "reason": "Both on TMD materials, but grant on electron mobility devices and Expo on organic/TMD heterostructure spectra."}
+{"pair_id": "surg-2023-167|expo-2024-100", "verdict": "same", "confidence": "high", "reason": "Identical title on BACE1 inhibitor mechanism and dosing."}
+{"pair_id": "surg-2023-168|expo-2023-083", "verdict": "same", "confidence": "high", "reason": "Identical title: Crystalline Polyrotaxanes."}
+{"pair_id": "surg-2023-177|expo-2024-105", "verdict": "same", "confidence": "high", "reason": "Expo reports a new single-positron detection method in the Gabrielse Penning trap, matching the grant's filtering circuit."}
+{"pair_id": "surg-2023-178|expo-2024-107", "verdict": "same", "confidence": "high", "reason": "Both on women's reactions to body positive affirmations."}
+{"pair_id": "surg-2023-178|expo-2025-131", "verdict": "same", "confidence": "high", "reason": "Both on women's reactions to body positive messages, with a larger sample."}
+{"pair_id": "surg-2023-185|expo-2022-096", "verdict": "related", "confidence": "high", "reason": "Earlier research assistant reflection on Black girls' identities that motivated later genderqueer mental health work."}
+{"pair_id": "surg-2023-189|expo-2024-112", "verdict": "related", "confidence": "low", "reason": "Both on mouse social interaction in Kozorovitskiy lab, but Expo validates SLEAP pose tracking, not inter-brain synchrony."}
+{"pair_id": "surg-2023-189|expo-2025-138", "verdict": "unrelated", "confidence": "high", "reason": "Expo on speech-in-noise perception in autism, unrelated to mouse inter-brain synchrony."}
+{"pair_id": "surg-2023-192|expo-2024-114", "verdict": "same", "confidence": "high", "reason": "Both on sustaining mutual aid groups in North Jersey and NYC."}
+{"pair_id": "surg-2023-194|expo-2024-115", "verdict": "same", "confidence": "high", "reason": "Expo studies factors moderating approval of AI assistants (emotional intelligence, loneliness, familiarity, parasocial tendencies)."}
+{"pair_id": "surg-2023-200|expo-2024-116", "verdict": "same", "confidence": "high", "reason": "Identical title on the Latin Mass in American Catholicism."}
+{"pair_id": "surg-2023-203|expo-2025-150", "verdict": "related", "confidence": "low", "reason": "Both on stereotype perception in Bodenhausen lab, but Expo on hiring discrimination, not homosexual parents."}
+{"pair_id": "surg-2023-206|expo-2024-120", "verdict": "same", "confidence": "high", "reason": "Both study math/STEM education in Rwanda; Expo narrows to math."}
+{"pair_id": "surg-2023-206|expo-2024-143", "verdict": "same", "confidence": "high", "reason": "Both study math/STEM education in Rwanda; Expo narrows to math."}
+{"pair_id": "surg-2023-206|expo-2025-181", "verdict": "unrelated", "confidence": "high", "reason": "Expo on positivity resonance in youth at risk for psychosis, unrelated to Rwanda education."}
+{"pair_id": "surg-2023-208|expo-2025-156", "verdict": "unrelated", "confidence": "high", "reason": "Grant on airport privatization; Expo on Airbnb and race in Chicago."}
+{"pair_id": "surg-2023-209|expo-2024-121", "verdict": "same", "confidence": "high", "reason": "Same title on depicting pediatric MS in film and TV without ableism."}
+{"pair_id": "surg-2023-211|expo-2022-102", "verdict": "unrelated", "confidence": "high", "reason": "Grant on PEDOT nanoparticles; Expo on employee benefits and well-being, weak prefix name match."}
+{"pair_id": "surg-2023-212|expo-2022-104", "verdict": "unrelated", "confidence": "low", "reason": "Grant on Black and African music appreciation; Expo is RA work on queer artists' love and loss archives."}
+{"pair_id": "surg-2023-214|expo-2023-091", "verdict": "related", "confidence": "high", "reason": "Both on Latine community memory, but Expo is on gentrification in Sleepy Hollow, not campus archiving."}
+{"pair_id": "surg-2023-216|expo-2024-131", "verdict": "same", "confidence": "high", "reason": "Both map local causes of bird-window collisions on campus."}
+{"pair_id": "surg-2023-218|expo-2024-133", "verdict": "same", "confidence": "low", "reason": "Uttal lab Block Design Task, but Expo codes assembly strategies and does not discuss global vs local processing or errors."}
+{"pair_id": "surg-2023-219|expo-2024-134", "verdict": "same", "confidence": "high", "reason": "Both on hypoxia and irradiation effects on glioblastoma stem cells."}
+{"pair_id": "surg-2023-219|expo-2025-166", "verdict": "same", "confidence": "high", "reason": "Both on hypoxia and radiation effects on glioblastoma stem cell enrichment."}
+{"pair_id": "surg-2023-220|expo-2025-170", "verdict": "related", "confidence": "low", "reason": "Same theatre student, but Expo on South Asian American mothers in performance, not theatre-in-education in India."}
+{"pair_id": "surg-2023-220|expo-2026-156", "verdict": "related", "confidence": "low", "reason": "Both on theatre pedagogy for youth, but Expo studies migrant youth theatre in Copenhagen and Chicago, not India."}
+{"pair_id": "surg-2023-222|expo-2024-137", "verdict": "related", "confidence": "low", "reason": "Both on quantum sensors for dark matter, but grant calibrates MKIDs and Expo analyzes qubit charge jumps."}
+{"pair_id": "surg-2023-236|expo-2026-179", "verdict": "unrelated", "confidence": "high", "reason": "Grant on AIH and brain blood flow; Expo on galectin-mimicking nanoparticles for lung cancer."}
+{"pair_id": "surg-2023-238|expo-2024-148", "verdict": "same", "confidence": "high", "reason": "Both on dilute/single-atom plasmonic alloy photocatalysts for CO oxidation."}
+{"pair_id": "surg-2023-241|expo-2025-191", "verdict": "related", "confidence": "low", "reason": "Builds on earlier low-point narrative work in McAdams lab; Expo analyzes full life stories of suffering."}
+{"pair_id": "surg-2023-247|expo-2024-152", "verdict": "related", "confidence": "low", "reason": "Both use ICH mouse models, but Expo studies TDP-43 mislocalization for ALS, not microglia in parabiosis."}
+{"pair_id": "surg-2023-247|expo-2025-199", "verdict": "unrelated", "confidence": "high", "reason": "Expo reviews FDA AI diagnostic tools, unrelated to ICH microglia."}
+{"pair_id": "surg-2023-247|expo-2026-189", "verdict": "unrelated", "confidence": "high", "reason": "Expo on French inclusive writing policies, unrelated to ICH microglia."}
+{"pair_id": "surg-2023-248|expo-2023-096", "verdict": "same", "confidence": "high", "reason": "Both on benzimidazole resistance genetics in C. elegans mutant strains."}
+{"pair_id": "surg-2023-256|expo-2024-158", "verdict": "same", "confidence": "high", "reason": "Near-identical title on innate immune mechanisms of RBC transfusion alloimmunization."}
+{"pair_id": "surg-2023-263|expo-2024-164", "verdict": "same", "confidence": "high", "reason": "Both on eye regeneration genes in Hofstenia miamia."}
+{"pair_id": "surg-2023-267|expo-2022-124", "verdict": "related", "confidence": "low", "reason": "Grant title truncated ('Spanis'); Expo on Spanish dual language input predates it, too little to confirm same project."}
+{"pair_id": "surg-2023-274|expo-2024-175", "verdict": "same", "confidence": "high", "reason": "Both on mental health narratives of first-generation college students."}
+{"pair_id": "surg-2023-278|expo-2023-105", "verdict": "same", "confidence": "high", "reason": "Both on the role of insight in mathematical problem-solving."}
+{"pair_id": "surg-2023-278|expo-2024-182", "verdict": "related", "confidence": "high", "reason": "Same student on STEM cognition, but Expo is analogical scaffolding in Gentner lab, not insight."}
+{"pair_id": "surg-2023-289|expo-2024-185", "verdict": "related", "confidence": "low", "reason": "Both on iontronics in Hersam lab, but Expo on hBN ionogels rather than 2D nanochannel heterojunction devices."}
+{"pair_id": "surg-2023-290|expo-2024-188", "verdict": "unrelated", "confidence": "high", "reason": "Grant on ACSS2 nuclear translocation; Expo on an NLP tool for replication."}
+{"pair_id": "surg-2024-008|expo-2024-004", "verdict": "same", "confidence": "high", "reason": "Both on ybgF as a GABA exporter in B. subtilis biofilms."}
+{"pair_id": "surg-2024-008|expo-2025-007", "verdict": "same", "confidence": "low", "reason": "Same B. subtilis GABA exporter screen, but this Expo highlights aimA and gltT and does not mention ybgF."}
+{"pair_id": "surg-2024-011|expo-2026-006", "verdict": "same", "confidence": "low", "reason": "Scheidt lab MEK4 (MAP2K4) inhibitors, but Expo targets MAP2K4/7 and does not mention a covalent strategy."}
+{"pair_id": "surg-2024-016|expo-2024-011", "verdict": "same", "confidence": "high", "reason": "Identical title on non-traditional recumbent tricycle steering."}
+{"pair_id": "surg-2024-022|expo-2025-020", "verdict": "related", "confidence": "low", "reason": "Both spatial analyses in Horton lab, but grant on warehouse health disparities in Chicago and Expo on erosion in Ecuador."}
+{"pair_id": "surg-2024-024|expo-2023-006", "verdict": "related", "confidence": "low", "reason": "Earlier sliding-peptide nanofiber work that the IKVAV slider grant builds on."}
+{"pair_id": "surg-2024-026|expo-2025-022", "verdict": "related", "confidence": "low", "reason": "Both use molecular pendulum electrochemical sensors in Kelley lab, but Expo is drift correction for interferon-gamma, not bipolar analytes."}
+{"pair_id": "surg-2024-027|expo-2025-024", "verdict": "unrelated", "confidence": "high", "reason": "Grant on Drosophila embryo transcription; Expo on virus-like particle engineering."}
+{"pair_id": "surg-2024-029|expo-2024-023", "verdict": "related", "confidence": "low", "reason": "Expo is the earlier acoustic-sensor feasibility study; it names the neural network audio classifier only as future work."}
+{"pair_id": "surg-2024-036|expo-2025-035", "verdict": "same", "confidence": "high", "reason": "Both use thallium efflux to catalog gain-of-function KCNT1 variants."}
+{"pair_id": "surg-2024-042|expo-2025-041", "verdict": "same", "confidence": "high", "reason": "Both on hydrogen isotope fractionation in Arctic plant leaf waxes."}
+{"pair_id": "surg-2024-044|expo-2024-039", "verdict": "unrelated", "confidence": "high", "reason": "Expo is DDD oil painting, unrelated to galaxy emission line spectra."}
+{"pair_id": "surg-2024-044|expo-2025-043", "verdict": "same", "confidence": "high", "reason": "Both on star-forming galaxy evolution via emission line spectra."}
+{"pair_id": "surg-2024-046|expo-2025-046", "verdict": "same", "confidence": "high", "reason": "Both on IKVAV/FGF-2 peptide amphiphiles in a human spinal cord organoid injury model."}
+{"pair_id": "surg-2024-053|expo-2025-050", "verdict": "same", "confidence": "high", "reason": "Near-identical title on perceived childbirth risk among physicians and public since 1993."}
+{"pair_id": "surg-2024-053|expo-2025-123", "verdict": "same", "confidence": "high", "reason": "Near-identical title on perceived childbirth risk among physicians and public since 1993."}
+{"pair_id": "surg-2024-062|expo-2024-047", "verdict": "related", "confidence": "low", "reason": "Expo is the earlier high-throughput coupling screen; grant does low-throughput validation of those residue interactions."}
+{"pair_id": "surg-2024-068|expo-2025-058", "verdict": "same", "confidence": "high", "reason": "Both on organic carbon sources in Sangamon River floodplain sediments, where Allerton Park sits."}
+{"pair_id": "surg-2024-072|expo-2026-053", "verdict": "unrelated", "confidence": "low", "reason": "Both robotics, but grant on SLAM mapping efficiency and Expo on dexterous multi-step manipulation."}
+{"pair_id": "surg-2024-074|expo-2023-065", "verdict": "related", "confidence": "high", "reason": "Earlier Haase lab work on emotions and empathic accuracy in couples, not acceptance and physiological linkage."}
+{"pair_id": "surg-2024-074|expo-2024-053", "verdict": "related", "confidence": "low", "reason": "Both on emotional acceptance and physiology in Haase lab, but Expo is individual parasympathetic response, not interpersonal linkage."}
+{"pair_id": "surg-2024-074|expo-2025-065", "verdict": "related", "confidence": "high", "reason": "Same Haase dyadic data, but Expo is on assent/negation language."}
+{"pair_id": "surg-2024-076|expo-2024-057", "verdict": "same", "confidence": "high", "reason": "Both on crosslinking effects on mechanical properties of mussel foot protein 5."}
+{"pair_id": "surg-2024-077|expo-2025-068", "verdict": "unrelated", "confidence": "high", "reason": "Grant on CNS lymphoma induction therapy; Expo on injectable synthetic bone marrow grafts."}
+{"pair_id": "surg-2024-080|expo-2025-077", "verdict": "same", "confidence": "high", "reason": "Both on targeting valency of glucosylceramidase SNAs for brain delivery."}
+{"pair_id": "surg-2024-082|expo-2025-081", "verdict": "related", "confidence": "low", "reason": "Vague grant on global gut microbiome; Expo specifically on SES and early-life microbiome in Cebu."}
+{"pair_id": "surg-2024-096|expo-2025-089", "verdict": "same", "confidence": "high", "reason": "Both on gratitude and self-esteem protecting low-income couples during unemployment."}
+{"pair_id": "surg-2024-098|expo-2025-090", "verdict": "unrelated", "confidence": "high", "reason": "Grant on grief in Black immigrant families; Expo on office hours and belonging."}
+{"pair_id": "surg-2024-099|expo-2025-091", "verdict": "same", "confidence": "high", "reason": "Both on c-Fos expression in 5xFAD mice after LPS."}
+{"pair_id": "surg-2024-099|expo-2026-071", "verdict": "same", "confidence": "high", "reason": "Both on c-Fos in 5xFAD mice after LPS, Expo adding TauP301S."}
+{"pair_id": "surg-2024-105|expo-2025-102", "verdict": "same", "confidence": "high", "reason": "Both on sex differences in neurotensin effects on reward decision-making in mice."}
+{"pair_id": "surg-2024-106|expo-2025-104", "verdict": "same", "confidence": "high", "reason": "Near-identical title on social media asociality and negative symptoms in CHR."}
+{"pair_id": "surg-2024-106|expo-2026-077", "verdict": "unrelated", "confidence": "high", "reason": "Expo on ACEs and coping, unrelated to social media asociality in CHR."}
+{"pair_id": "surg-2024-109|expo-2026-080", "verdict": "unrelated", "confidence": "high", "reason": "Grant on retinal ganglion cell projections; Expo on ALOX5 in psoriasis."}
+{"pair_id": "surg-2024-112|expo-2025-107", "verdict": "unrelated", "confidence": "high", "reason": "Grant on Johnson noise thermometer; Expo on quantum well optical modulators."}
+{"pair_id": "surg-2024-114|expo-2025-113", "verdict": "same", "confidence": "high", "reason": "Identical title on first-year McCormick student academic resource engagement."}
+{"pair_id": "surg-2024-115|expo-2026-088", "verdict": "related", "confidence": "low", "reason": "Same Hartmann microbiology lab, but Expo on freshwater bacterial niche diversity, not antimicrobial textiles."}
+{"pair_id": "surg-2024-121|expo-2025-118", "verdict": "same", "confidence": "high", "reason": "Near-identical title on self-concept clarity and advice seeking."}
+{"pair_id": "surg-2024-121|expo-2026-095", "verdict": "related", "confidence": "high", "reason": "Follow-up on self-concept clarity under groupthink and time pressure, not advice seeking."}
+{"pair_id": "surg-2024-123|expo-2025-119", "verdict": "same", "confidence": "high", "reason": "Both on pandemic routine disruption and employee outcomes and work preferences."}
+{"pair_id": "surg-2024-125|expo-2025-121", "verdict": "related", "confidence": "low", "reason": "Same Ahmed brain tumor lab, but Expo on Triapine radiosensitization in breast cancer brain metastasis, not GBM microperfusion."}
+{"pair_id": "surg-2024-129|expo-2024-088", "verdict": "unrelated", "confidence": "high", "reason": "Grant on Korean-American elder community care; Expo on native plants in Pilsen."}
+{"pair_id": "surg-2024-130|expo-2024-090", "verdict": "same", "confidence": "high", "reason": "Both on calcitriol and calcifediol in nanoparticle therapeutics."}
+{"pair_id": "surg-2024-135|expo-2024-094", "verdict": "same", "confidence": "high", "reason": "Near-identical title on double network hydrogel via cell-free APOL3 expression."}
+{"pair_id": "surg-2024-137|expo-2024-095", "verdict": "same", "confidence": "high", "reason": "Both on transnational student activism linking China 1989 to US 2024; Expo is the resulting musical."}
+{"pair_id": "surg-2024-140|expo-2025-125", "verdict": "related", "confidence": "low", "reason": "Both on plasmonic nanoparticle photocatalysis in Swearer lab, but Expo is propane dehydrogenation, not desorption energy transfer."}
+{"pair_id": "surg-2024-140|expo-2026-114", "verdict": "related", "confidence": "low", "reason": "Same Swearer plasmonic catalysis line, but Expo is copper-cobalt alloys, not light-induced desorption."}
+{"pair_id": "surg-2024-143|expo-2024-100", "verdict": "related", "confidence": "high", "reason": "Same Sadleir AD lab, but Expo on BACE1 inhibitors, not annexin A6."}
+{"pair_id": "surg-2024-144|expo-2024-101", "verdict": "same", "confidence": "low", "reason": "Chicago Jewish medical philanthropy, but Expo covers the 1868 Jewish Hospital, not impact on research and education, and predates grant summer."}
+{"pair_id": "surg-2024-147|expo-2024-105", "verdict": "same", "confidence": "high", "reason": "Both on positron accumulation for a matter-antimatter asymmetry test."}
+{"pair_id": "surg-2024-148|expo-2024-107", "verdict": "related", "confidence": "low", "reason": "Same Engeln body positivity line touching fat acceptance, but Expo studies affirmation preferences, not the movements' disconnect."}
+{"pair_id": "surg-2024-148|expo-2025-131", "verdict": "related", "confidence": "low", "reason": "Same body positivity messaging research, but not specifically the body positivity vs fat acceptance disconnect."}
+{"pair_id": "surg-2024-149|expo-2025-132", "verdict": "same", "confidence": "high", "reason": "Both on reactive oxygen species in a spinal cord organoid injury model."}
+{"pair_id": "surg-2024-153|expo-2024-111", "verdict": "related", "confidence": "low", "reason": "Both on infant EEG and language in Gabard-Durnam lab, but Expo on phoneme sensitive period timing, not theta coherence in late talkers."}
+{"pair_id": "surg-2024-166|expo-2025-148", "verdict": "related", "confidence": "low", "reason": "Both music analysis, but grant applies Benford's law and Expo studies bird representations in classical music."}
+{"pair_id": "surg-2024-171|expo-2025-150", "verdict": "same", "confidence": "high", "reason": "Both on race, gender and femininity in job applicant evaluations."}
+{"pair_id": "surg-2024-176|expo-2026-147", "verdict": "unrelated", "confidence": "high", "reason": "Grant on exercise interventions for psychosis; Expo on GPe Npas1+ neuron connectivity."}
+{"pair_id": "surg-2024-178|expo-2024-122", "verdict": "related", "confidence": "low", "reason": "Same Sadleir AD lab, but Expo on annexin A6 membrane repair, not calpain in tau pathology."}
+{"pair_id": "surg-2024-178|expo-2025-161", "verdict": "related", "confidence": "low", "reason": "Same Sadleir AD lab, but Expo on scFv antibodies against plaques, not calpain and tau."}
+{"pair_id": "surg-2024-181|expo-2025-165", "verdict": "related", "confidence": "high", "reason": "Both on planarian eye regeneration, but grant genes scyl/pcad8l vs Expo gene ddr."}
+{"pair_id": "surg-2024-182|expo-2026-151", "verdict": "same", "confidence": "high", "reason": "Identical title on balance in signed directed social networks."}
+{"pair_id": "surg-2024-185|expo-2024-134", "verdict": "same", "confidence": "high", "reason": "Both on GBM stem cells, quiescence and microenvironment (TAMs, hypoxia) in recurrence."}
+{"pair_id": "surg-2024-185|expo-2025-166", "verdict": "same", "confidence": "high", "reason": "Both on GBM stem cell quiescence and microenvironment in recurrence."}
+{"pair_id": "surg-2024-186|expo-2025-167", "verdict": "related", "confidence": "low", "reason": "Both on silica aerogel fabrication, but grant targets GEM detector filters and Expo targets 3He studies."}
+{"pair_id": "surg-2024-192|expo-2025-176", "verdict": "same", "confidence": "high", "reason": "Both on DNA dendrons/dendrimers as cGAS-STING immunotherapy."}
+{"pair_id": "surg-2024-192|expo-2026-162", "verdict": "related", "confidence": "low", "reason": "Later extension of the cGAS-STING DNA dendrimer work focused on hybridization chain reaction synthesis."}
+{"pair_id": "surg-2024-199|expo-2025-184", "verdict": "related", "confidence": "low", "reason": "Same Driscoll soft matter lab, but Expo on hydrogel cracking and peeling, not microrollers."}
+{"pair_id": "surg-2024-199|expo-2026-177", "verdict": "related", "confidence": "low", "reason": "Same Driscoll soft matter lab, but Expo on solvent-induced hydrogel cracking, not microrollers."}
+{"pair_id": "surg-2024-202|expo-2025-185", "verdict": "same", "confidence": "high", "reason": "Both on queerness vs compulsory heterosexuality in girls' literature from 1868 to 2001."}
+{"pair_id": "surg-2024-206|expo-2025-187", "verdict": "unrelated", "confidence": "high", "reason": "Grant on dAC neural processing; Expo on college food allergy safety."}
+{"pair_id": "surg-2024-209|expo-2025-192", "verdict": "unrelated", "confidence": "high", "reason": "Grant on brown bear mythology; Expo on preschool speech screeners."}
+{"pair_id": "surg-2024-210|expo-2025-193", "verdict": "same", "confidence": "high", "reason": "Both on ER autophagy/ER degradation and proteostasis in Parkinson's neurons."}
+{"pair_id": "surg-2024-211|expo-2025-196", "verdict": "same", "confidence": "high", "reason": "Both on substrate temperature and Drosophila egg-laying."}
+{"pair_id": "surg-2024-211|expo-2026-187", "verdict": "same", "confidence": "high", "reason": "Both on substrate temperature and Drosophila egg-laying."}
+{"pair_id": "surg-2024-212|expo-2023-096", "verdict": "unrelated", "confidence": "high", "reason": "Expo on C. elegans benzimidazole resistance, unrelated to fungal mitochondrial transport."}
+{"pair_id": "surg-2024-213|expo-2024-153", "verdict": "same", "confidence": "high", "reason": "Both on AhR translocation in skin xenobiotic response and differentiation."}
+{"pair_id": "surg-2024-213|expo-2025-202", "verdict": "unrelated", "confidence": "high", "reason": "Expo on Dafcin peptide trafficking in Drosophila oogenesis, unrelated to AhR."}
+{"pair_id": "surg-2024-214|expo-2024-154", "verdict": "same", "confidence": "high", "reason": "Both on autonomy in space mission teams (HERA)."}
+{"pair_id": "surg-2024-215|expo-2026-191", "verdict": "related", "confidence": "low", "reason": "Both on intimate partner violence, but grant on Rust Belt decline and Expo on strangulation laws."}
+{"pair_id": "surg-2024-224|expo-2024-164", "verdict": "related", "confidence": "low", "reason": "Earlier Hofstenia eye regeneration gene screen; grant focuses on Wnt and eye cell positioning."}
+{"pair_id": "surg-2024-229|expo-2025-212", "verdict": "same", "confidence": "low", "reason": "Stupp lab lysosome-targeting peptide amphiphiles, but Expo targets amyloid-beta and never mentions spinal cord injury."}
+{"pair_id": "surg-2024-230|expo-2025-213", "verdict": "same", "confidence": "low", "reason": "Grant title is too vague to confirm ('Galactic Data's Journey'); Expo on spectral stacking of galaxy emission lines one year later."}
+{"pair_id": "surg-2024-233|expo-2024-169", "verdict": "related", "confidence": "low", "reason": "Both on nAMD mouse models in Lavine lab, but Expo on macrophage depletion model, not beta2-AR/IL-6."}
+{"pair_id": "surg-2024-239|expo-2026-211", "verdict": "unrelated", "confidence": "high", "reason": "Grant on Braess paradox in road networks; Expo on quantum compilation."}
+{"pair_id": "surg-2024-240|expo-2023-102", "verdict": "related", "confidence": "high", "reason": "Same student's supernova work, but Expo is Type Ia ZTF sample, not stripped-envelope environments."}
+{"pair_id": "surg-2024-241|expo-2025-219", "verdict": "same", "confidence": "high", "reason": "Both on donor sperm recipients' use of race, ethnicity and ancestry."}
+{"pair_id": "surg-2024-242|expo-2023-104", "verdict": "related", "confidence": "high", "reason": "Same student's trans health work, but Expo is on definitions of having sex."}
+{"pair_id": "surg-2024-242|expo-2025-221", "verdict": "same", "confidence": "high", "reason": "Expo studies gender-affirming care practices at clinics in Bangkok, Boston and Chicago, the grant's Thai and US case studies."}
+{"pair_id": "surg-2024-243|expo-2025-222", "verdict": "related", "confidence": "low", "reason": "Both on multiracial Americans, but grant on media discussion and Expo on stereotyping experiments."}
+{"pair_id": "surg-2024-244|expo-2026-218", "verdict": "unrelated", "confidence": "high", "reason": "Grant on pro se housing court; Expo on Korean foreign accent detection."}
+{"pair_id": "surg-2024-245|expo-2024-178", "verdict": "same", "confidence": "high", "reason": "Both on reward prediction error and flow in the SISL task."}
+{"pair_id": "surg-2024-247|expo-2024-180", "verdict": "related", "confidence": "high", "reason": "Earlier interview study of ethnic-racial identity content, not reverse correlation person perception."}
+{"pair_id": "surg-2024-247|expo-2025-224", "verdict": "same", "confidence": "high", "reason": "Both use reverse correlation to study ethnic-racial in-group perception of East Asians."}
+{"pair_id": "surg-2024-248|expo-2024-183", "verdict": "related", "confidence": "low", "reason": "Same Nguyen synthesis lab, but Expo on supramolecular calcitriol, not fluorescent platinum dimers."}
+{"pair_id": "surg-2024-258|expo-2025-228", "verdict": "same", "confidence": "high", "reason": "Both on attachment and friendship-guarding behaviors in friendship jealousy."}
+{"pair_id": "surg-2024-258|expo-2026-224", "verdict": "related", "confidence": "high", "reason": "Follow-up on dyadic perspectives of friendship jealousy, not attachment styles."}
+{"pair_id": "surg-2024-261|expo-2025-229", "verdict": "same", "confidence": "high", "reason": "Both on gene expression epistasis in complex networks in Motter lab."}
+{"pair_id": "surg-2024-261|expo-2026-228", "verdict": "related", "confidence": "low", "reason": "Both on gene expression data, but Expo is autoresearch dimensionality reduction in a different lab."}
+{"pair_id": "surg-2024-262|expo-2025-230", "verdict": "same", "confidence": "high", "reason": "Both on physiological linkage and empathic accuracy in caregiver-youth conflict."}
+{"pair_id": "surg-2024-262|expo-2026-229", "verdict": "unrelated", "confidence": "high", "reason": "Expo on adolescent neural response to failure, not physiological linkage."}
+{"pair_id": "surg-2024-264|expo-2022-136", "verdict": "unrelated", "confidence": "high", "reason": "Expo on Haemophilus phasevarion and phagocytosis, unrelated to PBAF and T cell exhaustion."}

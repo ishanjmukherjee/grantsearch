@@ -1,0 +1,16 @@
+.DS_Store
+.env
+
+# Python
+__pycache__/
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Rebuilt by pipeline.embed; too large for git
+data/index/
+
+# Card generation stdout
+data/*_run.log
