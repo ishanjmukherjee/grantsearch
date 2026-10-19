@@ -9,8 +9,5 @@ __pycache__/
 node_modules/
 dist/
 
-# Rebuilt by pipeline.embed; too large for git
-data/index/
-
 # Card generation stdout
 data/*_run.log

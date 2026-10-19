@@ -8,9 +8,9 @@ one vector per generated query on its card:
 
 User queries are embedded at search time with QUERY_MODEL, which shares
 INDEX_MODEL's embedding space. Title-only grants whose card is a refusal get
-no vectors; they are found by BM25 alone. Writes L2-normalized vectors to
-data/index/vectors.npy and, row for row, {id, kind, text} to
-data/index/vectors.jsonl. Needs VOYAGE_API_KEY.
+no vectors; they are found by BM25 alone. Writes L2-normalized vectors as
+float16 (small enough to commit) to data/index/vectors.npy and, row for row,
+{id, kind, text} to data/index/vectors.jsonl. Needs VOYAGE_API_KEY.
 
 Usage: uv run --env-file ../.env python -m pipeline.embed
 """
@@ -64,7 +64,7 @@ def main() -> None:
         query_vecs = embed(client, [t for _, t in queries], "query")
 
     INDEX_DIR.mkdir(exist_ok=True)
-    np.save(INDEX_DIR / "vectors.npy", np.vstack([doc_vecs, query_vecs]))
+    np.save(INDEX_DIR / "vectors.npy", np.vstack([doc_vecs, query_vecs]).astype(np.float16))
     with (INDEX_DIR / "vectors.jsonl").open("w") as f:
         for kind, rows in (("doc", docs), ("query", queries)):
             for pid, text in rows:

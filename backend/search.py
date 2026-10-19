@@ -95,7 +95,7 @@ class Index:
         if {(r["id"], r["kind"], r["text"]) for r in rows} != expected:
             raise SystemExit(f"{INDEX_DIR} does not match the cards; rerun pipeline.embed")
 
-        vecs = np.load(INDEX_DIR / "vectors.npy")
+        vecs = np.load(INDEX_DIR / "vectors.npy").astype(np.float32)
         self.vecs = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
         position = {p["id"]: i for i, p in enumerate(self.projects)}
         self.row_project = np.array([position[r["id"]] for r in rows])

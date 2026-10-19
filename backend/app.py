@@ -3,16 +3,22 @@
 - GET /api/search?q=...&source=surg|expo&from=YEAR&to=YEAR&n=20 returns
   {"results": [...]}, each result as search.public describes it.
 - GET /api/health returns {"ok": true} once the index is loaded.
+- Everything else serves the built frontend from frontend/dist, when it
+  exists; in development the Vite dev server serves it instead.
 
 Usage: uv run uvicorn app:app [--reload]
 """
 
 from contextlib import asynccontextmanager
+from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI, Query
+from fastapi.staticfiles import StaticFiles
 
 import search
+
+FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
 
 
 @asynccontextmanager
@@ -39,3 +45,7 @@ def search_projects(
 @app.get("/api/health")
 def health() -> dict:
     return {"ok": True}
+
+
+if FRONTEND_DIR.exists():
+    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True))
