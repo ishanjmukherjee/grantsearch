@@ -46,10 +46,6 @@ body {
   padding: 48px 16px 80px;
 }
 
-header {
-  text-align: center;
-}
-
 h1 {
   font-size: 1.9rem;
   letter-spacing: -0.02em;
@@ -58,7 +54,7 @@ h1 {
 
 .lede {
   color: var(--muted);
-  margin: 0 auto 28px;
+  margin: 0 0 28px;
   max-width: 62ch;
 }
 
