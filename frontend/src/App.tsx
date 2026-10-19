@@ -14,7 +14,6 @@ type Project = { id: string; title: string; grant: Grant | null; expo: ExpoEntry
 type Source = '' | 'surg' | 'expo'
 
 const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
-const EXAMPLES = ['soft robotics', 'music and memory', 'Chicago housing segregation', 'black holes', 'theater and social justice']
 const PROMPTS = [
   'how to build a moon colony',
   'south asia pig latin',
@@ -165,16 +164,6 @@ export default function App() {
 
       <main>
         {error && <p className="notice error">{error}</p>}
-        {results === null && !error && (
-          <div className="examples">
-            <span>Examples:</span>
-            {EXAMPLES.map((ex) => (
-              <button key={ex} onClick={() => setQ(ex)}>
-                {ex}
-              </button>
-            ))}
-          </div>
-        )}
         {results !== null && results.length === 0 && !error && (
           <p className="notice">No projects match. Try different words or widen the filters.</p>
         )}
