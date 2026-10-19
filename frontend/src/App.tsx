@@ -17,7 +17,7 @@ const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
 const EXAMPLES = ['soft robotics', 'music and memory', 'Chicago housing segregation', 'black holes', 'theater and social justice']
 const PROMPTS = [
   'how to build a moon colony',
-  'pig latin women',
+  'south asia pig latin',
   'llm-accelerated biology research',
   'photinus carolinus',
   'spectral geometry',
