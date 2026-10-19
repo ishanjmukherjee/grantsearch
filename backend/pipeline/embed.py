@@ -1,78 +1,70 @@
-"""Embed projects for dense retrieval with Qwen3-Embedding-4B.
+"""Embed projects for dense retrieval with voyage-4-large.
 
-Projects come in three disjoint sets: SURG grants with only a title, SURG
-grants linked to Expo abstracts judged the same project with high confidence,
-and Expo projects not linked to a grant. Each gets one document vector and one
-vector per generated query on its card:
+Each project with a card (see pipeline.projects) gets one document vector and
+one vector per generated query on its card:
 
-- Document: title + body + fields + concepts + acronym expansions, where the
-  body is the gloss for title-only grants and the abstract (joined, if several)
-  otherwise.
-- Query: embedded with the same instruction as user queries, since they stand
-  in for them.
+- Document: pipeline.projects.doc_text, embedded as a document.
+- Query: embedded as a query, like user queries, since they stand in for them.
 
-Title-only grants whose card is a refusal get no vectors; they are found by
-BM25 alone. Writes L2-normalized vectors to data/index/vectors.npy and, row
-for row, {id, kind, text} to data/index/vectors.jsonl.
+User queries are embedded at search time with QUERY_MODEL, which shares
+INDEX_MODEL's embedding space. Title-only grants whose card is a refusal get
+no vectors; they are found by BM25 alone. Writes L2-normalized vectors to
+data/index/vectors.npy and, row for row, {id, kind, text} to
+data/index/vectors.jsonl. Needs VOYAGE_API_KEY.
 
-Usage: uv run python -m pipeline.embed
+Usage: uv run --env-file ../.env python -m pipeline.embed
 """
 
 import json
+import os
+import time
 
+import httpx
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
-from pipeline.link_expo import linked_abstracts
-from pipeline.scrape_surg import DATA_DIR
+from pipeline.projects import DIM, INDEX_DIR, INDEX_MODEL, doc_text, load_projects
 
-MODEL = "Qwen/Qwen3-Embedding-4B"
-QUERY_PROMPT = "Instruct: Given a search query, retrieve undergraduate research projects that match it\nQuery: "
-INDEX_DIR = DATA_DIR / "index"
-BATCH = 16
+URL = "https://api.voyageai.com/v1/embeddings"
+# Voyage caps a request at 1000 inputs and 120k tokens; ~4 chars per token.
+BATCH_ITEMS = 1000
+BATCH_CHARS = 200_000
+RATE_LIMIT_WAIT = 20
 
 
-def card_text(card: dict, body: str) -> str:
-    parts = [card["title"], body]
-    if card["fields"]:
-        parts.append("Fields: " + "; ".join(card["fields"]))
-    if card["concepts"]:
-        parts.append("Concepts: " + "; ".join(card["concepts"]))
-    if card["acronyms"]:
-        parts.append("; ".join(f"{k}: {v}" for k, v in card["acronyms"].items()))
-    return "\n".join(parts)
+def batches(texts: list[str]) -> list[list[str]]:
+    out, size = [[]], 0
+    for t in texts:
+        if out[-1] and (len(out[-1]) == BATCH_ITEMS or size + len(t) > BATCH_CHARS):
+            out.append([])
+            size = 0
+        out[-1].append(t)
+        size += len(t)
+    return out
+
+
+def embed(client: httpx.Client, texts: list[str], input_type: str) -> np.ndarray:
+    vecs = []
+    for batch in batches(texts):
+        while (resp := client.post(URL, json={"model": INDEX_MODEL, "input": batch, "input_type": input_type, "output_dimension": DIM})).status_code == 429:
+            time.sleep(RATE_LIMIT_WAIT)
+        resp.raise_for_status()
+        vecs += [d["embedding"] for d in sorted(resp.json()["data"], key=lambda d: d["index"])]
+        print(f"{input_type}: {len(vecs)}/{len(texts)}", flush=True)
+    v = np.array(vecs, dtype=np.float32)
+    return v / np.linalg.norm(v, axis=1, keepdims=True)
 
 
 def main() -> None:
-    cards = [json.loads(line) for line in (DATA_DIR / "cards.jsonl").open()]
-    abstract_cards = {c["id"]: c for c in map(json.loads, (DATA_DIR / "cards_abstract.jsonl").open())}
-    expo_cards = {c["id"]: c for c in map(json.loads, (DATA_DIR / "cards_expo.jsonl").open())}
-    linked = linked_abstracts()
-    taken = {e["id"] for entries in linked.values() for e in entries}
+    projects = [p for p in load_projects() if p["card"]]
+    docs = [(p["id"], doc_text(p)) for p in projects]  # (id, text)
+    queries = [(p["id"], q) for p in projects for q in p["card"]["queries"]]
 
-    projects = []  # (id, card, body)
-    for card in cards:
-        if card["id"] in linked:
-            body = "\n\n".join(e["abstract"] for e in linked[card["id"]])
-            projects.append((card["id"], abstract_cards[card["id"]], body))
-        elif card["status"] == "card":
-            projects.append((card["id"], card, card["gloss"]))
-    for e in json.loads((DATA_DIR / "expo_abstracts.json").read_text()):
-        if e["id"] not in taken:
-            projects.append((e["id"], expo_cards[e["id"]], e["abstract"]))
-
-    docs = [(pid, card_text(card, body)) for pid, card, body in projects]  # (id, text)
-    queries = [(pid, q) for pid, card, _ in projects for q in card["queries"]]
-
-    model = SentenceTransformer(MODEL)
-    model.max_seq_length = 2048
-    doc_vecs = model.encode([t for _, t in docs], batch_size=BATCH, normalize_embeddings=True, show_progress_bar=True)
-    query_vecs = model.encode(
-        [t for _, t in queries], prompt=QUERY_PROMPT, batch_size=BATCH, normalize_embeddings=True, show_progress_bar=True
-    )
+    with httpx.Client(headers={"Authorization": f"Bearer {os.environ['VOYAGE_API_KEY']}"}, timeout=120) as client:
+        doc_vecs = embed(client, [t for _, t in docs], "document")
+        query_vecs = embed(client, [t for _, t in queries], "query")
 
     INDEX_DIR.mkdir(exist_ok=True)
-    np.save(INDEX_DIR / "vectors.npy", np.vstack([doc_vecs, query_vecs]).astype(np.float32))
+    np.save(INDEX_DIR / "vectors.npy", np.vstack([doc_vecs, query_vecs]))
     with (INDEX_DIR / "vectors.jsonl").open("w") as f:
         for kind, rows in (("doc", docs), ("query", queries)):
             for pid, text in rows:
