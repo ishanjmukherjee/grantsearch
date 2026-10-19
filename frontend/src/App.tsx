@@ -22,6 +22,7 @@ const PROMPTS = [
   'spectral geometry',
   'functional decision theory',
   'dravet syndrome',
+  'elon musk',
 ]
 // After a full pass through PROMPTS, rest on this for a while before the next.
 const REST = 'what do you want to research?'
