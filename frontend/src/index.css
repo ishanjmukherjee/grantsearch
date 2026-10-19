@@ -138,17 +138,18 @@ h1 {
   cursor: pointer;
 }
 
-.clear:hover {
-  background: var(--accent-soft);
-}
-
 .clear svg {
-  width: 18px;
-  height: 18px;
+  width: 26px;
+  height: 26px;
   fill: none;
   stroke: var(--muted);
   stroke-width: 2.2;
   stroke-linecap: round;
+  transition: stroke 0.15s;
+}
+
+.clear:hover svg {
+  stroke: var(--accent);
 }
 
 .prompt {
