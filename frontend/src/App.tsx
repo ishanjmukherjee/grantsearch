@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type Grant = { year: number; awardees: string[]; url: string }
 type ExpoEntry = {
@@ -55,6 +55,7 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [prompt, setPrompt] = useState(0)
+  const input = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     const timer = setTimeout(
@@ -116,6 +117,7 @@ export default function App() {
           </svg>
           <div className="field">
             <input
+              ref={input}
               type="search"
               value={q}
               onChange={(e) => setQ(e.target.value)}
@@ -128,6 +130,20 @@ export default function App() {
               </span>
             )}
           </div>
+          {q && (
+            <button
+              className="clear"
+              onClick={() => {
+                setQ('')
+                input.current?.focus()
+              }}
+              aria-label="Clear search"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            </button>
+          )}
         </div>
         <div className="filters">
           <div className="segmented" role="group" aria-label="Source">
