@@ -51,11 +51,14 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [prompt, setPrompt] = useState(0)
+  // Prompts rotate until the user clicks or types in the search box, then hold still.
+  const [engaged, setEngaged] = useState(false)
 
   useEffect(() => {
+    if (engaged) return
     const timer = setInterval(() => setPrompt((i) => (i + 1) % PROMPTS.length), PROMPT_MS)
     return () => clearInterval(timer)
-  }, [])
+  }, [engaged])
 
   useEffect(() => {
     const params = new URLSearchParams()
@@ -94,7 +97,7 @@ export default function App() {
   return (
     <div className="page">
       <header>
-        <h1>Northwestern Undergraduate Research Search</h1>
+        <h1>Wildcat Scholar</h1>
         <p className="lede">
           Northwestern Summer Undergraduate Research Grants (2020-2024) and Undergraduate Research &amp; Arts Expo
           projects (2021-2026). Search by topic, method, field or person.
@@ -112,11 +115,13 @@ export default function App() {
               type="search"
               value={q}
               onChange={(e) => setQ(e.target.value)}
+              onPointerDown={() => setEngaged(true)}
+              onKeyDown={() => setEngaged(true)}
               aria-label="Search projects"
               autoFocus
             />
             {!q && (
-              <span key={prompt} className="prompt" aria-hidden="true">
+              <span key={prompt} className={engaged ? 'prompt still' : 'prompt'} aria-hidden="true">
                 {PROMPTS[prompt]}
               </span>
             )}

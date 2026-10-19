@@ -140,6 +140,10 @@ h1 {
   animation: prompt 3.5s ease-in-out both;
 }
 
+.prompt.still {
+  animation: none;
+}
+
 @keyframes prompt {
   0%,
   100% {
