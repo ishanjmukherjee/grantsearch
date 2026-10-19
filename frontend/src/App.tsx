@@ -21,8 +21,13 @@ const PROMPTS = [
   'photinus carolinus',
   'spectral geometry',
   'functional decision theory',
+  'dravet syndrome',
 ]
+// After a full pass through PROMPTS, rest on this for a while before the next.
+const REST = 'what do you want to research?'
+const ROTATION = [...PROMPTS, REST]
 const PROMPT_MS = 3500 // matches the .prompt animation
+const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
 
 function readUrl() {
@@ -50,14 +55,14 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [prompt, setPrompt] = useState(0)
-  // Prompts rotate until the user clicks or types in the search box, then hold still.
-  const [engaged, setEngaged] = useState(false)
 
   useEffect(() => {
-    if (engaged) return
-    const timer = setInterval(() => setPrompt((i) => (i + 1) % PROMPTS.length), PROMPT_MS)
-    return () => clearInterval(timer)
-  }, [engaged])
+    const timer = setTimeout(
+      () => setPrompt((i) => (i + 1) % ROTATION.length),
+      ROTATION[prompt] === REST ? REST_MS : PROMPT_MS,
+    )
+    return () => clearTimeout(timer)
+  }, [prompt])
 
   useEffect(() => {
     const params = new URLSearchParams()
@@ -114,14 +119,12 @@ export default function App() {
               type="search"
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              onPointerDown={() => setEngaged(true)}
-              onKeyDown={() => setEngaged(true)}
               aria-label="Search projects"
               autoFocus
             />
             {!q && (
-              <span key={prompt} className={engaged ? 'prompt still' : 'prompt'} aria-hidden="true">
-                {PROMPTS[prompt]}
+              <span key={prompt} className={ROTATION[prompt] === REST ? 'prompt rest' : 'prompt'} aria-hidden="true">
+                {ROTATION[prompt]}
               </span>
             )}
           </div>
