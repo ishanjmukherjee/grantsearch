@@ -55,7 +55,6 @@ h1 {
 .lede {
   color: var(--muted);
   margin: 0 0 28px;
-  max-width: 62ch;
 }
 
 .controls {
