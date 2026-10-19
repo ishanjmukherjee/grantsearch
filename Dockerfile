@@ -18,5 +18,7 @@ COPY data/ /app/data/
 # Bake the pinned query model into the image so startup never touches the Hub.
 RUN python -c "from huggingface_hub import snapshot_download; from pipeline.projects import QUERY_MODEL, QUERY_MODEL_REVISION; snapshot_download(QUERY_MODEL, revision=QUERY_MODEL_REVISION)"
 ENV HF_HUB_OFFLINE=1
+# torch otherwise starts a thread per host core, far more than the service's CPU limit.
+ENV OMP_NUM_THREADS=4
 COPY --from=frontend /app/frontend/dist /app/frontend/dist
 CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}
