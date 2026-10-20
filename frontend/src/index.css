@@ -302,6 +302,11 @@ h1 {
   margin: 0;
 }
 
+/* Separates a poster's differing abstracts, which have no heading between them. */
+.abstract + .abstract {
+  margin-top: 12px;
+}
+
 .abstract .text {
   font-size: 0.93rem;
   margin: 8px 0 0;

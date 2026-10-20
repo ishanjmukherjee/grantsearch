@@ -44,7 +44,9 @@ def bm25_text(p: dict) -> str:
     if p["grant"]:
         parts += names(p["grant"]["awardees"])
     for e in p["expo"]:
-        parts += [e["title"], e["advisor"] or "", e["abstract"], *names(e["presenters"])]
+        parts += names(e["presenters"])
+    # A poster's listings repeat its title, advisor and abstract; count each once.
+    parts += dict.fromkeys(x for e in p["expo"] for x in (e["title"], e["advisor"] or "", e["abstract"]))
     if card := p["card"]:
         parts += card["fields"] + card["concepts"] + card["queries"]
         parts += [f"{k} {v}" for k, v in card["acronyms"].items()]

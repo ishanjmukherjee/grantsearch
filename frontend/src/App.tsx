@@ -197,20 +197,22 @@ export default function App() {
 
 function Result({ project }: { project: Project }) {
   const { grant, expo } = project
+  const parts = sections(expo)
+  const programs = new Map(expo.map((e) => [e.url, e.year]))
   return (
     <article className="result">
       <div className="tags">
         {grant && <span className="tag surg">SURG {grant.year}</span>}
-        {expo.map((e) => (
-          <span key={e.id} className="tag expo">
-            Expo {e.year}
+        {[...new Set(expo.map((e) => e.year))].map((year) => (
+          <span key={year} className="tag expo">
+            Expo {year}
           </span>
         ))}
       </div>
       <h2>{project.title}</h2>
       {grant && <p className="people">{list(grant.awardees)}</p>}
-      {expo.map((e) => (
-        <Abstract key={e.id} entry={e} projectTitle={project.title} showTitle={expo.length > 1 || !!grant} />
+      {parts.map((s) => (
+        <Abstract key={s.key} section={s} projectTitle={project.title} showTitle={parts.length > 1 || !!grant} />
       ))}
       <div className="links">
         {grant && (
@@ -218,9 +220,9 @@ function Result({ project }: { project: Project }) {
             SURG {grant.year} winners list
           </a>
         )}
-        {expo.map((e) => (
-          <a key={e.id} href={e.url} target="_blank" rel="noreferrer">
-            Expo {e.year} program (PDF)
+        {[...programs].map(([url, year]) => (
+          <a key={url} href={url} target="_blank" rel="noreferrer">
+            Expo {year} program (PDF)
           </a>
         ))}
       </div>
@@ -228,21 +230,39 @@ function Result({ project }: { project: Project }) {
   )
 }
 
-function Abstract({ entry, projectTitle, showTitle }: { entry: ExpoEntry; projectTitle: string; showTitle: boolean }) {
+type Section = { key: string; year: number; title: string; presenters: string[]; advisors: string[]; abstract: string }
+
+// A poster presented by several students is listed once per presenter, usually
+// with the same abstract; show each abstract once, with everyone who presented it.
+function sections(expo: ExpoEntry[]): Section[] {
+  const byAbstract = new Map<string, Section>()
+  for (const e of expo) {
+    let s = byAbstract.get(e.abstract)
+    if (!s) {
+      s = { key: e.id, year: e.year, title: e.title, presenters: [], advisors: [], abstract: e.abstract }
+      byAbstract.set(e.abstract, s)
+    }
+    const advisors = e.advisor ? e.advisor.split(/\s*[,;]\s*(?:and\s+)?|\s+and\s+/) : []
+    s.presenters = [...new Set([...s.presenters, ...e.presenters])]
+    s.advisors = [...new Set([...s.advisors, ...advisors])]
+  }
+  return [...byAbstract.values()]
+}
+
+function Abstract({ section, projectTitle, showTitle }: { section: Section; projectTitle: string; showTitle: boolean }) {
   const [open, setOpen] = useState(false)
-  const advisors = entry.advisor ? `, advised by ${list(entry.advisor.split(/\s*[,;]\s*(?:and\s+)?|\s+and\s+/))}` : ''
   return (
     <section className="abstract">
-      {showTitle && entry.title !== projectTitle && (
+      {showTitle && section.title !== projectTitle && (
         <h3>
-          Expo {entry.year}: {entry.title}
+          Expo {section.year}: {section.title}
         </h3>
       )}
       <p className="people">
-        {list(entry.presenters)}
-        {advisors}
+        {list(section.presenters)}
+        {section.advisors.length > 0 && `, advised by ${list(section.advisors)}`}
       </p>
-      <p className={open ? 'text' : 'text clamped'}>{entry.abstract}</p>
+      <p className={open ? 'text' : 'text clamped'}>{section.abstract}</p>
       <button className="more" onClick={() => setOpen(!open)}>
         {open ? 'Hide abstract' : 'Show abstract'}
       </button>

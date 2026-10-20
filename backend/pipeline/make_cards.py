@@ -11,8 +11,9 @@ matching *_errors.jsonl. Modes:
   prompts/concept_card.md -> data/cards.jsonl.
 - abstract: grants with linked Expo abstracts, prompts/abstract_card.md ->
   data/cards_abstract.jsonl.
-- expo: Expo projects not linked to a grant, prompts/expo_card.md ->
-  data/cards_expo.jsonl.
+- expo: Expo posters not linked to a grant, prompts/expo_card.md ->
+  data/cards_expo.jsonl, keyed by the poster's first listing. A poster listed
+  once per presenter gets one card from all its listings.
 
 Usage: uv run python -m pipeline.make_cards [--mode title|abstract|expo] [--fresh] [--limit N] [--ids ID ...] [--jobs 8] [--model M]
 """
@@ -23,7 +24,7 @@ import json
 import tempfile
 from pathlib import Path
 
-from pipeline.link_expo import linked_abstracts
+from pipeline.link_expo import linked_abstracts, unlinked_groups
 from pipeline.scrape_surg import DATA_DIR
 
 PROMPT_DIR = Path(__file__).resolve().parents[2] / "prompts"
@@ -105,6 +106,20 @@ def names(people: list[dict]) -> str:
     return "; ".join(f"{p['first']} {p['last']}" for p in people)
 
 
+def poster(listings: list[dict]) -> dict:
+    """One card item for an Expo poster's listings: the first's title, everyone's presenters and advisors."""
+    first = listings[0]
+    advisors = list(dict.fromkeys(e["advisor"] for e in listings if e["advisor"]))
+    return {
+        "id": first["id"],
+        "title": first["title"],
+        "year": first["year"],
+        "presenters": [p for e in listings for p in e["presenters"]],
+        "advisor": "; ".join(advisors) or None,
+        "abstract": "\n\n".join(dict.fromkeys(e["abstract"] for e in listings)),
+    }
+
+
 def slots(mode: str, item: dict, linked: dict[str, list[dict]]) -> dict[str, str]:
     """The prompt's placeholders and their values for one item."""
     s = {"{title}": item["title"], "{year}": str(item["year"])}
@@ -116,9 +131,13 @@ def slots(mode: str, item: dict, linked: dict[str, list[dict]]) -> dict[str, str
         }
     s["{awardees}"] = names(item["awardees"])
     if mode == "abstract":
+        # A poster's listings often repeat one abstract; show it once.
+        entries: dict[str, dict] = {}
+        for e in linked[item["id"]]:
+            entries.setdefault(e["abstract"], e)
         s["{abstracts}"] = "\n\n".join(
             f"Expo abstract ({e['year']}): \"{e['title']}\"\nAdvisor: {e['advisor'] or 'not listed'}\n{e['abstract']}"
-            for e in linked[item["id"]]
+            for e in entries.values()
         )
     return s
 
@@ -178,8 +197,7 @@ def main() -> None:
 
     linked = linked_abstracts()
     if args.mode == "expo":
-        taken = {e["id"] for entries in linked.values() for e in entries}
-        items = [e for e in json.loads((DATA_DIR / "expo_abstracts.json").read_text()) if e["id"] not in taken]
+        items = [poster(g) for g in unlinked_groups(linked)]
     else:
         items = json.loads((DATA_DIR / "grants.json").read_text())
         if args.mode == "abstract":

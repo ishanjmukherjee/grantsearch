@@ -2,21 +2,22 @@
 
 Projects come in three disjoint sets: SURG grants with only a title, SURG
 grants linked to Expo abstracts judged the same project with high confidence,
-and Expo projects not linked to a grant. Each project is a dict:
+and Expo posters not linked to a grant. A poster may have several listings,
+one per presenter (see pipeline.link_expo.expo_groups). Each project is a dict:
 
-- id, title: the grant's, or the Expo entry's when there is no grant
+- id, title: the grant's, or the poster's first listing's when there is no grant
 - grant: the grants.json record, or None
 - expo: the linked or own expo_abstracts.json records (may be empty)
 - card: the search card for the project, or None when the title-only card is a
   refusal
 - body: the text the document vector is built from besides the card: the
-  gloss for title-only grants, the abstracts (joined) otherwise; None with no
-  card
+  gloss for title-only grants, the distinct abstracts (joined) otherwise;
+  None with no card
 """
 
 import json
 
-from pipeline.link_expo import linked_abstracts
+from pipeline.link_expo import linked_abstracts, unlinked_groups
 from pipeline.scrape_surg import DATA_DIR
 
 INDEX_DIR = DATA_DIR / "index"
@@ -32,26 +33,29 @@ def load_jsonl(name: str) -> dict[str, dict]:
     return {c["id"]: c for c in map(json.loads, (DATA_DIR / name).open())}
 
 
+def abstracts(entries: list[dict]) -> str:
+    """The entries' distinct abstracts, joined; a poster's listings often repeat one."""
+    return "\n\n".join(dict.fromkeys(e["abstract"] for e in entries))
+
+
 def load_projects() -> list[dict]:
     grants = json.loads((DATA_DIR / "grants.json").read_text())
-    expo = json.loads((DATA_DIR / "expo_abstracts.json").read_text())
     cards, abstract_cards, expo_cards = map(load_jsonl, ("cards.jsonl", "cards_abstract.jsonl", "cards_expo.jsonl"))
     linked = linked_abstracts()
-    taken = {e["id"] for entries in linked.values() for e in entries}
 
     projects = []
     for g in grants:
         entries = linked.get(g["id"], [])
         if entries:
-            card, body = abstract_cards[g["id"]], "\n\n".join(e["abstract"] for e in entries)
+            card, body = abstract_cards[g["id"]], abstracts(entries)
         elif cards[g["id"]]["status"] == "card":
             card, body = cards[g["id"]], cards[g["id"]]["gloss"]
         else:
             card, body = None, None
         projects.append({"id": g["id"], "title": g["title"], "grant": g, "expo": entries, "card": card, "body": body})
-    for e in expo:
-        if e["id"] not in taken:
-            projects.append({"id": e["id"], "title": e["title"], "grant": None, "expo": [e], "card": expo_cards[e["id"]], "body": e["abstract"]})
+    for group in unlinked_groups(linked):
+        first = group[0]
+        projects.append({"id": first["id"], "title": first["title"], "grant": None, "expo": group, "card": expo_cards[first["id"]], "body": abstracts(group)})
     return projects
 
 
