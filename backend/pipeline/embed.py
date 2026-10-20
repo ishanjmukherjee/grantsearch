@@ -10,7 +10,9 @@ User queries are embedded at search time with QUERY_MODEL, which shares
 INDEX_MODEL's embedding space. Title-only grants whose card is a refusal get
 no vectors; they are found by BM25 alone. Writes L2-normalized vectors as
 float16 (small enough to commit) to data/index/vectors.npy and, row for row,
-{id, kind, text} to data/index/vectors.jsonl. Needs VOYAGE_API_KEY.
+{id, kind, text} to data/index/vectors.jsonl. Rows whose (id, kind, text) is
+already in the index keep their vector, so only new or changed rows are sent
+to the API. Needs VOYAGE_API_KEY.
 
 Usage: uv run --env-file ../.env python -m pipeline.embed
 """
@@ -43,6 +45,8 @@ def batches(texts: list[str]) -> list[list[str]]:
 
 
 def embed(client: httpx.Client, texts: list[str], input_type: str) -> np.ndarray:
+    if not texts:
+        return np.zeros((0, DIM), dtype=np.float32)
     vecs = []
     for batch in batches(texts):
         while (resp := client.post(URL, json={"model": INDEX_MODEL, "input": batch, "input_type": input_type, "output_dimension": DIM})).status_code == 429:
@@ -59,12 +63,21 @@ def main() -> None:
     docs = [(p["id"], doc_text(p)) for p in projects]  # (id, text)
     queries = [(p["id"], q) for p in projects for q in p["card"]["queries"]]
 
+    known = {}  # (id, kind, text) -> vector already in the index
+    if (INDEX_DIR / "vectors.npy").exists():
+        rows = map(json.loads, (INDEX_DIR / "vectors.jsonl").open())
+        known = {(r["id"], r["kind"], r["text"]): v for r, v in zip(rows, np.load(INDEX_DIR / "vectors.npy"))}
+
+    vecs = {}
     with httpx.Client(headers={"Authorization": f"Bearer {os.environ['VOYAGE_API_KEY']}"}, timeout=120) as client:
-        doc_vecs = embed(client, [t for _, t in docs], "document")
-        query_vecs = embed(client, [t for _, t in queries], "query")
+        for kind, rows, input_type in (("doc", docs, "document"), ("query", queries, "query")):
+            new = sorted({t for pid, t in rows if (pid, kind, t) not in known})
+            print(f"{kind}: {len(rows) - len(new)} reused, {len(new)} to embed", flush=True)
+            vecs[kind] = dict(zip(new, embed(client, new, input_type)))
 
     INDEX_DIR.mkdir(exist_ok=True)
-    np.save(INDEX_DIR / "vectors.npy", np.vstack([doc_vecs, query_vecs]).astype(np.float16))
+    out = [known.get((pid, kind, t), vecs[kind].get(t)) for kind, rows in (("doc", docs), ("query", queries)) for pid, t in rows]
+    np.save(INDEX_DIR / "vectors.npy", np.vstack(out).astype(np.float16))
     with (INDEX_DIR / "vectors.jsonl").open("w") as f:
         for kind, rows in (("doc", docs), ("query", queries)):
             for pid, text in rows:
