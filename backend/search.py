@@ -4,8 +4,9 @@
   card's fields, concepts, acronyms and generated queries (not the gloss).
 - Dense: the query is embedded on the CPU with QUERY_MODEL, which shares the
   index's embedding space, and a project scores
-  max(W_DOC * doc_sim, W_QUERY * best generated-query sim). Projects whose
-  title-only card is a refusal have no vectors and are found by BM25 alone.
+  max(W_DOC * best of its document and summary sims, W_QUERY * best
+  generated-query sim). Projects whose title-only card is a refusal have no
+  vectors and are found by BM25 alone.
 
 Results carry only real data (titles, people, years, abstracts, source links);
 cards only aid ranking.
@@ -21,7 +22,7 @@ import numpy as np
 import Stemmer
 from sentence_transformers import SentenceTransformer
 
-from pipeline.projects import DIM, INDEX_DIR, QUERY_MODEL, QUERY_MODEL_REVISION, doc_text, load_projects
+from pipeline.projects import DIM, INDEX_DIR, QUERY_MODEL, QUERY_MODEL_REVISION, doc_text, load_projects, summary_text
 from pipeline.scrape_surg import PAGES
 
 W_DOC = 1.0
@@ -93,6 +94,7 @@ class Index:
         self.projects = load_projects()
         rows = [json.loads(line) for line in (INDEX_DIR / "vectors.jsonl").open()]
         expected = {(p["id"], "doc", doc_text(p)) for p in self.projects if p["card"]}
+        expected |= {(p["id"], "summary", t) for p in self.projects if p["card"] and (t := summary_text(p))}
         expected |= {(p["id"], "query", q) for p in self.projects if p["card"] for q in p["card"]["queries"]}
         if {(r["id"], r["kind"], r["text"]) for r in rows} != expected:
             raise SystemExit(f"{INDEX_DIR} does not match the cards; rerun pipeline.embed")
@@ -101,7 +103,7 @@ class Index:
         self.vecs = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
         position = {p["id"]: i for i, p in enumerate(self.projects)}
         self.row_project = np.array([position[r["id"]] for r in rows])
-        self.row_is_doc = np.array([r["kind"] == "doc" for r in rows])
+        self.row_is_doc = np.array([r["kind"] in ("doc", "summary") for r in rows])
         self.has_vectors = np.array([p["card"] is not None for p in self.projects])
 
         self.bm25 = bm25s.BM25()
@@ -116,7 +118,7 @@ class Index:
         """Per-project dense score; -inf for projects without vectors."""
         sims = self.vecs @ self.embed(query)
         doc = np.full(len(self.projects), -np.inf)
-        doc[self.row_project[self.row_is_doc]] = sims[self.row_is_doc]
+        np.maximum.at(doc, self.row_project[self.row_is_doc], sims[self.row_is_doc])
         best_query = np.full(len(self.projects), -np.inf)
         np.maximum.at(best_query, self.row_project[~self.row_is_doc], sims[~self.row_is_doc])
         return np.maximum(W_DOC * doc, W_QUERY * best_query)

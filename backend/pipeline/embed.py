@@ -1,9 +1,11 @@
 """Embed projects for dense retrieval with voyage-4-large.
 
-Each project with a card (see pipeline.projects) gets one document vector and
-one vector per generated query on its card:
+Each project with a card (see pipeline.projects) gets one document vector,
+one summary vector if it has abstracts, and one vector per generated query on
+its card:
 
 - Document: pipeline.projects.doc_text, embedded as a document.
+- Summary: pipeline.projects.summary_text, embedded as a document.
 - Query: embedded as a query, like user queries, since they stand in for them.
 
 User queries are embedded at search time with QUERY_MODEL, which shares
@@ -24,7 +26,7 @@ import time
 import httpx
 import numpy as np
 
-from pipeline.projects import DIM, INDEX_DIR, INDEX_MODEL, doc_text, load_projects
+from pipeline.projects import DIM, INDEX_DIR, INDEX_MODEL, doc_text, load_projects, summary_text
 
 URL = "https://api.voyageai.com/v1/embeddings"
 # Voyage caps a request at 1000 inputs and 120k tokens; ~4 chars per token.
@@ -61,6 +63,7 @@ def embed(client: httpx.Client, texts: list[str], input_type: str) -> np.ndarray
 def main() -> None:
     projects = [p for p in load_projects() if p["card"]]
     docs = [(p["id"], doc_text(p)) for p in projects]  # (id, text)
+    summaries = [(p["id"], t) for p in projects if (t := summary_text(p))]
     queries = [(p["id"], q) for p in projects for q in p["card"]["queries"]]
 
     known = {}  # (id, kind, text) -> vector already in the index
@@ -70,19 +73,20 @@ def main() -> None:
 
     vecs = {}
     with httpx.Client(headers={"Authorization": f"Bearer {os.environ['VOYAGE_API_KEY']}"}, timeout=120) as client:
-        for kind, rows, input_type in (("doc", docs, "document"), ("query", queries, "query")):
+        for kind, rows, input_type in (("doc", docs, "document"), ("summary", summaries, "document"), ("query", queries, "query")):
             new = sorted({t for pid, t in rows if (pid, kind, t) not in known})
             print(f"{kind}: {len(rows) - len(new)} reused, {len(new)} to embed", flush=True)
             vecs[kind] = dict(zip(new, embed(client, new, input_type)))
 
     INDEX_DIR.mkdir(exist_ok=True)
-    out = [known.get((pid, kind, t), vecs[kind].get(t)) for kind, rows in (("doc", docs), ("query", queries)) for pid, t in rows]
+    kinds = (("doc", docs), ("summary", summaries), ("query", queries))
+    out = [known.get((pid, kind, t), vecs[kind].get(t)) for kind, rows in kinds for pid, t in rows]
     np.save(INDEX_DIR / "vectors.npy", np.vstack(out).astype(np.float16))
     with (INDEX_DIR / "vectors.jsonl").open("w") as f:
-        for kind, rows in (("doc", docs), ("query", queries)):
+        for kind, rows in kinds:
             for pid, text in rows:
                 f.write(json.dumps({"id": pid, "kind": kind, "text": text}) + "\n")
-    print(f"{len(docs)} doc + {len(queries)} query vectors for {len(docs)} projects -> {INDEX_DIR}")
+    print(f"{len(docs)} doc + {len(summaries)} summary + {len(queries)} query vectors for {len(docs)} projects -> {INDEX_DIR}")
 
 
 if __name__ == "__main__":

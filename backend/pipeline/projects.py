@@ -13,6 +13,9 @@ one per presenter (see pipeline.link_expo.expo_groups). Each project is a dict:
 - body: the text the document vector is built from besides the card: the
   gloss for title-only grants, the distinct abstracts (joined) otherwise;
   None with no card
+- gloss: for projects with abstracts, a short topic-level description generated
+  from them (data/glosses.jsonl); None otherwise. Title-only grants already
+  have one as their body.
 """
 
 import json
@@ -40,7 +43,7 @@ def abstracts(entries: list[dict]) -> str:
 
 def load_projects() -> list[dict]:
     grants = json.loads((DATA_DIR / "grants.json").read_text())
-    cards, abstract_cards, expo_cards = map(load_jsonl, ("cards.jsonl", "cards_abstract.jsonl", "cards_expo.jsonl"))
+    cards, abstract_cards, expo_cards, glosses = map(load_jsonl, ("cards.jsonl", "cards_abstract.jsonl", "cards_expo.jsonl", "glosses.jsonl"))
     linked = linked_abstracts()
 
     projects = []
@@ -52,17 +55,31 @@ def load_projects() -> list[dict]:
             card, body = cards[g["id"]], cards[g["id"]]["gloss"]
         else:
             card, body = None, None
-        projects.append({"id": g["id"], "title": g["title"], "grant": g, "expo": entries, "card": card, "body": body})
+        gloss = glosses[g["id"]]["gloss"] if entries else None
+        projects.append({"id": g["id"], "title": g["title"], "grant": g, "expo": entries, "card": card, "body": body, "gloss": gloss})
     for group in unlinked_groups(linked):
         first = group[0]
-        projects.append({"id": first["id"], "title": first["title"], "grant": None, "expo": group, "card": expo_cards[first["id"]], "body": abstracts(group)})
+        projects.append({"id": first["id"], "title": first["title"], "grant": None, "expo": group, "card": expo_cards[first["id"]], "body": abstracts(group), "gloss": glosses[first["id"]]["gloss"]})
     return projects
 
 
 def doc_text(p: dict) -> str:
     """The text of a project's document vector: title + body + fields + concepts + acronym expansions."""
+    return card_text(p, p["body"])
+
+
+def summary_text(p: dict) -> str | None:
+    """The text of a project's summary vector, built like a title-only grant's
+    document vector with the gloss as its body; None for projects without one.
+
+    A full abstract is mostly specifics, which pull its vector away from broad,
+    topic-level queries; the summary vector lets those queries find it."""
+    return p["gloss"] and card_text(p, p["gloss"])
+
+
+def card_text(p: dict, body: str) -> str:
     card = p["card"]
-    parts = [card["title"], p["body"]]
+    parts = [card["title"], body]
     if card["fields"]:
         parts.append("Fields: " + "; ".join(card["fields"]))
     if card["concepts"]:
