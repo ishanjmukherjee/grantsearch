@@ -8,6 +8,14 @@
   generated-query sim). Projects whose title-only card is a refusal have no
   vectors and are found by BM25 alone.
 
+An empty query browses every project matching the filters in a fixed order.
+SURG (2020-2024) and Expo (2021-2026) cover different years, so a single
+newest-first list would open on two years of Expo projects alone. Instead,
+grants (by grant year) and Expo projects without a grant (by latest Expo year)
+are each sorted newest first, shuffled within a year by a hash of the id, and
+merged in proportion to their sizes so both run out together. Filtered to one
+source, browsing is newest first by that source's year.
+
 Results carry only real data (titles, people, years, abstracts, source links);
 cards only aid ranking.
 
@@ -15,6 +23,7 @@ Usage: uv run python -m search QUERY [--source surg|expo] [--years FROM TO] [-n 
 """
 
 import argparse
+import hashlib
 import json
 
 import bm25s
@@ -56,6 +65,28 @@ def bm25_text(p: dict) -> str:
 
 def years(p: dict) -> set[int]:
     return ({p["grant"]["year"]} if p["grant"] else set()) | {e["year"] for e in p["expo"]}
+
+
+def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
+    """Project positions in browse order per source filter; see the module docstring."""
+    def newest_first(keep, year) -> list[int]:
+        ids = [i for i, p in enumerate(projects) if keep(p)]
+        return sorted(ids, key=lambda i: (-year(projects[i]), hashlib.sha1(projects[i]["id"].encode()).hexdigest()))
+
+    def expo_year(p: dict) -> int:
+        return max(e["year"] for e in p["expo"])
+
+    grants = newest_first(lambda p: p["grant"], lambda p: p["grant"]["year"])
+    expo = newest_first(lambda p: not p["grant"], expo_year)
+    order, g, e = [], 0, 0
+    while g < len(grants) or e < len(expo):
+        if e == len(expo) or (g < len(grants) and (g + 1) / len(grants) <= (e + 1) / len(expo)):
+            order.append(grants[g])
+            g += 1
+        else:
+            order.append(expo[e])
+            e += 1
+    return {None: order, "surg": grants, "expo": newest_first(lambda p: p["expo"], expo_year)}
 
 
 def public(p: dict) -> dict:
@@ -109,6 +140,8 @@ class Index:
         self.bm25 = bm25s.BM25()
         self.bm25.index(bm25s.tokenize([bm25_text(p) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
 
+        self.browse_orders = browse_orders(self.projects)
+
         self.model = SentenceTransformer(QUERY_MODEL, revision=QUERY_MODEL_REVISION, trust_remote_code=True, truncate_dim=DIM, device="cpu")
 
     def embed(self, query: str) -> np.ndarray:
@@ -123,20 +156,23 @@ class Index:
         np.maximum.at(best_query, self.row_project[~self.row_is_doc], sims[~self.row_is_doc])
         return np.maximum(W_DOC * doc, W_QUERY * best_query)
 
-    def search(self, query: str, source: str | None = None, year_range: tuple[int, int] | None = None, n: int = 20) -> list[dict]:
-        """The top n projects matching the filters."""
+    def search(self, query: str, source: str | None = None, year_range: tuple[int, int] | None = None, n: int = 20, offset: int = 0) -> list[dict]:
+        """The n projects after the first offset matching the filters, ranked
+        for the query, or in browse order when it is empty."""
         keep = np.array([
             (source is None or (source == "surg" and p["grant"] is not None) or (source == "expo" and bool(p["expo"])))
             and (year_range is None or any(year_range[0] <= y <= year_range[1] for y in years(p)))
             for p in self.projects
         ])
+        if not query.strip():
+            return [self.projects[i] for i in self.browse_orders[source] if keep[i]][offset : offset + n]
         bm25 = np.where(keep, self.bm25.get_scores(tokenize([query])[0]), 0.0)
         dense = np.where(keep, self.dense_scores(query), -np.inf)
         fused = rrf(bm25, 0.0) + rrf(dense, -np.inf)
         # Projects without vectors stand in their BM25 rank for the dense one,
         # so a BM25-only match is not outranked for lack of vectors.
         fused[~self.has_vectors] *= 2
-        top = [i for i in np.argsort(-fused, kind="stable")[:n] if fused[i] > 0]
+        top = [i for i in np.argsort(-fused, kind="stable")[offset : offset + n] if fused[i] > 0]
         return [self.projects[i] for i in top]
 
 

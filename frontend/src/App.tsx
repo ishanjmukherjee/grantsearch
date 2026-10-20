@@ -32,6 +32,7 @@ const ROTATION = [...PROMPTS, REST]
 const PROMPT_MS = 3500 // matches the .prompt animation
 const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
+const PAGE = 30
 
 function readUrl() {
   const p = new URLSearchParams(window.location.search)
@@ -55,10 +56,17 @@ export default function App() {
   const [from, setFrom] = useState(initial.from)
   const [to, setTo] = useState(initial.to)
   const [results, setResults] = useState<Project[] | null>(null)
+  const [more, setMore] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [loadingMore, setLoadingMore] = useState(false)
   const [error, setError] = useState('')
   const [prompt, setPrompt] = useState(0)
   const input = useRef<HTMLInputElement>(null)
+  const sentinel = useRef<HTMLDivElement>(null)
+  // The query string the shown results belong to; a later page for an older
+  // query is dropped.
+  const shown = useRef('')
+  const firstLoad = useRef(true)
 
   useEffect(() => {
     const timer = setTimeout(
@@ -77,30 +85,65 @@ export default function App() {
     const qs = params.toString()
     window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
 
-    if (!q.trim()) {
-      setResults(null)
-      setLoading(false)
-      return
-    }
     const controller = new AbortController()
-    const timer = setTimeout(async () => {
-      setLoading(true)
-      try {
-        const resp = await fetch(`/api/search?${qs}&n=30`, { signal: controller.signal })
-        if (!resp.ok) throw new Error(`The search service returned ${resp.status}.`)
-        setResults((await resp.json()).results)
-        setError('')
-      } catch (e) {
-        if (controller.signal.aborted) return
-        setError(e instanceof Error ? e.message : 'Search failed.')
-      }
-      setLoading(false)
-    }, DEBOUNCE_MS)
+    const timer = setTimeout(
+      async () => {
+        setLoading(true)
+        try {
+          const resp = await fetch(`/api/search?${qs}${qs ? '&' : ''}n=${PAGE}`, { signal: controller.signal })
+          if (!resp.ok) throw new Error(`The search service returned ${resp.status}.`)
+          const page = await resp.json()
+          // The search controls stay in view, so a new search can start deep
+          // in the old list; show the new list from its top.
+          if (shown.current !== qs) window.scrollTo(0, 0)
+          shown.current = qs
+          setResults(page.results)
+          setMore(page.more)
+          setError('')
+        } catch (e) {
+          if (controller.signal.aborted) return
+          setError(e instanceof Error ? e.message : 'Search failed.')
+        }
+        setLoading(false)
+      },
+      // The first load of the page needs no debounce.
+      firstLoad.current ? 0 : DEBOUNCE_MS,
+    )
+    firstLoad.current = false
     return () => {
       clearTimeout(timer)
       controller.abort()
     }
   }, [q, source, from, to])
+
+  // Load the next page when the end of the list scrolls into view.
+  useEffect(() => {
+    const end = sentinel.current
+    if (!end || !more || loading || loadingMore || !results) return
+    const observer = new IntersectionObserver(
+      async ([entry]) => {
+        if (!entry.isIntersecting) return
+        observer.disconnect()
+        const qs = shown.current
+        setLoadingMore(true)
+        try {
+          const resp = await fetch(`/api/search?${qs}${qs ? '&' : ''}n=${PAGE}&offset=${results.length}`)
+          if (!resp.ok) throw new Error(`The search service returned ${resp.status}.`)
+          const page = await resp.json()
+          if (shown.current === qs) {
+            setResults([...results, ...page.results])
+            setMore(page.more)
+          }
+        } catch (e) {
+          if (shown.current === qs) setError(e instanceof Error ? e.message : 'Loading more results failed.')
+        }
+        setLoadingMore(false)
+      },
+      { rootMargin: '800px' },
+    )
+    observer.observe(end)
+    return () => observer.disconnect()
+  }, [results, more, loading, loadingMore])
 
   return (
     <div className="page">
@@ -190,6 +233,8 @@ export default function App() {
           <p className="notice">No projects match. Try different words or widen the filters.</p>
         )}
         {results?.map((p) => <Result key={p.id} project={p} />)}
+        <div ref={sentinel} />
+        {loadingMore && <p className="notice">Loading more...</p>}
       </main>
     </div>
   )
