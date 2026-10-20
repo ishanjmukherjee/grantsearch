@@ -9,6 +9,10 @@ Two layouts exist:
   block (presenter and advisor), a title block, abstract blocks, and a closing
   block starting with "Presentation Format:". Parsed from block boundaries.
 
+Advisor affiliations go in parentheses after the advisor's name, so that
+"Joseph Contessa, Yale University" or "Monika Nanda [UNC Chapel Hill]" reads
+as one advisor, "Joseph Contessa (Yale University)".
+
 Writes data/expo_abstracts.json.
 
 Usage: uv run python -m pipeline.parse_expo [--refresh]
@@ -41,8 +45,10 @@ LIGATURES = str.maketrans({"\uf001": "fi", "\uf002": "fl"})
 PARTICLES = {"van", "von", "den", "der", "de", "da", "del", "della", "di", "du", "dos", "la", "le"}
 ADVISOR = re.compile(r"Faculty Advisors?:\s*(.*)", re.S)
 GUIDE_END = "Presentation Format:"
+# An advisor list item naming an institution rather than a person.
+INSTITUTION = re.compile(r"\b(?:University|College|Laboratory|Hospital|Institute|School|Center)\b")
 BOLD = 16
-MIN_BODY_SIZE = 10  # smaller spans are page footers
+MIN_BODY_SIZE = 10  # lines of only smaller text are page footers
 # 2021 sets its running page header at body size, so match it by text.
 RUNNING_HEADER = re.compile(r"\s*Undergraduate Research & Arts Exposition \d+\s*")
 
@@ -62,7 +68,24 @@ def text(s: str) -> str:
     s = s.translate(LIGATURES).replace("&amp;", "&")
     # Rejoin words hyphenated across line breaks.
     s = re.sub(r"(\w)-\n(\w)", r"\1\2", s)
-    return clean(s)
+    s = clean(s)
+    # Drop stray spaces inside brackets ("[PSI+ ]") and before punctuation
+    # ("results ,"), but not before a decimal point ("p < .001").
+    s = re.sub(r"([(\[]) +| +([)\]])", r"\1\2", s)
+    return re.sub(r"(?<=[\w)\]\"']) +([,;:.])(?=\s|$)", r"\1", s)
+
+
+def affiliations(advisor: str) -> str:
+    """Put an advisor's affiliation in parentheses after their name."""
+    advisor = re.sub(r"\s*\[([^\]]*)\]", r" (\1)", advisor)
+    items = re.split(r"\s*,\s*", advisor)
+    out = [items[0]]
+    for item in items[1:]:
+        if INSTITUTION.search(item) and not out[-1].endswith(")"):
+            out[-1] += f" ({item})"
+        else:
+            out.append(item)
+    return ", ".join(out)
 
 
 def split_people(s: str, last_first: bool) -> list[dict]:
@@ -111,13 +134,13 @@ def parse_program(doc: pymupdf.Document) -> list[dict]:
     for page in doc:
         for block in page.get_text("dict")["blocks"]:
             for line in block.get("lines", []):
-                spans = [
-                    s for s in line["spans"]
-                    if s["text"].strip() and s["size"] >= MIN_BODY_SIZE and "Wingdings" not in s["font"]
-                ]
-                if not spans or RUNNING_HEADER.fullmatch(join_spans(spans)):
+                spans = [s for s in line["spans"] if s["text"].strip() and "Wingdings" not in s["font"]]
+                # A line of only small text is a page footer; small text in a
+                # body-size line is a subscript or superscript (CO2, 1H NMR).
+                body = [s for s in spans if s["size"] >= MIN_BODY_SIZE]
+                if not body or RUNNING_HEADER.fullmatch(join_spans(spans)):
                     continue
-                bold =[bool(s["flags"] & BOLD) for s in spans]
+                bold = [bool(s["flags"] & BOLD) for s in body]
                 kind = "bold" if all(bold) else "mixed" if any(bold) else "plain"
                 lines.append((join_spans(spans), kind))
 
@@ -198,6 +221,9 @@ def main() -> None:
         for n, e in enumerate(entries, 1):
             out.append({"id": f"expo-{year}-{n:03d}", "year": year, **e, "source": SOURCES[year]})
         print(f"{year}: {len(entries)} abstracts")
+    for e in out:
+        if e["advisor"]:
+            e["advisor"] = affiliations(e["advisor"])
 
     path = DATA_DIR / "expo_abstracts.json"
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
