@@ -20,10 +20,13 @@ key is expanded only when
   the most common such group must hold MIN_SHARE of the votes ("ad" is
   Alzheimer's disease on 16 of 21 cards; "er" is the endoplasmic reticulum on
   2 of 6 and the emergency room on 2, so it is not expanded), and
-- titles and abstracts write it in another casing than lowercase, not
-  counting a capitalized word, more often than in lowercase, so that ordinary
-  words that are also acronyms ("or", "chat", "stem") stay as typed, as do
-  keys the projects' own text never writes.
+- when titles and abstracts write it, they nearly always do so in another
+  casing than lowercase, not counting a capitalized word: at least
+  MIN_CASED_SHARE of the time. Ordinary words that are also acronyms ("or",
+  "stem", and "fish", which the abstracts write as FISH 4 times and as fish
+  twice) stay as typed, as do keys the projects' own text never writes; real
+  acronyms that also appear in lowercase clear it easily ("AD" 85 times,
+  "ad" 3).
 
 An empty query browses every project matching the filters in a fixed order.
 SURG (2020-2024) and Expo (2021-2026) cover different years, so a single
@@ -64,6 +67,7 @@ RRF_K = 60
 BM25_K1 = 0.5
 MERGE_SIM = 0.5
 MIN_SHARE = 2 / 3
+MIN_CASED_SHARE = 0.9
 
 stemmer = Stemmer.Stemmer("english")
 
@@ -219,7 +223,7 @@ def acronym_expansions(projects: list[dict]) -> dict[str, tuple[str, str]]:
     return {
         key: (spellings[key].most_common(1)[0][0], expansion)
         for key, v in votes.items()
-        if lowercase[key] < cased[key] and (expansion := majority_expansion(v))
+        if cased[key] and cased[key] >= MIN_CASED_SHARE * (cased[key] + lowercase[key]) and (expansion := majority_expansion(v))
     }
 
 
