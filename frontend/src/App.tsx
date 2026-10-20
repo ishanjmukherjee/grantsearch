@@ -24,6 +24,7 @@ const PROMPTS = [
   'dravet syndrome',
   'elon musk',
   'creative writing project for classics majors',
+  'astronomy research i can do with public survey data',
 ]
 // After a full pass through PROMPTS, rest on this for a while before the next.
 const REST = 'what do you want to research?'
