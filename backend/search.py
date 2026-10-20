@@ -8,6 +8,23 @@
   generated-query sim). Projects whose title-only card is a refusal have no
   vectors and are found by BM25 alone.
 
+The query model cannot read many acronyms, lowercase ones especially: it
+splits "qpcr" into "q", "pc" and "r" and matches quantum physics. So before
+embedding, each word of the query that is a known acronym gets its expansion
+appended ("qpcr (qPCR, quantitative polymerase chain reaction)"); BM25 sees
+the query as typed. The acronyms come from the cards the projects use, and a
+key is expanded only when
+- it is one word with at least two letters or digits,
+- its expansions agree: those whose character trigrams have a Jaccard
+  similarity of at least MERGE_SIM are taken as one spelled differently, and
+  the most common such group must hold MIN_SHARE of the votes ("ad" is
+  Alzheimer's disease on 16 of 21 cards; "er" is the endoplasmic reticulum on
+  2 of 6 and the emergency room on 2, so it is not expanded), and
+- titles and abstracts write it in another casing than lowercase, not
+  counting a capitalized word, more often than in lowercase, so that ordinary
+  words that are also acronyms ("or", "chat", "stem") stay as typed, as do
+  keys the projects' own text never writes.
+
 An empty query browses every project matching the filters in a fixed order.
 SURG (2020-2024) and Expo (2021-2026) cover different years, so a single
 newest-first list would open on two years of Expo projects alone. Instead,
@@ -24,7 +41,11 @@ Usage: uv run python -m search QUERY [--source surg|expo] [--years FROM TO] [-n 
 
 import argparse
 import hashlib
+import itertools
 import json
+import re
+import string
+from collections import Counter, defaultdict
 
 import bm25s
 import numpy as np
@@ -41,6 +62,8 @@ RRF_K = 60
 # Low term-frequency saturation: containing a query word counts for more than
 # repeating it, which the cards' generated queries and concepts do a lot.
 BM25_K1 = 0.5
+MERGE_SIM = 0.5
+MIN_SHARE = 2 / 3
 
 stemmer = Stemmer.Stemmer("english")
 
@@ -129,6 +152,77 @@ def public(p: dict) -> dict:
     }
 
 
+def word_forms(word: str) -> list[str]:
+    """A word as written, without surrounding brackets, quotes and sentence
+    punctuation, and without any punctuation at its ends; tried in that order
+    so that "cd8+", "U.S." and "qPCR." are all found."""
+    return list(dict.fromkeys((word, word.strip(",;:!?\"'()[]"), word.strip(string.punctuation))))
+
+
+def find_acronym(word: str, keys) -> str | None:
+    return next((f for f in word_forms(word) if f.lower() in keys), None)
+
+
+def trigrams(expansion: str) -> set[str]:
+    """Character trigrams of an expansion, lowercased, with any space-led
+    parenthetical dropped (not the parentheses of "poly(ethylene glycol)")
+    and only letters and digits kept."""
+    s = re.sub(r"[^a-z0-9]", "", re.sub(r" \([^()]*\)", "", expansion.lower()))
+    return {s[i : i + 3] for i in range(len(s) - 2)} or {s}
+
+
+def majority_expansion(votes: Counter) -> str | None:
+    """The expansion of a key given each spelling's votes, if its spellings
+    agree; see the module docstring. It is the most voted spelling in the
+    winning group, the shortest on a tie."""
+    spellings = list(votes)
+    grams = [trigrams(s) for s in spellings]
+    group = list(range(len(spellings)))
+
+    def root(i: int) -> int:
+        while group[i] != i:
+            i = group[i]
+        return i
+
+    for i, j in itertools.combinations(range(len(spellings)), 2):
+        if len(grams[i] & grams[j]) / len(grams[i] | grams[j]) >= MERGE_SIM:
+            group[root(i)] = root(j)
+    totals = Counter()
+    for i, s in enumerate(spellings):
+        totals[root(i)] += votes[s]
+    best, n = totals.most_common(1)[0]
+    if n < MIN_SHARE * votes.total():
+        return None
+    return max((s for i, s in enumerate(spellings) if root(i) == best), key=lambda s: (votes[s], -len(s)))
+
+
+def acronym_expansions(projects: list[dict]) -> dict[str, tuple[str, str]]:
+    """Lowercased acronym -> (its most common spelling, its expansion), for
+    the acronyms the module docstring says to expand."""
+    votes, spellings = defaultdict(Counter), defaultdict(Counter)
+    for p in projects:
+        for key, expansion in (p["card"]["acronyms"] if p["card"] else {}).items():
+            if " " not in key and sum(c.isalnum() for c in key) >= 2:
+                votes[key.lower()][expansion] += 1
+                spellings[key.lower()][key] += 1
+
+    lowercase, cased = Counter(), Counter()
+    for p in projects:
+        for text in dict.fromkeys([p["title"], *(x for e in p["expo"] for x in (e["title"], e["abstract"]))]):
+            for word in text.split():
+                if form := find_acronym(word, votes):
+                    if form == form.lower():
+                        lowercase[form] += 1
+                    elif form != form.capitalize():
+                        cased[form.lower()] += 1
+
+    return {
+        key: (spellings[key].most_common(1)[0][0], expansion)
+        for key, v in votes.items()
+        if lowercase[key] < cased[key] and (expansion := majority_expansion(v))
+    }
+
+
 def rrf(scores: np.ndarray, floor: float) -> np.ndarray:
     """Reciprocal-rank credit for each project scoring above floor."""
     hits = np.flatnonzero(scores > floor)
@@ -159,11 +253,17 @@ class Index:
         self.bm25.index(bm25s.tokenize([bm25_text(p) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
 
         self.browse_orders = browse_orders(self.projects)
+        self.acronyms = acronym_expansions(self.projects)
 
         self.model = SentenceTransformer(QUERY_MODEL, revision=QUERY_MODEL_REVISION, trust_remote_code=True, truncate_dim=DIM, device="cpu")
 
     def embed(self, query: str) -> np.ndarray:
         return self.model.encode_query(query, normalize_embeddings=True)
+
+    def expand(self, query: str) -> str:
+        """The query with the expansions of its acronyms appended, for the dense side."""
+        found = dict.fromkeys(self.acronyms[form.lower()] for word in query.split() if (form := find_acronym(word, self.acronyms)))
+        return f"{query} ({'; '.join(f'{spelling}, {expansion}' for spelling, expansion in found)})" if found else query
 
     def dense_scores(self, query: str) -> np.ndarray:
         """Per-project dense score; -inf for projects without vectors."""
@@ -185,7 +285,7 @@ class Index:
         if not query.strip():
             return [self.projects[i] for i in self.browse_orders[source] if keep[i]][offset : offset + n]
         bm25 = np.where(keep, self.bm25.get_scores(tokenize([query])[0]), 0.0)
-        dense = np.where(keep, self.dense_scores(query), -np.inf)
+        dense = np.where(keep, self.dense_scores(self.expand(query)), -np.inf)
         fused = rrf(bm25, 0.0) + rrf(dense, -np.inf)
         # Projects without vectors stand in their BM25 rank for the dense one,
         # so a BM25-only match is not outranked for lack of vectors.
