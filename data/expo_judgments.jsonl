@@ -359,7 +359,7 @@
 {"pair_id": "surg-2024-215|expo-2026-191", "verdict": "related", "confidence": "low", "reason": "Both on intimate partner violence, but grant on Rust Belt decline and Expo on strangulation laws."}
 {"pair_id": "surg-2024-224|expo-2024-164", "verdict": "related", "confidence": "low", "reason": "Earlier Hofstenia eye regeneration gene screen; grant focuses on Wnt and eye cell positioning."}
 {"pair_id": "surg-2024-229|expo-2025-212", "verdict": "same", "confidence": "low", "reason": "Stupp lab lysosome-targeting peptide amphiphiles, but Expo targets amyloid-beta and never mentions spinal cord injury."}
-{"pair_id": "surg-2024-230|expo-2025-213", "verdict": "same", "confidence": "low", "reason": "Grant title is too vague to confirm ('Galactic Data's Journey'); Expo on spectral stacking of galaxy emission lines one year later."}
+{"pair_id": "surg-2024-230|expo-2025-213", "verdict": "same", "confidence": "high", "reason": "Confirmed by hand: same student; the grant's vague astronomy title matches the Expo galaxy spectral-stacking project a year later."}
 {"pair_id": "surg-2024-233|expo-2024-169", "verdict": "related", "confidence": "low", "reason": "Both on nAMD mouse models in Lavine lab, but Expo on macrophage depletion model, not beta2-AR/IL-6."}
 {"pair_id": "surg-2024-239|expo-2026-211", "verdict": "unrelated", "confidence": "high", "reason": "Grant on Braess paradox in road networks; Expo on quantum compilation."}
 {"pair_id": "surg-2024-240|expo-2023-102", "verdict": "related", "confidence": "high", "reason": "Same student's supernova work, but Expo is Type Ia ZTF sample, not stripped-envelope environments."}
