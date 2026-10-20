@@ -302,6 +302,11 @@ h1 {
   margin: 0;
 }
 
+/* Sets a section's own byline apart from the card's when no heading does. */
+.abstract > .people:first-child {
+  margin-top: 12px;
+}
+
 /* Separates a poster's differing abstracts, which have no heading between them. */
 .abstract + .abstract {
   margin-top: 12px;

@@ -244,21 +244,45 @@ function Result({ project }: { project: Project }) {
   const { grant, expo } = project
   const parts = sections(expo)
   const programs = new Map(expo.map((e) => [e.url, e.year]))
+
+  // The byline under the title: the awardees, or for an Expo-only project
+  // everyone who presented it, with each person's advisors when every
+  // listing they presented names the same ones.
+  const names = grant ? grant.awardees : [...new Set(parts.flatMap((s) => s.students.map((x) => x.name)))]
+  const lifted = new Map<string, string[] | null>() // null: advisors vary across their listings
+  for (const name of names) {
+    const lists = parts.flatMap((s) => s.students.filter((x) => x.name === name).map((x) => x.advisors))
+    lifted.set(name, lists.every((l) => sameSet(l, lists[0] ?? [])) ? (lists[0] ?? []) : null)
+  }
+  const top = names.map((name) => ({ name, advisors: lifted.get(name) ?? [] }))
+  const topShared = top.every((x) => sameSet(x.advisors, top[0].advisors)) ? top[0].advisors : null
+  const years = new Set(parts.map((s) => s.year))
+
   return (
     <article className="result">
       <div className="tags">
         {grant && <span className="tag surg">SURG {grant.year}</span>}
-        {[...new Set(expo.map((e) => e.year))].map((year) => (
+        {[...years].map((year) => (
           <span key={year} className="tag expo">
             Expo {year}
           </span>
         ))}
       </div>
       <h2>{project.title}</h2>
-      {grant && <p className="people">{list(grant.awardees)}</p>}
-      {parts.map((s) => (
-        <Abstract key={s.key} section={s} projectTitle={project.title} showTitle={parts.length > 1 || !!grant} />
-      ))}
+      <p className="people">{byline(top)}</p>
+      {parts.map((s) => {
+        // A section names its students only when they differ from the byline
+        // above, and their advisors only when those differ from it too.
+        const own =
+          !sameSet(
+            s.students.map((x) => x.name),
+            names,
+          ) || s.students.some((x) => lifted.get(x.name) === null)
+        const repeat = topShared !== null && s.students.every((x) => sameSet(x.advisors, topShared))
+        const people = own ? byline(repeat ? s.students.map((x) => ({ ...x, advisors: [] })) : s.students) : null
+        const heading = s.title !== project.title ? `Expo ${s.year}: ${s.title}` : years.size > 1 ? `Expo ${s.year}` : null
+        return <Abstract key={s.key} section={s} heading={heading} people={people} />
+      })}
       <div className="links">
         {grant && (
           <a href={grant.url} target="_blank" rel="noreferrer">
@@ -275,38 +299,63 @@ function Result({ project }: { project: Project }) {
   )
 }
 
-type Section = { key: string; year: number; title: string; presenters: string[]; advisors: string[]; abstract: string }
+type Student = { name: string; advisors: string[] }
+type Section = { key: string; year: number; title: string; students: Student[]; abstract: string }
+
+function sameSet(a: string[], b: string[]) {
+  return a.length === b.length && a.every((x) => b.includes(x))
+}
+
+// Split an advisor list on commas, semicolons and "and", but not inside
+// parentheses, which hold an advisor's affiliation.
+function advisorNames(advisor: string): string[] {
+  const groups: string[] = []
+  const masked = advisor.replace(/\([^()]*\)/g, (m) => `\u0000${groups.push(m) - 1}\u0000`)
+  return masked
+    .split(/\s*[,;]\s*(?:and\s+)?|\s+and\s+/)
+    .filter(Boolean)
+    .map((name) => name.replace(/\u0000(\d+)\u0000/g, (_, i) => groups[Number(i)]))
+}
 
 // A poster presented by several students is listed once per presenter, usually
-// with the same abstract; show each abstract once, with everyone who presented it.
+// with the same abstract; show each abstract once, with everyone who presented
+// it. Advisors stay with the students whose listing names them.
 function sections(expo: ExpoEntry[]): Section[] {
   const byAbstract = new Map<string, Section>()
   for (const e of expo) {
     let s = byAbstract.get(e.abstract)
     if (!s) {
-      s = { key: e.id, year: e.year, title: e.title, presenters: [], advisors: [], abstract: e.abstract }
+      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract }
       byAbstract.set(e.abstract, s)
     }
-    const advisors = e.advisor ? e.advisor.split(/\s*[,;]\s*(?:and\s+)?|\s+and\s+/) : []
-    s.presenters = [...new Set([...s.presenters, ...e.presenters])]
-    s.advisors = [...new Set([...s.advisors, ...advisors])]
+    const advisors = e.advisor ? advisorNames(e.advisor) : []
+    for (const name of e.presenters) {
+      const student = s.students.find((x) => x.name === name)
+      if (student) student.advisors = [...new Set([...student.advisors, ...advisors])]
+      else s.students.push({ name, advisors })
+    }
   }
   return [...byAbstract.values()]
 }
 
-function Abstract({ section, projectTitle, showTitle }: { section: Section; projectTitle: string; showTitle: boolean }) {
+// "X and Y, advised by A" when every student has the same advisors; otherwise
+// each student's advisors in parentheses after their name, students with
+// advisors first so that a trailing parenthesis never reads as the team's.
+function byline(students: Student[]) {
+  if (students.every((x) => sameSet(x.advisors, students[0].advisors))) {
+    const advisors = students[0].advisors
+    return list(students.map((x) => x.name)) + (advisors.length ? `, advised by ${list(advisors)}` : '')
+  }
+  const ordered = [...students.filter((x) => x.advisors.length), ...students.filter((x) => !x.advisors.length)]
+  return list(ordered.map((x) => (x.advisors.length ? `${x.name} (advised by ${list(x.advisors)})` : x.name)))
+}
+
+function Abstract({ section, heading, people }: { section: Section; heading: string | null; people: string | null }) {
   const [open, setOpen] = useState(false)
   return (
     <section className="abstract">
-      {showTitle && section.title !== projectTitle && (
-        <h3>
-          Expo {section.year}: {section.title}
-        </h3>
-      )}
-      <p className="people">
-        {list(section.presenters)}
-        {section.advisors.length > 0 && `, advised by ${list(section.advisors)}`}
-      </p>
+      {heading && <h3>{heading}</h3>}
+      {people && <p className="people">{people}</p>}
       <p className={open ? 'text' : 'text clamped'}>{section.abstract}</p>
       <button className="more" onClick={() => setOpen(!open)}>
         {open ? 'Hide abstract' : 'Show abstract'}

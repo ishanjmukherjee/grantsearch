@@ -31,6 +31,7 @@ import numpy as np
 import Stemmer
 from sentence_transformers import SentenceTransformer
 
+from pipeline.link_expo import first_match, surname_parts
 from pipeline.projects import DIM, INDEX_DIR, QUERY_MODEL, QUERY_MODEL_REVISION, doc_text, load_projects, summary_text
 from pipeline.scrape_surg import PAGES
 
@@ -89,9 +90,23 @@ def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
     return {None: order, "surg": grants, "expo": newest_first(lambda p: p["expo"], expo_year)}
 
 
+def same_person(a: dict, b: dict) -> bool:
+    """Whether two name records likely name one person: a shared surname part
+    and first names one of which is a prefix of the other (Josh / Joshua)."""
+    return bool(surname_parts(a["last"]) & surname_parts(b["last"])) and first_match(a["first"], b["first"])
+
+
 def public(p: dict) -> dict:
-    """What a result shows: real data and source links, nothing from the card."""
+    """What a result shows: real data and source links, nothing from the card.
+
+    A presenter who is one of the grant's awardees is named as the grant names
+    them, so that the card shows one person once."""
     g = p["grant"]
+    awardees = g["awardees"] if g else []
+
+    def presenter(x: dict) -> str:
+        return next((f"{a['first']} {a['last']}" for a in awardees if same_person(a, x)), f"{x['first']} {x['last']}")
+
     return {
         "id": p["id"],
         "title": p["title"],
@@ -101,7 +116,7 @@ def public(p: dict) -> dict:
                 "id": e["id"],
                 "year": e["year"],
                 "title": e["title"],
-                "presenters": names(e["presenters"]),
+                "presenters": [presenter(x) for x in e["presenters"]],
                 "advisor": e["advisor"],
                 "abstract": e["abstract"],
                 "url": e["source"],

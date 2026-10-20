@@ -7,7 +7,8 @@ one per presenter (see pipeline.link_expo.expo_groups). Each project is a dict:
 
 - id, title: the grant's, or the poster's first listing's when there is no grant
 - grant: the grants.json record, or None
-- expo: the linked or own expo_abstracts.json records (may be empty)
+- expo: the linked or own expo_abstracts.json records (may be empty), with
+  formatting-only variants of an abstract folded into one (see fold)
 - card: the search card for the project, or None when the title-only card is a
   refusal
 - body: the text the document vector is built from besides the card: the
@@ -20,7 +21,7 @@ one per presenter (see pipeline.link_expo.expo_groups). Each project is a dict:
 
 import json
 
-from pipeline.link_expo import linked_abstracts, unlinked_groups
+from pipeline.link_expo import linked_abstracts, unlinked_groups, words
 from pipeline.scrape_surg import DATA_DIR
 
 INDEX_DIR = DATA_DIR / "index"
@@ -36,6 +37,14 @@ def load_jsonl(name: str) -> dict[str, dict]:
     return {c["id"]: c for c in map(json.loads, (DATA_DIR / name).open())}
 
 
+def fold(entries: list[dict]) -> list[dict]:
+    """The entries, with abstracts differing from an earlier one's only in
+    formatting (spacing, punctuation, word order) replaced by that one's text.
+    A poster's listings often carry one abstract extracted slightly differently."""
+    first: dict[tuple[str, ...], str] = {}
+    return [{**e, "abstract": first.setdefault(tuple(sorted(words(e["abstract"]))), e["abstract"])} for e in entries]
+
+
 def abstracts(entries: list[dict]) -> str:
     """The entries' distinct abstracts, joined; a poster's listings often repeat one."""
     return "\n\n".join(dict.fromkeys(e["abstract"] for e in entries))
@@ -48,7 +57,7 @@ def load_projects() -> list[dict]:
 
     projects = []
     for g in grants:
-        entries = linked.get(g["id"], [])
+        entries = fold(linked.get(g["id"], []))
         if entries:
             card, body = abstract_cards[g["id"]], abstracts(entries)
         elif cards[g["id"]]["status"] == "card":
@@ -57,7 +66,7 @@ def load_projects() -> list[dict]:
             card, body = None, None
         gloss = glosses[g["id"]]["gloss"] if entries else None
         projects.append({"id": g["id"], "title": g["title"], "grant": g, "expo": entries, "card": card, "body": body, "gloss": gloss})
-    for group in unlinked_groups(linked):
+    for group in map(fold, unlinked_groups(linked)):
         first = group[0]
         projects.append({"id": first["id"], "title": first["title"], "grant": None, "expo": group, "card": expo_cards[first["id"]], "body": abstracts(group), "gloss": glosses[first["id"]]["gloss"]})
     return projects
