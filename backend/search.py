@@ -38,6 +38,9 @@ from pipeline.scrape_surg import PAGES
 W_DOC = 1.0
 W_QUERY = 0.6  # query-query cosines run well above query-doc ones
 RRF_K = 60
+# Low term-frequency saturation: containing a query word counts for more than
+# repeating it, which the cards' generated queries and concepts do a lot.
+BM25_K1 = 0.5
 
 stemmer = Stemmer.Stemmer("english")
 
@@ -152,7 +155,7 @@ class Index:
         self.row_is_doc = np.array([r["kind"] in ("doc", "summary") for r in rows])
         self.has_vectors = np.array([p["card"] is not None for p in self.projects])
 
-        self.bm25 = bm25s.BM25()
+        self.bm25 = bm25s.BM25(k1=BM25_K1)
         self.bm25.index(bm25s.tokenize([bm25_text(p) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
 
         self.browse_orders = browse_orders(self.projects)
