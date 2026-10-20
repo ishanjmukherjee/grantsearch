@@ -15,6 +15,9 @@ COPY backend/pyproject.toml backend/uv.lock ./
 RUN uv sync --frozen
 COPY backend/ ./
 COPY data/ /app/data/
+# Railway checks out LFS files as pointers; fetch them for the commit being built.
+ARG RAILWAY_GIT_COMMIT_SHA
+RUN python fetch_lfs.py data/index/vectors.npy
 # Bake the pinned query model into the image so startup never touches the Hub.
 RUN python -c "from huggingface_hub import snapshot_download; from pipeline.projects import QUERY_MODEL, QUERY_MODEL_REVISION; snapshot_download(QUERY_MODEL, revision=QUERY_MODEL_REVISION)"
 ENV HF_HUB_OFFLINE=1
