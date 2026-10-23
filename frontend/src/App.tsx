@@ -22,12 +22,11 @@ const PROMPTS = [
   'spectral geometry',
   'functional decision theory',
   'dravet syndrome',
-  'elon musk',
   'creative writing project for classics majors',
   'astronomy research i can do with public data',
 ]
 // After a full pass through PROMPTS, rest on this for a while before the next.
-const REST = 'what do you want to research?'
+const REST = 'your idea here'
 const ROTATION = [...PROMPTS, REST]
 const PROMPT_MS = 3500 // matches the .prompt animation
 const REST_MS = 12000 // matches the .prompt.rest animation
