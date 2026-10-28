@@ -36,6 +36,14 @@ are each sorted newest first, shuffled within a year by a hash of the id, and
 merged in proportion to their sizes so both run out together. Filtered to one
 source, browsing is newest first by that source's year.
 
+A query that names someone puts that person's projects first, ahead of the
+fused ranking, when people.People.pins is confident it is a name: most people
+search their own name first, and the dense side cannot read names, so fusion
+alone often ranks another student who shares a first name above them. Pinned
+projects are ordered by how well the name matched, then, if the query has
+other words ("han liu robotics"), by the fused ranking, or else most recent
+first.
+
 A project's similar projects are those whose document or summary vectors are
 nearest any of its own; one without vectors uses a search for its title.
 
@@ -62,6 +70,7 @@ from pipeline.link_expo import first_match, surname_parts
 from pipeline.projects import DIM, INDEX_DIR, QUERY_MODEL, QUERY_MODEL_REVISION, doc_text, load_projects, summary_text
 from pipeline.scrape_surg import PAGES
 from pipeline.share_ids import key, load_rows
+from people import People
 
 W_DOC = 1.0
 W_QUERY = 0.6  # query-query cosines run well above query-doc ones
@@ -277,6 +286,7 @@ class Index:
 
         self.browse_orders = browse_orders(self.projects)
         self.acronyms = acronym_expansions(self.projects)
+        self.people = People(self.projects)
 
         self.model = SentenceTransformer(QUERY_MODEL, revision=QUERY_MODEL_REVISION, trust_remote_code=True, truncate_dim=DIM, device="cpu")
 
@@ -334,8 +344,17 @@ class Index:
         # Projects without vectors stand in their BM25 rank for the dense one,
         # so a BM25-only match is not outranked for lack of vectors.
         fused[~self.has_vectors] *= 2
-        top = [i for i in np.argsort(-fused, kind="stable")[offset : offset + n] if fused[i] > 0]
-        return [self.projects[i] for i in top], int((fused > 0).sum())
+        # A query that names someone puts their projects first (see
+        # people.People.pins): by how well the name matched, then by the
+        # ranking on any other words, or, for a name alone, most recent first.
+        pins, more_words = self.people.pins(query)
+        pinned = sorted(
+            (i for i in map(self.position.get, pins) if keep[i]),
+            key=lambda i: (-pins[self.projects[i]["id"]], 0 if more_words else -max(years(self.projects[i])), -fused[i]),
+        )
+        taken = set(pinned)
+        ranked = pinned + [i for i in np.argsort(-fused, kind="stable") if fused[i] > 0 and i not in taken]
+        return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked)
 
 
 def main() -> None:
