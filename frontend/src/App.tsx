@@ -20,7 +20,7 @@ const PROMPTS = [
   'llm-accelerated biology research',
   'photinus carolinus',
   'spectral geometry',
-  'functional decision theory',
+  'research interviewing doctors',
   'dravet syndrome',
   'creative writing project for classics majors',
   'astronomy research i can do with public data',
