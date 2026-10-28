@@ -16,7 +16,7 @@ type Source = '' | 'surg' | 'expo'
 const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
 const PROMPTS = [
   'how to build a moon colony',
-  'regional pig latins',
+  'regional pig latin',
   'llm-accelerated biology research',
   'photinus carolinus',
   'spectral geometry',
