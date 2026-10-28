@@ -54,7 +54,7 @@ function readUrl() {
 // arrives; an error response is thrown as a plain Error.
 function failure(e: unknown) {
   console.error(e)
-  return e instanceof TypeError ? "Couldn't connect. Try again in a moment." : 'Something went wrong on our end.'
+  return e instanceof TypeError ? 'Couldn’t connect. Try again in a moment.' : 'Something went wrong on our end.'
 }
 
 function list(names: string[]) {
@@ -104,8 +104,8 @@ function Header({ lede }: { lede?: boolean }) {
       </h1>
       {lede && (
         <p className="lede">
-          Northwestern Summer Undergraduate Research Grants (2020-2024) and Undergraduate Research &amp; Arts Expo
-          projects (2021-2026). Search by topic, method, field or person.
+          Northwestern Summer Undergraduate Research Grants (2020–2024) and Undergraduate Research &amp; Arts Expo
+          projects (2021–2026). Search by topic, method, field or person.
         </p>
       )}
     </header>
@@ -131,7 +131,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
         if (!resp.ok) throw new Error(`/api/project returned ${resp.status}`)
         const page = await resp.json()
         setData(page)
-        document.title = `${page.project.title} -- ${SITE}`
+        document.title = `${page.project.title} — ${SITE}`
         // A link to another of a poster's listings shows the project's own number.
         if (String(page.project.share) !== number) window.history.replaceState(null, '', `/p/${page.project.share}`)
       } catch (e) {
@@ -161,7 +161,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
       </div>
       <main>
         {error && <p className="notice error">{error}</p>}
-        {!data && !error && <p className="notice">Loading...</p>}
+        {!data && !error && <p className="notice">Loading…</p>}
         {data && (
           <>
             <Result project={data.project} open />
@@ -352,7 +352,7 @@ function Search() {
         )}
         {results?.map((p) => <Result key={p.id} project={p} />)}
         <div ref={sentinel} />
-        {loadingMore && <p className="notice">Loading more...</p>}
+        {loadingMore && <p className="notice">Loading more…</p>}
       </main>
     </div>
   )

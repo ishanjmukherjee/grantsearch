@@ -67,7 +67,7 @@ def description(r: dict) -> str:
     won a title-only grant."""
     if r["expo"]:
         text = " ".join(r["expo"][0]["abstract"].split())
-        return text if len(text) <= DESCRIPTION_CHARS else text[:DESCRIPTION_CHARS].rsplit(" ", 1)[0] + "..."
+        return text if len(text) <= DESCRIPTION_CHARS else text[:DESCRIPTION_CHARS].rsplit(" ", 1)[0] + "…"
     awardees = r["grant"]["awardees"]
     names = " and ".join(awardees) if len(awardees) <= 2 else f"{', '.join(awardees[:-1])}, and {awardees[-1]}"
     return f"SURG {r['grant']['year']} grant awarded to {names}."
@@ -87,7 +87,7 @@ if FRONTEND_DIR.exists():
         if p is None:
             return HTMLResponse(page, status_code=404)
         r = search.public(p)
-        title, desc = escape(f"{r['title']} -- {SITE}"), escape(description(r))
+        title, desc = escape(f"{r['title']} — {SITE}"), escape(description(r))
         head = (
             f'<meta name="description" content="{desc}" />'
             f'<meta property="og:title" content="{escape(r["title"])}" />'
