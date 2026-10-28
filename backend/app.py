@@ -1,8 +1,8 @@
 """HTTP API for project search.
 
 - GET /api/search?q=...&source=surg|expo&from=YEAR&to=YEAR&n=20&offset=0
-  returns {"results": [...], "more": bool}, each result as search.public
-  describes it; "more" says whether a later offset has results. An empty or
+  returns {"results": [...], "total": int}, each result as search.public
+  describes it; "total" counts the matches at every offset. An empty or
   missing q browses all projects, most recent first.
 - GET /api/project/NUMBER returns {"project": ..., "similar": [...]} for the
   project a share number leads to (see pipeline.share_ids), or 404.
@@ -50,8 +50,8 @@ def search_projects(
     offset: int = Query(0, ge=0),
 ) -> dict:
     years = None if year_from is None and year_to is None else (year_from or 0, year_to or 9999)
-    results = app.state.index.search(q, source, years, n + 1, offset)
-    return {"results": [search.public(p) for p in results[:n]], "more": len(results) > n}
+    results, total = app.state.index.search(q, source, years, n, offset)
+    return {"results": [search.public(p) for p in results], "total": total}
 
 
 @app.get("/api/project/{number}")

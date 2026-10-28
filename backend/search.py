@@ -306,7 +306,7 @@ class Index:
         """The n projects most like p; see the module docstring."""
         i = self.position[p["id"]]
         if not self.has_vectors[i]:
-            return [x for x in self.search(p["title"], n=n + 1) if x is not p][:n]
+            return [x for x in self.search(p["title"], n=n + 1)[0] if x is not p][:n]
         own = self.vecs[(self.row_project == i) & self.row_is_doc]
         sims = (self.vecs[self.row_is_doc] @ own.T).max(axis=1)
         best = np.full(len(self.projects), -np.inf)
@@ -314,16 +314,17 @@ class Index:
         best[i] = -np.inf
         return [self.projects[j] for j in np.argsort(-best, kind="stable")[:n]]
 
-    def search(self, query: str, source: str | None = None, year_range: tuple[int, int] | None = None, n: int = 20, offset: int = 0) -> list[dict]:
+    def search(self, query: str, source: str | None = None, year_range: tuple[int, int] | None = None, n: int = 20, offset: int = 0) -> tuple[list[dict], int]:
         """The n projects after the first offset matching the filters, ranked
-        for the query, or in browse order when it is empty."""
+        for the query, or in browse order when it is empty, and how many match
+        in all."""
         keep = np.array([
             (source is None or (source == "surg" and p["grant"] is not None) or (source == "expo" and bool(p["expo"])))
             and (year_range is None or any(year_range[0] <= y <= year_range[1] for y in years(p)))
             for p in self.projects
         ])
         if not query.strip():
-            return [self.projects[i] for i in self.browse_orders[source] if keep[i]][offset : offset + n]
+            return [self.projects[i] for i in self.browse_orders[source] if keep[i]][offset : offset + n], int(keep.sum())
         # The tokenizer drops stopwords and one-character words, which can
         # leave nothing to score ("a", "the"); the dense side still ranks.
         tokens = tokenize([query])[0]
@@ -334,7 +335,7 @@ class Index:
         # so a BM25-only match is not outranked for lack of vectors.
         fused[~self.has_vectors] *= 2
         top = [i for i in np.argsort(-fused, kind="stable")[offset : offset + n] if fused[i] > 0]
-        return [self.projects[i] for i in top]
+        return [self.projects[i] for i in top], int((fused > 0).sum())
 
 
 def main() -> None:
@@ -345,7 +346,7 @@ def main() -> None:
     parser.add_argument("-n", type=int, default=10)
     args = parser.parse_args()
 
-    results = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n)
+    results, _ = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n)
     for rank, p in enumerate(results, 1):
         r = public(p)
         tags = ([f"SURG {r['grant']['year']}"] if r["grant"] else []) + [f"Expo {e['year']}" for e in r["expo"]]

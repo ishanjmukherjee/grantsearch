@@ -33,6 +33,7 @@ const PROMPT_MS = 3500 // matches the .prompt animation
 const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
 const PAGE = 30
+const PAGER_SPAN = 9 // page numbers the pager shows at once; odd, to center the current one
 const SITE = 'Wildcat Scholar'
 // A share status holds, then fades out with the icon (see .share.fading).
 const STATUS_HOLD_MS = 2000
@@ -48,6 +49,7 @@ function readUrl() {
     source: (p.get('source') ?? '') as Source,
     from: p.get('from') ?? '',
     to: p.get('to') ?? '',
+    page: Math.max(1, Number.parseInt(p.get('page') ?? '') || 1),
   }
 }
 
@@ -184,18 +186,52 @@ function Search() {
   const [source, setSource] = useState<Source>(initial.source)
   const [from, setFrom] = useState(initial.from)
   const [to, setTo] = useState(initial.to)
+  const [page, setPage] = useState(initial.page)
   const [results, setResults] = useState<Project[] | null>(null)
-  const [more, setMore] = useState(false)
+  const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(false)
-  const [loadingMore, setLoadingMore] = useState(false)
   const [error, setError] = useState('')
   const { prompt, className } = usePrompt()
   const input = useRef<HTMLInputElement>(null)
-  const sentinel = useRef<HTMLDivElement>(null)
-  // The query string the shown results belong to; a later page for an older
-  // query is dropped.
+  // The query string the shown results belong to.
   const shown = useRef('')
-  const firstLoad = useRef(true)
+  // Set when the next search should skip the debounce: the page's first load,
+  // and moves between pages, which are not typed.
+  const instant = useRef(true)
+
+  // The page's URL for the current search at page n; page 1 is left out.
+  function href(n: number) {
+    const params = new URLSearchParams()
+    if (q.trim()) params.set('q', q.trim())
+    if (source) params.set('source', source)
+    if (from) params.set('from', from)
+    if (to) params.set('to', to)
+    if (n > 1) params.set('page', String(n))
+    const qs = params.toString()
+    return qs ? `?${qs}` : window.location.pathname
+  }
+
+  // Each page of results is its own history entry, so Back returns to the
+  // page before.
+  function goTo(n: number) {
+    window.history.pushState(null, '', href(n))
+    instant.current = true
+    setPage(n)
+  }
+
+  useEffect(() => {
+    const back = () => {
+      const url = readUrl()
+      setQ(url.q)
+      setSource(url.source)
+      setFrom(url.from)
+      setTo(url.to)
+      setPage(url.page)
+      instant.current = true
+    }
+    window.addEventListener('popstate', back)
+    return () => window.removeEventListener('popstate', back)
+  }, [])
 
   // Arriving from a project page, which titles the tab after the project.
   useEffect(() => {
@@ -203,28 +239,35 @@ function Search() {
   }, [])
 
   useEffect(() => {
-    const params = new URLSearchParams()
-    if (q.trim()) params.set('q', q.trim())
-    if (source) params.set('source', source)
-    if (from) params.set('from', from)
-    if (to) params.set('to', to)
-    const qs = params.toString()
-    window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
+    const url = href(page)
+    window.history.replaceState(null, '', url)
+    const params = new URLSearchParams(url.startsWith('?') ? url : '')
+    params.delete('page')
+    params.set('n', String(PAGE))
+    params.set('offset', String((page - 1) * PAGE))
 
     const controller = new AbortController()
     const timer = setTimeout(
       async () => {
         setLoading(true)
         try {
-          const resp = await fetch(`/api/search?${qs}${qs ? '&' : ''}n=${PAGE}`, { signal: controller.signal })
+          const resp = await fetch(`/api/search?${params}`, { signal: controller.signal })
           if (!resp.ok) throw new Error(`/api/search returned ${resp.status}`)
-          const page = await resp.json()
-          // The search controls stay in view, so a new search can start deep
-          // in the old list; show the new list from its top.
-          if (shown.current !== qs) window.scrollTo(0, 0)
-          shown.current = qs
-          setResults(page.results)
-          setMore(page.more)
+          const data = await resp.json()
+          // A page past the last, as from a link made when there were more
+          // results or fewer to a page, shows the last page instead. The
+          // search reruns for it and replaces this URL with its own.
+          if (data.results.length === 0 && data.total > 0) {
+            instant.current = true
+            setPage(Math.ceil(data.total / PAGE))
+            return
+          }
+          // The search controls stay in view, so a new search or page can
+          // start deep in the old list; show the new list from its top.
+          if (shown.current !== url) window.scrollTo(0, 0)
+          shown.current = url
+          setResults(data.results)
+          setTotal(data.total)
           setError('')
         } catch (e) {
           if (controller.signal.aborted) return
@@ -232,44 +275,17 @@ function Search() {
         }
         setLoading(false)
       },
-      // The first load of the page needs no debounce.
-      firstLoad.current ? 0 : DEBOUNCE_MS,
+      instant.current ? 0 : DEBOUNCE_MS,
     )
-    firstLoad.current = false
+    instant.current = false
     return () => {
       clearTimeout(timer)
       controller.abort()
     }
-  }, [q, source, from, to])
+    // href reads the search state listed here.
+  }, [q, source, from, to, page])
 
-  // Load the next page when the end of the list scrolls into view.
-  useEffect(() => {
-    const end = sentinel.current
-    if (!end || !more || loading || loadingMore || !results) return
-    const observer = new IntersectionObserver(
-      async ([entry]) => {
-        if (!entry.isIntersecting) return
-        observer.disconnect()
-        const qs = shown.current
-        setLoadingMore(true)
-        try {
-          const resp = await fetch(`/api/search?${qs}${qs ? '&' : ''}n=${PAGE}&offset=${results.length}`)
-          if (!resp.ok) throw new Error(`/api/search returned ${resp.status}`)
-          const page = await resp.json()
-          if (shown.current === qs) {
-            setResults([...results, ...page.results])
-            setMore(page.more)
-          }
-        } catch (e) {
-          if (shown.current === qs) setError(failure(e))
-        }
-        setLoadingMore(false)
-      },
-      { rootMargin: '800px' },
-    )
-    observer.observe(end)
-    return () => observer.disconnect()
-  }, [results, more, loading, loadingMore])
+  const pages = Math.ceil(total / PAGE)
 
   return (
     <div className="page">
@@ -286,7 +302,10 @@ function Search() {
               ref={input}
               type="search"
               value={q}
-              onChange={(e) => setQ(e.target.value)}
+              onChange={(e) => {
+                setQ(e.target.value)
+                setPage(1)
+              }}
               aria-label="Search projects"
               autoFocus
             />
@@ -301,6 +320,7 @@ function Search() {
               className="clear"
               onClick={() => {
                 setQ('')
+                setPage(1)
                 input.current?.focus()
               }}
               aria-label="Clear search"
@@ -320,13 +340,19 @@ function Search() {
                 ['expo', 'Expo projects'],
               ] as const
             ).map(([value, label]) => (
-              <button key={value} className={source === value ? 'on' : ''} onClick={() => setSource(value)}>
+              <button key={value} className={source === value ? 'on' : ''} onClick={() => {
+                  setSource(value)
+                  setPage(1)
+                }}>
                 {label}
               </button>
             ))}
           </div>
           <div className="years">
-            <select value={from} onChange={(e) => setFrom(e.target.value)} aria-label="From year">
+            <select value={from} onChange={(e) => {
+                setFrom(e.target.value)
+                setPage(1)
+              }} aria-label="From year">
               <option value="">Any year</option>
               {YEARS.map((y) => (
                 <option key={y} value={y}>
@@ -335,7 +361,10 @@ function Search() {
               ))}
             </select>
             <span>to</span>
-            <select value={to} onChange={(e) => setTo(e.target.value)} aria-label="To year">
+            <select value={to} onChange={(e) => {
+                setTo(e.target.value)
+                setPage(1)
+              }} aria-label="To year">
               <option value="">Any year</option>
               {YEARS.map((y) => (
                 <option key={y} value={y}>
@@ -349,14 +378,76 @@ function Search() {
 
       <main>
         {error && <p className="notice error">{error}</p>}
-        {results !== null && results.length === 0 && !error && (
+        {results !== null && total === 0 && !error && (
           <p className="notice">No projects match. Try different words or widen the filters.</p>
         )}
         {results?.map((p) => <Result key={p.id} project={p} />)}
-        <div ref={sentinel} />
-        {loadingMore && <p className="notice">Loading more…</p>}
+        {pages > 1 && <Pager page={page} pages={pages} href={href} onGo={goTo} />}
       </main>
     </div>
+  )
+}
+
+// The page numbers the pager shows: the current page, the pages after it in
+// order, and before it page 1 and pages evenly spaced from there to the
+// current one, so that any earlier page is a click or two away. Half the
+// numbers go to each side, or more to one where the other runs out of pages.
+function pageNumbers(page: number, pages: number) {
+  const half = (PAGER_SPAN - 1) / 2
+  const after = Math.min(pages - page, PAGER_SPAN - 1 - Math.min(page - 1, half))
+  const before = Math.min(page - 1, PAGER_SPAN - 1 - after)
+  const step = (page - 1) / before
+  return [
+    ...Array.from({ length: before }, (_, i) => Math.round(1 + i * step)),
+    page,
+    ...Array.from({ length: after }, (_, i) => page + 1 + i),
+  ]
+}
+
+// Previous and Next around the page numbers.
+function Pager({
+  page,
+  pages,
+  href,
+  onGo,
+}: {
+  page: number
+  pages: number
+  href: (n: number) => string
+  onGo: (n: number) => void
+}) {
+  const numbers = pageNumbers(page, pages)
+  // Plain links, so that a page can open in a new tab; a click stays in place.
+  const link = (n: number, label: React.ReactNode, props: React.AnchorHTMLAttributes<HTMLAnchorElement> = {}) => (
+    <a
+      key={typeof label === 'number' ? label : undefined}
+      href={href(n)}
+      onClick={(e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return
+        e.preventDefault()
+        onGo(n)
+      }}
+      {...props}
+    >
+      {label}
+    </a>
+  )
+  return (
+    <nav className="pager" aria-label="Pages">
+      {page > 1 ? link(page - 1, 'Previous', { className: 'step', rel: 'prev' }) : <span className="step" />}
+      <div className="numbers">
+        {numbers.map((n) =>
+          n === page ? (
+            <span key={n} className="current" aria-current="page">
+              {n}
+            </span>
+          ) : (
+            link(n, n, { 'aria-label': `Page ${n}` })
+          ),
+        )}
+      </div>
+      {page < pages ? link(page + 1, 'Next', { className: 'step', rel: 'next' }) : <span className="step" />}
+    </nav>
   )
 }
 
