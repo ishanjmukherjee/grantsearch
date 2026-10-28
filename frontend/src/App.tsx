@@ -34,7 +34,9 @@ const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
 const PAGE = 30
 const SITE = 'Wildcat Scholar'
-const STATUS_MS = 2500 // matches the .share .status animation: 1.5s shown, 1s fade
+// A share status holds, then fades out with the icon (see .share.fading).
+const STATUS_HOLD_MS = 2000
+const STATUS_FADE_MS = 600 // matches the .share.fading transitions
 // The share icon's press: shrink, then grow back.
 const PRESS: Keyframe[] = [{ transform: 'scale(1)' }, { transform: 'scale(0.75)' }, { transform: 'scale(1)' }]
 const PRESS_MS = 250
@@ -473,13 +475,16 @@ function byline(students: Student[]) {
 
 // Opens the share sheet on touch devices, which have one; elsewhere copies the link.
 function ShareButton({ project }: { project: Project }) {
-  const [status, setStatus] = useState({ text: '', n: 0 })
-  const timer = useRef(0)
+  const [status, setStatus] = useState({ text: '', n: 0, fading: false })
+  const timers = useRef<number[]>([])
   function show(text: string) {
-    // A new message restarts the animation and the timer.
-    setStatus((s) => ({ text, n: s.n + 1 }))
-    clearTimeout(timer.current)
-    timer.current = window.setTimeout(() => setStatus((s) => ({ ...s, text: '' })), STATUS_MS)
+    // A new message starts over.
+    setStatus((s) => ({ text, n: s.n + 1, fading: false }))
+    timers.current.forEach(clearTimeout)
+    timers.current = [
+      window.setTimeout(() => setStatus((s) => ({ ...s, fading: true })), STATUS_HOLD_MS),
+      window.setTimeout(() => setStatus((s) => ({ ...s, text: '', fading: false })), STATUS_HOLD_MS + STATUS_FADE_MS),
+    ]
   }
   async function share(e: React.MouseEvent<HTMLButtonElement>) {
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -498,7 +503,7 @@ function ShareButton({ project }: { project: Project }) {
     }
   }
   return (
-    <div className="share">
+    <div className={status.fading ? 'share fading' : 'share'}>
       {status.text && (
         <span key={status.n} className="status" role="status">
           {status.text}

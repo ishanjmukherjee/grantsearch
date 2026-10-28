@@ -405,12 +405,6 @@ h1 a {
   opacity: 1;
 }
 
-@media (hover: none) {
-  .share {
-    opacity: 1;
-  }
-}
-
 .share button {
   display: grid;
   place-items: center;
@@ -440,15 +434,29 @@ h1 a {
 .share .status {
   font-size: 0.8rem;
   color: var(--muted);
-  animation: status 2.5s both;
+  transition: opacity 0.6s;
 }
 
-@keyframes status {
-  0%,
-  60% {
+/* A status fades out together with the icon, or alone while the card is
+   hovered or the icon has keyboard focus. */
+.share.fading {
+  transition-duration: 0.6s;
+}
+
+.result:not(:hover) .share.fading:not(:has(:focus-visible)),
+.result:hover .share.fading .status,
+.share.fading:has(:focus-visible) .status {
+  opacity: 0;
+}
+
+/* Touch screens cannot hover, so the icon always shows there. */
+@media (hover: none) {
+  .share,
+  .result:not(:hover) .share.fading:not(:has(:focus-visible)) {
     opacity: 1;
   }
-  100% {
+
+  .share.fading .status {
     opacity: 0;
   }
 }
