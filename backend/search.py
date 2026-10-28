@@ -44,6 +44,16 @@ projects are ordered by how well the name matched, then, if the query has
 other words ("han liu robotics"), by the fused ranking, or else most recent
 first.
 
+Quoted phrases ("spectral geometry", or between curly quotes as phones type
+them) keep only the projects that show each phrase: in the title, a name, an
+advisor line, an Expo title or an abstract, as public() gives them, ignoring
+case and runs of whitespace, and not inside a longer word at either end. The
+rest is ranked as usual on the query with its quote marks dropped; a matching
+project the ranking leaves out, as when the phrase is all stopwords, follows in
+browse order. An unclosed quote is ignored, so a phrase being typed does not
+empty the results before it is closed. The frontend finds and highlights the
+phrases the same way.
+
 A project's similar projects are those whose document or summary vectors are
 nearest any of its own; one without vectors uses a search for its title.
 
@@ -81,6 +91,8 @@ BM25_K1 = 0.5
 MERGE_SIM = 0.5
 MIN_SHARE = 2 / 3
 MIN_CASED_SHARE = 0.9
+QUOTE_MARKS = "\"\u201c\u201d"
+QUOTED = re.compile(f"[{QUOTE_MARKS}]([^{QUOTE_MARKS}]*)[{QUOTE_MARKS}]")
 
 stemmer = Stemmer.Stemmer("english")
 
@@ -168,6 +180,26 @@ def public(p: dict) -> dict:
             for e in p["expo"]
         ],
     }
+
+
+def phrases(query: str) -> list[re.Pattern]:
+    """A pattern for each quoted phrase of a query; see the module docstring."""
+    patterns = []
+    for phrase in QUOTED.findall(query):
+        if words := phrase.split():
+            start = r"(?<!\w)" if re.match(r"\w", words[0]) else ""
+            end = r"(?!\w)" if re.search(r"\w$", words[-1]) else ""
+            patterns.append(re.compile(start + r"\s+".join(map(re.escape, words)) + end, re.IGNORECASE))
+    return patterns
+
+
+def shown_text(p: dict) -> list[str]:
+    """The texts of a project that a result shows and quoted phrases must appear in."""
+    r = public(p)
+    texts = [r["title"]] + (r["grant"]["awardees"] if r["grant"] else [])
+    for e in r["expo"]:
+        texts += [e["title"], e["abstract"], e["advisor"] or "", *e["presenters"]]
+    return texts
 
 
 def word_forms(word: str) -> list[str]:
@@ -285,6 +317,7 @@ class Index:
         self.bm25.index(bm25s.tokenize([bm25_text(p) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
 
         self.browse_orders = browse_orders(self.projects)
+        self.shown = [shown_text(p) for p in self.projects]
         self.acronyms = acronym_expansions(self.projects)
         self.people = People(self.projects)
 
@@ -333,6 +366,10 @@ class Index:
             and (year_range is None or any(year_range[0] <= y <= year_range[1] for y in years(p)))
             for p in self.projects
         ])
+        quoted = phrases(query)
+        if quoted:
+            keep &= np.array([all(any(q.search(t) for t in texts) for q in quoted) for texts in self.shown])
+            query = re.sub(f"[{QUOTE_MARKS}]", " ", query)
         if not query.strip():
             return [self.projects[i] for i in self.browse_orders[source] if keep[i]][offset : offset + n], int(keep.sum())
         # The tokenizer drops stopwords and one-character words, which can
@@ -354,6 +391,9 @@ class Index:
         )
         taken = set(pinned)
         ranked = pinned + [i for i in np.argsort(-fused, kind="stable") if fused[i] > 0 and i not in taken]
+        if quoted:
+            taken |= set(ranked)
+            ranked += [i for i in self.browse_orders[None] if keep[i] and i not in taken]
         return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked)
 
 

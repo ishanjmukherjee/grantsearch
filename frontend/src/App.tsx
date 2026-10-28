@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 type Grant = { year: number; awardees: string[]; url: string }
 type ExpoEntry = {
@@ -60,6 +60,41 @@ function readUrl() {
 function failure(e: unknown) {
   console.error(e)
   return e instanceof TypeError ? 'Couldn’t connect. Try again in a moment.' : 'Something went wrong on our end.'
+}
+
+// The quoted phrases of a query, found as the backend finds them (see
+// search.py): ignoring case and runs of whitespace, and not inside a longer
+// word at either end. One pattern matches any of them, for highlighting.
+const QUOTED = /["\u201c\u201d]([^"\u201c\u201d]*)["\u201c\u201d]/g
+const WORD = /[\p{L}\p{N}_]/u
+
+function quotePattern(query: string): RegExp | null {
+  const phrases = [...query.matchAll(QUOTED)].flatMap(([, phrase]) => {
+    const words = phrase.split(/\s+/).filter(Boolean)
+    if (!words.length) return []
+    const start = WORD.test(words[0][0]) ? '(?<![\\p{L}\\p{N}_])' : ''
+    const end = WORD.test(words[words.length - 1].slice(-1)) ? '(?![\\p{L}\\p{N}_])' : ''
+    return [start + words.map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\s+') + end]
+  })
+  return phrases.length ? new RegExp(phrases.join('|'), 'giu') : null
+}
+
+// The quoted phrases to highlight in results, if any.
+const Quotes = createContext<RegExp | null>(null)
+
+// Text with each quoted phrase in it marked, as find in page does.
+function Marked({ text }: { text: string }) {
+  const pattern = useContext(Quotes)
+  if (!pattern) return text
+  const parts: React.ReactNode[] = []
+  let last = 0
+  for (const m of text.matchAll(pattern)) {
+    if (!m[0]) continue
+    parts.push(text.slice(last, m.index), <mark key={m.index}>{m[0]}</mark>)
+    last = m.index + m[0].length
+  }
+  parts.push(text.slice(last))
+  return parts
 }
 
 function list(names: string[]) {
@@ -192,6 +227,9 @@ function Search() {
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  // The quoted phrases of the query the shown results are for, not of one
+  // still being typed.
+  const [quotes, setQuotes] = useState<RegExp | null>(null)
   const { prompt, className } = usePrompt()
   const input = useRef<HTMLInputElement>(null)
   // The query string the shown results belong to.
@@ -268,6 +306,7 @@ function Search() {
           if (shown.current !== url) window.scrollTo(0, 0)
           shown.current = url
           setResults(data.results)
+          setQuotes(quotePattern(q))
           setTotal(data.total)
           setError('')
         } catch (e) {
@@ -382,7 +421,7 @@ function Search() {
         {results !== null && total === 0 && !error && (
           <p className="notice">No projects match. Try different words or widen the filters.</p>
         )}
-        {results?.map((p) => <Result key={p.id} project={p} />)}
+        <Quotes.Provider value={quotes}>{results?.map((p) => <Result key={p.id} project={p} />)}</Quotes.Provider>
         {pages > 1 && <Pager page={page} pages={pages} href={href} onGo={goTo} />}
       </main>
     </div>
@@ -482,9 +521,13 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
         ))}
       </div>
       <h2>
-        <a href={`/p/${project.share}`}>{project.title}</a>
+        <a href={`/p/${project.share}`}>
+          <Marked text={project.title} />
+        </a>
       </h2>
-      <p className="people">{byline(top)}</p>
+      <p className="people">
+        <Marked text={byline(top)} />
+      </p>
       {parts.map((s) => {
         // A section names its students only when they differ from the byline
         // above, and their advisors only when those differ from it too.
@@ -623,11 +666,28 @@ function Abstract({
   open: boolean
 }) {
   const [open, setOpen] = useState(initiallyOpen)
+  const text = useRef<HTMLParagraphElement>(null)
+  const quotes = useContext(Quotes)
+  // Like find in page, open an abstract whose first quoted phrase is cut off.
+  useLayoutEffect(() => {
+    const mark = text.current?.querySelector('mark')
+    if (mark && mark.getBoundingClientRect().bottom > text.current!.getBoundingClientRect().bottom) setOpen(true)
+  }, [quotes])
   return (
     <section className="abstract">
-      {heading && <h3>{heading}</h3>}
-      {people && <p className="people">{people}</p>}
-      <p className={open ? 'text' : 'text clamped'}>{section.abstract}</p>
+      {heading && (
+        <h3>
+          <Marked text={heading} />
+        </h3>
+      )}
+      {people && (
+        <p className="people">
+          <Marked text={people} />
+        </p>
+      )}
+      <p ref={text} className={open ? 'text' : 'text clamped'}>
+        <Marked text={section.abstract} />
+      </p>
       <button className="more" onClick={() => setOpen(!open)}>
         {open ? 'Hide abstract' : 'Show abstract'}
       </button>
