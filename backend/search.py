@@ -288,7 +288,10 @@ class Index:
         ])
         if not query.strip():
             return [self.projects[i] for i in self.browse_orders[source] if keep[i]][offset : offset + n]
-        bm25 = np.where(keep, self.bm25.get_scores(tokenize([query])[0]), 0.0)
+        # The tokenizer drops stopwords and one-character words, which can
+        # leave nothing to score ("a", "the"); the dense side still ranks.
+        tokens = tokenize([query])[0]
+        bm25 = np.where(keep, self.bm25.get_scores(tokens), 0.0) if tokens else np.zeros(len(self.projects))
         dense = np.where(keep, self.dense_scores(self.expand(query)), -np.inf)
         fused = rrf(bm25, 0.0) + rrf(dense, -np.inf)
         # Projects without vectors stand in their BM25 rank for the dense one,
