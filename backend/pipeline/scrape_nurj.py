@@ -1,11 +1,18 @@
 """Scrape the Northwestern Undergraduate Research Journal (NURJ) site.
 
 thenurj.com is WordPress with its REST API open. Fetches every post, page,
-category, tag and media item from the API, the home page (whose nav menu
-names the editions: page online-vol-11 is "Spring 2025"), and every PDF the
-site hosts, and caches them verbatim under data/raw/nurj/. Files hosted
-elsewhere (Scribd, Issuu, Google Drive, YouTube) and the site's own images,
-audio and video are kept as URLs, not downloaded.
+category, tag and media item from the API, every post and page as the site
+renders it, the home page (whose nav menu names the editions: page
+online-vol-11 is "Spring 2025"), and every PDF the site hosts, and caches
+them verbatim under data/raw/nurj/. Files hosted elsewhere (Scribd, Issuu,
+Google Drive, YouTube) and the site's own images, audio and video are kept
+as URLs, not downloaded.
+
+The rendered page is the source of a record's content: for pages built with
+Elementor the API's content is often stale or empty (letters from the
+editor, interviews and conference abstracts appear only when rendered), and
+post lists that a widget fills at view time are only there. Pages the site
+renders without content of their own (empty stubs) fall back to the API's.
 
 Writes data/nurj.json, which keeps everything the API returns except its
 _links (API URLs built from the ids; the raw cache has them):
@@ -17,11 +24,15 @@ _links (API URLs built from the ids; the raw cache has them):
   data/, for PDFs.
 - posts, pages: one record each, with
   - id: nurj-<wp id> for posts, nurj-page-<wp id> for pages
-  - wp: the API record, the rendered content HTML included
+  - wp: the API record, its content HTML included
   - title, categories, tags (names), and attachments (media ids)
-  - listed_on: ids of the pages that link to the post or embed one of its
-    Scribd documents, and menu: the labels of the menu items opening those
-    pages (posts only)
+  - blocks_from: "rendered" or "api", where the blocks were read from
+  - listing (pages): ids of the posts the page's list widget shows, and
+    listing_category, the category that list (or a Divi blog module's
+    include_categories) stands for
+  - listed_on: ids of the pages that list the post, list its category, link
+    to it or embed one of its Scribd documents, and menu: the labels of the
+    menu items opening those pages (posts only)
   - blocks: the content as a flat list of headings, text, list items,
     tables, toggle titles, images, embeds and links, in page order. A block's
     text keeps its line breaks; links lists the URLs it links to. Posts built
@@ -63,19 +74,19 @@ LEAVES = {"p", "li", "blockquote", "pre", "figcaption", "dt", "dd", "caption", "
 MEDIA = {"img", "iframe", "video", "audio", "source", "embed", "object"}
 SKIP = {"script", "style"}
 # Containers whose children are laid out as blocks, not run into the text around them.
-CONTAINERS = HEADINGS | LEAVES | MEDIA | {"div", "section", "article", "figure", "ul", "ol", "dl", "table", "header", "footer", "main", "aside", "nav", "details", "form", "center", "noscript", "hr"}
+CONTAINERS = HEADINGS | LEAVES | MEDIA | {"div", "section", "article", "figure", "ul", "ol", "dl", "table", "header", "footer", "main", "aside", "nav", "details", "form", "center", "noscript", "hr", "tr", "td", "th", "thead", "tbody", "tfoot"}
 
-SHORTCODE = re.compile(r"\[(/?)(et_pb_\w+)([^\]]*)\]")
+SHORTCODE = re.compile(r"\[(/?)(et_pb_\w+)([^\]<]*)\]")  # never across a tag: excerpts cut shortcodes off
 # WordPress curls the quotes inside shortcode attributes: x=”1″ for x="1".
 TEXTURIZED = str.maketrans({"“": '"', "”": '"', "″": '"', "‘": "'", "’": "'", "′": "'"})
 # Shortcode attributes that hold content, and those that only style or
 # configure the layout (a column's type is kept as its blocks' divi.column).
 # Parsing raises on any other, so that no new kind of content goes unread.
-DIVI_ATTRS = ("title", "title_text", "alt", "button_text", "src", "image", "url", "button_url", "link_option_url", "background_image", "global_module")
+DIVI_ATTRS = ("title", "title_text", "alt", "button_text", "src", "image", "url", "button_url", "link_option_url", "background_image", "global_module", "include_categories", "posts_number", "name", "position", "image_url", "social_network")
 DIVI_STYLE = re.compile(
     r"_builder_version|fb_built|type|.*(font|color|padding|margin|width|height|align|spacing|shadow|_last_edited|_tablet|_phone).*"
     r"|background_(repeat|size)|author|comments|featured_image|meta|fullwidth|.*new_window|custom_button|hover_enabled|locked"
-    r"|make_equal|saved_tabs|show_bottom_space|module_(id|class)|text_orientation"
+    r"|make_equal|saved_tabs|show_\w+|module_(id|class)|text_orientation|border_\w+|animation_\w+|button_\w+|transform_\w+|hover_\w+|.*__hover\w*|divider_position|follow_button"
 )
 DIVI_SELF_CLOSING = {"et_pb_line_break_holder"}
 
@@ -129,8 +140,9 @@ def fetch_home(client: httpx.Client, refresh: bool) -> str:
 
 
 def fetch_rendered(client: httpx.Client, page: dict, refresh: bool) -> str:
-    """A page as the site renders it. Post lists that a page builder widget
-    queries at view time appear only here, not in the API's content."""
+    """A post or page as the site renders it. Elementor pages' API content
+    is often stale or empty, and post lists that a widget queries at view
+    time appear only here."""
     path = NURJ_DIR / "rendered" / f"{page['id']}.html"
     if path.exists() and not refresh:
         return path.read_text()
@@ -544,16 +556,32 @@ def flat_menu(tree: list[dict], path: tuple[str, ...] = ()) -> list[tuple[tuple[
     return out
 
 
-def record(kind: str, wp: dict, names: dict[str, dict[int, str]]) -> dict:
+def main_content(rendered: str, wp_id: int) -> str | None:
+    """The HTML of a rendered post's or page's own content: its Elementor
+    document, else the theme's entry content, else the content blocks of
+    the theme the site's demo pages still use (outside header, footer and
+    nav); None when it has none of these."""
+    soup = BeautifulSoup(rendered, "html.parser")
+    if el := soup.find(attrs={"data-elementor-id": str(wp_id)}) or soup.select_one(".entry-content"):
+        return el.decode_contents()
+    for el in soup.find_all(["header", "footer", "nav"]):
+        el.decompose()
+    blocks = [el for el in soup.select("div.content") if not el.find_parent("div", class_="content")]
+    return "\n".join(el.decode() for el in blocks) or None
+
+
+def record(kind: str, wp: dict, rendered: str, names: dict[str, dict[int, str]]) -> dict:
     title = clean(BeautifulSoup(wp["title"]["rendered"], "html.parser").get_text(" "))
+    shown = main_content(rendered, wp["id"])
     try:
-        blocks = content_blocks(wp["content"]["rendered"])
+        blocks = content_blocks(wp["content"]["rendered"] if shown is None else shown)
     except ValueError as e:
         raise ValueError(f"{kind} {wp['id']} {wp['link']}: {e}") from None
     r = {
         "id": f"nurj-{wp['id']}" if kind == "post" else f"nurj-page-{wp['id']}",
         "wp": {k: v for k, v in wp.items() if k != "_links"},
         "title": title,
+        "blocks_from": "api" if shown is None else "rendered",
     }
     if kind == "post":
         r["categories"] = [names["categories"][c] for c in wp["categories"]]
@@ -570,15 +598,16 @@ def main() -> None:
         api = {e: fetch_api(client, e, args.refresh) for e in ENDPOINTS}
         home = fetch_home(client, args.refresh)
 
+        rendered = {x["id"]: fetch_rendered(client, x, args.refresh) for x in api["posts"] + api["pages"]}
         names = {e: {x["id"]: html.unescape(x["name"]) for x in api[e]} for e in ("categories", "tags")}
-        posts = sorted((record("post", p, names) for p in api["posts"]), key=lambda r: (r["wp"]["date"], r["wp"]["id"]))
-        pages = sorted((record("page", p, names) for p in api["pages"]), key=lambda r: (r["wp"]["date"], r["wp"]["id"]))
+        posts = sorted((record("post", p, rendered[p["id"]], names) for p in api["posts"]), key=lambda r: (r["wp"]["date"], r["wp"]["id"]))
+        pages = sorted((record("page", p, rendered[p["id"]], names) for p in api["pages"]), key=lambda r: (r["wp"]["date"], r["wp"]["id"]))
+        listings = {p["id"]: listing(rendered[p["id"]], p["id"]) for p in api["pages"]}
 
         pdfs = {m["source_url"] for m in api["media"] if m["mime_type"] == "application/pdf"}
         for r in posts + pages:
             pdfs |= {u for u in block_urls(r["blocks"]) if site_key(u) and "/wp-content/uploads/" in u and urlsplit(u).path.lower().endswith(".pdf")}
         files = {u: str(fetch_file(client, u, args.refresh).relative_to(DATA_DIR)) for u in sorted(pdfs)}
-        listings = {p["id"]: listing(fetch_rendered(client, p, args.refresh), p["id"]) for p in api["pages"]}
 
     page_by_key = {site_key(p["wp"]["link"]): p["wp"]["id"] for p in pages} | {f"?p={p['wp']['id']}": p["wp"]["id"] for p in pages}
     menu = menu_tree(home, page_by_key)
@@ -589,12 +618,17 @@ def main() -> None:
 
     # A page's widget lists one category's posts a few at a time; the
     # category shared by every post it shows stands for the whole list.
+    slugs_by_id = {str(c["id"]): c["slug"] for c in api["categories"]}
     for p in pages:
         listed = listings[p["wp"]["id"]]
         p["listing"] = [f"nurj-{i}" for i, _ in listed]
         p["listing_category"] = None
         if listed and len(shared := set.intersection(*(set(c) for _, c in listed))) == 1:
             p["listing_category"] = shared.pop()
+        # A Divi blog module names the category it lists, though the site no longer renders it.
+        blogs = {b["attrs"]["include_categories"] for b in p["blocks"] if b["type"] == "module" and "include_categories" in b["attrs"]}
+        if p["listing_category"] is None and len(blogs) == 1 and (slug := slugs_by_id.get(blogs.pop())):
+            p["listing_category"] = slug
     for r in posts:
         keys = {site_key(r["wp"]["link"]), f"?p={r['wp']['id']}"}
         docs = {d["id"] for d in r["scribd"]}
