@@ -377,7 +377,7 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
   const years = new Set(parts.map((s) => s.year))
 
   return (
-    <article className={open ? 'result featured' : 'result'}>
+    <article className="result">
       <ShareButton project={project} />
       <div className="tags">
         {grant && <span className="tag surg">SURG {grant.year}</span>}
