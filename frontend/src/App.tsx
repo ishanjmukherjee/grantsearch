@@ -20,6 +20,7 @@ const PROMPTS = [
   'llm-accelerated biology research',
   'photinus carolinus',
   'spectral geometry',
+  'chad mirkin',
   'research interviewing doctors',
   'dravet syndrome',
   'creative writing project for classics majors',
