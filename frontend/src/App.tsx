@@ -10,13 +10,13 @@ type ExpoEntry = {
   abstract: string
   url: string
 }
-type Project = { id: string; title: string; grant: Grant | null; expo: ExpoEntry[] }
+type Project = { id: string; share: number; title: string; grant: Grant | null; expo: ExpoEntry[] }
 type Source = '' | 'surg' | 'expo'
 
 const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
 const PROMPTS = [
   'how to build a moon colony',
-  'south asia pig latin',
+  'regional pig latins',
   'llm-accelerated biology research',
   'photinus carolinus',
   'spectral geometry',
@@ -25,13 +25,19 @@ const PROMPTS = [
   'creative writing project for classics majors',
   'astronomy research i can do with public data',
 ]
-// After a full pass through PROMPTS, rest on this for a while before the next.
+// After a full pass through PROMPTS, rest on this for a while before the next,
+// or for good where the prompts run only once.
 const REST = 'your idea here'
 const ROTATION = [...PROMPTS, REST]
 const PROMPT_MS = 3500 // matches the .prompt animation
 const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
 const PAGE = 30
+const SITE = 'Wildcat Scholar'
+const STATUS_MS = 2500 // matches the .share .status animation: 1.5s shown, 1s fade
+// The share icon's press: shrink, then grow back.
+const PRESS: Keyframe[] = [{ transform: 'scale(1)' }, { transform: 'scale(0.75)' }, { transform: 'scale(1)' }]
+const PRESS_MS = 250
 
 function readUrl() {
   const p = new URLSearchParams(window.location.search)
@@ -43,12 +49,134 @@ function readUrl() {
   }
 }
 
+// What a failed request tells the visitor: only what is known, with the
+// details in the console. fetch rejects with a TypeError when no response
+// arrives; an error response is thrown as a plain Error.
+function failure(e: unknown) {
+  console.error(e)
+  return e instanceof TypeError ? "Couldn't connect. Try again in a moment." : 'Something went wrong on our end.'
+}
+
 function list(names: string[]) {
   if (names.length <= 2) return names.join(' and ')
   return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`
 }
 
 export default function App() {
+  const [path, setPath] = useState(window.location.pathname)
+  useEffect(() => {
+    const back = () => setPath(window.location.pathname)
+    window.addEventListener('popstate', back)
+    return () => window.removeEventListener('popstate', back)
+  }, [])
+  const page = path.match(/^\/p\/(\d+)\/?$/)
+  if (!page) return <Search />
+  // Typing on a project page switches to the search page in place, so results
+  // show as on the search page; Back returns to the project.
+  const search = (q: string) => {
+    window.history.pushState(null, '', `/?${new URLSearchParams({ q })}`)
+    setPath('/')
+  }
+  return <ProjectPage key={page[1]} number={page[1]} onSearch={search} />
+}
+
+// The search box's rotating example queries, as an index into ROTATION. With
+// once, they stop on REST after one pass instead of looping.
+function usePrompt(once = false) {
+  const [prompt, setPrompt] = useState(0)
+  const held = once && ROTATION[prompt] === REST
+  useEffect(() => {
+    if (held) return
+    const timer = setTimeout(
+      () => setPrompt((i) => (i + 1) % ROTATION.length),
+      ROTATION[prompt] === REST ? REST_MS : PROMPT_MS,
+    )
+    return () => clearTimeout(timer)
+  }, [prompt, held])
+  return { prompt, className: held ? 'prompt held' : ROTATION[prompt] === REST ? 'prompt rest' : 'prompt' }
+}
+
+function Header({ lede }: { lede?: boolean }) {
+  return (
+    <header>
+      <h1>
+        <a href="/">{SITE}</a>
+      </h1>
+      {lede && (
+        <p className="lede">
+          Northwestern Summer Undergraduate Research Grants (2020-2024) and Undergraduate Research &amp; Arts Expo
+          projects (2021-2026). Search by topic, method, field or person.
+        </p>
+      )}
+    </header>
+  )
+}
+
+// A shared project's page: the project with its abstracts open, then the
+// projects most like it. Searching from here goes to the search page.
+function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: string) => void }) {
+  const [data, setData] = useState<{ project: Project; similar: Project[] } | null>(null)
+  const [error, setError] = useState('')
+  const { prompt, className } = usePrompt(true)
+
+  useEffect(() => {
+    const controller = new AbortController()
+    ;(async () => {
+      try {
+        const resp = await fetch(`/api/project/${number}`, { signal: controller.signal })
+        if (resp.status === 404) {
+          setError('No project has this link.')
+          return
+        }
+        if (!resp.ok) throw new Error(`/api/project returned ${resp.status}`)
+        const page = await resp.json()
+        setData(page)
+        document.title = `${page.project.title} -- ${SITE}`
+        // A link to another of a poster's listings shows the project's own number.
+        if (String(page.project.share) !== number) window.history.replaceState(null, '', `/p/${page.project.share}`)
+      } catch (e) {
+        if (controller.signal.aborted) return
+        setError(failure(e))
+      }
+    })()
+    return () => controller.abort()
+  }, [number])
+
+  return (
+    <div className="page">
+      <Header />
+      <div className="controls">
+        <div className="searchbox">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="M15.5 15.5L20 20" />
+          </svg>
+          <div className="field">
+            <input type="search" value="" onChange={(e) => onSearch(e.target.value)} aria-label="Search projects" />
+            <span key={prompt} className={className} aria-hidden="true">
+              {ROTATION[prompt]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <main>
+        {error && <p className="notice error">{error}</p>}
+        {!data && !error && <p className="notice">Loading...</p>}
+        {data && (
+          <>
+            <Result project={data.project} open />
+            {data.similar.length > 0 && <h2 className="section">Similar projects</h2>}
+            {data.similar.map((p) => (
+              <Result key={p.id} project={p} />
+            ))}
+          </>
+        )}
+      </main>
+    </div>
+  )
+}
+
+function Search() {
   const initial = readUrl()
   const [q, setQ] = useState(initial.q)
   const [source, setSource] = useState<Source>(initial.source)
@@ -59,7 +187,7 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   const [loadingMore, setLoadingMore] = useState(false)
   const [error, setError] = useState('')
-  const [prompt, setPrompt] = useState(0)
+  const { prompt, className } = usePrompt()
   const input = useRef<HTMLInputElement>(null)
   const sentinel = useRef<HTMLDivElement>(null)
   // The query string the shown results belong to; a later page for an older
@@ -67,13 +195,10 @@ export default function App() {
   const shown = useRef('')
   const firstLoad = useRef(true)
 
+  // Arriving from a project page, which titles the tab after the project.
   useEffect(() => {
-    const timer = setTimeout(
-      () => setPrompt((i) => (i + 1) % ROTATION.length),
-      ROTATION[prompt] === REST ? REST_MS : PROMPT_MS,
-    )
-    return () => clearTimeout(timer)
-  }, [prompt])
+    document.title = SITE
+  }, [])
 
   useEffect(() => {
     const params = new URLSearchParams()
@@ -90,7 +215,7 @@ export default function App() {
         setLoading(true)
         try {
           const resp = await fetch(`/api/search?${qs}${qs ? '&' : ''}n=${PAGE}`, { signal: controller.signal })
-          if (!resp.ok) throw new Error(`The search service returned ${resp.status}.`)
+          if (!resp.ok) throw new Error(`/api/search returned ${resp.status}`)
           const page = await resp.json()
           // The search controls stay in view, so a new search can start deep
           // in the old list; show the new list from its top.
@@ -101,7 +226,7 @@ export default function App() {
           setError('')
         } catch (e) {
           if (controller.signal.aborted) return
-          setError(e instanceof Error ? e.message : 'Search failed.')
+          setError(failure(e))
         }
         setLoading(false)
       },
@@ -127,14 +252,14 @@ export default function App() {
         setLoadingMore(true)
         try {
           const resp = await fetch(`/api/search?${qs}${qs ? '&' : ''}n=${PAGE}&offset=${results.length}`)
-          if (!resp.ok) throw new Error(`The search service returned ${resp.status}.`)
+          if (!resp.ok) throw new Error(`/api/search returned ${resp.status}`)
           const page = await resp.json()
           if (shown.current === qs) {
             setResults([...results, ...page.results])
             setMore(page.more)
           }
         } catch (e) {
-          if (shown.current === qs) setError(e instanceof Error ? e.message : 'Loading more results failed.')
+          if (shown.current === qs) setError(failure(e))
         }
         setLoadingMore(false)
       },
@@ -146,13 +271,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <header>
-        <h1>Wildcat Scholar</h1>
-        <p className="lede">
-          Northwestern Summer Undergraduate Research Grants (2020-2024) and Undergraduate Research &amp; Arts Expo
-          projects (2021-2026). Search by topic, method, field or person.
-        </p>
-      </header>
+      <Header lede />
 
       <div className="controls">
         <div className={`searchbox ${loading ? 'loading' : ''}`}>
@@ -170,7 +289,7 @@ export default function App() {
               autoFocus
             />
             {!q && (
-              <span key={prompt} className={ROTATION[prompt] === REST ? 'prompt rest' : 'prompt'} aria-hidden="true">
+              <span key={prompt} className={className} aria-hidden="true">
                 {ROTATION[prompt]}
               </span>
             )}
@@ -239,7 +358,7 @@ export default function App() {
   )
 }
 
-function Result({ project }: { project: Project }) {
+function Result({ project, open = false }: { project: Project; open?: boolean }) {
   const { grant, expo } = project
   const parts = sections(expo)
   const programs = new Map(expo.map((e) => [e.url, e.year]))
@@ -258,7 +377,8 @@ function Result({ project }: { project: Project }) {
   const years = new Set(parts.map((s) => s.year))
 
   return (
-    <article className="result">
+    <article className={open ? 'result featured' : 'result'}>
+      <ShareButton project={project} />
       <div className="tags">
         {grant && <span className="tag surg">SURG {grant.year}</span>}
         {[...years].map((year) => (
@@ -267,7 +387,9 @@ function Result({ project }: { project: Project }) {
           </span>
         ))}
       </div>
-      <h2>{project.title}</h2>
+      <h2>
+        <a href={`/p/${project.share}`}>{project.title}</a>
+      </h2>
       <p className="people">{byline(top)}</p>
       {parts.map((s) => {
         // A section names its students only when they differ from the byline
@@ -280,7 +402,7 @@ function Result({ project }: { project: Project }) {
         const repeat = topShared !== null && s.students.every((x) => sameSet(x.advisors, topShared))
         const people = own ? byline(repeat ? s.students.map((x) => ({ ...x, advisors: [] })) : s.students) : null
         const heading = s.title !== project.title ? `Expo ${s.year}: ${s.title}` : years.size > 1 ? `Expo ${s.year}` : null
-        return <Abstract key={s.key} section={s} heading={heading} people={people} />
+        return <Abstract key={s.key} section={s} heading={heading} people={people} open={open} />
       })}
       <div className="links">
         {grant && (
@@ -349,8 +471,61 @@ function byline(students: Student[]) {
   return list(ordered.map((x) => (x.advisors.length ? `${x.name} (advised by ${list(x.advisors)})` : x.name)))
 }
 
-function Abstract({ section, heading, people }: { section: Section; heading: string | null; people: string | null }) {
-  const [open, setOpen] = useState(false)
+// Opens the share sheet on touch devices, which have one; elsewhere copies the link.
+function ShareButton({ project }: { project: Project }) {
+  const [status, setStatus] = useState({ text: '', n: 0 })
+  const timer = useRef(0)
+  function show(text: string) {
+    // A new message restarts the animation and the timer.
+    setStatus((s) => ({ text, n: s.n + 1 }))
+    clearTimeout(timer.current)
+    timer.current = window.setTimeout(() => setStatus((s) => ({ ...s, text: '' })), STATUS_MS)
+  }
+  async function share(e: React.MouseEvent<HTMLButtonElement>) {
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      e.currentTarget.animate(PRESS, { duration: PRESS_MS, easing: 'ease-out' })
+    }
+    const url = `${window.location.origin}/p/${project.share}`
+    if (navigator.share && window.matchMedia('(pointer: coarse)').matches) {
+      await navigator.share({ title: project.title, url }).catch(() => {}) // dismissed
+      return
+    }
+    try {
+      await navigator.clipboard.writeText(url)
+      show('Link copied!')
+    } catch {
+      show('Could not copy the link')
+    }
+  }
+  return (
+    <div className="share">
+      {status.text && (
+        <span key={status.n} className="status" role="status">
+          {status.text}
+        </span>
+      )}
+      <button onClick={share} aria-label="Share" title="Share">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 15V3M8 7l4-4 4 4" />
+          <path d="M8 10H6a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1h-2" />
+        </svg>
+      </button>
+    </div>
+  )
+}
+
+function Abstract({
+  section,
+  heading,
+  people,
+  open: initiallyOpen,
+}: {
+  section: Section
+  heading: string | null
+  people: string | null
+  open: boolean
+}) {
+  const [open, setOpen] = useState(initiallyOpen)
   return (
     <section className="abstract">
       {heading && <h3>{heading}</h3>}

@@ -36,6 +36,9 @@ are each sorted newest first, shuffled within a year by a hash of the id, and
 merged in proportion to their sizes so both run out together. Filtered to one
 source, browsing is newest first by that source's year.
 
+A project's similar projects are those whose document or summary vectors are
+nearest any of its own; one without vectors uses a search for its title.
+
 Results carry only real data (titles, people, years, abstracts, source links);
 cards only aid ranking.
 
@@ -58,6 +61,7 @@ from sentence_transformers import SentenceTransformer
 from pipeline.link_expo import first_match, surname_parts
 from pipeline.projects import DIM, INDEX_DIR, QUERY_MODEL, QUERY_MODEL_REVISION, doc_text, load_projects, summary_text
 from pipeline.scrape_surg import PAGES
+from pipeline.share_ids import key, load_rows
 
 W_DOC = 1.0
 W_QUERY = 0.6  # query-query cosines run well above query-doc ones
@@ -139,6 +143,7 @@ def public(p: dict) -> dict:
 
     return {
         "id": p["id"],
+        "share": p["share"],
         "title": p["title"],
         "grant": g and {"year": g["year"], "awardees": names(g["awardees"]), "url": PAGES[g["year"]]},
         "expo": [
@@ -248,10 +253,24 @@ class Index:
 
         vecs = np.load(INDEX_DIR / "vectors.npy").astype(np.float32)
         self.vecs = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
-        position = {p["id"]: i for i, p in enumerate(self.projects)}
-        self.row_project = np.array([position[r["id"]] for r in rows])
+        self.position = {p["id"]: i for i, p in enumerate(self.projects)}
+        self.row_project = np.array([self.position[r["id"]] for r in rows])
         self.row_is_doc = np.array([r["kind"] in ("doc", "summary") for r in rows])
         self.has_vectors = np.array([p["card"] is not None for p in self.projects])
+
+        # A row is live when its id's entry still has its key; others are numbers
+        # whose entry is gone (see pipeline.share_ids).
+        entry_keys = {e["id"]: key(e) for p in self.projects for e in ([p["grant"]] if p["grant"] else []) + p["expo"]}
+        share = {r["id"]: r["number"] for r in load_rows() if entry_keys.get(r["id"]) == r["key"]}
+        if share.keys() != entry_keys.keys():
+            raise SystemExit("data/share_ids.jsonl does not cover every entry; rerun pipeline.share_ids")
+        self.by_number = {}
+        for i, p in enumerate(self.projects):
+            p["share"] = share[p["id"]]
+            for e in p["expo"]:
+                self.by_number.setdefault(share[e["id"]], i)
+        # A project's own number wins over a listing it shares with another grant.
+        self.by_number |= {p["share"]: i for i, p in enumerate(self.projects)}
 
         self.bm25 = bm25s.BM25(k1=BM25_K1)
         self.bm25.index(bm25s.tokenize([bm25_text(p) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
@@ -277,6 +296,23 @@ class Index:
         best_query = np.full(len(self.projects), -np.inf)
         np.maximum.at(best_query, self.row_project[~self.row_is_doc], sims[~self.row_is_doc])
         return np.maximum(W_DOC * doc, W_QUERY * best_query)
+
+    def project(self, number: int) -> dict | None:
+        """The project a share number leads to, if any."""
+        i = self.by_number.get(number)
+        return None if i is None else self.projects[i]
+
+    def similar(self, p: dict, n: int = 5) -> list[dict]:
+        """The n projects most like p; see the module docstring."""
+        i = self.position[p["id"]]
+        if not self.has_vectors[i]:
+            return [x for x in self.search(p["title"], n=n + 1) if x is not p][:n]
+        own = self.vecs[(self.row_project == i) & self.row_is_doc]
+        sims = (self.vecs[self.row_is_doc] @ own.T).max(axis=1)
+        best = np.full(len(self.projects), -np.inf)
+        np.maximum.at(best, self.row_project[self.row_is_doc], sims)
+        best[i] = -np.inf
+        return [self.projects[j] for j in np.argsort(-best, kind="stable")[:n]]
 
     def search(self, query: str, source: str | None = None, year_range: tuple[int, int] | None = None, n: int = 20, offset: int = 0) -> list[dict]:
         """The n projects after the first offset matching the filters, ranked
