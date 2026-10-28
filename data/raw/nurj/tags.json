@@ -1,0 +1,275 @@
+[
+ {
+  "id": 40,
+  "count": 3,
+  "description": "",
+  "link": "https://thenurj.com/tag/architecture/",
+  "name": "architecture",
+  "slug": "architecture",
+  "taxonomy": "post_tag",
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags/40"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/post_tag"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?tags=40"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 41,
+  "count": 2,
+  "description": "",
+  "link": "https://thenurj.com/tag/awards-2/",
+  "name": "awards",
+  "slug": "awards-2",
+  "taxonomy": "post_tag",
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags/41"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/post_tag"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?tags=41"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 42,
+  "count": 0,
+  "description": "",
+  "link": "https://thenurj.com/tag/building/",
+  "name": "building",
+  "slug": "building",
+  "taxonomy": "post_tag",
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags/42"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/post_tag"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?tags=42"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 43,
+  "count": 1,
+  "description": "",
+  "link": "https://thenurj.com/tag/cultural-2/",
+  "name": "cultural",
+  "slug": "cultural-2",
+  "taxonomy": "post_tag",
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags/43"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/post_tag"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?tags=43"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 44,
+  "count": 1,
+  "description": "",
+  "link": "https://thenurj.com/tag/essay/",
+  "name": "essay",
+  "slug": "essay",
+  "taxonomy": "post_tag",
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags/44"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/post_tag"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?tags=44"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 45,
+  "count": 1,
+  "description": "",
+  "link": "https://thenurj.com/tag/news/",
+  "name": "news",
+  "slug": "news",
+  "taxonomy": "post_tag",
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags/45"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/post_tag"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?tags=45"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 46,
+  "count": 1,
+  "description": "",
+  "link": "https://thenurj.com/tag/pavilion/",
+  "name": "pavilion",
+  "slug": "pavilion",
+  "taxonomy": "post_tag",
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags/46"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/tags"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/post_tag"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?tags=46"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

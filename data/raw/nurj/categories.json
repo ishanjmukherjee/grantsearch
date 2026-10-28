@@ -1,0 +1,1008 @@
+[
+ {
+  "id": 28,
+  "count": 4,
+  "description": "",
+  "link": "https://thenurj.com/category/1851-project/",
+  "name": "1851 Project",
+  "slug": "1851-project",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/28"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=28"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 22,
+  "count": 5,
+  "description": "",
+  "link": "https://thenurj.com/category/theses/2019-20-theses/",
+  "name": "2019-20 Theses",
+  "slug": "2019-20-theses",
+  "taxonomy": "category",
+  "parent": 17,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/22"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "up": [
+    {
+     "embeddable": true,
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/17"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=22"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 36,
+  "count": 0,
+  "description": "",
+  "link": "https://thenurj.com/category/architecture-2/",
+  "name": "Architecture",
+  "slug": "architecture-2",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/36"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=36"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 37,
+  "count": 2,
+  "description": "",
+  "link": "https://thenurj.com/category/awards/",
+  "name": "Awards",
+  "slug": "awards",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/37"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=37"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 34,
+  "count": 0,
+  "description": "",
+  "link": "https://thenurj.com/category/expo-2021-creative/",
+  "name": "EXPO 2021 Creative",
+  "slug": "expo-2021-creative",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/34"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=34"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 32,
+  "count": 8,
+  "description": "",
+  "link": "https://thenurj.com/category/expo-2021-oral/",
+  "name": "EXPO 2021 Oral",
+  "slug": "expo-2021-oral",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/32"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=32"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 33,
+  "count": 19,
+  "description": "",
+  "link": "https://thenurj.com/category/expo-2021-poster/",
+  "name": "EXPO 2021 Poster",
+  "slug": "expo-2021-poster",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/33"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=33"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 27,
+  "count": 6,
+  "description": "",
+  "link": "https://thenurj.com/category/global-health-summer-2020/",
+  "name": "Global Health Summer 2020",
+  "slug": "global-health-summer-2020",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/27"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=27"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 38,
+  "count": 1,
+  "description": "",
+  "link": "https://thenurj.com/category/interviews/",
+  "name": "Interviews",
+  "slug": "interviews",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/38"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=38"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 39,
+  "count": 1,
+  "description": "",
+  "link": "https://thenurj.com/category/news-2/",
+  "name": "News",
+  "slug": "news-2",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/39"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=39"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 69,
+  "count": 14,
+  "description": "",
+  "link": "https://thenurj.com/category/nurj-online-volume-10/",
+  "name": "NURJ Online Volume 10",
+  "slug": "nurj-online-volume-10",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/69"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=69"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 70,
+  "count": 19,
+  "description": "",
+  "link": "https://thenurj.com/category/nurj-online-volume-11/",
+  "name": "NURJ Online Volume 11",
+  "slug": "nurj-online-volume-11",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/70"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=70"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 29,
+  "count": 7,
+  "description": "",
+  "link": "https://thenurj.com/category/nurj-online-vol-4/",
+  "name": "NURJ Online Volume 4",
+  "slug": "nurj-online-vol-4",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/29"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=29"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 30,
+  "count": 7,
+  "description": "",
+  "link": "https://thenurj.com/category/nurj-online-vol-5/",
+  "name": "NURJ Online Volume 5",
+  "slug": "nurj-online-vol-5",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/30"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=30"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 35,
+  "count": 4,
+  "description": "",
+  "link": "https://thenurj.com/category/nurj-online-volume-7/",
+  "name": "NURJ Online Volume 7",
+  "slug": "nurj-online-volume-7",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/35"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=35"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 67,
+  "count": 7,
+  "description": "",
+  "link": "https://thenurj.com/category/nurj-online-volume-9/",
+  "name": "NURJ Online Volume 9",
+  "slug": "nurj-online-volume-9",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/67"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=67"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 26,
+  "count": 1,
+  "description": "",
+  "link": "https://thenurj.com/category/expo-creative/",
+  "name": "NURJ x EXPO 2020 Creative Project",
+  "slug": "expo-creative",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/26"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=26"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 23,
+  "count": 8,
+  "description": "",
+  "link": "https://thenurj.com/category/expo-poster/",
+  "name": "NURJ x EXPO 2020 Poster",
+  "slug": "expo-poster",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/23"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=23"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 25,
+  "count": 11,
+  "description": "",
+  "link": "https://thenurj.com/category/expo-oral/",
+  "name": "NURJ x EXPO 2020 Presentation",
+  "slug": "expo-oral",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/25"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=25"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 19,
+  "count": 4,
+  "description": "",
+  "link": "https://thenurj.com/category/other/",
+  "name": "Other",
+  "slug": "other",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/19"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=19"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 31,
+  "count": 7,
+  "description": "",
+  "link": "https://thenurj.com/category/spring-2021/",
+  "name": "Spring 2021",
+  "slug": "spring-2021",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/31"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=31"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 74,
+  "count": 7,
+  "description": "",
+  "link": "https://thenurj.com/category/spring-2026/",
+  "name": "Spring 2026",
+  "slug": "spring-2026",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/74"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=74"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 18,
+  "count": 5,
+  "description": "",
+  "link": "https://thenurj.com/category/the-faces-of-undergraduate-research/",
+  "name": "The Faces of Undergraduate Research",
+  "slug": "the-faces-of-undergraduate-research",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/18"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=18"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 17,
+  "count": 8,
+  "description": "",
+  "link": "https://thenurj.com/category/theses/",
+  "name": "Theses",
+  "slug": "theses",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/17"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=17"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1,
+  "count": 2,
+  "description": "",
+  "link": "https://thenurj.com/category/uncategorized/",
+  "name": "Uncategorized",
+  "slug": "uncategorized",
+  "taxonomy": "category",
+  "parent": 0,
+  "meta": [],
+  "_links": {
+   "self": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories/1"
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/categories"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/taxonomies/category"
+    }
+   ],
+   "wp:post_type": [
+    {
+     "href": "https://thenurj.com/wp-json/wp/v2/posts?categories=1"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]
