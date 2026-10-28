@@ -27,7 +27,7 @@ from fastapi.staticfiles import StaticFiles
 import search
 
 FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
-SITE = "Wildcat Scholar"
+SITE = "prowl"
 DESCRIPTION_CHARS = 200
 
 

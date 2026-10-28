@@ -34,7 +34,7 @@ const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
 const PAGE = 30
 const PAGER_SPAN = 9 // page numbers the pager shows at once; odd, to center the current one
-const SITE = 'Wildcat Scholar'
+const SITE = 'prowl'
 // A share status holds, then fades out with the icon (see .share.fading).
 const STATUS_HOLD_MS = 2000
 const STATUS_FADE_MS = 600 // matches the .share.fading transitions
