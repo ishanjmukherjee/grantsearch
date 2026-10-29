@@ -21,12 +21,14 @@ key is expanded only when
   Alzheimer's disease on 16 of 21 cards; "er" is the endoplasmic reticulum on
   2 of 6 and the emergency room on 2, so it is not expanded), and
 - when titles and abstracts write it, they nearly always do so in another
-  casing than lowercase, not counting a capitalized word: at least
-  MIN_CASED_SHARE of the time. Ordinary words that are also acronyms ("or",
-  "stem", and "fish", which the abstracts write as FISH 4 times and as fish
-  twice) stay as typed, as do keys the projects' own text never writes; real
-  acronyms that also appear in lowercase clear it easily ("AD" 85 times,
-  "ad" 3).
+  casing than lowercase, not counting a capitalized word without a digit
+  ("Fish" but not "Nurr1" or "F1"): at least MIN_CASED_SHARE of the time.
+  Ordinary words that are also acronyms ("or", "stem", and "fish", which the
+  abstracts write as FISH 4 times and as fish twice) stay as typed, as do
+  keys the projects' own text never writes; real acronyms that also appear in
+  lowercase clear it easily ("AD" 85 times, "ad" 3). Writing it cased inside
+  a longer word counts too ("SuperCDMS", "CRISPR-Cas9", "RBCs"); a lowercase
+  piece ("co-culture") does not count against it.
 
 An empty query browses every project matching the filters in a fixed order.
 SURG (2020-2024) and Expo (2021-2026) cover different years, so a single
@@ -209,6 +211,17 @@ def word_forms(word: str) -> list[str]:
     return list(dict.fromkeys((word, word.strip(",;:!?\"'()[]"), word.strip(string.punctuation))))
 
 
+def word_parts(word: str) -> list[str]:
+    """A word of a title or abstract and the acronyms it may write inside it:
+    its pieces between hyphens and slashes ("TDP-43", "Keap1/Nrf2"), the
+    capitalized runs after a lowercase letter ("SuperCDMS", "ipRGC"), and
+    each of these without a plural s ("RBCs", "ipRGCs")."""
+    pieces = [word, *re.split(r"[-/]", word)]
+    pieces += [run for piece in pieces[1:] for run in re.split(r"(?<=[a-z])(?=[A-Z])", piece)]
+    pieces += [m[1] for piece in pieces if (m := re.fullmatch(r"(.*[A-Z0-9])s[^A-Za-z0-9]*", piece))]
+    return list(dict.fromkeys(p for p in pieces if p))
+
+
 def find_acronym(word: str, keys) -> str | None:
     return next((f for f in word_forms(word) if f.lower() in keys), None)
 
@@ -260,10 +273,12 @@ def acronym_expansions(projects: list[dict]) -> dict[str, tuple[str, str]]:
     for p in projects:
         for text in dict.fromkeys([p["title"], *(x for e in p["expo"] for x in (e["title"], e["abstract"]))]):
             for word in text.split():
-                if form := find_acronym(word, votes):
-                    if form == form.lower():
-                        lowercase[form] += 1
-                    elif form != form.capitalize():
+                if (form := find_acronym(word, votes)) and form == form.lower():
+                    lowercase[form] += 1
+                # A word's pieces show where it writes an acronym cased, but
+                # a lowercase piece is a prefix ("co-culture"), not the acronym.
+                for form in dict.fromkeys(f for part in word_parts(word) if (f := find_acronym(part, votes))):
+                    if form != form.lower() and (form != form.capitalize() or any(c.isdigit() for c in form)):
                         cased[form.lower()] += 1
 
     return {
