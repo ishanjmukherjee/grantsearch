@@ -48,3 +48,9 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
 - [ ] Spot check the LLM-judged SURG <-> Expo links.
   - `data/expo_judgments.jsonl` has one verdict per name-matched candidate pair; only same/high pairs are linked (181 when last counted, one of them, `surg-2024-230|expo-2025-213`, promoted by hand from same/low).
   - Check linked pairs for false merges, and same/low (27) and related (112) pairs for missed links like that one, which was missed because the grant title was vague.
+- [ ] Lead linked results with the most complete version of the project.
+  - Today a card linking a SURG grant to Expo presentations is headed by the SURG title, with the Expo entries nested under it. That is backwards: the grant title is a proposal written before the work, while the Expo title and abstract describe what was actually done.
+  - This gets worse as sources are added. A project that runs from SURG grant to Expo to NURJ paper or honors thesis should be headed by the paper or thesis, with the earlier stages shown after it.
+  - Settle on a display format that orders a project's linked records from most to least complete, so a linked SURG grant comes after its Expo presentation.
+- [ ] Redirect the Railway address.
+  - web-production-b5a13.up.railway.app still serves the full site, so it's a second copy that search engines could index, and share links copied there would carry the Railway address.
