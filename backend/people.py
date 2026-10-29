@@ -19,7 +19,10 @@ checked against spelling).
 
 A person matches a query when some query word matches their surname; each
 query word and each name part counts once, best matches first. Typo and sound
-matches apply only to query words that no project's own text uses.
+matches apply only to query words that no project's own text uses, alone or
+with an s after it, as a plural or a possessive with its apostrophe dropped:
+"Benford's Law" keeps "benford" from being a typo of Binford, and "dancers"
+keeps "dancer" from being Danner.
 
 pins() decides when a query names someone confidently enough that search
 should put their projects first. A missed name only falls back to the normal
@@ -165,7 +168,7 @@ class People:
                     add(w, NICKNAME)
         # A word the projects' own text uses is a word, not a misspelled name
         # ("than" is not a typo of Ethan, nor "arab" of Aran).
-        if len(q) >= MIN_FUZZY and q not in self.text_words:
+        if len(q) >= MIN_FUZZY and q not in self.text_words and q + "s" not in self.text_words:
             for w in self.typos(q):
                 add(w, TYPO)
             for w in self.by_sound.get(jellyfish.metaphone(q), ()):
