@@ -25,6 +25,7 @@ const PROMPTS = [
   'creative writing project for classics majors',
   'photinus carolinus',
   'astronomy research i can do with public data',
+  'biology in extreme environments',
 ]
 // After a full pass through PROMPTS, rest on this for a while before the next,
 // or for good where the prompts run only once.
