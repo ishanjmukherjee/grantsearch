@@ -42,7 +42,7 @@ app = FastAPI(lifespan=lifespan)
 
 @app.get("/api/search")
 def search_projects(
-    q: str = Query("", max_length=300),
+    q: str = Query("", max_length=2000),
     source: Literal["surg", "expo"] | None = None,
     year_from: int | None = Query(None, alias="from"),
     year_to: int | None = Query(None, alias="to"),
