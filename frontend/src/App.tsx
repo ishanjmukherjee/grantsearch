@@ -25,6 +25,7 @@ const PROMPTS = [
   'research interviewing doctors', // describes a method, not a topic
   'spectral geometry', // a math term
   'biology in extreme environments', // a topic described in plain words
+  'music research using old recordings', // the arts; finds Mahler's piano rolls without the word "recording"
   'regional pig latin', // whimsy in the middle
   'llm-accelerated biology research', // AI crossover
   'photinus carolinus', // a species name
