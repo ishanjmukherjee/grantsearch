@@ -12,6 +12,9 @@
 - Everything else serves the built frontend from frontend/dist, when it
   exists; in development the Vite dev server serves it instead.
 
+Requests for www.prowl.nu are redirected permanently to the same path and
+query on prowl.nu, the site's one canonical host.
+
 Usage: uv run uvicorn app:app [--reload]
 """
 
@@ -20,8 +23,8 @@ from html import escape
 from pathlib import Path
 from typing import Literal
 
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 import search
@@ -29,6 +32,8 @@ import search
 FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
 SITE = "Prowl"
 DESCRIPTION_CHARS = 200
+CANONICAL_HOST = "prowl.nu"
+REDIRECTED_HOSTS = {"www.prowl.nu"}
 
 
 @asynccontextmanager
@@ -38,6 +43,13 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
+
+@app.middleware("http")
+async def canonical_host(request: Request, call_next):
+    if request.headers.get("host", "").split(":")[0].lower() in REDIRECTED_HOSTS:
+        return RedirectResponse(str(request.url.replace(scheme="https", netloc=CANONICAL_HOST)), status_code=301)
+    return await call_next(request)
 
 
 @app.get("/api/search")
