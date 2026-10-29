@@ -51,6 +51,7 @@ from nicknames import NickNamer
 
 from pipeline.link_expo import MIN_PREFIX
 from pipeline.parse_expo import PARTICLES, split_people
+from pipeline.scrape_surg import fold as fold_text
 
 NICKNAMES_SOURCE = "nicknames (github.com/carltonnorthern/nicknames, Apache-2.0)"
 HONORIFICS = {"dr", "prof", "professor"}
@@ -67,7 +68,7 @@ MIN_SOUND_SPELLING = 0.75
 
 
 def fold(s: str) -> str:
-    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().casefold()
+    return unicodedata.normalize("NFKD", fold_text(s)).encode("ascii", "ignore").decode().casefold()
 
 
 def forms(word: str) -> list[str]:

@@ -80,7 +80,7 @@ from sentence_transformers import SentenceTransformer
 
 from pipeline.link_expo import first_match, surname_parts
 from pipeline.projects import DIM, INDEX_DIR, QUERY_MODEL, QUERY_MODEL_REVISION, doc_text, load_projects, summary_text
-from pipeline.scrape_surg import PAGES
+from pipeline.scrape_surg import PAGES, fold
 from pipeline.share_ids import key, load_rows
 from people import People
 
@@ -100,7 +100,7 @@ stemmer = Stemmer.Stemmer("english")
 
 
 def tokenize(texts: list[str]) -> list[list[str]]:
-    return bm25s.tokenize(texts, stopwords="en", stemmer=stemmer, return_ids=False, show_progress=False)
+    return bm25s.tokenize([fold(t) for t in texts], stopwords="en", stemmer=stemmer, return_ids=False, show_progress=False)
 
 
 def names(people: list[dict]) -> list[str]:
@@ -272,7 +272,7 @@ def acronym_expansions(projects: list[dict]) -> dict[str, tuple[str, str]]:
     lowercase, cased = Counter(), Counter()
     for p in projects:
         for text in dict.fromkeys([p["title"], *(x for e in p["expo"] for x in (e["title"], e["abstract"]))]):
-            for word in text.split():
+            for word in fold(text).split():
                 if (form := find_acronym(word, votes)) and form == form.lower():
                     lowercase[form] += 1
                 # A word's pieces show where it writes an acronym cased, but
@@ -329,7 +329,7 @@ class Index:
         self.by_number |= {p["share"]: i for i, p in enumerate(self.projects)}
 
         self.bm25 = bm25s.BM25(k1=BM25_K1)
-        self.bm25.index(bm25s.tokenize([bm25_text(p) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
+        self.bm25.index(bm25s.tokenize([fold(bm25_text(p)) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
 
         self.browse_orders = browse_orders(self.projects)
         self.shown = [shown_text(p) for p in self.projects]

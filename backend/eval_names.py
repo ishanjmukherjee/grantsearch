@@ -43,6 +43,7 @@ from collections import defaultdict
 from pipeline.link_expo import first_match, surname_parts, tokens
 from pipeline.projects import load_projects
 from pipeline.scrape_surg import DATA_DIR
+from pipeline.scrape_surg import fold as fold_text
 
 OUT = DATA_DIR / "eval" / "names.jsonl"
 SEED = 0
@@ -73,7 +74,7 @@ NICKNAMES = {
 
 
 def fold(s: str) -> str:
-    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().casefold().strip()
+    return unicodedata.normalize("NFKD", fold_text(s)).encode("ascii", "ignore").decode().casefold().strip()
 
 
 def advisors(advisor: str | None) -> list[dict]:

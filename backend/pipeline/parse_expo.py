@@ -26,7 +26,7 @@ from pathlib import Path
 import httpx
 import pymupdf
 
-from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR, clean
+from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR, tidy
 
 BASE = "https://undergradresearch.northwestern.edu/files"
 SOURCES = {
@@ -68,7 +68,7 @@ def text(s: str) -> str:
     s = s.translate(LIGATURES).replace("&amp;", "&")
     # Rejoin words hyphenated across line breaks.
     s = re.sub(r"(\w)-\n(\w)", r"\1\2", s)
-    s = clean(s)
+    s = tidy(s)
     # Drop stray spaces inside brackets ("[PSI+ ]") and before punctuation
     # ("results ,"), but not before a decimal point ("p < .001").
     s = re.sub(r"([(\[]) +| +([)\]])", r"\1\2", s)

@@ -129,6 +129,7 @@ def furniture_free(lines: list[str], heads: set[str]) -> list[str]:
 
 
 def words(s: str) -> list[str]:
+    s = re.sub(r"['\u2018\u2019\u02bc`\u00b4]", "", s)  # O'Brien, O\u2019Brien and OBrien alike
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     s = re.sub(r"-\s*\n\s*", "", s)
     return re.findall(r"[a-z0-9]+", s.casefold())

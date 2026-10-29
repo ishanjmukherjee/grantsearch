@@ -61,7 +61,7 @@ from urllib.parse import parse_qs, urlsplit
 import httpx
 from bs4 import BeautifulSoup, Comment, NavigableString, Tag
 
-from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR, clean
+from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR, tidy
 
 SITE = "https://thenurj.com"
 API = f"{SITE}/wp-json/wp/v2"
@@ -77,8 +77,9 @@ SKIP = {"script", "style"}
 CONTAINERS = HEADINGS | LEAVES | MEDIA | {"div", "section", "article", "figure", "ul", "ol", "dl", "table", "header", "footer", "main", "aside", "nav", "details", "form", "center", "noscript", "hr", "tr", "td", "th", "thead", "tbody", "tfoot"}
 
 SHORTCODE = re.compile(r"\[(/?)(et_pb_\w+)([^\]<]*)\]")  # never across a tag: excerpts cut shortcodes off
-# WordPress curls the quotes inside shortcode attributes: x=”1″ for x="1".
-TEXTURIZED = str.maketrans({"“": '"', "”": '"', "″": '"', "‘": "'", "’": "'", "′": "'"})
+# A shortcode attribute: WordPress curls the quotes around its value, x=\u201d1\u2033 for
+# x="1", and the value is kept as written.
+ATTR = re.compile(r'(\w+)=["\u201c\u201d](.*?)["\u201d\u2033](?=\s|$)')
 # Shortcode attributes that hold content, and those that only style or
 # configure the layout (a column's type is kept as its blocks' divi.column).
 # Parsing raises on any other, so that no new kind of content goes unread.
@@ -199,7 +200,7 @@ def text_of(nodes: list) -> str:
 
     for n in nodes:
         visit(n)
-    lines = (clean(line) for line in "".join(pieces).split("\n"))
+    lines = (tidy(line) for line in "".join(pieces).split("\n"))
     return "\n".join(line for line in lines if line)
 
 
@@ -224,7 +225,7 @@ def sheet_values(nodes: list) -> list[str]:
             except json.JSONDecodeError:
                 value = {"2": raw}
             v = value.get("2", value.get("3"))
-            if v is not None and clean(str(v)) != clean(el.get_text(" ")):
+            if v is not None and tidy(str(v)) != tidy(el.get_text(" ")):
                 out.append(str(v))
     return out
 
@@ -244,7 +245,7 @@ def text_block(kind: str, nodes: list, **extra) -> list[dict]:
     """A text block for some nodes, then blocks for the media inside them."""
     out = []
     text = text_of(nodes)
-    links = [{"text": clean(a.get_text(" ")), "url": a["href"]} for a in descendants(nodes, "a") if a.get("href")]
+    links = [{"text": tidy(a.get_text(" ")), "url": a["href"]} for a in descendants(nodes, "a") if a.get("href")]
     if text or links:
         b = {"type": kind, **extra, "text": text}
         if links:
@@ -290,7 +291,7 @@ def html_blocks(fragment: str) -> list[dict]:
             elif c.name == "table":
                 rows = [[text_of([cell]) for cell in tr.find_all(["td", "th"])] for tr in c.find_all("tr")]
                 out.append({"type": "table", "rows": rows})
-                links = [{"text": clean(a.get_text(" ")), "url": a["href"]} for a in c.find_all("a") if a.get("href")]
+                links = [{"text": tidy(a.get_text(" ")), "url": a["href"]} for a in c.find_all("a") if a.get("href")]
                 if links:
                     out[-1]["links"] = links
                 out.extend(b for m in c.find_all(MEDIA) if (b := media_block(m)))
@@ -333,13 +334,13 @@ def divi_blocks(content: str) -> list[dict]:
             while stack and stack.pop()[0] != name:
                 pass
             continue
-        attrs = dict(re.findall(r'(\w+)="([^"]*)"', html.unescape(m.group(3)).translate(TEXTURIZED)))
+        attrs = dict(ATTR.findall(html.unescape(m.group(3)).strip()))
         if unknown := [k for k in attrs if k not in DIVI_ATTRS and not DIVI_STYLE.fullmatch(k)]:
             raise ValueError(f"unknown {name} attributes {unknown}")
         module_no += 1
         if name not in DIVI_SELF_CLOSING:
             stack.append((name, attrs, module_no))
-        info = {k: clean(attrs[k]) for k in DIVI_ATTRS if attrs.get(k, "").strip()}
+        info = {k: tidy(attrs[k]) for k in DIVI_ATTRS if attrs.get(k, "").strip()}
         if name in ("et_pb_image", "et_pb_fullwidth_image") and "src" in info:
             b = {"type": "image", "url": info.pop("src")}
             b |= {"alt": info.pop("alt")} if "alt" in info else {}
@@ -539,7 +540,7 @@ def menu_tree(home: str, page_by_key: dict[str, int]) -> list[dict]:
             a = li.find("a")
             url = a.get("href", "")
             key = site_key(url)
-            node = {"label": clean(a.get_text(" ")), "url": url, "page": page_by_key.get(key) if key else None}
+            node = {"label": tidy(a.get_text(" ")), "url": url, "page": page_by_key.get(key) if key else None}
             if sub := li.find("ul"):
                 node["children"] = items(sub)
             out.append(node)
@@ -571,7 +572,7 @@ def main_content(rendered: str, wp_id: int) -> str | None:
 
 
 def record(kind: str, wp: dict, rendered: str, names: dict[str, dict[int, str]]) -> dict:
-    title = clean(BeautifulSoup(wp["title"]["rendered"], "html.parser").get_text(" "))
+    title = tidy(BeautifulSoup(wp["title"]["rendered"], "html.parser").get_text(" "))
     shown = main_content(rendered, wp["id"])
     try:
         blocks = content_blocks(wp["content"]["rendered"] if shown is None else shown)

@@ -45,14 +45,34 @@ def fetch(year: int, url: str, refresh: bool) -> str:
     return resp.text
 
 
-QUOTES = str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"'})
+# Typographic ligatures (U+FB00-FB06: ff, fi, fl, ffi, ffl, long st, st) as
+# the letters they join.
+LIGATURES = {c: unicodedata.normalize("NFKC", chr(c)) for c in range(0xFB00, 0xFB07)}
 
 
-def clean(text: str) -> str:
-    # Some titles carry Windows-1252 punctuation as raw C1 control characters.
+# Curly quotes and apostrophes as the straight ones people type.
+STRAIGHT = str.maketrans({"\u2018": "'", "\u2019": "'", "\u02bc": "'", "\u201c": '"', "\u201d": '"'})
+
+
+def fold(text: str) -> str:
+    """Text as matching should compare it: NFKC (math letters, superscripts and
+    the like as plain characters) with straight quotes. For comparing only;
+    stored text keeps its characters (see tidy)."""
+    return unicodedata.normalize("NFKC", text).translate(STRAIGHT)
+
+
+def tidy(text: str) -> str:
+    """Text with its characters kept as the source has them: raw C1 control
+    characters (Windows-1252 punctuation some pages carry) decoded, accents
+    composed (NFC, which changes no character's identity), ligatures written
+    as their letters, and whitespace collapsed. Unlike NFKC it keeps curly
+    quotes, superscripts, ellipses and the like."""
     text = re.sub(r"[\x80-\x9f]", lambda m: bytes([ord(m.group())]).decode("cp1252"), text)
-    text = unicodedata.normalize("NFKC", text).translate(QUOTES)
+    text = unicodedata.normalize("NFC", text).translate(LIGATURES)
     return re.sub(r"\s+", " ", text).strip()
+
+
+
 
 
 def column_roles(headers: list[str]) -> tuple[str, ...]:
@@ -78,11 +98,11 @@ def parse(year: int, html: str) -> list[dict]:
     if len(tables) != 1:
         raise ValueError(f"{year}: expected 1 table, found {len(tables)}")
     table = tables[0]
-    roles = column_roles([clean(th.get_text()) for th in table.select("thead th")])
+    roles = column_roles([tidy(th.get_text()) for th in table.select("thead th")])
 
     rows = []
     for tr in table.select("tbody tr"):
-        cells = [clean(td.get_text()) for td in tr.find_all("td")]
+        cells = [tidy(td.get_text()) for td in tr.find_all("td")]
         if len(cells) != len(roles):
             raise ValueError(f"{year}: row has {len(cells)} cells: {cells}")
         rows.append(dict(zip(roles, cells)))

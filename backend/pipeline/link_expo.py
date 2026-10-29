@@ -22,7 +22,7 @@ import unicodedata
 from collections import defaultdict
 
 from pipeline.parse_expo import PARTICLES
-from pipeline.scrape_surg import DATA_DIR
+from pipeline.scrape_surg import DATA_DIR, fold
 
 MIN_PREFIX = 3  # "Al" should not match every Alexander and Alice
 # Word-trigram Jaccard between two abstracts at which they are one poster's.
@@ -31,7 +31,7 @@ MIN_OVERLAP = 0.5
 
 
 def tokens(name: str) -> list[str]:
-    name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    name = unicodedata.normalize("NFKD", fold(name)).encode("ascii", "ignore").decode()
     return re.findall(r"[a-z]+", name.casefold())
 
 
@@ -48,7 +48,7 @@ def first_match(a: str, b: str) -> bool:
 
 
 def words(s: str) -> list[str]:
-    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    s = unicodedata.normalize("NFKD", fold(s)).encode("ascii", "ignore").decode()
     return re.findall(r"[a-z0-9]+", s.casefold())
 
 
