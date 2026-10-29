@@ -10,6 +10,7 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
   - [ ] NURJ (Northwestern Undergraduate Research Journal). Scraped by `backend/pipeline/scrape_nurj.py` into `data/nurj.json`, not indexed yet; see `MANUAL_DOWNLOADS.md` for the files that must be fetched by hand.
   - [ ] Department honors thesis lists.
 - [ ] Hyperlink advisors and faculty to their faculty pages.
+- [ ] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). Today the link is the bare PDF URL; `backend/pipeline/parse_expo.py` would need to record each abstract's page number.
 - [ ] Google OAuth accounts, so visitors can save cards to their profile.
 - [ ] Let visitors upload papers or their own research done at Northwestern that is not indexed yet, reviewed before it is indexed.
 - [ ] Google Analytics, plus careful logging of the queries visitors type in (decide what is stored, for how long, and disclose it on the site).
