@@ -8,5 +8,13 @@
  "pages_saved": [
   1
  ],
- "images_saved": 0
+ "images_saved": 0,
+ "font_urls": [
+  "https://html.scribdassets.com/304xb9rd6obwhrjd/fonts/0000.woff2",
+  "https://html.scribdassets.com/304xb9rd6obwhrjd/fonts/0001.woff2",
+  "https://html.scribdassets.com/304xb9rd6obwhrjd/fonts/0002.woff2",
+  "https://html.scribdassets.com/304xb9rd6obwhrjd/fonts/0003.woff2",
+  "https://html.scribdassets.com/304xb9rd6obwhrjd/fonts/0004.woff2"
+ ],
+ "fonts_saved": 5
 }

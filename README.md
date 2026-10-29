@@ -30,6 +30,9 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
   - [ ] NULJ (Northwestern Undergraduate Law Journal), [thenulj.com](https://www.thenulj.com/). The Squarespace site has expired, so it is only in the Wayback Machine. Not sampled for a count yet.
     - The journal issues are on `/journal`, `/journal-2022` and `/the-20202021-journal-1`; about 35 shorter NULJ Forum posts are captured under `/nuljforum/`.
     - Leave out the high school essay contest winners.
+  - [ ] NURJ documents embedded from hosts the NURJ scrape didn't download: about 10-15 Northwestern undergraduate pieces from 2020-2021, mostly history and humanities essays.
+    - Two Yumpu magazines (2021): the [NURJ Archives Special Edition](https://www.yumpu.com/en/document/view/65759299/nurj-archives-special-edition) (44 pages, about 5-7 essays on Northwestern history drawn from the University Archives, written around 2020) and [NURJ x Yale: Intersections](https://www.yumpu.com/en/document/view/65830578/nurj-x-yale-intersections) (48 pages, about 8-10 essays and interviews with the Yale Historical Review, Spring 2021). Some Intersections pieces are by Yale students, and some reprint NURJ papers already scraped (Rodriguez's "Therapeutic High Schools" from 2016-17).
+    - Five Google Drive embeds on the Online Vol. 8 "SURG Tell-All" page, which need a sign-in and are probably videos.
 - [ ] Hyperlink advisors and faculty to their faculty pages.
 - [ ] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). Today the link is the bare PDF URL; `backend/pipeline/parse_expo.py` would need to record each abstract's page number.
 - [ ] Google OAuth accounts, so visitors can save cards to their profile.

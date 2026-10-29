@@ -9,5 +9,10 @@
   1,
   2
  ],
- "images_saved": 2
+ "images_saved": 2,
+ "font_urls": [
+  "https://html.scribdassets.com/6cgjfl7em8ccn1nf/fonts/0000.woff2",
+  "https://html.scribdassets.com/6cgjfl7em8ccn1nf/fonts/0001.woff2"
+ ],
+ "fonts_saved": 2
 }

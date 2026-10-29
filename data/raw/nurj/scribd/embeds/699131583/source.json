@@ -11,5 +11,11 @@
   3,
   4
  ],
- "images_saved": 4
+ "images_saved": 4,
+ "font_urls": [
+  "https://html.scribdassets.com/7g47whpocgbwhowe/fonts/0000.woff2",
+  "https://html.scribdassets.com/7g47whpocgbwhowe/fonts/0001.woff2",
+  "https://html.scribdassets.com/7g47whpocgbwhowe/fonts/0002.woff2"
+ ],
+ "fonts_saved": 3
 }
