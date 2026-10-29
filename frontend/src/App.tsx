@@ -14,18 +14,21 @@ type Project = { id: string; share: number; title: string; grant: Grant | null; 
 type Source = '' | 'surg' | 'expo'
 
 const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
+// Ordered to onboard visitors quickly: most start typing after two or three
+// prompts, so the first few do most of the work and should show the range of
+// the index.
 const PROMPTS = [
-  'how to build a moon colony',
-  'regional pig latin',
-  'llm-accelerated biology research',
-  'spectral geometry',
-  'chad mirkin lab',
-  'research interviewing doctors',
-  'dravet syndrome',
-  'creative writing project for classics majors',
-  'photinus carolinus',
-  'astronomy research i can do with public data',
-  'biology in extreme environments',
+  'how to build a moon colony', // a playful hook; ambitious, plain-language queries work
+  'creative writing project for classics majors', // humanities right away; project-style
+  'dravet syndrome', // a specific medical term
+  'chad mirkin lab', // searching by person or lab
+  'research interviewing doctors', // describes a method, not a topic
+  'spectral geometry', // a math term
+  'biology in extreme environments', // a topic described in plain words
+  'regional pig latin', // whimsy in the middle
+  'llm-accelerated biology research', // AI crossover
+  'photinus carolinus', // a species name
+  'astronomy research i can do with public data', // "i can do" leads into REST
 ]
 // After a full pass through PROMPTS, rest on this for a while before the next,
 // or for good where the prompts run only once.
