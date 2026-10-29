@@ -9,8 +9,8 @@
   --expo: #0b6e6e;
   --expo-soft: #e3f2f1;
   --error: #b42318;
-  --mark: #ffe94d;
-  --mark-text: #1d1b22;
+  --mark: #ffd6b0;
+  --mark-text: #000000;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
   color: var(--text);
@@ -30,6 +30,7 @@
     --expo: #7fd1cc;
     --expo-soft: #183331;
     --error: #ff8a80;
+    --mark: #f2b78a;
   }
 }
 
@@ -352,13 +353,11 @@ h1 a {
   white-space: pre-line;
 }
 
-/* Quoted phrases, marked as find in page marks its matches: the same yellow
-   in both themes, with dark text on it. */
+/* Quoted phrases, marked as find in page marks its matches but in apricot,
+   with black text on it in both themes. */
 mark {
   background: var(--mark);
   color: var(--mark-text);
-  border-radius: 2px;
-  box-shadow: 0 0 0 1px var(--mark);
 }
 
 .abstract .text.clamped {
