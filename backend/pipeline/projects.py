@@ -31,10 +31,32 @@ INDEX_MODEL = "voyage-4-large"
 QUERY_MODEL = "voyageai/voyage-4-nano"
 QUERY_MODEL_REVISION = "433ece5e27a1611e9360dd7134ecaaf79fb3681d"  # pinned: the model ships its own code
 DIM = 2048
+# Hand edits to generated cards and glosses, kept apart from the generated
+# files so regenerating those (make_cards --fresh) cannot erase them. Each line
+# is {file, id, patch, reason}, the patch an RFC 7396 JSON merge patch.
+OVERRIDES = "card_overrides.jsonl"
+
+
+def merge_patch(target, patch):
+    """RFC 7396: patch's keys replace target's, recursively; null deletes a key."""
+    if not isinstance(patch, dict):
+        return patch
+    merged = dict(target) if isinstance(target, dict) else {}
+    for k, v in patch.items():
+        if v is None:
+            merged.pop(k, None)
+        else:
+            merged[k] = merge_patch(merged.get(k), v)
+    return merged
 
 
 def load_jsonl(name: str) -> dict[str, dict]:
-    return {c["id"]: c for c in map(json.loads, (DATA_DIR / name).open())}
+    """A generated file's records by id, with their overrides applied."""
+    records = {c["id"]: c for c in map(json.loads, (DATA_DIR / name).open())}
+    for o in map(json.loads, (DATA_DIR / OVERRIDES).open()):
+        if o["file"] == name:
+            records[o["id"]] = merge_patch(records[o["id"]], o["patch"])
+    return records
 
 
 def fold(entries: list[dict]) -> list[dict]:
