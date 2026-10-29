@@ -1,0 +1,32 @@
+{
+ "page": 54,
+ "blocks": [
+  [
+   "Figure 7. The graph of the phase shift at point “a” and point “b” as a function of temperature with the MFM images of the nanowire captured at the labeled temperatures. The error bars are given by the noise from the phase response of the cantilever of approximately 0.01°."
+  ],
+  [
+   "The MFM images showed dark contrast which indicates that the magnetization of the MnAs precipitates is parallel to the magnetization of the tip. In other words, the MnAs precipitates have out-of-plane magnetization i.e. the magnetization is perpendicular to the surface of the sample. The orientation of the magnetic domains was found to be in the [21̅1̅0] direction, consistent with the easy axis of MnAs.¹⁶ Hence, the magnetic contrast observed in the MFM image is consistent with the easy axis of MnAs."
+  ],
+  [
+   "When MFM was conducted at higher temperatures, the phase shift (magnetic contrast) decreased with increasing temperature. This observation is consistent with the magnetic contrast in the MFM image being due to a magnetic interaction between the tip and the sample; however, there is still some phase shift observed above the Tc of MnAs (318 K) where the ferromagnetic transition should occur, and the MnAs precipitate would no longer be ferromagnetic resulting in zero phase shift (no magnetic"
+  ],
+  [
+   "contrast). In addition, the phase shift never goes to zero, but from 336 K the phase shift stabilizes at a constant value. This suggests the Tc could be approximately 330K. At temperatures of 336 K and 344 K, the nanowire showed darker contrast along its axis compared to that of other lower temperatures. The observations of contrast in the entire nanowire is not yet understood, as the Tc of (In,Mn)As is expected to be less than 330 K."
+  ],
+  [
+   "V. CONCLUSIONS"
+  ],
+  [
+   "The characterization of the magnetic properties of (In,Mn)As/InAs core/shell nanowires using MFM showed that only the MnAs phase is ferromagnetic. The detection of the MnAs phase using MFM is consistent with the EDS analysis that shows the presence of MnAs precipitates on the surface of InAs nanowire. MFM could not detect the ferromagnetism of the nanowire as a whole; this result is also consistent with the EDS analysis in which Mn was not detected in the InAs"
+  ],
+  [
+   "VOLUME 2, MAY 2005"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ],
+  [
+   "53"
+  ]
+ ]
+}

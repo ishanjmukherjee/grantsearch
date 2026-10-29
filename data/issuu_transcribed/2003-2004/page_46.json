@@ -1,0 +1,17 @@
+{"page": 46, "blocks": [
+["NURJ"],
+["47"],
+["VI. Summary and Conclusion"],
+["In this paper, we reviewed several aspects of theoretical and experimental research performed at CQD on InGaAs/InGaP quantum dot infrared photodetectors. We have found that such devices can be fabricated to have a high detectivity, low dark current, and be insensitive to temperature changes. We conclude that quantum dot photodetectors are a promising technology that may eventually surpass quantum well photodetectors, possibly even offering room-temperature operation for solid-state photodetector devices."],
+["References"],
+["¹V. Ryzhii, I. Khmyrova,V, Pipa, V.Mitin and M.Willander. “Device model for quantum dot infrared photodetectors and their dark-current characteristics.” Semicond. Sci. Technol. 2001; 16:331-338."],
+["²David M. -T. Kuo, Angbo Fang and Y. C. Chang. “Theoretical modeling of dark current and photoresponse for quantum well and quantum dot infrared detectors.” 2001; 42:433-442."],
+["³J. Phillips. “Evaluation of the fundamental properties of quantum dot infrared detectors.” J. Appl. Phys. 2002; 91:4590-4594."],
+["⁴Manijeh Razeghi. Fundamentals of Solid State Engineering. Massachusetts: Kluwer Academic Publishers, 2002; 539-540, 549-556."],
+["⁵U. Bockelmann and G. Bastard. “Phonon scattering and energy relaxation in two-, one-, and zero-dimensional electron gases.” Phys. Rev. B. 1990; 42:8947–8951."],
+["⁶J. Jiang, S. Tsao, T. O’Sullivan, W. Zhang, H. Lim, T. Sills, K. Mi, and M. Razeghi. “High detectivity InGaAs/InGaP quantum-dot infrared photodetectors grown by low pressure metalorganic chemical vapor deposition,” Appl. Phys. Lett. 2004; 84:2166-2168."],
+["⁷L. Goldstein, F. Glas, J. Y. Marzin, M. N. Charasse, and G. Le Roux. “Growth by molecular beam epitaxy and characterization of InAs/GaAs strained-layer superlattices.” Appl. Phys. Lett. 1985; 47:1099-1101."],
+["⁸D. Leonard, M. Krishnamurthy, C. M. Reaves, S. P. Denbaars, and P. M. Petroff. “Direct formation of quantum-sized dots from uniform coherent islands of InGaAs on GaAs surfaces.” Appl. Phys. Lett. 1993; 63:3203-3205."],
+["⁹S. S. Li, S. H. Kim, J. H. Moon, and J. H. Lee. “A two-stack, multi-color quantum well infrared photodetector for mid- and long-wavelength infrared detection.” Infrared Phys. Technol. 2003; 44:235-241."],
+["¹⁰A. Fiore, E. Rosencher, P. Bois, J Nagle, and N. Laurent. “Strained InGaAs/AlGaAs quantum well infrared detectors at 4.5 μm.” Appl. Phys. Lett. 1994; 64:478-480."]
+]}

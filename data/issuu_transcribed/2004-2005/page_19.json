@@ -1,0 +1,9 @@
+{"page": 19, "blocks": [
+["STARS Flight Demonstration #2"],
+["the title of the plot signify the error in the following order: x-position / y-position / z-position / heading-angle / pitch-angle / roll-angle. The minima and maxima of δ, the times at which they occurred, the mean, and the standard deviation of δ are also given."],
+["The data reveals some very important details of the pointing algorithm. Flight 7 was much more dynamic than Flight 6, and the errors are greater for Flight 7 overall. This is especially true for the elevation error when the heading value was perturbed. The error increased by nearly 100% from Flight 6 to Flight 7. Additionally, azimuth error increased substantially from Flight 6 to Flight 7 for both aircraft position and attitude. This makes sense, since the high dynamics of Flight 7 would cause the these two values to constantly change at high rates and would require a greater precision by the antenna. Figure 9 below includes a dotted line at 2-degrees to distinguish between acceptable and unacceptable errors."],
+["Figure 9. Sample Error Plot for Flight 6."],
+["The error analysis performed agrees with the expected results. A positional change should not have a large effect on the pointing of the antenna, due to the large distance between the aircraft and TDRS. A change in attitude, however, should have a somewhat greater effect since it alters the precise azimuth and elevation angles that were so carefully calculated previously. It also follows that a high-dynamic flight, such as in Flight 7, would produce greater errors than those of less-dynamic flight. The greater the frequency of movement by the aircraft, the less time the antenna will have to find an exact pointing vector to TDRS."],
+["18"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

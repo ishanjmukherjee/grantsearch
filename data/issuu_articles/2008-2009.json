@@ -1,0 +1,100 @@
+{
+  "slug": "2008-2009",
+  "running_heads": [
+    "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL",
+    "RESEARCH",
+    "VOLUME 4, MAY 2008"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["0.0", "1.9"]],
+      "notes": "Cover (Volume 4, 2008, featuring \"Understanding Speech: Effect of Mandarin tones on understanding English\", page 19) and the table of contents on the inside cover (Volume Four, May 2008). Although filed as 2008-2009, the volume is dated May 2008."
+    },
+    {
+      "kind": "front matter",
+      "title": "Staff Information",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [["2.0", "2.27"]],
+      "notes": "Acknowledgements, NURJ office and contact details, masthead, staff, student and faculty review boards, and publication details. Title taken from the contents page."
+    },
+    {
+      "kind": "back matter",
+      "title": "Research Grants for Undergraduates",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [["2.28", "2.40"]],
+      "notes": "Advertisement from the Provost's Office, Northwestern University, for Undergraduate Research Grants, printed on page 2 below the masthead."
+    },
+    {
+      "kind": "letter",
+      "title": "Letter from the Editors",
+      "authors": ["Vinhfield Ta", "Jennifer Liu"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [["2.41", "2.51"]],
+      "notes": "Signed by the Editor-in-Chief and Managing Editor. Announces that NURJ has opened to the humanities and social sciences."
+    },
+    {
+      "kind": "feature",
+      "title": "Nasa Internship",
+      "authors": ["Allison Bond"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [["3.0", "3.12"]],
+      "notes": "Profile of Mike Jung's summer 2006 NASA internship at Kennedy Space Center (Spaceflight and Lunar Sciences and Technology Program), with comments from Nirav Shah. Printed as \"Nasa Internship\" on the page and \"NASA Internship\" in the contents. Jung's paper from the internship follows on page 5."
+    },
+    {
+      "kind": "research",
+      "title": "The Effects of Inspiratory Resistance on Motion Sickness and its Hemodynamics",
+      "authors": ["Michael Jung"],
+      "department": "DEPARTMENT OF BIOMEDICAL ENGINEERING",
+      "advisors": ["Richard Ha", "Dave R. Bush", "Don F. Doerr", "Kenneth D. Cohen"],
+      "printed_pages": "5-10",
+      "spans": [["3.13", "6.12"]],
+      "notes": "Advisors as printed on the opening page: Richard Ha (Advisor, The Ohio State University) and Dave R. Bush, Don F. Doerr, Kenneth D. Cohen (Advisors, NASA Biomedical, Kennedy Space Center, FL). The acknowledgements call Richard Ha a fellow intern and Ken Cohen a mentor. The contents page lists the author as Mike Jung under Biomedical Engineering, while the preceding feature describes him as a biological sciences and economics double major. Research done in the 2006 NASA Spaceflight and Lunar Sciences and Technology Program at Kennedy Space Center."
+    },
+    {
+      "kind": "research",
+      "title": "Hydroquinine-based Chiral Ionic Liquids",
+      "authors": ["Claire M. Schmerberg"],
+      "department": "DEPARTMENT OF CHEMISTRY",
+      "advisors": ["Sonbinh T. Nguyen"],
+      "printed_pages": "11-18",
+      "spans": [["6.13", "10.19"]],
+      "notes": "Advisor printed on the opening page as Faculty Advisor, Department of Chemistry, Northwestern University. Two spots in the experimental section were marked illegible in transcription: a subscript in the ESIMS formula for compound 1 (block 9.4) and a subscript in \"residual CH3(CH2)?I\" in the 1H NMR data for compound 4 (block 10.2). Chemical structure figures are not transcribed beyond their captions."
+    },
+    {
+      "kind": "research",
+      "title": "Role of Supra-Segmental Information in Attribution of Meaning",
+      "authors": ["Alison Moy", "Viorica Marian"],
+      "department": "DEPARTMENT OF COMMUNICATION SCIENCES & DISORDERS",
+      "advisors": [],
+      "printed_pages": "19-27",
+      "spans": [["10.20", "14.45"]],
+      "notes": "Viorica Marian is printed on the opening page as Faculty Co-Author, Department of Communication Sciences and Disorders, Northwestern University; no advisor is named. The opening page spells the student's name \"Alison Moy\"; the contents page and the editors' letter spell it \"Allison Moy\". Featured on the cover as \"Understanding Speech\". Table 6 (bilingual comparisons) is printed with \"Monolingual Match/Mismatch\" column headings and significance values \"..126\" and \"040\", as in print. In the references (block 14.41), the volume number of Psychological Science for Vitevitch & Luce (1998) was marked illegible in transcription."
+    },
+    {
+      "kind": "research",
+      "title": "Nabokov’s Memory and the Creation of Fictive Authority",
+      "authors": ["Nicholas Anderman"],
+      "department": "DEPARTMENT OF ENGLISH",
+      "advisors": ["Kevin Bell"],
+      "printed_pages": "28-32",
+      "spans": [["15.0", "17.15"]],
+      "notes": "Advisor printed on the opening page as Faculty Advisor, Department of English, Northwestern University. Essay on Vladimir Nabokov's Pale Fire. The superscript endnote markers (i-xviii) were too small to read on the scans and were numbered in order to match the endnote list. The works referenced list continues onto page 32."
+    }
+  ]
+}

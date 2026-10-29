@@ -1,0 +1,542 @@
+{
+  "slug": "2009-2010",
+  "running_heads": [
+    "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL",
+    "RESEARCH",
+    "VOLUME 5, 2009 - 2010"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "0.0",
+          "1.23"
+        ]
+      ],
+      "notes": "Cover (Volume 5, 2009 - 2010, featuring \"The Skinny on Stress\") and the table of contents on the inside cover. On the contents page, page numbers and section labels are separate blocks from the titles they belong to."
+    },
+    {
+      "kind": "front matter",
+      "title": "Staff Information",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [
+        [
+          "2.0",
+          "2.16"
+        ]
+      ],
+      "notes": "Acknowledgements, masthead, staff, student and faculty review boards, office and publisher details. The staff names, roles and faculty departments are extracted as separate columns, so names are not paired with their roles in the text."
+    },
+    {
+      "kind": "letter",
+      "title": "Letter from the Editors",
+      "authors": [
+        "Danwen Song",
+        "Sara Dubbury"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [
+        [
+          "3.0",
+          "3.12"
+        ]
+      ],
+      "notes": "Signed by the Editor-in-Chief and Co-Editor-in-Chief. Title taken from the contents page; the heading on the page itself is extracted out of order."
+    },
+    {
+      "kind": "feature",
+      "title": "Economic Stimulus Means More Opportunity, More Research for NU",
+      "authors": [
+        "Jessica Gottesman"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4-5",
+      "spans": [
+        [
+          "4.0",
+          "5.3"
+        ]
+      ],
+      "notes": "News feature on American Recovery and Reinvestment Act research funding at Northwestern. The footer of printed page 5 reads \"VOLUME 4, MAY 2008\" (left over from the previous volume) and is included in the text."
+    },
+    {
+      "kind": "feature",
+      "title": "Breast Cancer and Early Development",
+      "authors": [
+        "Noel Slesinger"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "6",
+      "spans": [
+        [
+          "6.0",
+          "6.4"
+        ]
+      ],
+      "notes": null
+    },
+    {
+      "kind": "research",
+      "title": "The Skinny on Stress: Maternal Psychosocial Stress and Birth Weight in the Philippines",
+      "authors": [
+        "Laura M. Rogers"
+      ],
+      "department": "Anthropology",
+      "advisors": [
+        "Thomas McDade"
+      ],
+      "printed_pages": "7-10",
+      "spans": [
+        [
+          "7.0",
+          "7.0"
+        ],
+        [
+          "7.2",
+          "7.3"
+        ],
+        [
+          "7.1",
+          "7.1"
+        ],
+        [
+          "7.4",
+          "8.1"
+        ],
+        [
+          "8.3",
+          "8.3"
+        ],
+        [
+          "8.2",
+          "8.2"
+        ],
+        [
+          "8.4",
+          "9.0"
+        ],
+        [
+          "9.2",
+          "9.2"
+        ],
+        [
+          "9.1",
+          "9.1"
+        ],
+        [
+          "9.3",
+          "9.5"
+        ]
+      ],
+      "notes": "Printed page 9 is missing from the capture, so the text jumps from the middle of the results to the end of the discussion. On the opening page the author line is garbled by the drop cap (\"LDEPARTMENT / AURA M. ROGERS / OF ANTHROPOLOGY\"); the name is taken from the contents page. Thomas McDade is named as Faculty Advisor, Department of Anthropology, on the opening page. In section 8 the \"RESULTS\" heading is extracted at the top of the data collection subsection (8.3), which belongs to the methods; blocks 8.3 and 8.2 are placed in text order."
+    },
+    {
+      "kind": "research",
+      "title": "Examining the effects of predator exclusion structures associated with geoduck aquaculture on mobile benthic macrofauna in South Puget Sound, Washington",
+      "authors": [
+        "Rachel Smith"
+      ],
+      "department": "Biology",
+      "advisors": [
+        "P. Sean McDonald"
+      ],
+      "printed_pages": "11-17",
+      "spans": [
+        [
+          "10.0",
+          "10.2"
+        ],
+        [
+          "10.4",
+          "10.5"
+        ],
+        [
+          "10.3",
+          "10.3"
+        ],
+        [
+          "10.6",
+          "10.8"
+        ],
+        [
+          "11.2",
+          "11.5"
+        ],
+        [
+          "11.1",
+          "11.1"
+        ],
+        [
+          "11.6",
+          "16.3"
+        ]
+      ],
+      "notes": "On the opening page the author line is garbled by the drop cap (\"RDEPARTMENT / ACHEL SMITH / OF BIOLOGY\"); the name is taken from the contents page. P. Sean McDonald is named on the opening page as Faculty Advisor, School of Aquatic and Fishery Sciences, University of Washington. The research was done in the National Science Foundation Research Experiences for Undergraduates program at Shannon Point Marine Center, Anacortes, Washington. Figure axis labels from printed page 13 are extracted as short fragments."
+    },
+    {
+      "kind": "research",
+      "title": "Interactions Along the Fault Lines of Civilizations; Investigating Literary Transitions and Legacies in Russian Accounts of the Caucasian Conquest (1817-1864)",
+      "authors": [
+        "Michael Marsh-Soloway"
+      ],
+      "department": "Slavic Studies/History",
+      "advisors": [
+        "John Bushnell",
+        "Gary Saul Morson"
+      ],
+      "printed_pages": "18-25",
+      "spans": [
+        [
+          "17.0",
+          "17.3"
+        ],
+        [
+          "17.5",
+          "17.5"
+        ],
+        [
+          "17.4",
+          "17.4"
+        ],
+        [
+          "17.6",
+          "22.1"
+        ],
+        [
+          "22.8",
+          "22.8"
+        ],
+        [
+          "22.10",
+          "22.12"
+        ],
+        [
+          "22.2",
+          "22.7"
+        ],
+        [
+          "22.9",
+          "22.9"
+        ],
+        [
+          "22.14",
+          "22.15"
+        ],
+        [
+          "23.0",
+          "23.0"
+        ],
+        [
+          "23.2",
+          "23.2"
+        ],
+        [
+          "23.4",
+          "23.4"
+        ],
+        [
+          "23.6",
+          "23.11"
+        ],
+        [
+          "23.18",
+          "23.18"
+        ],
+        [
+          "23.20",
+          "23.25"
+        ],
+        [
+          "23.1",
+          "23.1"
+        ],
+        [
+          "23.3",
+          "23.3"
+        ],
+        [
+          "23.5",
+          "23.5"
+        ],
+        [
+          "23.27",
+          "23.27"
+        ],
+        [
+          "23.12",
+          "23.17"
+        ],
+        [
+          "23.19",
+          "23.19"
+        ],
+        [
+          "23.29",
+          "24.6"
+        ]
+      ],
+      "notes": "A portion of a Senior Interdisciplinary Honors Thesis (author's note). The opening page lists the author under the Department of Slavic Studies and the Department of History; the contents page labels it \"SLAVIC STUDIES/HISTORY\". John Bushnell and Gary Saul Morson are named on the opening page as Faculty Advisors; Bradley Zakarin is named as Seminar Instructor, Department of History. The two-column notes on printed pages 23-24 are extracted out of order and were put back in note-number order; where unnumbered \"See also\" or \"As cited in\" blocks (23.5, 23.6, 23.20) attach is inferred from column order."
+    },
+    {
+      "kind": "research",
+      "title": "A Well-Baby Checkup - A Ghanaian Perspective: Maternal Factors and Childhood Health",
+      "authors": [
+        "Sarah Mihalov"
+      ],
+      "department": "Anthropology",
+      "advisors": [
+        "Thomas McDade"
+      ],
+      "printed_pages": "26-32",
+      "spans": [
+        [
+          "25.0",
+          "25.0"
+        ],
+        [
+          "25.2",
+          "25.3"
+        ],
+        [
+          "25.1",
+          "25.1"
+        ],
+        [
+          "25.4",
+          "26.2"
+        ],
+        [
+          "27.3",
+          "27.3"
+        ],
+        [
+          "27.6",
+          "27.6"
+        ],
+        [
+          "26.3",
+          "26.3"
+        ],
+        [
+          "27.1",
+          "27.2"
+        ],
+        [
+          "27.7",
+          "28.0"
+        ],
+        [
+          "28.3",
+          "28.3"
+        ],
+        [
+          "28.1",
+          "28.1"
+        ],
+        [
+          "28.4",
+          "28.4"
+        ],
+        [
+          "28.2",
+          "28.2"
+        ],
+        [
+          "28.5",
+          "28.5"
+        ],
+        [
+          "29.5",
+          "29.5"
+        ],
+        [
+          "29.8",
+          "29.8"
+        ],
+        [
+          "29.1",
+          "29.4"
+        ],
+        [
+          "29.9",
+          "31.6"
+        ]
+      ],
+      "notes": "A shorter version of an Anthropology Senior Honors Thesis (author's note). On the opening page the author line is garbled by the drop cap (\"SDEPARTMENT / ARAH MIHALOV / OF ANTHROPOLOGY\"); the name is taken from the contents page. Thomas McDade is named on the opening page as Faculty Advisor, Department of Anthropology, and in the acknowledgements as senior thesis advisor. Table contents are not in the capture, only their titles."
+    },
+    {
+      "kind": "research",
+      "title": "An Analysis of Carbon Dioxide Emissions in Urban Passenger Transportation",
+      "authors": [
+        "Brendan Higgins"
+      ],
+      "department": "Civil & Environmental Engineering",
+      "advisors": [
+        "Joseph Schofer"
+      ],
+      "printed_pages": "33-41",
+      "spans": [
+        [
+          "32.0",
+          "32.2"
+        ],
+        [
+          "32.4",
+          "32.5"
+        ],
+        [
+          "32.3",
+          "32.3"
+        ],
+        [
+          "32.6",
+          "33.1"
+        ],
+        [
+          "33.5",
+          "33.5"
+        ],
+        [
+          "33.2",
+          "33.4"
+        ],
+        [
+          "33.7",
+          "33.7"
+        ],
+        [
+          "33.9",
+          "34.0"
+        ],
+        [
+          "34.2",
+          "34.2"
+        ],
+        [
+          "35.0",
+          "35.0"
+        ],
+        [
+          "35.2",
+          "35.2"
+        ],
+        [
+          "34.1",
+          "34.1"
+        ],
+        [
+          "34.3",
+          "34.3"
+        ],
+        [
+          "35.4",
+          "35.4"
+        ],
+        [
+          "35.3",
+          "35.3"
+        ],
+        [
+          "36.3",
+          "36.3"
+        ],
+        [
+          "36.5",
+          "36.5"
+        ],
+        [
+          "36.1",
+          "36.2"
+        ],
+        [
+          "36.6",
+          "36.7"
+        ],
+        [
+          "39.4",
+          "39.4"
+        ],
+        [
+          "37.0",
+          "37.0"
+        ],
+        [
+          "38.0",
+          "38.0"
+        ],
+        [
+          "39.1",
+          "39.3"
+        ],
+        [
+          "39.5",
+          "39.5"
+        ],
+        [
+          "39.8",
+          "40.1"
+        ],
+        [
+          "40.3",
+          "40.3"
+        ],
+        [
+          "40.5",
+          "40.5"
+        ],
+        [
+          "40.7",
+          "40.7"
+        ],
+        [
+          "40.8",
+          "40.8"
+        ],
+        [
+          "40.2",
+          "40.2"
+        ],
+        [
+          "40.4",
+          "40.4"
+        ],
+        [
+          "40.6",
+          "40.6"
+        ]
+      ],
+      "notes": "Originally a Civil Engineering 399 Independent Research Project (author's note). On the opening page the author line is garbled by the drop cap (\"BDEPARTMENT / RENDAN HIGGINS\"); the name is taken from the contents page, which labels the paper \"CIVIL ENGINEERING\". Joseph Schofer is named on the opening page as Mentor, Department of Civil & Environmental Engineering. Printed pages 38-39 hold only figures (captions only in the text); figure and table captions are placed at the nearest paragraph break. Table contents are not in the capture."
+    },
+    {
+      "kind": "letter",
+      "title": "Letter of Correction",
+      "authors": [
+        "Danwen Song",
+        "Sara Dubbury"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "42",
+      "spans": [
+        [
+          "41.0",
+          "41.7"
+        ]
+      ],
+      "notes": "Corrects the 4th edition (May 2008): graduate student mentor So-Hye Cho was omitted as a coauthor of Clair Schmerberg's article \"Hydroquinine-based Chiral Ionic Liquids\"."
+    }
+  ]
+}

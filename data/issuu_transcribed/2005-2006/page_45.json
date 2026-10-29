@@ -1,0 +1,16 @@
+{"page": 45, "blocks": [
+["RESEARCH"],
+["Scheme 1."],
+["A. Coupling"],
+["B. Oxidation"],
+["(Scheme 1A), which was oxidized to C using sodium periodate ions immobilized on an Amberlyst A-26 resin (Scheme 1B).  ¹H NMR (400 MHz, D₂O): δ 1.87 (m, 2H, furan CH₂), 1.98 (m, 2H, furan CH₂), 2.84 (dd, 2H, cyanoethyl CH₂, J₁ = 5.2 Hz, J₂ = 6.4 Hz), 3.78 (m, 2H, furan CH₂), 3.96 (m, 1H, furan CH), 4.11 (d, 2H, furan linkage CH₂, J = 5.6 Hz), 4.24 (dd, 2H, cyanoethyl CH₂, J₁ = 6.8 Hz, J₂ = 12.8 Hz), 5.19 (d, 2H, benzyl CH₂, J = 10.4 Hz), 7.47 (m, 5H, Ar-H)).  ³¹P NMR (400 MHz, D₂O): δ –1.02.  ESI-MS: Exact mass calc'd for [C₁₅H₂₀NO₅P]: 325.11.  Found: 325.2."],
+["Synthesis of Model Compound H"],
+["The diphenylacetylene alcohol E required for the synthesis of H was obtained from the base-catalyzed hydrolysis of D, which was obtained from the Sonagashira coupling of phenylacetylene with 4-iodobenzyl acetate (Scheme 2A).  The phosphoramidite intermediate F was formed through the coupling of E to cyanoethyl N,N-diisopropyl phosphoamidochloridite.  F was then coupled to tetrahydrofurfuryl alcohol to form G which was subsequently oxidized to yield the desired phosphate H using a similar procedure as described in the synthesis of C (Scheme 2B).  ¹H NMR (400 MHz, CDCl₃): δ 1.64 (m, 2H, furan CH₂), 1.95 (m, 2H, furan CH₂), 2.74 (dd, 2H, cyanoethyl CH₂, J₁ = 2.8 Hz, J₂ = 6.0"],
+["Hz), 3.80 (m, 2H, furan CH₂), 3.86 (m, 1H, furan CH₂), 4.08 (m, 2H, furan linkage CH₂), 4.22 (m, 2H, cyanoethyl CH₂), 5.14 (dd, 2H, benzyl CH₂, J₁ = 5.6 Hz, J₂ = 8.0 Hz), 7.36 (m, 5H, Ar-H), 7.54 (m, 4H, Ar-H) ³¹P NMR (400 MHz, CD₂Cl₂): δ –0.914.  ESI-MS:  Exact mass calc'd for [C₂₃H₂₄NO₅P]: 425.14.  Found: 425.78."],
+["Degradation Studies of Model compounds C and H during Basic Cleavage"],
+["To test the stability of C and H under conditions which mimic the basic cleavage deprotection step that occurs during standard DNA coupling (Scheme 3), we exposed each model compound to 1M ammonium deuteroxide in D₂O at room temperature for 2 h to yield the deprotected compounds X and Y, respectively.  The extent of deprotection was monitored by taking ¹H NMR spectra of the reaction mixture at regular time intervals of 15 min.  After 2 h, the ammonium deuteroxide was removed under vacuum, and the resulting solids were characterized using ESI-MS as well as ¹H and ³¹P NMR spectroscopy."],
+["Reaction mixture of Compound C after deprotection (after 2 h)"],
+["¹H NMR (400 MHz, D₂O): δ 1.98 (m, 2H, furan CH₂), 2.25 (m, 2H, furan CH₂), 4.08 (m, 1H, furan CH),"],
+["44"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

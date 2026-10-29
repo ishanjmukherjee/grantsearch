@@ -1,0 +1,77 @@
+{
+ "page": 59,
+ "blocks": [
+  [
+   "a heavy penalty on any deviation that causes the intensity to exceed the quantization interval. This prevents it from over-smoothing both sharp edges and low gradient regions in the image."
+  ],
+  [
+   "In order to incorporate the above modifications into our solution, we use the penalty term g(u – z) . The deviation penalty functional g(x) is chosen such that it has the following properties."
+  ],
+  [
+   "1. For each pixel in the estimate of the ideal image, there should be no deviation penalty as long as it stays within the original quantization level boundaries, i.e. the pixel belongs to level i, then qᵢ and qᵢ₊₁ are the lower and upper boundaries for that level."
+  ],
+  [
+   "2. If the estimate exceeds (qᵢ , qᵢ₊₁) boundaries, a strict penalty cost is imposed to force the intensity back within the interval, given by"
+  ],
+  [
+   "E = ∫ λR(u) + g(u) du (2)"
+  ],
+  [
+   "where"
+  ],
+  [
+   "g(u) = { 0 if qᵢ≤u≤qᵢ₊₁ ; ( u–qᵢ₊₁ )² if u>qᵢ₊₁ ; ( u–qᵢ )² if u<qᵢ"
+  ],
+  [
+   "From Figure 3 we can see that contouring in a coarsely quantized image can occur when two neighboring pixel intensities in a smooth region are assigned to different quantization levels. Because it is not possible for a uniformly smooth low-gradient region in the unquantized image u to become an edge that is larger than one quantization level, we can conclude that deviations >> 1 quantization interval were caused by features in the original image u. Based on this approach, our method ignores changes in intensity that exceed one quantization step in order to preserve the edge. However, since our smoothing is already limited by our deviation penalty, the addition of an edge preserving smoothing term provides only some limited visible improvements."
+  ],
+  [
+   "In addition to uniform quantization where each quantization level is the same size, we also need to consider non-uniform quantization where such levels may not be equal. One common source of non-uniform quantization is gamma correction, where more quantization levels are dedicated"
+  ],
+  [
+   "to the lower (darker) intensities and fewer to the higher (brighter) ones. Our method handles non-uniform quantization by varying values for qᵢ to match the quantization scheme."
+  ],
+  [
+   "IV. IMPLEMENTATION"
+  ],
+  [
+   "To minimize the cost functional E from Equation 2, our method uses an iterative gradient descent technique. We use the discrete membrane model in Equation 3 proposed by Blake and Zisserman⁶ combined with the deviation penalty functional g(u) defined in the previous section. In order to improve the convergence rate our implementation performs Successive Over Relaxation, overcorrecting by a factor ω every iteration. Based on our experiments, the method was able to converge within 20 iterations for a 512×512 color image."
+  ],
+  [
+   "E = λ{(u_{x+1,y} – u_{x,y})² + (u_{x,y+1} – u_{x,y})²} + g(u_{x,y}) (3)"
+  ],
+  [
+   "For each pixel intensity in the current iteration u^n_{x,y}, we use the gradient of the cost E in Equation 3 to determine the intensity in the next iteration u^(n+1)_{x,y}."
+  ],
+  [
+   "u^(n+1)_{x,y} = u^n_{x,y} – ω dE/du^n_{x,y} (4)"
+  ],
+  [
+   "Combining Equations 3 and 4, we arrive at the following implementation for the gradient descent algorithm."
+  ],
+  [
+   "For each pixel u^n_{x,y}, if qᵢ≤u^n_{x,y}≤qᵢ₊₁,"
+  ],
+  [
+   "u^(n+1)_{x,y} = u^n_{x,y} – ω{ 4u^n_{x,y} – (u^n_{x-1,y} + u^n_{x+1,y} + u^n_{x,y-1} + u^n_{x,y+1} )} (5)"
+  ],
+  [
+   "Otherwise, if u^n_{x,y}<qᵢ , qₖ = qᵢ , and if u^n_{x,y}>qᵢ₊₁ , qₖ = qᵢ₊₁"
+  ],
+  [
+   "u^(n+1)_{x,y} = u^n_{x,y} – ω{ (1+4λ)u^n_{x,y} – qₖ – λ(u^n_{x-1,y} + u^n_{x+1,y} + u^n_{x,y-1} + u^n_{x,y+1} )} (6)"
+  ],
+  [
+   "V. RESULTS"
+  ],
+  [
+   "The simulation results from the proposed method show a significant improvement in both contour removal and edge preservation in the restored images. Figure 4 provides a scan-line comparison between our method (top), edge preserving"
+  ],
+  [
+   "58"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ]
+ ]
+}

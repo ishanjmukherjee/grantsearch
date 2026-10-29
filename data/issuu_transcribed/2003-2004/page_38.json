@@ -1,0 +1,15 @@
+{"page": 38, "blocks": [
+["NURJ"],
+["39"],
+["Fig. 3 : The standard LVDT winding configuration incorporates a center primary winding flanked by two individual secondary windings (A). A special winding configuration positions the primary winding directly under the two secondary windings (B).⁵"],
+["Figure 3 shows the basic winding configuration of a 3- and 4- coil winding type. When the armature is displaced from the null position (output voltage approaches zero), an electromagnetic imbalance occurs. This imbalance generates a differential AC output voltage across the secondary coils, which is linearly proportional to the direction and magnitude of the displacement."],
+["Fig. 4 : With the core positioned at null, the output signal approaches zero. Displacements moving the core to the left result in a negative opposite phase signal output. Displacements moving the core to the right result in a positive in-phase signal output. Note: P is primary and S is secondary.⁶"],
+["As shown in Figure 4, when the magnetic core is moved from the null position, the induced voltage in the secondary coil, toward the core is moved, increases while the induced voltage in the opposite secondary coil decreases. LVDT provides good sensitivity of micro-order linear movement over several millimeters in the fields of instrumentation and measurement.⁷"],
+["III. Prior Research Accomplishments"],
+["To address the need of an affordable and accurate draw-in sensor, we experimented with a prototype printed on a conventional printed circuit board, and based on electromagnetic detection. The sensor consists of an inexpensive and possibly disposable sensor element and an electronic circuit remote from it as shown in Figure 5."],
+["Fig. 5 Preliminary Sensor Prototype Setup"],
+["The circuit reads data from the sensor and gives the data to a computer, which can control aspects of the forming operation. Note that the sensor element is inherently rugged and lends itself to embedding in the mold surface. It consists of only conductive traces on a substrate. The sensor has a novel geometric layout: two long rectangular coils interspersed or otherwise near each other with mutual inductance. Figure 6 shows a sketch of a typical pair of coils."],
+["Fig. 6 A schematic of the sensor element"],
+["This inductance causes the excitation current flowing in one coil induces a signal (voltage or current) in the other coil. The presence of metal (ferrous or non-ferrous) near the coils affects the magnetic field lines, changing the degree of mutual inductance (magnetic coupling) from one coil to the other. Thus the response signal reflects how much of the coil is covered up. Figure 7 shows a schematic of the edge of a plate being formed (rectangular one), which retreats to the right as it slips through the binders."],
+["Fig. 7 Preliminary result – Theory"]
+]}

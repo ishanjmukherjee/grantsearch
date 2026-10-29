@@ -1,0 +1,28 @@
+{
+ "page": 62,
+ "blocks": [
+  [
+   "Evaluating Sam: Iterative Design of a Story Listening System and Embodied Conversational Agent"
+  ],
+  [
+   "Candice W. Tse",
+   "DEPARTMENT OF COMPUTER SCIENCE, DEPARTMENT OF COMMUNICATION STUDIES"
+  ],
+  [
+   "Justine Cassell",
+   "FACULTY MENTOR, DEPARTMENT OF COMPUTER SCIENCE, DEPARTMENT OF COMMUNICATION STUDIES, NORTHWESTERN UNIVERSITY"
+  ],
+  [
+   "ABSTRACT"
+  ],
+  [
+   "Sam is an Embodied Conversation Agent and Story Listening System designed to improve children’s literacy by engaging them in storytelling and collaborative play. This research aims to develop techniques to evaluate the new technology of an ECA combined with a SLS. The results of this study found that evaluating Sam requires an understanding of children’s learning theory, elements of ECA design, and the coding of children’s narrative discourse. Each of these three techniques are explained in detail and applied to the Sam project. This paper discusses the concepts of collaboration and scaffolding in children’s narrative, describes the ideal of beauty as a crucial measure of ECA design success, and reviews the coding scheme devised to assess our results. Furthermore, as part of a continual process of iterative design and evaluation, future implementation ideas for Sam are presented."
+  ],
+  [
+   "I. INTRODUCTION"
+  ],
+  [
+   "With stories about vampires, princesses, puppies and squirrels to keep us company, evaluating Sam, an Embodied Conversational Agent (ECA) and Story Listening Systems (SLS), is never dull. Essentially, Sam represents an effort to allow children to create their own meaningful content and improve literacy through collaborative play. Accomplishing this task requires an understanding of SLS concepts such as emergent literacy, and scaffolding and children’s behaviors, and uses an interdisciplinary approach incorporating Computer Science, Psychology, Cognitive Science and Communication Studies. Sam is a combination of two technologies: Embodied Conversational Agents (ECAs) and Story Listening Systems (SLS). ECAs are visual com-"
+  ]
+ ]
+}

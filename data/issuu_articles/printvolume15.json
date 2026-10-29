@@ -1,0 +1,246 @@
+{
+  "slug": "printvolume15",
+  "running_heads": ["1/11/21 10:16 AM", "FEATURE"],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "MASTHEAD",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "1",
+      "spans": [["2.0", "2.14"]],
+      "notes": "Sections 0-1 (cover pages) have no text in the capture. Masthead lists Editors-in-Chief Andrew Cao and Emily Suen and Faculty Advisor Allen Taflove."
+    },
+    {
+      "kind": "front matter",
+      "title": "TABLE OF CONTENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2-3",
+      "spans": [["3.0", "4.38"]],
+      "notes": "Page numbers, department labels and titles are extracted as separate blocks, so the contents entries are not in reading order."
+    },
+    {
+      "kind": "letter",
+      "title": "LETTER FROM THE ADVISOR",
+      "authors": ["Allen Taflove"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [["5.0", "5.5"]],
+      "notes": "Letter from the faculty advisor, Professor of Electrical and Computer Engineering."
+    },
+    {
+      "kind": "letter",
+      "title": "LETTER FROM THE EDITORS",
+      "authors": ["Andrew Cao", "Emily Suen"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "5",
+      "spans": [["6.0", "6.3"]],
+      "notes": "Letter from the Editors-in-Chief."
+    },
+    {
+      "kind": "research",
+      "title": "Assessing Racial Discrimination of Quarterbacks in the NFL Draft",
+      "authors": ["Sam Allnutt"],
+      "department": "Statistics",
+      "advisors": [],
+      "printed_pages": "6-16",
+      "spans": [["7.0", "17.6"]],
+      "notes": "The acknowledgements (block 17.1) thank Dr. Thomas Severini for serving as the author's advisor and Dr. Hongmei Jiang as a reviewer; the advisor's name is split across interleaved columns in the capture, so it is not listed under advisors. Column blocks are often out of reading order (e.g. sections 7-9, 12) and the equations in sections 10-12 are garbled. The contributors page gives the author as Class of 2019, statistics major with an economics minor."
+    },
+    {
+      "kind": "feature",
+      "title": "Lamar Jackson and Patrick Mahomes: Portending a Different Future for Black Quarterbacks?",
+      "authors": ["Shreyas Iyer"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "17-20",
+      "spans": [["18.0", "21.3"]],
+      "notes": "Essay responding to Sam Allnutt's paper on quarterbacks in the NFL Draft."
+    },
+    {
+      "kind": "research",
+      "title": "Radical Redress: Black Birth Workers Respond to Maternal Mortality",
+      "authors": ["Onyinyechi Jessica Ogwumike"],
+      "department": "African American Studies",
+      "advisors": [],
+      "printed_pages": "21-32",
+      "spans": [["22.0", "33.5"]],
+      "notes": "Includes abstract and bibliography. Pull quotes and footnotes are separate blocks, and column blocks are sometimes out of reading order. The contributors page says the author graduated (Class of 2019) with departmental honors in African-American studies."
+    },
+    {
+      "kind": "feature",
+      "title": "Degrees Don't Make Them Distant: Researching with Graduate Students",
+      "authors": ["Andrew Laeuger"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "33-35",
+      "spans": [["34.0", "36.3"]],
+      "notes": "Interview with Daniel Grass, a junior in the Integrated Sciences Program, about researching alongside graduate students."
+    },
+    {
+      "kind": "research",
+      "title": "#MeToo In The European Parliament: A Case Study In Feminist Institutionalism",
+      "authors": ["Nicole E. Fallert"],
+      "department": "International Studies",
+      "advisors": [],
+      "printed_pages": "36-53",
+      "spans": [["37.0", "54.4"]],
+      "notes": "Includes bibliography. Timeline figure (section 39) and figure labels are extracted as separate short blocks; column blocks are often out of reading order. The contributors page gives the author as Class of 2019, double major in journalism and international studies."
+    },
+    {
+      "kind": "feature",
+      "title": "Interview with Kimani Isaac",
+      "authors": ["Caroline Hsu"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "54-55",
+      "spans": [["55.0", "56.2"]],
+      "notes": "Interview with a Learning and Organizational Change student about the Office of Undergraduate Research."
+    },
+    {
+      "kind": "research",
+      "title": "Type 2 Diabetes Care and Management: A Comparison of German and American Approaches",
+      "authors": ["Sarah Dinegar"],
+      "department": "German",
+      "advisors": [],
+      "printed_pages": "56-73",
+      "spans": [["57.0", "74.5"]],
+      "notes": "Includes abstract and bibliography. Column blocks are sometimes out of reading order. The contributors page says the author (Class of 2019) studied biological sciences and German."
+    },
+    {
+      "kind": "feature",
+      "title": "A Day in the Life of a Summer Student Researcher",
+      "authors": ["Niva Razin"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "74-75",
+      "spans": [["75.0", "76.7"]],
+      "notes": "Day schedule of Alexander Ross, a biomedical engineering student, in the BIGMed Lab; credited as \"Interview conducted by Niva Razin\". The title's large lettering is split across blocks 75.0 and 75.2, and the schedule blocks are partly out of order (block 76.4 holds the 7:00 p.m. entry)."
+    },
+    {
+      "kind": "research",
+      "title": "\"A Man With Many Faces, All Turned in the Same Direction\": Julius Lester on AntiSemitism, Anti-Blackness, and Black-Jewish Coalitions",
+      "authors": ["Jessica Schwalb"],
+      "department": "History",
+      "advisors": [],
+      "printed_pages": "76-81",
+      "spans": [["77.0", "82.5"]],
+      "notes": "Includes bibliography. The title reads \"AntiSemitism\" in the capture; the contributors page prints \"Anti-Semitism\". The contributors page says the author (Class of 2019) studied history and Spanish."
+    },
+    {
+      "kind": "feature",
+      "title": "Tracking Northwestern's Research Response to COVID-19",
+      "authors": ["Grace Lee", "Prerita Pandya"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "82-85",
+      "spans": [["83.0", "86.7"]],
+      "notes": "Timeline of March-April 2020 research events; dates and event descriptions are extracted as separate blocks and are not reliably paired in reading order."
+    },
+    {
+      "kind": "research",
+      "title": "Colonial Distortions",
+      "authors": ["Hassan Sayed"],
+      "department": "Mathematical Methods in the Social Sciences",
+      "advisors": [],
+      "printed_pages": "86-97",
+      "spans": [["87.0", "98.12"]],
+      "notes": "The paper's header lists both the Department of Mathematical Methods in the Social Sciences and the Department of Economics. The contributors page gives the full title as \"Colonial Distortions: A Model of Extraction and Social Fabric\". Mathematical notation in sections 89-96 is garbled in the capture (symbols lost, equation fragments split into separate blocks)."
+    },
+    {
+      "kind": "feature",
+      "title": "\"Keep going in the face of inevitable setbacks\": Research advice from faculty and students",
+      "authors": ["Niva Razin"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "98-101",
+      "spans": [["99.0", "102.6"]],
+      "notes": "Title as given in the table of contents; the opening page prints \"KEEP GOING IN THE FACE OF INEVITABLE SETBACKS\". Quotes and their speakers' names are separate blocks and not always adjacent."
+    },
+    {
+      "kind": "research",
+      "title": "Quyud: Educational Constraints in Palestine",
+      "authors": ["Noor Mazen"],
+      "department": "Political Science",
+      "advisors": ["Jocelyn Sage Mitchell"],
+      "printed_pages": "102-116",
+      "spans": [["103.0", "117.5"]],
+      "notes": "Northwestern University in Qatar. Advisor from the paper's acknowledgement footnote (\"Professor Jocelyn Sage Mitchell, my research supervisor\"); the contributors page also calls her the author's supervisor. Includes bibliography. Column blocks are often out of reading order, and block 103.6 interleaves two columns line by line."
+    },
+    {
+      "kind": "research",
+      "title": "The Subsumptivist Generalist Position in Ethical AI Research and Its Motivation",
+      "authors": ["Jun Kyung You"],
+      "department": "Philosophy",
+      "advisors": [],
+      "printed_pages": "117-125",
+      "spans": [["118.0", "126.5"]],
+      "notes": "The table of contents gives the title as \"The Subsumptivist Generalist Position in Ethical A.I. Research and its Motivation\"; the contributors page describes it as drawn from an unabridged thesis. Includes bibliography."
+    },
+    {
+      "kind": "feature",
+      "title": "Media Studies Goes Transnational with professor Anthony Fung",
+      "authors": ["Sally Hong"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "126-128",
+      "spans": [["127.0", "129.3"]],
+      "notes": "Profile of Anthony Fung, visiting professor at the Buffett Institute for Global Affairs in Winter 2020."
+    },
+    {
+      "kind": "research",
+      "title": "Evaluating Interactive Social Justice Education: The Relationship between Responsive Fiction and Social Empathy",
+      "authors": ["Samantha Oberman"],
+      "department": "Human Development and Psychological Services",
+      "advisors": [],
+      "printed_pages": "129-144",
+      "spans": [["130.0", "145.5"]],
+      "notes": "Includes bibliography. The tables, figures and Appendices A-D (printed pages 140-142) have only their headings in the capture. The contributors page names the author as Samantha Franzblau Oberman (Class of 2019)."
+    },
+    {
+      "kind": "feature",
+      "title": "Meet the Office of Undergraduate Research",
+      "authors": ["Joy Zheng"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "145-150",
+      "spans": [["146.0", "151.3"]],
+      "notes": "Profiles of OUR staff: Megan Novak Wood, Bryce O'Tierney, Jennah Thompson-Vasquez, Evangeline Su and Peter Civetta."
+    },
+    {
+      "kind": "research",
+      "title": "Missing the Point: China, Chineseness, and Rhinoceros Endangerment",
+      "authors": ["Isabelle Zinghini"],
+      "department": "Asian Languages and Cultures",
+      "advisors": [],
+      "printed_pages": "151-158",
+      "spans": [["152.0", "159.7"]],
+      "notes": "Excerpt; footnote 7 refers to the unabridged version of the thesis. Includes bibliography. The contributors page says the author (Class of 2019) double majored in Asian languages and cultures and physics."
+    },
+    {
+      "kind": "feature",
+      "title": "2019 Research Award Winners",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "159-163",
+      "spans": [["160.0", "164.4"]],
+      "notes": "Title from the table of contents. Profiles of the 2019 Gotaas Award winner (Shristi Dugar) and Sigma Xi Best Expo Oral and Poster Presentation Award winners (Hollyn Cetrone, Talia Waxman). No byline."
+    },
+    {
+      "kind": "back matter",
+      "title": "ABOUT THE CONTRIBUTORS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "164-176",
+      "spans": [["165.0", "177.5"]],
+      "notes": "Biographies and interviews of the ten thesis contributors (the table of contents calls it \"Biographies and Interviews from NURJ Thesis Contributors\"). Interview question headings are sometimes separated from their answers. Sections 178-179 (back cover pages) have no text."
+    }
+  ]
+}

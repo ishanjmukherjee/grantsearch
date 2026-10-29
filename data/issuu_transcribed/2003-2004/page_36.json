@@ -1,0 +1,23 @@
+{"page": 36, "blocks": [
+["NURJ"],
+["37"],
+["the 16F873 microcontroller’s internal 10-bit ADC. In addition, there are 3 I/O ports, which are used to handle user input, drive the digital potentiometer, and drive the LCD module."],
+["Fig. 6 Internal layout of device showing the power supply, the 16F873 microcontroller, the three-stage amplifying circuit, and the LCD display module"],
+["Fig. 7 Three-stage Op-Amp gain circuit. Stage 1 acts as a buffer amplifier. Stages 2 and 3 are variable gain stages"],
+["The user interface for this device consists of a select button, a set button, and an LCD module. The select and set buttons are used to choose skin type and sun protection factor (SPF) from a pre-set list and allow resetting of the device. The LCD module simultaneously displays the instantaneous UV exposure, the accumulated UV dosage, the total UV exposure time, the selected skin type, and the selected SPF. The device is designed to use the selected skin type and SPF to calculate the user’s personal UV exposure. This provides the user with continuous feedback of his/her UV exposure. It also alerts the user when the accumulated UV exposure begins to reach potentially harmful levels."],
+["V. Discussion"],
+["While our prototype GaN UV detector functions according to our initial specifications, it could still benefit from further improvement. Specifically, by incorporating aluminum into the GaN photodetector structure, it is theoretically possible to grow a UV photodetector which has a much higher correlation with the erythemal weighting function. In addition, the options for skin type and SPF in our prototype are extremely limited; the skin’s sensitivity to UV radiation needs to be more"],
+["accurately modeled to take into consideration variances based on a wider number of skin types and SPF’s. Finally, the device must have reduced size, weight, and power consumption to be feasible for commercial use. At present, the whole unit measures ~15 x 10 x 3 cm; ideally the device could be made small enough to fit in a watch or cellphone."],
+["VI. Summary and Conclusion"],
+["Steadily increasing rates of skin cancer due to prolonged exposure to solar UV radiation indicate the need for personal UV exposure monitoring. In this paper, we have reported the development of a compact prototype GaN based p-i-n UV photodetector unit which provides a convenient way to monitor personal UV exposure. Our research has covered all aspects of this device from the fabrication of the semiconductor photodetector to the accompanying electronics and associated software. It appears possible that our technology could be commercialized, thereby providing a means to reliably prevent UV overexposure and consequently to reduce the incidence of skin cancer among the general population."],
+["References"],
+["¹L.A.Johnson. “Skin cancer rates increase despite repeated warnings,” C-Health 2001; http://www.canoe.ca/Health0106/06_cancer-ap.html."],
+["²Mayo Clinic Staff. “Skin Cancer,” Mayo Foundation for Medical Education and Research 2004; http://www.mayoclinic.com/invoke.cfm?id=DS00190."],
+["³R.L. McKenzie, J.A. Renwick. “UV Index for the Public,” National Institute of Water and Atmospheric Research; http://www.niwa.co.nz/rc/atmos/uvconference/McKenzie2.pdf"],
+["⁴P.Kung, A Yasan, R. McClintock, S.R. Darvish, K. Mi, M. Razeghi. “Future of AlxGa1-xN Materials and Device Technology for Ultraviolet Photodetectors,” Proc. SPIE 2002; 199:4650."],
+["⁵M. Razeghi. “Short Wavelength Solar-Blind Detectors—Status, Prospects, and Markets,” Proc. Of IEEE 2002; 90:1006."],
+["⁶D. Walker, A. Saxler, P. Kung, X. Zhang, M. Hamilton, J. Diaz, and M. Razeghi et al. “Visible Blind GaN p-i-n Photodiodes,” Appl. Phys. Lett. 1998; 72:3303-3305."],
+["⁷P. Kung, X. Zhang, D. Walker, A. Saxler, and M. Razeghi “GaN p-i-n Photodiodes with High Visible-to-Ultraviolet Rejection Ratio,” SPIE Proceedings 1998; 214:3287."],
+["⁸SVT Associates, Inc. “SVTA UVB Photodetector,” Technical Datasheet; http://www.svta.com/products/uv/UV_B.PDF."],
+["⁹“UV Radiation,” National Institute of Water and Atmospheric Research; http://katipo.niwa.cri.nz/lauder/uvinfo.ht-m."]
+]}

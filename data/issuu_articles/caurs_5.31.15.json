@@ -1,0 +1,276 @@
+{
+  "slug": "caurs_5.31.15",
+  "running_heads": [],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Chicago Area Undergraduate Research Symposium",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "1",
+      "spans": [["0.0", "0.2"]],
+      "notes": "Cover: Northwestern Undergraduate Research Journal Special Edition Issue, Volume 1, 2015. The volume has no contents page."
+    },
+    {
+      "kind": "letter",
+      "title": "About CAURS",
+      "authors": ["Dana Dahhan", "Tamara Gedankien", "Saad Khan"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [["1.0", "1.3"]],
+      "notes": "Letter to the reader from the CAURS directors, signed by Dana Dahhan; Tamara Gedankien and Saad Khan are also named as Directors on the page. Describes the April 11, 2015 symposium and the awarded students whose abstracts follow."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Founder",
+      "authors": ["Chandler D. Robinson"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [["2.0", "2.2"]],
+      "notes": "Signed Chandler D. Robinson, MD MBA MSc, Founder, Chicago Area Undergraduate Research Symposium."
+    },
+    {
+      "kind": "research",
+      "title": "Tackling Childhood Malnutrition: An Investigation of Innovative Grassroots Approaches Around the World",
+      "authors": ["Elizabeth Larsen"],
+      "department": "Sociology and Anthropology",
+      "advisors": ["William Leonard"],
+      "printed_pages": "4",
+      "spans": [["3.0", "3.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: Northwestern University. Featured oral presenter; block 3.0 is the 'ORAL PRESENTERS' section label that opens printed pages 4-7. Advisor printed as 'Principal Investigator'."
+    },
+    {
+      "kind": "research",
+      "title": "A Theoretical Analysis of the Universal Design model as Applied to Queer Healthcare Disparities",
+      "authors": ["Stephanie Bi"],
+      "department": "Social Justice",
+      "advisors": [],
+      "printed_pages": "5",
+      "spans": [["4.0", "4.1"]],
+      "notes": "Abstract only, with a short author bio. Institution: University of Chicago. Featured oral presenter. No principal investigator is named."
+    },
+    {
+      "kind": "research",
+      "title": "Characterization of the First Inducible Malaria Promoter Using Transgenic Parasites",
+      "authors": ["Sara Hammer"],
+      "department": "Biological Sciences",
+      "advisors": ["Dr. Stefan Kanzok"],
+      "printed_pages": "5",
+      "spans": [["4.2", "4.6"]],
+      "notes": "Abstract only, with a short author bio. Institution: Loyola University Chicago. Featured oral presenter. The Principal Investigator line reads 'Dr. Stefan Kanzoka' (the trailing 'a' is probably a stray superscript); the co-author line spells 'Dr. Stefan Kanzok'. Co-authors as printed: Cecile Swift, Ahad Bagasrawala, Miho Usui, Dr. Stefan Kanzok."
+    },
+    {
+      "kind": "research",
+      "title": "Identifying Biomolecular Markers of Impulsivity and Alcohol-Induced Changes in the Prefrontal Cortex",
+      "authors": ["Claire Short"],
+      "department": "Biological Sciences",
+      "advisors": ["Jamie Roitman"],
+      "printed_pages": "6",
+      "spans": [["5.0", "5.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: University of Illinois at Chicago. Featured oral presenter. Advisor printed as 'Principal Investigator'. Co-authors as printed: Matthew McMurray, Jamie Roitman."
+    },
+    {
+      "kind": "research",
+      "title": "Inhibition of the Hedgehog Pathway With a Gli-Targeted Transition Metal Complex",
+      "authors": ["George Baker", "Joseph Coomes"],
+      "department": "Biological Sciences",
+      "advisors": ["Thomas J. Meade"],
+      "printed_pages": "7",
+      "spans": [["6.0", "6.4"]],
+      "notes": "Abstract only, with short bios of both authors. Institution: Northwestern University. Featured oral presenters. Advisor printed as 'Principal Investigator'. Co-authors as printed: Elizabeth A. Bajema, Thomas J. Meade."
+    },
+    {
+      "kind": "research",
+      "title": "Inside the Monster: Traces of Singular Moduli and Moonshine for the Thompson Group",
+      "authors": ["Brandon Rayhaun"],
+      "department": "Mathematics",
+      "advisors": ["Jeffrey A. Harvey"],
+      "printed_pages": "8-9",
+      "spans": [["7.0", "8.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: University of Chicago. Best Oral Presentation; printed page 8 (block 7.0) is the award title page naming the author and institution, and the abstract on page 9 does not repeat the author's name. Advisor printed as 'Principal Investigator'."
+    },
+    {
+      "kind": "research",
+      "title": "Memory Routines for the Transformation of Visuospatial Representations",
+      "authors": ["Benjamin Bernstein"],
+      "department": "Social Sciences",
+      "advisors": ["Steven Franconeri, PhD"],
+      "printed_pages": "10-11",
+      "spans": [["9.0", "10.2"]],
+      "notes": "Abstract only, with a short author bio. Institution: Northwestern University. Best Poster Presentation and Best in Institution for Northwestern University; printed page 10 (block 9.0) is the award title page naming the author, and the abstract page does not repeat the author's name. Principal Investigator printed as 'Steven Franconeri, PhD, Northwestern University'. Co-authors as printed: Brandon Liverence, Steven Franconeri. The bio states the work was his honors thesis with postdoctoral fellow Brandon Liverence in Steven Franconeri's Visual Cognition Lab. In block 10.1 the bio's lines are interleaved with the abstract's lines."
+    },
+    {
+      "kind": "research",
+      "title": "Side Chain Effect on IR Spectra of Heterogeneous Peptide Sequence: Theoretical Investigations of a Series of Tripeptides (A-X-A)",
+      "authors": ["Logan Cole"],
+      "department": "Chemistry",
+      "advisors": ["Ahmed Lakhani, Ph.D."],
+      "printed_pages": "12",
+      "spans": [["11.0", "11.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: Calumet College of St. Joseph; Best in Institution. Block 11.0 is the 'BEST IN INSTITUTION' section label that opens printed pages 12-16. Principal Investigator printed as 'Ahmed Lakhani, Ph.D., Calumet College of St. Joseph'. In block 11.2 the bio's lines are interleaved with the end of the abstract, and Greek letters were lost in the extraction (e.g. '-helical' for alpha-helical)."
+    },
+    {
+      "kind": "research",
+      "title": "\"Wait, What Do You Mean \"He?\": Perceptions of Male Victims of Intimate Partner Violence",
+      "authors": ["Jack O'Brien", "Yvita Bustos"],
+      "department": "Social Sciences",
+      "advisors": ["Dr. Theresa Luhrs"],
+      "printed_pages": "13",
+      "spans": [["12.0", "12.2"]],
+      "notes": "Abstract only, with a short bio of Jack O'Brien only. Institution: DePaul University; Best in Institution. Advisor printed as 'Principal Investigator'. In block 12.1 the bio's lines are interleaved with the abstract's lines."
+    },
+    {
+      "kind": "research",
+      "title": "Measurement of Elastin Expression After In Vitro Application of Potassium Channel Openers in RFL6 Cells",
+      "authors": ["Jaya Parulekar"],
+      "department": "Tech",
+      "advisors": ["Jessica Wagenseil, Ph.D."],
+      "printed_pages": "14",
+      "spans": [["13.0", "13.2"]],
+      "notes": "Abstract only, with a short author bio. Institution: Illinois Institute of Technology; Best in Institution. Principal Investigator printed as 'Jessica Wagenseil, Ph.D., Washington University in St. Louis'. Co-authors as printed: Catalin Staiculescu, Jessica Wagenseil. In block 13.1 the bio's lines are interleaved with the end of the abstract; the bio ends in block 13.2."
+    },
+    {
+      "kind": "research",
+      "title": "The Role of Chemokine Receptor CXCR7 in the Neuronal Development and Regeneration in the Olfactory System",
+      "authors": ["Kushal Bakshi"],
+      "department": "Biological Sciences",
+      "advisors": [],
+      "printed_pages": "14",
+      "spans": [["13.3", "13.4"]],
+      "notes": "Abstract only; no bio. Institution: Loyola University Chicago; Best in Institution. No principal investigator is named."
+    },
+    {
+      "kind": "research",
+      "title": "Chronic Caffeine Treatment and the D2-Mediated Aberrant Motor Learning Hypothesis",
+      "authors": ["Anne Krok"],
+      "department": "Biological Sciences",
+      "advisors": ["Xiaoxi Zhuang, Ph.D."],
+      "printed_pages": "15",
+      "spans": [["14.0", "14.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: University of Chicago; Best in Institution. Principal Investigator printed as 'Xiaoxi Zhuang, Ph.D., University of Chicago'. Co-authors as printed: Jessica Koranda, Xiaoxi Zhuang."
+    },
+    {
+      "kind": "research",
+      "title": "The Identification of MG-160 as a Novel Target of Polysialylation",
+      "authors": ["Navika Shukla"],
+      "department": "Biological Sciences",
+      "advisors": ["Karen Colley, Ph.D."],
+      "printed_pages": "16",
+      "spans": [["15.0", "15.2"]],
+      "notes": "Abstract only, with a short author bio. Institution: The University of Illinois at Chicago; Best in Institution. Principal Investigator printed as 'Karen Colley, Ph.D., University of Illinois at Chicago'. Co-authors as printed: Helena Palka Hamblin, Ph.D., Karen Colley, Ph.D. In block 15.1 the bio's lines are interleaved with the abstract's lines."
+    },
+    {
+      "kind": "research",
+      "title": "The Role of Rab35 on the Localization and Trafficking of BACE1",
+      "authors": ["Elizabeth Woo"],
+      "department": "Biological Sciences",
+      "advisors": ["Gopal Thinakaran, Ph.D."],
+      "printed_pages": "17",
+      "spans": [["16.0", "16.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: University of Chicago; Honorable Mention in Discipline. Block 16.0 is the 'HONORABLE MENTIONS IN DISCIPLINE' section label that opens printed pages 17-23. Principal Investigator printed as 'Gopal Thinakaran, Ph.D., University of Chicago'. Co-authors as printed: Margaret Kalish, Gopal Thinakaran, Ph.D. In block 16.2 the bio's lines are interleaved with the abstract's lines."
+    },
+    {
+      "kind": "research",
+      "title": "Elucidating the Transformation Mechanism Behind Citrate Capped Ag/Au Alloy Nanoparticles by Galvanic Replacement",
+      "authors": ["Charles Schurman"],
+      "department": "Biological Sciences",
+      "advisors": ["Chad A. Mirkin, Ph.D."],
+      "printed_pages": "18",
+      "spans": [["17.0", "17.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: Northwestern University; Honorable Mention in Discipline. Principal Investigator printed as 'Chad A. Mirkin, Ph.D., Northwestern University'. Co-authors as printed: Liane Moreau, Chad A. Mirkin, Ph.D."
+    },
+    {
+      "kind": "research",
+      "title": "A TBX5 Driven Network Suppresses Atrial Fibrillation in the Adult Heart",
+      "authors": ["Jenna Bekeny"],
+      "department": "Biological Sciences",
+      "advisors": [],
+      "printed_pages": "19",
+      "spans": [["18.0", "18.0"]],
+      "notes": "Abstract only; no bio. Institution: University of Chicago; Honorable Mention in Discipline. No principal investigator is named."
+    },
+    {
+      "kind": "research",
+      "title": "Structure and Metal-Binding of a Unique PcoC-like Copper Chaperone",
+      "authors": ["Joseph Hurley"],
+      "department": "Biological Sciences",
+      "advisors": ["Amy C. Rosenzweig, Ph.D."],
+      "printed_pages": "19",
+      "spans": [["18.1", "18.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: Northwestern University; Honorable Mention in Discipline. Advisor printed as 'Principal Investigator'. Co-authors as printed: Kenney, G.E., Lawton, T.J., Rosenzweig, A.C. In block 18.2 the bio's lines are interleaved with the end of the abstract."
+    },
+    {
+      "kind": "research",
+      "title": "Developing Therapeutics and Identifying Targets for the Treatment of Amyotrophic Lateral Sclerosis",
+      "authors": ["Kevin Zhao"],
+      "department": "Biological Sciences",
+      "advisors": ["Richard B. Silverman, Ph.D."],
+      "printed_pages": "20",
+      "spans": [["19.0", "19.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: Northwestern University; Honorable Mention in Discipline. Principal Investigator printed as 'Richard B. Silverman, Ph.D., Northwestern University'."
+    },
+    {
+      "kind": "research",
+      "title": "Development of Planktonic and Biofilm Bacterial Communities in a Laboratory Scale Model Drinking Water Distribution System",
+      "authors": ["Nicole Minalt"],
+      "department": "Physical & Geophysical Sciences",
+      "advisors": [],
+      "printed_pages": "21",
+      "spans": [["20.0", "20.0"]],
+      "notes": "Abstract only; no bio. Institution: Loyola University Chicago; Honorable Mention in Discipline. No principal investigator is named."
+    },
+    {
+      "kind": "research",
+      "title": "Between Man and Beast: Human-Animal Metamorphosis as a Reflection of Morality in the Lais of Marie de France",
+      "authors": ["Kirsten Lopez"],
+      "department": "Humanities & Fine Arts",
+      "advisors": [],
+      "printed_pages": "21",
+      "spans": [["20.1", "20.2"]],
+      "notes": "Abstract only, with a short author bio. Institution: DePaul University; Honorable Mention in Discipline. No principal investigator is named. The bio says she will continue this research in her senior thesis. In block 20.1 the bio's lines are interleaved with the abstract's lines."
+    },
+    {
+      "kind": "research",
+      "title": "Decrypting the Tau Phosphorylation \"Code\" of Alzheimer's Disease Through Production of Site-Specifically Phosphorylated Tau",
+      "authors": ["Matt Amrofell"],
+      "department": "Tech",
+      "advisors": ["Michael Jewett, Ph.D."],
+      "printed_pages": "22",
+      "spans": [["21.0", "21.2"]],
+      "notes": "Abstract only, with a short author bio. Institution: Northwestern University; Honorable Mention in Discipline. Principal Investigator printed as 'Michael Jewett, Ph.D., Northwestern University'. Co-authors as printed: Javin Oza, Michael Jewett, Ph.D. In block 21.1 the bio's lines are interleaved with the abstract's lines."
+    },
+    {
+      "kind": "research",
+      "title": "Multilingual Exposure Impacts Early Sociolinguistic Judgments",
+      "authors": ["Danielle Labotka"],
+      "department": "Social Sciences",
+      "advisors": [],
+      "printed_pages": "23",
+      "spans": [["22.0", "22.0"]],
+      "notes": "Abstract only; no bio. Institution: University of Chicago; Honorable Mention in Discipline. No principal investigator is named."
+    },
+    {
+      "kind": "research",
+      "title": "Motivational Effects on Implicit Learning",
+      "authors": ["Danbee Chon"],
+      "department": "Social Sciences",
+      "advisors": ["Paul Reber, Ph.D."],
+      "printed_pages": "23",
+      "spans": [["22.1", "22.3"]],
+      "notes": "Abstract only, with a short author bio. Institution: Northwestern University; Honorable Mention in Discipline. Principal Investigator printed as 'Paul Reber, Ph.D., Northwestern University'. Co-authors as printed: Kelsey Thompson, Susie Turkson, Paul Reber, Ph.D. In block 22.2 the bio's lines are interleaved with the end of the abstract."
+    },
+    {
+      "kind": "back matter",
+      "title": "NURJ Office",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "24",
+      "spans": [["23.0", "23.2"]],
+      "notes": "Back cover: NURJ office address, web and social media contacts, and mission statement."
+    }
+  ]
+}

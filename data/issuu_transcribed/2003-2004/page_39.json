@@ -1,0 +1,16 @@
+{"page": 39, "blocks": [
+["40"],
+["NURJ"],
+["Fig. 8 Output voltages as length of uncovered sensor length with various sheet materials sliding through the sensor in the setup shown in Fig. 5. ‘t’ here stands for thickness, in mm."],
+["Figure 8 plots the resulting voltages as sheets slide through the sensor for a variety of sheet materials. As shown, this type of sensor is very promising in reaching the objectives we set. The responses show linear relationships between displacement and output voltage, which can be amplified. It can be seen that the output voltage depends on the material type (aluminum [Al] vs. steels), coating type (electro-galvanized [EGCR] vs. plain steel sheet [1018]). However, it is not significantly sensitive to the sheet thickness. All of the experimented results can be found in Appendix A."],
+["III. Experimental Setup"],
+["According to the good linear results of the previous prototype, the single-transducer prototype is to determine the factors that affect the relationship of the results. These factors are input voltage, sheet metal type, position of sheet metal over the covered area of a transducer, pulling speed of a sheet metal, blank holder size, and vertical movement of the blank holder. 5-inches and 8-inches of the transducers are considered to determine which dimensions provide the highest sensitivity. The primary results show that the 8-inches transducers provide poor sensitivity. Thus, in this experiment, we focus on testing the 5-inches long transducers as shown in Figure 9."],
+["Fig. 9 Transducers (0.06 thick)"],
+["The setup for the single-transducer prototype is very similar to that of the preliminary prototype as shown in Figure 10 and Figure 11."],
+["Fig. 10 Die block with transducer slide under epoxy"],
+["Fig. 11 Actual setup with sheet metal attached to the position sensor and a blank holder on top"],
+["The transducer is placed in the slot of the simulated die block and a thin sheet of epoxy is placed on top of the transducer to protect it from scratch. Another advantage of using epoxy is that there is no interference to the magnetic fields during testing. A flat sheet metal is placed on top of the die block and attached to the linear position sensor. The simulated blank holder block is located on the top of the sheet metal to exert pressure. During testing, the sheet metal is pulled horizontally to the left and the voltage readings from the draw-in sensor and the linear position sensor are sent to the computer for later analysis."],
+["IV. Results"],
+["Fig. 12 Repeatability check testing 0.030-in aluminum by using 0.05x5 in transducer and a small block on top"],
+["From Figure 12, the setup gives a linear result with good repeatability."]
+]}

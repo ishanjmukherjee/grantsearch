@@ -1,0 +1,16 @@
+{"page": 37, "blocks": [
+["each loop circumference using wires of the same thickness. Figure 3 shows the relationship between the fundamental frequency obtained this way and the loop circumference. A nearly perfect inverse quadratic relationship is shown. We then repeated the measurements over the four thicknesses of wire with similar results."],
+["If the wire forming the loop were opened up and straightened into a line, the fundamental frequency would be inversely related to the length of the wire. In the loop arrangement the fundamental frequency seems to be related to the inverse square of the wire length as is circumference. This relationship was observed over the range of wire thicknesses tested."],
+["Figure 3. This shows an inverse quadratic relationship between the fundamental frequency and the loop circumference."],
+["IV. CONCLUSION"],
+["In the case of a standing wave on a string the resonance frequency arises from the condition of wavelengths allowed by the boundary conditions and the speed of the wave on the string. The speed is independent of the frequency of the wave at least to first order. Similarly, from observing a pattern of nodes and antinodes we determined the wavelength of the transverse wave on the loop while noting the frequencies that correspond to the resonance modes. With this information we have deduced the speed of the wave excited on the loop. From the unique quadratic relation of frequency to resonance order n as expressed in Equation 1 we may consider the possibility that the speed of the wave is not constant over the various resonance modes. It may instead be somehow strongly dependent on the frequency of the exciting oscillation. If the basic relationship between frequency f, wavelength λ and wave speed v is to hold for resonance mode n"],
+["f_n λ_n = v_n (5)"],
+["then the velocity must be strongly frequency-dependent, as expressed by the equation"],
+["v_n = k√f_n (6)"],
+["where k is a constant which depends on geometric and material characteristics of the wire. This is very similar to what is seen in a stiff straight bar.² In that case both tension along the bar and the stiffness of the bar contribute to the restoring force that is responsible for the velocity of the wave. We suspect that additional tension may be introduced in the case of the circular wire by bending the wire into a loop. Additional tension may also be introduced as a result of the increased rate of change of displacement of the higher frequency modes."],
+["Since the loop consists of a stiff wire we might consider a comparison to the modes of transverse vibrations for a stiff wire. Rossing,² in his book The Science of Sound, gives the formula for the frequencies of the harmonic series for a piano string as"],
+["f_n = nf₁[1 + (n² − 1)A] for n = 1, 2, 3… (7)"],
+["where f_n is the frequency of the nᵗʰ harmonic"],
+["36"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

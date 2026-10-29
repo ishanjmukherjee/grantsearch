@@ -1,0 +1,20 @@
+{"page": 33, "blocks": [
+["average waveguide losses of 4 cm⁻¹, at the expense of further processing and increased threshold current.⁴ The mirror loss spectrum for this IPFP cavity is plotted in Figure 7 and demonstrates the mode suppression (about 80%) offered by the introduction of 33 index steps. The slots offer a 1.907 cm⁻¹ loss at the targeted mode, while reducing the threshold current and increasing the slope efficiency."],
+["IV. CONCLUSION"],
+["This research has shown how incorporation of a patterned index into a Fabry-Pérot cavity provides for improved spectral purity. It also demonstrates that the techniques conceived by O’Brien and O’Rielly² may be extended to develop multimode cavities and allow for the design of spectrally pure lasers at various wavelengths. These Index Patterned Fabry-Pérot (IPFP) devices offer an alternative to DFB lasers for single-mode applications at reduced fabrication costs. Furthermore, at longer wavelengths, it is simpler to implement such index steps more accurately during the lithographic and etching stages of fabrication since the length of the perturbation is on the order of several microns. The IPFP alternative approach has been suggested for index-coupled DFB lasers that use a continuous grating. Future work aims to couple these IPFP cavities to create a tunable laser source. At present, an analytical expression of the complex transmission coefficient of a coupled cavity laser with these IPFP cavities has been found, and further work would develop the tunability of the device through carrier injection. Additionally, numerical methods to determine the validity of the first order approximation may be explored whereby multiple scattering would be considered for quantitative comparison to DFB lasers."],
+["Acknowledgements"],
+["I would like to thank Dr. S. O’Brien (Tyndall Institute, formerly the NMRC) for his insight and guidance throughout this project as well as Professor E. O’Reilly (Tyndall Institute) for his support. This research was supported by the National Science Foundation (NSF) and Science Foundation Ireland (SFI)."],
+["REFERENCES"],
+["1 G. Morthier and P. Vankwikelberge, Handbook of Distributed Feedback Laser Diodes, (Artech House, 1997)."],
+["2 S. O’Brien and E. P. O’Reilly. Theory of improved spectral purity in index patterned Fabry-Pérot lasers. Applied Physics Letters, (submitted July 2004)."],
+["3 B. Corbett and D. McDonald. Single longitudinal mode ridge waveguide 1.3 μm Fabry-Pérot laser by modal perturbation. IEE Electronics Letters 31(25), 2181-2182 (1995)."],
+["4 L. Mahler, R. Köhler, A. Tredicucci, F. Beltram, H. E. Beere, E. H. Linfield, D. A. Ritchie and A. G. Davies. Single-mode operation of terahertz quantum cascade lasers with distributed feedback resonators. Applied Physics Letters 84(26), 5446-5448 (2004)."],
+["5 S. W. Corzine, L. A. Coldren, C. A. Burrus and T. L. Koch. Continuous tunability in three-terminal coupled-cavity lasers. Applied Physics Letters 48(18), 1190 (1986)."],
+["6 L. A. Coldren and S. W. Corzine, Diode Lasers and Photonic Intergrated Circuits, (John Wiley & Sons, 1995)."],
+["7 J. D. Joannpoulos, R. D. Meade and J. N. Winn, Photonic Crystals, (Princeton University Press, 1995)."],
+["8 S. Mahnkopf, M. Kamp, A. Forchel and R. März. Tunable distributed feedback laser with photonic crystal mirrors. Applied Physics Letters 82(18), 2942-2944 (2003)."],
+["9 M. Born and E. Wolf, Principles of Optics, 7th ed. (Cambridge, 2002)."],
+["10 R. Bracewell. The Fourier Transform and Its Applications, (McGraw-Hill, 1965)."],
+["32"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

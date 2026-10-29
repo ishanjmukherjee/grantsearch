@@ -1,0 +1,16 @@
+{"page": 20, "blocks": [
+["RESEARCH"],
+["Image Analysis"],
+["CBV images were transferred to a local Syngo workstation for image viewing and ROI selection. ROI selection for white matter and tumor vascular beds were performed on these CBV images by a neuroradiologist with over 20 years of experience in CNS tumor diagnosis. The tumor was localized using an axial T₁ weighted volume after contrast injection. The physician was blinded to the sequence type (SE or GE) and the results of the biopsy."],
+["rCBV was determined by dividing the mean CBV value inside a tumor vascular bed ROI by the mean CBV value inside a normal parietal WM ROI for each patient. qCBV was determined by multiplying the same mean CBV value inside the tumor vascular bed by the calculated correction factor (CF) for quantification."],
+["III. RESULTS"],
+["Vessel Enhancement in qCBV Maps"],
+["As shown in Figure 2, tumor aggressiveness leads to vascular proliferation, which causes the ring enhancement around the tumor (red ring) corresponding to an increase in qCBV. With the quantification technique used in this study, ROIs placed in these areas of proliferation can be used to obtain the values for these higher blood volumes."],
+["qCBV in Lesion vs. White Matter"],
+["Initial results comparing qCBV of lesions and white matter show, in general, a good separation between the two. For the GE pulse sequence, qCBV in WM had a mean of 1.81 ± 0.81 mL/100 g (mean ± standard"],
+["Figure 3. Box plots showing the results for comparing qCBV values in lesions and WM for (a) GE-EPI and (b) SE-EPI. These standard box plots show the median (red horizontal line) as well as the interquartile ranges of the data. Red + signs indicate outliers."],
+["Figure 4. Histograms showing the results for comparing qCBV values in lesions and WM for (a) GE-EPI and (b) SE-EPI."],
+["VOLUME 3, MAY 2006"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["19"]
+]}

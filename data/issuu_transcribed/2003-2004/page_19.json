@@ -1,0 +1,20 @@
+{"page": 19, "blocks": [
+["20"],
+["NURJ"],
+["The output circuit underwent other changes due to the 100K Ohm resistors failure to act as burn-out fuses in the event of a short circuit. In practice, these resistors serve no effective purpose at all and were accordingly removed from the output circuitry. The read-out proportion was also changed in order to achieve a 1000/1 voltage to voltmeter proportion. Specifically, the voltage divider used two 30 M Ohm resistors and one 60 K Ohm resistor to divide the voltage as seen in Figure 5:"],
+["Fig. 5 Revised High Voltage Out-Put Circuitry"],
+["Equipped with higher voltages, we can return to using trusty VHB 3910 and still create movement on a usable scale."],
+["VI. Current Apparatuses"],
+["Two final set-ups of EAPs have been built. The first set-up follows the “drum” design as seen in Figures 3 and 4, while the other set-up has a vertical configuration in order to facilitate the addition of load."],
+["The load-bearing EAP apparatus is comprised of a series of 0.4 inch spaced vertically drilled holes in an aluminum base. Two aluminum dowels are then inserted into these holes to create two vertical poles. One of these dowels is fixed in its hole at one end of the base while the other dowel remains unattached to the base (free to rotate or be moved to other holes). VHB 3910 is then stretched between the plates and fixed by wrapping the adhesive polymer around the dowels and back onto itself. Greased active areas, trails, and copper ribbon are also added in the same way as the “drum” set-up. The only missing part now becomes the application of load. After much thought as to how to incorporate such a feature without damaging the EAP, the final result involved a washer tied to a fine string that is attached just below the active area of the VHB using “plastix” glue (Fig. 6). The washer serves as a 1.5 gram load and can also be used to affix larger loads by incorporating a nut and bolt for example. Video of actuated EAPs can be found at othello.mech.nwu.edu/~peshkin/eap.⁷"],
+["VII. Quantitative Results"],
+["Measurements were taken to achieve some rough numerical understanding of these EAPs. Specifically, the dielectric constant, ε, of the VHB material was of particular interest as its value most likely holds the"],
+["Fig. 6 Vertical EAP Set-up with Washer Hanging"],
+["key behind high-voltage EAPs. As already mentioned, Pelrine has identified the effective compressive stress, p, as shown in Eqation 1."],
+["In addition, Pelrine adds that this compressive stress “is twice the stress normally calculated for two rigid, charged capacitor plates”. The stress described for charged capacitor plates can be derived from two equations (Eqn. 3⁸ and Eqn. 4⁸):"],
+["Fz(z) = -δW/δz (Eqn. 3)"],
+["Pelectrostatic = Fz / A (Eqn. 4)"],
+["Where Pelectrostatic is the stress across two capacitive plates, Fz is the force applied through the thickness of the dielectric, W is work, z is thickness and A is the area of the plates themselves. Here we must simply find the change in work over the change in thickness before and after activation, substitute into Pelrine's equations and solve for ε. However, this presents a problem in the case of measuring thickness during activation. Since optical devices are not available, only a highly conductive steel micrometer could achieve reliable results. During measurements, the device would have to come within millimeters of the active high voltage region and the researcher would undoubtedly receive an electrical shock."],
+["Thus to avoid such a hazard and achieve simplicity, the widely known equation for capacitance (Eqn. 5) was instead used to calculate ε:"],
+["C = (ε εₒA) / z (Eqn. 5)"]
+]}

@@ -1,0 +1,47 @@
+{
+ "page": 64,
+ "blocks": [
+  [
+   "stories when compared to children performing solo narrations.³ Bokus’ research found that for five and six year olds, texts that were co-narrated resulted in consistently higher scores, and that complex episodes occurred more frequently in the co-narration case than during solo narration."
+  ],
+  [
+   "Scaffolding refers to the act of providing a framework for children to narrate within, while still allowing for creative story creation. Researchers have found that the use of scaffolds, such as scripts or leading questions, by more capable peers or teachers have resulted in more complex collaborative stories.⁴ Furthermore, collaboration between peers of different literacy levels can have positive influences on the learning ability of the less capable peer.⁵"
+  ],
+  [
+   "Sam builds upon these key concepts in order to improve children’s literacy. In experimental situations, Sam and the child can each tell solo-narrated stories or collaborative ones. In the latter case, Sam starts telling the story and elicits a continuation from the child through natural turn-taking behaviors. As the more competent peer, Sam presents a scaffolding framework for the child to provoke more complex storytelling. Finally, interaction with Sam and the wooden castle artifact allow literacy skills to emerge through improvisational play."
+  ],
+  [
+   "ECA Design"
+  ],
+  [
+   "Nass et al. describe three criteria for “beauty” in ECA design: 1) accuracy; 2) user satisfaction; and 3) peer admiration. These criteria determine the success of an ECA design and represent the pinnacle of this emerging field. Accuracy is described as “the extent that the agent’s outward appearance objectively matches the appearance, language, attitudes and behavior of humans,” and is determined in our case by Sam’s appearance, features, gestures, and stories. Second, an ECA must satisfy its diverse users. Additionally, peer admiration is a qualitative measure of the opinions of other scholars in the community; they generally agree on what is “interesting” in their field."
+  ],
+  [
+   "Accuracy"
+  ],
+  [
+   "Further investigation into the design of ECAs inevitably requires a solid understanding of the"
+  ],
+  [
+   "wide spectrum of human behaviors that occur during conversation, such as gestures, speech, facial expressions, and eye gaze.⁶ Integrating gestures and speech at the appropriate temporal junctures is important in order to enhance the effects and the believability of the ECA.⁷ This is particularly relevant in the construction of Sam’s stories, because precise and exact movements are necessary to make Sam seem natural to the user. We found through trial and error that even slight missteps in timing resulted in unnatural and awkward movements that distracted the user from the story itself."
+  ],
+  [
+   "During the story scripting process, we determined that we needed to implement more features, such as facial expressions, gestures, and utterances, in order to enhance Sam’s believability. These developments will enhance the accuracy of our ECA, because varied facial displays and movements are important conversational tools.⁸"
+  ],
+  [
+   "One current and serious limitation of all ECAs involves natural language processing and the ability of an ECA to provide believable and realistic responses. This is particularly problematic because children’s speech is inadequately supported in current speech recognition technology. Because of this deficiency, Sam relies on pre-recorded speech and pre-scripted actions. Shortcomings of this approach include an inability to respond to certain speech acts, such as a child’s questions or actions. In addition, responses eventually become repetitive due to their limited nature.⁹ However, this limitation exists on a much greater scale than this project alone, and is related to two fields."
+  ],
+  [
+   "For many years, the areas of Machine Translation (MT) and Natural Language Processing (NLP) have been working towards solutions to the problems computers have with understanding languages. Yet, researchers estimate at least another twenty years before fully comprehensive MT will be available to the world.¹⁰ As it stands, translation engines aim to have three characteristics: to be general purpose, high quality, and fully automatic. Current research has yielded engines that can embody only two of the three characteristics, because a trade-off exists between shallow translation (fast, surface-level dictionary lookup which can be applied to a wide range"
+  ],
+  [
+   "VOLUME 2, MAY 2005"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ],
+  [
+   "63"
+  ]
+ ]
+}

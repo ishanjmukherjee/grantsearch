@@ -1,0 +1,146 @@
+{
+  "slug": "nurj_2010-11",
+  "running_heads": ["RESEARCH", "FEATURE", "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL", "VOLUME 6, 2010-2011"],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "CONTENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "1",
+      "spans": [["1.0", "1.49"]],
+      "notes": "Contents page of Volume 6 (2010-2011). It also lists five additional articles available only online (by Alice Cherry, Avi Emanuel, Tara Garcia, Andrea Marcos and Emily Scherker), whose text is not in this print volume. The cover (section 0) has no text."
+    },
+    {
+      "kind": "front matter",
+      "title": "ACKNOWLEDGEMENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [["2.0", "2.14"]],
+      "notes": "Acknowledgements, staff list, faculty review boards, office address, credits and mission statement."
+    },
+    {
+      "kind": "letter",
+      "title": "LETTER FROM THE EDITORS",
+      "authors": ["Alina Dunbar", "Angelica Kielbus"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [["3.0", "3.14"]],
+      "notes": null
+    },
+    {
+      "kind": "front matter",
+      "title": "About NURJ",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [["4.0", "4.3"]],
+      "notes": "Call for submissions and notice of the new NURJ website; the title is from the contents page."
+    },
+    {
+      "kind": "feature",
+      "title": "Northwestern Churchill Scholars",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "5",
+      "spans": [["5.0", "5.7"]],
+      "notes": "Interviews with Churchill Scholars Dennis Hu and Samantha Strasser; the title is from the contents page (the page itself is headed CHURCHILL SCHOLARS). The two interviews are printed side by side and their columns are interleaved line by line in the extracted text (section 5, block 2)."
+    },
+    {
+      "kind": "research",
+      "title": "Navigating the Tangle of Pathology: Community Organization and Family Strength in Watts on the Eve of the 1965 Rebellion",
+      "authors": ["Colin McGrath"],
+      "department": "History",
+      "advisors": ["Henry Binford"],
+      "printed_pages": "6-10",
+      "spans": [["6.0", "9.0"], ["9.5", "9.7"], ["9.1", "9.4"], ["9.8", "10.8"]],
+      "notes": "Full title from the contents page; the opening page's text gives only the part after the colon. Henry Binford is named as faculty advisor (Department of History) on the opening page. Includes notes and sources; note numerals are extracted separately from the note text."
+    },
+    {
+      "kind": "research",
+      "title": "Strain Differences in Follicle Development and Gene Expression in Mice",
+      "authors": ["Jessina Thomas"],
+      "department": "Biological Sciences",
+      "advisors": ["Teresa Woodruff", "Lei Lei", "Candace Tingen"],
+      "printed_pages": "11-15",
+      "spans": [["11.0", "15.9"]],
+      "notes": "The opening page names Teresa Woodruff as faculty advisor and Lei Lei and Candace Tingen as postdoctoral mentors (Department of Obstetrics and Gynecology, Feinberg School of Medicine). Printed page 12 carries only Figure 1 and its caption in the text; the figure's tables are not in the text. Section 12 begins with a garbled symbol block."
+    },
+    {
+      "kind": "research",
+      "title": "Quest for National Self-Identity: Neoprimitivist Theory and Practice in Russian Art and Literature",
+      "authors": ["Irina Dykhne"],
+      "department": "Slavic Languages and Literatures",
+      "advisors": ["Nina Gourianova", "Kasey Evans", "Michal Ginsburg"],
+      "printed_pages": "16-24",
+      "spans": [["16.0", "24.6"]],
+      "notes": "Printed under the journal's FEATURE label. The title is from the contents page; the opening page's text lacks it. The opening page names Nina Gourianova, Kasey Evans and Michal Ginsburg alongside the labels FACULTY ADVISOR (Department of Slavic Languages and Literatures), FACULTY MENTOR (Department of English) and FACULTY MENTOR (Comparative Literary Studies Program); the extracted text does not pair names with labels unambiguously. The contributors page says she worked under the guidance of Professor Nina Gourianova and gives her majors as Comparative Literature and Political Science."
+    },
+    {
+      "kind": "research",
+      "title": "STRANDED IN JORDAN: A Study of Jordans Iraqi Refugee Policy",
+      "authors": ["Laura Ashbaugh"],
+      "department": "International Studies",
+      "advisors": ["Galya Ruffer", "Jacqueline McAllister"],
+      "printed_pages": "25-30",
+      "spans": [["25.0", "30.14"]],
+      "notes": "Printed under the journal's FEATURE label. The opening page names Galya Ruffer as faculty advisor (International Studies Program) and Jacqueline McAllister as graduate student mentor (Department of Political Science). The contributors page says she graduated from the Medill School of Journalism with a second major in international studies. Endnote numerals are extracted separately from the endnote text."
+    },
+    {
+      "kind": "research",
+      "title": "OBJECT IDENTIFICATION & FUNCTIONAL ATTRIBUTES",
+      "authors": ["Reina Uchino"],
+      "department": "Psychology",
+      "advisors": ["Lance Rips", "Linsey Smith"],
+      "printed_pages": "31-34",
+      "spans": [["31.0", "34.5"]],
+      "notes": "The opening page names Lance Rips as faculty advisor and Linsey Smith as graduate student mentor (Department of Psychology). The contributors page says the work stems from her honors thesis project."
+    },
+    {
+      "kind": "research",
+      "title": "The Effect of Time Lived in the US on Risk Factors for Type II Diabetes among Indian Immigrant Women of Low Socioeconomic Status",
+      "authors": ["Anisa Rahman"],
+      "department": "Anthropology",
+      "advisors": ["Chris Kuzawa", "William Leonard"],
+      "printed_pages": "35-39",
+      "spans": [["35.0", "39.0"], ["39.10", "39.17"], ["39.1", "39.9"]],
+      "notes": "The opening page names Chris Kuzawa and William Leonard with the labels FACULTY ADVISOR and FACULTY MENTOR (Department of Anthropology); the extracted text does not pair names with labels unambiguously. The contributors page says this was her undergraduate thesis research, under the advisement of Dr. Christopher Kuzawa and Dr. William Leonard. The contents page gives the title as \"The Effect of Time Lived in U.S. on Risk Factors for Type II Diabetes among Indian Immigrant Women of Low Socioeconomic Status\". Table 1 on printed page 37 is extracted column by column."
+    },
+    {
+      "kind": "research",
+      "title": "THE BIOAVAILABILITY OF MERCURY IN AQUATIC SYSTEMS",
+      "authors": ["Isabelle Ji"],
+      "department": "Civil and Environmental Engineering",
+      "advisors": ["Jean-François Gaillard", "Luciana Zanella"],
+      "printed_pages": "40-43",
+      "spans": [["40.0", "43.0"], ["43.4", "43.8"], ["43.1", "43.3"]],
+      "notes": "The opening page names Jean-François Gaillard as faculty advisor and Luciana Zanella as graduate student mentor (Department of Civil and Environmental Engineering). End note numerals are extracted separately from the note text."
+    },
+    {
+      "kind": "back matter",
+      "title": "WANT TO GET INVOLVED IN RESEARCH AT NU?",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "44",
+      "spans": [["44.0", "44.7"]],
+      "notes": "Guide to undergraduate research programs at Northwestern; listed in the contents as \"Research: Get Involved\"."
+    },
+    {
+      "kind": "back matter",
+      "title": "about the contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "45",
+      "spans": [["45.0", "45.9"]],
+      "notes": "Bios of Colin McGrath, Irina Dykhne, Jessina Thomas, Reina Uchino, Laura Ashbaugh, Anisa Rahman and Isabelle Ji."
+    }
+  ]
+}

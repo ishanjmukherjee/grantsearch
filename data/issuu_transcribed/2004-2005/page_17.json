@@ -1,0 +1,13 @@
+{"page": 17, "blocks": [
+["STARS Flight Demonstration #2"],
+["The two methods in calculating azimuth and elevation were then plotted against each other in Figure 7 and Figure 8 below."],
+["The plots show great similarity between the pointing algorithm and CLASS results. Notable factors affecting slight differences include a slight offset due to a timing difference of 10s during Flight 6 and a discontinuity in azimuth at 0° and 360°."],
+["Errors Added into the Algorithm"],
+["After confirming the azimuth and elevation values, errors were added into the position and attitude of the aircraft at each time increment. These perturbed values were subtracted from the unperturbed values of azimuth and elevation (α and ε, respectively) to form new perturbed values of azimuth and elevation, represented by α′ and ε′, respectively. This was done to see how the pointing algorithm would react to imperfect data. In addition, the overall angular difference between the antenna’s pointing vector and the TDRS pointing vector, δ, was calculated using the spherical law of cosines,"],
+["ê_TDRS · ê_ANT = (1)(1) cos δ = sin ε sin ε′ + cos ε cos ε′ cos(α − α′)"],
+["where ê_TDRS is a unit vector along the true direction from the antenna to TDRS, and ê_ANT is a unit vector in the direction the antenna is pointing. These two vectors are also displayed graphically in Figure 1."],
+["Figure 7. Flight 6."],
+["Figure 8. Flight 7."],
+["16"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

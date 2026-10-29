@@ -1,0 +1,22 @@
+{"page": 35, "blocks": [
+["RESEARCH"],
+["This process is then stopped, and the operators and engineers proceed to look for an “assignable cause” for the unexpected deviation. After the assignable cause is found, it is fixed and then production is continued. If no problem is found, production is simply restarted."],
+["There are many other ways in which an X-bar chart can help monitor a process and it is up to its user to set the rules for stopping this process and looking for an assignable cause. For instance, if one sees something like ten points lying above the μ line, one may speculate that the process’s noise is not behaving randomly and may thus decide to stop it and check if there is something wrong with it. Or, if one sees two or three points lying very close to the UCL or LCL, then one may also conclude that something may be wrong and decide to stop the process. Some engineers also draw two lines at μ ± 2σ/√(n) as “warning” control lines, outside which only 4.56% of the values will randomly lie. These limits are helpful in creating new “warning” rules, which can be used as signals to check the process, without the necessity of completely stopping it. This last warning feature is an important advantage of the use of control charts over Taguchi’s on-line control system."],
+["The R chart"],
+["The R (Range) chart helps the monitoring of the variability of a process’s output. In it, the ranges (largest value – smallest value) of each sample are plotted and considered to be random variables with normal distribution, just as done in the case of the X-bar chart. The target value for this chart, μR, is the mean of the ranges obtained from the samples in the same control group used to obtain the reference values for the X-bar chart. The upper and lower limits are found by"],
+["UCL = μR + 3 (d₂/d₃) μR", "LCL = μR − 3 (d₂/d₃) μR"],
+["where d₂ and d₃ are constants that depend on the sample size and can be found in statistical quality control tables.ⁱˣ  By analogy to the X-bar chart, one can see that the value (d₂/d₃) μR is an estimation of the standard deviation of the range values, which is convenient for determining the limits of a normally distributed variable. Once more, the probability that a value plotted in this chart will lie outside the control limits is therefore 0.26%. It is useful to have an R chart since the X-bar chart by itself could be misleading if, for instance, a process had samples with large ranges but means on target, which could trick the operators into thinking that the process is in control while it is not."],
+["Figure 1.  X-bar Chart (each point refers to a different sample)."],
+["Source: “Control Chart Interpretation” in SPC for Excel Software and SPC Consulting and SPC Training", "http://www.spcforexcel.com/ezine/[illegible]2004.htm"],
+["Hypothesis Testing"],
+["As applied to the field of quality control and, more specifically, to sampling techniques, the test consists of two hypotheses."],
+["For the case of an X-bar chart the two hypotheses are:"],
+["H₀: “process is out of control” (null hypothesis)", "H₁; “process is in control”"],
+["Whenever the null hypothesis is not accepted, the alternative hypothesis, H₁, is automatically accepted. In addition, a Type I error is committed if the null hypothesis is accepted when it is not true and a Type II error is committed if the null hypothesis is rejected when it is actually true. Furthermore, there is a probability α of committing a Type I error and a probability β of committing a Type II error. In the case of an X-bar and R charts, where the limits are controlled by three standard deviations, α = 0.0026."],
+["Process Capability"],
+["As defined by Burr,ˣ the Process Capability"],
+["Cₚ = (US − LS) / 6σ"],
+["where US and LS are the Upper and Lower Specification limits of the characteristic in treatment and σ is the estimated value of the standard deviation of the process in treatment, found from the above mentioned control group.ˣⁱ It is important to clarify here that US and LS do not necessarily have to be the same as the UCL and LCL. The specification limits are the ones that have to be met in order to satisfy product specifications, while the UCL and LCL are limits that are set by the natural noise of the process – this natural noise determines the process’s capability. As we can see from the definition of"],
+["34"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

@@ -1,0 +1,19 @@
+{"page": 35, "blocks": [
+["Figure 1. Figure 1a shows the apparatus, which consists of a digital function generator, the Mechanical Wave Driver, and a wire loop. Figure 1b shows the apparatus with the wire oscillating in the mode having three antinodes."],
+["of antinodes. The next highest resonance occurs with three antinodes in a pattern symmetric about a diameter which passes through the support point. Figure 1 shows the apparatus with the wire oscillating in the mode having three antinodes. All resonance modes of oscillation have an odd number of antinodes and the patterns are symmetric about the diameter passing through the support point."],
+["One of the more interesting aspects of this phenomenon is the pattern of resonance frequencies excited in the loop. A linear analog to this apparatus is the standing waves of a string fixed at both ends and excited at a point near one end. This standard physics demonstration exhibits standing waves whose frequencies are simple multiples of the fundamental frequency, which is determined by the length of the string and the tension in the string."],
+["We have determined the pattern of frequencies of harmonic modes for the wire loop supported at a single point to be multiples of the square of odd integers, given by"],
+["f_n = f₀(n)² n = 1, 3, 5… (1)"],
+["where f_n represents the frequency of the nᵗʰ harmonic mode. This differs from what we see in the case of standing waves on a string and has interesting implications about the waves being generated in this apparatus that are worth exploring."],
+["Recently Danning Bloom and D. W. Bloom³ reported seeing a similar pattern of frequencies when they positioned the loop vertically and excited the oscillation in the plane of the loop, which is the way it is illustrated in the PASCO catalog. We, on the other hand, excited the loop transverse to plane of the loop with the loop suspended horizontally. This orientation produces standing waves with clearly observable nodes at specific points around the hoop. An analytical solution to this arrangement may be more easily derived since the vibration motion is completely orthogonal to the direction of wave propagation and the plane into which the wire turns to make the loop. However such a solution is beyond the scope of this present work."],
+["The fundamental resonance frequency in the case of a standing wave on a string is determined by the speed on the string and the wavelength of the wave. The wavelength is determined by the mode of the resonance, the boundary conditions at the ends of the string and the length of the string. The speed of the wave, v, depends on the tension, T, and the density, μ, of the string, using the equation"],
+["v = √(T/μ) (2)"],
+["where T is the tension in the string and μ is the mass per unit length."],
+["The boundary conditions and length of the string determine the size of the wavelength of the resonance. For example, a string fixed at both ends will have wavelengths given by"],
+["λ_n = nv/2L (3)"],
+["where n is the integer of the mode and L is the length of the string."],
+["In the case of the wire loop, similar conditions hold. The wavelength of the resonance is determined by boundary conditions and the length of the wire, which, in the case examined, is the circumference of the loop. Since the support point is the source of waves that radiate in both directions around the loop, resonances must be symmetric with respect to the point of support, and only patterns with odd numbers of nodes can be excited. The wavelengths of these resonance waves are simple odd fractions of the circumference. In terms of the diameter, d, of the loop, the relationship is given as"],
+["λ_n = 2πd/n for n = 1, 3, 5… (4)"],
+["34"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

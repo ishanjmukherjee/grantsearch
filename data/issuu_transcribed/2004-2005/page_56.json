@@ -1,0 +1,28 @@
+{
+ "page": 56,
+ "blocks": [
+  [
+   "Removing Quantization Artifacts In Color Images Using Bounded Interval Regularization"
+  ],
+  [
+   "Tom Yu Ouyang",
+   "DEPARTMENT OF COMPUTER SCIENCE"
+  ],
+  [
+   "Jack Tumblin",
+   "FACULTY ADVISOR, DEPARTMENT OF COMPUTER SCIENCE, NORTHWESTERN UNIVERSITY"
+  ],
+  [
+   "ABSTRACT"
+  ],
+  [
+   "Coarsely quantized images can exhibit false contours in smooth low gradient regions. Images intended for standard displays such as cathode ray tube (CRT) monitors can show contours when moved to high dynamic range (HDR) devices such as HDR displays and film. While various other methods such as regularization and anisotropic diffusion exist for noise removal and image restoration, they are not able to remove these contouring artifacts completely and can impose substantial blurring. Our method performs iterative regularization within bounded intervals to remove false contours while preserving natural image features."
+  ],
+  [
+   "I. INTRODUCTION"
+  ],
+  [
+   "Whenever a scene composed of continuous intensity values is quantized and stored in a digital format, such as when using a digital camera or a scanner, there is inevitable distortion and data loss. Quantization divides the range of input values into a finite number (Q) of non-overlapping “quantization levels” and all input values within a given interval are assigned the same value. For example, most digital images are stored with Q = 255 possible values for the intensity at each pixel. When an unquantized image with intensity ranging from 0 to 1.0 is quantized linearly, all values from the original image are mapped to discrete integer values 0-255 in the quantized image."
+  ]
+ ]
+}

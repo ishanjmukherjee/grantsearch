@@ -1,0 +1,17 @@
+{"page": 40, "blocks": [
+["NURJ"],
+["41"],
+["Fig. 13 Results of various starting positions of a sheet metal over the covered area of the transducer"],
+["According to the linear throughout property of the transducers as shown in Figure 13, it shows that there is no effect of starting position of the sheet."],
+["Fig. 14 Results of the effect of pulling speed of a sheet metal"],
+["Figure 14 demonstrates that the pulling speed does not affect the linearity of the results."],
+["Fig. 15 Results of the effect of blank holder size (the dimensions shown are the thickness of the block)"],
+["In Figure 15, the blank holder blocks with different sizes give the same slope. However, if the block is removed, the slope will change."],
+["Fig. 16 Result of the effect of the vertical movement of the blank holder over a stationary sheet metal"],
+["Fig. 17 Result of the effect of the vertical movement of the blank holder over a moving sheet metal"],
+["Figure 16 and Figure 17 show moving blank holder causes a change in the output voltage. However, the change does not affect the linearity of the results."],
+["The factor of the input voltage is also considered and it was determined that the range of the sensor’s output voltage varies with input voltages. Each transducer has different input voltage providing maximum output voltage. Moreover, the transducer’s dimension has an affect on the sensor’s sensitivity. The transducer that has 0.65-in wide gives the highest sensitivity on both 0.030-in and 0.065-in Al. In addition, sheet metal type also has an effect on the sensitivity of the transducers because all transducers work well with aluminum but less sensitive with steel. Thus, the sensor is sensitive to the amount of irons in the material (aluminum is non-ferrous but steel is ferrous). In order to obtain a better result from testing steel, the input voltage has to be reduced to a certain value. The graphical comparisons of each transducer while testing with different materials can be found in Appendix B."],
+["V. Further Work"],
+["IIn the actual stamping process, sheet metal can become wrinkled when it is stamped. Thus, experimenting with wrinkled sheet metal will determine the effectiveness of the draw-in sensor. However, using only a single-transducer prototype will not yield a linear result because the shape of wrinkled sheet metal creates inconsistent gaps between the transducer and the sheet metal. The solution to this problem is to create double-transducer prototype that places one transducer on top and the other under a wrinkled sheet metal. Consequently, the sum of the readings from each transducer will generate linear results."],
+["Since the ultimate goal is to incorporate the draw-in sensor in the real manufacturing environment, the implementation of draw-in sensor into existing and new tooling will be studied. In addition, the development of advanced closed-loop control strategies with the"]
+]}

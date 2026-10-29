@@ -1,0 +1,22 @@
+{"page": 26, "blocks": [
+["NURJ"],
+["27"],
+["(a) Convexifying the polar plot of 1/ ε (ε₄ = 0.20) in 2D"],
+["(b) Convexifying the faces of the 1/ ε with tangent planes"],
+["(c) Convexifying the edges of the 1/ ε with tangent planes"],
+["(d) Convexified 3D 1/ ε"],
+["Fig. 6 Moving from 2D to 3D convexification to obtain a regularized model. Convexifying the 3D plot involves convexifying faces and edges of the 1/ ε plot in spherical coordinates (ε₄ = 0.30)"],
+["VII. Visualization with SimulationView"],
+["Creating accurate and informative visual displays from three-dimensional data is a challenging problem. Two dimensional simulation data can be plotted using a wide variety of plotting packages. However, with a third dimension the amount of data that must be analyzed drastically increases, making two-dimensional plots ineffective for visual displays. To convey three-dimensional results, sophisticated techniques in computer graphics must be used. Advanced rendering software was written to address the specific problem of 3D model visualization. The software, named SimulationView, makes OpenGL graphics calls to allow 3D models to be rendered and evolved through time. The software was designed to be cross-platform compatible, and can be compiled and run in Windows, MacOS, and Linux. This makes it an effective solution for scientific analysis, producing animations, and real-time model exploration."],
+["OpenGL is the standard language used in computer graphics to issue drawing commands on a computer’s graphics card. OpenGL translates statements into rendering commands which can be processed by the GPU (Graphical Processing Unit), which is designed to be extremely efficient at rasterizing images. Today’s fastest graphics cards are highly specialized and parallelized for processing graphics commands. These graphics cards can perform upwards of 1.25 trillion operations per second, which is significantly faster than the CPU of most computers. OpenGL is the graphics library of choice for writing most of the fastest and most graphics-intensive computer and video games on the market such as Doom III, Unreal Tournament, and John Madden Football.¹⁴"],
+["OpenGL renders scenes by drawing large numbers of"],
+["(a) ε₄ = 0.00"],
+["(b) ε₄ = 0.05"],
+["(c) ε₄ = 0.20"],
+["(d) ε₄ = 0.50"],
+["(e) ε₄ = 0.00"],
+["(f) ε₄ = 0.06"],
+["(g) ε₄ = 0.13"],
+["(h) ε₄ = 0.30"],
+["Fig. 7 Comparison of 2D equilibrium shapes to 3D equilibrium shapes for various degrees of anisotropy. Note that the 3D results were obtained without one-sided derivatives and are thus not finalized results."]
+]}

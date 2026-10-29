@@ -1,0 +1,216 @@
+{
+  "slug": "nurj_master_3.31.15",
+  "running_heads": ["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL", "VOLUME 10, 2014-2015", "SLAVIC"],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "1-2",
+      "spans": [["0.0", "1.5"]],
+      "notes": "Front cover (Volume 10, 2014-2015), acknowledgments, NURJ office contact details, mission statement and masthead."
+    },
+    {
+      "kind": "front matter",
+      "title": "CONTENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [["2.0", "2.42"]],
+      "notes": "Contents page. Department labels for the entries are extracted out of order in blocks 2.38-2.39. States that the volume contains condensed versions or excerpts of each senior thesis, with full versions at http://www.thenurj.com."
+    },
+    {
+      "kind": "letter",
+      "title": "LETTER FROM THE EDITOR",
+      "authors": ["Monica Cheng"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [["3.0", "3.6"]],
+      "notes": "Signed by Monica Cheng, Editor in Chief. The salutation 'Dear readers,' is extracted twice (3.0 and 3.1)."
+    },
+    {
+      "kind": "letter",
+      "title": "LETTER FROM THE ADVISOR",
+      "authors": ["Allen Taflove"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [["3.7", "3.10"]],
+      "notes": "Signed by Allen Taflove, Professor, NURJ Faculty Advisor, Department of Electrical Engineering and Computer Science."
+    },
+    {
+      "kind": "research",
+      "title": "Apuleius' The Golden Ass in Translation and Adaptation",
+      "authors": ["Brian Earl"],
+      "department": "CLASSICS",
+      "advisors": ["John Schafer", "Brian Bouldrey"],
+      "printed_pages": "5-10",
+      "spans": [["4.0", "4.0"], ["4.2", "4.4"], ["4.1", "4.1"], ["4.5", "9.6"]],
+      "notes": "Abstract followed by an excerpt from the introduction of the thesis, on the duty and methods of translation; with bibliography. Both advisors are labeled 'FACULTY ADVISOR' on the opening page. The contributors page gives the author's majors as Classics and English."
+    },
+    {
+      "kind": "feature",
+      "title": "Richard Silverman",
+      "authors": ["Monica Cheng", "Sunny Liu"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "11-13",
+      "spans": [["10.0", "12.6"]],
+      "notes": "Profile of Richard B. Silverman, John Evans Professor of Chemistry and inventor of Lyrica; written by Monica Cheng, interview by Sunny Liu. Includes a 'Voice from the Lab' sidebar on undergraduate Anthony Pensa (printed page 13)."
+    },
+    {
+      "kind": "research",
+      "title": "Cross-Cutting Cleavages: Euskadi Ta Askatasuna, Terra Lliure, and the Centrality of Social Networks",
+      "authors": ["Kaitlyn Chriswell"],
+      "department": "POLITICAL SCIENCE",
+      "advisors": ["Ana Arjona"],
+      "printed_pages": "14-15",
+      "spans": [["13.0", "13.1"], ["13.3", "13.5"], ["13.2", "13.2"], ["13.6", "14.7"]],
+      "notes": "Excerpt: abstract and introduction only, with a pointer to the full thesis on NURJ Online. Advisor labeled 'FACULTY ADVISER' on the opening page; the contributors page also names 'Dr. Ana Arjona' as her thesis advisor and gives her majors as Political Science and Spanish."
+    },
+    {
+      "kind": "research",
+      "title": "\"Acts of Exhaustion\": Stéphane Mallarmé's \"Throw of the Dice\" read by Rancière and Kittler",
+      "authors": ["Christopher Hoffman"],
+      "department": "COMPARATIVE LITERATURE",
+      "advisors": ["Christopher Bush"],
+      "printed_pages": "16-19",
+      "spans": [["15.0", "18.6"]],
+      "notes": "Condensed version of the thesis, with bibliography. The 'FACULTY ADVISER' label for Christopher Bush is extracted as the first line of block 15.8, ahead of the opening text. The contributors page gives the author's majors as Comparative Literature and History."
+    },
+    {
+      "kind": "research",
+      "title": "Structure-Function Analysis of Sds3: Suppressor of defective silencing 3, a Key Component of the Histone Deacetylase-Containing Mammalian Sin3L/Rpd3L Corepressor Complex",
+      "authors": ["Yujia Ding"],
+      "department": "MOLECULAR BIOSCIENCES",
+      "advisors": ["Ishwar Radhakrishnan"],
+      "printed_pages": "20-23",
+      "spans": [["19.0", "19.5"], ["19.7", "19.7"], ["19.6", "19.6"], ["19.8", "22.7"]],
+      "notes": "Condensed version of the thesis, with bibliography. Printed in the Biological Sciences section; 'MOLECULAR BIOSCIENCES' is the department line under the author's name, and the contributors page gives her major as Biological Sciences. The contents page truncates the title after 'of the Histone'."
+    },
+    {
+      "kind": "feature",
+      "title": "Anthony Chen",
+      "authors": ["Neil Thivalapill"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "24",
+      "spans": [["23.0", "23.7"]],
+      "notes": "Q&A interview with Anthony Chen, associate professor of sociology, with a short bio box."
+    },
+    {
+      "kind": "research",
+      "title": "The Third Space: Between Enclosure and Exposure in 19th-Century England",
+      "authors": ["Kathryn Ikenberry"],
+      "department": "ENGLISH",
+      "advisors": ["Jules Law"],
+      "printed_pages": "25-30",
+      "spans": [["24.0", "29.7"]],
+      "notes": "Excerpt: introduces the third space and gives close readings from Pride and Prejudice; with bibliography and footnotes. Jules Law is labeled 'FACULTY ADVISOR'; Nicholas Davis is also named on the opening page as 'HONORS COORDINATOR'. The contributors page gives the author's major as English Literature."
+    },
+    {
+      "kind": "research",
+      "title": "The Effects of Income on Transnationalism and Integration Among Hispanic Immigrants in Miami",
+      "authors": ["Sofia Falzoni"],
+      "department": "SOCIOLOGY",
+      "advisors": ["Monica Prasad"],
+      "printed_pages": "31-33",
+      "spans": [["30.0", "32.8"]],
+      "notes": "Excerpt: abstract, introduction and literature review only, with a pointer to the full thesis on NURJ Online. The contributors page gives the author's majors as Sociology and International Studies."
+    },
+    {
+      "kind": "research",
+      "title": "The Work and Legacy of Felix Gonzalez-Torres: Identity Negation and Negotiation at the Venice Biennale and Beyond",
+      "authors": ["Claire Dillon"],
+      "department": "ART HISTORY",
+      "advisors": ["Hannah Feldman"],
+      "printed_pages": "34-38",
+      "spans": [["33.0", "37.5"]],
+      "notes": "Condensed version of the thesis, with bibliography. The contents page gives only the main title. The contributors page gives the author's majors as Art History and Italian."
+    },
+    {
+      "kind": "research",
+      "title": "Disconnect Between Lived Experience and Policy: Cultural integration of Bhutanese and Iraqi refugees during resettlement in Chicago",
+      "authors": ["Catherine Tyson"],
+      "department": "INTERNATIONAL STUDIES",
+      "advisors": ["Gayla Ruffer"],
+      "printed_pages": "39-40",
+      "spans": [["38.0", "38.5"], ["38.8", "38.9"], ["38.6", "38.7"], ["38.10", "39.6"]],
+      "notes": "Excerpt: abstract and introduction ('The Problem of Resettlement') only, with a pointer to the full thesis on NURJ Online. The opening narrative in 38.7 continues in 38.10. Footnote markers are displaced in 39.5. The contents page gives only the main title. The contributors page gives the author's majors as Anthropology and International Studies."
+    },
+    {
+      "kind": "research",
+      "title": "The Language of Marital Rape: An Analysis of Russian and American Literature and Law",
+      "authors": ["Lena Gryaznova"],
+      "department": "SLAVIC LANGUAGES AND LITERATURE",
+      "advisors": ["Ilya Kutik", "Joanna Grisinger"],
+      "printed_pages": "41-45",
+      "spans": [["40.0", "44.6"]],
+      "notes": "Condensed version of the thesis, with a bibliography that has no heading in the extracted text. The department line on the opening page is extracted as 'SLAVIC L ANGUAGES AND LITERATURE'. The contributors page gives the author's majors as Slavic Languages and Literature and Legal Studies."
+    },
+    {
+      "kind": "research",
+      "title": "Bombs and Ballot Boxes: The Electoral Participation of Terrorist Groups",
+      "authors": ["Brian Yost"],
+      "department": "POLITICAL SCIENCE",
+      "advisors": ["Jonathan Caverley", "Mauro Gilli"],
+      "printed_pages": "46-50",
+      "spans": [["45.0", "49.6"]],
+      "notes": "Condensed version of the thesis, with tables and bibliography. Jonathan Caverley is labeled 'FACULTY ADVISOR' and Mauro Gilli 'GRADUATE STUDENT ADVISOR'; Georgia Kernell is also named as 'SEMINAR DIRECTOR'. Table and figure contents are mostly not in the extracted text. The contributors page gives the author's majors as Political Science and Economics."
+    },
+    {
+      "kind": "feature",
+      "title": "Steven Epstein",
+      "authors": ["Neil Thivalapill"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "51-52",
+      "spans": [["50.0", "51.4"]],
+      "notes": "Q&A interview with Steven Epstein, John C. Shaffer Professor in the Humanities and Professor of Sociology, with a short bio box."
+    },
+    {
+      "kind": "research",
+      "title": "Characterizing the Hippocampal Dentate Gyrus During Recent and Remote Trace Eyeblink Conditioning",
+      "authors": ["Lillian Chen"],
+      "department": "BIOLOGICAL SCIENCES",
+      "advisors": ["John Disterhoft"],
+      "printed_pages": "53-54",
+      "spans": [["52.0", "53.5"]],
+      "notes": "Excerpt: abstract and introduction and literature survey only, with a pointer to the full thesis on NURJ Online. Shoai Hattori is also named on the opening page as 'RESEARCH MENTOR'. Apostrophes are garbled as HTML entities in 52.5 and 53.5, and the online pointer in 53.5 is extracted twice, interleaved."
+    },
+    {
+      "kind": "research",
+      "title": "\"Halka\": Transfigurations of Polish Romantic Nationalism",
+      "authors": ["Paulina Mateja"],
+      "department": "COMPARATIVE LITERARY STUDIES",
+      "advisors": ["Clare Cavanagh"],
+      "printed_pages": "55-59",
+      "spans": [["54.0", "58.7"]],
+      "notes": "Essay condensed from the thesis, with bibliography. Printed in the Comparative Literature section; 'COMPARATIVE LITERARY STUDIES' is the department line under the author's name. The contributors page gives the author's majors as Comparative Literary Studies and Classical Guitar Performance."
+    },
+    {
+      "kind": "back matter",
+      "title": "ABOUT THE CONTRIBUTORS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "60-68",
+      "spans": [["59.0", "67.6"]],
+      "notes": "Bios and Q&As for the thesis authors, in this order: Yujia Ding, Paulina Mateja, Lena Gryaznova, Kaitlyn Chriswell, Brian Yost, Catherine Tyson, Lillian Chen, Claire Dillon, Kathryn Ikenberry, Christopher Hoffman, Sofia Falzoni, Brian Earl. Several pages hold two contributors whose blocks interleave (sections 60, 62, 67)."
+    },
+    {
+      "kind": "back matter",
+      "title": "theNURJ.com",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "69-72",
+      "spans": [["68.0", "71.2"]],
+      "notes": "Advertisement for the NURJ website, advertisement for undergraduate research at Northwestern (undergradresearch.northwestern.edu), and back cover pages with no text beyond page furniture."
+    }
+  ]
+}

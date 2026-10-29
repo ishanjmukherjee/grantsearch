@@ -1,0 +1,15 @@
+{"page": 13, "blocks": [
+["STARS Flight Demonstration #2"],
+["Figure1. Antenna and TDRS Pointing Vectors."],
+["Figure 2. Diagram of the ECEF Coordinate System."],
+["Explanation of Variables between the Aircraft and TDRS"],
+["The antenna on the aircraft must have a direct line-of-sight to TDRS, which is represented by the blue arrow in Figure 1. The vector is defined by azimuth (α) and elevation (ε) angles in the antenna platform coordinate system. The antenna’s actual pointing vector, represented by the red arrow and angles α′ and ε′, might differ from the desired vector pointing to TDRS. The angle δ represents the total angular difference between TDRS vector and the antenna pointing vector. To prevent inaccuracies, the antenna must have less than a 2° full-angle beamwidth in order to view TDRS."],
+["Coordinate Systems and Transformations"],
+["TDRS satellites are nearly geostationary in low-inclination orbits with known position represented as latitude, longitude, and altitude."],
+["The aircraft’s position is represented in the Earth-Centered Earth-fixed (ECEF) coordinate system with its attitude position defined by heading, pitch, and roll angles. The ECEF coordinate system has three axes labeled E, F, and G. The G-axis points from the center of the earth to the north pole (along the axis of rotation); the E-axis points from the center of the earth to the equator at the prime meridian; and the F-axis is derived from the E- and G-axes to be orthogonal, pointing into the Indian Ocean at the equator. See Figure 2."],
+["In order to generate the azimuth and elevation of the aircraft depicted in Figure 1, the TDRS latitude, longitude, and altitude, is first transformed into the ECEF coordinate system. This is necessary to get an accurate pointing vector to TDRS from the aircraft. Currently, we have the aircraft’s ECEF position, so performing this transformation will generate TDRS coordinates in the same coordinate system. If R_T is the distance from TDRS to Earth center for geosynchronous range, and φ_T and λ_T represent TDRS latitude and longitude, respectively, then"],
+["R⃗_EFG =( R_T cos φ_T cos λ_T ; R_T cos φ_T sin λ_T ; R_T sin φ_T )"],
+["These three values represent the E, F, and G coordinates of TDRSS, respectively. The first pointing vector can be found by subtracting the aircraft’s ECEF coordinates from the TDRS ECEF coordinates. The goal in performing the coordinate transformations is to be able to solve for exact azimuth and elevation angles between the aircraft and TDRS. Without this vector, the pointing algorithm would not be able to point the antenna correctly."],
+["12"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

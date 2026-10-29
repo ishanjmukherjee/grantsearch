@@ -1,0 +1,324 @@
+{
+  "slug": "2004-2005",
+  "running_heads": [
+    "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL",
+    "VOLUME 2, MAY 2005",
+    "STARS Flight Demonstration #2",
+    "REPORT",
+    "PROFILE IN RESEARCH"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "0.0",
+          "1.19"
+        ]
+      ],
+      "notes": "Cover (Volume 2, May 2005, featuring \"Cells in Motion: Characterizing motility of glioblastoma cells\", page 19) and the table of contents on page 1. The contents lists the three profiles and Michael P. Carney's report under Features and the seven other papers under Research."
+    },
+    {
+      "kind": "front matter",
+      "title": "Acknowledgments",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [
+        [
+          "2.0",
+          "2.1"
+        ]
+      ],
+      "notes": "Thanks to university offices and sponsors, the Faculty Review Board, faculty advisor Allen Taflove, contributors, Pentagon Publishing and the Office of Corporate Relations."
+    },
+    {
+      "kind": "front matter",
+      "title": "About NURJ",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [
+        [
+          "2.2",
+          "2.34"
+        ]
+      ],
+      "notes": "Masthead: editor Laura Hughes and staff, student and faculty review boards, publisher and advertising details, cover art and photography credits, mission statement and office contact details. Title from the contents page; the page itself has no heading for this part."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Editor",
+      "authors": [
+        "Laura Hughes"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [
+        [
+          "3.0",
+          "3.8"
+        ]
+      ],
+      "notes": "Addressed to the Northwestern research community and signed by Laura Hughes, Editor. Introduces the second annual edition, the review process and the three faculty profiles."
+    },
+    {
+      "kind": "other",
+      "title": "Submit to the Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [
+        [
+          "4.0",
+          "4.7"
+        ]
+      ],
+      "notes": "House advertisement (\"Do you have NURJ in you?\") calling for submissions for the 2006 publication."
+    },
+    {
+      "kind": "back matter",
+      "title": "",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [
+        [
+          "4.8",
+          "4.17"
+        ]
+      ],
+      "notes": "Advertisements from Schreiber Foods and Memorial Sloan-Kettering Cancer Center, on page 4 (before the profiles)."
+    },
+    {
+      "kind": "feature",
+      "title": "In Search of Biomaterials",
+      "authors": [
+        "Laura Hughes"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "5-6",
+      "spans": [
+        [
+          "5.0",
+          "6.15"
+        ]
+      ],
+      "notes": "Profile of Guillermo A. Ameer, Assistant Professor of Biomedical Engineering, including a sidebar of his credentials, image captions and a list of key research goals. Title as printed in the contents; the opening page styles it \"in SEARCH of BIOMATERIALS\"."
+    },
+    {
+      "kind": "feature",
+      "title": "Preventing the Next Plague",
+      "authors": [
+        "Alexander W. Hertel-Fernandez"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "7-8",
+      "spans": [
+        [
+          "7.0",
+          "8.9"
+        ]
+      ],
+      "notes": "Profile of Robert A. Lamb, John Evans Professor of Molecular and Cellular Biology and Howard Hughes Medical Institute investigator, on influenza and paramyxovirus research; includes a sidebar of his positions and an image caption. Title as printed in the contents; the opening page styles it \"preventing the next PLAGUE\"."
+    },
+    {
+      "kind": "feature",
+      "title": "The Logic Behind Lyrica",
+      "authors": [
+        "Paul Karagiannis"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "9-10",
+      "spans": [
+        [
+          "9.0",
+          "10.8"
+        ]
+      ],
+      "notes": "Profile of Richard B. Silverman, Charles Deering McCormick Professor of Chemistry, on the research behind pregabalin (Lyrica) and other enzyme inhibitors; includes a sidebar of his positions and image captions. Title as printed in the contents; the opening page sets it in capitals."
+    },
+    {
+      "kind": "research",
+      "title": "An Error Analysis of the Phased Array Antenna Pointing Algorithm for STARS Flight Demonstration #2",
+      "authors": [
+        "Michael P. Carney"
+      ],
+      "department": "DEPARTMENT OF ELECTRICAL ENGINEERING",
+      "advisors": [
+        "James C. Simpson"
+      ],
+      "printed_pages": "11-18",
+      "spans": [
+        [
+          "11.0",
+          "18.6"
+        ]
+      ],
+      "notes": "Labelled \"Report\" and listed under Features in the contents. Work done at NASA Kennedy Space Center; the opening page names James C. Simpson as \"MENTOR, LEAD: RANGE SYSTEMS AND DEVELOPMENT BRANCH, NASA KENNEDY SPACE CENTER, FLORIDA\". The paper has no reference list."
+    },
+    {
+      "kind": "research",
+      "title": "Characterizing Cell Motility of Cancerous Neuronal and Progenitor Cells",
+      "authors": [
+        "Kwan Y. Chen"
+      ],
+      "department": "DEPARTMENT OF BIOMEDICAL ENGINEERING",
+      "advisors": [
+        "Anjen Chenn"
+      ],
+      "printed_pages": "19-24",
+      "spans": [
+        [
+          "19.0",
+          "24.17"
+        ]
+      ],
+      "notes": "The cover story (\"Cells in Motion\"). The opening page names Anjen Chenn as \"FACULTY ADVISOR, PATHOLOGY, FEINBERG SCHOOL OF MEDICINE, NORTHWESTERN UNIVERSITY\"."
+    },
+    {
+      "kind": "research",
+      "title": "The Physics and Applications of Index Patterned Fabry-Pérot Lasers",
+      "authors": [
+        "James M. Rondinelli"
+      ],
+      "department": "DEPARTMENT OF MATERIALS SCIENCE AND ENGINEERING",
+      "advisors": [
+        "Eoin O’Reilly",
+        "Stephen O’Brien"
+      ],
+      "printed_pages": "25-32",
+      "spans": [
+        [
+          "25.0",
+          "32.17"
+        ]
+      ],
+      "notes": "Work done at the Tyndall Institute, Cork, Ireland. The opening page names Eoin O'Reilly as \"PRINCIPAL INVESTIGATOR, PHOTONIC RESEARCH GROUP, TYNDALL INSTITUTE, CORK, IRELAND\" and Stephen O'Brien as \"POST-DOCTORAL RESEARCHER\" in the same group."
+    },
+    {
+      "kind": "research",
+      "title": "Transverse Vibrating Modes of Resonance Wire Loop",
+      "authors": [
+        "Aysha Chowdhry",
+        "Elaine Tsao"
+      ],
+      "department": "DEPARTMENT OF PHYSICS & ASTRONOMY",
+      "advisors": [
+        "Arthur Schmidt"
+      ],
+      "printed_pages": "33-37",
+      "spans": [
+        [
+          "33.0",
+          "37.14"
+        ]
+      ],
+      "notes": "Title as printed on the opening page; the contents gives it as \"Transverse Vibrating Modes of a Resonance Wire Loop\". The opening page lists both authors under the Department of Physics & Astronomy and names Arthur Schmidt as \"CONTRIBUTOR & FACULTY MENTOR, DEPARTMENT OF PHYSICS & ASTRONOMY, NORTHWESTERN UNIVERSITY\"; the contents credits only Chowdhry and Tsao. Only Chowdhry has an entry in About the Contributors (History and Asian/Middle Eastern Studies, 2004)."
+    },
+    {
+      "kind": "research",
+      "title": "Decoupled Control for the Snakeboard",
+      "authors": [
+        "Benjamin Jay Stephens"
+      ],
+      "department": "DEPARTMENT OF MECHANICAL ENGINEERING",
+      "advisors": [
+        "Kevin M. Lynch"
+      ],
+      "printed_pages": "38-45",
+      "spans": [
+        [
+          "38.0",
+          "45.19"
+        ]
+      ],
+      "notes": "The opening page names Kevin M. Lynch as \"FACULTY ADVISOR, DEPARTMENT OF MECHANICAL ENGINEERING, NORTHWESTERN UNIVERSITY\". The Figure 6 caption is printed after the reference list on page 45."
+    },
+    {
+      "kind": "research",
+      "title": "Investigations of Nanoscale Ferromagnetism in InAs/InMnAs Core/Shell Nanowires Using Magnetic Force Microscopy",
+      "authors": [
+        "Dinna G. Ramlan"
+      ],
+      "department": "DEPARTMENT OF MATERIALS SCIENCE AND ENGINEERING",
+      "advisors": [
+        "Lincoln J. Lauhon"
+      ],
+      "printed_pages": "46-54",
+      "spans": [
+        [
+          "46.0",
+          "54.21"
+        ]
+      ],
+      "notes": "Title as printed on the opening page; the contents prints \"In/As/InMnAs\". The opening page names Lincoln J. Lauhon as \"FACULTY ADVISOR, MATERIALS SCIENCE AND ENGINEERING, NORTHWESTERN UNIVERSITY\". Pages 48 and 51 are full-page figures."
+    },
+    {
+      "kind": "research",
+      "title": "Removing Quantization Artifacts In Color Images Using Bounded Interval Regularization",
+      "authors": [
+        "Tom Yu Ouyang"
+      ],
+      "department": "DEPARTMENT OF COMPUTER SCIENCE",
+      "advisors": [
+        "Jack Tumblin"
+      ],
+      "printed_pages": "55-60",
+      "spans": [
+        [
+          "55.0",
+          "60.12"
+        ]
+      ],
+      "notes": "Title as printed on the opening page; the contents gives \"Removing Quantization Artifacts in Color Images Using Bound Interval Regularization\". The opening page names Jack Tumblin as \"FACULTY ADVISOR, DEPARTMENT OF COMPUTER SCIENCE, NORTHWESTERN UNIVERSITY\"."
+    },
+    {
+      "kind": "research",
+      "title": "Evaluating Sam: Iterative Design of a Story Listening System and Embodied Conversational Agent",
+      "authors": [
+        "Candice W. Tse"
+      ],
+      "department": "DEPARTMENT OF COMPUTER SCIENCE, DEPARTMENT OF COMMUNICATION STUDIES",
+      "advisors": [
+        "Justine Cassell"
+      ],
+      "printed_pages": "61-66",
+      "spans": [
+        [
+          "61.0",
+          "66.16"
+        ]
+      ],
+      "notes": "The opening page names Justine Cassell as \"FACULTY MENTOR, DEPARTMENT OF COMPUTER SCIENCE, DEPARTMENT OF COMMUNICATION STUDIES, NORTHWESTERN UNIVERSITY\"."
+    },
+    {
+      "kind": "back matter",
+      "title": "About the Contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "67",
+      "spans": [
+        [
+          "67.0",
+          "67.19"
+        ]
+      ],
+      "notes": "Short biographies of Aysha Chowdhry, Michael Carney, Kwan Y. Chen, Dinna Geraldine Ramlan, James M. Rondinelli, Benjamin Jay Stephens, Candice W. Tse and Tom Yu Ouyang, each with major and class year. Elaine Tsao has no entry."
+    }
+  ]
+}

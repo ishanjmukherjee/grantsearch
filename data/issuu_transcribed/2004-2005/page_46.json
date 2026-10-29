@@ -1,0 +1,22 @@
+{"page": 46, "blocks": [
+["By decoupling the input forces into steering and energy control, we simplified the snakeboard system to one that is simple to understand and control. Kinematically, the snakeboard was treated as a car-like robot in the plane, with the dynamics providing a near-constant velocity, accomplished by controlling the kinetic energy of the body. This is an example of how simple concepts can be combined for use in a complicated application such as the snakeboard."],
+["REFERENCES"],
+["1 A. Lewis, J. Ostrowski, R. Murray, J. Burdick, “Nonholonomic Mechanics and Locomotion: The Snakeboard Example,” IEEE Int. Conf. on Robotics Automat., May 1994, San Diego, CA,pp.2391-2400."],
+["2 J. Ostrowski, J. Burdick, A. Lewis, R. Murray, “The Mechanics of Undulatory Locomotion: The Mixed Kinematic and Dynamic Case,” Proc. IEEE Int. Conf. on Robotics and Automat., 1995, Nagoya, Japan."],
+["3 J. Ostrowski, “Computing Reduced Equations for Robotic Systems with Constraints and Symmetries”, IEEE Trans. on Robotics and Automat., 1999, vol 15:1, pp. 111-123."],
+["4 J. Cortes, S. Martinez, J. Ostrowski, and H. Zhang, “Simple Mechanical Control Systems with Constraints and Symmetries,” SIAM Journal on Control and Optimization, 2002, vol 41:3, pp. 851-874."],
+["5 F. Bullo, A. Lewis, “Kinematic Controllability and Motion Planning for the Snakeboard,” IEEE Trans. on Robotics and Automat., June 2003, vol 19:3, pp.494-498."],
+["6 R. Olfati-Saber, “Nonlinear Control of Uneractuated Mechanical Systems with Application to Robotics and Aerospace Vehicles,” Department of Electrical Engineering and Computer Science, Massachusetts Institute of Technology, Cambridge, MA, February 2001."],
+["7 Wang-Sang Koon, J.E. Marsden, “Optimal Control for Holonomic and Nonholonomic Mechanical Systems with Symmetry and Lagrangian Reduction,” SIAM Journal on Control and Optimization, 1997, vol 35:3, pp.901-929."],
+["8 S. Iannitti, K.M. Lynch, “Exact Minimum Control Switch Motion Planning for the Snakeboard,” IEEE/RSJ Conf. On Robotic Systems, Las Vegas, NV, Oct. 2003."],
+["9 P. Choudhury, B. Stephens, K.M. Lynch, “Inverse Kinematics-Based Motion Planning for Underactuated Systems,” IEEE Conf. Robotics Automat., 2004, New Orleans, LA."],
+["10 Patricio A. Vela, Kristi A. Morgansen, Joel W. Burdick, “Second Order Averaging Methods and Oscillatory Feedback Control of Underactuated Mechanical Systems,” Proc. IEEE American Control Conf., 2002, pp.4672-4677."],
+["11 Brockett, Roger W., “Asymptotic Stability and Feedback Stabilization,” Differential Geometric Control Theory, R. W. Brockett, R. S. Millman and H. J. Sussmann, eds., pp 181-191, Birkhauser, Boston, 1983."],
+["12 A. De Luca, G. Oriolo, C. Samson, “Chapter 4: Feedback control of a nonholonomic car-like robot,” Robot Motion Planning and Control, J.-P. Laumond Ed., Lectures Notes in Control and Information Sciences 229, pp. 171-253, Springer-Verlag London, 1998."],
+["13 Samson, C., Ait-Abderrahim, K., “Feedback control of a nonholonomic wheeled cart in cartesian space,” Proc. IEEE Int. Conf. on Robotics and Automat., April, 1999, Sacramento, California."],
+["14 V. Kanayama, V. Kimura, F. Miyazaki, and T. Noguchi, “A stable tracking control method for and autonomous mobile robot,” IEEE Conf. Robotics Automat., Cincinnati, OH, 1990, pp. 384-389."],
+["Figure 6. Experimental results on the mechanical snakeboard."],
+["VOLUME 2, MAY 2005"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["45"]
+]}

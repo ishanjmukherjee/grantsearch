@@ -1,0 +1,22 @@
+{"page": 32, "blocks": [
+["RESEARCH"],
+["potential routes that the water took to seep in and ruin the implant. The second and more probable route had been the void that originated around the joint. When the silicone in this sample had cured, there were several air bubbles next to the PCB plate. One of these bubbles had been close to the solder joint that failed, so a logical conclusion would be that it had allowed moisture to creep in and expand the bubble, creating a damaging void."],
+["When Sample 1 was taken out of the saline solution and visually analyzed, there appeared to be a wearing down of the meander track. This had occurred around the bends of the meander and was very noticeable in the upper right corner of the chip. Also, the same bright blue oxidative residue was visible. These two factors create the impression that the sample had also failed due to corrosion as the circuitry was eaten away. However, it is interesting to note that although upon visual inspection these problems were clear, they had no affects on the resistance readings. This is due to the fact that failure had not yet achieved its optimal destruction and would still damage the chip more before the resistance values were affected. The failure of Sample 2 is probably due to the fact that the back of the chip had not been glued down. Also, when the silicone covering was applied, it was applied at a higher pressure of 30 psi, making the silicone cover the chip faster, but also allowing more air bubbles to form.  The performance results of all samples are summarized in Table 1."],
+["IV. CONCLUSIONS"],
+["The goal of this project was to create a silicone-encapsulated test chip similar to those used in the biomedical industry and test it over a period of six weeks in a near-body environment using a constant bias to accelerate failure. The fact that only one of the six test samples failed over the course of testing period demonstrates that silicone encapsulated implants can become successful biomedical devices. However, there are still several improvements that could be done in the future. One such improvement could be redesigning the mold. Currently, the mold is designed so that the holes are only small enough for the wires to come out of it. It can be improved by making the holes larger. This will allow a small amount of silicone to fill the holes and spread along the length of the wire, creating a small airtight sleeve."],
+["Despite the necessary future improvements, silicone-encapsulated implants are a major breakthrough in the field of biomedical engineering.  Whether correcting cardiac arrhythmia or sending impulses to stimulate petal nerves and muscles, these implants have the potential of revolutionizing healthcare and patient comfort. If successful, they will eliminate the staggering costs and patient discomfort associated with metallic implants."],
+["Acknowledgements"],
+["The author would like to thank Mr. Frank Stam and the Tyndall National Institute for allowing him to spend the summer in Cork, Ireland working on this project. He would also like to thank Northwestern University for giving him the chance to pursue his interests in the field of biomedical engineering."],
+["REFERENCES"],
+["1. Donaldson, P.E.K. Aspects of silicone rubber as encapsulant for neurological prostheses: Osmosis. Med & Biol. Eng& Comp. (1995)."],
+["2. Donaldson, P.E.K. Aspects of silicone rubber as encapsulant for neurological prostheses: Adhesion to Binary Oxides.  Med & Biol. Eng& Comp.  (1995)."],
+["3. Donaldson, P.E.K. The essential role played by adhesion in the technology of neurological prostheses. J. Adhesion and Adhesives Vol 16. #2. 105-107 (1996)"],
+["4. Ellis, B.N. Cleaning and Contamination of Electronics Components. 142-150 (1986)"],
+["5. Hench, L. Jones, J. Biomaterials, artificial organs and tissue engineering CRC Press ; Cambridge, England. 2005"],
+["6. Hodgkinson, D. Contour restoration of the upper limb using solid silicone implants. Springer Science, Volume 30, Number 1. New York, 2006."],
+["7. Ratner, B. Biomaterials science: an introduction to materials in medicine. Elsevier Academic Press, Boston. 2004"],
+["8. Wendt, D. [et al] Factors that influence elastomeric coating performance. California Polytechnic State University, San Luis Obispo. 2006"],
+["VOLUME 3, MAY 2006"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["31"]
+]}

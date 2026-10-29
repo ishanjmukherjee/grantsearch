@@ -1,0 +1,17 @@
+{"page": 25, "blocks": [
+["26"],
+["NURJ"],
+["from the surface normals description to a spherical coordinates and plotted, as shown in Figure 4. The solution for the equilibrium particle shape is the Wulff construction, the shape described by the inner envelope of planes normal to the plot of interfacial energy.¹¹ The degree of anisotropy is controlled by the ε₄ parameter – changing its value (Eqn. 11) changes the shape of the interfacial energy plot. Once ε₄ has been set, the interfacial energy description can be used in Cahn-Hilliard dynamics (Eqn. 1)."],
+["(a) Quantum ring photographed with AFM in a CdTe/ZnTe system"],
+["(b) simulation of a mound at the center of a smooth film produced a quantum ring."],
+["Fig. 3 A quantum ring was observed experimentally (a) and simulated (b) by placing a mound in the middle of a smooth thin film and allowing the system to evolve"],
+["Fig. 4 Interfacial energy ε, for ε₄ = 0.20"],
+["Unfortunately for values of ε₄ > 1/15, the plot of 1/ε becomes non-convex at certain points, creating an instability in the evolution equation then requires regularization of the interfacial energy. A common tangent construction is performed on the 1/ε to eliminate the concave regions, providing an interfacial energy that yields accurate particle shapes.⁹"],
+["The focus of the work in three-dimensional anisotropic simulations is to develop a regularized interfacial energy that produces a numerically stable solution. Fiero et al.¹² produced a stable anisotropic interfacial energy through a process of convexification of the polar plot of 1/ε. Convexified interfacial energy in two dimensions solution was developed by Eggleston, McFadden, and Voorhees.⁷ Tangent lines are drawn on each side of the 1/ε plot, and regions where the plot is concave are"],
+["replaced with the tangent lines. 2D and 3D regularized shapes are shown in Figure 5. Although the approach to regularize the 3D shape is the same as in 2D, the 3D regularization is much more complicated since the edges of the shape are concave in addition to the faces. Tangent planes are drawn on each face and around the edges of the 1/ε plot, as illustrated in Figure 6 (b-c). The shape is then “inflated” within the bounds imposed by the tangent planes. The resulting convexified interfacial energy is shown in Figure 6 (d). Unlike the solution for 2D which is relatively simple, the 3D regularization solution is a 7-way piecewise function which was calculated using Maple, a symbolic manipulation software package. The mathematical solution is long and will not be presented in this paper."],
+["VI. Anisotropic particle Equilibrium Shapes"],
+["Stress-free anisotropic particle equilibrium shape results are shown in Figure 7 and compared with results from Eggleston’s 2D code. The 2D and 3D code produce qualitatively similar results. The initial conditions in 2D were a circular particle and in 3D a spherical particle was used. The case where ε₄ = 0 is the isotropic interfacial energy case, and, as expected, the equilibrium shape is a circle or sphere. As ε₄ is increased, flat faceted faces and cusps are observed to develop."],
+["(a) Polar plot showing 2D regularization of ε (ε₄ = 0.20)⁷"],
+["(b) spherical plot of regularized ε (ε₄ = 0.20) in 3D."],
+["Fig. 5 Comparison of the 2D regularized ε plot to the 3D regularized plot"]
+]}

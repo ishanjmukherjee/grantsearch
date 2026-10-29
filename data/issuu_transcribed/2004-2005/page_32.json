@@ -1,0 +1,12 @@
+{"page": 32, "blocks": [
+["The treatment used to find slot positions when a zero of the modulation amplitude function lies in the domain of the device is now presented. The slot positions to the left of the device center, −1/2 < ε_j < 0, are generated similarly to those in the symmetric case; as is expected, the slot pattern resembles the reconstruction of the Fourier spectrum and fills the entire cavity. The right section of the device requires an extension of Equation II.6 to compensate for the divergence in [f(x)]⁻¹. Evaluation of two integrals over the domains 0 < ε_j < ξ − L̂_j and ξ + L̂_j < ε_j < 1/2 given by"],
+["Σ_{n=0}^{a/2} ∫_{ε_min}^{ε_max} [f(x)]⁻¹ Γ(x − n/a) dx , (III.4)"],
+["yield the necessary normalization coefficients used in Equation II.6. A finite number of slots are then selected to fill the entire right cavity. These slots are distributed with the normalization coefficients such that they lie before or after ξ. Again, two evaluations of Equation II.6 are necessary to give the correct slot positions where ε_min = 0 and ξ + L̂_j/2 respectively."],
+["As seen in Figure 6, the slot density function diverges at ε = 0.469 and consequently, concentrates slots near that value; while the left side of the device appears to be regularly distributed. This behavior, in contrast to uniform gratings, supports the rationale for treating the left and right sides of the device independently so that a maximum number of slots can be introduced providing the improved spectral purity. Similar to DEVICE 1, the slot position requirement here, near ξ, limits the number of slots that can be introduced. Although this results in a poor sampling of the object spectrum on the right of the device, an approximate 2 cm⁻¹ mirror loss reduction is resolved for the principle wavelength. This work suggests that patterning the refractive index cavity may be a better approach for achieving spectral pure AR-HR THz devices than utilizing a continuous grating for an index-coupled DFB laser as developed by Mahler, et al, for devices where κ̄L ~ 1 .⁴"],
+["Comparatively, the complex-coupled DFB fabricated by Mahler, et al, achieved single-mode operation with an increase in the"],
+["Figure 6. Object slot density function (upper) and laser cavity schematic (lower) for AR/HR laser."],
+["Figure 7. Mirror losses for the AR/HR laser cavity with 33 slots. The horizontal line is at the value of mirror losses of the plain FP cavity."],
+["VOLUME 2, MAY 2005"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["31"]
+]}

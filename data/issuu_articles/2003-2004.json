@@ -1,0 +1,118 @@
+{
+  "slug": "2003-2004",
+  "running_heads": [
+    "NURJ"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["0.0", "1.11"]],
+      "notes": "Cover (Volume One, May 2004) and table of contents. The contents lists eight articles with their authors, advisors and advisors' institutions."
+    },
+    {
+      "kind": "front matter",
+      "title": "Volume 1, May 2004",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [["2.0", "2.26"]],
+      "notes": "Masthead: NURJ office address and contacts, editor (Rebecca E. Lehotzky), student staff, student review board, faculty advisor (Allen Taflove) and faculty editorial board with departments."
+    },
+    {
+      "kind": "research",
+      "title": "Dendritic Morphology in Coarsened Microstructures",
+      "authors": ["Erhan Altinoglu"],
+      "department": null,
+      "advisors": ["P.W. Voorhees"],
+      "printed_pages": "5-10",
+      "spans": [["3.0", "8.11"]],
+      "notes": "Advisor named on the contents page (\"Advisor: P.W. Voorhees, Northwestern University\") and in the acknowledgements. Two consecutive paragraphs on printed page 8 both begin \"Coarsening to 5 days has a marked influence on interfacial orientation\" and describe Figure 8 in different words; the duplication is in the printed page. Two figure captions are both numbered Fig. 13 as printed."
+    },
+    {
+      "kind": "research",
+      "title": "Snail Kite Rostrhamus sociabilis Accipitridae size and color selectivity of Apple Snail Pomacea flagellata Ampullaridae",
+      "authors": ["Alissa Genthon", "Natalia Corrales"],
+      "department": null,
+      "advisors": ["J. Mauricio Garcia-C."],
+      "printed_pages": "11-15",
+      "spans": [["9.0", "13.21"]],
+      "notes": "Field study in Palo Verde National Park, Costa Rica. Advisor named on the contents page (\"Advisor: J. Mauricio Garcia-C., Duke University\"); the acknowledgements add the Organization for Tropical Studies in Costa Rica."
+    },
+    {
+      "kind": "research",
+      "title": "Electro-Active Polymer Research for LIMS Applications",
+      "authors": ["Raphael Anstey"],
+      "department": null,
+      "advisors": ["James Colgate"],
+      "printed_pages": "16-22",
+      "spans": [["14.0", "20.21"]],
+      "notes": "Research for Northwestern's Laboratory for Intelligent Mechanical Systems (LIMS). Advisor named on the contents page (\"Advisor: James Colgate, Northwestern University\") and in the acknowledgements. The first sentence of section II repeats the phrase \"In light of the end goal of creating a large-scale\" as printed."
+    },
+    {
+      "kind": "research",
+      "title": "Phasefield Simulations and Visualizations in 3D",
+      "authors": ["Daniel A. Cogswell"],
+      "department": null,
+      "advisors": ["P.W. Voorhees", "Katsuyo Thorton"],
+      "printed_pages": "23-30",
+      "spans": [["21.0", "28.14"]],
+      "notes": "Advisors named on the contents page (\"Advisors: P.W. Voorhees and Katsuyo Thorton, Northwestern University\") and in the acknowledgements, which spell the title \"Phasefield Simulizations and Visualizations in 3D\"."
+    },
+    {
+      "kind": "research",
+      "title": "The Characterization of CAR-1 Protein",
+      "authors": ["Katrina Chuang"],
+      "department": null,
+      "advisors": ["Ann M. Killary", "Steven T. Lott"],
+      "printed_pages": "31-34",
+      "spans": [["29.0", "32.23"]],
+      "notes": "The byline on the paper reads \"Katrina Chuang\"; the contents page and acknowledgements spell the name \"Katrina Chaung\". Advisors named on the contents page (\"Advisors: Ann M. Killary and Steven T. Lott, University of Texas M.D. Anderson\") and in the acknowledgements (University of Texas M.D. Anderson Cancer Center). Figure captions jump from Fig. 5 to Fig. 7 as printed."
+    },
+    {
+      "kind": "research",
+      "title": "GaN Based p-i-n Personal Ultraviolet Photodetection Device",
+      "authors": ["Derek Shiell", "Ryan McClintock", "Alireza Yasan"],
+      "department": null,
+      "advisors": ["Manijeh Razeghi"],
+      "printed_pages": "35-37",
+      "spans": [["33.0", "35.20"]],
+      "notes": "Advisor named on the contents page (\"Advisor: Manijeh Razeghi, Northwestern University\") and in the acknowledgements."
+    },
+    {
+      "kind": "research",
+      "title": "Fabricating a sensor to measure the material flow in sheet metal forming process and characterizing its behavior in a simulated lab setup",
+      "authors": ["Numpon Mahayotsanun"],
+      "department": null,
+      "advisors": ["Jian Cao", "Michael Peshkin"],
+      "printed_pages": "38-43",
+      "spans": [["36.0", "41.19"]],
+      "notes": "Advisors named on the contents page (\"Advisors: Jian Cao and Michael Peshkin, Northwestern University\") and in the acknowledgements, which spell the author \"Numpoon Mahayotsanun\". Includes three appendices of figures (previous prototype results, current setup results, circuit diagram). Two section headings are both numbered III as printed."
+    },
+    {
+      "kind": "research",
+      "title": "Quantum Dot Infrared Photodetectors grown by low pressure metalorganic chemical vapor deposition",
+      "authors": ["Tom Sills"],
+      "department": null,
+      "advisors": ["Manijeh Razeghi"],
+      "printed_pages": "44-47",
+      "spans": [["42.0", "45.14"]],
+      "notes": "Advisor named on the contents page (\"Advisor: Manijeh Razeghi, Northwestern University\") and in the acknowledgements."
+    },
+    {
+      "kind": "front matter",
+      "title": "Acknowledgements",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["46.0", "46.23"]],
+      "notes": "Last page of the volume. Thanks the Office of the Provost, the faculty review board, the faculty advisor, the cover image providers, and each article's authors and advisors with their institutions."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{"page": 14, "blocks": [
+["REPORT"],
+["The latitude, longitude, and altitude of the aircraft are then required to complete the first coordinate transformation. If φ, λ, and h are the geodetic latitude, longitude and altitude, respectively, of the aircraft, and E, F, and G are the GPS ECEF coordinates, then"],
+["φ_A = tan⁻¹(ξ G / √(E² + F²))", "λ_A = tan⁻¹(F / E)", "h_A = √(E²+F²+G²) − a√(1 − e² sin²φ) ,"],
+["where the following WGS-84 values were used:"],
+["ξ = 1.006729429 ≈ a²/b²", "a = Earth equatorial radius = 6378137 m", "b = Earth polar radius = 6356752.3142 m", "e² = eccentricity squared = 0.00669437999014132"],
+["This vector can now be transformed from the ECEF coordinate system to the Local Horizontal Coordinate System. This coordinate system is also called the earth-fixed axis or the geographic coordinate system. One axis points to the north, one to the east, and one axis is either up or down. See Figure 3. For this application we will be using the north-east-up method (NEU). The local horizontal system is related to the ECEF system through latitude, longitude, and altitude."],
+["Since R⃗_EFG and φ_A and λ_A were previously defined, the NEU position vector is:"],
+["R⃗_NEU = Φ R⃗_EFG"],
+["where"],
+["Φ = ( −cos λ_A sin φ_A   −sin λ_A sin φ_A   cos φ_A ; −sin λ_A   cos λ_A   0 ; cos λ_A cos φ_A   sin λ_A cos φ_A   sin φ_A )"],
+["The NEU position vector coordinates, found above, are then rotated through the heading, pitch, and roll angles of the aircraft. The new coordinates formed by this rotation are in the Body-Axis coordinate system, also known as the body platform coordinate system. It is a right-handed system with x-axis forward, y-axis to the right, and z-axis pointed down. See Figure 4. This coordinate system is related to the local horizontal system through the heading, pitch, and roll angles of the aircraft. The azimuth and elevation cannot be found without integrating the attitude data of the aircraft, and this transformation accomplishes this."],
+["Figure 3. Local Horizontal Coordinate System Diagram."],
+["Figure 4. Body-Axis Coordinate System Diagram."],
+["VOLUME 2, MAY 2005"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["13"]
+]}

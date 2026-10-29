@@ -1,0 +1,11 @@
+{"page": 12, "blocks": [
+["REPORT"],
+["An Error Analysis of the Phased Array Antenna Pointing Algorithm for STARS Flight Demonstration #2"],
+["Michael P. Carney", "DEPARTMENT OF ELECTRICAL ENGINEERING"],
+["James C. Simpson", "MENTOR, LEAD: RANGE SYSTEMS AND DEVELOPMENT BRANCH,", "NASA KENNEDY SPACE CENTER, FLORIDA"],
+["Introduction"],
+["Space-Based Telemetry and Range Safety (STARS) is a multicenter National Aeronautics and Space Administration (NASA) project to determine the feasibility of using space-based assets, such as the Tracking and Data Relay Satellite System (TDRSS) and Global Positioning System (GPS), to increase flexibility (e.g. increase the number of possible launch locations and manage simultaneous operations) and to reduce operational costs by decreasing the need for ground-based range assets and infrastructure. When a rocket is launched, a series of ground stations monitors its progress into space for the first 8.5 minutes of its flight. These ground stations use radar, which has far less range than TDRS and GPS. Therefore, multiple ground stations are required to monitor the flight, which leads to high maintenance costs. These costs would be greatly reduced through the use of STARS equipment; essentially, the launch vehicle will monitor its own position and attitude and transmit it through TDRS to a single ground station. The STARS project includes two major systems: the Range Safety and Range User systems. The latter system uses broadband communications (125 kbps to 500 kbps) for voice, video, and vehicle/payload data. Flight Demonstration #1 revealed the need to increase the data rate of the Range User system. During Flight Demonstration #2, a Ku-band phased-array steerable antenna will generate a higher data rate and will be designed with an embedded pointing algorithm to guarantee that the antenna is pointed directly at TDRS. This algorithm will utilize the onboard position and attitude data to point the antenna to TDRS within a two-degree full-angle beamwidth. This report investigates how errors in aircraft position and attitude, along with errors in satellite position, propagate into the overall pointing vector."],
+["VOLUME 2, MAY 2005"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["11"]
+]}

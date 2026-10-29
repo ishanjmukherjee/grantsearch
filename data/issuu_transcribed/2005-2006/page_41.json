@@ -1,0 +1,16 @@
+{"page": 41, "blocks": [
+["RESEARCH"],
+["Enhancing DNA Detection: Small-Molecule DNA Hybrid Model Studies"],
+["Dorothea Li Feng Koh", "DEPARTMENT OF BIOMEDICAL ENGINEERING"],
+["Brian R. Stepp", "GRADUATE STUDENT MENTOR, DEPARTMENT OF CHEMISTRY"],
+["SonBinh T. Nguyen", "FACULTY ADVISOR, DEPARTMENT OF CHEMISTRY"],
+["The synthesis and characterization of a series of model compounds designed to simulate the core structure of small-molecule DNA hybrids (SMDHs) is described.  Two different model compounds were synthesized using a solid-phase coupling technique: either benzyl alcohol or diphenylacetylene alcohol was first coupled to phosphoramidite and then to tetrahydrofurfuryl alcohol before being oxidized to the corresponding benzyl phosphates.  Both compounds were then subjected to a series of timed simulations designed to mimic the ammonium hydroxide deprotection step involved in the coupling of DNA to a small molecule and the subsequent exposure to UV irradiation that occurs during purification by HPLC or SDS-PAGE.  With this strategy, we were able to demonstrate their robustness in the presence of concentrated ammonium hydroxide and under strong UV irradiation.  Significantly, their stability as monomers underscores the overall stability of polymer-DNA hybrid materials that have been applied as a highly sensitive method for electrochemical DNA detection."],
+["I. INTRODUCTION"],
+["Recent advancements in biomedical genetic research have led to the identification of specific genes which underlie complex and late-onset diseases.¹,² Early diagnosis and detection of debilitating diseases such as Parkinson's, Alzheimer's, and Huntington's, offers patients the option of early treatment, and enables them to live longer and healthier lives.  A crucial component of such preventive treatment, however, involves the reliable detection of disease-causing genes."],
+["Many genetic diseases are often the result of faulty gene sequences caused by mutations. Accordingly, the detection of single-nucleotide polymorphisms (SNPs) in sequence-specific DNA strands has been crucial in the development of highly sensitive DNA assays.  Current detection systems probe the presence of target DNA strands using a wide range of signaling mechanisms that include radioactivity, fluorescence, colorimetry, and electrochemistry to indicate the presence of target strands.³⁻⁵  Among these, electrochemical assays offer distinct advantages over other strategies due to their rapid detection, high"],
+["sensitivity, and inherent ability to be engineered into affordable chip-based DNA biosensors.⁶"],
+["Recently, the Nguyen group reported a novel electrochemical method for DNA detection through the use of polymer-DNA hybrid materials (Figure 1).⁷ They established that the specificity of DNA detection is greatly enhanced when multiple DNA strands are"],
+["Figure 1.  A schematic drawing of a polymer-DNA hybrid.  The vertical line represents the organic polymer chain.  The helical lines on the side represent single DNA strands."],
+["40"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

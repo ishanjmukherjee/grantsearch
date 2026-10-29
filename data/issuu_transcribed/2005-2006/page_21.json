@@ -1,0 +1,12 @@
+{"page": 21, "blocks": [
+["RESEARCH"],
+["Figure 5. Plots showing the values, mean ± standard deviations, and CVs for the qCBV and rCBV of low grade, high grade, and metastatic tumors using GE and SE images."],
+["deviation), while in the vascular area of the lesion, the mean was 8.25 ± 4.80 mL/100 g. The SE pulse sequence showed a mean of 1.72 ± 0.67 mL/100 g for WM and 7.57 ± 5.26 mL/100 g for the lesion."],
+["The GE results seem to show a better separation between qCBV in WM and the lesion because of lower variability in the lesion measurements. This is seen by the higher standard deviation for the SE lesion and the box plots in Figure 3. In addition, the histograms (Figure 4) show that most WM perfusion measurements stay fairly low and around the same values, while the lesion measurements are much more spread out."],
+["qCBV in High Grade vs. Low Grade Tumors"],
+["When comparing the quantitative and relative measurements in tumors, the separation between low grade and high grade tumors seems very similar. For GE sequence, the difference between high grade and low grade tumors is about 4.1 mL/100 g for qCBV measurement and 3.56 for rCBV. For the SE sequence, the difference is 1.27 mL/100 g for qCBV and 1.60 for rCBV. Another important result is that the separation between the two types of tumors is much more significant using GE rather than SE."],
+["Despite this similarity between relative and quantitative measurements, the quantitative measurements show a lower coefficient of variance (CV), especially in the case of high grade tumors. The CV for the rCBV of high grade tumors is 96.8% for GE and 77.4% for SE. Meanwhile, the CV for the qCBV of high grade tumors is 80.0% for GE, a 16.8% drop, and 51.2% for SE, a 26.2% drop."],
+["While the data seems similar between rCBV and qCBV for high grade and low grade tumors, the metastatic tumors showed a significant difference between quantitative and relative measurements. As seen in Figure 7, the relative measurements have a much lower mean as well as standard deviation for rCBV measurements in these tumors."],
+["20"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

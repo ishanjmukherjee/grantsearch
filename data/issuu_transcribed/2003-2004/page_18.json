@@ -1,0 +1,20 @@
+{"page": 18, "blocks": [
+["NURJ"],
+["19"],
+["Apparatus Number Two"],
+["To create the frame for such a device, square metal pipes with roughly 8 cm sides were cut into cross-sections about 1 cm thick. The VHB was then stretched over this frame to create pre-strain in square geometry. Building off the apparatus suggested by Prof. Colgate, conductive carbon grease from MG Chemicals was used to create the compliant electrodes needed to transport the high voltage and not oppose any resulting motion. A square paper stencil with a roughly 1 cm² hole ensured that the grease would be slathered in an orderly fashion consistent with frame geometry. This stencil was applied to both sides of the VHB to create the active area that would hopefully expand and contract. Thin lines of grease that would not be active (as they would be applied to only one side of the VHB) were extended beyond the active area in order to connect with copper strips that carried the high voltage. Figure 3 shows this set-up from a birds-eye-view."],
+["Fig. 3 Mechanical Apparatus in “Drum” configuration"],
+["The active area is clearly seen in the center of the frame with intermediate grease lines supplying voltage from the copper strips. The grayish bands inside the metal frame are simply pieces of duct tape used to secure the stretched polymer and insulate the metal frame from the bottom copper strip."],
+["The next logical step would be to apply voltage. Though the expectation was for some sort of motion, initial observations saw no movement of the active region. A closer look through a magnifying device indicated that there actually was some movement on a sub-millimeter scale. A step forward had been achieved, but the literature had to be consulted to facilitate real results."],
+["Upon review, we learned that the field strength (Voltage/ Thickness of VHB) used was over 30 times smaller than that used in literature.⁶ Contributing to this difference is the fact that Pelrine used voltages that “were typically 4 to 6kV” in addition to smaller thicknesses achieved in the polymer by pre-strain.⁶"],
+["This knowledge compelled the ordering of a thinner version of the acrylic polymer known as VHB 3905, which is the exact same material as VHB 3910, except the 3905 is 0.02 inches thick as opposed to the 3910 which is 0.04 inches thick."],
+["Subsequent testing with the thinner polymer in hand caused significant motion, as can be seen in the photos of the initial crude apparatus in Figure 4."],
+["Voltage = 0", "Voltage = 2,000"],
+["Fig. 4 2,000 Volts causes the EAP to expand in the active regions (black greased centers)"],
+["Numerically, the film thickness after pre-strain shrank to a 2.1 thousandths of an inch (53.34 microns). If 2,000 volts is applied and electric field as in Equation 2:"],
+["E = V/t (Eqn. 2)"],
+["Where E is the field, V is voltage and t is thickness, then it follows that a field of 2,000/53.34 = 37.50 V/μm acted on the polymer. This field, in turn created a 15% average linear expansion of the active region as well as a 23.2% increase in area. These percentages were calculated by roughly estimating the active region to be a rectangle."],
+["Although the thinner VHB provided evident progress, it also proved incredibly fragile as the material would very frequently tear under pre-strain or the stress of activation. As a result, a more durable solution was sought."],
+["Final Apparatus Considerations"],
+["In order to return to the thicker, more reliable VHB 3910 and still get results, an increase in voltage would be necessary. To accomplish this, a new high voltage source was purchased from EMCO High Voltage Company. This new model, the E70, is capable of 0 to ± 7,000 volts and actually uses less capacitive filtering than the E20. As discussed earlier, capacitance directly correlates with danger to the researcher, and the E70 does indeed meet safety specifications."]
+]}

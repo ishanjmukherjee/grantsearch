@@ -1,0 +1,19 @@
+{"page": 37, "blocks": [
+["Fabricating a sensor to measure the material flow in sheet metal forming process and characterizing its behavior in a simulated lab setup"],
+["By Numpon Mahayotsanun"],
+["Abstract"],
+["One of the major processes in automobile manufacturing is sheet metal forming. This process is broadly used due to its high degree of design flexibility and low cost. In the sheet metal forming process, draw-in (deformation of punched sheet metal) frequently occurs and lessens the effectiveness of the process. Currently, monitoring and controlling draw-in during each stamping operation is unfeasible, time-consuming, and used only in laboratory settings. However, one of our previous prototypes was developed to monitor draw-in by using Micro-Electro-Mechanical Systems (MEMS) and produced elaborate results. Our goal is to design a draw-in sensor that will provide high sensitivity in monitoring; ease of setup, measurement and controlling; and eventually be implemented in industry. Based on our previous prototype, we consider physical factors that affect the relationship of the results and examine what dimension of the transducer provides the highest sensitivity. The results show good linearity and insensitivity to pulling speed and starting position of a sheet metal. One major finding of the results was the effect of material type to sensitivity since the draw-in sensor provides high sensitivity to aluminum but low sensitivity to steel. In addition, the induction of the transducer can be affected by the movement of the blank holder. The invention, implementation, and integration of the draw-in sensor will have an enormous impact on revolutionizing the stamping process and provide solid ground for process variation and uncertainty studies."],
+["I. Introduction"],
+["Sheet metal forming is one of the predominant processes in the manufacture of automobiles, and widely employed in the manufacture of aircraft, appliances, beverage cans and many other products. Integrating the recent advances micro-sensing and IT technologies to sheet metal forming process will make the stamping tool a smart one; for instance, one that can sense the material movement inside the forming press and make intelligent adjustment to maximize material’s potentials. In order to reach the aspiration, we aim to develop a novel draw-in sensor which can accurately measure material flow in the clamped area in real-time process. The results can be used to exactly quantify process variations in"],
+["sheet metal stamping and further used for process control to reduce product disparities. Additionally, new product and process designs can be created based on the quantified and referenced variations."],
+["II. Background"],
+["Draw in"],
+["Typically, draw-in occurs in the sheet metal forming process: This process is performed by placing a sheet-metal blank over a die cavity and then pushing the metal into the opening with a punch, as seen in Figure 1."],
+["Fig. 1 A cross-section schematic of sheet metal forming process"],
+["Fig. 2 The original and final blank shapes in an irregular blank forming A, B, C, and D show the four corners"],
+["Figure 2 illustrates uneven draw-in distribution. “Draw-in” is the amount of blank edge movement. Commonly, the occurrence of tearing or wrinkling, and the draw-in is caused by the blank holder force.²⁻⁴"],
+["Linear Variable Differential Transformer"],
+["One of the MEMS technologies that we use is Linear Variable Differential Transformer (LVDT). This machine is commonly used for translating the displacement into an AC voltage that is a linear function of displacement. Basically, the LVDT consists of primary and secondary coils wound on an air core, and a moveable armature that controls the electrical coupling between them."],
+["38"],
+["NURJ"]
+]}

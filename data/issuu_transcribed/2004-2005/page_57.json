@@ -1,0 +1,41 @@
+{
+ "page": 57,
+ "blocks": [
+  [
+   "Figure 1. A coarsely quantized image with Q = 16."
+  ],
+  [
+   "The noticeable banding in the sky in Figure 1 is a result of coarse color quantization, shown with Q = 16 per color channel. Bands sometimes occur where there are large regions of gradual intensity change in the original unquantized image. When these smooth regions are quantized, the resulting visual effect can be an abrupt and isolated step or “contour” in the displayed image, where pixels on one side of the step are assigned to one quantization level and pixels on the other side are assigned to a neighboring level. We refer to this effect as contouring."
+  ],
+  [
+   "Fortunately, most images available today are stored with enough quantization levels that visible contouring is rare on ordinary CRT or liquid crystal displays (LCD). While these images usually do not reveal quantizing artifacts on standard displays, 8-bit contouring can appear on High Dynamic Range (HDR) displays or in cinema and film applications. As higher contrast displays become more common in professional and consumer markets, this problem will become more prominent. This paper proposes a novel method that repairs contouring due to quantization in digital images."
+  ],
+  [
+   "II. MOTIVATION"
+  ],
+  [
+   "Repairing quantization errors falls under the broader category of image restoration and reconstruction methods, which attempt to recover an undistorted ideal image u(x, y) from a distorted observed image z(x, y), where (x, y) represent bit coordinates in the image, which we will refer to simply as u and z. Anisotropic Diffusion Filtering¹"
+  ],
+  [
+   "is an iterative method for reducing noise levels while retaining important image information. It relies on measurements of the intensity changes to determine the degree of smoothing to be applied for the given region. Any intensity gradient above a given threshold is considered an edge that exists in the ideal image and is preserved or even enhanced. Given enough iterations, this methods generates solutions that may be smooth, but introduces unwanted blurring and loss of image features even when an appropriate edge threshold is chosen, as shown in Figure 2a. Since sharp edges are preserved by the gradient threshold, this over-smoothing occurs in regions of gradual intensity change."
+  ],
+  [
+   "Regularization methods approach image restoration by using prior information about the ideal image (i.e. piecewise or global smoothness) to iteratively improve their estimate of the solution. They also restrict their search to solutions which closely match the observed input z. Tikhonov Regularization²,³ generates an estimate for the ideal image u by minimizing the cost functional E:"
+  ],
+  [
+   "E = ∫ λR(u) + ( u – z )² du (1)"
+  ],
+  [
+   "The first term R(u), also know as the regularization functional, measures how well the estimate u satisfies the prior knowledge about the ideal image. The second term (u – z)² measures the deviation from the observed image. The constant λ controls the balance between the regularization cost and the deviation cost. A common choice for R(u) is |∇u|², which penalizes roughness and favors images that are globally smooth. One improvement to this method is Edge Preserving Regularization,⁴ which modifies the regularization functional to prevent it from smoothing across sharp edges that should be preserved. Another regularization method, Total Variation⁵ uses |∇u| as the regularization functional and usually performs better than the quadratic functional at preserving edges."
+  ],
+  [
+   "A feature of regularization methods is that the cost functional E penalizes any deviation from the observed data. While this penalty works very well for random noise, it can pose a problem when dealing with contouring due to quantization."
+  ],
+  [
+   "56"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ]
+ ]
+}

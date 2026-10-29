@@ -1,0 +1,20 @@
+{"page": 28, "blocks": [
+["NURJ"],
+["29"],
+["9 shows a polygon-reduced dendrite reconstruction rendered in SimulationView, which has been colored by Gaussian curvature. The curvature calculations on the simplified models agree closely with the values calculated on the large models."],
+["(a) 125,000 polygons"],
+["(b) 50,000 polygons"],
+["(c) 10,000 polygons"],
+["(d) 5,000 polygons"],
+["(e) 1,000 polygons"],
+["Fig. 8 Polygon reduction of a directionally cooled Sn-Pb dendrite reconstruction rendered in SimulationView"],
+["Fig. 9 Dendrite colored by Gaussian curvature. Blue areas denote areas of high negative curvature, red areas denote areas of high positive curvature."],
+["IX. Conclusion"],
+["With recent advances in computing power, the impact of computation and simulation is increasing rapidly. Simulations that predict phenomenon and can be used to guide physical experimentation in the laboratory are invaluable because simulations are generally quick and inexpensive to develop and apply. The 3D extensions made to J.J. Eggleston’s 2D quantum dots simulation add yet another degree of realism to the simulation and open the door for more research and investigation of quantum dot growth. Simulation in three-dimensions showed the self-assembly of quantum dots during annealing of thin films. Randomly perturbed thin films were observed to self-assemble into random arrangements of dots of varying sizes. Initial conditions which yielded ordered arrays of dots were found and shown to produce dots which look qualitatively similar to those observed experimentally. An interesting phenomenon, the formation of a quantum ring that has been observed experimentally, was independently simulated. Anisotropic interfacial energy was implemented in three-dimensions and preliminary results show qualitative agreement with Eggleston’s 2D simulations."],
+["As computer processing power increases and three-dimensional simulations become more and more common, effective visualization of results will become almost as important as developing the simulations themselves. SimulationView was written specifically to address this problem. It is small, efficient, and cross platform compatible code that produces dramatic, interactive 3D visualizations which are effective at conveying evolution of 3D morphologies. SimulationView is easily extensible to perform advanced perspective, lighting, surface normals, and curvature calculations."],
+["References"],
+["¹U. Melrav, E.B. Foxman, “Single-electron phenomena in semiconductors,” Semiconductor Science Technology 11:255-284. 1996."],
+["²Y. Asari, K.Takeda, H. Tamura, “Towards the controllable quantum states: mesoscopic superconductivity and spintronics,” River Edge, NJ: World Scientific, 2003."],
+["³D. Loss, D.P. DiVincenzo, “Quantum computation with quantum dots,” Physics Review A 57:120-126. 1998."],
+["⁴T.K. et al., “Superconductivity in quantum dot superlattices composed of quantum wire networks, Physical Review B 66."]
+]}

@@ -1,0 +1,14 @@
+{"page": 45, "blocks": [
+["Top Side"],
+["Bottom Side"],
+["Figure 4. The mechanical snakeboard."],
+["Figure 5. Simulation results using the decoupled controls on the snakeboard."],
+["a ServoToGo card. The workstation runs the QNX real-time operating system on a 200MHz Pentium™ processor."],
+["The snakeboard control program runs in real-time at 2KHz. It accepts information from the encoders on the motors and training wheels and calculates its current position, velocity, and energy. Then the program outputs the control signals, given by the kinematic and dynamic control laws, to the motors. The reference path is coded into the program, with the ability to load externally generated paths. The nearest reference point is calculated through an iterative process, searching forward and backward along the path for the R(s_min). Data is recorded in real-time and saved to a binary file. This file is read, through FTP, and analyzed by a MATLAB program on a Windows workstation."],
+["Simulations of these controls on the snakeboard are shown in Figure 5 and experimental results are shown in Figure 6. These figures show both the body kinetic energy and position of the snakeboard converging to a desired value. The kinematic controller is given a sinusoidal reference path and an initial configuration of the snakeboard is off the path. The dynamic controller is given a step input, controlling a constant kinetic energy level in the body."],
+["V. CONCLUSION"],
+["The control approach presented in this paper allows the snakeboard to follow any planar path while maintaining a constant energy. Because the flywheel can only be accelerated to a finite maximum speed, the ability to add energy to the system can be limited by the curvature of the provided path. For example, it is very difficult for the snakeboard to follow a circle or a line for an extended period of time."],
+["The control was tested through both simulation and in experiment, both yielding similar results. These similar results can be attributed to our model, with the small variances in performance between the simulated and experimental results being attributed to the presence of friction and torque/velocity limits in the mechanical system."],
+["44"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

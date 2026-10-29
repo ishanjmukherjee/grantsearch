@@ -1,0 +1,29 @@
+{
+ "page": 53,
+ "blocks": [
+  [
+   "As peaks with no indication of Mn peaks. In addition, there was no indication of a layer of (In,Mn)As on top of InAs nanowire. Because the precipitates are identified as MnAs, it is evident that phase segregation occurs during the incorporation of Mn in the (In,Mn)As shell growth with MnAs existing as the additional phase. TEM was also used to generate the diffraction pattern of the nanowires but the analysis will not be discussed in this paper. We found that both MnAs precipitate and InAs nanowires have a hexagonal crystal structure. The nanowire grows along the [0001] direction (or equivalently [111] in cubic notation) and the MnAs precipitates grow perpendicular to the nanowire axis in the [21̅1̅0] orientation (or [100] in cubic notation)."
+  ],
+  [
+   "Variable temperature MFM analysis was conducted on a different nanowire sample at temperatures between 299 K and 344 K. As with the previous nanowire sample, the MFM image of the nanowire at room temperature (Figure 6b) shows dark contrast along the wire. Based on the cross section along the axis of the wire in both the AFM image and MFM image (insets in Figure 6), the dark contrast also corresponds to protrusions from the surface of the wire, an observation that suggests the dark contrast is also due to the presence of the MnAs precipitate. At each temperature, the MFM image was observed to identify any changes in the magnetic contrast (at point a and point b in Figure 6) as the temperature of the sample increases especially above the Tc of"
+  ],
+  [
+   "the MnAs phase of 318 K.¹⁶ In addition, the cross section along the wire axis of the MFM image was taken to determine the phase shift of the points of interest i.e. points a and b in Figure 6b. The phase shift of these two points were recorded and plotted as a function of temperature (Figure 7). The phase shift of both points showed the same trend; the phase shift decreases with increasing temperature up to 336 K where the phase shift stabilizes to a constant value. This indicates that the MnAs precipitates are still magnetic above the Tc; in addition the nanowire showed increasing dark contrast along its axis at 336 K and 344 K."
+  ],
+  [
+   "IV. DISCUSSION"
+  ],
+  [
+   "The growth of (In,Mn)As shell can be considered similar to growing (In,Mn)As on hexagonal InAs because the InAs nanowires have a hexagonal crystal structure with six side facets.¹² Hence, the nanowire shell was grown on different surfaces from that of (In,Mn)As thin films which are typically grown on cubic InAs. Although the growth conditions of the (In,Mn)As thin films were used to grow the (In,Mn)As shell, the growth of (In,Mn)As shell did not yield the same result as the (In,Mn)As thin films; the shell growth led to formation of precipitates on the surface which was identified as MnAs from the TEM analysis. The MnAs precipitates were formed due to the Mn diffusing out of the InAs matrix to form MnAs with the As background."
+  ],
+  [
+   "Figure 6. (a) The AFM image of InAs/(In,Mn)As core/shell nanowire with the inset showing the topographic section analysis along axis of the nanowire, and (b) the MFM image of InAs/(In,Mn)As core/shell nanowire with the inset showing the magnetic section analysis along axis of the nanowire. The dark contrast in the MFM image at the two points labeled “a” and “b” corresponds to protrusions from the surface of the wire. The section analyses show that the two protrusions give negative phase shift in the phase response of the cantilever."
+  ],
+  [
+   "52"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ]
+ ]
+}

@@ -1,0 +1,21 @@
+{"page": 50, "blocks": [
+["RESEARCH"],
+["Table 2.  Summary of results obtained for the UV irradiation photolysis study."],
+["Compound | 1H-NMR Chemical Shift (benzyl ether proton) | Mass Obtained | Theoretical Mass"],
+["Model compound X | δ 5.29 (doublet, J = 7.2 Hz) | 272.33 | 272.08"],
+["Compound X' (after 20 min UV irradiation) | δ 4.92 (doublet, J = 7.2 Hz) | 272.35 | 272.08"],
+["Pure benzyl alcohol | δ 4.64 (singlet) | – | –"],
+["Model compound Y | δ 4.92 (doublet, J = 7.2 Hz) | 372.73 | 372.11"],
+["Compound Y' (after 20 min UV irradiation) | δ 5.04 (doublet, J = 7.2 Hz) | 372.31 | 372.11"],
+["Pure diphenylacetylene alcohol | δ 4.61 (singlet) | – | –"],
+["driving the equilibrium reaction towards formation of the free alcohol."],
+["Thus, by comparing the ESI-MS data before and after UV irradiation and noting the absence of any degraded phosphate fragments, we concluded that UV irradiation had no significant effect on cleavage of the benzyl ether bond. In fact, because our model compounds were stable even after UV irradiation for longer periods of time than experienced during SMDH purification (few seconds vs. 20 minutes), our results suggest that short exposures to UV light in the HPLC and SDS-PAGE purification processes are unlikely to cause cleavage of the benzyl ether linkage."],
+["IV.  CONCLUSION"],
+["Our model studies demonstrate the stability of the benzyl and diphenylacetylene unit structures of the SMDH in the presence of concentrated ammonium hydroxide and under UV irradiation.  In particular, because compound H is iso-structural with the side chains of the Nguyen polymer-DNA hybrids (i.e., the polymer-DNA hybrids utilize the rigid diphenylacetylene as a monomeric side chain to attach DNA strands to the polymeric backbone), our results imply an overall stability for this class of materials.  Significantly, it suggests that the DNA chains coupled to the Nguyen polymer-DNA hybrids are unlikely to be cleaved during purification and characterization."],
+["We note however, that our two model compounds only contain a simple 5' furanyl phosphate ester substituent in each, in contrast to two (one 3'-substituted and the other 5'-substituted) in DNA single strands. The presence of a complex length of DNA attached to the small molecular core in the SMDH₃ could also have contributed to further destabilization effects that would have led to the cleavage of the furanyl substituents from the phosphate backbone under relevant conditions. Furthermore, the attachment of two more phenylacetylene groups on SMDH₃ could also have contributed to a more delocalized core electronic structure and an easier activation of the benzyl ether bond than the simplest case modeled in compound Y.  Hence, further work to elucidate the observed degradation in the SMDH₃ molecule will include the design of a trimer model compound that is coupled to a single furanyl phosphate ester and a trimer model compound coupled to three furanyl phosphate ester units."],
+["Acknowledgements"],
+["D.K. acknowledges the Northwestern McCormick Corporate Partner Research Grant, the American Foundation for Aging Research, the McCormick Sara Boley Fund, and the Sigma Xi Scientific Research Society for financial support of her research. She also thanks Professor SonBinh T. Nguyen, Professor Suzanne A. Olds, Mr. Brian R. Stepp and Dr. Julianne M. Gibbs-Davis for helpful discussions and Ms. So-Hye Cho for the acquisition of ESI-MS data."],
+["VOLUME 3, MAY 2006"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["49"]
+]}

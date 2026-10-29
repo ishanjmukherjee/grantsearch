@@ -1,0 +1,354 @@
+{
+  "slug": "nurj_2018-19",
+  "running_heads": [
+    "nurj – vol. 14",
+    "nurj – vol. 14",
+    "nurj – vol. 13",
+    "nurj – vol. 13",
+    "COMPARATIVE LITERATURE",
+    "COMPARATIVE",
+    "LITERATURE",
+    "PHILOSOPHY",
+    "ECONOMICS",
+    "JOURNALISM",
+    "MUSICOLOGY",
+    "NU-Q",
+    "FEATURE",
+    "History"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "TABLE OF CONTENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "1.0",
+          "4.21"
+        ]
+      ],
+      "notes": "Acknowledgments (section 1), masthead (section 2) and contents (sections 3-4); section 0 (cover) has no text. Vol. 14, 2018-2019; cover by Maia Brown. The contents page is laid out in columns, so its text interleaves titles, departments, authors and page numbers of different entries. The contents lists \"The Association among Media Exposure, Disruptive Behaviors, and Language Ability in Young Children\" by Katie Martini (COMMUNICATION SCIENCES AND DISORDERS) at page 43, but no such paper is in the volume: printed page 43 is the end of Emily Vogt's paper. The contents gives About the Contributors as page 110; it is printed page 82."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Editor",
+      "authors": [
+        "Andrew Y. Cao"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "5",
+      "spans": [
+        [
+          "5.0",
+          "5.2"
+        ]
+      ],
+      "notes": "Signed Andrew Y. Cao, Editor-in-Chief."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Adviser",
+      "authors": [
+        "Allen Taflove"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "6",
+      "spans": [
+        [
+          "6.0",
+          "6.2"
+        ]
+      ],
+      "notes": "Signed Allen Taflove, Professor, nurj Faculty Adviser, Department of Electrical Engineering and Computer Science, McCormick School of Engineering."
+    },
+    {
+      "kind": "research",
+      "title": "Stories of the Self: Agnès Varda's Performative Subjectivity in Les Plages d'Agnès and Les Glaneurs et la Glaneuse",
+      "authors": [
+        "Erin Dunbar"
+      ],
+      "department": "COMPARATIVE LITERATURE",
+      "advisors": [
+        "Domietta Torlasco"
+      ],
+      "printed_pages": "7-14",
+      "spans": [
+        [
+          "7.0",
+          "14.5"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Adviser\" on the opening page. Some page tops also carry a \"PHILOSOPHY\" label. Printed page 7 is a full-page film still with caption."
+    },
+    {
+      "kind": "research",
+      "title": "Heels, Heels, Heels, Heels, Heels: Repetition and Mu Shiying's Metropolis",
+      "authors": [
+        "Max Rowe"
+      ],
+      "department": "COMPARATIVE LITERATURE",
+      "advisors": [
+        "Cory Bynes"
+      ],
+      "printed_pages": "15-22",
+      "spans": [
+        [
+          "15.0",
+          "22.4"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Adviser\" on the opening page. Some page tops also carry a \"PHILOSOPHY\" label. On printed page 19 (section 19) the extraction merges two columns line by line, so the text is interleaved."
+    },
+    {
+      "kind": "feature",
+      "title": "JOHN ALBA CUTLER",
+      "authors": [
+        "Amanda Barraza-Murphy",
+        "Sarah Tani"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "23-26",
+      "spans": [
+        [
+          "23.0",
+          "26.2"
+        ]
+      ],
+      "notes": "Q&A interview with John Alba Cutler, Associate Professor of English and Associate Chair of the Department of English (title from the contents page). Byline reads \"By Amanda Barraza-Murphy / Interview by Sarah Tani\"; printed page 24 also carries a stray \"BY Jenna Lee\" line. Page label \"LITERATURE\"."
+    },
+    {
+      "kind": "research",
+      "title": "Analyzing the Women's Suffrage Movement and the 19th Amendment of 1920 on Health Outcomes",
+      "authors": [
+        "Lillian Siegel"
+      ],
+      "department": "ECONOMICS",
+      "advisors": [
+        "Sara Hernandez"
+      ],
+      "printed_pages": "27-36",
+      "spans": [
+        [
+          "27.0",
+          "36.3"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Adviser\" on the opening page. The contributors page says Siegel graduated in 2018 with majors in economics and global health and a minor in the business institutions program."
+    },
+    {
+      "kind": "research",
+      "title": "The Cognitive and Economic Implications of Nonmedical Adderall and Prescription Stimulant Use on College Campuses",
+      "authors": [
+        "Emily Vogt"
+      ],
+      "department": "ECONOMICS",
+      "advisors": [
+        "Eric G. Schulz"
+      ],
+      "printed_pages": "37-44",
+      "spans": [
+        [
+          "37.0",
+          "44.3"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Adviser\" on the opening page. The contents page writes \"Adderall & Prescription Stimulant Use\". The contributors page gives her majors as Neuroscience and Economics. On printed page 43 (block 43.1) the extraction merges two columns line by line, so the conclusion text is interleaved."
+    },
+    {
+      "kind": "feature",
+      "title": "Hearing the Universe Through Ripples in Space–Time",
+      "authors": [
+        "Lydia Rivers"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "45-48",
+      "spans": [
+        [
+          "45.0",
+          "48.1"
+        ]
+      ],
+      "notes": "Profile of Vicky Kalogera, Professor of Physics and Astronomy and Daniel I. Linzer Distinguished University Professor (from the contents page)."
+    },
+    {
+      "kind": "research",
+      "title": "The Sports Department of Corrections: How false reports by ESPN criminalized the University of Arizona Basketball Program",
+      "authors": [
+        "Nikki Baim"
+      ],
+      "department": "JOURNALISM",
+      "advisors": [
+        "Patti Wolter",
+        "Mei-Ling Hopgood"
+      ],
+      "printed_pages": "49-54",
+      "spans": [
+        [
+          "49.0",
+          "54.3"
+        ]
+      ],
+      "notes": "Advisors from \"Faculty Advisers\" on the opening page. The contributors page says Baim is a junior studying journalism and legal studies and that the essay won the 2018 Medill Howell Essay award."
+    },
+    {
+      "kind": "feature",
+      "title": "Jennifer Tackett",
+      "authors": [
+        "Joy Zheng"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "55-56",
+      "spans": [
+        [
+          "55.0",
+          "56.1"
+        ]
+      ],
+      "notes": "Profile of Jennifer Tackett, Associate Professor of Psychology and Director of Clinical Psychology (from the contents page)."
+    },
+    {
+      "kind": "feature",
+      "title": "Uncovering the Secrets of Speech with Angela Roberts",
+      "authors": [
+        "Niva Razin",
+        "Sarah Tani"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "57-60",
+      "spans": [
+        [
+          "57.0",
+          "60.3"
+        ]
+      ],
+      "notes": "Q&A interview with Angela Roberts, Assistant Professor of Communication Sciences and Disorders (from the contents page). Byline reads \"By Niva Razin / Interviewed by Sarah Tani\"; printed page 58 also carries a stray \"BY Josh Shi\" line."
+    },
+    {
+      "kind": "research",
+      "title": "Thomas Mann's Doktor Faustus and the Post-War Concerto",
+      "authors": [
+        "Grace Pechianu"
+      ],
+      "department": "MUSICOLOGY",
+      "advisors": [
+        "Jesse Rosenberg"
+      ],
+      "printed_pages": "61-68",
+      "spans": [
+        [
+          "61.0",
+          "63.5"
+        ],
+        [
+          "64.0",
+          "65.2"
+        ],
+        [
+          "65.4",
+          "65.5"
+        ],
+        [
+          "66.0",
+          "68.5"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Adviser\" on the opening page. The contributors page gives her concentrations as musicology and violin performance. The end of block 63.2 contains stray footnotes on French and English pronunciation that belong to no paper in this volume (the other stray footnote blocks are kept as a separate item). On printed page 66 a figure caption is interleaved with the column text. Pages also carry a stray \"History\" label."
+    },
+    {
+      "kind": "other",
+      "title": "",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "63-65",
+      "spans": [
+        [
+          "63.6",
+          "63.6"
+        ],
+        [
+          "65.3",
+          "65.3"
+        ],
+        [
+          "65.6",
+          "65.6"
+        ]
+      ],
+      "notes": "Footnotes citing works on French, Spanish and English pronunciation (Ensz, Deng et al., Aliaga-García, Arteaga, Dansereau) that appear on the pages of the Pechianu paper but match no paper in the volume; apparently leftover layout text."
+    },
+    {
+      "kind": "feature",
+      "title": "The Sigma Xi Undergraduate Research Awards and Harold B. Gotaas Undergraduate Research Winners",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "69-72",
+      "spans": [
+        [
+          "69.0",
+          "72.3"
+        ]
+      ],
+      "notes": "Title from the contents page; the opening page heading reads \"2018 AWARD RESEARCH WINNERS\". Describes the Sigma Xi Best Expo Oral and Poster Presentation Awards and the Harold B. Gotaas Award, with biosketches of winners Jamilah Silver, Elizabeth Odunsi and Alexander Johnson (named under the title on the contents page). No byline."
+    },
+    {
+      "kind": "research",
+      "title": "Media Trust and Importance of News Platforms in Qatar",
+      "authors": [
+        "Syeda Shageaa Naqvi"
+      ],
+      "department": "NU-Q",
+      "advisors": [
+        "Jocelyn Sage Mitchell"
+      ],
+      "printed_pages": "73-81",
+      "spans": [
+        [
+          "73.0",
+          "81.5"
+        ]
+      ],
+      "notes": "Senior thesis from Northwestern University in Qatar. Advisor from \"Faculty Adviser\" on the opening page. The contributors page says Naqvi (\"Jia\") is a journalism senior at the Qatar campus."
+    },
+    {
+      "kind": "back matter",
+      "title": "About the Contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "82-89",
+      "spans": [
+        [
+          "82.0",
+          "89.2"
+        ]
+      ],
+      "notes": "Bios and short Q&As for Erin Dunbar, Max Rowe, Lillian Siegel, Emily Vogt, Nikki Baim, Grace Pechianu and Syeda Shageaa Naqvi. In section 86 the three question headings (86.2-86.4) are extracted apart from their answers (86.5-86.7), and the answers are in the order nutshell, future direction, how they came to the topic."
+    },
+    {
+      "kind": "back matter",
+      "title": "Join the NURJ",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "90",
+      "spans": [
+        [
+          "90.0",
+          "90.2"
+        ]
+      ],
+      "notes": "\"Join the NURJ\" and \"Submit to the NURJ\" notices. Sections 91-92 (back cover) have no text."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{"page": 30, "blocks": [
+["RESEARCH"],
+["II. METHODS"],
+["A. Substrate Creation"],
+["The test chip used a ceramic substrate consisting of 96% aluminum and 4% silica. Two gold track patterns separated by a blue glass dielectric were created in the pattern of a meander. Two of the tracks ran above the dielectric while the other two ran below it. Each chip also had 8 gold pads, to which the wires were soldered. The implants were highly susceptible to corrosion and it was important to choose metals that demonstrated a level of corrosive resistance. Gold was chosen for this project because it was easiest to manipulate mechanically. The PCB substrate is demonstrated in Figure 1."],
+["This test structure is well suited for reliability testing, as it is easy to manufacture and is very similar to the actual chips. Reliability testing involved applying a power source to the chip and monitoring how long it lasted without malfunctioning. The first step was to attach copper wires using a soldering iron. The optimal temperature for the soldering of copper wires onto gold was 450 degrees Celsius, which is much higher than for other metals. The strength of the joints was tested through the use of an ohmmeter, connected to the end of the wires. Figure 2 depicts the solder joint."],
+["Figure 1.  A ceramic PCB plate that was used in the design of the silicone encapsulated test chip. Two of the gold tracks are visible above the blue glass dielectric connected to the gold pads. This is before the application of silicone."],
+["Figure 2.  A solder joint between the copper wires and the gold pads on the PCB test plate."],
+["Figure 3.  The silicone encapsulant mold without the test plate. The picture shows an empty mold before the application of silicone. The PCB test plate would be placed in the middle with the copper wires protruding through specially made holes on the side."],
+["Figure 4.  The silicone-encapsulated sample shown after it has cured. This shows the completed product after the attachment of the copper wires and the removal of the test plate from the mold."],
+["B. Encapsulation"],
+["In order to encapsulate ceramic test plate in silicone, a plastic mold was created. The ceramic plate was placed inside the mold and the soldered wires protruded from specifically designed holes in the mold. The silicone was dispensed from a pressurized syringe at a pressure of 20 psi into the mold. The mold is demonstrated in Figure 3."],
+["The 20 psi pressure was necessary to eliminate the number of air bubbles that could develop into voids, attracting water vapor. The sample was left overnight in a hood in order to cure.  As the sample cured, it absorbed moisture from the surrounding atmosphere thereby hardening and transitioning from a semi-liquid viscous state into a solid one. After it cured, the silicone sample was removed from the mold with the use of a scalpel. The final product is demonstrated in Figure 4."],
+["C. Reliability Testing"],
+["During the testing stage, two main sources of failure were monitored: electro migration and corrosion. Electro migration would create voids in a conductor that could cause connection of meander tracks. An indication that electro migration had occurred would"],
+["VOLUME 3, MAY 2006"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["29"]
+]}

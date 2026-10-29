@@ -1,0 +1,16 @@
+{"page": 40, "blocks": [
+["Figure 1. Toy Snakeboard with variable wheel angles."],
+["inevitably be wasted by some means in a real-world system. This paper shows that a natural decoupling of input forces makes path-tracking a simple task. If position on a path is more critical than velocity, it is simpler to divide the controls into steering and energy-generating. Then we can use steering inputs to steer the body onto a reference path and use inputs that affect the energy of the system to control the kinetic energy or speed."],
+["This paper describes and derives decoupled non-linear controls for the snakeboard that allow a robotic snakeboard to follow a predefined path while maintaining a constant kinetic energy. It is divided into three sections: developing the mathematical model for the snakeboard, deriving the decoupled controls, and describing the experimental setup. Both simulated and experimental results are included."],
+["This is not the first paper to investigate the snakeboard. Since it is such a complex system, there has been a wide variety of approaches to this problem. The problem was first introduced in a 1994 paper,¹ which demonstrated the kinematic controllability and investigated the use of gait motions and sinusoidal variations of the control inputs for the snakeboard. The snakeboard system has also been described using geometric mechanics.²,³,⁴ Kinematic motion planning⁵,⁶ as well as optimal control have been investigated. The existence of control switches, which involves a finite minimum number of motions required to reach a destination point, for use in motion planning has also been researched.⁸,⁹ The most recent work has derived control for the snakeboard using averaging theory,¹⁰ on-the-fly adjustments to the control inputs to compensate for position error. To our knowledge, the type of control for the snakeboard presented in this paper has not been previously presented."],
+["II. THEORETICAL MODEL"],
+["This section includes the derivation of the kinematics and reduced dynamics for our snakeboard model. Our snakeboard is a simplified model of the real snakeboard with its steering wheels constrained to turn symmetrically, as seen in Figure 2."],
+["II.1 Kinematics"],
+["The kinematics of our snakeboard model are simplified because the front and rear steering wheel angles are the same. In fact, it has been shown that the kinematics of such a snakeboard reduce to the kinematics of a “car-like” robot,⁶ which has an (x, y, θ)–position in the 2D xy–plane. The two other coordinates of the snakeboard are the steering angle, φ, and the flywheel angle, ψ. The configuration, q, of the snakeboard is"],
+["q = (x ; y ; θ ; ψ ; φ) (1)"],
+["The snakeboard is subject to nonholonomic velocity constraints, caused by an assumed “no-slip”"],
+["Figure 2. Snakeboard Coordinate Descriptions."],
+["VOLUME 2, MAY 2005"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["39"]
+]}

@@ -1,0 +1,38 @@
+{
+ "page": 58,
+ "blocks": [
+  [
+   "(a) Anisotropic Diffusion"
+  ],
+  [
+   "(b) Edge Preserving Regularization"
+  ],
+  [
+   "Figure 2. The result from applying (a) anisotropic diffusion and (b) edge preserving regularization to Figure 1."
+  ],
+  [
+   "Contouring consists of large bands of the same intensity value separated by abrupt intensity gradients. Since the quantization process discarded all changes inside these bands, the roughness cost is very low and the deviation penalty (u – z)² dominates the search for the solution. This results in images that are very faithful to the observed input but fail to remove much of the visible contouring, as shown in Figure 2b, even when the regularization process is run for a large number of iterations."
+  ],
+  [
+   "III. PROPOSED METHOD"
+  ],
+  [
+   "As mentioned above, Tikhonov regularization penalizes any deviation from the initial observed"
+  ],
+  [
+   "data when searching for a solution. However, each value stored in a quantized image actually represents a range of possible intensity values that compose the quantization interval. The foundation method proposed by these authors builds upon this idea by treating values in the observed image as a quantization interval instead of a single measurement, as show in Figure 3. Our method only penalizes deviations from the observed input when the resulting intensity exceeds the boundaries of the quantization interval. This greatly relaxes the deviation penalty and permits smoothing only as long as the estimated intensities stay within the quantization level boundaries. Because we know that the ideal unquantized intensity must lie within these boundaries, the method places"
+  ],
+  [
+   "Figure 3. A scan-line representing an ideal unquantized image (red) that is coarsely quantized to the Q=16 levels (blue). The qᵢ₊₁ maximum boundaries for the quantization level are also shown (green line)."
+  ],
+  [
+   "VOLUME 2, MAY 2005"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ],
+  [
+   "57"
+  ]
+ ]
+}

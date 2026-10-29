@@ -1,0 +1,20 @@
+{"page": 18, "blocks": [
+["RESEARCH"],
+["Tumor localization is normally performed preoperatively by contrast-enhanced MR imaging.²,³"],
+["While the correlation between rCBV and tumor aggressiveness has been shown, there is significant enough imprecision in the relative measurements of cerebral blood volume (CBV) to make it difficult to distinguish low and high grade tumors. Relative values are determined by comparing the value inside the tumor to the value in white matter (WM), where white matter is the known “control.” However, WM Region of Interest (ROI) selection can be imperfect because of a wide range of “normal” CBV, local autoregulation of CBV, or nearby pathology. Furthermore radiation and/or chemotherapy can alter CBV in regions selected as a “control”."],
+["A team of researchers in the Departments of Biomedical Engineering and Radiology at Northwestern has developed a means of quantifying CBV by using information that is normally ignored during DSC MRI measurements.⁷,⁸ Traditional MRI perfusion images provide rCBV by performing a deconvolution analysis on the passage of a bolus of contrast agent. Long after the passage of the contrast bolus, the contrast agent alters the longitudinal relaxation time (T₁) of brain parenchyma in proportion to its fractional blood volume. This change in T₁, an effect that is normally ignored in MR perfusion scans, is the missing piece of information that allows us to quantify CBV. By making precise calculations of the T₁ changes in white matter, we can obtain quantitative CBV (qCBV) over the whole brain.⁸ We hypothesize that quantification of CBV can help decrease the variability in comparison to the relative measurement and create a more definitive distinction between stable and progressive tumors."],
+["II. METHODS"],
+["Patient Selection"],
+["A series of 18 patients referred for MRI prior to surgical resection of a brain tumor were studied using the technique described above to measure qCBV. The patients consisted of 7 females and 11 males ranging in age from 32 to 71 with a mean age of 49. Quantitative CBV was measured preoperatively, after which biopsy was performed to confirm malignancy. Metastatic tumors were characterized as neither high nor low grade."],
+["DSC MR Imaging"],
+["All subjects followed the same MRI protocol. A DSC pulse sequence was used to acquire a time series volume of axial slices of the head after contrast injection. DSC imaging tracks a bolus of contrast agent through the volume of interest (VOI). A rapidly injected gadolinium (Gd)-based contrast agent was tracked both through a gradient echo (GE), echo planar imaging (EPI) T₂* weighted sequence, and a spin echo (SE)-EPI T₂ weighted sequence.⁴ Both GE and SE were used in this study as a means of comparison. While SE pulse sequences generally are not as susceptible to artifact closer to the base of the skull, we used both methods to determine which one was more effective in measuring qCBV."],
+["Using either the GE-EPI or SE-EPI sequence, one can determine the relative concentration of contrast in tissue over time using the changes in signal intensity. The area under this curve is used to find rCBV."],
+["T₁-weighted MR Imaging"],
+["In addition, a time series of T₁-weighted images was acquired at a single axial slice. A set of T₁ images was acquired both pre- and post-contrast injection. These images were used during post-processing to calculate a patient specific calibration factor to obtain qCBV from rCBV. This scale factor is related to the change in T₁ of white matter compared to the change in T₁ in blood resulting from the T₁-shortening effects of the MRI contrast agent."],
+["DSC Image Post-processing"],
+["All image post-processing was performed using MATLAB 6.5 R13. The signal intensity of the DSC"],
+["Figure 1. rCBV values for stable and progressive tumors. Notice the variability and the overlap between the two data sets."],
+["VOLUME 3, MAY 2006"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["17"]
+]}

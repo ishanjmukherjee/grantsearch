@@ -1,0 +1,29 @@
+{
+ "page": 51,
+ "blocks": [
+  [
+   "Figure 4. (a) The AFM image of InAs/(In,Mn)As core/shell nanowire with the inset showing the topographic section analysis along the axis of the nanowire and (b) the MFM image of InAs/(In,Mn)As core/shell nanowire with the inset showing the magnetic section analysis along the axis of the nanowire. The dark contrast in the MFM image shown by the black arrow corresponds to protrusions from the surface of the wire. The section analyses show that the two protrusions give negative phase shift in the phase response of the cantilever."
+  ],
+  [
+   "force gradient between the sample and the tip. This force gradient is proportional to the magnetization of the sample. Magnetization parallel (and antiparallel) to the magnetization of the tip will cause dark (and bright) contrast.¹⁵ The magnetic domains of the nanowires can be observed as the contrast in the MFM image that is constructed from the phase shift of the cantilever."
+  ],
+  [
+   "Variable temperature MFM was conducted above room temperature using a variable temperature scanner to analyze the temperature dependence of the magnetism of the nanowire and to estimate the Tc of the nanowire. The scanner utilizes an applied magnetic field of 500 G to hold the sample fixed on the stage. When conducting variable temperature MFM, the temperature of the substrate was determined using a thermocouple before and after each scan."
+  ],
+  [
+   "III. RESULTS"
+  ],
+  [
+   "Figure 4a and 4b are the AFM and MFM images of the InAs/(In,Mn)As core/shell nanowires. The MFM image shows dark contrast due to magnetic domains that are parallel to the magnetization of the tip. It was found that the dark contrast corresponds to protrusions from the surface of the wire. This can be seen clearly by looking at the section analysis along the axis of the wire (insets of Figure 4); protrusions from the surface caused negative phase shift in the phase response of the cantilever."
+  ],
+  [
+   "The energy dispersive x-ray spectroscopy (EDS) of transmission electron microscopy (TEM) was used to determine the elemental composition of the nanowires (Figure 5). The TEM micrograph (insets of Figure 5) shows that there is a precipitate that sits on protrusions from the surface of the wire. The EDS spectrum of the precipitate (Figure 5a) indicates the presence of Mn and As. In peaks can also be identified but the peaks are of low intensities compared to those of Mn and As. This suggests that the protrusions observed in the MFM measurements are the ferromagnetic MnAs phase that appear as precipitates on the nanowire surface of the size of 5 nm to 30 nm in diameter. The EDS spectrum of the nanowire (Figure 5b) yields only In and"
+  ],
+  [
+   "50"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ]
+ ]
+}

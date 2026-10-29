@@ -1,0 +1,21 @@
+{"page": 31, "blocks": [
+["RESEARCH"],
+["result in a sharp decrease of the monitored resistance values. The second potential failure was corrosion, in which circuit components would degrade, thus creating a sharp rise in the resistance measurements."],
+["In order to monitor these two failures, power was applied to the sample and resistance values were measured periodically. This was done through a multiplexer with five leads applied to the sample."],
+["The sample was placed in a vial containing saline solution. The vial was sealed and placed in a water bath with the temperature around 37 degrees Celsius."],
+["Six samples were tested in this experiment. Samples 1 and 2 were created at Tyndall National institute and were nearly identical except for one minor, but important issue — Sample 1 had contained a drop of epoxy glue between the bottom of the chip and the silicone thin sheet, whereas Sample 2 had not. A partner company involved with implant manufacturing assembled Samples 3-6. Samples 3-6 had several different parameters including the number of dielectric layers, the type of component adhesion, the quality of the encapsulation process, the cleaning process of the sample, and whether the encapsulation had been controlled. Samples 3-6 were tested against Samples 1 and 2 to see how long different samples would last and whether the parameters described earlier had an effect on their lifespan. The six samples were tested over the course of six weeks. Readings were taken every day at thirty-minute intervals."],
+["III. RESULTS AND ANALYSIS"],
+["For the first four weeks, all the samples had lasted with no visible changes to their appearance or a rise or drop in resistance values. All the resistances had values between 1.6 and 2.0 ohms. However, during the fifth week of testing, readings for the Sample 2 rose from 1.83 ohms to 0.31 mega ohms.  During the final week of testing, Sample 1 was visually inspected and seen to be failing."],
+["The sudden rise in the resistance for Sample 2 at first seemed indicative of corrosion. When the sample was taken out of the saline solution and analyzed, a large void cavity surrounding the joint was discovered that had indicated the resistance rise. Also, the copper wire that was partially exposed to the formed void was completely eroded away, and instead a bright blue residue had appeared. The residue had been indicative of oxidation, and the cause of failure seemed to be water moisture that had crept into the void combined with a constant bias of 10 Volts. There was no longer a proper contact in the meander, and it was concluded that the implant had failed due to electrical corrosion. The joint was also analyzed using a metallurgical microscope and appeared to be brittle and damaged. There are several possible explanations for the failure of this device."],
+["The bottom of the Sample 2 had not been glued to the silicone thin sheet. When the sample was turned over and analyzed, there was a thin layer of water trapped in the hollow space. This is one of the"],
+["Table 1.  Failure analysis results of the six test samples"],
+["Sample | Corrosion Defects Observed | Electro migration Defects Observed | Final Resistance Values (Ohm)"],
+["1 | Yes | No | 1.77"],
+["2 | Yes | No | 310000"],
+["3 | No | No | 1.79"],
+["4 | No | No | 1.81"],
+["5 | No | No | 1.78"],
+["6 | No | No | 1.80"],
+["30"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"]
+]}

@@ -1,0 +1,471 @@
+{
+  "slug": "nurj_2017-2018",
+  "running_heads": [
+    "nurj – vol. 13",
+    "nurj – vol. 13",
+    "ANTHROPOLOGY",
+    "ART HISTORY",
+    "ART",
+    "PHILOSOPHY",
+    "HISTORY",
+    "History",
+    "COGNITIVE SCIENCE",
+    "COMMUNICATION",
+    "COMMUNICATION SCIENCES AND DISORDERS",
+    "COMPARATIVE LITERATURE",
+    "ECONOMICS",
+    "ENGLISH",
+    "FRENCH",
+    "FEATURE"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "1-2",
+      "spans": [
+        [
+          "0.0",
+          "1.0"
+        ]
+      ],
+      "notes": "Front cover (section 0) and inside cover (section 1, only the page number 002)."
+    },
+    {
+      "kind": "front matter",
+      "title": "Masthead",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [
+        [
+          "2.0",
+          "2.13"
+        ]
+      ],
+      "notes": "Masthead of vol. 13, 2017-2018: Editor-in-Chief Josh Shi, Faculty Advisor Allen Taflove, and the editorial, design and outreach staff."
+    },
+    {
+      "kind": "front matter",
+      "title": "TABLE OF CONTENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4-5",
+      "spans": [
+        [
+          "3.0",
+          "4.28"
+        ]
+      ],
+      "notes": "The contents page is laid out in columns, so its text interleaves titles, departments, authors and page numbers of different entries. Every page number in the contents is 2 less than the printed page on which the item actually begins (e.g. ANTHROPOLOGY listed at 6, begins on printed page 8; About the Contributors listed at 109, begins on printed page 111). The department labels are also page furniture elsewhere in the volume and so are dropped from this item's text as running heads."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Editor",
+      "authors": [
+        "Josh Shi"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "6",
+      "spans": [
+        [
+          "5.0",
+          "5.3"
+        ]
+      ],
+      "notes": "Signed Josh Shi, Editor-in-Chief."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Advisor",
+      "authors": [
+        "Allen Taflove"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "7",
+      "spans": [
+        [
+          "6.0",
+          "6.1"
+        ]
+      ],
+      "notes": "Signed Allen Taflove, Professor, nurj Faculty Advisor, Department of Electrical Engineering and Computer Science, McCormick School of Engineering. States that vol. 13 publishes 10 Best Senior Theses selected by nine departments, including one from NU-Qatar, and four faculty feature interviews."
+    },
+    {
+      "kind": "research",
+      "title": "Trauma-Informed Care: Re-contextualizing, Depoliticizing and De-pathologizing the Black Experience",
+      "authors": [
+        "De'Sean Weber"
+      ],
+      "department": "ANTHROPOLOGY",
+      "advisors": [
+        "Peter Locke"
+      ],
+      "printed_pages": "8-15",
+      "spans": [
+        [
+          "7.0",
+          "14.5"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Advisor\" on the opening page. Printed page 8 is a full-page photo with caption. Pull quotes are merged into the start of some text blocks (sections 9, 12, 13). The contributors page says Weber studied anthropology and global health."
+    },
+    {
+      "kind": "research",
+      "title": "Creative Practice and Financial Crises in Contemporary America: Charging Bull and Occupy Wall Street",
+      "authors": [
+        "Julia Poppy"
+      ],
+      "department": "ART HISTORY",
+      "advisors": [
+        "Rebecca Zorach"
+      ],
+      "printed_pages": "16-25",
+      "spans": [
+        [
+          "15.0",
+          "24.4"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Advisor\" on the opening page. Printed page 16 is a full-page photo with caption. Pull quotes are merged into the start of some text blocks. The contributors page says Poppy studied art history."
+    },
+    {
+      "kind": "feature",
+      "title": "Erin Reitz",
+      "authors": [
+        "Florence Fu"
+      ],
+      "department": "Art History",
+      "advisors": [],
+      "printed_pages": "26-29",
+      "spans": [
+        [
+          "25.0",
+          "28.1"
+        ]
+      ],
+      "notes": "Faculty profile of Erin Reitz, written by Florence Fu; the contents describes her as Visiting Professor of Art History."
+    },
+    {
+      "kind": "research",
+      "title": "Role of Child-Directed Speech Constructions in Early Language: An Analysis of the childes Corpus",
+      "authors": [
+        "Jamie Klein"
+      ],
+      "department": "COGNITIVE SCIENCE",
+      "advisors": [
+        "Kenneth Forbus"
+      ],
+      "printed_pages": "30-37",
+      "spans": [
+        [
+          "29.0",
+          "36.5"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Principal Supervisor\" on the opening page. \"childes\" (CHILDES) is printed in small caps. The bulleted list of annotation fields on printed page 33 (section 32) is split into separate bullet and text blocks. The contributors page says Klein studied cognitive science, film and marketing communications and wrote an honors thesis in linguistics and child development."
+    },
+    {
+      "kind": "research",
+      "title": "Identity Politics in 2 States: Contradiction between Tamils as the \"Other\" and \"We are one India\"",
+      "authors": [
+        "Ibtesaam Moosa"
+      ],
+      "department": "COMMUNICATION",
+      "advisors": [
+        "Pamela Krayenbuhl"
+      ],
+      "printed_pages": "38-43",
+      "spans": [
+        [
+          "37.0",
+          "42.5"
+        ]
+      ],
+      "notes": "Senior thesis from Northwestern University in Qatar (the contents lists the author as \"Ibtesaam Moosa, NU-Q\"). Advisor from \"Faculty Advisor\" on the opening page. The contributors page says Moosa is a senior majoring in communication."
+    },
+    {
+      "kind": "research",
+      "title": "The Association among Media Exposure, Disruptive Behaviors and Language Ability in Young Children",
+      "authors": [
+        "Katie Martini"
+      ],
+      "department": "COMMUNICATION SCIENCES AND DISORDERS",
+      "advisors": [
+        "Megan Roberts",
+        "Alexis Lauricella"
+      ],
+      "printed_pages": "44-51",
+      "spans": [
+        [
+          "43.0",
+          "49.1"
+        ],
+        [
+          "49.3",
+          "49.3"
+        ],
+        [
+          "49.5",
+          "49.5"
+        ],
+        [
+          "49.2",
+          "49.2"
+        ],
+        [
+          "49.7",
+          "49.7"
+        ],
+        [
+          "49.4",
+          "49.4"
+        ],
+        [
+          "49.6",
+          "49.6"
+        ],
+        [
+          "50.0",
+          "50.4"
+        ]
+      ],
+      "notes": "Senior thesis, opening with a structured abstract. The opening page names Megan Roberts as First Reader and Alexis Lauricella as Second Reader; the acknowledgments call Roberts \"my first reader and mentor\". Reading order in section 49 is jumbled in the extraction and has been reordered here (limitations section, then acknowledgments). The contributors page says Martini studied communication sciences and disorders and psychology."
+    },
+    {
+      "kind": "feature",
+      "title": "David Rapp",
+      "authors": [
+        "Jenna Lee"
+      ],
+      "department": "Psychology",
+      "advisors": [],
+      "printed_pages": "52-55",
+      "spans": [
+        [
+          "51.0",
+          "54.2"
+        ]
+      ],
+      "notes": "Interview with David Rapp by Jenna Lee; the contents describes him as Professor in the Department of Psychology in the Weinberg College of Arts and Science and in the Learning Sciences program in the School of Education and Social Policy. The first answer is printed with the prefix \"MD:\", the rest with \"DR:\"."
+    },
+    {
+      "kind": "research",
+      "title": "Lost Histories: Limits of the Archive",
+      "authors": [
+        "Emma Montgomery"
+      ],
+      "department": "COMPARATIVE LITERATURE",
+      "advisors": [
+        "Tristram Wolff"
+      ],
+      "printed_pages": "56-63",
+      "spans": [
+        [
+          "55.0",
+          "62.6"
+        ]
+      ],
+      "notes": "Excerpt of a senior thesis: the printed text appears to be the thesis's introduction only, ending with an outline of the sections that follow (on Philip's Zong!, on Lewis' Voyage of the Sable Venus, and a coda). Advisor from \"Faculty Advisor\" on the opening page. Pull quotes are merged into some text blocks, and a section heading in block 59.5 sits after a pull quote, not at its place in the text. The contributors page says Montgomery majored in psychology and comparative literature."
+    },
+    {
+      "kind": "research",
+      "title": "Students Prefer Courses and Professors with Better Evaluations",
+      "authors": [
+        "Alex Gordon"
+      ],
+      "department": "ECONOMICS",
+      "advisors": [
+        "Mark Witte"
+      ],
+      "printed_pages": "64-73",
+      "spans": [
+        [
+          "63.0",
+          "72.5"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Advisor\" on the opening page. Tables and graphs are present only as their captions (e.g. printed page 66 has only two captions). The contributors page says Gordon graduated in 2017 with a degree in economics, mathematics and higher education."
+    },
+    {
+      "kind": "feature",
+      "title": "Manijeh Razeghi",
+      "authors": [
+        "Josh Shi"
+      ],
+      "department": "Electrical Engineering and Computer Science",
+      "advisors": [],
+      "printed_pages": "74-77",
+      "spans": [
+        [
+          "73.0",
+          "76.1"
+        ]
+      ],
+      "notes": "Faculty profile of Manijeh Razeghi by Josh Shi; the contents describes her as Walter P. Murphy Professor of Electrical Engineering and Computer Science and Director of the Center for Quantum Devices."
+    },
+    {
+      "kind": "research",
+      "title": "Turning Silence: W.H. Auden's \"Rachel\" from For the Time Being (1941–42)",
+      "authors": [
+        "Payton Danner"
+      ],
+      "department": "ENGLISH",
+      "advisors": [
+        "Susannah Young-Ah Gottlieb"
+      ],
+      "printed_pages": "78-85",
+      "spans": [
+        [
+          "77.0",
+          "79.0"
+        ],
+        [
+          "79.2",
+          "79.2"
+        ],
+        [
+          "79.1",
+          "79.1"
+        ],
+        [
+          "79.5",
+          "79.5"
+        ],
+        [
+          "79.3",
+          "79.4"
+        ],
+        [
+          "79.6",
+          "84.5"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Advisor\" on the opening page, which also names Harris Feinsod as Honors Coordinator. Reading order in section 79 is jumbled in the extraction and has been reordered here; the pull quote in that section is placed at the top of the page. The contributors page says Danner graduated in 2017 with a degree in English literature and music."
+    },
+    {
+      "kind": "research",
+      "title": "Redressing Modernism: The Poetry of Grace Nichols 1984-2009",
+      "authors": [
+        "Ann Ho"
+      ],
+      "department": "ENGLISH",
+      "advisors": [
+        "Evan Mwangi",
+        "Harris Feinsod"
+      ],
+      "printed_pages": "86-93",
+      "spans": [
+        [
+          "85.0",
+          "92.3"
+        ]
+      ],
+      "notes": "Senior thesis. The opening page names Evan Mwangi as Faculty Advisor and Harris Feinsod as Honors Coordinator; the contributors page calls Mwangi her academic mentor and Feinsod her thesis adviser. Printed page 86 has the title, names and a full-page photo with caption. The contributors page says Ho graduated in 2017 with a major in English and a minor in Slavic literature and languages."
+    },
+    {
+      "kind": "feature",
+      "title": "Michael Diamond",
+      "authors": [
+        "Maria Kaufman"
+      ],
+      "department": "Global Health",
+      "advisors": [],
+      "printed_pages": "94-97",
+      "spans": [
+        [
+          "93.0",
+          "96.1"
+        ]
+      ],
+      "notes": "Interview with Michael Diamond, Adjunct Lecturer in Global Health Studies, by Maria Kaufman."
+    },
+    {
+      "kind": "research",
+      "title": "L'importance de l'enseignement de la prononciation dans les cours de français au niveau universitaire et une piste proposée",
+      "authors": [
+        "Rohan Prakash"
+      ],
+      "department": "FRENCH",
+      "advisors": [
+        "Patricia Scarampi"
+      ],
+      "printed_pages": "98-103",
+      "spans": [
+        [
+          "97.0",
+          "101.1"
+        ],
+        [
+          "101.3",
+          "101.3"
+        ],
+        [
+          "101.2",
+          "101.2"
+        ],
+        [
+          "101.4",
+          "102.10"
+        ]
+      ],
+      "notes": "Senior thesis, written in French. Advisor from \"Conseillère\" on the opening page. Reading order in section 101 is jumbled in the extraction and has been reordered here. On printed page 103 the extraction puts the end of the body text before the page's running head; a stray \"History\" label on that page is dropped as page furniture. The contributors page says Prakash graduated in 2017 with a degree in education and social policy, focusing on secondary math education and French."
+    },
+    {
+      "kind": "research",
+      "title": "Witchcraft in Southwark: A Case Study of the London Suburb from 1568–1702",
+      "authors": [
+        "Anna Stevens"
+      ],
+      "department": "HISTORY",
+      "advisors": [
+        "Edward Muir"
+      ],
+      "printed_pages": "104-110",
+      "spans": [
+        [
+          "103.0",
+          "109.8"
+        ]
+      ],
+      "notes": "Senior thesis. Advisor from \"Faculty Advisor\" on the opening page. Map and illustration captions are interleaved with the text. The contributors page says Stevens graduated in June 2017, majoring in history and minoring in political science."
+    },
+    {
+      "kind": "back matter",
+      "title": "About the Contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "111-123",
+      "spans": [
+        [
+          "110.0",
+          "122.1"
+        ]
+      ],
+      "notes": "Bios and short Q&As (what is your research, how did you come to it, where is it going) for the eleven thesis authors, in contents order. Printed page 123 (section 122) carries only the running head and page number."
+    },
+    {
+      "kind": "back matter",
+      "title": "Mission Statement",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "124",
+      "spans": [
+        [
+          "123.0",
+          "123.1"
+        ]
+      ],
+      "notes": "Colophon (typefaces, printer Creative Graphic Arts Inc., nurj office address and contacts) and the journal's mission statement."
+    }
+  ]
+}

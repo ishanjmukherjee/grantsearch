@@ -1,0 +1,22 @@
+{"page": 42, "blocks": [
+["NURJ"],
+["43"],
+["Appendix B: Current Setup Results"],
+["Fig. 24 Results of the various sizes of transducer while testing with 0.065-in Al"],
+["Fig. 25 Results of the various sizes of transducer while testing with 0.060-in galvanized steel"],
+["Fig. 26 Results of the various sizes of transducer while testing with 0.045-in uncoated steel"],
+["Fig. 27 Results of the various sizes of transducer while testing with 0.030-in coated steel"],
+["Appendix C: Circuit Diagram"],
+["Fig. 28 Phase Sensitive Detector Circuit Diagram"],
+["References"],
+["¹M.P. Groover. Fundamentals of Modern Manufacturing: Materials, Processing, and Systems, New Jersey: Prentice Hall. 1996:513-520."],
+["²M.A. Ahmetoglu, A. Cormans, G.L. Kinzel, T. Altan. “Improving drawability by using variable blank holder force and pressure in deep drawing of round and non-symmetric parts.” SAE Technical Paper 1993, NO. 930287."],
+["³R. Kergen, P. Jodogne. “Computerized control of blank holder pressure on deep drawing presses.” SAE Technical Paper 1993, NO. 920433."],
+["⁴J. Cao, M.C. Boyce. “A predictive tool for delaying wrinkling and tearing failures in sheet metal forming.” ASME J. Eng. Mater. Tech 1997, 119: 354-365."],
+["⁵P. Kopczynski. “Lvdts. Theory & Application.” Sensors 1992, 9: 18-22."],
+["⁶Collins Technologies. “LVDT Principle of Operation;” http://www.lvdtcollins.com/lvdt/lvdt.htm."],
+["⁷D-j Choi, C-T Rim; et al., “High Sensitivity Inductive Sensing System for Position Measurement.” IEEE Instrumentation and Measurement Technology Conference 2000, 2: 595-599."],
+["⁸D. Graupe, D.J. Krause, J.B. Moore, “Identification of Autoregressive Moving Average (ARMA) parameters of a time series.” IEEE Trans. Auto. Control 1975, 104-106."],
+["⁹S.D. Fassois, K.F. Eman, S.M. Wu, “A fast algorithm for on-line machining process modeling and adaptive control.” J. Engng. Ind 1989, 111:133-139."],
+["¹⁰N. Krishnan, J. Cao, “Real-time calculation of optimal blank-holder force history in sheet metal forming using an ARMA model.” 2002 Japan US Symposium on Flexible Automation, Hiroshima, Japan."]
+]}

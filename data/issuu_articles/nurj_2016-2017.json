@@ -1,0 +1,427 @@
+{
+  "slug": "nurj_2016-2017",
+  "running_heads": [
+    "nurj – vol. 12",
+    "nurj – vol. 12",
+    "POLITICAL SCIENCE",
+    "POLITICAL",
+    "SCIENCE",
+    "AFIRCAN AMERICAN STUDIES",
+    "AFRICAN AMERICAN STUDIES",
+    "AFRICAN AMERICAN",
+    "STUDIES",
+    "GENDER & SEXUALITY STUDIES"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "0.0",
+          "0.2"
+        ]
+      ],
+      "notes": "Cover, vol. 12, 2016-2017. Section 1 (inside cover) has no text."
+    },
+    {
+      "kind": "front matter",
+      "title": "Masthead",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "2.0",
+          "2.14"
+        ]
+      ],
+      "notes": "Masthead, acknowledgments and cover credit (portrait of John Locke by Sir Godfrey Kneller). The staff names and role labels are extracted as separate blocks, so names are not paired with roles in the text."
+    },
+    {
+      "kind": "front matter",
+      "title": "TABLE OF CONTENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "3.0",
+          "4.32"
+        ]
+      ],
+      "notes": "Columnar contents; the extracted text interleaves titles, departments, authors and page numbers of different entries. Its page numbers run one lower than the folios printed on the pages themselves (e.g. Letters at 5, though the letters are on printed pages 6-7)."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Editor",
+      "authors": [
+        "Josh Shi"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "6",
+      "spans": [
+        [
+          "5.0",
+          "5.2"
+        ]
+      ],
+      "notes": "Letter from the Editor-in-Chief."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Advisor",
+      "authors": [
+        "Allen Taflove"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "7",
+      "spans": [
+        [
+          "6.0",
+          "6.2"
+        ]
+      ],
+      "notes": "Letter from the NURJ faculty advisor."
+    },
+    {
+      "kind": "research",
+      "title": "Male Sex Right and the Fraternal Social Contract: An Analysis of Political Membership in Locke's Second Treatise of Government",
+      "authors": [
+        "Ken-Terika Zellner"
+      ],
+      "department": "PHILOSOPHY",
+      "advisors": [
+        "Charles Mills"
+      ],
+      "printed_pages": "8-15",
+      "spans": [
+        [
+          "7.0",
+          "14.5"
+        ]
+      ],
+      "notes": "Senior thesis; advisor named as Faculty Advisor on the opening page. Printed page 8 is an image page with no text. The contents page gives the title as \"Male Sex Right and The Fraternal Social Contract: ...\" and lists it at p. 7."
+    },
+    {
+      "kind": "research",
+      "title": "Remedying Inferiority: Institutional Engagement with Argentine Indios after the Conquest of the Desert",
+      "authors": [
+        "Bill Edwards"
+      ],
+      "department": "HISTORY",
+      "advisors": [
+        "Paul Ramírez",
+        "Lydia Barnett"
+      ],
+      "printed_pages": "16-21",
+      "spans": [
+        [
+          "15.0",
+          "20.5"
+        ]
+      ],
+      "notes": "Senior thesis. The opening page names Paul Ramírez as Faculty Advisor and Lydia Barnett as Seminar Advisor. Contents lists it at p. 15. Running heads on its later pages read \"PHILOSOPHY HISTORY\" (a layout leftover), which remain in the text."
+    },
+    {
+      "kind": "feature",
+      "title": "Bryan Pardo",
+      "authors": [
+        "Josh Shi"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "22-25",
+      "spans": [
+        [
+          "21.0",
+          "24.2"
+        ]
+      ],
+      "notes": "Interview with Bryan Pardo, Associate Professor, Electrical Engineering & Computer Science, head of the Interactive Audio Lab; interview by Josh Shi. Printed page 22 is an image page with only the title. Contents lists it at p. 21."
+    },
+    {
+      "kind": "research",
+      "title": "Che cosa c'è in un nome? Uno studio onomastico sui nomi, soprannomi, ed appellativi utilizzati nella tetralogia L'amica geniale di Elena Ferrante",
+      "authors": [
+        "Maria Massucco"
+      ],
+      "department": "ITALIAN",
+      "advisors": [
+        "Alessia Ricciardi"
+      ],
+      "printed_pages": "26-31",
+      "spans": [
+        [
+          "25.0",
+          "30.6"
+        ]
+      ],
+      "notes": "Senior thesis, in Italian; advisor named as Faculty Advisor on the opening page. Printed page 26 is an image page with no text. Contents lists it at p. 25."
+    },
+    {
+      "kind": "research",
+      "title": "Immigrants in the United Kingdom: Integration Through Group Rights",
+      "authors": [
+        "Shakeeb Asrar"
+      ],
+      "department": "POLITICAL SCIENCE, NU-QATAR",
+      "advisors": [
+        "Jocelyn Sage Mitchell"
+      ],
+      "printed_pages": "32-39",
+      "spans": [
+        [
+          "31.0",
+          "38.5"
+        ]
+      ],
+      "notes": "Senior thesis from NU-Qatar, marked \"Journalistic Writing Nominee\"; advisor named as Faculty Advisor on the opening page. Department as given on the contents page; the page heads read \"POLITICAL SCIENCE\". Contents lists it at p. 31."
+    },
+    {
+      "kind": "feature",
+      "title": "Elizabeth Gerber",
+      "authors": [
+        "Florence Fu"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "40-43",
+      "spans": [
+        [
+          "39.0",
+          "42.1"
+        ]
+      ],
+      "notes": "Interview with Elizabeth Gerber, Associate Professor of Design, Faculty Founder of Design for America, Co-Founder of the Delta Lab and Director of the Segal Research Cluster; interview by Florence Fu. The opening page (block 39.2) reprints the introductory paragraph of the Bryan Pardo interview, apparently a layout error in the print edition. The pull quote in block 41.1 is interleaved line by line with the body text. Contents lists it at p. 39."
+    },
+    {
+      "kind": "research",
+      "title": "Thank You for Playing: A Rational Choice Theory of Friendship",
+      "authors": [
+        "Elena Barham"
+      ],
+      "department": "PHILOSOPHY",
+      "advisors": [
+        "Fabrizio Cariani"
+      ],
+      "printed_pages": "44-47",
+      "spans": [
+        [
+          "43.0",
+          "46.6"
+        ]
+      ],
+      "notes": "Excerpt of a senior thesis (the text refers to \"its full version\"); advisor named as Faculty Advisor on the opening page. Contents lists it at p. 43."
+    },
+    {
+      "kind": "research",
+      "title": "Therapeutic High Schools: Healing in the Age of Ethnic Studies",
+      "authors": [
+        "Cinthya Abigail Rodriguez"
+      ],
+      "department": "AFRICAN-AMERICAN STUDIES",
+      "advisors": [
+        "John D. Márquez"
+      ],
+      "printed_pages": "48-55",
+      "spans": [
+        [
+          "47.0",
+          "54.6"
+        ]
+      ],
+      "notes": "Senior thesis; advisor named as Faculty Advisor on the opening page. Department as given on the contents page; the opening page label is misspelled \"AFIRCAN AMERICAN STUDIES\". Contents lists it at p. 47."
+    },
+    {
+      "kind": "feature",
+      "title": "Hamid Naficy",
+      "authors": [
+        "Bit Meehan"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "56-59",
+      "spans": [
+        [
+          "55.0",
+          "58.1"
+        ]
+      ],
+      "notes": "Interview with Hamid Naficy, Sheikh Hamad Bin Khalifa Al-Thani Professor in the School of Communication; interview by Bit Meehan. Printed page 56 is an image page with only the title. Contents lists it at p. 55."
+    },
+    {
+      "kind": "research",
+      "title": "The Politics of Rentier Benefits and Permanent Residency in Qatar",
+      "authors": [
+        "Jueun Choi"
+      ],
+      "department": "POLITICAL SCIENCE, NU-QATAR",
+      "advisors": [
+        "Jocelyn Sage Mitchell"
+      ],
+      "printed_pages": "60-66",
+      "spans": [
+        [
+          "59.0",
+          "65.5"
+        ]
+      ],
+      "notes": "Senior thesis from NU-Qatar, marked \"Research and Analysis: Social Science Winner\"; advisor named as Faculty Advisor on the opening page. Department as given on the contents page. Contents lists it at p. 59."
+    },
+    {
+      "kind": "research",
+      "title": "Making Mainstream Asian America: Productions and Representations of Asian American Identity in Television and Web Series",
+      "authors": [
+        "Theanne Liu"
+      ],
+      "department": "COMMUNICATION STUDIES",
+      "advisors": [
+        "Dr. Aymar Jean Christian"
+      ],
+      "printed_pages": "67-73",
+      "spans": [
+        [
+          "66.0",
+          "72.5"
+        ]
+      ],
+      "notes": "Senior thesis; advisor named as Faculty Advisor on the opening page. Contents lists it at p. 66."
+    },
+    {
+      "kind": "feature",
+      "title": "Norman Wickett",
+      "authors": [
+        "Lena Thompson",
+        "Rachel Suen"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "74-77",
+      "spans": [
+        [
+          "73.0",
+          "76.1"
+        ]
+      ],
+      "notes": "Interview with Norman Wickett, Professor in the Weinberg College of Arts and Sciences; interview by Lena Thompson and Rachel Suen. Printed page 74 is an image page with only the title. Contents lists it at p. 73."
+    },
+    {
+      "kind": "research",
+      "title": "Examining the Gender Gap: Where are the Educated Qatari Women in the Workforce?",
+      "authors": [
+        "Malak Monir"
+      ],
+      "department": "POLITICAL SCIENCE, NU-QATAR",
+      "advisors": [
+        "Jocelyn Sage Mitchell"
+      ],
+      "printed_pages": "78-85",
+      "spans": [
+        [
+          "77.0",
+          "84.4"
+        ]
+      ],
+      "notes": "Senior thesis from NU-Qatar, marked \"Research and Analysis: Social Science Nominee\"; advisor named as Faculty Advisor on the opening page. Department as given on the contents page. The appendix on printed page 84 has no text in the capture beyond page labels (likely an image). Contents lists it at p. 77."
+    },
+    {
+      "kind": "research",
+      "title": "Exploring the Interpretations of Folk Songs: Three Case Studies in Digital Humanities",
+      "authors": [
+        "Melissa Ileanna-Codd"
+      ],
+      "department": "MUSICOLOGY",
+      "advisors": [
+        "Linda Austern"
+      ],
+      "printed_pages": "86-87",
+      "spans": [
+        [
+          "85.0",
+          "86.2"
+        ]
+      ],
+      "notes": "Abstract only: the thesis is digital, and the page directs readers to thenurj.com for a link to it. Advisor named as Faculty Advisor on the opening page. The author's name is printed \"Melissa Ileanna-Codd\"; the text calls it \"Codd's digital thesis\". Contents lists it at p. 85."
+    },
+    {
+      "kind": "feature",
+      "title": "Mark Ratner",
+      "authors": [
+        "Maria Kaufman"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "88-91",
+      "spans": [
+        [
+          "87.0",
+          "90.2"
+        ]
+      ],
+      "notes": "Interview with Mark Ratner, Dumas University Professor and Co-Director of the Initiative for Sustainability and Energy at Northwestern; interview by Maria Kaufman. Printed page 88 is an image page with only the title. Contents lists it at p. 87."
+    },
+    {
+      "kind": "research",
+      "title": "Decentralizing Computers and Capitalism: Silicon Valley and the Politics of the Free Market, 1971-1984",
+      "authors": [
+        "William Kirkland"
+      ],
+      "department": "HISTORY",
+      "advisors": [
+        "Michael Allen",
+        "Lydia Barnett"
+      ],
+      "printed_pages": "92-99",
+      "spans": [
+        [
+          "91.0",
+          "98.5"
+        ]
+      ],
+      "notes": "Senior thesis. The opening page names Michael Allen as Faculty Advisor and Lydia Barnett as Seminar Director. Printed page 92 holds only a figure caption. Running heads on its later pages read \"PHILOSOPHY HISTORY\" (a layout leftover), which remain in the text. Contents lists it at p. 91."
+    },
+    {
+      "kind": "research",
+      "title": "Recuperating Monique Wittig through the 'Site of Action'",
+      "authors": [
+        "Sarah Moss"
+      ],
+      "department": "GENDER AND SEXUALITY STUDIES",
+      "advisors": [
+        "Mary Deitz"
+      ],
+      "printed_pages": "100-107",
+      "spans": [
+        [
+          "99.0",
+          "106.5"
+        ]
+      ],
+      "notes": "Senior thesis; advisor printed as \"Mary Deitz\", Faculty Advisor, on the opening page. Printed page 100 is an image page with no text. Contents lists it at p. 99."
+    },
+    {
+      "kind": "back matter",
+      "title": "Mission Statement",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "108",
+      "spans": [
+        [
+          "107.0",
+          "107.1"
+        ]
+      ],
+      "notes": "Colophon (typefaces, printer, NURJ office address and contacts) and the journal's mission statement."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{"page": 30, "blocks": [
+["and"],
+["α = 1/L ln(1/|r₁r₂|) , (III.3)"],
+["provides the mirror losses of the plain cavity.² The behavior of this function with respect to the facet reflectivities forms the foundation of this research. The additional reflections caused by the presence of the slots in the cavity modulate the relatively uniform threshold gain of the FP cavity modes. The strength of this feedback is proportional to the position of the slots with respect to the facets. The symmetric case provides a trivial example of slot introduction into the cavity but the index pattern that emerges can be related to a phase-shifted DFB laser with a half wavelength subcavity at the center of the device and all others subject to quarter wavelength.¹"],
+["For the symmetric as-cleaved case, φ₁ = φ₂ = 0 and the modulation amplitude function, f(ε) ~ sinh εLa, is odd, requiring a π/2 phase shift at the center of the device. Approximate slot positions (ε_j) are determined by evaluating an expression of the form given by Equation II.6 with Mathematica®. It should be noted that because the n = 0 term provides effectively a d.c. component here for the symmetric case, it is neglected.¹⁰ Also, the presence of a divergence in the slot density function, [f(ε)]⁻¹ at ε = 0 requires ε_min = L̂_j/2, where L̂_j is slot length with respect to the cavity for integration. The implications of this divergence in the slot density function will be further examined in the anti-reflection (AR) and high-reflection (HR) coating case that follows. A schematic picture of this device is shown in Figure 4."],
+["To generate the slot positions seen in Figure 4 a series of programs were written in FORTRAN, which take the list of ε_j generated from Equation II.6 and correct for the optical path lengths due to the introduction of the slots and still meet the phase requirement.² The formulation for the correction has been outlined above. Each line in Figure 4 represents the center of a slot (a perturbation in the uniform effective refractive index of the cavity); almost the entire device is filled, greatly increasing the spectral purity. The"],
+["Figure 2. Object slot density function (upper) and laser cavity schematic (lower) for multimode laser."],
+["Figure 3. Mirror losses for the 5-mode comb cavity with 14 index modulations. The horizontal line is at the value of mirror losses of the plain FP cavity."],
+["VOLUME 2, MAY 2005"],
+["NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"],
+["29"]
+]}

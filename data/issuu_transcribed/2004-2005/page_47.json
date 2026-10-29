@@ -1,0 +1,28 @@
+{
+ "page": 47,
+ "blocks": [
+  [
+   "Investigations of Nanoscale Ferromagnetism in InAs/InMnAs Core/Shell Nanowires Using Magnetic Force Microscopy"
+  ],
+  [
+   "Dinna G. Ramlan",
+   "DEPARTMENT OF MATERIALS SCIENCE AND ENGINEERING"
+  ],
+  [
+   "Lincoln J. Lauhon",
+   "FACULTY ADVISOR, MATERIALS SCIENCE AND ENGINEERING, NORTHWESTERN UNIVERSITY"
+  ],
+  [
+   "ABSTRACT"
+  ],
+  [
+   "Magnetic force microscopy (MFM) was used to characterize the magnetic properties of InAs/InMnAs core/shell nanowires grown by the vapor-liquid-solid method. Magnetic field-dependent phase contrast was observed in MFM images and was correlated with small protrusions observed in topographic images. Transmission electron microscopy (TEM) studies of nanowire structure and composition identified hexagonal MnAs precipitates on the surface of InAs nanowires. Variable temperature MFM studies from 300-350 K showed a decrease in magnetic contrast with increasing temperature, consistent with the Curie temperature of 318 K for bulk hexagonal MnAs."
+  ],
+  [
+   "I. INTRODUCTION"
+  ],
+  [
+   "Spintronic technology¹ may lead to new kinds of digital electronics that can process and store data on the same device, resulting in computer processors that work faster and consume less electricity. One approach to semiconductor-based spintronics is to alloy small amounts of magnetic elements with nonmagnetic semiconductors to produce diluted magnetic semiconductors (DMSs).¹ For instance, the addition of Mn as an acceptor to InAs makes InAs a ferromagnetic p-type semiconductor. The incorporation of DMS materials in practical applications requires that the DMS material have a ferromagnetic transition temperature (Tc) above room temperature. Because small device sizes are important to minimize power dissipation and maxi-"
+  ]
+ ]
+}

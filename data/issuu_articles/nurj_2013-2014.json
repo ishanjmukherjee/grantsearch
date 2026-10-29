@@ -1,0 +1,374 @@
+{
+  "slug": "nurj_2013-2014",
+  "running_heads": [
+    "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL",
+    "VOLUME 09, 2013 – 2014",
+    "VOLUME 09, 2013 – 2014",
+    "ART HISTORY",
+    "EARTH & PLANETARY SCIENCES",
+    "POLITICAL SCIENCE",
+    "MCCORMICK",
+    "MATHEMATICS",
+    "ENGLISH LITERATURE",
+    "CHEMISTRY",
+    "PHILOSOPHY",
+    "COGNITIVE SCIENCE",
+    "MMSS",
+    "AFRICAN AMERICAN STUDIES"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [
+        [
+          "1.0",
+          "1.9"
+        ]
+      ],
+      "notes": "No title is printed; the title given is the masthead line. Acknowledgments, office address, masthead (Volume 09, 2013-14; Editor-in-Chief Judith Kim; Faculty Advisor Allen Taflove) and mission statement. The page carries no printed number; its page number is inferred from the numbering of later pages. The front cover (section 0) has no text in the capture."
+    },
+    {
+      "kind": "letter",
+      "title": "LETTER FROM THE EDITOR-IN-CHIEF",
+      "authors": [
+        "Judith Kim"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [
+        [
+          "2.0",
+          "2.1"
+        ]
+      ],
+      "notes": "Marks the journal's ten-year anniversary, dedicates the volume to Dale Mortensen, and describes the new partnership with academic departments to publish selections from their \"Best Senior Theses.\" Page number inferred; none is printed."
+    },
+    {
+      "kind": "letter",
+      "title": "LETTER FROM THE FACULTY ADVISOR",
+      "authors": [
+        "Allen Taflove"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [
+        [
+          "3.0",
+          "3.1"
+        ]
+      ],
+      "notes": "Signed Allen Taflove, Professor, Department of Electrical Engineering and Computer Science, McCormick School of Engineering. Page number inferred; none is printed."
+    },
+    {
+      "kind": "front matter",
+      "title": "CONTENTS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "5",
+      "spans": [
+        [
+          "4.0",
+          "4.33"
+        ]
+      ],
+      "notes": "Contents page. The department headings were extracted as separate blocks out of order (4.29-4.32). It notes that the volume contains condensed versions or excerpts of each senior thesis, with full versions on the NURJ website. Page number inferred; none is printed."
+    },
+    {
+      "kind": "research",
+      "title": "The Problem in Room 24: Racial Constructions and the Making of National Identity in the National Museum of Fine Arts of Argentina",
+      "authors": [
+        "Jasmine Jennings"
+      ],
+      "department": "ART HISTORY",
+      "advisors": [
+        "Huey Copeland"
+      ],
+      "printed_pages": "6-11",
+      "spans": [
+        [
+          "5.0",
+          "10.3"
+        ]
+      ],
+      "notes": "Condensed senior thesis (one of the departmental \"Best Senior Theses\"). Huey Copeland is named as Faculty Advisor on the opening page. The opening page repeats the introduction as an abstract. The contributors page gives the author's majors as Art History & International Studies."
+    },
+    {
+      "kind": "research",
+      "title": "Geochemical Evidence for Variable Redox Conditions in the Late Cretaceous Western Interior Seaway",
+      "authors": [
+        "Allegra Mayer"
+      ],
+      "department": "EARTH & PLANETARY SCIENCES",
+      "advisors": [
+        "Brad Sageman"
+      ],
+      "printed_pages": "12-18",
+      "spans": [
+        [
+          "11.0",
+          "17.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis. Brad Sageman is named as Faculty Advisor on the opening page. In sections 15-16 (printed pages 16-17) the extraction interleaves the lines of adjacent columns and figure captions, and part of page 17 is broken into one-word lines, so that text is out of order. The contributors page gives the author's majors as Earth & Planetary Sciences, Integrated Science Program, & Environmental Science."
+    },
+    {
+      "kind": "research",
+      "title": "Nabokov's Watermarks: The Significance of Perceptual Time and Memory in Three Selected Novels",
+      "authors": [
+        "Sydney Lazarus"
+      ],
+      "department": "SLAVIC LANGUAGES & LITERATURE",
+      "advisors": [
+        "Clare Cavanagh"
+      ],
+      "printed_pages": "19",
+      "spans": [
+        [
+          "18.0",
+          "18.10"
+        ]
+      ],
+      "notes": "Title page only (marked \"(Title Page)\" in the contents); no text of the thesis is printed beyond two epigraphs, the second attributed to Nabokov's Ada or Ardor. Clare Cavanagh is named as Faculty Advisor on the page. The author is not among those interviewed on the contributors pages."
+    },
+    {
+      "kind": "research",
+      "title": "Politics, Poverty, and Pedagogy: An examination of how colleges teach about poverty",
+      "authors": [
+        "Katie Singh"
+      ],
+      "department": "POLITICAL SCIENCE",
+      "advisors": [
+        "Benjamin Page"
+      ],
+      "printed_pages": "20-25",
+      "spans": [
+        [
+          "19.0",
+          "19.4"
+        ],
+        [
+          "19.6",
+          "19.6"
+        ],
+        [
+          "19.5",
+          "19.5"
+        ],
+        [
+          "19.7",
+          "24.42"
+        ]
+      ],
+      "notes": "Condensed senior thesis. The contents page gives the subtitle as \"An Examination of College Teaching About Poverty\". Benjamin Page is named as Faculty Advisor on the opening page; the contributors page calls him her thesis advisor (\"Ben Page\"). The tables in sections 23-24 are extracted as one block per cell. The contributors page gives the author's majors as Political Science / Global Health Studies."
+    },
+    {
+      "kind": "research",
+      "title": "A Self Assembled Organic/Inorganic Nanostructure for Photovoltaic Applications",
+      "authors": [
+        "Julian Minuzzo"
+      ],
+      "department": "MATERIALS SCIENCE AND ENGINEERING",
+      "advisors": [
+        "Samuel I. Stupp",
+        "David Herman"
+      ],
+      "printed_pages": "26-30",
+      "spans": [
+        [
+          "25.0",
+          "29.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis, listed in the contents under McCormick School of Engineering (as \"A Self-Assembled ...\"). The opening page names Samuel I. Stupp as Faculty Advisor and David Herman as Postdoctoral Mentor; in the contributors Q&A the author calls Herman his mentor and \"the PhD student I was working with.\" The contributors page gives the author's major as Materials Science Engineering."
+    },
+    {
+      "kind": "research",
+      "title": "Functional Inequalities for Gaussian and Log-Canconave Probability Measures",
+      "authors": [
+        "Ewain Gwynne"
+      ],
+      "department": "MATHEMATICS",
+      "advisors": [
+        "Elton Hsu"
+      ],
+      "printed_pages": "31",
+      "spans": [
+        [
+          "30.0",
+          "30.6"
+        ]
+      ],
+      "notes": "Abstract only (marked \"(Abstract)\" in the contents). The title is copied from the opening page, which prints \"Log-Canconave\"; the contents page spells it \"Log-Concave\". The page also carries a stray \"ART HISTORY\" section label. Elton Hsu is named as Faculty Advisor on the page and as the author's advisor on the contributors page, which gives the author's majors as Mathematics / MMSS."
+    },
+    {
+      "kind": "research",
+      "title": "\"I Know Where is an Hynde\": Wyatt's Rebellious (Sub)Version of Masculine Erotics",
+      "authors": [
+        "Benjamin Ratskoff"
+      ],
+      "department": "ENGLISH LANGUAGE & LITERATURE",
+      "advisors": [
+        "Laurie Shannon"
+      ],
+      "printed_pages": "32-37",
+      "spans": [
+        [
+          "31.0",
+          "36.6"
+        ]
+      ],
+      "notes": "Excerpt (marked \"(Excerpt)\" in the contents, where the title reads \"(Sub)version\" and the department \"English Literature\"). The excerpt begins at section III, \"The Failure of Petrarchan Desire\". Laurie Shannon is named as Faculty Advisor on the opening page and as thesis advisor on the contributors page. Footnotes are interleaved with the body text in the extraction, and the bibliography breaks off mid-entry (\"Waller, Marguerite ...\") at the foot of printed page 37. The contributors page gives the author's majors as English Literature / African American Studies."
+    },
+    {
+      "kind": "research",
+      "title": "Trinuclear Ruthenium Clusters for Electrochemical Biosensor Development",
+      "authors": [
+        "Hsiao-Tieh Hsu"
+      ],
+      "department": "CHEMISTRY",
+      "advisors": [
+        "Thomas J. Meade",
+        "Amanda L. Eckermann",
+        "Daniel J. Feld"
+      ],
+      "printed_pages": "38-43",
+      "spans": [
+        [
+          "37.0",
+          "42.4"
+        ]
+      ],
+      "notes": "Condensed senior thesis. The opening page names Amanda L. Eckermann, Thomas J. Meade and Daniel J. Feld alongside the labels Faculty Advisor, Postdoctoral Mentor and Graduate Mentor, but the extraction separates names from labels; that Meade is the faculty advisor is inferred from the contributors Q&A, where the author describes joining Professor Meade's research group. In section 40 (printed page 41) the extraction interleaves lines of adjacent columns and Table 2. The contributors page gives the author's majors as Chemistry & Linguistics."
+    },
+    {
+      "kind": "research",
+      "title": "World White Web",
+      "authors": [
+        "Mauricio Maluff Masi"
+      ],
+      "department": "PHILOSOPHY",
+      "advisors": [
+        "Charles W Mills"
+      ],
+      "printed_pages": "44-48",
+      "spans": [
+        [
+          "43.0",
+          "47.3"
+        ]
+      ],
+      "notes": "Condensed senior thesis. Charles W Mills is named as Faculty Advisor on the opening page and as thesis advisor (\"Prof. Charles W. Mills\") on the contributors page. Footnotes are interleaved with the body text in the extraction. The contributors page gives the author's majors as Philosophy & Mathematics."
+    },
+    {
+      "kind": "research",
+      "title": "On the Specificity of Perceptual-Motor Sequence Learning",
+      "authors": [
+        "Eric N. Yarnik"
+      ],
+      "department": "COGNITIVE SCIENCE",
+      "advisors": [
+        "Paul J. Reber"
+      ],
+      "printed_pages": "49-54",
+      "spans": [
+        [
+          "48.0",
+          "53.3"
+        ]
+      ],
+      "notes": "Condensed senior thesis, with an abstract on the opening page. Paul J. Reber is named beside the author on the opening page with the Faculty Advisor label, and as the author's advisor on the contributors page. The contributors page gives the author's majors as Cognitive Science / Psychology."
+    },
+    {
+      "kind": "research",
+      "title": "Testing the Minimax Theorm in the Field: The Interaction between Pitcher and Batter in Baseball",
+      "authors": [
+        "Christopher Rowe"
+      ],
+      "department": "MATHEMATICAL METHODS IN THE SOCIAL SCIENCES PROGRAM",
+      "advisors": [
+        "William Rogerson"
+      ],
+      "printed_pages": "55-60",
+      "spans": [
+        [
+          "54.0",
+          "59.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis, with an abstract on the opening page. The title is copied from the opening page, which prints \"Theorm\"; the contents page reads \"Testing the Minimax Theorem in the Field: The Interaction between Pitcher and Batter in Baseball\". William Rogerson is named as Faculty Advisor on the opening page and as thesis advisor in the acknowledgements and on the contributors page. The contributors page gives the author's majors as MMSS, Classics, & Mathematics."
+    },
+    {
+      "kind": "research",
+      "title": "Black Imprints: Haitian Colonial Memory in Venezuelan Politics",
+      "authors": [
+        "Ayanna Legros"
+      ],
+      "department": "AFRICAN AMERICAN STUDIES",
+      "advisors": [
+        "Sherwin Bryant",
+        "Barnor Hesse"
+      ],
+      "printed_pages": "61-67",
+      "spans": [
+        [
+          "60.0",
+          "66.3"
+        ]
+      ],
+      "notes": "Condensed senior thesis, with an abstract and keywords on the opening page. The opening page names Sherwin Bryant as Faculty Advisor and Barnor Hesse as Faculty Reader. The contributors page gives the author's majors as African American Studies & International Studies."
+    },
+    {
+      "kind": "back matter",
+      "title": "About the Contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "68-70",
+      "spans": [
+        [
+          "67.0",
+          "69.30"
+        ]
+      ],
+      "notes": "Q&A with eleven of the twelve authors (all but Sydney Lazarus), headed \"NURJ Interview 2012–13 \"Best Senior Thesis\" Winners\": majors, what they did after graduation, the origin of the research question, who inspired them, and favorite class. The extraction splits names, questions, majors and answers into separate blocks, so their pairing has to be reconstructed from the layout."
+    },
+    {
+      "kind": "back matter",
+      "title": "RESEARCH RESOURCES AT NORTHWESTERN",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "71",
+      "spans": [
+        [
+          "70.0",
+          "70.18"
+        ]
+      ],
+      "notes": "Undergraduate research resources: Office of Undergraduate Research, Office of Fellowships, URAP, the Undergraduate Research and Arts Exposition, Humanities Research Workshops and department websites. The headings and descriptions are extracted as separate blocks."
+    },
+    {
+      "kind": "back matter",
+      "title": "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "71.0",
+          "71.0"
+        ]
+      ],
+      "notes": "Back cover; only the journal's name is captured."
+    }
+  ]
+}

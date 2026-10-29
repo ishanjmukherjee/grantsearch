@@ -1,0 +1,450 @@
+{
+  "slug": "nurj_v7_2011-2012",
+  "running_heads": [
+    "RESEARCH",
+    "ABSTRACT",
+    "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL",
+    "VOLUME 7, 2011-2012"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Volume 7 | 2011-2012",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "1",
+      "spans": [
+        [
+          "2.0",
+          "2.0"
+        ]
+      ],
+      "notes": "Title page. Sections 0 and 1 (cover) have no text."
+    },
+    {
+      "kind": "front matter",
+      "title": "Contents",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [
+        [
+          "3.0",
+          "3.49"
+        ]
+      ],
+      "notes": "Table of contents; the department labels are extracted as separate blocks out of order with the titles."
+    },
+    {
+      "kind": "front matter",
+      "title": "Acknowledgments and Staff",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [
+        [
+          "4.0",
+          "4.4"
+        ]
+      ],
+      "notes": "Acknowledgements, staff list, faculty review board and mission statement. The journal's faculty advisor is Allen Taflove."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Editors",
+      "authors": [
+        "Alina Dunbar",
+        "Angelica Kielbus"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [
+        [
+          "5.0",
+          "5.3"
+        ]
+      ],
+      "notes": "Letter from the co-editors in chief."
+    },
+    {
+      "kind": "front matter",
+      "title": "About NURJ",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "5",
+      "spans": [
+        [
+          "6.0",
+          "6.9"
+        ]
+      ],
+      "notes": "Call for submissions for 2012-2013, link to the online journal and call for staff. Printed pages 6-7 are not in the capture: the next section is printed page 8."
+    },
+    {
+      "kind": "research",
+      "title": "INDIA & SINGAPORE: The Impact of Elite Choice and Public Support on Post-Colonial Democratic Success",
+      "authors": [
+        "Shaon Ahsan"
+      ],
+      "department": "Political Science",
+      "advisors": [
+        "Wendy Pearlman"
+      ],
+      "printed_pages": "8-12",
+      "spans": [
+        [
+          "7.0",
+          "11.13"
+        ]
+      ],
+      "notes": "Summary of a departmental honors thesis. Advisor named on the paper (Faculty Advisor, Department of Political Science). The endnote numbers in section 11 are extracted as separate blocks from the endnote texts."
+    },
+    {
+      "kind": "research",
+      "title": "Healing More than a DISEASE: Catholic FBOs in Africa's Era of HIV/AIDS",
+      "authors": [
+        "Anna Martin"
+      ],
+      "department": "Religious Studies",
+      "advisors": [
+        "Laurie Zoloth"
+      ],
+      "printed_pages": "13-17",
+      "spans": [
+        [
+          "12.0",
+          "16.9"
+        ]
+      ],
+      "notes": "Marked \"ABRIDGED VERSION\" on the paper. Advisor named on the paper (Faculty Advisor, Department of Religious Studies). The contributors page says it is from her honors thesis in Religious Studies. Endnote numbers in section 16 are extracted separately from the endnote texts."
+    },
+    {
+      "kind": "research",
+      "title": "Report from Paris: The 12th century Tomb Slab of Queen Frédégonde",
+      "authors": [
+        "Luke Fidler"
+      ],
+      "department": "Art History",
+      "advisors": [
+        "Huey Copeland",
+        "Shirin Fozi"
+      ],
+      "printed_pages": "18-19",
+      "spans": [
+        [
+          "17.0",
+          "18.6"
+        ]
+      ],
+      "notes": "Short report on research in progress, funded by an Undergraduate Research Grant; printed under the volume's ABSTRACT page head. Both advisors are named on the paper as Faculty Advisor, Department of Art History."
+    },
+    {
+      "kind": "research",
+      "title": "US-China Trade: A Vector Error Correction Model",
+      "authors": [
+        "Brandon Zaharoff"
+      ],
+      "department": "MMSS",
+      "advisors": [
+        "Robert Coen"
+      ],
+      "printed_pages": "20-25",
+      "spans": [
+        [
+          "19.0",
+          "24.3"
+        ]
+      ],
+      "notes": "MMSS thesis; the paper gives the program as Mathematical Methods in the Social Sciences Program. Advisor named on the paper (Faculty Advisor, Department of Economics). The cointegration test table in section 22 is extracted cell by cell."
+    },
+    {
+      "kind": "research",
+      "title": "Fluctuating and Directional Asymmetry: Skeletal Evidence for Life History Theory and Human Evolutionary Ecology in Archaeological South Dakota Arikara Samples",
+      "authors": [
+        "Blake Erickson"
+      ],
+      "department": "Anthropology",
+      "advisors": [
+        "Erin Waxenbaum"
+      ],
+      "printed_pages": "26-27",
+      "spans": [
+        [
+          "25.0",
+          "26.6"
+        ]
+      ],
+      "notes": "Abstract-length piece printed under the volume's ABSTRACT page head. Title taken from the contents page; on the opening page the title reads \"FLUCTUATING & DIRECTIONAL ASYMME TR Y\". Advisor named on the paper (Faculty Advisor, Department of Anthropology)."
+    },
+    {
+      "kind": "research",
+      "title": "Singing in Chains: Dylan Thomas and His Resistance Toward Death",
+      "authors": [
+        "Brandon Ng"
+      ],
+      "department": "English Literature",
+      "advisors": [
+        "Emily Rohrbach",
+        "Christopher Lane"
+      ],
+      "printed_pages": "28-32",
+      "spans": [
+        [
+          "27.0",
+          "31.4"
+        ]
+      ],
+      "notes": "Title taken from the contents page; the opening page's text reads only \"Singing in\" before the subtitle (the word \"Chains\" is presumably set as a graphic). Advisors named on the paper: Emily Rohrbach (Faculty Advisor) and Christopher Lane (Secondary Advisor), Department of English. The contributors page says it was his English honors thesis."
+    },
+    {
+      "kind": "research",
+      "title": "Southwest to the Rescue? An Investigation of Hub Premiums and Southwest Airlines",
+      "authors": [
+        "Suzanne Chang"
+      ],
+      "department": "Economics",
+      "advisors": [
+        "Robert Gordon",
+        "Steffen Habermalz"
+      ],
+      "printed_pages": "33-38",
+      "spans": [
+        [
+          "32.0",
+          "37.2"
+        ]
+      ],
+      "notes": "Senior thesis in Economics (per the contributors page). Advisors named on the paper: Robert Gordon (Faculty Advisor) and Steffen Habermalz (Secondary Advisor), Department of Economics. Printed page 38 (section 37) has no text beyond the page head, presumably tables or figures."
+    },
+    {
+      "kind": "research",
+      "title": "Targeting MircoRNA-21 for Therapy Against Prostate Cancer Progression and Metastasis",
+      "authors": [
+        "James Lee"
+      ],
+      "department": "Biological Sciences",
+      "advisors": [
+        "Ming Zhang"
+      ],
+      "printed_pages": "39-40",
+      "spans": [
+        [
+          "38.0",
+          "39.8"
+        ]
+      ],
+      "notes": "Research proposal printed under the volume's ABSTRACT page head; \"MircoRNA\" is spelled so in the title. Paper lists Biological Sciences Program and Molecular Pharmacology and Biological Chemistry; advisor Ming Zhang (Faculty Advisor, Molecular Pharmacology and Biological Chemistry, Feinberg School of Medicine). The contributors page gives the author's major as anthropology with a minor in global health studies. The reference numbers in section 39 are extracted separately from the reference texts."
+    },
+    {
+      "kind": "research",
+      "title": "Cultivating Community: Space and Capacity in Urban Gardens",
+      "authors": [
+        "Emily Wright"
+      ],
+      "department": "Anthropology",
+      "advisors": [
+        "Timothy Keese Earle",
+        "Helen B. Schwartzman"
+      ],
+      "printed_pages": "41-45",
+      "spans": [
+        [
+          "40.0",
+          "44.4"
+        ]
+      ],
+      "notes": "Advisors named on the paper: Timothy Keese Earle (Faculty Advisor) and Helen B. Schwartzman (Secondary Advisor), Department of Anthropology; Jesse Mumm is named as Graduate Student Mentor."
+    },
+    {
+      "kind": "research",
+      "title": "ROOTS of EARTH: A New Genre of Mythic Performance",
+      "authors": [
+        "Britt Banaszynski"
+      ],
+      "department": "Theater",
+      "advisors": [
+        "Annie Beserra",
+        "Billy Siegenfeld"
+      ],
+      "printed_pages": "46-47",
+      "spans": [
+        [
+          "45.0",
+          "46.4"
+        ]
+      ],
+      "notes": "Abstract of a creative Honors Project, printed under the volume's ABSTRACT page head. Title taken from the contents page; the opening page's text has only the subtitle \"A New Genre of Mythic Performance\". The paper gives the department as Department of Theatre. Advisors named on the paper: Annie Beserra (Faculty Advisor) and Billy Siegenfeld (Secondary Advisor). Includes a photo credit (\"photo by Amelia Bell\"). The contributors page gives the author's degree as a B.A. in Dance."
+    },
+    {
+      "kind": "research",
+      "title": "Female Entrepreneurship in Dakar, Senegal: Factors, Pathways, and Obstacles",
+      "authors": [
+        "Katherine Northcott"
+      ],
+      "department": "Economics and African Studies",
+      "advisors": [
+        "Hilarie Lieb"
+      ],
+      "printed_pages": "48-51",
+      "spans": [
+        [
+          "47.0",
+          "50.12"
+        ]
+      ],
+      "notes": "The paper gives Department of Economics and Program of African Studies. Advisor named on the paper (Faculty Advisor, Department of Economics). Tables in sections 47-49 are extracted cell by cell, interleaved with body text."
+    },
+    {
+      "kind": "research",
+      "title": "Liberty, Equality, Brotherhood... and Secularism? The Codification of Cultural Values in France",
+      "authors": [
+        "Patricia Radkowski"
+      ],
+      "department": "Legal Studies",
+      "advisors": [
+        "Nicholas Pedriana"
+      ],
+      "printed_pages": "52-60",
+      "spans": [
+        [
+          "51.0",
+          "59.4"
+        ]
+      ],
+      "notes": "The contributors page says this is a shortened version of her Legal Studies thesis. The paper gives Center for Legal Studies; advisor named on the paper (Faculty Adviser, Center for Legal Studies). Endnote numbers in section 59 are extracted separately from the endnote texts."
+    },
+    {
+      "kind": "research",
+      "title": "An analysis of limb element asymmetry in an Ancestral Puebloan population",
+      "authors": [
+        "Kendra Sirak"
+      ],
+      "department": "Anthropology",
+      "advisors": [
+        "Erin Waxenbaum"
+      ],
+      "printed_pages": "61",
+      "spans": [
+        [
+          "60.0",
+          "60.8"
+        ]
+      ],
+      "notes": "One-page abstract printed under the volume's ABSTRACT page head. Advisor named on the paper (Faculty Advisor, Department of Anthropology). The contributors page says it is from her senior honors thesis; majors anthropology and psychology."
+    },
+    {
+      "kind": "research",
+      "title": "Watch What You Say: Spoken Self-Statements, Emotion, and Behavior",
+      "authors": [
+        "Alcina Lidder"
+      ],
+      "department": "Psychology",
+      "advisors": [
+        "Richard Zinbarg",
+        "Patricia M Nielsen"
+      ],
+      "printed_pages": "62",
+      "spans": [
+        [
+          "61.0",
+          "61.10"
+        ]
+      ],
+      "notes": "One-page abstract of an honors thesis in progress (results not yet analyzed), printed under the volume's ABSTRACT page head. Advisors named on the paper: Richard Zinbarg (Faculty Advisor, Department of Psychology) and Patricia M Nielsen (Secondary Advisor, Anxiety and Panic Treatment Program, The Family Institute)."
+    },
+    {
+      "kind": "research",
+      "title": "Civic Participation and the Environment: An exploration of volunteering motives of college-aged students",
+      "authors": [
+        "Pavan Krishnamurthy",
+        "Emma Solanki"
+      ],
+      "department": "Environmental Policy and Culture",
+      "advisors": [
+        "Yael Wolinksy",
+        "Jason Seawright"
+      ],
+      "printed_pages": "63-69",
+      "spans": [
+        [
+          "62.0",
+          "68.5"
+        ]
+      ],
+      "notes": "The paper gives Program in Environmental Policy and Culture for both authors. Advisors named on the paper: Yael Wolinksy (Faculty Advisor, Program in Environmental Policy and Culture; spelled so) and Jason Seawright (Secondary Advisor, Department of Political Science). The regression table in section 67 is extracted cell by cell."
+    },
+    {
+      "kind": "research",
+      "title": "Leptin Levels in Lean Adult Filipino Populations",
+      "authors": [
+        "Omar Jamil"
+      ],
+      "department": "Anthropology",
+      "advisors": [
+        "Thomas McDade",
+        "Christopher Kuzawa"
+      ],
+      "printed_pages": "70-74",
+      "spans": [
+        [
+          "69.0",
+          "73.0"
+        ],
+        [
+          "73.2",
+          "73.6"
+        ]
+      ],
+      "notes": "Thesis work (per the contributors page; Biological Anthropology major). Advisors named on the paper: Thomas McDade (Faculty Advisor) and Christopher Kuzawa (Secondary Adviser), Department of Anthropology. Table and figure captions in sections 71-72 are extracted out of reading order. A stray line \"Zaharoff\" on printed page 74 (block 73.1) is kept as a separate item."
+    },
+    {
+      "kind": "other",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "74",
+      "spans": [
+        [
+          "73.1",
+          "73.1"
+        ]
+      ],
+      "notes": "A stray line \"Zaharoff\" extracted from printed page 74, within the leptin paper; it is unrelated to that paper's text (Brandon Zaharoff is the author of the US-China trade paper)."
+    },
+    {
+      "kind": "back matter",
+      "title": "Research: Get Involved",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "75",
+      "spans": [
+        [
+          "74.0",
+          "74.3"
+        ]
+      ],
+      "notes": "Guide headed \"WANT TO GET INVOLVED IN RESEARCH AT NU?\" listing Northwestern undergraduate research programs and resources."
+    },
+    {
+      "kind": "back matter",
+      "title": "About the Contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "76-77",
+      "spans": [
+        [
+          "75.0",
+          "76.9"
+        ]
+      ],
+      "notes": "Biographies of all 17 authors."
+    }
+  ]
+}

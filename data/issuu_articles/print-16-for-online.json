@@ -1,0 +1,549 @@
+{
+ "slug": "print-16-for-online",
+ "running_heads": [
+  "FEATURE",
+  "Feature: Portrait of a Lab"
+ ],
+ "items": [
+  {
+   "kind": "front matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "1.0",
+     "1.1"
+    ]
+   ],
+   "notes": "Acknowledgments and publication details (published June 2021, ISSN 2689-1034) from the inside cover. The cover (section 0) has no text in the capture."
+  },
+  {
+   "kind": "front matter",
+   "title": "MASTHEAD",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "1",
+   "spans": [
+    [
+     "2.0",
+     "2.12"
+    ]
+   ],
+   "notes": "Staff masthead."
+  },
+  {
+   "kind": "front matter",
+   "title": "TABLE OF CONTENTS",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "2-3",
+   "spans": [
+    [
+     "3.0",
+     "4.32"
+    ]
+   ],
+   "notes": "Reading order of the contents page is jumbled: page numbers, section labels and titles come in separate blocks."
+  },
+  {
+   "kind": "letter",
+   "title": "LETTER FROM THE ADVISER",
+   "authors": [
+    "Allen Taflove"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "4",
+   "spans": [
+    [
+     "5.0",
+     "5.2"
+    ]
+   ],
+   "notes": null
+  },
+  {
+   "kind": "letter",
+   "title": "LETTER FROM THE EDITORS",
+   "authors": [
+    "Maia Brown",
+    "Shreya Sriram"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "5",
+   "spans": [
+    [
+     "6.0",
+     "6.2"
+    ]
+   ],
+   "notes": null
+  },
+  {
+   "kind": "letter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "6-7",
+   "spans": [
+    [
+     "8.0",
+     "8.0"
+    ]
+   ],
+   "notes": "Dedication in memory of faculty adviser Allen Taflove, signed \"The students of the NURJ\"; the contents page lists it as \"Opening letters and dedication in honor of Faculty Adviser Allen Taflove\". Its facing page (section 7, printed page 6) has no text in the capture, so any printed heading is missing."
+  },
+  {
+   "kind": "research",
+   "title": "Opinions in Flux: An Exploration of the Perceptions of Concussions in Youth Sports",
+   "authors": [
+    "Andrew Wayne"
+   ],
+   "department": "Social Policy",
+   "advisors": [
+    "Diane Schanzenbach"
+   ],
+   "printed_pages": "8-23",
+   "spans": [
+    [
+     "9.0",
+     "24.3"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page. Includes the survey instrument as an appendix (printed pages 18-20), whose question numbers are extracted in blocks separate from the question text; Tables 1-2 are extracted cell by cell."
+  },
+  {
+   "kind": "feature",
+   "title": "Being the Change We Wish to See: Madeline Baxter",
+   "authors": [
+    "Rachel Chiu",
+    "Jada Morgan"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "24-27",
+   "spans": [
+    [
+     "25.0",
+     "28.6"
+    ]
+   ],
+   "notes": "Q&A interview with student researcher Madeline Baxter; the contents page lists it as \"Student Researcher Madeline Baxter on Researching Public Health and Race\"."
+  },
+  {
+   "kind": "research",
+   "title": "What is Political Ontology",
+   "authors": [
+    "John Sweeney"
+   ],
+   "department": "African American Studies",
+   "advisors": [
+    "Marquis Bey"
+   ],
+   "printed_pages": "28-41",
+   "spans": [
+    [
+     "29.0",
+     "42.5"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page."
+  },
+  {
+   "kind": "feature",
+   "title": "Professor Jesús Escobar on Studying Art During the COVID-19 Pandemic",
+   "authors": [
+    "Joni Rosenberg"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "42-43",
+   "spans": [
+    [
+     "43.0",
+     "44.2"
+    ]
+   ],
+   "notes": "Title from the contents page; the page headline, \"Studying Art History in the Age of COVID-19\", is split by the byline and standfirst in the capture."
+  },
+  {
+   "kind": "research",
+   "title": "Networking for Gender Justice: Women's Arts Organizations as Facilitators of Gender Equity in the Arts Industry",
+   "authors": [
+    "Jade Davis"
+   ],
+   "department": "Sociology",
+   "advisors": [
+    "Anthony Chen"
+   ],
+   "printed_pages": "44-59",
+   "spans": [
+    [
+     "45.0",
+     "60.3"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page."
+  },
+  {
+   "kind": "feature",
+   "title": "Impact of COVID-19 Pandemic on Medical Social Sciences Research",
+   "authors": [
+    "Vibhusha Kolli"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "60-61",
+   "spans": [
+    [
+     "61.0",
+     "62.4"
+    ]
+   ],
+   "notes": "Profile of Medical Social Sciences Professor Patricia Moreno; the contents page lists it as \"Professor Patricia Moreno on Therapy-Related Research During the COVID-19 Pandemic\"."
+  },
+  {
+   "kind": "research",
+   "title": "Swimming Upstream: Decreasing Salmon Populations in the Columbia River Basin Through Infrastructure and Its Impacts on Indigenous Welfare",
+   "authors": [
+    "Simone Laszuk"
+   ],
+   "department": "Anthropology",
+   "advisors": [
+    "Mark Hauser"
+   ],
+   "printed_pages": "62-75",
+   "spans": [
+    [
+     "63.0",
+     "76.3"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page. Figures 8-10 (printed pages 72-74, sections 73-75) are fish-count tables extracted cell by cell, mostly as lone \"-\" blocks."
+  },
+  {
+   "kind": "feature",
+   "title": "Leading the Fight Against SARS-CoV-2: Dr. Robert L. Murphy",
+   "authors": [
+    "Kallista Zhuang"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "76-79",
+   "spans": [
+    [
+     "77.0",
+     "80.2"
+    ]
+   ],
+   "notes": "Profile of Dr. Robert L. Murphy; the contents page lists it as \"Dr. Robert L. Murphy on Vaccine Development\"."
+  },
+  {
+   "kind": "research",
+   "title": "Stories of Regret in Late Midlife and Their Relation to Psychosocial Adaptation",
+   "authors": [
+    "Joy Hsu"
+   ],
+   "department": "Psychology",
+   "advisors": [
+    "Dan McAdams"
+   ],
+   "printed_pages": "80-91",
+   "spans": [
+    [
+     "81.0",
+     "92.5"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page. Tables 1-5 are extracted cell by cell."
+  },
+  {
+   "kind": "feature",
+   "title": "A Brief History of the Dearborn Observatory",
+   "authors": [
+    "Andrew Laeuger"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "92-94",
+   "spans": [
+    [
+     "93.0",
+     "95.4"
+    ]
+   ],
+   "notes": "Opens with a captioned archival photo of the observatory (printed page 92)."
+  },
+  {
+   "kind": "research",
+   "title": "\"Territory Folks Should Stick Together\": The Role of the Law and the \"Other\" in Daniel Fish's Oklahoma!",
+   "authors": [
+    "Taris Hoffman"
+   ],
+   "department": "Legal Studies",
+   "advisors": [
+    "Joanna Grisinger"
+   ],
+   "printed_pages": "95-109",
+   "spans": [
+    [
+     "96.0",
+     "110.3"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page."
+  },
+  {
+   "kind": "feature",
+   "title": "Graduate Student Ryan Serrano on His Academic Journey",
+   "authors": [
+    "Joy Zhao"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "110-113",
+   "spans": [
+    [
+     "111.0",
+     "114.4"
+    ]
+   ],
+   "notes": "Q&A interview with Slavic Languages and Literatures Ph.D. student Ryan Serrano. Title from the contents page; the page headline is not in the capture's text."
+  },
+  {
+   "kind": "research",
+   "title": "Knowledge and Wonder's Place, Policy, and Publics: Kerry James Marshall and the Henry E. Legler Library's Percent-for-Art Commission",
+   "authors": [
+    "Meghan Clare Considine"
+   ],
+   "department": "Performance Studies, Art History",
+   "advisors": [
+    "Joshua Chambers-Letson",
+    "Rebecca Zorach"
+   ],
+   "printed_pages": "114-128",
+   "spans": [
+    [
+     "115.0",
+     "129.8"
+    ]
+   ],
+   "notes": "Department as on the contents page; the opening page names the Department of Performance Studies (adviser Joshua Chambers-Letson) and the Department of Art History (adviser Rebecca Zorach). The contributors pages name the author as Meghan Considine."
+  },
+  {
+   "kind": "research",
+   "title": "A Reckoning with Medicine's Past",
+   "authors": [
+    "Meilynn Shi"
+   ],
+   "department": "American Studies",
+   "advisors": [
+    "Mark Sheldon"
+   ],
+   "printed_pages": "129-132",
+   "spans": [
+    [
+     "130.0",
+     "133.10"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page."
+  },
+  {
+   "kind": "feature",
+   "title": "Professor Beth Redbird on the CoronaData U.S. Project",
+   "authors": [
+    "Prerita Pandya",
+    "Grace Lee"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "133-135",
+   "spans": [
+    [
+     "134.0",
+     "136.4"
+    ]
+   ],
+   "notes": "Title from the contents page; the page headline reads \"Tracking Pandemic\", \"Sociology\", \"The Coronavirus U.S. Project\" in the capture."
+  },
+  {
+   "kind": "research",
+   "title": "Designing Equity: Stakeholders' Perceptions of an Equity Initiative in a California School District",
+   "authors": [
+    "Riley Ceperich"
+   ],
+   "department": "Sociology",
+   "advisors": [
+    "Jeannette Colyvas"
+   ],
+   "printed_pages": "136-152",
+   "spans": [
+    [
+     "137.0",
+     "153.3"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page. Appendices A-D (printed pages 147-150) contain tables and a bulleted analysis grid extracted cell by cell, out of reading order."
+  },
+  {
+   "kind": "feature",
+   "title": "Portrait of the Child Language Lab",
+   "authors": [
+    "Rachel Chiu"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "153-163",
+   "spans": [
+    [
+     "154.0",
+     "164.3"
+    ]
+   ],
+   "notes": "Group interview with members of the Child Language Lab (Prof. Adrianna Weisleder, Gaby España, Anele Villanueva, McKenna Lanter). Title from the contents page; the page headline survives only as \"of a Lab\" in the capture (running head \"Feature: Portrait of a Lab\")."
+  },
+  {
+   "kind": "research",
+   "title": "Developments or Division? The Role Large Public Investment Projects Play in Gentrification: A Case Study on Chicago's 606 Bloomingdale Bike Trail",
+   "authors": [
+    "Yu Wang"
+   ],
+   "department": "Sociology",
+   "advisors": [
+    "Andrew Papachristos"
+   ],
+   "printed_pages": "164-176",
+   "spans": [
+    [
+     "165.0",
+     "177.5"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page."
+  },
+  {
+   "kind": "research",
+   "title": "Hungry Thirsty Roots: Imagining and Constructing Ethnic Otherness in 1800s England",
+   "authors": [
+    "Zoe Miller"
+   ],
+   "department": "Anthropology",
+   "advisors": [
+    "Robert Launay"
+   ],
+   "printed_pages": "177-187",
+   "spans": [
+    [
+     "178.0",
+     "188.6"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page."
+  },
+  {
+   "kind": "feature",
+   "title": "GOING GREEN WITH MORGAN GASS",
+   "authors": [
+    "Catherine Campusano",
+    "Clare Zhang"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "188-191",
+   "spans": [
+    [
+     "189.0",
+     "192.9"
+    ]
+   ],
+   "notes": "Q&A interview with environmental engineering student Morgan Gass; the contents page lists it as \"Student Researcher Morgan Gass on Work Study Labs\". Its first page (printed page 188) has no text in the capture besides furniture."
+  },
+  {
+   "kind": "research",
+   "title": "Knowing What You Want: Sexual Self-Insight and Attachment Style in Romantic Relationships",
+   "authors": [
+    "Kaylee Guajardo"
+   ],
+   "department": "Psychology",
+   "advisors": [
+    "Eli Finkel"
+   ],
+   "printed_pages": "192-204",
+   "spans": [
+    [
+     "193.0",
+     "205.3"
+    ]
+   ],
+   "notes": "Faculty adviser named on the paper's opening page. Figures 1-3 and Table 1 are extracted as scattered fragments."
+  },
+  {
+   "kind": "feature",
+   "title": "2020 Research Award Winners",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "205-207",
+   "spans": [
+    [
+     "206.0",
+     "208.2"
+    ]
+   ],
+   "notes": "Sigma Xi Undergraduate Research Awards: profiles of Sophia Liu (\"Exploring the Effects of Phonetic Overlap and Background Noise on Incremental Processing in Children\") and Julia Dierksheide (\"Exploring the Detection of Missing Tissue in Planarian Regeneration\")."
+  },
+  {
+   "kind": "back matter",
+   "title": "About the CONTRIBUTORS",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "208-224",
+   "spans": [
+    [
+     "209.0",
+     "225.2"
+    ]
+   ],
+   "notes": "Biographies and Q&A of the twelve thesis contributors. Reading order within pages is often jumbled (questions and answers in separate blocks)."
+  },
+  {
+   "kind": "back matter",
+   "title": "Join the NURJ",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "226.0",
+     "226.2"
+    ]
+   ],
+   "notes": "Staff recruitment and submission notice."
+  },
+  {
+   "kind": "back matter",
+   "title": "Mission Statement",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "227.0",
+     "227.0"
+    ]
+   ],
+   "notes": "Colophon (typefaces, printer, office address and contacts) and the journal's mission statement; title is the mission statement's heading."
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+  "slug": "2005-2006",
+  "running_heads": [
+    "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL",
+    "RESEARCH",
+    "FEATURE FOCUS",
+    "VOLUME 3, MAY 2006"
+  ],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [
+        [
+          "0.0",
+          "1.15"
+        ]
+      ],
+      "notes": "Cover (Volume 3, 2006, featuring \"Cancer Detection: Determining tumor grade non-invasively\", page 16, with equations from that paper as decoration) and the contents page (Volume Three, May 2006). Printed page numbers equal section numbers in this volume. The contents page gives each article a topic label (e.g. \"CANCER DETECTION\", \"DNA DETECTION\") rather than a department, and links the student profile \"Looking Beyond the Lab\" to the research article on page 40."
+    },
+    {
+      "kind": "front matter",
+      "title": "Staff Information",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "2",
+      "spans": [
+        [
+          "2.0",
+          "2.34"
+        ]
+      ],
+      "notes": "Acknowledgements, staff list (Editor Vinhfield Ta; Faculty Advisor Allen Taflove), student and faculty review boards, and publication details. Title from the contents page."
+    },
+    {
+      "kind": "letter",
+      "title": "FROM THE EDITOR",
+      "authors": [
+        "Vinhfield Ta"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "3",
+      "spans": [
+        [
+          "3.0",
+          "3.8"
+        ]
+      ],
+      "notes": "Letter to the Northwestern research community introducing the third annual issue, signed by the Editor. The contents page calls it \"LETTER FROM THE EDITOR\"."
+    },
+    {
+      "kind": "other",
+      "title": "want to get published?",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [
+        [
+          "4.0",
+          "4.7"
+        ]
+      ],
+      "notes": "The journal's call for submissions to the 2007 issue and for new staff, printed on page 4."
+    },
+    {
+      "kind": "back matter",
+      "title": "Memorial Sloan-Kettering Cancer Center",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [
+        [
+          "4.8",
+          "4.13"
+        ]
+      ],
+      "notes": "Recruiting advertisement (\"a life's calling. can you hear it?\"), printed on page 4 rather than at the back."
+    },
+    {
+      "kind": "back matter",
+      "title": "Pierce Biotechnology, Inc.",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4",
+      "spans": [
+        [
+          "4.14",
+          "4.17"
+        ]
+      ],
+      "notes": "Advertisement printed on page 4; it directs job applicants to www.fisherscientific.com."
+    },
+    {
+      "kind": "feature",
+      "title": "Getting Wild: Students Leave the Classroom for Experience in the Field",
+      "authors": [
+        "Joanna Allerhand"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "5-6",
+      "spans": [
+        [
+          "5.0",
+          "6.14"
+        ]
+      ],
+      "notes": "Feature on field research: a study abroad program in Costa Rica, summer fieldwork in Alaska, and field programs at Northwestern. Includes a photo credit and caption on page 6."
+    },
+    {
+      "kind": "feature",
+      "title": "Breaking Down Attention",
+      "authors": [
+        "Nicole Price Fasig"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "7-8",
+      "spans": [
+        [
+          "7.0",
+          "8.18"
+        ]
+      ],
+      "notes": "Faculty profile of psychology researcher Dr. Marcia Grabowecky and her neurofeedback work on attention in children. Includes the sidebar \"MAKING WAVES\" on EEG wave types (8.10-8.18), credited \"By Nicole Price Fasig; Source: Dr. Marcia Garbowecky\" (name spelled so in print)."
+    },
+    {
+      "kind": "feature",
+      "title": "Giving Students Experience Outside the Classroom",
+      "authors": [
+        "Annie Martin"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "9-10",
+      "spans": [
+        [
+          "9.0",
+          "10.13"
+        ]
+      ],
+      "notes": "Feature on undergraduate research in the Nanoscale Science and Engineering Center (NSEC) and its REU program, printed under the heading \"NANOSCALE SCIENCE AND ENGINEERING CENTER\". Ends with a credit for contributions by Kathleen Cook."
+    },
+    {
+      "kind": "feature",
+      "title": "Incoming Freshmen Get a Headstart in Science Classes",
+      "authors": [
+        "Annie Martin"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "11-12",
+      "spans": [
+        [
+          "11.0",
+          "12.11"
+        ]
+      ],
+      "notes": "Feature on the Undergraduate Success in Science (USS) summer program for incoming freshmen started by Professor Hilary Godwin, printed under the heading \"UNDERGRADUATE SUCCESS IN SCIENCE\". Includes a photo caption (11.8) and a pull quote (12.11) repeating 12.8."
+    },
+    {
+      "kind": "feature",
+      "title": "Looking Beyond the Lab",
+      "authors": [
+        "Angela Chang"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "13-15",
+      "spans": [
+        [
+          "13.0",
+          "15.16"
+        ]
+      ],
+      "notes": "Student profile of Dorothea Koh, a chemistry researcher in Professor SonBinh Nguyen's lab, whose research article begins on page 40. Includes pull quotes (14.8, 15.9) repeating body text, a photo credit and a caption."
+    },
+    {
+      "kind": "research",
+      "title": "Determining tumor grade non-invasively using quantification of cerebral blood volume through contrast enhanced MRI",
+      "authors": [
+        "Rahul Sawlani",
+        "Wan Yong Shin"
+      ],
+      "department": "DEPARTMENT OF BIOMEDICAL ENGINEERING",
+      "advisors": [
+        "Timothy J. Carroll"
+      ],
+      "printed_pages": "16-22",
+      "spans": [
+        [
+          "16.0",
+          "22.9"
+        ]
+      ],
+      "notes": "The opening page names Wan Yong Shin as graduate co-author (Department of Biomedical Engineering), Timothy J. Carroll as faculty advisor (Department of Biomedical Engineering), and Sandra Horowitz (Neuroradiology) and James Chandler (Neurosurgery), Feinberg School of Medicine, as M.D. contributors; \"UNIVERSITY\" is misspelled \"UNIVESRITY\" in print. The contents page credits only Rahul Sawlani. The cover features this paper."
+    },
+    {
+      "kind": "research",
+      "title": "Evaluation of a Porous Tube Hydroponics System as a Testbed for Remote Sensing Instrumentation",
+      "authors": [
+        "Nirav N. Shah",
+        "Thomas W. Dreschel",
+        "Carlton R. Hall",
+        "Tammy Foster"
+      ],
+      "department": "DEPARTMENT OF ENVIRONMENTAL SCIENCE AND PSYCHOLOGY",
+      "advisors": [],
+      "printed_pages": "23-27",
+      "spans": [
+        [
+          "23.0",
+          "27.14"
+        ]
+      ],
+      "notes": "The opening page lists Thomas W. Dreschel (National Aeronautics and Space Administration, printed \"AERONATICS\"), Carlton R. Hall and Tammy Foster (The Dynamac Corporation, John F. Kennedy Space Center, Florida) with Nirav N. Shah, without role labels; the contents page credits only Shah. The research was conducted in NASA's 2005 Spaceflight and Life Sciences Training Program (acknowledgements)."
+    },
+    {
+      "kind": "research",
+      "title": "Biomedical Implants: The fabrication and reliability testing of silicone encapsulated, non-hermetic devices",
+      "authors": [
+        "George Desh"
+      ],
+      "department": "DEPARTMENT OF BIOMEDICAL ENGINEERING",
+      "advisors": [
+        "Frank Stam"
+      ],
+      "printed_pages": "28-31",
+      "spans": [
+        [
+          "28.0",
+          "31.16"
+        ]
+      ],
+      "notes": "The opening page names Frank Stam as Ph.D. research supervisor and senior researcher, Microelectronics Applications Integration Group, Tyndall Institute, Cork, Ireland. The contents page gives the title without \"Biomedical Implants:\", which it uses as the topic label. The research was done in summer 2005 at Tyndall National Institute (contributors page)."
+    },
+    {
+      "kind": "research",
+      "title": "On-Line vs. Off-line Quality Control Systems: A Comparison of Taguchi’s Method to a Control Chart-based Approach",
+      "authors": [
+        "Enrique Carral"
+      ],
+      "department": "DEPARTMENT OF CHEMICAL AND BIOLOGICAL ENGINEERING",
+      "advisors": [],
+      "printed_pages": "32-39",
+      "spans": [
+        [
+          "32.0",
+          "39.31"
+        ]
+      ],
+      "notes": "Includes references and endnotes (roman-numeral superscripts). The contributors page says he conducted the research independently."
+    },
+    {
+      "kind": "research",
+      "title": "Enhancing DNA Detection: Small-Molecule DNA Hybrid Model Studies",
+      "authors": [
+        "Dorothea Li Feng Koh"
+      ],
+      "department": "DEPARTMENT OF BIOMEDICAL ENGINEERING",
+      "advisors": [
+        "SonBinh T. Nguyen",
+        "Brian R. Stepp"
+      ],
+      "printed_pages": "40-50",
+      "spans": [
+        [
+          "40.0",
+          "50.12"
+        ]
+      ],
+      "notes": "The opening page names SonBinh T. Nguyen as faculty advisor and Brian R. Stepp as graduate student mentor (both Department of Chemistry). The contents page gives the title as \"Small-Molecule DNA Hybrid Model Studies\" under the label \"DNA DETECTION\". Several pages hold mostly schemes and figures; NMR data lines are split across pages. The student profile \"Looking Beyond the Lab\" (pages 13-15) is about the author."
+    },
+    {
+      "kind": "research",
+      "title": "High-Throughput Protein Degradation Assays",
+      "authors": [
+        "Merina Thomas",
+        "Andreas Matouschek"
+      ],
+      "department": "DEPARTMENT OF BIOLOGICAL SCIENCES",
+      "advisors": [
+        "Neil Jaffe"
+      ],
+      "printed_pages": "51-58",
+      "spans": [
+        [
+          "51.0",
+          "58.12"
+        ]
+      ],
+      "notes": "The opening page lists Andreas Matouschek (Department of Biochemistry, Molecular Biology & Cell Biology) with Merina Thomas, without a role label; the contents page credits only Thomas. The acknowledgements and contributors page name Neil Jaffe as her mentor and thank Dr. Matouschek, in whose laboratory she works. Reference numbers 5 and 12 each occur twice as printed."
+    },
+    {
+      "kind": "back matter",
+      "title": "ABOUT THE AUTHORS",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "59",
+      "spans": [
+        [
+          "59.0",
+          "59.12"
+        ]
+      ],
+      "notes": "Short biographies of the six research authors with major and class year: Enrique Carral, Dorothea Li Feng Koh, Nirav N. Shah, George Desh, Rahul Sawlani, Merina Thomas."
+    }
+  ]
+}

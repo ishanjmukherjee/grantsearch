@@ -1,0 +1,14 @@
+{"page": 9, "blocks": [
+["10"],
+["NURJ"],
+["VII. Conclusion"],
+["An increase in coarsening time from 10 minutes to 5 days for an Al-26wt%-Cu alloy has a significant morphological effect on the underlying microstructure. It is clear that the dendritic structures evolve into larger, less densely packed solid configurations in efforts to reduce interfacial curvatures. However, the aforementioned analyses have now quantified this morphological evolution through probability density calculations."],
+["The distribution of interfacial orientations is shown to contract and orient normal to the growth direction. Vectors normal to the surface have also shown a significant transition toward complimenting directions separated by an angle of 180°, which is characteristic of a tubular structure. Furthermore, interfacial curvatures were directly identified to undergo a similar evolution. A 5 day coarsening duration for this system transformed the microstructure from a complex mixture of interfaces concave toward the solid phase to a more uniform distribution of solid cylinders. Interfaces concave toward the liquid phase were almost entirely eliminated. Such a distribution shift quantifies the expected process by which high curvature dendritic arms coarsen into larger, lower curvature structures. Furthermore, the probability density distribution of curvatures shifted slightly to higher values, illustrating morphology specifically toward solid cylinders."],
+["This curvature analysis has provided the computational evidence that confirms the notion that dendritic morphology stems from an effort to reduce surface curvature. This was displayed by both the interfacial orientation and curvature shape distributions. Furthermore, this quantitative analysis illustrates a unique direction of dendritic morphology under coarsening. Seen by this Al-26wt%-Cu eutectic system, coarsening has driven the interfacial evolution of component dendrites toward solid cylindrical structures."],
+["References"],
+["¹M.C. Flemings. Solidification Processing 1974; McGraw-Hill Book Company."],
+["²R. Mendoza. “The Morphological Evolution of Dendritic Microstructures During Coarsening,” Research Proposal 2002; Northwestern University."],
+["³D.A. Drew. “Evolution of Geometric Statistics,” SIAM Journal of Applied Math 1990; 50(3):649-666."],
+["⁴H. Jinnai, T. Koga, Y. Nishikawa, T. Hashimoto, S. Hyde. “Curvature determination of Spinodal Interface in a Condensed Matter System,” Physical Review Letters 1997; 78(11):2248-2251."],
+["⁵J. Alkemper, P.W. Voorhees. “Quantitative Serial Sectioning Analysis,” Journal of Microscopy 2001; 201:388-394."]
+]}

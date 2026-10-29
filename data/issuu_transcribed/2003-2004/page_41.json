@@ -1,0 +1,14 @@
+{"page": 41, "blocks": [
+["42"],
+["NURJ"],
+["draw-in sensor will be explored. The traditional proportional and integral (PI) control may not work well as it requires fine tuning for the parameters. The Auto-Regressive Moving-Average model (ARMA)⁷⁻¹⁰ that can automatically generate control parameters based on previous performance and has shown more robust than a PI controller in a machining process will be used."],
+["VI. Conclusion"],
+["The draw-in sensor produces good linear results and insensitivity to pulling speed and starting position. Since material type affects the sensitivity of the transducer, the draw-in sensor’s input voltage is adjustable to obtain the highest maximum output voltage. Although the movement of the blank holder block causes a change in the output voltage, the change does not affect the linearity of the results. With these capabilities, the draw-in sensor is effective and ready to be implemented in the discussed further work. The implementation and integration of the draw-in sensor will make the stamping tool sense the material movement inside the forming press and make intelligent process adjustment to maximize material’s potentials. Furthermore, the lead-time for introducing new light-weight materials into mass production can be dramatically decreased and the consistency of stamping products will be increased."],
+["Appendix A: Previous Prototype Results"],
+["Fig. 18 Repeatability check"],
+["Fig. 19 Steel block – Blank – 2.207 mm gap – steel block"],
+["Fig. 20 Steel Block – Blank – 1.348 mm gap – steel block"],
+["Fig. 21 Steel Block – Blank – epoxy (2.207) – steel block"],
+["Fig. 22 Different tests with AA5182 (t=1.04 mm)"],
+["Fig. 23 Different tests with EGCR3 (t=0.88 mm)"]
+]}

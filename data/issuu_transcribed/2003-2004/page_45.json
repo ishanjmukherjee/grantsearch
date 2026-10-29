@@ -1,0 +1,17 @@
+{"page": 45, "blocks": [
+["46"],
+["NURJ"],
+["Fig. 5 Responsivity as a function of bias voltage at T = 77K and T = 95K"],
+["Fig. 6 Dark current as a function of bias voltage for several temperatures."],
+["V. Discussion"],
+["Several important parameters of the device were given in the above measurements, including responsivity, detectivity, and dark current. The measured responsivity of the QDIP device reflects the amount of photocurrent, Iph, produced by optically excited electrons for a given incident input power, Pin, on the photodetector. The input power of the photodetector can be defined as:"],
+["Pin = AΦph hν (Eqn. 1)"],
+["where A is the area of the photodetector, Φph is the incident photon flux, h is Plank’s constant, and ν is the"],
+["frequency of light. Using the above expression, the responsivity is given by Equation 2.⁴"],
+["R = Iph/Pin = Iph/(AΦph hν) (A/W) (Eqn. 2)"],
+["The responsivity is a good measurement parameter to determine how much gain will be needed for a circuit to read out a signal from the detector. However, once a signal is amplified, more noise will be present, which must be taken into account to determine the overall performance of the detector. For this reason, another parameter called the specific detectivity, D*, is needed to compare the performance of two different detectors. The specific detectivity is defined as:⁴"],
+["D* = (A Δf )^1/2 / PNEP (cm Hz¹ᐟ²/W) (Eqn. 3)"],
+["where A is the area of the photodetector, Δf is the frequency bandwidth of the photodetector, and PNEP is the noise equivalent power. This parameter provides a way to compare the sensitivity of different detectors by normalizing the size, frequency bandwidth, and noise characteristics of each detector."],
+["The dark current of a detector is the current running through a device in the absence of photons from illumination. This current can be due to thermally excited electrons, and must be added to the photocurrent to get the total current flowing across the detector. If the dark current is too large, small changes in the photocurrent will not be distinguishable from the dark current. Thus, a low dark current is desirable in photodetectors."],
+["The detectivity of the InGaAs/InGaP QDIP studied in this report was 3.62 x 10¹⁰ cm Hz¹ᐟ²/W, which is comparable to most QWIP devices at 100K.⁹,¹⁰ However, theory has predicted that QDIP devices should surpass QWIP technology.¹⁻³ Our goal at CQD is to fabricate a detector that surpasses QWIP sensitivity, possibly with a detectivity in the range of ~10¹² cm Hz¹ᐟ²/W. In order to achieve this goal, many areas of theory and experiment must be studied. Electron transport theory is important for lowering the dark current while studying the optical properties of quantum dots will allow a better understanding of absorption within quantum dots. Experimentally, different material systems of III/V semiconductors can be utilized to form new detector structures. Here, the quantum dots size and uniformity may also be optimized to improve the detector’s performance."]
+]}

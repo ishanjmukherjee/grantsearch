@@ -1,0 +1,471 @@
+{
+  "slug": "creative_116pg_r2",
+  "running_heads": [],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": "Northwestern Undergraduate Research Journal Vol. 11 | 2015 - 2016",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "1-3",
+      "spans": [
+        [
+          "0.0",
+          "2.6"
+        ]
+      ],
+      "notes": "Front cover (printed page 1, listing four of the theses), blank inside cover (page 2) and masthead with acknowledgments and the cover photo credit (page 3)."
+    },
+    {
+      "kind": "front matter",
+      "title": "Contents",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "4-5",
+      "spans": [
+        [
+          "3.0",
+          "4.29"
+        ]
+      ],
+      "notes": "The contents page is laid out in columns; its extracted text interleaves titles, departments, authors and page numbers from different entries."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Editor",
+      "authors": [
+        "Sophie Weber"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "6",
+      "spans": [
+        [
+          "5.0",
+          "5.3"
+        ]
+      ],
+      "notes": "Signed by Sophie Weber, Managing Editor."
+    },
+    {
+      "kind": "letter",
+      "title": "From the Advisor",
+      "authors": [
+        "Allen Taflove"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "7",
+      "spans": [
+        [
+          "6.0",
+          "6.2"
+        ]
+      ],
+      "notes": "Signed by Allen Taflove, Professor, NURJ Faculty Adviser, Department of Electrical Engineering and Computer Science."
+    },
+    {
+      "kind": "research",
+      "title": "Why Tolstoy Was Wrong: Peasant Rebellion in Post-Emancipation Russia",
+      "authors": [
+        "Blair Dunbar"
+      ],
+      "department": "Slavic Languages and Literature & History",
+      "advisors": [
+        "John Bushnell",
+        "Gary Morson"
+      ],
+      "printed_pages": "8-15",
+      "spans": [
+        [
+          "7.0",
+          "14.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis. The opening page prints the title with a dash at the line break (\"Post— Emancipation\"); the contents page gives \"Post Emancipation\". The opening page also lists Michael Allen as Seminar Director."
+    },
+    {
+      "kind": "research",
+      "title": "Globalization and Cosmopolitanism Since Kant: A Paradoxical Relationship",
+      "authors": [
+        "Mariam Al Askari"
+      ],
+      "department": "Philosophy",
+      "advisors": [
+        "Charles Mills"
+      ],
+      "printed_pages": "16-17",
+      "spans": [
+        [
+          "15.0",
+          "16.0"
+        ]
+      ],
+      "notes": "Abstract only; the print edition refers readers to the full paper at thenurj.com."
+    },
+    {
+      "kind": "research",
+      "title": "No Justice, No Peace: How Poverty Leads Racially Biased Police Brutality to Trigger Protests",
+      "authors": [
+        "Madeleine Elkins"
+      ],
+      "department": "Political Science",
+      "advisors": [
+        "Wendy Pearlman"
+      ],
+      "printed_pages": "18-25",
+      "spans": [
+        [
+          "17.0",
+          "24.4"
+        ]
+      ],
+      "notes": "Condensed senior thesis. The opening page also lists Karen Alter as Seminar Director."
+    },
+    {
+      "kind": "research",
+      "title": "Solution Conformations of Chiral Mannich Bases",
+      "authors": [
+        "Paul Lee"
+      ],
+      "department": "Chemistry",
+      "advisors": [
+        "Fred Northrup",
+        "Owen Priest"
+      ],
+      "printed_pages": "26-31",
+      "spans": [
+        [
+          "25.0",
+          "30.10"
+        ]
+      ],
+      "notes": "Condensed senior thesis. Figures 1-20 are images; only their labels survive in the text."
+    },
+    {
+      "kind": "feature",
+      "title": "Vadim Backman",
+      "authors": [
+        "Neil Thivalapill",
+        "Lena Thompson"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "32-33",
+      "spans": [
+        [
+          "31.0",
+          "32.5"
+        ]
+      ],
+      "notes": "Interview with Vadim Backman, Walter Dill Scott Professor of Biomedical Engineering (\"interview by Neil Thivalapill & Lena Thompson\"); the contents page lists it as \"Dr. Vadim Backman\"."
+    },
+    {
+      "kind": "research",
+      "title": "Electric Peoples: Toward an Afrofuturist Body Politic",
+      "authors": [
+        "Christian Keeve"
+      ],
+      "department": "African American Studies",
+      "advisors": [
+        "Michelle Wright"
+      ],
+      "printed_pages": "34-39",
+      "spans": [
+        [
+          "33.0",
+          "38.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis."
+    },
+    {
+      "kind": "research",
+      "title": "Dynamic Landscapes: The Spatiality of Social Relations at Ightham Mote",
+      "authors": [
+        "Carrie Willis"
+      ],
+      "department": "Anthropology",
+      "advisors": [
+        "Mark Hauser"
+      ],
+      "printed_pages": "40-47",
+      "spans": [
+        [
+          "39.0",
+          "46.4"
+        ]
+      ],
+      "notes": "Condensed senior thesis; acknowledgements are printed on the opening page."
+    },
+    {
+      "kind": "research",
+      "title": "Ecocriticism, Entropy, and the Gothic in Poe’s Fiction",
+      "authors": [
+        "Carly Bluth"
+      ],
+      "department": "English",
+      "advisors": [
+        "John Alba Cutler"
+      ],
+      "printed_pages": "48-49",
+      "spans": [
+        [
+          "47.0",
+          "48.1"
+        ]
+      ],
+      "notes": "Abstract only; the print edition refers readers to the full paper at thenurj.com."
+    },
+    {
+      "kind": "research",
+      "title": "Rational Design of Irreversible Covalent Inhibitors for E3 Ubiquitin Ligase NEDD4-1",
+      "authors": [
+        "Ziyang Xu"
+      ],
+      "department": "Chemistry",
+      "advisors": [
+        "Alexander Statsyuk"
+      ],
+      "printed_pages": "50-55",
+      "spans": [
+        [
+          "49.0",
+          "54.5"
+        ]
+      ],
+      "notes": "Excerpt: abstract and the introductory chapter (Chapter i) with bibliography. The opening page also lists Stefan Kathman as Graduate Mentor."
+    },
+    {
+      "kind": "feature",
+      "title": "Mark Hersam",
+      "authors": [
+        "Sophie Weber"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "56-58",
+      "spans": [
+        [
+          "55.0",
+          "57.6"
+        ]
+      ],
+      "notes": "Profile and interview of Mark Hersam, materials scientist and MacArthur Fellow (\"interview by Sophie Weber\"); the contents page lists it as \"Professor Mark Hersam\"."
+    },
+    {
+      "kind": "feature",
+      "title": "Theo Gao",
+      "authors": [
+        "Monica Cheng"
+      ],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "59",
+      "spans": [
+        [
+          "58.0",
+          "58.2"
+        ]
+      ],
+      "notes": "Interview with Theo Gao ('16), an undergraduate researcher in Professor Mark Hersam's lab (\"interview by Monica Cheng\"). Not listed on the contents page; it follows the Hersam feature."
+    },
+    {
+      "kind": "research",
+      "title": "Dub, Dub-Key and Dabkeh: Palestinian Resistance Through Reggae Music in Israel",
+      "authors": [
+        "Yazan Abu Ghaidah"
+      ],
+      "department": "Media & Communication",
+      "advisors": [],
+      "printed_pages": "60-65",
+      "spans": [
+        [
+          "59.0",
+          "64.5"
+        ]
+      ],
+      "notes": "Northwestern University in Qatar student paper; its acknowledgements say the original version was written for MIT 398 Alternative Media in the Middle East. The contents page gives the department as \"Media & Communications\"; the contributors page spells the author's name \"Yazan Abu Ghaida\" and gives Northwestern University in Qatar, Media & Communication."
+    },
+    {
+      "kind": "research",
+      "title": "Rethinking the Studio: A Mixed-Methods Analysis of Social Networks’ Role in Creative Development",
+      "authors": [
+        "Stephanie Shapiro"
+      ],
+      "department": "Sociology",
+      "advisors": [
+        "Monica Prasad"
+      ],
+      "printed_pages": "66-72",
+      "spans": [
+        [
+          "65.0",
+          "71.8"
+        ]
+      ],
+      "notes": "Condensed senior thesis. The contents page gives \"A MixedMethods Analysis of Social Networks' Role\". The contributors page lists 2015 Best Thesis in Sociology."
+    },
+    {
+      "kind": "research",
+      "title": "Sunday, barī Sunday: An Ethnography of the Gurdwara Sahib of Chicago",
+      "authors": [
+        "Conner Singh VanderBeek"
+      ],
+      "department": "Musicology & Asian Studies",
+      "advisors": [
+        "Inna Naroditskaya"
+      ],
+      "printed_pages": "73-77",
+      "spans": [
+        [
+          "72.0",
+          "76.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis. The opening page adds the subtitle \"The People, the Services, the Music\" and footnotes the title word as \"baṛī\"; it gives the department as \"Musicology\" and \"Asian Studies\" on separate lines. The contributors page gives the author's major as Asian Languages & Civilizations."
+    },
+    {
+      "kind": "research",
+      "title": "Kafka and the Incomprehensible: A Paradox of Interpretation and its Resolution",
+      "authors": [
+        "Jake Romm"
+      ],
+      "department": "Philosophy",
+      "advisors": [
+        "Rachel Zuckert"
+      ],
+      "printed_pages": "78-83",
+      "spans": [
+        [
+          "77.0",
+          "82.7"
+        ]
+      ],
+      "notes": "Condensed senior thesis."
+    },
+    {
+      "kind": "research",
+      "title": "The Belarus Free Theatre: Artistic Resistance of a Modern Dictatorship",
+      "authors": [
+        "Francesca Mennella"
+      ],
+      "department": "International Studies",
+      "advisors": [
+        "Andrew Roberts"
+      ],
+      "printed_pages": "84-85",
+      "spans": [
+        [
+          "83.0",
+          "84.0"
+        ]
+      ],
+      "notes": "Abstract only; the print edition refers readers to the full paper at thenurj.com."
+    },
+    {
+      "kind": "research",
+      "title": "The Politics of Narration: Stranger-Suitors in Austen and Burney",
+      "authors": [
+        "Chelsey Moler"
+      ],
+      "department": "English",
+      "advisors": [
+        "Emily Rohrbach"
+      ],
+      "printed_pages": "86-92",
+      "spans": [
+        [
+          "85.0",
+          "91.7"
+        ]
+      ],
+      "notes": "Condensed senior thesis."
+    },
+    {
+      "kind": "research",
+      "title": "Hook Up and Rape \"Cultures\": Recovering Power Relations in the Discourse of Sexual Assault on College Campuses",
+      "authors": [
+        "Jennifer Katz"
+      ],
+      "department": "Gender and Sexuality Studies",
+      "advisors": [
+        "Mary Dietz"
+      ],
+      "printed_pages": "93-98",
+      "spans": [
+        [
+          "92.0",
+          "97.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis. Mary Dietz is listed as Thesis Advisor on the opening page."
+    },
+    {
+      "kind": "research",
+      "title": "Introduction to the Estridentista Works of Manuel Maples Arce: 1921-1927",
+      "authors": [
+        "Alexandra Becker"
+      ],
+      "department": "Comparative Literature",
+      "advisors": [
+        "Harris Feinsod"
+      ],
+      "printed_pages": "99-106",
+      "spans": [
+        [
+          "98.0",
+          "105.5"
+        ]
+      ],
+      "notes": "Condensed senior thesis, including the author's English translations of Maples Arce poems printed beside the Spanish originals (sections 102 and 104). The contributors page gives the author's major as Comparative Literary Studies."
+    },
+    {
+      "kind": "back matter",
+      "title": "Open to all undergraduates",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "107",
+      "spans": [
+        [
+          "106.0",
+          "106.2"
+        ]
+      ],
+      "notes": "Advertisement for Northwestern's undergraduate research office (undergradresearch.northwestern.edu)."
+    },
+    {
+      "kind": "back matter",
+      "title": "About the Contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "108-115",
+      "spans": [
+        [
+          "107.0",
+          "114.8"
+        ]
+      ],
+      "notes": "Question-and-answer bios of the fifteen thesis authors with majors and awards, two per page in parallel columns, so the extracted blocks interleave the two contributors on each page."
+    },
+    {
+      "kind": "back matter",
+      "title": "NURJ Office",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "116",
+      "spans": [
+        [
+          "115.0",
+          "115.1"
+        ]
+      ],
+      "notes": "Back cover: NURJ office address, contact details and mission statement."
+    }
+  ]
+}

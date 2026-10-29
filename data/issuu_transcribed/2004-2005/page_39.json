@@ -1,0 +1,10 @@
+{"page": 39, "blocks": [
+["Decoupled Control", "for the Snakeboard"],
+["Benjamin Jay Stephens", "DEPARTMENT OF MECHANICAL ENGINEERING"],
+["Kevin M. Lynch", "FACULTY ADVISOR, DEPARTMENT OF MECHANICAL ENGINEERING, NORTHWESTERN UNIVERSITY"],
+["ABSTRACT"],
+["The snakeboard is a good example of a complex dynamic system. It is constrained by the nonholonomic properties of its wheels, and underactuated in that there are more degrees of freedom than control inputs. This paper presents a simplified approach to the derivation of the reduced equations of motion. Using these equations to derive decoupled non-linear controls allows a robotic snakeboard to follow a path under feedback control. The controllers represent a decoupling of the kinematics and dynamics of the snakeboard body. Similarities between the theoretical and experimental results, which are both presented, demonstrate the validity of our model."],
+["I. INTRODUCTION"],
+["the snakeboard is a commercial toy that resembles a skateboard. On a snakeboard, however, the rider can change the angle that the wheels make with the body. By swaying the arms and body, the rider can propel the snakeboard through conservation of momentum, much like a person experiences in a swivel chair. Here, however, the wheel angles change the center of rotation, allowing a net motion. Without ever touching the ground and starting at rest, the rider of the snakeboard can move anywhere on a surface. A robotic snakeboard works in a similar fashion. Without ever directly powering its wheels, it too can move anywhere on a surface."],
+["Because of unmodeled dynamics, such as friction, full-state trajectory tracking is impossible for the snakeboard; energy will"]
+]}

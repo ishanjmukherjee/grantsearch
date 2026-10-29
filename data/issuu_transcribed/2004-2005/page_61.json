@@ -1,0 +1,45 @@
+{
+ "page": 61,
+ "blocks": [
+  [
+   "VI. DISCUSSION"
+  ],
+  [
+   "This paper develops a novel regularization approach to repair contouring artifacts on color quantized images. Our approach treats the intensities of the input image as an interval instead of individual measurements. This approach allows removal of contouring artifacts that are preserved by other methods.¹,²"
+  ],
+  [
+   "The proposed method is most effective for images where the only significant error is due to quantization and is not intended as a general noise removal algorithm. For noisy images, it is possible to relax the deviation penalty g(u) from Equation 3 to better handle to noise. It may also be possible to apply another algorithm such as Total Variation regularization⁵ to first remove the noise before using our method to repair any contouring artifacts."
+  ],
+  [
+   "REFERENCES"
+  ],
+  [
+   "1 PERONA, P., AND MALIK, J. 1987. Scale-space and edge detection using anisotropic diffusion. IEEE Trans. PAMI."
+  ],
+  [
+   "2 TIKHONOV, A. N. 1963. Regularization of incorrectly posed problems. Sov. Math. Dokl 4, 1, 1624–1627."
+  ],
+  [
+   "3 RUDIN, L. I., OSHER, S., AND FATEMI, E. 1992. Nonlinear total variation based noise removal algorithms. In Proceedings of the eleventh annual international conference of the Center for Nonlinear Studies on Experimental mathematics : computational issues in nonlinear science, Elsevier North-Holland, Inc., 259–268."
+  ],
+  [
+   "4 G. AUBERT, M. BARLAUD, L. B.-F., AND CHARBONNIER, P. 1997. Deterministic edge-preserving regularization in computed imaging. In IEEE Trans. Imag. Process."
+  ],
+  [
+   "5 VOGEL, C. R., AND OMAN, M. E. 1996. Iterative methods for total variation denoising. SIAM Journal on Scientific Computing 17, 1, 227–238."
+  ],
+  [
+   "6 BLAKE, A., AND ZISSERMAN, A. 1987. Visual reconstruction.MIT Press, Cambridge, M.A.."
+  ],
+  [
+   "Figure 5. Reconstruction of coarsely quantized images.",
+   "Coarsely quantized image with (left) Q=16 restored to (right) Q=255 using the proposed method."
+  ],
+  [
+   "60"
+  ],
+  [
+   "NORTHWESTERN UNDERGRADUATE RESEARCH JOURNAL"
+  ]
+ ]
+}
