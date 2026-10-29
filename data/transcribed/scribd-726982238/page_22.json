@@ -1,0 +1,10 @@
+{"page": 22, "blocks": [
+["What is your age? *"],
+["14"], ["15"], ["16"], ["17"], ["18"],
+["What is your gender? *"],
+["Male"], ["Female"], ["Other/prefer not to say"],
+["What is your ethnicity? *"],
+["White"], ["Asian"], ["Hispanic"], ["Black/African-American"], ["Prefer not to say"],
+["You will be asked to rate your understanding of biotechnology on a seven-point scale. If you are not", "familiar with the term \"biotechnology\", a definition will be provided below."],
+["Biotechnology: scientific field characterized by the intersection of biology and technology, includes", "topics like 23andMe, forensics, and genetic modification of foods."]
+]}

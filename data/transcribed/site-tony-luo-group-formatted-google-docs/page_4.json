@@ -1,0 +1,6 @@
+{"page": 4, "blocks": [
+["Root", "Design", "Development", "Product", "Frontend", "Backend"],
+["Figure 1: Parts of a domain hierarchy for a colony developing a web service."],
+["Root: 50 + (10+45+30)", "Design: 10", "Product: 30", "Development: 20 + (15+10)", "Frontend: 15", "Backend: 10"],
+["Figure 2: Reputation flowing up a domain hierarchy."]
+]}

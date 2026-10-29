@@ -1,0 +1,9 @@
+{"page": 23, "blocks": [
+["How would you rate your understanding of biotechnology in general?"],
+["1 | 2 | 3 | 4 | 5 | 6 | 7"],
+["Vague understanding =1 | Thorough understanding =7"],
+["You will now be asked 15 true-false questions on biotechnological topics. Please answer the *", "questions to the best of your abilities. Do not use external resources for assistance."],
+["\"I will not use external resources to answer the following questions.\""],
+["True or False? GM organisms are always bigger than normal organisms. *"],
+["Definitely true"], ["Probably true"], ["Maybe true"], ["Not sure"], ["Maybe false"], ["Probably false"], ["Definitely false"]
+]}

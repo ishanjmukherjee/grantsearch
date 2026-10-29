@@ -1,0 +1,15 @@
+{"page": 8, "blocks": [
+["2020 U.S. Election Forecasts with a Compartmental Model"],
+["2020 President | 2020 Senate | 2020 Governor | Learn More + References | Contacts"],
+["Overview"],
+["Welcome! This website holds our forecasts for the 2020 U.S. elections. Our work centers", "around compartmental modeling and uses the methods introduced by A. Volkening, Daniel", "F. Linder, Mason A. Porter, and Grzegorz A. Rempala in this article. It is part of our", "undergraduate research mentored by Alexandria Volkening at Northwestern University."],
+["Our forecasts are probabilistic: we simulate 10,000 stochastic elections and calculate the", "mean vote margins across our simulations. To visualize uncertainty, we show a random", "sample of 500 simulated elections in the video on the right."],
+["To reproduce or build on our forecasts, all of the model code is available here."],
+["– Samuel Chian, William He, and Christopher Lee"],
+["2020 Presidential Election Forecast"],
+["State groupings"],
+["For the presidential elections, we forecast the vote margin in swing states individually and group the other states into either safe red or safe blue", "\"superstates\", in which we forecast the mean vote margin. Click below to expand the breakdown of our swing states and superstates."],
+["State categorizations"],
+["Final Forecast of the 2020 U.S. Presidential Election"],
+["According to our final forecast, Georgia, Iowa, Nevada, North Carolina, Ohio, and Texas have the closest races, with less than a 2.5 percentage-", "point margin of victory for the leading candidate. We give former Vice President Joe Biden an 88% chance of winning. Our model forecasts a"]
+]}

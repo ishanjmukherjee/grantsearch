@@ -1,0 +1,238 @@
+{
+ "slug": "scribd-683622799",
+ "running_heads": [
+  "FEATURE"
+ ],
+ "items": [
+  {
+   "kind": "front matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [["0.0", "0.2"]],
+   "notes": "Front cover: \"Northwestern Undergraduate Research Journal\", \"N U R J\", \"Volume 18\", \"2022-2023\", \"thenurj.com\". The cover illustration has no further text."
+  },
+  {
+   "kind": "front matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [["1.0", "1.4"]],
+   "notes": "Acknowledgments on the inside cover: thanks President Michael Schill, Provost Kathleen Hagerty, Associate Provost Miriam Sherin and faculty advisers Peter Civetta and Patti Wolter, and remembers founder Allen Taflove. Cover by Helen Zhu. Published June 2023, ISSN 2689-1034."
+  },
+  {
+   "kind": "front matter",
+   "title": "MASTHEAD",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [["2.0", "2.12"]],
+   "notes": "Staff masthead, \"vol. 18 | 2022-2023\". Editors-in-Chief Jenna Greenzaid and Kallista Zhuang; Faculty Advisers Peter Civetta and Patti Wolter."
+  },
+  {
+   "kind": "front matter",
+   "title": "TABLE OF CONTENTS",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [["3.0", "4.13"]],
+   "notes": "Two-page contents. Page numbers are extracted as separate blocks after the entries, so entries and numbers are not in reading order. Lists department labels for the theses; some contents titles differ slightly from the opening pages."
+  },
+  {
+   "kind": "letter",
+   "title": "LETTER FROM THE ADVISERS",
+   "authors": ["Peter Civetta", "Patti Wolter"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "6",
+   "spans": [["5.7", "5.8"], ["5.0", "5.6"], ["5.9", "5.10"]],
+   "notes": "Signed \"Peter Civetta & Patti Wolter, Co-Advisers, NURJ\". Says Volume 18 includes the best senior theses selected by seven academic departments and seven feature stories."
+  },
+  {
+   "kind": "letter",
+   "title": "LETTER FROM THE EDITORS",
+   "authors": ["Jenna Greenzaid", "Kallista Zhuang"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "7",
+   "spans": [["6.1", "6.2"], ["6.0", "6.0"], ["6.3", "6.9"]],
+   "notes": "Signed \"Co-Editors-In-Chief, NURJ\"; the signature misspells the first name as \"Jenna Greezaid\" (block 6.8), while the masthead and contents print \"Jenna Greenzaid\"."
+  },
+  {
+   "kind": "research",
+   "title": "“When did the depictions become worse than the reality?”: Black Trauma Porn and The Black Horror Genre in Television and Film",
+   "authors": ["Karina Karbo-Wright"],
+   "department": "Department of African American Studies",
+   "advisors": ["Barnor Hesse"],
+   "printed_pages": "8-20",
+   "spans": [["7.0", "8.2"], ["8.4", "8.4"], ["8.3", "8.3"], ["8.5", "9.3"], ["9.5", "9.5"], ["9.4", "9.4"], ["9.6", "10.3"], ["10.5", "10.9"], ["10.4", "10.4"], ["11.0", "11.3"], ["11.5", "11.5"], ["11.4", "11.4"], ["11.6", "12.2"], ["12.4", "12.4"], ["12.3", "12.3"], ["12.5", "13.3"], ["13.5", "13.5"], ["13.4", "13.4"], ["13.6", "14.5"], ["14.7", "14.7"], ["14.6", "14.6"], ["14.8", "15.3"], ["15.5", "15.5"], ["15.4", "15.4"], ["15.6", "16.0"], ["16.3", "16.3"], ["16.1", "16.2"], ["16.4", "16.4"], ["16.6", "16.6"], ["16.5", "16.5"], ["16.7", "19.31"]],
+   "notes": "Senior thesis excerpt with abstract. Advisor from \"Faculty Adviser\" on the opening page. Footnote blocks and pull quotes are moved to paragraph breaks so column text runs on. Includes an appendix of referenced films and television series (printed page 19) and a bibliography whose entries are split across blocks. The contributors section (printed page 116) has a Q&A with the author."
+  },
+  {
+   "kind": "feature",
+   "title": "Serendipity and Struggle: Reflections on the Social Dynamics of Research",
+   "authors": ["Andrew Lu"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "21-23",
+   "spans": [["20.3", "20.4"], ["20.2", "20.2"], ["20.0", "20.1"], ["20.5", "22.11"]],
+   "notes": "Q&A interview with Bryan Hunter, a chemistry professor who moved from Harvard University to Northwestern (Hunter Lab), about his research on sustainability and catalysis and his path into academia."
+  },
+  {
+   "kind": "research",
+   "title": "Defeating the Dragon: Epistemic Injustice Towards Asian/ American Women",
+   "authors": ["Olive Liu"],
+   "department": "Departments of Asian American Studies and Philosophy",
+   "advisors": ["Sanford Goldberg", "Ji-yeon Yuh"],
+   "printed_pages": "24-35",
+   "spans": [["23.0", "24.4"], ["24.6", "24.6"], ["24.5", "24.5"], ["24.7", "25.3"], ["25.5", "25.5"], ["25.4", "25.4"], ["25.6", "26.2"], ["26.4", "26.4"], ["26.3", "26.3"], ["26.5", "27.3"], ["27.5", "27.5"], ["27.4", "27.4"], ["27.6", "28.2"], ["28.4", "28.4"], ["28.3", "28.3"], ["28.5", "29.3"], ["29.5", "29.5"], ["29.4", "29.4"], ["29.7", "29.15"], ["29.6", "29.6"], ["30.0", "30.2"], ["30.4", "30.4"], ["30.3", "30.3"], ["30.5", "32.2"], ["32.4", "32.9"], ["32.3", "32.3"], ["33.0", "34.23"]],
+   "notes": "Senior thesis excerpt with abstract, acknowledgments and bibliography. Advisors from \"Faculty Advisors\" on the opening page. The contents page writes the title \"Asian/American Women\" and the department as \"Asian American Studies, Philosophy\". Footnote blocks and pull quotes are moved to paragraph breaks. The contributors section (printed pages 117-118) has a Q&A with the author."
+  },
+  {
+   "kind": "feature",
+   "title": "Understanding and Applying Corporate Personhood: A Q&A with Professor Nicolette Bruner",
+   "authors": ["Noah Coyle"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "36-39",
+   "spans": [["35.0", "38.4"]],
+   "notes": "Q&A interview with Nicolette Bruner, Assistant Professor of Instruction at the Center for Legal Studies and the Program in American Studies, about corporate personhood and \"Thing People\"."
+  },
+  {
+   "kind": "research",
+   "title": "The Effects of Power Dynamics in University-Community Partnerships",
+   "authors": ["Nina M. Wetoska"],
+   "department": "School of Education and Social Policy",
+   "advisors": ["Sepehr Vakil", "Terri Sabol"],
+   "printed_pages": "40-48",
+   "spans": [["39.0", "40.3"], ["40.5", "40.9"], ["40.4", "40.4"], ["41.0", "43.6"], ["43.8", "43.14"], ["43.7", "43.7"], ["44.0", "45.4"], ["45.6", "45.8"], ["45.5", "45.5"], ["46.0", "47.23"]],
+   "notes": "Senior thesis excerpt; a case study of the Young People's Race Power and Technology Project (YPRPT). Advisors from \"Faculty Advisers\" on the opening page, where the department, advisers and abstract are extracted as one block (39.3). Pull quotes are moved to paragraph breaks. Includes an appendix of end-of-year survey questions and a bibliography. The contributors section (printed page 120) has a Q&A with the author."
+  },
+  {
+   "kind": "feature",
+   "title": "Undergraduate Research on Genomic Organization",
+   "authors": ["Josie Chou", "Hannah Xu"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "49-51",
+   "spans": [["48.3", "48.4"], ["48.2", "48.2"], ["48.5", "48.5"], ["48.0", "48.1"], ["49.0", "49.6"], ["49.8", "49.8"], ["49.7", "49.7"], ["50.0", "50.5"]],
+   "notes": "Title from the contents page; the page headline reads \"GENOMIC ORGANIZATION IN THE BRICKNER LAB\", with the byline extracted between its two parts (48.3, 48.4). Q&A interview with Winny Liu, a junior in Biological Sciences and undergraduate researcher in Northwestern's Brickner Lab, about her work on Rap1 and gene organization in yeast."
+  },
+  {
+   "kind": "research",
+   "title": "Going On Seventeen: “Type,” the Ingénue, and Teenage Girlhood Onstage",
+   "authors": ["Emily Ann Brooks"],
+   "department": "Department of Theatre",
+   "advisors": ["John Thomas Rapley"],
+   "printed_pages": "52-63",
+   "spans": [["51.0", "53.3"], ["53.5", "53.10"], ["53.4", "53.4"], ["54.0", "55.6"], ["55.9", "55.12"], ["55.7", "55.8"], ["56.0", "56.3"], ["56.5", "56.10"], ["56.4", "56.4"], ["57.0", "57.3"], ["57.8", "57.17"], ["57.4", "57.7"], ["58.0", "58.2"], ["58.4", "58.9"], ["58.3", "58.3"], ["59.0", "59.4"], ["59.6", "59.9"], ["59.5", "59.5"], ["60.0", "60.0"], ["60.6", "60.6"], ["60.1", "60.5"], ["60.7", "61.4"], ["62.21", "62.22"], ["62.0", "62.20"]],
+   "notes": "Senior thesis excerpt combining research and a performance. Advisor from \"Faculty Adviser\" on the opening page, which also names Committee Member Jeff Hancock. Short captions beside QR codes linking to performance videos (\"the performance portion of this project\", \"R&H Dancing Ingénue Medley\", etc.) are extracted with a stray \"S\" for the printed triangle and are placed at paragraph breaks, as are the pull quotes. The last two paragraphs of the conclusion are printed beside the bibliography on printed page 63 (62.21-62.22) and are placed before it. The contributors section (printed page 113) has a Q&A with the author, credited there as Emily Brooks."
+  },
+  {
+   "kind": "feature",
+   "title": "Why Do Medical Schools Stress Undergraduate Research Experience",
+   "authors": ["Felicia Mou"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "64-69",
+   "spans": [["63.0", "63.5"], ["63.10", "63.10"], ["63.6", "63.9"], ["63.11", "63.11"], ["64.0", "67.0"], ["67.4", "67.4"], ["67.1", "67.3"], ["68.0", "68.4"]],
+   "notes": "Subtitle on the opening page: \"A Conversation with a Pre-Med Advisor\"; the contents page lists it as \"Why do Medical Schools Stress Undergraduate Research Experience? A Conversation with a Pre-Medical Advisor\". Q&A interview with Brian Keiller, Associate Director of Health Professions Advising (HPA) at Northwestern."
+  },
+  {
+   "kind": "research",
+   "title": "Unashamed: Exploring A South Korean Female Tattoo Artist’s Negotation of Identity",
+   "authors": ["Kiana Staples"],
+   "department": "Department of Asian Languages and Culture",
+   "advisors": ["Jeong Eun Annabel We"],
+   "printed_pages": "70-82",
+   "spans": [["69.0", "69.5"], ["69.7", "69.7"], ["69.6", "69.6"], ["69.8", "70.2"], ["70.4", "70.4"], ["70.3", "70.3"], ["70.5", "71.3"], ["71.5", "71.5"], ["71.4", "71.4"], ["71.6", "72.3"], ["72.5", "72.5"], ["72.4", "72.4"], ["72.6", "73.5"], ["73.7", "73.7"], ["73.6", "73.6"], ["73.9", "73.18"], ["73.8", "73.8"], ["74.0", "75.2"], ["75.4", "75.4"], ["75.3", "75.3"], ["75.6", "75.9"], ["75.5", "75.5"], ["76.0", "77.2"], ["77.4", "77.4"], ["77.3", "77.3"], ["77.5", "77.5"], ["77.7", "77.10"], ["77.6", "77.6"], ["78.0", "78.2"], ["78.4", "78.4"], ["78.3", "78.3"], ["78.5", "81.34"]],
+   "notes": "Senior thesis excerpt based on oral history interviews with three South Korean female tattoo artists, focusing on the artist \"C\". Advisor from \"Faculty Adviser\" on the opening page. The opening page misspells \"Negotation\"; the contents and contributors pages print \"Negotiation Of Identity\", and the contents gives the department as \"Asian Languages and Cultures\". Footnote blocks and pull quotes are moved to paragraph breaks. Includes acknowledgments, an appendix of oral history questions in Korean and English, and a bibliography. The contributors section (printed page 119) has a Q&A with the author."
+  },
+  {
+   "kind": "feature",
+   "title": "How We Can Ensure Success in STEM: Professor Marcel Vinces",
+   "authors": ["Zaina Karim"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "83-85",
+   "spans": [["82.3", "82.4"], ["82.2", "82.2"], ["82.0", "82.1"], ["83.0", "84.9"]],
+   "notes": "Profile of Professor Marcel Vinces and his work on teaching approaches in introductory biology; the contents page spells the name \"Marcelo Vinces\". Ends with a reference list."
+  },
+  {
+   "kind": "research",
+   "title": "Monstrous Masculinities, Male Angst, and Adolescent Development in the Twilight Saga",
+   "authors": ["Juliet Jacques"],
+   "department": "Department of English",
+   "advisors": ["Nick Davis"],
+   "printed_pages": "86-95",
+   "spans": [["85.0", "85.4"], ["85.6", "85.6"], ["85.5", "85.5"], ["85.7", "86.2"], ["86.4", "86.4"], ["86.3", "86.3"], ["86.5", "87.1"], ["87.3", "87.3"], ["87.2", "87.2"], ["87.4", "88.2"], ["88.4", "88.4"], ["88.6", "88.13"], ["88.3", "88.3"], ["88.5", "88.5"], ["89.0", "90.4"], ["90.7", "90.13"], ["90.5", "90.6"], ["91.0", "92.5"], ["92.7", "92.7"], ["92.6", "92.6"], ["93.0", "94.29"]],
+   "notes": "The thesis introduction, per the author's Q&A in the contributors section (printed page 115). Advisor from \"Faculty Adviser\" on the opening page. Footnote blocks and pull quotes are moved to paragraph breaks. Includes a bibliography and a list of works consulted."
+  },
+  {
+   "kind": "feature",
+   "title": "The Center: Where Art and Science Converge",
+   "authors": ["Maggie Rose Baron"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "96-98",
+   "spans": [["95.3", "95.5"], ["95.0", "95.2"], ["95.6", "96.6"], ["96.8", "96.10"], ["96.7", "96.7"], ["97.0", "97.13"]],
+   "notes": "Profile of the Center for Scientific Studies in the Arts, a collaboration between Northwestern and the Art Institute of Chicago, quoting co-director Professor Aggelos Katsaggelos and Dr. Maria Kokkori. The contents page lists it as \"The Center: Where Art and Science Convergent\"."
+  },
+  {
+   "kind": "research",
+   "title": "God, Absurdism, and Law: Suffering and Meaning in the Works of Nietzsche, Dostoevsky, and Camus",
+   "authors": ["Violet Decker"],
+   "department": "Department of Comparative Literary Studies",
+   "advisors": ["Jonas Rosenbrück"],
+   "printed_pages": "99-108",
+   "spans": [["98.0", "99.5"], ["99.7", "99.7"], ["99.6", "99.6"], ["99.8", "100.6"], ["100.8", "100.8"], ["100.7", "100.7"], ["100.9", "101.3"], ["101.5", "101.5"], ["101.4", "101.4"], ["101.6", "102.3"], ["102.5", "102.5"], ["102.4", "102.4"], ["102.7", "102.11"], ["102.6", "102.6"], ["103.0", "103.4"], ["103.6", "103.7"], ["103.5", "103.5"], ["103.10", "103.14"], ["103.8", "103.9"], ["104.0", "104.4"], ["104.7", "104.7"], ["104.5", "104.6"], ["104.8", "105.3"], ["105.5", "105.5"], ["105.4", "105.4"], ["105.6", "107.15"]],
+   "notes": "Senior thesis excerpt. Advisor from \"Faculty Adviser\" on the opening page; the contents page gives the department as \"Comparative Literature Studies\". Footnote blocks and pull quotes are moved to paragraph breaks. Includes a bibliography. The contributors section (printed page 114) has a Q&A with the author."
+  },
+  {
+   "kind": "feature",
+   "title": "Re-engineering the Planet, Legally",
+   "authors": ["Lynna Deng"],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "109-111",
+   "spans": [["108.8", "108.8"], ["108.0", "108.7"], ["109.0", "109.6"], ["109.8", "109.9"], ["109.7", "109.7"], ["110.0", "110.11"]],
+   "notes": "Profile of Dr. Wil Burns, Visiting Professor of Environmental Policy and Culture, and his research on geoengineering under international law. The title and byline are extracted last on the opening page (108.8). Ends with a reference list."
+  },
+  {
+   "kind": "back matter",
+   "title": "ABOUT THE CONTRIBUTORS",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "112-120",
+   "spans": [["111.8", "111.11"], ["111.0", "111.7"], ["112.6", "112.8"], ["112.0", "112.5"], ["113.6", "113.6"], ["113.0", "113.5"], ["114.6", "114.9"], ["114.0", "114.5"], ["115.1", "115.1"], ["115.7", "115.7"], ["115.0", "115.0"], ["115.2", "115.6"], ["116.1", "116.1"], ["116.6", "116.8"], ["116.0", "116.0"], ["116.2", "116.5"], ["117.0", "117.3"], ["118.5", "118.8"], ["118.0", "118.4"], ["119.1", "119.1"], ["119.6", "119.6"], ["119.0", "119.0"], ["119.2", "119.5"]],
+   "notes": "Contents: \"Biographies and Interviews of Thesis Contributors\". One page per thesis author (Emily Brooks, Violet Decker, Juliet Jacques, Karina Karbo-Wright, Olive Liu over two pages, Kiana Staples, Nina M. Wetoska), each with name, thesis title and answers on their research topic, how they came to it, future directions and plans after graduation. The opener (printed page 112) lists the names and repeats \"ABOUT THE CONTRIBUTORS\" twice."
+  },
+  {
+   "kind": "back matter",
+   "title": "Join the NURJ",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "121",
+   "spans": [["120.0", "120.5"]],
+   "notes": "Calls for new staff members (\"Join the NURJ\") and for submissions (\"Submit to the NURJ\")."
+  },
+  {
+   "kind": "back matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [["121.0", "121.5"]],
+   "notes": "Back cover colophon: typefaces, printer (Creative Graphic Arts Inc.), NURJ office address and contacts, and the journal's mission statement."
+  }
+ ]
+}

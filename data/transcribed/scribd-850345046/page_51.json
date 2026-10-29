@@ -1,0 +1,38 @@
+{
+ "page": 51,
+ "blocks": [],
+ "replace": {
+  "6": [
+   "(2) yst = β0 + β1x(t-1)s + β2z2007s + β3x(t-1)z2007s +"
+  ],
+  "7": [
+   "Mst + Hst + βs + βt + βst",
+   "The dependent variable, yst, denotes",
+   "the energy poverty index as calculated by",
+   "(1) in Member State s and year t. In some",
+   "specifications, I also broke down the index",
+   "into its component parts and used either",
+   "inability to keep warm or arrears on utility",
+   "bills as the dependent variable. x(t-1)s is the in-",
+   "dependent variable of interest, either HDD",
+   "or CDD. I took degree days data from the",
+   "year before under the assumption that re-",
+   "spondents are thinking of their ability to pay",
+   "bills or comfort experienced in the months",
+   "leading to the survey, which could span the",
+   "previous year. z2007j is either the fraction of",
+   "the population with heating when the inde-",
+   "pendent variable is HDD or the fraction of",
+   "the population with air conditioning when",
+   "the independent variable is CDD. Similar-",
+   "ly, xt-1z2007s is the interaction term between",
+   "either HDD and heating or CDD and air",
+   "conditioning. Mst includes a vector of mac-",
+   "roeconomic controls, including the bottom",
+   "50% share of total national income (income",
+   "inequality), real GDP per capita, and un-",
+   "employment rate. Hst is a vector of housing",
+   "characteristics, including dwelling type and"
+  ]
+ }
+}

@@ -1,0 +1,904 @@
+{
+ "slug": "scribd-978781219",
+ "running_heads": [
+  "FEATURES",
+  "Fi",
+  "F",
+  "Fig",
+  "Ap",
+  "Ta"
+ ],
+ "items": [
+  {
+   "kind": "front matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "0.0",
+     "0.2"
+    ]
+   ],
+   "notes": "Front cover: NURJ, Northwestern Undergraduate Research Journal, Volume 20, 2024-2025, thenurj.com."
+  },
+  {
+   "kind": "front matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "1.0",
+     "3.5"
+    ]
+   ],
+   "notes": "Inside front matter: acknowledgments to university leadership, faculty advisers Peter Civetta and Patti Wolter and founder Allen Taflove; cover credit (Delilah Schmueck and Hannah Webster); published July 2025; how to join and submit to the NURJ; typefaces, printer (Creative Graphic Arts Inc.), office address and contacts; mission statement."
+  },
+  {
+   "kind": "front matter",
+   "title": "MASTHEAD",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "1",
+   "spans": [
+    [
+     "4.7",
+     "4.7"
+    ],
+    [
+     "4.0",
+     "4.6"
+    ],
+    [
+     "4.8",
+     "4.10"
+    ]
+   ],
+   "notes": "Staff masthead. The extraction splits the roles into blocks out of layout order."
+  },
+  {
+   "kind": "front matter",
+   "title": "TABLE OF CONTENTS",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "2-3",
+   "spans": [
+    [
+     "5.0",
+     "6.17"
+    ]
+   ],
+   "notes": "Contents pages; page numbers come in separate blocks from the section labels and titles, so their pairing is not preserved in the text."
+  },
+  {
+   "kind": "letter",
+   "title": "Letter from the Advisors",
+   "authors": [
+    "Peter Civetta",
+    "Patti Wolter"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "4",
+   "spans": [
+    [
+     "7.0",
+     "7.8"
+    ]
+   ],
+   "notes": "Signed by Dr. Peter Civetta and Prof. Patti Wolter, NURJ Faculty Advisors."
+  },
+  {
+   "kind": "letter",
+   "title": "Letter from the Editors",
+   "authors": [
+    "Helen Zhu",
+    "Mychaela Mathews"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "5",
+   "spans": [
+    [
+     "8.0",
+     "8.15"
+    ]
+   ],
+   "notes": "Signed by Co-Editors-in-Chief Helen Zhu & Mychaela Mathews; describes the volume's theme and cover (a lightbulb)."
+  },
+  {
+   "kind": "research",
+   "title": "Urban Currents: Upstream Pollution and its Impacts on Intercity Populations Along the Mississippi River",
+   "authors": [
+    "Darran Shen"
+   ],
+   "department": "Department of Economics",
+   "advisors": [
+    "W. Walker Hanlon"
+   ],
+   "printed_pages": "6-19",
+   "spans": [
+    [
+     "9.2",
+     "9.5"
+    ],
+    [
+     "9.0",
+     "9.1"
+    ],
+    [
+     "10.0",
+     "22.20"
+    ]
+   ],
+   "notes": "Senior thesis. Faculty adviser (printed \"Dr. W. Walker Hanlon\") named on the opening page. Includes an appendix table of water filtration efforts by city (printed page 17) and a bibliography whose entries are extracted in fragments split across blocks. Pull quotes are interleaved with the body text."
+  },
+  {
+   "kind": "feature",
+   "title": "The Emerging Scholars Program: Opening Doors to Undergraduate Research",
+   "authors": [
+    "Ashley Wei"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "20-21",
+   "spans": [
+    [
+     "23.6",
+     "23.9"
+    ],
+    [
+     "23.0",
+     "23.5"
+    ],
+    [
+     "24.0",
+     "24.6"
+    ]
+   ],
+   "notes": "Feature on the Office of Undergraduate Research's Emerging Scholars Program, with sophomore Valentina Parra's experience."
+  },
+  {
+   "kind": "research",
+   "title": "Revisiting the Agentic-Communal Framework: A Conjoint Analysis Approach to Understanding Bias Against Female Leaders in the Workplace",
+   "authors": [
+    "Charlotte Cagliostro"
+   ],
+   "department": "Department of Psychology",
+   "advisors": [
+    "Sylvia Perry"
+   ],
+   "printed_pages": "22-38",
+   "spans": [
+    [
+     "25.2",
+     "25.5"
+    ],
+    [
+     "25.0",
+     "25.1"
+    ],
+    [
+     "26.0",
+     "35.12"
+    ],
+    [
+     "36.0",
+     "36.2"
+    ],
+    [
+     "36.4",
+     "36.12"
+    ],
+    [
+     "36.3",
+     "36.3"
+    ],
+    [
+     "37.0",
+     "37.0"
+    ],
+    [
+     "37.2",
+     "37.2"
+    ],
+    [
+     "37.1",
+     "37.1"
+    ],
+    [
+     "37.4",
+     "37.6"
+    ],
+    [
+     "37.3",
+     "37.3"
+    ],
+    [
+     "38.0",
+     "38.2"
+    ],
+    [
+     "38.4",
+     "38.6"
+    ],
+    [
+     "38.3",
+     "38.3"
+    ],
+    [
+     "38.7",
+     "38.10"
+    ],
+    [
+     "39.30",
+     "39.30"
+    ],
+    [
+     "39.0",
+     "39.29"
+    ],
+    [
+     "40.28",
+     "40.28"
+    ],
+    [
+     "40.0",
+     "40.27"
+    ],
+    [
+     "41.16",
+     "41.16"
+    ],
+    [
+     "41.0",
+     "41.15"
+    ]
+   ],
+   "notes": "Senior thesis. Faculty adviser (printed \"Dr. Sylvia Perry\") named on the opening page. Appendix Table 1 (attribute levels) and Figure 1 (a sample candidate selection task) are images, transcribed from the page images; Figures 2-5 are plots whose panel titles only are transcribed. The bibliography's entries are extracted in fragments split across blocks."
+  },
+  {
+   "kind": "feature",
+   "title": "Impacts of Chemistry Beyond the Lab: Green Chemistry with Dr. Mark Aparece",
+   "authors": [
+    "Hannah Xu"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "39-41",
+   "spans": [
+    [
+     "42.2",
+     "42.3"
+    ],
+    [
+     "42.0",
+     "42.1"
+    ],
+    [
+     "42.4",
+     "44.6"
+    ]
+   ],
+   "notes": "Q&A interview with Dr. Mark Aparece, Assistant Professor of Instruction in Chemistry, on green chemistry research and teaching."
+  },
+  {
+   "kind": "feature",
+   "title": "Exploring the Complex History of Reproductive Health: Insights from Dr. Rodriguez",
+   "authors": [
+    "Avery Morawa"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "42-44",
+   "spans": [
+    [
+     "45.2",
+     "45.4"
+    ],
+    [
+     "45.0",
+     "45.1"
+    ],
+    [
+     "45.5",
+     "47.4"
+    ]
+   ],
+   "notes": "Profile of Dr. Sarah Rodriguez, professor of global health and medical historian."
+  },
+  {
+   "kind": "research",
+   "title": "The Effect of Merit Scholarships on Saving for College",
+   "authors": [
+    "Emilya Ershtein"
+   ],
+   "department": "Departments of Economics and Mathematical Methods in the Social Sciences",
+   "advisors": [
+    "Scott Ogawa"
+   ],
+   "printed_pages": "45-66",
+   "spans": [
+    [
+     "48.2",
+     "48.6"
+    ],
+    [
+     "48.0",
+     "48.1"
+    ],
+    [
+     "49.0",
+     "58.3"
+    ],
+    [
+     "59.0",
+     "59.0"
+    ],
+    [
+     "59.39",
+     "59.40"
+    ],
+    [
+     "59.1",
+     "59.38"
+    ],
+    [
+     "59.41",
+     "59.41"
+    ],
+    [
+     "60.0",
+     "60.17"
+    ],
+    [
+     "60.28",
+     "60.28"
+    ],
+    [
+     "60.18",
+     "60.27"
+    ],
+    [
+     "61.0",
+     "62.37"
+    ],
+    [
+     "62.48",
+     "62.48"
+    ],
+    [
+     "62.38",
+     "62.47"
+    ],
+    [
+     "63.0",
+     "63.0"
+    ],
+    [
+     "63.23",
+     "63.24"
+    ],
+    [
+     "63.12",
+     "63.22"
+    ],
+    [
+     "63.25",
+     "63.25"
+    ],
+    [
+     "63.1",
+     "63.11"
+    ],
+    [
+     "63.26",
+     "63.26"
+    ],
+    [
+     "64.0",
+     "64.8"
+    ],
+    [
+     "64.58",
+     "64.58"
+    ],
+    [
+     "64.9",
+     "64.57"
+    ],
+    [
+     "65.0",
+     "69.17"
+    ]
+   ],
+   "notes": "Senior thesis. Faculty adviser (printed \"Dr. Scott Ogawa\") named on the opening page. Appendix Tables 1-9 are extracted cell by cell; Figures 1-4B (printed pages 62-65) are plots of merit aid and savings by state with no transcribable text beyond their captions."
+  },
+  {
+   "kind": "feature",
+   "title": "Comprehension and Misinformation: An Interview with Dr. David N. Rapp",
+   "authors": [
+    "Katie Fu"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "67-70",
+   "spans": [
+    [
+     "70.2",
+     "70.2"
+    ],
+    [
+     "70.0",
+     "70.1"
+    ],
+    [
+     "70.3",
+     "73.5"
+    ]
+   ],
+   "notes": "Q&A interview with Dr. David N. Rapp, Walter Dill Scott Professor of Education in Psychology and the School of Education and Social Policy."
+  },
+  {
+   "kind": "research",
+   "title": "The Protect of Total War and the Minnesota Starvation Experiment, 1944-1945",
+   "authors": [
+    "Aimee Flanigan"
+   ],
+   "department": "Department of History",
+   "advisors": [
+    "Ken Alder"
+   ],
+   "printed_pages": "71-83",
+   "spans": [
+    [
+     "74.2",
+     "74.7"
+    ],
+    [
+     "74.0",
+     "74.1"
+    ],
+    [
+     "75.0",
+     "81.8"
+    ],
+    [
+     "82.0",
+     "82.0"
+    ],
+    [
+     "82.5",
+     "82.5"
+    ],
+    [
+     "82.1",
+     "82.4"
+    ],
+    [
+     "82.6",
+     "83.5"
+    ],
+    [
+     "84.0",
+     "84.0"
+    ],
+    [
+     "84.3",
+     "84.3"
+    ],
+    [
+     "84.1",
+     "84.2"
+    ],
+    [
+     "84.4",
+     "85.38"
+    ],
+    [
+     "86.28",
+     "86.28"
+    ],
+    [
+     "86.0",
+     "86.27"
+    ]
+   ],
+   "notes": "Senior thesis. The opening page prints the title as \"The Protect of Total War...\"; the contents page and the contributors page print \"The Project of Total War...\". Faculty adviser (printed \"Dr. Ken Alder\") named on the opening page. Appendices reproduce Wallace Kirkland's Life magazine photographs (Figures 1-6) with captions. The bibliography is divided into primary sources, secondary sources, archives and consulted sources."
+  },
+  {
+   "kind": "feature",
+   "title": "From Blades to Breakthroughs: Palmy Lamsam’s Journey from Figure Skating to Research",
+   "authors": [
+    "Evan Hostetler"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "84-88",
+   "spans": [
+    [
+     "87.1",
+     "87.1"
+    ],
+    [
+     "87.0",
+     "87.0"
+    ],
+    [
+     "87.2",
+     "91.2"
+    ]
+   ],
+   "notes": "Profile of Thita \"Palmy\" Lamsam, a former competitive figure skater and Northwestern Marriage and Family Therapy student."
+  },
+  {
+   "kind": "research",
+   "title": "Early Childhood Shocks in Ghana: Evidence on Physical Health and Cognitive Development",
+   "authors": [
+    "Ila Gupta"
+   ],
+   "department": "Department of Economics",
+   "advisors": [
+    "Christopher Udry"
+   ],
+   "printed_pages": "89-114",
+   "spans": [
+    [
+     "92.2",
+     "92.5"
+    ],
+    [
+     "92.0",
+     "92.1"
+    ],
+    [
+     "93.0",
+     "94.6"
+    ],
+    [
+     "94.8",
+     "94.13"
+    ],
+    [
+     "94.7",
+     "94.7"
+    ],
+    [
+     "95.0",
+     "115.1"
+    ],
+    [
+     "115.5",
+     "115.28"
+    ],
+    [
+     "115.2",
+     "115.3"
+    ],
+    [
+     "115.29",
+     "115.43"
+    ],
+    [
+     "115.4",
+     "115.4"
+    ],
+    [
+     "116.0",
+     "116.1"
+    ],
+    [
+     "116.3",
+     "116.63"
+    ],
+    [
+     "116.2",
+     "116.2"
+    ],
+    [
+     "117.0",
+     "117.34"
+    ]
+   ],
+   "notes": "Senior thesis. Faculty adviser (printed \"Dr. Christopher Udry\") named on the opening page. Appendix regression tables are extracted cell by cell. Figures 7-9 (printed pages 112-113) are scanned pages of the rural community survey questionnaire (sections 7A town events, 7B agricultural shocks, 7C crop sales), transcribed from the page images. Text inside the Figure 1 population density map (title and notes; its copyright line is illegible), the WHO disclaimer on the Figure 3 map, and the four stages of the Figure 4 poverty-trap cycle are also transcribed from the images."
+  },
+  {
+   "kind": "feature",
+   "title": "Inside PSYCH 110’s Research Study Requirement",
+   "authors": [
+    "Maggie Rose Baron"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "115-117",
+   "spans": [
+    [
+     "118.1",
+     "118.5"
+    ],
+    [
+     "118.0",
+     "118.0"
+    ],
+    [
+     "119.0",
+     "120.6"
+    ]
+   ],
+   "notes": "First-person feature on the introductory psychology course's research participation requirement."
+  },
+  {
+   "kind": "feature",
+   "title": "Exploring the Intersection of Buddhism and Science: Q&A with Dr. Robin Nusslock",
+   "authors": [
+    "Allison Kim"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "118-122",
+   "spans": [
+    [
+     "121.0",
+     "125.5"
+    ]
+   ],
+   "notes": "Q&A interview with Dr. Robin Nusslock on the Emory-Tibet Science Initiative; the contents page gives the title as \"Exploring the Intersection of Buddhism and Science - Q&A with Dr. Robin Nusslock\"."
+  },
+  {
+   "kind": "research",
+   "title": "Grief Unmasked",
+   "authors": [
+    "Maelea Tan"
+   ],
+   "department": "Department of Theatre",
+   "advisors": [
+    "Rives Collins"
+   ],
+   "printed_pages": "123-131",
+   "spans": [
+    [
+     "126.2",
+     "126.5"
+    ],
+    [
+     "126.0",
+     "126.1"
+    ],
+    [
+     "127.0",
+     "134.0"
+    ]
+   ],
+   "notes": "Creative senior thesis: a one-paragraph abstract describing eight masquerade masks (\"Shock\" through \"Acceptance\") followed by eight full-page photographs of the masks being worn (printed pages 124-131), with no captions or other text. Faculty adviser named on the opening page."
+  },
+  {
+   "kind": "feature",
+   "title": "Interview With Professor Oya Topçuoğlu on Archaeological Fieldwork",
+   "authors": [
+    "Maya Mubayi"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "132-135",
+   "spans": [
+    [
+     "135.0",
+     "138.3"
+    ]
+   ],
+   "notes": "Q&A interview with Professor Oya Topçuoğlu (Middle East and North African Languages) on archaeological fieldwork in Turkey."
+  },
+  {
+   "kind": "research",
+   "title": "The Effect of Copyright Term Extension on Creative Productivity",
+   "authors": [
+    "Jeffrey A. Popell"
+   ],
+   "department": "Department of Economics",
+   "advisors": [
+    "James Hornsten"
+   ],
+   "printed_pages": "136-152",
+   "spans": [
+    [
+     "139.2",
+     "139.5"
+    ],
+    [
+     "139.0",
+     "139.1"
+    ],
+    [
+     "140.0",
+     "150.5"
+    ],
+    [
+     "150.8",
+     "150.8"
+    ],
+    [
+     "150.6",
+     "150.7"
+    ],
+    [
+     "150.9",
+     "151.0"
+    ],
+    [
+     "151.10",
+     "151.10"
+    ],
+    [
+     "151.1",
+     "151.2"
+    ],
+    [
+     "151.7",
+     "151.7"
+    ],
+    [
+     "151.3",
+     "151.6"
+    ],
+    [
+     "151.8",
+     "151.9"
+    ],
+    [
+     "152.0",
+     "152.0"
+    ],
+    [
+     "152.9",
+     "152.9"
+    ],
+    [
+     "152.3",
+     "152.3"
+    ],
+    [
+     "152.5",
+     "152.8"
+    ],
+    [
+     "152.4",
+     "152.4"
+    ],
+    [
+     "152.1",
+     "152.2"
+    ],
+    [
+     "153.0",
+     "153.0"
+    ],
+    [
+     "153.40",
+     "153.40"
+    ],
+    [
+     "153.1",
+     "153.39"
+    ],
+    [
+     "154.0",
+     "155.25"
+    ]
+   ],
+   "notes": "Senior thesis. Faculty adviser named on the opening page. Appendices A-E are event-study plots (only their captions are text); Appendix F regression output is extracted cell by cell. The bibliography's entries are extracted in fragments split across blocks."
+  },
+  {
+   "kind": "feature",
+   "title": "Assessing Neural Stem Cell Transplantation for Chronic Spinal Cord Injury: A Step Forward or Cautious Optimism?",
+   "authors": [
+    "Sepehr Khavari",
+    "Nicole Salehi"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "153-156",
+   "spans": [
+    [
+     "156.4",
+     "156.8"
+    ],
+    [
+     "156.0",
+     "156.3"
+    ],
+    [
+     "157.0",
+     "159.7"
+    ]
+   ],
+   "notes": "Staff-written critical review of Martin et al. (2024), a clinical trial of neural stem cell transplantation for chronic spinal cord injury, with references."
+  },
+  {
+   "kind": "feature",
+   "title": "The Effects of Language on Thought",
+   "authors": [
+    "Hannah Oh"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "157-160",
+   "spans": [
+    [
+     "160.0",
+     "163.9"
+    ]
+   ],
+   "notes": "Feature on linguistic relativity (the Sapir-Whorf hypothesis), with numbered sources."
+  },
+  {
+   "kind": "back matter",
+   "title": "About the Contributors",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "161-168",
+   "spans": [
+    [
+     "164.0",
+     "165.7"
+    ],
+    [
+     "166.0",
+     "166.0"
+    ],
+    [
+     "166.5",
+     "166.5"
+    ],
+    [
+     "166.1",
+     "166.4"
+    ],
+    [
+     "167.0",
+     "167.5"
+    ],
+    [
+     "168.0",
+     "168.0"
+    ],
+    [
+     "168.6",
+     "168.6"
+    ],
+    [
+     "168.1",
+     "168.5"
+    ],
+    [
+     "169.0",
+     "169.5"
+    ],
+    [
+     "170.0",
+     "170.0"
+    ],
+    [
+     "170.5",
+     "170.5"
+    ],
+    [
+     "170.1",
+     "170.4"
+    ],
+    [
+     "171.0",
+     "171.5"
+    ]
+   ],
+   "notes": "Q&A with the seven thesis authors (Darran Shen, Charlotte Cagliostro, Emilya Ershtein, Aimee Flanigan, Ila Gupta, Maelea Tan, Jeffrey A. Popell): research topic, how they came to it, future directions and post-graduation plans."
+  }
+ ]
+}

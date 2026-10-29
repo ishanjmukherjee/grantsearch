@@ -1,0 +1,12 @@
+{"page": 36, "blocks": [
+["Table 1. Attribute Levels Used to Generate Candidate Profiles"],
+["Attribute | Levels"],
+["Race | Black", "White", "Asian", "Latinx"],
+["Gender | Male", "Female"],
+["Relationship status | Single (never married)", "Single (divorced)", "Married"],
+["Parental status | 0", "1", "2", "3"],
+["Personality | Collaborative", "Empathetic", "Ambitious", "Bossy"],
+["Emotional control | Poor", "Fair", "Good", "Excellent"],
+["Industry experience | 4 years", "8 years", "12 years"],
+["Highest education | High school", "College", "Graduate school"]
+]}

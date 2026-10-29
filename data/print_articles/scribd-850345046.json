@@ -1,0 +1,1929 @@
+{
+ "slug": "scribd-850345046",
+ "running_heads": [
+  "F E AT U R E",
+  "Taflove’s VIPs"
+ ],
+ "items": [
+  {
+   "kind": "front matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "0.0",
+     "0.2"
+    ]
+   ],
+   "notes": "Front cover: journal name, volume 17, 2021-2022, thenurj.com."
+  },
+  {
+   "kind": "front matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "1.0",
+     "1.4"
+    ]
+   ],
+   "notes": "Inside cover: acknowledgments and publication details (cover by Catherine Wu; published August 2022; ISSN 2689-1034)."
+  },
+  {
+   "kind": "front matter",
+   "title": "MASTHEAD",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "1",
+   "spans": [
+    [
+     "2.0",
+     "2.18"
+    ]
+   ],
+   "notes": "Staff masthead for vol. 17."
+  },
+  {
+   "kind": "front matter",
+   "title": "TABLE OF CONTENTS",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "2-3",
+   "spans": [
+    [
+     "3.0",
+     "4.11"
+    ]
+   ],
+   "notes": "Contents entries give printed page, section label and title in one block each; features are listed separately from the theses. The contents lists the award feature as \"2021 Research Award Winners\", though the feature itself is headed 2022, and lists Contributors at page 180."
+  },
+  {
+   "kind": "letter",
+   "title": "LETTER FROM THE ADVISERS",
+   "authors": [
+    "Peter Civetta",
+    "Patti Wolter"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "4",
+   "spans": [
+    [
+     "5.0",
+     "5.19"
+    ]
+   ],
+   "notes": "Signed \"Dr. Peter Civetta and Patti Wolter, NURJ Faculty Advisors\". The text layer splits the letter into many line-level blocks."
+  },
+  {
+   "kind": "letter",
+   "title": "LETTER FROM THE EDITORS",
+   "authors": [
+    "Jenna Greenzaid",
+    "Shreya Sriram"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "5",
+   "spans": [
+    [
+     "6.0",
+     "6.5"
+    ]
+   ],
+   "notes": "Signed by the Editors-in-Chief."
+  },
+  {
+   "kind": "feature",
+   "title": "Taflove’s VIPs: Q&A with Northwestern President Morton Schapiro",
+   "authors": [
+    "Jenna Greenzaid",
+    "Shreya Sriram"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "6-8",
+   "spans": [
+    [
+     "7.0",
+     "7.2"
+    ],
+    [
+     "7.4",
+     "7.5"
+    ],
+    [
+     "7.3",
+     "7.3"
+    ],
+    [
+     "7.8",
+     "7.8"
+    ],
+    [
+     "7.6",
+     "7.7"
+    ],
+    [
+     "8.0",
+     "8.2"
+    ],
+    [
+     "8.14",
+     "8.14"
+    ],
+    [
+     "8.13",
+     "8.13"
+    ],
+    [
+     "8.3",
+     "8.12"
+    ],
+    [
+     "9.0",
+     "9.10"
+    ]
+   ],
+   "notes": "Interview with outgoing Northwestern President Morton Schapiro by the Editors-in-Chief, introduced as the first of an annual \"Taflove’s VIPs\" feature honoring late faculty adviser Allen Taflove. Title as given in the contents; the opening page prints \"Taflove’s VIPs:\" over \"Q&A with Northwestern President Morton Schapiro\". The introduction's drop cap \"M\" is a separate block (8.14)."
+  },
+  {
+   "kind": "research",
+   "title": "Black-Owned Small Businesses in Englewood, Chicago: Documenting the Effects of COVID-19 and the Black Lives Matter Movement in 2020",
+   "authors": [
+    "Sophie Boorstein"
+   ],
+   "department": "School of Education and Social Policy & Department of Statistics",
+   "advisors": [
+    "Jonathan Guryan",
+    "Reuel Rogers",
+    "Elizabeth Tipton"
+   ],
+   "printed_pages": "9-23",
+   "spans": [
+    [
+     "10.1",
+     "10.1"
+    ],
+    [
+     "10.9",
+     "10.9"
+    ],
+    [
+     "10.2",
+     "10.4"
+    ],
+    [
+     "10.10",
+     "10.10"
+    ],
+    [
+     "10.5",
+     "10.8"
+    ],
+    [
+     "11.0",
+     "12.6"
+    ],
+    [
+     "12.7",
+     "12.7"
+    ],
+    [
+     "13.0",
+     "13.2"
+    ],
+    [
+     "13.4",
+     "13.5"
+    ],
+    [
+     "13.3",
+     "13.3"
+    ],
+    [
+     "13.6",
+     "24.23"
+    ]
+   ],
+   "notes": "Senior thesis (mixed methods). Faculty advisers named on the opening page; the contents labels it \"Social Policy and Statistics\". Tables 1-3 and Appendix B are extracted cell by cell; Appendix A is the interview protocol, with list numbers in blocks of their own. Pull quotes on printed pages 17-18 repeat text from the body. Bibliography entries are split across blocks mid-entry."
+  },
+  {
+   "kind": "feature",
+   "title": "KHOA PHAN HOWARD ON PURSUING RESEARCH AND GRADUATE SCHOOL IN THE SOCIAL SCIENCES",
+   "authors": [
+    "Catherine Campusano",
+    "Prerita Pandya"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "24-27",
+   "spans": [
+    [
+     "25.1",
+     "28.4"
+    ]
+   ],
+   "notes": "Q&A with Khoa Phan Howard, a second-year Ph.D. student in Sociology at Northwestern. The contents gives the title as \"Khoa Phan on Pursuing Research and Graduate School in the Social Sciences\"."
+  },
+  {
+   "kind": "research",
+   "title": "Framing and Youth Participation in the Sunrise Movement",
+   "authors": [
+    "Keerti Gopal"
+   ],
+   "department": "Department of American Studies",
+   "advisors": [
+    "Chloe Thurston"
+   ],
+   "printed_pages": "28-39",
+   "spans": [
+    [
+     "29.6",
+     "29.6"
+    ],
+    [
+     "29.8",
+     "29.8"
+    ],
+    [
+     "29.7",
+     "29.7"
+    ],
+    [
+     "29.1",
+     "29.1"
+    ],
+    [
+     "29.9",
+     "29.9"
+    ],
+    [
+     "29.2",
+     "29.2"
+    ],
+    [
+     "29.4",
+     "29.5"
+    ],
+    [
+     "29.3",
+     "29.3"
+    ],
+    [
+     "30.0",
+     "30.2"
+    ],
+    [
+     "30.4",
+     "30.5"
+    ],
+    [
+     "30.3",
+     "30.3"
+    ],
+    [
+     "31.0",
+     "31.2"
+    ],
+    [
+     "31.4",
+     "31.7"
+    ],
+    [
+     "31.3",
+     "31.3"
+    ],
+    [
+     "31.8",
+     "31.10"
+    ],
+    [
+     "32.0",
+     "32.4"
+    ],
+    [
+     "32.6",
+     "32.8"
+    ],
+    [
+     "32.5",
+     "32.5"
+    ],
+    [
+     "33.0",
+     "33.2"
+    ],
+    [
+     "33.4",
+     "33.5"
+    ],
+    [
+     "33.3",
+     "33.3"
+    ],
+    [
+     "33.6",
+     "33.8"
+    ],
+    [
+     "34.0",
+     "34.3"
+    ],
+    [
+     "34.5",
+     "34.8"
+    ],
+    [
+     "34.4",
+     "34.4"
+    ],
+    [
+     "35.0",
+     "35.6"
+    ],
+    [
+     "35.8",
+     "35.9"
+    ],
+    [
+     "35.7",
+     "35.7"
+    ],
+    [
+     "36.0",
+     "36.3"
+    ],
+    [
+     "36.5",
+     "36.7"
+    ],
+    [
+     "36.4",
+     "36.4"
+    ],
+    [
+     "37.0",
+     "37.2"
+    ],
+    [
+     "37.4",
+     "37.5"
+    ],
+    [
+     "37.3",
+     "37.3"
+    ],
+    [
+     "37.6",
+     "37.10"
+    ],
+    [
+     "38.0",
+     "38.2"
+    ],
+    [
+     "38.4",
+     "38.5"
+    ],
+    [
+     "38.3",
+     "38.3"
+    ],
+    [
+     "39.35",
+     "39.35"
+    ],
+    [
+     "39.0",
+     "39.34"
+    ],
+    [
+     "40.0",
+     "40.20"
+    ]
+   ],
+   "notes": "Senior thesis. The opening page prints the full title as \"The Green Dream: Framing and Youth Participation in the Sunrise Movement\" (the main title and subtitle are separate blocks there); the title recorded is the subtitle as given in the contents and contributor page. Faculty adviser named on the opening page. Footnotes are placed after each page's body text. Bibliography entries are split across blocks mid-entry, and their extracted order does not always follow the printed columns."
+  },
+  {
+   "kind": "feature",
+   "title": "Discussing the Politics of Climate Change with NU-Q Student Researcher Natasha Das",
+   "authors": [
+    "Rachel Chiu",
+    "Grace Lee"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "40-43",
+   "spans": [
+    [
+     "41.5",
+     "41.8"
+    ],
+    [
+     "41.0",
+     "41.4"
+    ],
+    [
+     "42.0",
+     "44.4"
+    ]
+   ],
+   "notes": "Profile of NU-Q undergraduate Natasha Das and her senior thesis, The Politics of Climate Change, with quotations from the thesis set as margin notes (the arrow blocks)."
+  },
+  {
+   "kind": "research",
+   "title": "The Impact of Climate Change on Energy Poverty: Evidence from the European Union, 2004–2019",
+   "authors": [
+    "Ginny Ip"
+   ],
+   "department": "Department of Economics",
+   "advisors": [
+    "Mar Reguant",
+    "Jeffrey Lewis"
+   ],
+   "printed_pages": "44-60",
+   "spans": [
+    [
+     "45.1",
+     "45.1"
+    ],
+    [
+     "45.6",
+     "45.6"
+    ],
+    [
+     "45.2",
+     "45.2"
+    ],
+    [
+     "45.3",
+     "45.4"
+    ],
+    [
+     "45.5",
+     "45.5"
+    ],
+    [
+     "46.0",
+     "47.9"
+    ],
+    [
+     "48.0",
+     "48.3"
+    ],
+    [
+     "48.5",
+     "48.8"
+    ],
+    [
+     "48.4",
+     "48.4"
+    ],
+    [
+     "49.0",
+     "49.2"
+    ],
+    [
+     "49.4",
+     "49.6"
+    ],
+    [
+     "49.3",
+     "49.3"
+    ],
+    [
+     "49.7",
+     "49.10"
+    ],
+    [
+     "50.0",
+     "52.8"
+    ],
+    [
+     "53.0",
+     "53.12"
+    ],
+    [
+     "54.0",
+     "54.2"
+    ],
+    [
+     "55.62",
+     "55.62"
+    ],
+    [
+     "55.7",
+     "55.7"
+    ],
+    [
+     "55.8",
+     "55.61"
+    ],
+    [
+     "55.0",
+     "55.6"
+    ],
+    [
+     "56.0",
+     "61.18"
+    ]
+   ],
+   "notes": "Senior thesis with abstract. Faculty advisers named on the opening page. Tables 1-6 in the appendix are extracted cell by cell (the bottom rows of Table 1 come first in the text layer). Equation (2) and the paragraph after it (50.6, 50.7, 51.1), whose symbols are garbled in the text layer, are read from the page image."
+  },
+  {
+   "kind": "research",
+   "title": "Reformulating Korean Anti-American Literature: Feminist resistance against double colonialism in 중국인거리 (Junggugingeori)",
+   "authors": [
+    "Hanbyul-Jenny Kang"
+   ],
+   "department": "Department of Comparative Literary Studies",
+   "advisors": [
+    "Evan Mwangi"
+   ],
+   "printed_pages": "61-71",
+   "spans": [
+    [
+     "62.7",
+     "62.7"
+    ],
+    [
+     "62.1",
+     "62.6"
+    ],
+    [
+     "63.0",
+     "63.3"
+    ],
+    [
+     "63.5",
+     "63.6"
+    ],
+    [
+     "63.4",
+     "63.4"
+    ],
+    [
+     "63.7",
+     "63.11"
+    ],
+    [
+     "64.0",
+     "64.3"
+    ],
+    [
+     "64.5",
+     "64.7"
+    ],
+    [
+     "64.4",
+     "64.4"
+    ],
+    [
+     "65.0",
+     "66.8"
+    ],
+    [
+     "67.0",
+     "67.3"
+    ],
+    [
+     "67.5",
+     "67.9"
+    ],
+    [
+     "67.4",
+     "67.4"
+    ],
+    [
+     "68.0",
+     "68.2"
+    ],
+    [
+     "68.4",
+     "68.8"
+    ],
+    [
+     "68.3",
+     "68.3"
+    ],
+    [
+     "69.0",
+     "69.2"
+    ],
+    [
+     "69.4",
+     "69.5"
+    ],
+    [
+     "69.3",
+     "69.3"
+    ],
+    [
+     "70.0",
+     "70.1"
+    ],
+    [
+     "70.3",
+     "70.4"
+    ],
+    [
+     "70.2",
+     "70.2"
+    ],
+    [
+     "70.5",
+     "70.6"
+    ],
+    [
+     "71.0",
+     "72.23"
+    ]
+   ],
+   "notes": "Senior thesis with abstract and trigger warning. Faculty adviser named on the opening page. Quotations from the novella are given in Korean followed by the author's English translation; Korean words garbled in the text layer (66.2, 66.3, 68.1, and the Korean bibliography entries 72.5, 72.6, 72.12) are read from the page image."
+  },
+  {
+   "kind": "feature",
+   "title": "The Office of Undergraduate Research: The Student Researcher’s Ideal One-Stop Shop",
+   "authors": [
+    "Stephanie Kim",
+    "Peirong She"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "72-74",
+   "spans": [
+    [
+     "73.10",
+     "73.10"
+    ],
+    [
+     "73.7",
+     "73.9"
+    ],
+    [
+     "73.0",
+     "73.6"
+    ],
+    [
+     "74.0",
+     "75.18"
+    ]
+   ],
+   "notes": "Feature on Northwestern's Office of Undergraduate Research, with OUR advisor Diamond Jones and Circumnavigator Travel Grant winner Vivica E. Lewis. Title as given in the contents; the opening page prints it in capitals. The first paragraph's drop cap \"A\" is a separate block (73.1)."
+  },
+  {
+   "kind": "research",
+   "title": "Revolutionary Women: Literary Performativity, Classical Pseudonyms, and the Public Sphere in the Correspondence of Abigail Adams and Mercy Otis Warren",
+   "authors": [
+    "Lauren Katz"
+   ],
+   "department": "Department of English",
+   "advisors": [
+    "Kelly Wisecup"
+   ],
+   "printed_pages": "75-87",
+   "spans": [
+    [
+     "76.5",
+     "76.5"
+    ],
+    [
+     "76.8",
+     "76.8"
+    ],
+    [
+     "76.6",
+     "76.7"
+    ],
+    [
+     "76.9",
+     "76.9"
+    ],
+    [
+     "76.0",
+     "76.1"
+    ],
+    [
+     "76.3",
+     "76.4"
+    ],
+    [
+     "76.2",
+     "76.2"
+    ],
+    [
+     "77.0",
+     "77.3"
+    ],
+    [
+     "77.5",
+     "77.6"
+    ],
+    [
+     "77.4",
+     "77.4"
+    ],
+    [
+     "77.7",
+     "77.11"
+    ],
+    [
+     "78.0",
+     "78.2"
+    ],
+    [
+     "78.4",
+     "78.4"
+    ],
+    [
+     "78.3",
+     "78.3"
+    ],
+    [
+     "79.0",
+     "79.11"
+    ],
+    [
+     "80.0",
+     "80.8"
+    ],
+    [
+     "80.10",
+     "80.10"
+    ],
+    [
+     "80.9",
+     "80.9"
+    ],
+    [
+     "81.0",
+     "81.4"
+    ],
+    [
+     "81.6",
+     "81.16"
+    ],
+    [
+     "81.5",
+     "81.5"
+    ],
+    [
+     "82.0",
+     "82.2"
+    ],
+    [
+     "82.4",
+     "82.5"
+    ],
+    [
+     "82.3",
+     "82.3"
+    ],
+    [
+     "83.0",
+     "83.1"
+    ],
+    [
+     "83.3",
+     "83.4"
+    ],
+    [
+     "83.2",
+     "83.2"
+    ],
+    [
+     "84.0",
+     "84.2"
+    ],
+    [
+     "84.4",
+     "84.5"
+    ],
+    [
+     "84.3",
+     "84.3"
+    ],
+    [
+     "85.0",
+     "85.1"
+    ],
+    [
+     "85.3",
+     "85.4"
+    ],
+    [
+     "85.2",
+     "85.2"
+    ],
+    [
+     "85.5",
+     "85.6"
+    ],
+    [
+     "86.0",
+     "86.2"
+    ],
+    [
+     "87.33",
+     "87.33"
+    ],
+    [
+     "87.0",
+     "87.32"
+    ],
+    [
+     "88.0",
+     "88.14"
+    ]
+   ],
+   "notes": "Senior thesis. Faculty adviser named on the opening page; the opening section is headed \"Remember the Ladies?\". Verse quotations from Shakespeare's Julius Caesar are extracted line by line."
+  },
+  {
+   "kind": "feature",
+   "title": "Op-Ed: The Burgeoning Academic Field of Existential Risk",
+   "authors": [
+    "Manuel De Leon"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "88-89",
+   "spans": [
+    [
+     "89.0",
+     "90.3"
+    ],
+    [
+     "90.5",
+     "90.5"
+    ],
+    [
+     "90.4",
+     "90.4"
+    ]
+   ],
+   "notes": "Opinion essay on existential-risk research, with footnoted sources and a bar chart (Figure 1) of academic paper counts by topic. The first word's drop cap \"T\" is a separate block (89.3)."
+  },
+  {
+   "kind": "research",
+   "title": "The Role of Habit in Kafka’s “The Burrow” and Proust’s Swann’s Way",
+   "authors": [
+    "Nikol Kralimarkova"
+   ],
+   "department": "Department of Comparative Literary Studies",
+   "advisors": [
+    "Samuel Weber"
+   ],
+   "printed_pages": "90-97",
+   "spans": [
+    [
+     "91.1",
+     "91.1"
+    ],
+    [
+     "91.2",
+     "91.4"
+    ],
+    [
+     "91.7",
+     "91.7"
+    ],
+    [
+     "91.5",
+     "91.6"
+    ],
+    [
+     "92.0",
+     "93.8"
+    ],
+    [
+     "94.0",
+     "94.3"
+    ],
+    [
+     "94.5",
+     "94.7"
+    ],
+    [
+     "94.4",
+     "94.4"
+    ],
+    [
+     "95.0",
+     "95.2"
+    ],
+    [
+     "95.4",
+     "95.5"
+    ],
+    [
+     "95.3",
+     "95.3"
+    ],
+    [
+     "96.0",
+     "96.2"
+    ],
+    [
+     "96.4",
+     "96.6"
+    ],
+    [
+     "96.3",
+     "96.3"
+    ],
+    [
+     "97.0",
+     "97.4"
+    ],
+    [
+     "98.11",
+     "98.11"
+    ],
+    [
+     "98.0",
+     "98.10"
+    ]
+   ],
+   "notes": "Senior thesis. Faculty adviser named on the opening page. Bibliography lines garbled in the text layer (98.4-98.10) are read from the page image."
+  },
+  {
+   "kind": "feature",
+   "title": "The First Homosexuals: An Exposition of Queerness in Art",
+   "authors": [
+    "Morgan Willison"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "98-99",
+   "spans": [
+    [
+     "99.2",
+     "99.3"
+    ],
+    [
+     "99.5",
+     "99.6"
+    ],
+    [
+     "99.1",
+     "99.1"
+    ],
+    [
+     "99.4",
+     "99.4"
+    ],
+    [
+     "99.7",
+     "99.13"
+    ],
+    [
+     "100.5",
+     "100.12"
+    ],
+    [
+     "100.0",
+     "100.4"
+    ]
+   ],
+   "notes": "Feature on Art History professor Thadeus Dowad's curatorial work for the exhibition \"The First Homosexuals\" (Wrightwood 659, Chicago, opening Oct. 1, 2022). Title as given in the contents; the opening page prints it in capitals."
+  },
+  {
+   "kind": "research",
+   "title": "Long Distance Nationalism: Indian Americans and Hindutva",
+   "authors": [
+    "Akash Palani"
+   ],
+   "department": "Department of Political Science",
+   "advisors": [
+    "Julie Lee Merseth"
+   ],
+   "printed_pages": "100-121",
+   "spans": [
+    [
+     "101.1",
+     "101.1"
+    ],
+    [
+     "101.5",
+     "101.5"
+    ],
+    [
+     "101.2",
+     "101.4"
+    ],
+    [
+     "102.0",
+     "103.9"
+    ],
+    [
+     "104.0",
+     "105.7"
+    ],
+    [
+     "106.0",
+     "106.3"
+    ],
+    [
+     "106.5",
+     "106.6"
+    ],
+    [
+     "106.4",
+     "106.4"
+    ],
+    [
+     "107.0",
+     "107.5"
+    ],
+    [
+     "108.0",
+     "108.2"
+    ],
+    [
+     "108.4",
+     "108.6"
+    ],
+    [
+     "108.3",
+     "108.3"
+    ],
+    [
+     "108.7",
+     "108.12"
+    ],
+    [
+     "109.0",
+     "109.6"
+    ],
+    [
+     "110.0",
+     "110.0"
+    ],
+    [
+     "110.6",
+     "110.11"
+    ],
+    [
+     "110.1",
+     "110.5"
+    ],
+    [
+     "111.0",
+     "117.0"
+    ],
+    [
+     "117.11",
+     "117.11"
+    ],
+    [
+     "117.1",
+     "117.10"
+    ],
+    [
+     "118.0",
+     "120.22"
+    ],
+    [
+     "121.33",
+     "121.33"
+    ],
+    [
+     "121.0",
+     "121.32"
+    ],
+    [
+     "122.0",
+     "122.23"
+    ]
+   ],
+   "notes": "Senior thesis (original survey of Indian Americans) with abstract. Faculty adviser named on the opening page. Tables (Table 1, Table 2 and Appendices B-C) are extracted cell by cell."
+  },
+  {
+   "kind": "research",
+   "title": "Transcending the Stage: Exploring the Applicability of an Actor’s Training to Other Vocations and Our Everyday Lives",
+   "authors": [
+    "Nolan Fizoires Robinson II"
+   ],
+   "department": "Department of Theatre",
+   "advisors": [
+    "Gail Shapiro"
+   ],
+   "printed_pages": "122-131",
+   "spans": [
+    [
+     "123.4",
+     "123.4"
+    ],
+    [
+     "123.1",
+     "123.3"
+    ],
+    [
+     "124.0",
+     "124.5"
+    ],
+    [
+     "124.7",
+     "124.10"
+    ],
+    [
+     "124.6",
+     "124.6"
+    ],
+    [
+     "125.0",
+     "125.7"
+    ],
+    [
+     "125.8",
+     "125.12"
+    ],
+    [
+     "126.0",
+     "126.2"
+    ],
+    [
+     "126.4",
+     "126.6"
+    ],
+    [
+     "126.3",
+     "126.3"
+    ],
+    [
+     "127.0",
+     "127.6"
+    ],
+    [
+     "127.8",
+     "127.11"
+    ],
+    [
+     "127.7",
+     "127.7"
+    ],
+    [
+     "128.0",
+     "128.4"
+    ],
+    [
+     "128.6",
+     "128.8"
+    ],
+    [
+     "128.5",
+     "128.5"
+    ],
+    [
+     "129.0",
+     "129.4"
+    ],
+    [
+     "129.6",
+     "129.7"
+    ],
+    [
+     "129.5",
+     "129.5"
+    ],
+    [
+     "129.8",
+     "129.12"
+    ],
+    [
+     "130.0",
+     "130.3"
+    ],
+    [
+     "130.5",
+     "130.7"
+    ],
+    [
+     "130.4",
+     "130.4"
+    ],
+    [
+     "130.8",
+     "130.9"
+    ],
+    [
+     "131.0",
+     "131.4"
+    ],
+    [
+     "131.6",
+     "131.9"
+    ],
+    [
+     "131.5",
+     "131.5"
+    ],
+    [
+     "132.30",
+     "132.31"
+    ],
+    [
+     "132.0",
+     "132.29"
+    ]
+   ],
+   "notes": "Senior thesis with abstract, based on interviews with Northwestern acting faculty, students and alumni. Faculty adviser named on the opening page (\"Prof. Gail Shapiro, MFA\"). The conclusion's last two paragraphs (132.30-132.31) are extracted after the bibliography on the same page and are placed before it here."
+  },
+  {
+   "kind": "feature",
+   "title": "LAUREN OH ON THE NEURODEVELOPMENTAL DISABILITIES LAB",
+   "authors": [
+    "Joy Zhao"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "132-135",
+   "spans": [
+    [
+     "134.1",
+     "134.4"
+    ],
+    [
+     "134.7",
+     "134.7"
+    ],
+    [
+     "134.5",
+     "134.6"
+    ],
+    [
+     "135.10",
+     "135.10"
+    ],
+    [
+     "135.0",
+     "135.9"
+    ],
+    [
+     "136.0",
+     "136.8"
+    ]
+   ],
+   "notes": "Q&A with senior Lauren Oh about her work in a Northwestern neurodevelopmental disabilities lab. Printed page 132 (section 133) is a full-page photograph with no text. The contents gives the title as \"Lauren Oh on the Neurodevelopmental Disabilities Lab\"."
+  },
+  {
+   "kind": "research",
+   "title": "The Rise of the Female Vernacular: Contemporary Indian Women Authors and the Subversion of the Heteropatriarchal Linguistic Establishment",
+   "authors": [
+    "Tara Shirvaikar"
+   ],
+   "department": "Department of Comparative Literary Studies",
+   "advisors": [
+    "Laura Brueck"
+   ],
+   "printed_pages": "136-150",
+   "spans": [
+    [
+     "137.3",
+     "137.6"
+    ],
+    [
+     "137.0",
+     "137.2"
+    ],
+    [
+     "138.0",
+     "138.2"
+    ],
+    [
+     "138.4",
+     "138.5"
+    ],
+    [
+     "138.3",
+     "138.3"
+    ],
+    [
+     "138.6",
+     "138.6"
+    ],
+    [
+     "139.0",
+     "139.2"
+    ],
+    [
+     "139.4",
+     "139.6"
+    ],
+    [
+     "139.3",
+     "139.3"
+    ],
+    [
+     "140.0",
+     "141.4"
+    ],
+    [
+     "142.0",
+     "142.2"
+    ],
+    [
+     "142.4",
+     "142.5"
+    ],
+    [
+     "142.3",
+     "142.3"
+    ],
+    [
+     "142.6",
+     "142.7"
+    ],
+    [
+     "143.0",
+     "143.2"
+    ],
+    [
+     "143.4",
+     "143.5"
+    ],
+    [
+     "143.3",
+     "143.3"
+    ],
+    [
+     "144.0",
+     "144.3"
+    ],
+    [
+     "144.5",
+     "144.6"
+    ],
+    [
+     "144.4",
+     "144.4"
+    ],
+    [
+     "144.7",
+     "144.11"
+    ],
+    [
+     "145.0",
+     "147.12"
+    ],
+    [
+     "148.13",
+     "148.14"
+    ],
+    [
+     "148.0",
+     "148.12"
+    ],
+    [
+     "149.10",
+     "149.10"
+    ],
+    [
+     "149.0",
+     "149.9"
+    ],
+    [
+     "150.0",
+     "151.5"
+    ]
+   ],
+   "notes": "Senior thesis with trigger warning. Faculty adviser named on the opening page. The opening page prints \"Contemporary Indian Women Authors\"; the contents and contributor page have \"Woman Authors\". The faculty-adviser line and the title are extracted as one block (137.5). Appendix A reprints Kirun Kapur's poem \"Steubenville Ghazal\" and Appendix B Meena Kandasamy's poem \"A cunning stunt\"; their headings are extracted at the end of their pages and placed first here. Footnotes quote the Hindi originals."
+  },
+  {
+   "kind": "research",
+   "title": "Exoneration of American Violence: The Cultural Legacy of American Atrocity Against Civilians During the War in Vietnam",
+   "authors": [
+    "Saidie Stone"
+   ],
+   "department": "Department of International Studies",
+   "advisors": [
+    "Lauren Stokes"
+   ],
+   "printed_pages": "151-163",
+   "spans": [
+    [
+     "152.7",
+     "152.7"
+    ],
+    [
+     "152.11",
+     "152.11"
+    ],
+    [
+     "152.8",
+     "152.10"
+    ],
+    [
+     "152.0",
+     "152.6"
+    ],
+    [
+     "153.0",
+     "153.4"
+    ],
+    [
+     "153.6",
+     "153.7"
+    ],
+    [
+     "153.5",
+     "153.5"
+    ],
+    [
+     "154.0",
+     "154.3"
+    ],
+    [
+     "154.5",
+     "154.8"
+    ],
+    [
+     "154.4",
+     "154.4"
+    ],
+    [
+     "155.0",
+     "155.3"
+    ],
+    [
+     "155.5",
+     "155.6"
+    ],
+    [
+     "155.4",
+     "155.4"
+    ],
+    [
+     "156.0",
+     "156.3"
+    ],
+    [
+     "156.5",
+     "156.6"
+    ],
+    [
+     "156.4",
+     "156.4"
+    ],
+    [
+     "156.7",
+     "156.10"
+    ],
+    [
+     "157.0",
+     "157.3"
+    ],
+    [
+     "157.5",
+     "157.7"
+    ],
+    [
+     "157.4",
+     "157.4"
+    ],
+    [
+     "158.0",
+     "158.3"
+    ],
+    [
+     "158.5",
+     "158.6"
+    ],
+    [
+     "158.4",
+     "158.4"
+    ],
+    [
+     "158.7",
+     "158.13"
+    ],
+    [
+     "159.0",
+     "159.2"
+    ],
+    [
+     "159.4",
+     "159.6"
+    ],
+    [
+     "159.3",
+     "159.3"
+    ],
+    [
+     "160.5",
+     "160.7"
+    ],
+    [
+     "160.9",
+     "160.11"
+    ],
+    [
+     "160.8",
+     "160.8"
+    ],
+    [
+     "160.0",
+     "160.4"
+    ],
+    [
+     "161.0",
+     "161.2"
+    ],
+    [
+     "161.4",
+     "161.4"
+    ],
+    [
+     "161.3",
+     "161.3"
+    ],
+    [
+     "162.1",
+     "162.1"
+    ],
+    [
+     "162.0",
+     "162.0"
+    ],
+    [
+     "162.2",
+     "164.19"
+    ]
+   ],
+   "notes": "Senior thesis, presented as an introduction and one chapter (\"We Could Never Forget\") on Vietnamese-American narratives. Opens with three epigraphs (Tim O'Brien, William Westmoreland, Viet Thanh Nguyen). Faculty adviser named on the opening page. The pull quote at the top of printed page 159 repeats a passage of the conclusion."
+  },
+  {
+   "kind": "feature",
+   "title": "WHAT WORK GOES INTO FRAMING THE NEXT GENERATION’S SCIENCE EDUCATION? A LOOK INTO OLIVIA MASSE’S URAP EXPERIENCE",
+   "authors": [
+    "Kallista Zhuang"
+   ],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "164-165",
+   "spans": [
+    [
+     "165.1",
+     "165.1"
+    ],
+    [
+     "165.8",
+     "165.8"
+    ],
+    [
+     "165.0",
+     "165.0"
+    ],
+    [
+     "165.2",
+     "165.7"
+    ],
+    [
+     "166.0",
+     "166.6"
+    ]
+   ],
+   "notes": "Feature on sophomore Olivia Masse's Undergraduate Research Assistant Program work with Professor Jennifer Richards (School of Education and Social Policy) on science education. The contents gives the title as \"What work goes into framing the next generation’s science education?: A look into Olivia Masse’s URAP experience\". The drop cap \"W\" is a separate block (165.2)."
+  },
+  {
+   "kind": "research",
+   "title": "Radical Caring: A Qualitative Study on the Role of Frontline Workers in Eradicating Gender-Based Violence in the Asian American Communities",
+   "authors": [
+    "Chloe Wong"
+   ],
+   "department": "Department of Anthropology",
+   "advisors": [
+    "Shalini Shankar"
+   ],
+   "printed_pages": "166-176",
+   "spans": [
+    [
+     "167.1",
+     "167.1"
+    ],
+    [
+     "167.7",
+     "167.7"
+    ],
+    [
+     "167.2",
+     "167.2"
+    ],
+    [
+     "167.8",
+     "167.8"
+    ],
+    [
+     "167.9",
+     "167.9"
+    ],
+    [
+     "167.3",
+     "167.3"
+    ],
+    [
+     "167.5",
+     "167.6"
+    ],
+    [
+     "167.4",
+     "167.4"
+    ],
+    [
+     "168.0",
+     "168.2"
+    ],
+    [
+     "168.4",
+     "168.6"
+    ],
+    [
+     "168.3",
+     "168.3"
+    ],
+    [
+     "168.7",
+     "168.11"
+    ],
+    [
+     "169.0",
+     "169.4"
+    ],
+    [
+     "169.6",
+     "169.7"
+    ],
+    [
+     "169.5",
+     "169.5"
+    ],
+    [
+     "169.8",
+     "169.11"
+    ],
+    [
+     "170.0",
+     "170.4"
+    ],
+    [
+     "170.6",
+     "170.9"
+    ],
+    [
+     "170.5",
+     "170.5"
+    ],
+    [
+     "171.0",
+     "171.2"
+    ],
+    [
+     "171.4",
+     "171.6"
+    ],
+    [
+     "171.3",
+     "171.3"
+    ],
+    [
+     "172.0",
+     "172.3"
+    ],
+    [
+     "172.5",
+     "172.6"
+    ],
+    [
+     "172.4",
+     "172.4"
+    ],
+    [
+     "173.0",
+     "173.2"
+    ],
+    [
+     "173.4",
+     "173.4"
+    ],
+    [
+     "173.3",
+     "173.3"
+    ],
+    [
+     "173.6",
+     "173.13"
+    ],
+    [
+     "173.5",
+     "173.5"
+    ],
+    [
+     "174.0",
+     "174.3"
+    ],
+    [
+     "174.5",
+     "174.7"
+    ],
+    [
+     "174.4",
+     "174.4"
+    ],
+    [
+     "175.0",
+     "175.3"
+    ],
+    [
+     "175.5",
+     "175.9"
+    ],
+    [
+     "175.4",
+     "175.4"
+    ],
+    [
+     "175.10",
+     "175.11"
+    ],
+    [
+     "176.0",
+     "176.3"
+    ],
+    [
+     "176.5",
+     "176.7"
+    ],
+    [
+     "176.4",
+     "176.4"
+    ],
+    [
+     "177.18",
+     "177.18"
+    ],
+    [
+     "177.0",
+     "177.17"
+    ]
+   ],
+   "notes": "Senior thesis (ethnography of frontline workers at Asian American gender-violence organizations; names are pseudonyms). Faculty adviser named on the opening page. Title as given on the contributor page; on the opening page the main title and subtitle are separate blocks. The labels of Chart 1 (printed page 172) are transcribed from the image (173.6-173.13)."
+  },
+  {
+   "kind": "feature",
+   "title": "2021 Research Award Winners",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "177-180",
+   "spans": [
+    [
+     "178.4",
+     "178.4"
+    ],
+    [
+     "178.3",
+     "178.3"
+    ],
+    [
+     "178.6",
+     "178.6"
+    ],
+    [
+     "178.5",
+     "178.5"
+    ],
+    [
+     "178.0",
+     "178.2"
+    ],
+    [
+     "179.1",
+     "179.1"
+    ],
+    [
+     "179.2",
+     "179.2"
+    ],
+    [
+     "180.2",
+     "180.2"
+    ],
+    [
+     "180.1",
+     "180.1"
+    ],
+    [
+     "179.5",
+     "179.5"
+    ],
+    [
+     "180.3",
+     "180.3"
+    ],
+    [
+     "179.6",
+     "179.6"
+    ],
+    [
+     "179.3",
+     "179.4"
+    ],
+    [
+     "180.6",
+     "180.6"
+    ],
+    [
+     "180.4",
+     "180.5"
+    ],
+    [
+     "181.1",
+     "181.1"
+    ],
+    [
+     "181.2",
+     "181.2"
+    ],
+    [
+     "181.5",
+     "181.5"
+    ],
+    [
+     "181.6",
+     "181.6"
+    ],
+    [
+     "181.3",
+     "181.4"
+    ]
+   ],
+   "notes": "Profiles of the 2022 Office of Undergraduate Research Expo award winners: Elana Charlson and Yola Mzizi (Best Expo Poster Presentation, \"Talking About Race in the Sociocultural Moment: Emerging Adults’ Critical Consciousness and Racial Identity in Context\") and Kade Kelley (Best Overall Oral Presentation, \"Novel Mechanisms in Nuclear Receptor Gene Regulation\"). Title as given in the contents; the opening page is headed \"2022 Research Exposition Award Winners\". The poster award heading spans two facing pages (printed 178-179), whose lines are interleaved here in reading order."
+  },
+  {
+   "kind": "back matter",
+   "title": "ABOUT THE CONTRIBUTORS",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": "181-191",
+   "spans": [
+    [
+     "182.9",
+     "182.9"
+    ],
+    [
+     "182.8",
+     "182.8"
+    ],
+    [
+     "182.0",
+     "182.7"
+    ],
+    [
+     "183.0",
+     "193.10"
+    ]
+   ],
+   "notes": "Opener listing the eleven thesis contributors (an unnumbered page; the contents gives page 180), then one page per contributor with their thesis title and answers to four questions about their research and plans after graduation."
+  },
+  {
+   "kind": "back matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "194.0",
+     "194.4"
+    ]
+   ],
+   "notes": "Inside back cover: \"Join the NURJ\" and \"Submit to the NURJ\" notices."
+  },
+  {
+   "kind": "back matter",
+   "title": "",
+   "authors": [],
+   "department": null,
+   "advisors": [],
+   "printed_pages": null,
+   "spans": [
+    [
+     "195.0",
+     "195.7"
+    ]
+   ],
+   "notes": "Colophon (typefaces, printer Creative Graphic Arts Inc.), NURJ office address and contacts, and the journal's mission statement."
+  }
+ ]
+}

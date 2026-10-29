@@ -1,0 +1,63 @@
+{
+ "page": 32,
+ "blocks": [
+  [
+   "True or False? This question is designed to check if you are reading all of the questions carefully. *",
+   "Please select \"probably false\" to indicate that you're reading carefully."
+  ],
+  [
+   "Definitely true"
+  ],
+  [
+   "Probably true"
+  ],
+  [
+   "Maybe true"
+  ],
+  [
+   "Not sure"
+  ],
+  [
+   "Maybe false"
+  ],
+  [
+   "Probably false"
+  ],
+  [
+   "Definitely false"
+  ],
+  [
+   "True or False? Genetic modification of poultry results in greater proportion of lean. *"
+  ],
+  [
+   "Definitely true"
+  ],
+  [
+   "Probably true"
+  ],
+  [
+   "Maybe true"
+  ],
+  [
+   "Not sure"
+  ],
+  [
+   "Maybe false"
+  ],
+  [
+   "Probably false"
+  ],
+  [
+   "Definitely false"
+  ],
+  [
+   "Please indicate your level of opposition to genetically modified (GM) foods. *"
+  ],
+  [
+   "1 | 2 | 3 | 4 | 5 | 6 | 7"
+  ],
+  [
+   "Not opposed at all =1 | Extremely opposed =7"
+  ]
+ ]
+}

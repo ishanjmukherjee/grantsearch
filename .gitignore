@@ -11,3 +11,6 @@ dist/
 
 # Card generation stdout
 data/*_run.log
+
+# Rendered pages for reading
+data/cache/

@@ -1,0 +1,30 @@
+{
+ "page": 25,
+ "blocks": [
+  [
+   "True or False? GM organisms are used in medicine (e.g. insulin production with GM",
+   "microorganisms)."
+  ],
+  [
+   "Definitely true"
+  ],
+  [
+   "Probably true"
+  ],
+  [
+   "Maybe true"
+  ],
+  [
+   "Not sure"
+  ],
+  [
+   "Maybe false"
+  ],
+  [
+   "Probably false"
+  ],
+  [
+   "Definitely false"
+  ]
+ ]
+}

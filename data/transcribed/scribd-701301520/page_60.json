@@ -1,0 +1,78 @@
+{
+ "page": 60,
+ "blocks": [
+  [
+   "Congress",
+   "Days In Session | Help",
+   "All since 1973 (93rd Congress) | Uncheck All",
+   "116 (2019-2020)",
+   "115 (2017-2018)",
+   "114 (2015-2016)",
+   "113 (2013-2014)",
+   "112 (2011-2012)",
+   "111 (2009-2010)",
+   "110 (2007-2008)",
+   "109 (2005-2006)",
+   "108 (2003-2004)",
+   "107 (2001-2002)",
+   "106 (1999-2000)",
+   "105 (1997-1998)",
+   "104 (1995-1996)",
+   "103 (1993-1994)",
+   "102 (1991-1992)",
+   "101 (1989-1990)",
+   "100 (1987-1988)",
+   "[illegible]",
+   "99 (1985-1986)",
+   "98 (1983-1984)",
+   "97 (1981-1982)",
+   "96 (1979-1980)",
+   "95 (1977-1978)",
+   "94 (1975-1976)",
+   "93 (1973-1974)",
+   "Less..."
+  ],
+  [
+   "Jump to:",
+   "Congress",
+   "Legislation and Law Numbers",
+   "Words and Phrases",
+   "Legislation Types",
+   "Subjects",
+   "Actions/Status",
+   "Sponsors/Cosponsors",
+   "Committees",
+   "Reset",
+   "Search"
+  ],
+  [
+   "Legislation and Law Numbers",
+   "Help",
+   "Examples: hr5, s435, h.r.425, S.896, HJ59, sconres19, H.Res.99, sa213, hamdt3, 104PL104",
+   "For multiple bills, separate numbers with a comma"
+  ],
+  [
+   "Words and Phrases",
+   "Field Name Lookup | Help",
+   "All fields including Bill Text",
+   "All fields except Bill Text ?",
+   "Only these fields: ?",
+   "Titles",
+   "Bill Text",
+   "Summaries",
+   "All",
+   "Latest",
+   "\"Firearms\" or \"Firearm\" or \"second amendment\" or \"Second Amendment\" or \"gun\" or \"guns\" or \"assault weapons\" or \"shotgun\" or \"rifle\" or \"handgun\" or",
+   "\"shooting\"",
+   "Word Variants ?",
+   "Case Sensitive ?",
+   "Searching actions? Jump to actions text search",
+   "Back to top"
+  ],
+  [
+   "Figure 1: This figure displays the search tool mechanism used at Congress.gov to generate the dataset of",
+   "bill proposals in Congress. The search accounted for any legislative action, which included all bills,",
+   "resolutions, and amendments."
+  ]
+ ]
+}

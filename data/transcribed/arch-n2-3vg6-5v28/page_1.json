@@ -1,0 +1,157 @@
+{
+"page": 1,
+"blocks": [
+[
+"Northwestern",
+"OFFICE OF UNDERGRADUATE",
+"RESEARCH"
+],
+[
+"Children and Parent Communication in Overcoming Challenges During a Robot Coding Activity"
+],
+[
+"Anjelique Bomar and Maya Davis | Faculty Advisor: Dr. David Uttal"
+],
+[
+"Northwestern",
+"University"
+],
+[
+"Introduction"
+],
+[
+"• Codable robot toys - small electronic devices programmed",
+"through apps - are becoming popular for children’s play at home",
+"(Horn & Bers, 2019)"
+],
+[
+"• During play, children set goals for the robot and complete these",
+"with block-based codes that need numerical inputs to control",
+"heading, speed, and duration (Bers, 2010)"
+],
+[
+"• When children need help understanding how the numerical code",
+"affects their robot’s movement they turn to social partners and at",
+"home these are parents (Takeuchi & Stevens, 2011)"
+],
+[
+"Research Question:"
+],
+[
+"Although parents might not have coding knowledge, what kinds of",
+"strategies do parents use to support their children’s goals in",
+"moving the robot in a desired way?"
+],
+[
+"Participants and Methods"
+],
+[
+"• Data from a large corpus of videos of families coding",
+"together -- 2 episodes of children, ages 7 -9, with their",
+"parent presented"
+],
+[
+"• Sphero robot, a map rug, and other study equipment was",
+"delivered to participant home for a Zoom study session"
+],
+[
+"• During session researchers provided a tutorial of how to",
+"use the robot"
+],
+[
+"• Participants were asked to code their robot together to",
+"make it go to different locations on the map rug"
+],
+[
+"Sphero Bolt & Interaction Analysis"
+],
+[
+"• The Sphero connects to a touchscreen",
+"device via Bluetooth and is coded using",
+"a block-based programming app"
+],
+[
+"• We watched videos and noted mome[illegible]",
+"when parents helped children achieve[illegible]",
+"coding goal"
+],
+[
+"• Interaction Analysis, a method for",
+"investigating interactions of human",
+"beings with each other and artifacts in",
+"their environment, was utilized to",
+"analyze strategies parents were using",
+"(Jordan & Henderson, 1995)"
+],
+[
+"roll 0° at 0 speed for 0s"
+],
+[
+"heading",
+"[illegible]"
+],
+[
+"speed",
+"[illegible]"
+],
+[
+"duration",
+"[illegible]"
+],
+[
+"on start program",
+"main LED",
+"roll 0° at [illegible] speed for 1s",
+"delay for 1s",
+"roll 180° at [illegible] speed for 1s"
+],
+[
+"Parental Strategies in Understanding Coding"
+],
+[
+"1) Parents use strategies to show children how numerical values inputted into the code may affect the robot’s",
+"movements"
+],
+[
+"1) These strategies employ physical materials and movements that help children to visualize the effect of",
+"numerical values in their code and allow for more accurate estimation techniques."
+],
+[
+"Case Studies"
+],
+[
+"Scenario 1: Bodies as Accurate Measurement Tools"
+],
+[
+"Impasse | Strategy | Outcome"
+],
+[
+"Unknown effect of numerical values on robot behavior as various values are being changed | Length of hand = distance robot rolls in 1 sec at speed of 50 → physical length used to promote understanding of speed | Using a fixed length, like a hand, can support accurate determinations of distances"
+],
+[
+"Scenario 2: Physical Object as Visualization Aid"
+],
+[
+"Impasse | Strategy | Outcome"
+],
+[
+"Figuring out the precise heading | Pencil used to visualize the angle | Tools in the home can be used to understand how numbered angles correspond to direction"
+],
+[
+"Discussion & Implications"
+],
+[
+"•Parents react to the type of impasses children experience by implementing appropriate strategies"
+],
+[
+"•Strategies visually represent the code with physical objects & movements to help abstract concepts become concrete"
+],
+[
+"•Without needing explicit prior coding knowledge, parents could potentially rely on readily available tools and",
+"representations to help children overcome impasses"
+],
+[
+"•Strategies can keep play and learning going as children realize they have the capacity to problem solve"
+]
+]
+}

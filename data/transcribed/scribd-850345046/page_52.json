@@ -1,0 +1,17 @@
+{
+ "page": 52,
+ "blocks": [],
+ "replace": {
+  "1": [
+   "urbanisation level. The vectors γs and νt are",
+   "country and year fixed effects, respectively.",
+   "The former controls for unobservable vari-",
+   "ables that vary across countries but not over",
+   "time, such as national energy resources and",
+   "welfare policies, while the latter controls for",
+   "unobservable variables that vary across time",
+   "but not countries, such as oil shocks and",
+   "global recessions."
+  ]
+ }
+}

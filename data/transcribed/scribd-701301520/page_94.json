@@ -1,0 +1,26 @@
+{
+ "page": 94,
+ "blocks": [
+  [
+   "Table 7: Silva and Capellan (2019) results of New York Times coverage of mass shootings, measured",
+   "in total articles and total words per article. Columbine is the most covered mass shooting between",
+   "1966 and 2016, with Sandy Hook in second place and Virginia Tech in sixth place."
+  ],
+  ["Incident | Year | Total articles | Specific articles | General articles | Total words | Specific words | General words"],
+  ["Columbine High School Shooting | 1999 | 503 | 127 | 376 | 503,269 | 113,612 | 389,657"],
+  ["Sandy Hook Elementary School Shooting | 2012 | 248 | 45 | 203 | 253,036 | 44,985 | 208,051"],
+  ["Colorado Theater Shooting | 2012 | 212 | 78 | 134 | 210,877 | 61,391 | 149,486"],
+  ["Tucson Shooting | 2011 | 207 | 96 | 111 | 209,060 | 92,696 | 116,364"],
+  ["San Bernardino Shooting | 2015 | 206 | 16 | 190 | 240,723 | 22,323 | 218,400"],
+  ["Virginia Tech Shooting | 2007 | 198 | 83 | 115 | 192,959 | 62,890 | 130,069"],
+  ["Orlando Night Club Shooting | 2016 | 175 | 41 | 134 | 208,595 | 50,681 | 157,914"],
+  ["Charleston Church Shooting | 2015 | 161 | 50 | 111 | 203,336 | 52,883 | 150,453"],
+  ["Fort Hood Shooting | 2009 | 159 | 73 | 86 | 162,288 | 53,418 | 108,870"],
+  ["Long Island Rail Road Shooting | 1993 | 106 | 87 | 19 | 98,957 | 69,380 | 29,577"],
+  ["Westside Middle School Shooting | 1998 | 77 | 21 | 56 | 83,363 | 25,566 | 57,797"],
+  ["CIA Headquarter Shooting | 1993 | 46 | 20 | 26 | 41,576 | 12,893 | 28,683"],
+  ["Brooklyn Bridge Shooting | 1994 | 40 | 33 | 7 | 31,741 | 26,309 | 5,432"],
+  ["Washington Navy Yard Shooting | 2013 | 35 | 13 | 22 | 41,789 | 14,842 | 26,947"],
+  ["Texas Tower Shooting | 1966 | 32 | 9 | 23 | 41,364 | 83,00 | 33,064"]
+ ]
+}

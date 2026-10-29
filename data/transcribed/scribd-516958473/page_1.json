@@ -1,0 +1,4 @@
+{"page": 1, "blocks": [
+["In[30]:= k = 5;", "coords = kochtr[k, {0, 0}, {1, 0}];", "ListLinePlot[coords]"],
+["In[•]:= k = 3;", "coords = kochsq[k, {0, 0}, {2, 1}];", "ListLinePlot[coords]"]
+]}

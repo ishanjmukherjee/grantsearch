@@ -1,0 +1,246 @@
+{
+  "slug": "scribd-813343543",
+  "running_heads": ["FEATURES"],
+  "items": [
+    {
+      "kind": "front matter",
+      "title": null,
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["0.1", "0.1"], ["0.0", "0.0"], ["0.2", "0.2"]],
+      "notes": "Cover: Northwestern Undergraduate Research Journal, Volume 19, 2023-2024, thenurj.com. The cover illustration (a light bulb) carries no other text."
+    },
+    {
+      "kind": "front matter",
+      "title": null,
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["1.0", "1.4"]],
+      "notes": "Acknowledgments page (untitled). Thanks President Michael Schill, Provost Kathleen Hagerty, Associate Provost Miriam Sherin and faculty advisers Peter Civetta and Patti Wolter, and remembers founder Prof. Allen Taflove. Cover by Delilah Schmueck and Catherine Wu; published June 2024."
+    },
+    {
+      "kind": "front matter",
+      "title": "masthead",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["2.0", "2.11"]],
+      "notes": "Staff list for vol. 19, 2023-2024. Editors-in-Chief Aden Morvice & Helen Zhu; faculty advisers Peter Civetta & Patti Wolter. The text layer orders the blocks by text box, not reading order."
+    },
+    {
+      "kind": "front matter",
+      "title": null,
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["3.0", "4.17"]],
+      "notes": "Table of contents over two pages; on the second page (section 4) the titles and the page numbers are separate blocks. The contents gives InterConnection at 138, Fintech's Female Frontier at 140 and Contributors at 136, but in the volume they are on printed pages 136, 138 and 140. Several titles differ slightly from the opening pages (e.g. \"InterConnection\" vs. \"InterConnention\", \"Microbiota\" vs. \"Microbiotaa\", \"undergrads\" vs. \"Undergraduates\")."
+    },
+    {
+      "kind": "letter",
+      "title": "Letter from the Advisers",
+      "authors": ["Dr. Peter Civetta", "Patti Wolter"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "6",
+      "spans": [["5.0", "5.6"]],
+      "notes": "Signed Dr. Peter Civetta and Patti Wolter, NURJ Faculty Advisers. Says Volume 19 holds senior theses selected by seven departments and nine feature stories."
+    },
+    {
+      "kind": "letter",
+      "title": "Letter from the Editors",
+      "authors": ["Helen Zhu", "Aden Morvice"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "7",
+      "spans": [["6.0", "6.7"]],
+      "notes": "Signed Helen Zhu & Aden Morvice, Co-Editors-in-Chief, NURJ 2023-2024."
+    },
+    {
+      "kind": "research",
+      "title": "The Lasting Legacy of A Divided City: The Berlin Orchestras as a Microcosm for Germany during the Wendezeit",
+      "authors": ["Eden Stargardt"],
+      "department": "Departments of German and Musicology",
+      "advisors": ["Dr. Isabel von Holt", "Dr. Jesse Rosenberg"],
+      "printed_pages": "8-20",
+      "spans": [["7.4", "7.4"], ["7.0", "7.3"], ["8.4", "8.5"], ["8.0", "8.3"], ["9.0", "10.3"], ["10.5", "10.8"], ["10.4", "10.4"], ["11.0", "11.5"], ["11.7", "11.7"], ["11.6", "11.6"], ["12.0", "12.4"], ["12.6", "12.7"], ["12.5", "12.5"], ["12.8", "13.3"], ["13.7", "13.7"], ["13.4", "13.6"], ["14.0", "15.2"], ["15.4", "15.5"], ["15.3", "15.3"], ["15.7", "15.7"], ["15.6", "15.6"], ["16.0", "17.4"], ["17.6", "17.7"], ["17.5", "17.5"], ["17.8", "19.25"]],
+      "notes": "Senior thesis (presented as a condensed thesis). Advisers from \"Faculty Advisers\" on the opening page: Dr. Isabel von Holt, DAAD Visiting Assistant Professor of German, and Dr. Jesse Rosenberg, Associate Professor of Musicology. The opening page sets the title as \"The Lasting Legacy of A Divided City\" with the subtitle on separate lines; the contents writes \"The Lasting Legacy of a Divided City: ...\". Supported by an Undergraduate Research Grant and the Friedman-Kline Foundation. Includes German-language block quotes with English footnote translations, pull quotes and a bibliography. Printed page 8 is mostly a photograph of the Brandenburg Gate behind barbed wire. Footnotes and pull quotes are placed at the nearest paragraph break."
+    },
+    {
+      "kind": "feature",
+      "title": "Research in Translation: A Conversation with Dr. Alissa Levy Chung",
+      "authors": ["Felicia Mou"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "21-24",
+      "spans": [["20.0", "20.6"], ["21.0", "21.0"], ["21.2", "21.2"], ["21.1", "21.1"], ["21.3", "23.4"]],
+      "notes": "Q&A interview with Dr. Alissa Levy Chung, Associate Professor in the Department of Psychology and clinical psychologist, on the role of research in clinical psychology. Edited for brevity and clarity."
+    },
+    {
+      "kind": "research",
+      "title": "Structural Characterization via X-Ray Crystallography of III-Nitrides for APDs",
+      "authors": ["Michael Richards"],
+      "department": "Department of Electrical and Computer Engineering",
+      "advisors": ["Dr. Manijeh Razeghi"],
+      "printed_pages": "25-34",
+      "spans": [["24.8", "24.8"], ["24.4", "24.7"], ["24.0", "24.3"], ["25.0", "33.16"]],
+      "notes": "Senior thesis. Adviser from \"Faculty Adviser\" on the opening page. Work done at the Center for Quantum Devices (CQD). Equations appear only as numbers such as \"(1)\" in the text layer; figures are not in the text. Includes acknowledgements, a pull quote and a numbered bibliography."
+    },
+    {
+      "kind": "feature",
+      "title": "Beyond the Classroom: Finding Opportunities for Undergraduate Research",
+      "authors": ["Allison Kim"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "35-37",
+      "spans": [["34.12", "34.16"], ["34.0", "34.11"], ["35.0", "36.6"]],
+      "notes": "Feature on Northwestern's Office of Undergraduate Research (OUR) and its director Peter Civetta: the Undergraduate Research Assistant Program (URAP), Undergraduate Research Grants (URGs) and outreach efforts. On the opening page the text wraps around graphics, so the extraction breaks it into many short blocks."
+    },
+    {
+      "kind": "research",
+      "title": "Baby got Bac: Associations Between Maternal Psychosocial Stress and Infant Gut Microbiotaa in Cebu, Philippines",
+      "authors": ["Rebecca C. Wu"],
+      "department": "Department of Anthropology",
+      "advisors": ["Katherine Amato"],
+      "printed_pages": "38-50",
+      "spans": [["37.4", "37.4"], ["37.0", "37.3"], ["37.5", "41.6"], ["41.8", "41.8"], ["41.7", "41.7"], ["42.0", "44.4"], ["44.6", "44.11"], ["44.5", "44.5"], ["45.0", "45.7"], ["45.10", "45.12"], ["45.8", "45.9"], ["46.0", "49.19"]],
+      "notes": "Senior thesis. Adviser from \"Faculty Adviser\" on the opening page. The opening page misprints \"Microbiotaa\"; the contents page has \"Microbiota\" and the contributors page writes \"Phillipines\". Uses data from the Cebu Longitudinal Health and Nutrition Survey. Pull quotes are placed at the nearest paragraph break. Ends with Works Cited."
+    },
+    {
+      "kind": "feature",
+      "title": "“Beauty Sickness”: Dr. Renee Engeln on Researching Body Image and Vigilance",
+      "authors": ["Izzy Pareja"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "51-53",
+      "spans": [["50.0", "52.11"]],
+      "notes": "Profile of Dr. Renee Engeln, Northwestern professor and Director of the Body and Media (BAM) Lab, author of Beauty Sick, and her research on body image."
+    },
+    {
+      "kind": "research",
+      "title": "The Impact of School Security on Student Wellbeing",
+      "authors": ["Jacob Geil"],
+      "department": "School of Education & Social Policy",
+      "advisors": ["Dr. Timothy Dohrer", "Dr. Regina Logan"],
+      "printed_pages": "54-68",
+      "spans": [["53.5", "53.5"], ["53.2", "53.4"], ["53.0", "53.1"], ["54.0", "56.4"], ["56.6", "56.6"], ["56.5", "56.5"], ["57.0", "57.5"], ["57.7", "57.7"], ["57.6", "57.6"], ["58.0", "60.4"], ["60.6", "60.12"], ["60.5", "60.5"], ["61.0", "61.3"], ["61.5", "61.5"], ["61.4", "61.4"], ["62.0", "63.6"], ["63.11", "63.11"], ["63.7", "63.7"], ["63.12", "63.12"], ["63.8", "63.8"], ["63.13", "63.13"], ["63.9", "63.10"], ["64.0", "64.4"], ["64.14", "64.14"], ["64.5", "64.8"], ["64.11", "64.11"], ["64.9", "64.9"], ["64.12", "64.12"], ["64.10", "64.10"], ["64.13", "64.13"], ["65.0", "65.2"], ["65.5", "65.5"], ["65.7", "65.7"], ["65.3", "65.3"], ["65.6", "65.6"], ["65.4", "65.4"], ["66.0", "67.33"]],
+      "notes": "Senior thesis. Advisers from \"Faculty Advisers\" on the opening page. The contents writes the title in sentence case and the school as \"School of Education and Social Policy\". Survey of 97 Northwestern first-year students and 10 follow-up interviews. Appendices: survey protocol (A), interview protocol (B) and a demographics table (Table 1); in the survey protocol the answer options for question 6 follow question 7 because the extraction keeps questions 1-7 in one block. Pull quotes are placed at the nearest paragraph break. Ends with a bibliography."
+    },
+    {
+      "kind": "feature",
+      "title": "Finding an Equilibrium in Life: An Interview With a Chemistry Graduate Student",
+      "authors": ["Hannah Xu"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "69-73",
+      "spans": [["68.0", "72.4"]],
+      "notes": "Q&A interview with Luis Sierra Ossa, a first-year Ph.D. student in theoretical chemistry from Cali, Colombia. The byline reads \"Hannah Xu\"; the masthead lists an editor \"Hannah Zu\". The question \"Could you describe your research?\" is doubled in the text layer (block 71.1)."
+    },
+    {
+      "kind": "research",
+      "title": "Are People “Real” on BeReal? Perception and Authenticity in Utilization of Social Media App",
+      "authors": ["Amy Fan"],
+      "department": "Department of Psychology",
+      "advisors": ["Alissa Chung, Ph.D."],
+      "printed_pages": "74-97",
+      "spans": [["73.7", "73.7"], ["73.3", "73.6"], ["73.0", "73.2"], ["74.0", "75.6"], ["75.8", "75.8"], ["75.7", "75.7"], ["76.0", "82.6"], ["82.8", "82.10"], ["82.7", "82.7"], ["83.0", "83.7"], ["84.0", "84.2"], ["84.20", "84.20"], ["84.3", "84.19"], ["85.0", "85.0"], ["85.19", "85.20"], ["85.18", "85.18"], ["85.1", "85.17"], ["86.0", "86.0"], ["86.9", "86.9"], ["86.8", "86.8"], ["86.1", "86.7"], ["86.18", "86.18"], ["86.17", "86.17"], ["86.10", "86.16"], ["87.0", "87.1"], ["87.10", "87.10"], ["87.9", "87.9"], ["87.2", "87.8"], ["87.12", "87.12"], ["87.11", "87.11"], ["87.13", "87.27"], ["88.0", "88.0"], ["88.6", "88.6"], ["88.5", "88.5"], ["88.1", "88.4"], ["88.8", "88.13"], ["88.7", "88.7"], ["88.14", "88.36"], ["89.0", "89.0"], ["89.3", "89.3"], ["89.2", "89.2"], ["89.1", "89.1"], ["89.4", "89.7"], ["89.9", "89.14"], ["89.8", "89.8"], ["89.15", "89.33"], ["90.0", "90.0"], ["90.2", "90.2"], ["90.1", "90.1"], ["90.3", "90.6"], ["90.8", "90.13"], ["90.7", "90.7"], ["90.14", "90.32"], ["91.0", "91.0"], ["91.3", "91.3"], ["91.2", "91.2"], ["91.1", "91.1"], ["91.4", "91.7"], ["91.9", "91.14"], ["91.8", "91.8"], ["91.15", "91.33"], ["92.0", "92.0"], ["92.2", "92.2"], ["92.1", "92.1"], ["92.3", "92.6"], ["92.8", "92.13"], ["92.7", "92.7"], ["92.14", "92.29"], ["93.0", "93.0"], ["93.2", "93.2"], ["93.30", "93.30"], ["93.1", "93.1"], ["93.3", "93.6"], ["93.8", "93.13"], ["93.7", "93.7"], ["93.14", "93.29"], ["94.0", "94.0"], ["94.29", "94.29"], ["94.1", "94.5"], ["94.7", "94.12"], ["94.6", "94.6"], ["94.13", "94.28"], ["95.0", "96.20"]],
+      "notes": "Senior thesis. Adviser from \"Faculty Adviser\" on the opening page; the opening page also names a Second Reader, William Horton, Ph.D. The contents and contributors pages write \"Are People “Real” on BeReal?: Perception ...\". Supported by an Academic Undergraduate Research Grant. Online survey of 200 U.S. college students (100 BeReal users, 100 non-users). Printed pages 85-96 are an appendix of statistical tables (Tables 1-6 and 1A-8A); table cells are extracted as separate short blocks. The first and last blocks of printed page 97 read \"97 97\" (a doubled page number). Pull quotes are placed at the nearest paragraph break."
+    },
+    {
+      "kind": "feature",
+      "title": "Learning to juggle: Undergraduates balance research with busy lives",
+      "authors": ["Maggie Rose Baron"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "98-101",
+      "spans": [["97.2", "97.3"], ["97.0", "97.1"], ["97.4", "100.6"]],
+      "notes": "Feature on how undergraduates Izzy Mroczek and Ashley Brobbey (named under their photos on the opening page) balance lab research with other commitments. The contents gives the title as \"Learning to juggle: undergrads balance research with busy lives\"."
+    },
+    {
+      "kind": "research",
+      "title": "Illustrating Indigeneity: Xie Sui’s Huang Qing zhigong tu and the critical reevaluation of its depictions of aboriginal Taiwanese peoples, 1751–1775 and 2006–2022",
+      "authors": ["Grace A. Wu"],
+      "department": "Department of Art History",
+      "advisors": ["Dr. Yuthika Sharma", "Dr. Peter J. Carroll"],
+      "printed_pages": "102-113",
+      "spans": [["101.7", "101.7"], ["101.3", "101.6"], ["101.0", "101.2"], ["102.0", "102.2"], ["102.4", "102.4"], ["102.3", "102.3"], ["102.6", "102.8"], ["102.5", "102.5"], ["103.0", "103.2"], ["103.4", "103.4"], ["103.3", "103.3"], ["103.5", "104.2"], ["104.4", "104.4"], ["104.3", "104.3"], ["104.5", "105.2"], ["105.4", "105.4"], ["105.3", "105.3"], ["105.5", "105.6"], ["105.8", "105.8"], ["105.7", "105.7"], ["106.0", "106.2"], ["106.4", "106.7"], ["107.0", "107.3"], ["107.5", "107.5"], ["106.3", "106.3"], ["107.4", "107.4"], ["107.6", "108.4"], ["108.6", "108.6"], ["108.5", "108.5"], ["108.8", "108.16"], ["108.7", "108.7"], ["109.0", "109.2"], ["109.4", "109.4"], ["109.3", "109.3"], ["109.5", "110.2"], ["110.4", "110.4"], ["110.3", "110.3"], ["110.5", "111.2"], ["111.4", "111.4"], ["111.3", "111.3"], ["111.5", "112.30"]],
+      "notes": "Senior honors thesis. Advisers from \"Faculty Advisers\" on the opening page (the contributors page says Sharma is in Art History and Carroll in History). Text includes Chinese characters. Footnotes and pull quotes are placed at the nearest paragraph break; footnotes 20-23 run from printed page 107 onto 108 and are kept together. The first block of printed page 113 reads \"113 / 113\" (a doubled page number). Ends with a bibliography."
+    },
+    {
+      "kind": "feature",
+      "title": "Hypercapnia and Immune Suppression with Dr. Peter Sporn",
+      "authors": ["Avery Morawa"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "114-116",
+      "spans": [["113.2", "113.5"], ["113.0", "113.1"], ["114.0", "115.3"]],
+      "notes": "Feature on Dr. Peter Sporn's research (Division of Pulmonary and Critical Care Medicine, Feinberg) on hypercapnia, immune suppression and the ZFHX3 gene."
+    },
+    {
+      "kind": "feature",
+      "title": "Nanotechnology & Medicine with Dr. Katie Gesmundo",
+      "authors": ["Caroline Guerra"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "117-121",
+      "spans": [["116.4", "116.5"], ["116.0", "116.3"], ["117.0", "120.4"]],
+      "notes": "Q&A interview with Professor Katie Gesmundo, who teaches chemistry at Northwestern, on her graduate research with Joseph DeSimone at UNC (nanoparticles, microneedle patches) and her path into academia. Edited for clarity and brevity."
+    },
+    {
+      "kind": "research",
+      "title": "The Health Identities of Northwestern Students with Chronic Physical Health Conditions",
+      "authors": ["Sierra Erdman-Luntz"],
+      "department": "Department of Sociology",
+      "advisors": ["Dr. Bruce Carruthers", "Dr. Steven Epstein"],
+      "printed_pages": "122-135",
+      "spans": [["121.7", "121.7"], ["121.5", "121.6"], ["121.0", "121.4"], ["122.0", "124.3"], ["124.5", "124.5"], ["124.4", "124.4"], ["124.6", "126.5"], ["126.7", "126.9"], ["126.6", "126.6"], ["127.0", "128.4"], ["128.8", "128.15"], ["128.5", "128.7"], ["129.0", "129.3"], ["129.6", "129.6"], ["129.4", "129.5"], ["130.0", "134.25"]],
+      "notes": "Senior thesis. Advisers from \"Faculty Advisers\" on the opening page. Interview study of Northwestern undergraduates with chronic physical illnesses. Includes an appendix with the interview guide (printed pages 132-134) and a bibliography. Footnotes and pull quotes are placed at the nearest paragraph break."
+    },
+    {
+      "kind": "feature",
+      "title": "InterConnention: Overlap in Env Sci and EPS Majors at Northwestern",
+      "authors": ["Gabrielle Walthour"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "136-137",
+      "spans": [["135.0", "136.4"]],
+      "notes": "Feature comparing Northwestern's environmental science and Earth and planetary science majors. The opening page misprints \"InterConnention\"; the contents has \"InterConnection\". The contents gives page 138; the feature is on printed pages 136-137."
+    },
+    {
+      "kind": "feature",
+      "title": "Shattering the Finance Ceiling & Breaking Boundaries: Fintech’s Female Frontier",
+      "authors": ["Rebecca Chen", "Ellen Liu"],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "138-139",
+      "spans": [["137.0", "137.0"], ["137.2", "137.2"], ["137.1", "137.1"], ["137.3", "138.10"]],
+      "notes": "Profile of Whitney Chen, a sophomore in economics researching leadership and negotiation at the Kellogg School of Management and General Manager of Northwestern University Fintech (NUFT), on women in quantitative finance. Answers edited for clarity and brevity. The contents gives page 140; the feature is on printed pages 138-139."
+    },
+    {
+      "kind": "back matter",
+      "title": "About the Contributors",
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": "140-147",
+      "spans": [["139.0", "140.6"], ["141.0", "141.1"], ["141.6", "141.6"], ["141.2", "141.5"], ["142.0", "143.1"], ["143.5", "143.5"], ["143.2", "143.4"], ["144.0", "145.1"], ["145.6", "145.6"], ["145.2", "145.5"], ["146.0", "146.6"]],
+      "notes": "Contents lists it as \"Contributors: Biographies and Interviews of Thesis Contributors\" at page 136; it is on printed pages 140-147. One page each for Eden Stargardt, Jacob Geil, Michael Richards, Rebecca C. Wu, Amy Fan, Grace A. Wu and Sierra Erdman-Luntz: thesis title, photo and short Q&A on their research topic, how they came to it, future directions and post-graduation plans."
+    },
+    {
+      "kind": "back matter",
+      "title": null,
+      "authors": [],
+      "department": null,
+      "advisors": [],
+      "printed_pages": null,
+      "spans": [["147.0", "148.5"]],
+      "notes": "\"Join the NURJ\" and \"Submit to the NURJ\" notices (section 147), then the colophon (typefaces Noe Display, Futura, Crimson Text; published by Creative Graphic Arts Inc.), NURJ office address and contacts, and the mission statement (section 148)."
+    }
+  ]
+}

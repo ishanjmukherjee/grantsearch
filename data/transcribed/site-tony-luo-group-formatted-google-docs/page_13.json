@@ -1,0 +1,17 @@
+{"page": 13, "blocks": [
+["PHASE: | Phase 0 | Phase 1 | Phase 2 | Phase 3"],
+["Project Type | Project Duration"],
+["Quick Project | 3 months | 6 months | 6 months | 1 year"],
+["`Slow Project | 6 months | 1 year | 2 years | 3 years"],
+["Total Annual Costs | Quick Project | Slow Project"],
+["$220 USD/ETH | $559.01 | $3,557.35"],
+["$1.4k USD/ETH | $3791.20 | $24,125.80"],
+["Colony costs for small organization per year"],
+["USD/ETH | Startup Cost | Operational Cost per Lab | Total Cost | Total Cost per Staff"],
+["$220 USD/ETH | $7.42 | $559.01 | $1,684.45 | $51.04"],
+["$1.4k USD/ETH | $47.20 | $3791.20 | $11,420 | $346.08"],
+["Colony costs for medium-sized organization per year"],
+["USD/ETH | Startup Cost | Operational Cost per Lab | Total Cost | Total Cost per Staff"],
+["$220 USD/ETH | $7.42 | $3,557.35 | $10,679.47 | $323.62"],
+["$1.4k USD/ETH | $47.20 | $24,125.80 | $72,424.60 | $2,194.69"]
+]}
