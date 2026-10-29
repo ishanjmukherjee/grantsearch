@@ -1,0 +1,92 @@
+--- page 1 ---
+In Vivo Effect of IL 2 Immune Complex on the Progression
+of Arthritis in Mouse Model
+YiweiHang
+Faculty Advisors: Richard M. Pope Qi-Quan Huang
+Background
+Rheumatoid arthritis (RA)is an autoimmune disorder 
+that targets joint tissues for destruction. Despite 
+affecting more than 200,000 people each year in the US, 
+its pathogenesis is relatively unknown. 
+Previous research at Pope Lab has identified regulatory 
+T cells (Tregs), known for suppressing autoimmunity, as 
+a potential mediator in RA development:
+•
+Both the number and percentage of Tregs 
+decreased significantly in older HUPO mice, a 
+knockout model that mimic the symptoms of 
+human RA
+1
+•
+Adoptive transfer of Tregs reduced severity of 
+inflammation at week 3
+1
+•
+IL-2, which maintain Tregs survival, was found to be 
+significantly lowered in ex-vivo spleen culture
+1
+Objective
+The goal is to determine whether an exogenous delivery 
+of IL-2 immune complex (IL-2C) could stimulate Treg 
+differentiation, inhibiting autoreactive T-cells and 
+reducing arthritis
+•
+IL-2 was bound by its monoclonal antibody for 
+higher biological activity
+Methods
+HUPO mice with mild inflammation were selected and 
+sorted into two groups with matching characteristics; 
+repeated for control mice
+•
+Received either PBS or IL-2C injection three 
+consecutive days each week 
+•
+Assessed for inflammation, deformity and grip 
+strength weekly
+•
+Half of the mice was collected after 3 weeks and 
+the remaining at 6 weeks for flow cytometry and 
+ankle histology
+Scoring Data
+Figure 1: 
+inflammation score of HUPO mice over 6 weeks
+Figure 2: 
+Change in inflammation score of HUPO mice over 6 weeks
+Flow Cytometry Analysis
+Figure 3: 
+T Cell counting at week 3
+Figure 4: 
+T Cell counting at week 6
+Conclusion & Next Step
+Studying inflammation was useful because it is 
+most indicative of RA progression. The scoring 
+data show that the difference in change in 
+inflammation at week 6 was significant between 
+IL-2C and PBS treated HUPO mice.
+Figure 5: 
+normal and inflamed joints
+In addition, the %Treg in CD4+ cells increased 
+significantly in IL-2C treated HUPO mice at week 
+6, but not at week 3. This suggested that IL-2C 
+required time to exert its effect on Tregs.
+The overall result was promising as it highlighted 
+the potential benefit of increased Tregs in 
+controlling autoimmune diseases such as RA. In 
+the future, it is necessary to optimize injection 
+schedule for longer treatment and to select mice 
+before the onset of arthritis. 
+References
+1. Huang, Q., Perlman, H., Birkett, R., Doyle, R., 
+Fang, D., Haines, G. K., . . . Pope, R. M.
+(2015). CD11c-mediated deletion of Flip 
+promotes autoreactivity and inflammatory
+arthritis. Nature Communications,6(1). 
+doi:10.1038/ncomms8086
+Acknowledgement
+The study resulting in this presentation was 
+assisted by a grant administered by Weinberg 
+College of Arts & Sciences. However, the 
+conclusions, opinions, and other statements in 
+this publication [or presentation] are the author’s 
+and not necessarily those of the sponsoring 
+institution.

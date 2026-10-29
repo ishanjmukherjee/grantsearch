@@ -1,0 +1,392 @@
+--- page 1 ---
+Does This Look Okay, Mom?
+Mother-Daughter Interactions with Body Image
+Amy Fan
+Weinberg College of Arts and Sciences Northwestern University 
+Introduction
+Negative body image in women has been a prevalent issue throughout history. 
+Whether women are expected to be voluminous or thin depending on the era, 
+societal expectations have left many women feeling insecure and dissatisfied. 
+Current research has suggested that oftentimes negative body image is passed 
+down from mother to daughter (Hillard et al., 2016). While there is a variety of 
+research on mother-
+daughter interactions with body image, there isn’t a lot of 
+research that specifically studies the connotation of words used by mothers and 
+how that may correlate with satisfaction with appearance and body. As views on 
+weight and criticism may differ, another area worthy of examining is how mother-
+daughter interactions differ across cultures (Haudekm& Rorty& Henker, 1999). 
+Methodology
+Conclusions
+Objectives
+Results
+Discussion
+References
+•
+A hundred college-aged women 18-23 years old participated in this survey study 
+with the majority (~70%) being first year students at Northwestern University
+•
+Twenty-three of these women voluntarily answered an open-ended question on 
+the survey in order to provide useful qualitative data
+•
+The survey asked questions that measured reported body satisfaction of 
+daughters, perceived body satisfaction of mothers, perceived terminology used 
+by mothers to describe daughter’s body and mother’s body, and cultural norms 
+surrounding mother-daughter interactions with body image.
+y = 0.2309x + 4.7954
+R² = 0.0527
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+12345678910
+   D
+   a
+   u
+   g
+    h
+   t
+   e
+   r
+    '
+   s
+   B
+   o
+    d
+   y
+   S
+   a
+   t
+   i
+   s
+    f
+   a
+   c
+   t
+   i
+   o
+   n
+    (
+   1
+  -
+   1
+   0
+    )
+Mother’s Perceived Body Satisfaction (1
+-10)
+Mother-Daughter Body Satisfaction
+“She usually calls me 
+beautiful
+, and I usually call her 
+beautiful
+, but we both 
+struggle
+with our own body image.”
+“The ways my mom communicates her 
+distaste
+for my 
+appearance are often more 
+subtle
+than the adjectives 
+listed above convey. She'd never outwardly call me fat or 
+ugly, but she frequently makes 
+small comments 
+to try and 
+regulate my diet, hairstyle, makeup choices, outfit choices, 
+etcetera.”
+“My mom is really a 
+negative person 
+in general and very 
+criticizing of herself. Like oh I look so fat. She never really 
+says anything positive, so it makes me sad. Growing up, I 
+ just always point out the negative parts of myself instead 
+of the positive.”
+Kennedy, M. A., Templeton, L., Gandhi, A., & Gorzalka, B. B. (2004). Asian Body Image Satisfaction: Ethnic 
+and Gender Differences across Chinese, Indo-Asian, and European-Descent Students. Eating Disorders, 
+12(4), 321
+ –
+336.
+Haudek, C., Rorty, M., & Henker, B. (1999). The role of ethnicity and parental bonding in the eating and 
+weight concerns of Asian-American and Caucasian college women. International Journal of Eating 
+Disorders, 25(4), 425
+ –
+433.
+Hillard, E. E., Gondoli, D. M., Corning, A. F., & Morrissey, R. A. (2016). In it together: Mother talk of weight 
+concerns moderates negative outcomes of encouragement to lose weight on daughter body 
+dissatisfaction and disordered eating. Body Image, 16, 21
+ –
+27.
+Mentor: Dr. Lisa Del Torto
+Special thank you to Dr. Horton as well.
+Figure 2
+. Daughters reported mothers using words with positive 
+connotations like “pretty“ and “beautiful” more frequently than 
+words with negative connotations like “fat” and “chubby” to 
+describe daughters.
+Figure 3
+. The positive correlation between mother’s reported 
+body satisfaction (
+M 
+= 5.57, 
+SD
+= 2.27) and daughter’s self 
+-
+reported body satisfaction (
+M
+= 6.08, 
+SD
+= 2.28) does differ from 
+zero, r(97)= 0.23, p < 0.05
+Figure 1
+. Daughters reported mothers using words with negative 
+connotations like “fat” and “chubby” more frequently than words 
+with positive connotations like “pretty“ and “beautiful” to describe 
+mothers.
+T
+his research aims to discover the possibility of links between mother’s word usage 
+and daughter’s satisfaction with appearance and the general correlation between 
+mothers’ body satisfaction and daughters’ body satisfaction along with cultural 
+norms of mother-daughter interactions with body image.
+Main Research Question: What is the relationship between the connotation of 
+adjectives mothers use to describe their daughters’ appearances and daughters’ 
+satisfaction with appearance?
+Primary Hypothesis
+1)There may be a negative correlation between number of negative words used by 
+mothers to describe daughters and daughters’ satisfaction with their overall 
+appearance.
+Secondary Hypotheses
+1)
+There may be a positive correlation between mothers’ body satisfaction 
+reported by daughters and daughters’ own body satisfaction.
+2)Asian or Asian American women may agree more with the statement that it is 
+common in their culture for mothers to critique their daughters’ physical 
+appearance than other races and ethnicities.
+Significant Quotes
+Figure 4
+. The positive correlation between daughters’ satisfaction 
+with appearance (
+M 
+= 5.99, 
+SD
+= 1.96) and number of positive 
+words used by mother (
+M
+= 2.21, 
+SD
+= 1.29) does differ from zero, 
+r(88) = 0.26, p < 0.05. The relationship between daughter’s 
+satisfaction and number of negative words (
+M
+= 0.411, 
+SD
+= 0.83) 
+does not differ from zero, r(88) = 0.037, p = 0.73
+y = 0.1736x + 1.1712
+R² = 0.0699
+y = 0.0159x + 0.3161
+R² = 0.0014
+0
+1
+2
+3
+4
+5
+12345678910
+   F
+   r
+   e
+   q
+   u
+   e
+   n
+   c
+   y
+   o
+    f
+   W
+   o
+   r
+    d
+   s
+Satisfaction with Appearance (1-10)
+Satisfaction with Appearance v. Words Used By 
+Mother Based on Connotation
+Positive
+•
+Mothers tend to use more negative and critical 
+language to describe themselves than their daughters
+•
+There may be a link between mother’s perceived body 
+satisfaction and daughter’s reported body satisfaction
+•
+Positive affirmation from mothers by using positive 
+adjectives to describe appearance of daughters may 
+be linked to a higher satisfaction with appearance for 
+daughters
+•
+Asian and Asian American women may be more likely 
+to experience a culture where it is common for 
+mothers to be critical of daughters’ appearances 
+compared to Caucasian women
+•
+Answers from the open-ended question suggest 
+that other factors could also influence satisfaction 
+with appearance 
+•
+Microaggressions and the media some examples 
+as it is not explicitly covered in this study
+•
+Ideas for further research could include using 
+keywords to study natural conversations about 
+body image which also accounts for 
+microaggressions or looking for effective strategies 
+to reduce body dissatisfaction
+•
+Experimental research is another option and could 
+focus on the effect of several variables on body 
+satisfaction and disordered eating
+2
+7
+8
+11
+14
+18
+20
+23
+38
+51
+0102030405060
+Smooth
+Beautiful
+Pretty
+Skinny
+Ugly
+Good
+Bumpy/Rough
+Fine
+Chubby
+Fat
+Number of Responses
+Mother’s Self 
+-Image Terminology Based on 
+Daughter’s Perception
+3
+6
+6
+7
+20
+26
+41
+43
+54
+58
+0102030405060
+Ugly
+Smooth
+Bumpy/Rough
+Fat
+Chubby
+Fine
+Skinny
+Good
+Beautiful
+Pretty
+Number of Responses
+Perceived Terminology Used to Describe 
+Daughter’s Image
+0000
+8
+3
+8
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+   N
+   u
+   m
+    b
+   e
+   r
+   o
+    f
+   R
+   e
+   s
+   p
+   o
+   n
+   s
+   e
+   s
+Personal Perspective (Scale)
+Asian/Asian American: It is common in my 
+culture for mothers to critique their daughter's 
+weight/appearance
+5
+8
+16
+4
+16
+12
+7
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+   N
+   u
+   m
+    b
+   e
+   r
+   o
+    f
+   R
+   e
+   s
+   p
+   o
+   n
+   s
+   e
+   s
+Personal Perspective (Scale)
+Caucasian: It is common in my culture for 
+mothers to critique their daughter's weight or 
+appearance
+Figure 5
+. Asian/Asian American women all reported slightly agree, 
+moderately agree, or strongly agree with the mean being moderately 
+agree 
+(M
+= 6)
+.
+*Other races/ethnicities besides Asian/Asian American 
+and Caucasian were studied, but there was not enough data to 
+compare them accurately.
+Figure 6
+. Caucasian women had a wide variety of answers to this 
+statement with the mean of in between neutral/no effect and 
+slightly agree (
+M 
+= 4.2). *Other races/ethnicities besides 
+Asian/Asian American and Caucasian were studied, but there 
+was not enough data to compare them accurately.

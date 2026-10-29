@@ -1,0 +1,84 @@
+--- page 1 ---
+Seeing What You Want: 
+Prior Belief Biases Perception of Correlation in Scatterplots
+Chase Stokes, Cindy Xiong, Steve Franconeri
+Background
+Balcetis, E., & Dunning, D. (2006). See what you want to see: motivational influences on visual perception. 
+J
+ournal of personality and social psychology, 91 
+(4), 612.
+Luo, Y., & Zhao, J. (2019). Motivated attention in climate change perception and action. 
+Frontiers in 
+psychology 
+, 
+10 
+, 1541.
+References
+295 adults from Amazon’s Mechanical Turk completed a Qualtrics survey with the following sections.
+Context variable pairs other than the ones pictured were: Number 
+of people whose names begin with “T”/Number of trees in a neighborhood, and Total amount of rain in the US/Number of US lawye
+rs.
+Methods
+In predicting error through considering the different between no-context and context correlation ratings of the same scatterplot, no significant effect of condition or topic was found. However, there was a significant effect of belief, as can be observed 
+through the general upwards trend of average difference visualized below. Participants with stronger beliefs in the relationshipdepicted tended to judge the scatterplots with context as having a stronger correlation than the same scatterplots without 
+context. 
+So, a real-world application or context on a scatterplot can alter correlation estimation in comparison to the very same scatterplots without said context. This difference may depend on the strength of the belief around the topic, with greater belief showing 
+overestimation. Future work should examine other types of visualizations, as well as investigate more precise impacts of belief on judgment and interpretation of visualizations. 
+Results
+Difference between 
+context/no-context
+correlation ratings
+Gun Topic
+Belief Rating
+Environment Topic
+Belief Rating
+Tree Topic
+Belief Rating
+Rain Topic
+Belief Rating
+Participants who viewed the above 
+figure saw either ‘13’ or ‘B’, depending 
+on what they were motivated to see. 
+(Baceltis& Dunning, 2006).
+Democrats and Republicans viewed the above visualization 
+depicting global temperature and came to different conclusions 
+about it, consistent with differing views on climate change (Luo 
+& Zhao, 2019).
+Contact
+chasestokes@u.northwestern.edu
+Data strive to be objective and definitive, but 
+our perceptions and interpretations of them carry 
+bias from our expectations and motivations. A few 
+examples of this have been studied previously 
+(see right).
+Could prior beliefs also bias our perception of 
+relations depicted in visualized data? Correlation 
+estimations in scatterplots act as a case study to
+expand understanding of this process.
+Training
+: Participants received an explanation 
+of correlation and feedback on practice 
+estimations of three scatterplots to improve future 
+accuracy.
+No-context Estimation
+: Participants 
+estimated the correlation of a set of scatterplots with 
+X and Y on the axes, like the training scatterplots 
+(but did not receive feedback or the true correlation). 
+Distractor Task 
+:
+Participants 
+reported their first three conclusions 
+after viewing a bar graph.
+Context Estimation
+: Participants estimated the 
+correlation of a set of scatterplots with real-world variable 
+pairs on the axes. 
+Belief Questions
+: Participants reported 
+their own beliefs about the relationships between 
+the real-world variables on the context graphs.
+Context
+ratinghigher
+Context 
+rating lower

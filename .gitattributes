@@ -1,3 +1,9 @@
 data/index/vectors.npy filter=lfs diff=lfs merge=lfs -text
 data/raw/**/*.pdf filter=lfs diff=lfs merge=lfs -text
 data/raw/surg*.html filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.docx filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.mov filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.png filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.jpg filter=lfs diff=lfs merge=lfs -text

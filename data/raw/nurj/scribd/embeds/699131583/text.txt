@@ -1,0 +1,118 @@
+--- page 1 ---
+ Analytics for Social Good: Application to Human Trafficking 
+Melissa Chi 
+Introduction 
+Despite the great amounts of attention and effort that human rights and social injustice 
+has drawn over the past decades, numerous violations of such rights still persist today. One of 
+the most prominent of these violations can be seen in the ongoing human trafficking operations 
+around the globe. Remaining on the list of the United Nations’ sustainability goals, it is clear that 
+human trafficking is largely prevalent. However, this problem is a hidden social vulnerability that 
+is hard to track, prosecute, and take action against. The definition for human trafficking itself is 
+difficult to define with the numerous debates on correct terminology and on what constitutes as 
+human trafficking. Officially defined by the Trafficking Victims Protection Act of 2000 as “sex 
+trafficking in which a commercial sex act is induced by force, fraud, or coercion, or in which the 
+person induced to perform such an act has not attained 18 years of age; or the recruitment, 
+harboring, transportation, provision, or obtaining of a person for labor or services, through the 
+use of force, fraud, or coercion for the purpose of subjection to involuntary servitude, peonage, 
+debt bondage, or slavery,” human trafficking remains a worldwide problem targeting human 
+rights, dignity, and freedom. 
+Due to its clandestine nature, both quantitative and qualitative data are challenging to 
+obtain; however, the last two decades have seen great strides in uncovering the numerous 
+human trafficking operations prevailing around the world. Coupled with new technology, data 
+surrounding the number of trafficked persons, motives, and locations have finally become more 
+accessible. With the large volumes of data now present, this research covers the application of 
+a quantitative analysis approach to human trafficking, specifically through data analytics. The 
+methodology and approach of this research highlight how analytics can be applied for social 
+good. 
+Data analytics is the art of drawing conclusions and insights from patterns within data. 
+The field has become applicable to any area, including social justice and societal problems, 
+where data analytics can act as a powerful predictor and a tool to help explain the sources of 
+problems. In human trafficking specifically, analytics have already been applied to predict and 
+disrupt the dynamic flow of trafficking networks in order to intercepts trafficking victims. 
+Utilizing data analytics, this research aims to accomplish the following two goals: 
+determining the factors that influence human trafficking and identifying countries with the largest 
+volume of human trafficking victims. The first goal is to understand the factors fueling human 
+trafficking. This is accomplished by running a simple regression model on a compiled dataset of 
+the predictors. Once the model is complete, the factors that influence human trafficking are 
+identified and each of those factor’s influence are quantified. The second goal is identifying 
+countries containing the greatest number of human trafficking victims. Using the significant 
+
+--- page 2 ---
+factors found in the previous step, the flow of human trafficking for each country can be 
+predicted. A list of countries ranked from highest demand to lowest would then be created. 
+ Accomplishing these goals will help identify and save as many victims from human 
+trafficking as possible. The results will urge governments to heighten their awareness and 
+establish standards for the significant factors found and hold other governments, who may be at 
+greater risk, accountable. Other non-governmental organizations that focus on ending human 
+trafficking may also find this information useful. 
+Methodology 
+In order to understand the influence of different factors on predicting the number of 
+trafficking victims, regression is employed. A regression model is a statistical approach to find a 
+quantitative relationship between variables. It is a more quantitative form of an experiment, as 
+the change that factors produce on the outcome can be measured. Like an experiment, there is 
+the dependent variable (the outcome) and independent variables (the factors that have an effect 
+on the outcome). Through regression, the influence of each of the independent variables over 
+the dependent variable is measured. These quantifiable coefficients are similar to the slope of a 
+line when fitting a best-fit line to a set of data points. The relativity of the coefficients are then 
+evaluated to find the significant factors. Each regression method finds significant factors 
+differently though. Our model uses the best subsets regression method. This method looks at all 
+combinations of the factors and uses different metrics to determine which combination is the 
+best. 
+Furthermore, cluster analysis is used in order to group countries into similar groups, or 
+clusters. Like regression, clustering analysis finds relationships between data. It sorts data into 
+different clusters based on similar patterns. Data points within a cluster are similar; however, 
+individual clusters have distinct patterns from one another. The results from clustering gives an 
+overview of how different regions may have different significant factors, as the determinants of 
+human trafficking patterns can vary from place to place. It would allow for more targeted 
+interventions for each cluster. The methodology used for clustering is k-means. This method 
+allows the user to specify the amount of clusters to be formed ahead of time. 
+The factors included in this study are determined from literature reviews (specifically, 
+Cho (2015) and Bales (2007)) and interviews with practitioners and experts in the field. These 
+predictors can be sorted into different dimensions such as socioeconomic, civil rights, 
+population demographics, and sociocultural. Additionally, datasets are collected from previous 
+literatures and global government organizations. There are a total of 25 factors in the initial 
+regression model. 
+Initial Results and Discussion 
+
+--- page 3 ---
+Initial analysis shows that the top three significant factors that influence human trafficking 
+are the following: Human Development Index, Gender Inequality Index, and Information Flow. 
+Human Development Index is an index used to assess a country’s growth separately from 
+economic growth. It consists of standard of living, life expectancy, and education attainment. 
+The Gender Inequality Index is a similar measurement system that compares the inequality of 
+genders on health, empowerment, and participation in the labour market. Information Flow 
+estimates the impact of technology on a country’s society and development. All of these factors 
+have a positive correlation with the flow for human trafficking. To translate, as the quantity of 
+these factors increases, the amount of human trafficking similarly increases. Factors with a 
+negative correlation have the opposite relationship - as the quantity of the factors increases, the 
+amount of human trafficking decreases. Furthermore, initial results through cluster analysis 
+show that countries can be sorted into 4 different clusters. Some of the different indicators that 
+vary from cluster to cluster in predicting the flow include GDP per Capita and the number of 
+slaves. 
+Several other steps must be taken before moving onto quantifying the amount of human 
+trafficking for each country. The context of each factor must be considered, as well as a check 
+for the unit scalability. The robustness of the model must also be taken into account. This 
+robustness depends on multicollinearity and how well the model predicts the outcome. After 
+these steps are complete, the second aforementioned goal can be accomplished. 
+The completion of the initial model is a step towards furthering the understanding of 
+human trafficking. After the completion of this project, the results can be used to focus on the 
+flow of human trafficking behavior. Countries that human trafficking originate from have push 
+factors that steer victims away, while other countries have pull factors that draw victims towards 
+them. Furthermore, additional methods can be tested to identify more factors or strengthen the 
+factors already found, such as principal component analysis or analytical hierarchy. This will 
+help explore different opportunities that the model may not have identified. 
+Both of the goals outlined above lead to saving as many victims from human trafficking 
+as possible. Human trafficking is an infringement upon basic human rights, yet it remains such a 
+prevalant problem impacting every country. Identification of these significant factors will help 
+countries make new policies and legislations to combat this issue. The overall prediction of the 
+volume of human trafficking would help countries become more cogniscient of their own citizens 
+being exploiting. Ultimately, the results are a call to action for governments to take 
+responsibility, keep other countries accountable, and become an ambassador for human rights. 
+
+--- page 4 ---
+Works Cited 
+1.Bales, Kevin. “What Predicts Human Trafficking?” International Journal of Comparative 
+and Applied Criminal Justice, vol. 31, no. 2, 2007, pp. 269–279., 
+doi:10.1080/01924036.2007.9678771. 
+2.Cho,Seo-Young.“ModelingforDeterminantsofHumanTrafficking:AnEmpirical
+ Analysis.” Social Inclusion, vol. 3, no. 1, 23 Feb. 2015, doi:10.17645/si.v3i1.125. 

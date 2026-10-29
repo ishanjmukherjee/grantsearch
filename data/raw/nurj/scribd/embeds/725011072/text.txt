@@ -1,0 +1,75 @@
+--- page 1 ---
+Rewiring Cardiology: How Technology has Transformed Patient Care in Medicine
+By Angeli Mittal
+Dr. Benjamin Bryner is an assistant professor of surgery at the Feinberg School of Medicine
+(hereafter referred to as Feinberg), as well as an adult cardiac surgeon at the Northwestern
+Medicine Bluhm Cardiovascular Institute. He also serves as the institute’s associate director of 
+heart transplantation and mechanical support.
+Dr. Esther Vorovich is an associate professor medicine in cardiology at Feinberg, as well as the
+medical director of the Mechanical Circulatory Support Program and also works at the Bluhm
+Cardiovascular Institute. She routinely works as a heart failure transplant cardiologist, treating
+ patients with malfunctioning hearts.
+As an aspiring physician-scientist interested in the intersection between medicine and
+engineering, I spoke to Dr. Bryner and Dr. Vorovich on the technologies utilized in resuscitating
+ patients with heart failure, connecting a mechanic’s workshop to a physician’s clinic.
+[These interviews have been edited for brevity and clarity.]
+What kind of technologies do you utilize in your clinical practice?
+Last October, N.U. performed the state’s first successful transplant of a heart that was donated
+after circulatory death. This “Heart in a Box” device makes patients who have experienced
+cardiac or respiratory failure to also be viable heart donors — this bypasses the requirement for 
+heart donors declared brain dead but harboring a pumping heart.
+Dr. Bryner:
+ (The device) is a size of a couple suitcases, designed to fit inside a small jet or like
+the back of an SUV. It has a reservoir where the blood sits. There’s a pump, a gas exchanger — 
+so a device that does the work of the lungs, exchanges the oxygen and carbon dioxide in the
+ blood — and then a box for the heart to fit in that gets plugged in for the flow to be pumped into
+it. The blood goes from the reservoir, through the gas exchanger, into the heart, and then drains
+ back out of the heart back into the reservoir.
+Since then, the hospital has performed at least six successful surgeries of this kind.
+Dr. Vorovich utilizes different technologies, which similarly focus on pumping the heart.
+Dr. Vorovich:
+ A left ventricular assist device (LVAD) is a mechanical pump, and it really takes
+over the functioning of the left side of the heart. Imagine we put a straw into the heart and then a
+motor on the other side of the straw, suck the blood out of the left ventricle, and then pump it into
+the main blood vessel that leads from the heart to the rest of the body.
+
+--- page 2 ---
+How have these technologies impacted the medical field?
+Dr. Vorovich said LVADs have increased the lifespan for patients who suffer from heart failure.
+Dr. Vorovich:
+ It is an amazing life-saving therapy. The average survival of those patients before
+the pump is nine months, and we have patients (on LVADs) who now have years and years and
+years. The newest pump has only been around since 2018, and the one-year survival in that study
+was around 90%.
+But when resuscitating the heart isn’t possible, a heart transplant is needed. Traditional heart
+transplants require a heart to be placed in a cooler, pumped with warm blood, and then
+transferred to the recipient patient within four hours. However, the “Heart in a Box” procedure
+forgoes the cooler, continuously pumping warm blood through the heart during delivery.
+Dr. Bryner:
+ Without the “Heart in a Box” device, we really only have four hours from the time
+the heart leaves the donor to the time the heart is already sewn into the recipient and sees blood
+again. So that means if you draw an imaginary circle, we could only go as far as a 90-minute
+flight around Midway Airport to get hearts.
+Dr. Bryner:
+ With this device, though, we can keep it on the pump (for) up to 12 hours, so we
+can fly, basically, as far as we can get on one tank of gas in an airplane. The other thing that it
+lets us do is assess the heart, so once we hook up the heart to this machine, we can see it beat, see
+how well it squeezes, and make a final decision as to whether or not this is a good enough heart
+for our recipient before we really commit to putting the recipient through the big operation.
+Without this technology, Dr. Bryner said recipients run the risk of going through a surgery with a
+dead heart that may not have been viable for transplant. Not only does this impact the recipient,
+ but he said it also impacts the donor’s family, who may try to salvage “some silver lining from
+their loved ones’ death.” With this technology making significant advancements in heart
+ preservation, Dr. Bryner said the donor pool size has grown and the waitlist time has shrunk,
+allowing more people who need a heart able to receive one.
+Yet, he said the technology still has a lot of potential to continue improving the medical field.
+Dr. Bryner:
+ A lot of the possibilities are still untapped because we have this kind of window
+where the heart is on this machine and it’s not hooked up to a person. So we could potentially
+treat the heart with, say, really aggressive antibiotics without worrying about the impact on the
+kidneys. We could treat it with various different chemicals, and we can try to strip out all the
+immunologic responses from the heart without destroying someone’s actual immune system. We
+
+--- page 3 ---
+sort of have the heart isolated, and we really are just beginning to figure out what we can actually
+do with it.

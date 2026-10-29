@@ -1,0 +1,2 @@
+[lfs]
+	fetchexclude = data/raw/nurj/arch/**/*.mp4,data/raw/nurj/arch/**/*.mov
