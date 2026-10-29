@@ -38,6 +38,7 @@ const ROTATION = [...PROMPTS, REST]
 const PROMPT_MS = 3500 // matches the .prompt animation
 const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
+const MAX_QUERY = 2000 // the longest q the backend accepts; a longer query is cut to it
 const PAGE = 30
 const PAGER_SPAN = 9 // page numbers the pager shows at once; odd, to center the current one
 const SITE = 'Prowl'
@@ -48,23 +49,45 @@ const STATUS_FADE_MS = 600 // matches the .share.fading transitions
 const PRESS: Keyframe[] = [{ transform: 'scale(1)' }, { transform: 'scale(0.75)' }, { transform: 'scale(1)' }]
 const PRESS_MS = 250
 
+// The search in the page's URL. A value the controls can't show, as from an
+// old or hand-edited link, is dropped rather than sent on to the backend.
 function readUrl() {
   const p = new URLSearchParams(window.location.search)
+  const source = p.get('source')
+  const year = (y: string | null) => (YEARS.some((v) => String(v) === y) ? y! : '')
+  const page = Number.parseInt(p.get('page') ?? '')
   return {
     q: p.get('q') ?? '',
-    source: (p.get('source') ?? '') as Source,
-    from: p.get('from') ?? '',
-    to: p.get('to') ?? '',
-    page: Math.max(1, Number.parseInt(p.get('page') ?? '') || 1),
+    source: source === 'surg' || source === 'expo' ? source : ('' as Source),
+    from: year(p.get('from')),
+    to: year(p.get('to')),
+    // A page so large its offset loses precision would be sent in exponent form.
+    page: page >= 1 && Number.isSafeInteger(page * PAGE) ? page : 1,
   }
 }
 
+// A request that got no response, or one from a proxy that couldn't reach
+// the server, as while it restarts on a deploy.
+class Unreachable extends Error {}
+
+// A fetch whose failure to get a response is told apart from errors thrown
+// later, in our own code. The caller checks for an abort itself.
+async function get(url: string, signal: AbortSignal) {
+  let resp: Response
+  try {
+    resp = await fetch(url, { signal })
+  } catch (e) {
+    throw new Unreachable(`${url} got no response`, { cause: e })
+  }
+  if ([502, 503, 504].includes(resp.status)) throw new Unreachable(`${url} returned ${resp.status}`)
+  return resp
+}
+
 // What a failed request tells the visitor: only what is known, with the
-// details in the console. fetch rejects with a TypeError when no response
-// arrives; an error response is thrown as a plain Error.
+// details in the console.
 function failure(e: unknown) {
   console.error(e)
-  return e instanceof TypeError ? 'Couldn’t connect. Try again in a moment.' : 'Something went wrong on our end.'
+  return e instanceof Unreachable ? 'Couldn’t connect. Try again in a moment.' : 'Something went wrong on our end.'
 }
 
 // The quoted phrases of a query, found as the backend finds them (see
@@ -168,7 +191,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
     const controller = new AbortController()
     ;(async () => {
       try {
-        const resp = await fetch(`/api/project/${number}`, { signal: controller.signal })
+        const resp = await get(`/api/project/${number}`, controller.signal)
         if (resp.status === 404) {
           setError('No project has this link.')
           return
@@ -286,6 +309,9 @@ function Search() {
     const url = href(page)
     window.history.replaceState(null, '', url)
     const params = new URLSearchParams(url.startsWith('?') ? url : '')
+    // The URL keeps the whole query; the search uses only its start.
+    const used = q.trim().slice(0, MAX_QUERY)
+    if (used) params.set('q', used)
     params.delete('page')
     params.set('n', String(PAGE))
     params.set('offset', String((page - 1) * PAGE))
@@ -295,7 +321,7 @@ function Search() {
       async () => {
         setLoading(true)
         try {
-          const resp = await fetch(`/api/search?${params}`, { signal: controller.signal })
+          const resp = await get(`/api/search?${params}`, controller.signal)
           if (!resp.ok) throw new Error(`/api/search returned ${resp.status}`)
           const data = await resp.json()
           // A page past the last, as from a link made when there were more
@@ -311,7 +337,7 @@ function Search() {
           if (shown.current !== url) window.scrollTo(0, 0)
           shown.current = url
           setResults(data.results)
-          setQuotes(quotePattern(q))
+          setQuotes(quotePattern(used))
           setTotal(data.total)
           setError('')
         } catch (e) {
@@ -331,6 +357,7 @@ function Search() {
   }, [q, source, from, to, page])
 
   const pages = Math.ceil(total / PAGE)
+  const length = q.trim().length
 
   return (
     <div className="page">
@@ -422,6 +449,12 @@ function Search() {
       </div>
 
       <main>
+        {length > MAX_QUERY && (
+          <p className="notice">
+            Only the first {MAX_QUERY.toLocaleString('en-US')} characters of a search are used. This one is{' '}
+            {length.toLocaleString('en-US')}.
+          </p>
+        )}
         {error && <p className="notice error">{error}</p>}
         {results !== null && total === 0 && !error && (
           <p className="notice">No projects match. Try different words or widen the filters.</p>
