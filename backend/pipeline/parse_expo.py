@@ -14,6 +14,9 @@ Advisor affiliations go in parentheses after the advisor's name, so that
 "Joseph Contessa, Yale University" or "Monika Nanda [UNC Chapel Hill]" reads
 as one advisor, "Joseph Contessa (Yale University)".
 
+Each entry records the 1-based PDF page its header starts on, so a link can
+open the program at the abstract (`source#page=N`).
+
 Writes data/expo_abstracts.json.
 
 Usage: uv run python -m pipeline.parse_expo [--refresh]
@@ -181,10 +184,12 @@ def drop_name_notes(names: str) -> str:
     return re.sub(r"\s*\([^)]*\)(?=\s*(?:,|;|&|\band\b|$))", "", names, flags=re.M)
 
 
-def entry(people: list[dict], advisor: str | None, title: str, abstract: str) -> dict | None:
+def entry(people: list[dict], advisor: str | None, title: str, abstract: str, page: int) -> dict | None:
+    """An entry, or None if a field is missing. page is the 0-based index of
+    the page its header starts on."""
     if not people or not title or not abstract:
         return None
-    return {"presenters": people, "advisor": advisor or None, "title": title, "abstract": abstract}
+    return {"presenters": people, "advisor": advisor or None, "title": title, "abstract": abstract, "page": page + 1}
 
 
 def join_spans(spans: list[dict]) -> str:
@@ -199,7 +204,8 @@ def join_spans(spans: list[dict]) -> str:
 
 
 def program_line_spans(doc: pymupdf.Document, pages: range | None = None) -> list[list[dict]]:
-    """A program's body lines, each as its font runs, from all pages or the given ones."""
+    """A program's body lines, each as its font runs, from all pages or the given ones.
+    Each run carries the 0-based index of its page as "page"."""
     lines = []
     for page in doc if pages is None else (doc[n] for n in pages):
         for block in page.get_text("dict")["blocks"]:
@@ -216,7 +222,7 @@ def program_line_spans(doc: pymupdf.Document, pages: range | None = None) -> lis
                         continue
                     if space and spans and not s["text"].startswith(" "):
                         s = {**s, "text": " " + s["text"]}
-                    spans.append(s)
+                    spans.append({**s, "page": page.number})
                     space = False
                 # A line of only small text is a page footer; small text in a
                 # body-size line is a subscript or superscript (CO2, 1H NMR).
@@ -233,13 +239,10 @@ def weight(spans: list[dict]) -> str:
     return "bold" if all(bold) else "mixed" if any(bold) else "plain"
 
 
-def program_lines(doc: pymupdf.Document) -> list[tuple[str, str]]:
-    """A program's body lines as (text, kind), kind in {"bold", "mixed", "plain"}."""
-    return [(join_spans(spans), weight(spans)) for spans in program_line_spans(doc)]
-
-
 def parse_program(doc: pymupdf.Document) -> list[dict]:
-    lines = program_lines(doc)
+    spans = program_line_spans(doc)
+    # Each line as (text, kind), kind in {"bold", "mixed", "plain"}.
+    lines = [(join_spans(s), weight(s)) for s in spans]
     entries = []
     i = 0
     while i < len(lines):
@@ -254,6 +257,7 @@ def parse_program(doc: pymupdf.Document) -> list[dict]:
         while j > 0 and lines[j - 1][1] == "bold" and re.search(r"(,|\band)\s*$", lines[j - 1][0]):
             j -= 1
             names.insert(0, lines[j][0])
+        page = spans[j if names else i][0]["page"]
         i += 1
         title = []
         while i < len(lines) and lines[i][1] != "plain" and not lines[i][0].lstrip().startswith("Faculty Advisor"):
@@ -264,7 +268,7 @@ def parse_program(doc: pymupdf.Document) -> list[dict]:
         while i < len(lines) and lines[i][1] != "bold":
             body.append(lines[i][0])
             i += 1
-        e = entry(split_people("\n".join(names), last_first=False), text(advisor), text("\n".join(title)), text("\n".join(body)))
+        e = entry(split_people("\n".join(names), last_first=False), text(advisor), text("\n".join(title)), text("\n".join(body)), page)
         if e:
             entries.append(e)
     return entries
@@ -349,6 +353,7 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
             while j > 0 and lines[j - 1][1] != "plain" and re.search(r"(,|\band)\s*$", lines[j - 1][0]):
                 j -= 1
                 names.insert(0, lines[j][0])
+            page = spans[j if names else i][0]["page"]
             i += 1
             while i < len(lines) and lines[i][1] == "plain" and lines[i][0].lstrip().startswith("and "):
                 advisor += " " + lines[i][0]
@@ -356,6 +361,7 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
             advisor = re.sub(r"^\s*(?:Advisors?:\s*)+", "", advisor)
         elif no_advisor(i):
             names, advisor = [lines[i][0]], ""
+            page = spans[i][0]["page"]
             i += 1
         else:
             i += 1
@@ -373,7 +379,7 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
             body.append(lines[i][0])
             i += 1
         people = split_people(drop_name_notes("\n".join(names)), last_first=False)
-        e = entry(people, text(advisor), text("\n".join(title)), text("\n".join(body)))
+        e = entry(people, text(advisor), text("\n".join(title)), text("\n".join(body)), page)
         if e:
             entries.append(e)
     return entries
@@ -438,6 +444,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
             i += 1
             continue
         names, title, advisor = [], [], ""
+        page = spans[i][0]["page"]
         if is_title_by(i):
             m = TITLE_BY.fullmatch(lines[i][0])
             title, names = [m.group(1)], [m.group(2)]
@@ -506,7 +513,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
                 body.append(lines[i][0])
             i += 1
         people = split_people(drop_name_notes("\n".join(names)), last_first=False)
-        e = entry(people, text(advisor), text("\n".join(title)), text("\n".join(body)))
+        e = entry(people, text(advisor), text("\n".join(title)), text("\n".join(body)), page)
         if e:
             entries.append(e)
     return entries
@@ -531,12 +538,15 @@ def parse_old_program(doc: pymupdf.Document, year: int) -> list[dict]:
 
 
 def parse_guide(doc: pymupdf.Document, last_first: bool) -> list[dict]:
-    blocks = [b[4] for page in doc for b in page.get_text("blocks") if b[4].strip()]
+    # Each block as (text, 0-based page index).
+    blocks = [(b[4], page.number) for page in doc for b in page.get_text("blocks") if b[4].strip()]
     entries = []
     current: list[str] = []
-    for b in blocks:
+    pages: list[int] = []
+    for b, page in blocks:
         if not b.lstrip().startswith(GUIDE_END):
             current.append(b)
+            pages.append(page)
             continue
         # Anchor the header on the advisor line so front matter before the
         # first entry is skipped. The advisor may share the presenter block or
@@ -555,10 +565,11 @@ def parse_guide(doc: pymupdf.Document, last_first: bool) -> list[dict]:
             header = header[: m.start()]
         rest = current[end:]
         if rest:
-            e = entry(split_people(header.strip(), last_first), advisor, text(rest[0]), text("\n".join(rest[1:])))
+            e = entry(split_people(header.strip(), last_first), advisor, text(rest[0]), text("\n".join(rest[1:])), pages[start])
             if e:
                 entries.append(e)
         current = []
+        pages = []
     return entries
 
 

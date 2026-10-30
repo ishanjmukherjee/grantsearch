@@ -8,7 +8,8 @@ type ExpoEntry = {
   presenters: string[]
   advisor: string | null
   abstract: string
-  url: string
+  url: string // the program PDF, opening at the abstract's page
+  page: number
 }
 type Project = { id: string; share: number; title: string; grant: Grant | null; expo: ExpoEntry[] }
 type Source = '' | 'surg' | 'expo'
@@ -532,7 +533,6 @@ function Pager({
 function Result({ project, open = false }: { project: Project; open?: boolean }) {
   const { grant, expo } = project
   const parts = sections(expo)
-  const programs = new Map(expo.map((e) => [e.url, e.year]))
 
   // The byline under the title: the awardees, or for an Expo-only project
   // everyone who presented it, with each person's advisors when every
@@ -585,9 +585,9 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
             SURG {grant.year} winners list
           </a>
         )}
-        {[...programs].map(([url, year]) => (
-          <a key={url} href={url} target="_blank" rel="noreferrer">
-            Expo {year} program (PDF)
+        {parts.map((s) => (
+          <a key={s.key} href={s.url} target="_blank" rel="noreferrer">
+            Expo {s.year} program, page {s.page} (PDF)
           </a>
         ))}
       </div>
@@ -596,7 +596,8 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
 }
 
 type Student = { name: string; advisors: string[] }
-type Section = { key: string; year: number; title: string; students: Student[]; abstract: string }
+// url and page are the first listing's.
+type Section = { key: string; year: number; title: string; students: Student[]; abstract: string; url: string; page: number }
 
 function sameSet(a: string[], b: string[]) {
   return a.length === b.length && a.every((x) => b.includes(x))
@@ -621,7 +622,7 @@ function sections(expo: ExpoEntry[]): Section[] {
   for (const e of expo) {
     let s = byAbstract.get(e.abstract)
     if (!s) {
-      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract }
+      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, url: e.url, page: e.page }
       byAbstract.set(e.abstract, s)
     }
     const advisors = e.advisor ? advisorNames(e.advisor) : []
