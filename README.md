@@ -42,6 +42,9 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
   - Today there is only the name-search set (`data/eval/names.jsonl`, built and run by `backend/eval_names.py`) and the hand-written reranker queries below, where every target was already in the baseline top 5.
   - Cover topic, method, plain-language, negation and person queries, with graded relevance over several projects per query rather than a single target, including queries whose answers the current ranking misses.
   - Report standard metrics (e.g. nDCG@10, recall@k, hit@1) from one command, so ranking changes like the reranker or abstract bias are judged on it.
+- [ ] An agentic eval set of session-style tasks, such as "find three plausible advisors for X".
+  - An agent works each task through the site's search as a visitor would, rewriting queries and paging through results, and is scored against a set of gold fits.
+  - Measure how many query retries and how much scrolling it takes to find the gold fits, so ranking changes are judged on whole sessions, not single queries.
 - [ ] A fast reranker that adds barely any latency (server p50 is about 49ms).
   - Tried on an M5 Pro CPU (4 threads), reranking the hybrid top-k over 21 negation and 27 general hand-written queries. Every target was already in the baseline top 5, so these queries only test reordering.
   - Best affordable option: `cross-encoder/ettin-reranker-32m-v1` on title + gloss (not the abstract), k=20, at +53ms p50 (the 17m model: +21ms). Neither clearly beat the baseline (32m did better on 7 negation queries and worse on 5).
