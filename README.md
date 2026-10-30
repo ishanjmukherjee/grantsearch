@@ -10,6 +10,9 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
   - The vote between cards (`MIN_SHARE`) cannot catch this: 1,001 of the 1,334 expanded keys rest on a single card, so nothing outvotes them. Short keys are the most exposed; 92 of the 140 two-character expansions are single-card.
   - Handle carefully: the same single-card path expands real acronyms the query model cannot read (CDMS, T2DM, tRNA, iPSC, IRB, FERPA), and f272701 showed those expansions matter. Options: have the card prompts keep only acronyms in standard use, or judge each key's standard meaning once, separately from the cards.
   - The 2012-2019 Expo abstracts will add more (expo-2014-061 coins AR for anti-reflection).
+- [ ] Mark the matched words and phrases in results for every query, not only quoted phrases. The guiding principle is that results should explain themselves.
+  - Today `Marked` in `frontend/src/App.tsx` highlights only quoted phrases.
+  - Dense matches often share no words with the query, so they need another explanation, such as marking the abstract sentence closest to the query.
 - [ ] Filter results by a set of disciplines (multi-select).
 - [ ] More data sources, largest first. Counts are estimates from sampling each source (October 2026), not full parses.
   - [ ] Expo programs 2012-2019: 1,113 abstracts and creative works, roughly as many as all of Expo 2021-2026. Parsed by `backend/pipeline/parse_expo.py` into `data/expo_abstracts.json`; not linked, carded or embedded yet.
