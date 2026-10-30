@@ -5,6 +5,11 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
 ## Roadmap
 
 - [x] Exact search with single or double quotes around a phrase.
+- [ ] Stop expanding acronyms that an abstract coins for itself.
+  - The cards' `acronyms` faithfully echo every acronym an abstract defines, including ones its authors coined for that abstract alone. expo-2022-087 writes "antibiotic resistance (AR)", so `backend/search.py` expands "ar" to antibiotic resistance in every query, though AR is not a standard acronym for it (if anything, it is augmented reality or autoregressive). Likewise BA (balanced accuracy, expo-2026-130), PIC (persistent inward current, expo-2025-002) and AB (audiologist best-practices, expo-2026-201).
+  - The vote between cards (`MIN_SHARE`) cannot catch this: 1,001 of the 1,334 expanded keys rest on a single card, so nothing outvotes them. Short keys are the most exposed; 92 of the 140 two-character expansions are single-card.
+  - Handle carefully: the same single-card path expands real acronyms the query model cannot read (CDMS, T2DM, tRNA, iPSC, IRB, FERPA), and f272701 showed those expansions matter. Options: have the card prompts keep only acronyms in standard use, or judge each key's standard meaning once, separately from the cards.
+  - The 2012-2019 Expo abstracts will add more (expo-2014-061 coins AR for anti-reflection).
 - [ ] Filter results by a set of disciplines (multi-select).
 - [ ] More data sources, largest first. Counts are estimates from sampling each source (October 2026), not full parses.
   - [ ] Expo programs 2012-2019: 1,113 abstracts and creative works, roughly as many as all of Expo 2021-2026. Parsed by `backend/pipeline/parse_expo.py` into `data/expo_abstracts.json`; not linked, carded or embedded yet.
