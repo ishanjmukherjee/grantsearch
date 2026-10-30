@@ -34,7 +34,7 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
     - Two Yumpu magazines (2021): the [NURJ Archives Special Edition](https://www.yumpu.com/en/document/view/65759299/nurj-archives-special-edition) (44 pages, about 5-7 essays on Northwestern history drawn from the University Archives, written around 2020) and [NURJ x Yale: Intersections](https://www.yumpu.com/en/document/view/65830578/nurj-x-yale-intersections) (48 pages, about 8-10 essays and interviews with the Yale Historical Review, Spring 2021). Some Intersections pieces are by Yale students, and some reprint NURJ papers already scraped (Rodriguez's "Therapeutic High Schools" from 2016-17).
     - Five Google Drive embeds on the Online Vol. 8 "SURG Tell-All" page, which need a sign-in and are probably videos.
 - [ ] Hyperlink advisors and faculty to their faculty pages.
-- [x] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). `backend/pipeline/parse_expo.py` records the page each entry starts on, and the link reads "Expo 2024 program, page 37 (PDF)".
+- [x] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). `backend/pipeline/parse_expo.py` records the page each entry starts on, and the link reads "Expo 2024 listing (PDF)".
 - [ ] Google OAuth accounts, so visitors can save cards to their profile.
 - [ ] Let visitors upload papers or their own research done at Northwestern that is not indexed yet, reviewed before it is indexed.
 - [ ] Google Analytics, plus careful logging of the queries visitors type in (decide what is stored, for how long, and disclose it on the site).

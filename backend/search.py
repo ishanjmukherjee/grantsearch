@@ -178,7 +178,6 @@ def public(p: dict) -> dict:
                 "advisor": e["advisor"],
                 "abstract": e["abstract"],
                 "url": f"{e['source']}#page={e['page']}",
-                "page": e["page"],
             }
             for e in p["expo"]
         ],

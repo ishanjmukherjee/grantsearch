@@ -9,7 +9,6 @@ type ExpoEntry = {
   advisor: string | null
   abstract: string
   url: string // the program PDF, opening at the abstract's page
-  page: number
 }
 type Project = { id: string; share: number; title: string; grant: Grant | null; expo: ExpoEntry[] }
 type Source = '' | 'surg' | 'expo'
@@ -587,7 +586,7 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
         )}
         {parts.map((s) => (
           <a key={s.key} href={s.url} target="_blank" rel="noreferrer">
-            Expo {s.year} program, page {s.page} (PDF)
+            Expo {s.year} listing (PDF)
           </a>
         ))}
       </div>
@@ -596,8 +595,8 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
 }
 
 type Student = { name: string; advisors: string[] }
-// url and page are the first listing's.
-type Section = { key: string; year: number; title: string; students: Student[]; abstract: string; url: string; page: number }
+// url is the first listing's.
+type Section = { key: string; year: number; title: string; students: Student[]; abstract: string; url: string }
 
 function sameSet(a: string[], b: string[]) {
   return a.length === b.length && a.every((x) => b.includes(x))
@@ -622,7 +621,7 @@ function sections(expo: ExpoEntry[]): Section[] {
   for (const e of expo) {
     let s = byAbstract.get(e.abstract)
     if (!s) {
-      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, url: e.url, page: e.page }
+      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, url: e.url }
       byAbstract.set(e.abstract, s)
     }
     const advisors = e.advisor ? advisorNames(e.advisor) : []
