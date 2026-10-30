@@ -4,8 +4,9 @@ Two layouts exist:
 
 - Programs (2012-2019, 2021-2023): presenter in bold, "Faculty Advisor:" in
   italics, title in bold, abstract in regular weight, small page footers and a
-  running page header. Parsed line by line from font weights. The 2012-2019
-  programs vary more and have their own parser (see parse_old_program).
+  running page header. Parsed line by line from font weights, section by
+  section (PROGRAM_SECTIONS): abstracts, and creative works, most of which
+  have no advisor line.
 - Abstract guides (2024-2026): one font throughout. Each entry is a header
   block (presenter and advisor), a title block, abstract blocks, and a closing
   block starting with "Presentation Format:". Parsed from block boundaries.
@@ -16,6 +17,10 @@ as one advisor, "Joseph Contessa (Yale University)".
 
 Each entry records the 1-based PDF page its header starts on, so a link can
 open the program at the abstract (`source#page=N`).
+
+Ids are kept across runs: an entry already in data/expo_abstracts.json keeps
+its id, which cards, glosses, links and share ids refer to, and a new one
+takes the next free number in its year (see assign_ids).
 
 Writes data/expo_abstracts.json.
 
@@ -49,11 +54,10 @@ SOURCES = {
     2025: f"{BASE}/2025/05/2025_Expo_Abstract_Guide_05.19.25.pdf",
     2026: f"{BASE}/2026/05/2026-Undergraduate-Research-Expo-Abstract-Guide.pdf",
 }
-OLD_PROGRAM_YEARS = set(range(2012, 2020))
-# The 2012-2019 programs' sections that list projects, as 0-based page ranges:
-# abstracts, and creative works in one of parse_old_creative's layouts. The
-# pages around them hold schedules, judges, high-school projects and the like.
-OLD_SECTIONS = {
+# The programs' sections that list projects, as 0-based page ranges: abstracts,
+# and creative works in one of parse_program_creative's layouts. The pages
+# around them hold schedules, judges, high-school projects and the like.
+PROGRAM_SECTIONS = {
     2012: [(range(38, 100), "abstracts"), (range(29, 31), "presenter"), (range(31, 36), "title"), (range(36, 38), "visual")],
     2013: [(range(36, 102), "abstracts"), (range(29, 34), "presenter"), (range(34, 36), "visual")],
     2014: [(range(40, 110), "abstracts"), (range(33, 38), "presenter"), (range(38, 40), "visual")],
@@ -62,6 +66,9 @@ OLD_SECTIONS = {
     2017: [(range(28, 82), "abstracts"), (range(88, 112), "abstracts"), (range(113, 118), "presenter")],
     2018: [(range(27, 74), "abstracts"), (range(80, 106), "abstracts"), (range(107, 114), "presenter")],
     2019: [(range(27, 92), "abstracts"), (range(98, 124), "abstracts"), (range(127, 136), "presenter")],
+    2021: [(range(15, 73), "abstracts"), (range(78, 103), "abstracts"), (range(105, 117), "presenter")],
+    2022: [(range(20, 45), "abstracts"), (range(45, 103), "abstracts"), (range(105, 117), "presenter")],
+    2023: [(range(20, 45), "abstracts"), (range(45, 86), "abstracts"), (range(88, 98), "presenter")],
 }
 # Listings left out, by year and title.
 EXCLUDED = {
@@ -72,7 +79,20 @@ EXCLUDED = {
     (2019, "Unani Tibb as Resistance: Bodily Practice at the Intersection of Colonial and Postcolonial Systems of Power"),
     (2019, "Learning from Whom and from What? How Performance Feedback Affects the Diffusion of New Practices"),
 }
-PROGRAM_YEARS = {2021, 2022, 2023}
+# Formulas whose text layer is garbled (Cambria Math glyphs mapped to the
+# wrong letters), by year and title, as (extracted, transcribed from the
+# rendered page). parse fails if an extracted string is no longer found.
+TRANSCRIBED = {
+    (2024, "Subsquares in random Latin squares and rectangles"): [
+        ("(1/2 −𝛼𝛼)", "(1/2 − 𝛼𝑛)"),
+        ("𝛽𝛽-sparse", "𝛽𝑛-sparse"),
+        ("(1±𝜀 𝑛)ℓ", "((1±𝜀)/𝑛)^ℓ"),
+        ("𝑐ඥ𝑛𝑛𝑛𝑛𝑛", "𝑐√(𝑛 log 𝑛)"),
+    ],
+    (2024, "Evaluating regenerative dressings in a clinically relevant model"): [
+        ("𝑊𝑊𝑊𝑊𝑊 𝑐𝑐𝑐𝑐𝑐𝑐𝑐 (%) = 𝐴𝐴𝐴𝐴 𝑇𝑥 𝐴𝐴𝐴𝐴 𝑇0", "Wound closure (%) = Area 𝑇𝑥 / Area 𝑇0"),
+    ],
+}
 LAST_FIRST_YEARS = {2025, 2026}
 
 # The guides' font maps the fi and fl ligatures to private-use code points.
@@ -85,14 +105,14 @@ SYMBOL_FONT = str.maketrans({"\uf064": "δ", "\uf044": "Δ", "\uf068": "η", "\u
 MATH_DOUBLED = re.compile(r"([\U0001D400-\U0001D7FF])\1")
 PARTICLES = {"van", "von", "den", "der", "de", "da", "del", "della", "di", "du", "dos", "la", "le", "al", "el"}
 ADVISOR = re.compile(r"Faculty Advisors?:\s*(.*)", re.S)
-# An advisor line in the 2012-2019 programs: "Faculty Advisor(s):", and also
-# "Faculty:", "Faculty Adviser:", "Advisor:" and "Faculty/Choreography:".
-OLD_ADVISOR = re.compile(r"\s*(?:Faculty(?: Advis[eo]rs?|/\w+)?|Advisor):\s*(.*)", re.S)
-# Lines between an old program's advisor and title that name other people.
-OLD_CREDITS = re.compile(r"\s*(?:Reader|Performed by):")
+# An advisor line in the programs: "Faculty Advisor(s):", and also "Faculty:",
+# "Faculty Adviser:", "Advisor:" and "Faculty/Choreography:".
+PROGRAM_ADVISOR = re.compile(r"\s*(?:Faculty(?: Advis[eo]rs?|/\w+)?|Advisor):\s*(.*)", re.S)
+# Lines between a program entry's advisor and title that name other people.
+CREDITS = re.compile(r"\s*(?:Reader|Performed by):")
 PRODUCED_BY = re.compile(r"\s*Produced by ")
 MODERATOR = re.compile(r"\s*Moderator:")
-# Subheadings dividing a creative work's description (2018-2019).
+# Subheadings dividing a creative work's description (2018-2019, 2021).
 SUBHEAD = re.compile(r"\s*(?:Description(?: and Artists?[’']? Statement)?|Artist(?:[’']s|s[’']|ic)? Statement)\s*:?\s*")
 # A structured abstract's first heading, bold at the start of its first line.
 ABSTRACT_HEADING = re.compile(r"\s*(?:Background|Introduction|Objectives?|Purpose|Aims?|Methods|Hypothesis)\s*:")
@@ -249,41 +269,6 @@ def weight(spans: list[dict]) -> str:
     return "bold" if all(bold) else "mixed" if any(bold) else "plain"
 
 
-def parse_program(doc: pymupdf.Document) -> list[dict]:
-    spans = program_line_spans(doc)
-    # Each line as (text, kind), kind in {"bold", "mixed", "plain"}.
-    lines = [(join_spans(s), weight(s)) for s in spans]
-    entries = []
-    i = 0
-    while i < len(lines):
-        if not lines[i][0].lstrip().startswith("Faculty Advisor"):
-            i += 1
-            continue
-        advisor = ADVISOR.search(lines[i][0]).group(1)
-        # Presenter: the bold line just before the advisor, plus earlier bold
-        # lines when the name list wraps ("A, B, and" / "C").
-        j = i - 1
-        names = [lines[j][0]] if j >= 0 and lines[j][1] == "bold" else []
-        while j > 0 and lines[j - 1][1] == "bold" and re.search(r"(,|\band)\s*$", lines[j - 1][0]):
-            j -= 1
-            names.insert(0, lines[j][0])
-        page = spans[j if names else i][0]["page"]
-        i += 1
-        title = []
-        while i < len(lines) and lines[i][1] != "plain" and not lines[i][0].lstrip().startswith("Faculty Advisor"):
-            title.append(lines[i][0])
-            i += 1
-        body = []
-        # The abstract ends at the next all-bold line: a presenter or a heading.
-        while i < len(lines) and lines[i][1] != "bold":
-            body.append(lines[i][0])
-            i += 1
-        e = entry(split_people("\n".join(names), last_first=False), text(advisor), text("\n".join(title)), text("\n".join(body)), page)
-        if e:
-            entries.append(e)
-    return entries
-
-
 def italic(spans: list[dict]) -> bool:
     return all(s["flags"] & ITALIC or "Italic" in s["font"] for s in spans)
 
@@ -298,24 +283,27 @@ def full_width(spans: list[list[dict]]) -> float:
     return widths[int(len(widths) * 0.9)]
 
 
-def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
-    """Like parse_program, for the abstract pages of the 2012-2019 programs.
-    Besides the advisor label variants (OLD_ADVISOR), these vary in ways the
-    newer programs do not:
+def parse_program_abstracts(spans: list[list[dict]]) -> list[dict]:
+    """The abstracts on a program's abstract pages. An entry is the presenters
+    in bold, the advisor line in italics, the title in bold and the abstract in
+    regular weight; the abstract ends at the next bold line or presenter.
+    Besides the advisor label variants (PROGRAM_ADVISOR), entries vary:
 
     - "Reader:" or "Performed by:" lines between the advisor and the title
     - an advisor list wrapped onto a line starting "and", and once a doubled
       label ("Faculty Advisor: Advisor: ...")
     - once an advisor line with no label, in italics (2013, "Renee Engeln"),
-      and once no advisor line at all (2015, Nishant Subramani)
-    - a title ending in a species name set in regular weight that wraps onto
-      a line of its own ("... the planarian Schmidtea" / "mediterranea")
+      and twice no advisor line at all (2015, Nishant Subramani; 2021, Kayan
+      Khraisheh)
+    - a title ending in a gene or species name set in regular weight that
+      wraps onto a line of its own ("... the planarian Schmidtea" /
+      "mediterranea", 2017; "... Uncertain Significance in" / "TSC2", 2023)
     - a structured abstract whose first line opens with a bold "Background:"
     """
     lines = [(join_spans(s), weight(s)) for s in spans]
 
     def abstract_text(k: int) -> bool:
-        return k >= 0 and lines[k][1] == "plain" and not italic(spans[k]) and not OLD_ADVISOR.match(lines[k][0])
+        return k >= 0 and lines[k][1] == "plain" and not italic(spans[k]) and not PROGRAM_ADVISOR.match(lines[k][0])
 
     def unlabeled_advisor(k: int) -> bool:
         # Presenter, an advisor's name alone in italics, title.
@@ -323,15 +311,15 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
             0 < k < len(lines) - 1
             and lines[k][1] == "plain"
             and italic(spans[k])
-            and not OLD_ADVISOR.match(lines[k][0])
-            and not OLD_CREDITS.match(lines[k][0])
+            and not PROGRAM_ADVISOR.match(lines[k][0])
+            and not CREDITS.match(lines[k][0])
             and lines[k - 1][1] == "bold"
             and abstract_text(k - 2)
             and lines[k + 1][1] == "bold"
         )
 
     def is_advisor(k: int) -> bool:
-        return 0 <= k < len(lines) and (bool(OLD_ADVISOR.match(lines[k][0])) or unlabeled_advisor(k))
+        return 0 <= k < len(lines) and (bool(PROGRAM_ADVISOR.match(lines[k][0])) or unlabeled_advisor(k))
 
     def no_advisor(k: int) -> bool:
         # Presenter and title in bold right after the last abstract, with no
@@ -356,7 +344,7 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
     i = 0
     while i < len(lines):
         if is_advisor(i):
-            m = OLD_ADVISOR.match(lines[i][0])
+            m = PROGRAM_ADVISOR.match(lines[i][0])
             advisor = m.group(1) if m else lines[i][0]
             j = i - 1
             names = [lines[j][0]] if j >= 0 and lines[j][1] != "plain" else []
@@ -377,7 +365,7 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
             i += 1
             continue
         credits = []
-        while i < len(lines) and OLD_CREDITS.match(lines[i][0]):
+        while i < len(lines) and CREDITS.match(lines[i][0]):
             credits.append(lines[i][0])
             i += 1
         title = []
@@ -398,8 +386,8 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
     return entries
 
 
-def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
-    """The creative works in a 2012-2019 program: films, performances, writing
+def parse_program_creative(spans: list[list[dict]], layout: str) -> list[dict]:
+    """The creative works in a program: films, performances, writing
     and visual art. Unlike the abstracts, most have no advisor line, so an
     entry starts at the first bold line after a description (or a section
     heading). Its header is, in order:
@@ -415,9 +403,9 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
       on lines of their own) and bold "Description" or
       "Artist Statement" subheadings, which also divide the description
 
-    That is the "presenter" layout. In the "visual" one (2012-2014 visual
-    art) an entry starts with "COLLIDEscope by Briana Nicholson-Klingerman" on
-    one line. In the "title" one (2012 films and performances) the title comes
+    That is the "presenter" layout, used from 2013 on. In the "visual" one
+    (2012-2014 visual art) an entry starts with "COLLIDEscope by Briana
+    Nicholson-Klingerman" on one line. In the "title" one (2012 films and performances) the title comes
     first, then an optional "By" line or plain subtitle, then the people in
     bold, mixed weight or italics, then an optional advisor and "Produced by"
     credits.
@@ -429,7 +417,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
         return max(s["size"] for s in spans[k]) > HEADING_SIZE or bool(MODERATOR.match(lines[k][0]))
 
     def description(k: int) -> bool:
-        return lines[k][1] == "plain" and not italic(spans[k]) and not OLD_ADVISOR.match(lines[k][0])
+        return lines[k][1] == "plain" and not italic(spans[k]) and not PROGRAM_ADVISOR.match(lines[k][0])
 
     def short(k: int) -> bool:
         return line_width(spans[k]) < 0.8 * full
@@ -445,7 +433,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
         return lines[k][1] != "plain" and (k == 0 or heading(k - 1) or description(k - 1))
 
     def unlabeled_advisor(k: int) -> bool:
-        return lines[k][1] == "plain" and italic(spans[k]) and not OLD_CREDITS.match(lines[k][0])
+        return lines[k][1] == "plain" and italic(spans[k]) and not CREDITS.match(lines[k][0])
 
     def wraps(k: int) -> bool:
         return re.search(r"(,|\band)\s*$", lines[k][0]) is not None
@@ -473,7 +461,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
             while (
                 i < len(lines)
                 and (lines[i][1] != "plain" or italic(spans[i]))
-                and not OLD_ADVISOR.match(lines[i][0])
+                and not PROGRAM_ADVISOR.match(lines[i][0])
                 and not PRODUCED_BY.match(lines[i][0])
                 and not heading(i)
             ):
@@ -485,8 +473,8 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
             while i < len(lines) and lines[i][1] != "plain" and wraps(i - 1):
                 names.append(lines[i][0])
                 i += 1
-        if i < len(lines) and OLD_ADVISOR.match(lines[i][0]):
-            advisor = OLD_ADVISOR.match(lines[i][0]).group(1)
+        if i < len(lines) and PROGRAM_ADVISOR.match(lines[i][0]):
+            advisor = PROGRAM_ADVISOR.match(lines[i][0]).group(1)
             i += 1
             while i < len(lines) and description(i) and lines[i][0].lstrip().startswith("and "):
                 advisor += " " + lines[i][0]
@@ -494,7 +482,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
         elif layout == "presenter" and i < len(lines) and unlabeled_advisor(i):
             advisor = lines[i][0]
             i += 1
-        while i < len(lines) and (OLD_CREDITS.match(lines[i][0]) or PRODUCED_BY.match(lines[i][0])):
+        while i < len(lines) and (CREDITS.match(lines[i][0]) or PRODUCED_BY.match(lines[i][0])):
             credits.append(lines[i][0])
             i += 1
         if not title:
@@ -504,7 +492,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
         if not title and i < len(lines) and description(i) and short(i):
             title = [lines[i][0]]
             i += 1
-        while i < len(lines) and OLD_CREDITS.match(lines[i][0]):
+        while i < len(lines) and CREDITS.match(lines[i][0]):
             credits.append(lines[i][0])
             i += 1
         subtitle = []
@@ -535,14 +523,14 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
     return entries
 
 
-def parse_old_program(doc: pymupdf.Document, year: int) -> list[dict]:
-    """A 2012-2019 program's abstracts and creative works, in page order.
+def parse_program(doc: pymupdf.Document, year: int) -> list[dict]:
+    """A program's abstracts and creative works, in page order.
     A creative work also presented as a talk or poster (Susie Neilson's 2015
     documentary) is kept once, as the abstract."""
     entries = []
-    for pages, layout in sorted(OLD_SECTIONS[year], key=lambda s: s[0].start):
+    for pages, layout in sorted(PROGRAM_SECTIONS[year], key=lambda s: s[0].start):
         spans = program_line_spans(doc, pages)
-        entries += parse_old_abstracts(spans) if layout == "abstracts" else parse_old_creative(spans, layout)
+        entries += parse_program_abstracts(spans) if layout == "abstracts" else parse_program_creative(spans, layout)
     seen = set()
     out = []
     for e in entries:
@@ -589,28 +577,70 @@ def parse_guide(doc: pymupdf.Document, last_first: bool) -> list[dict]:
     return entries
 
 
+def transcribe(year: int, entries: list[dict]) -> None:
+    """Replace garbled formulas with their transcriptions (TRANSCRIBED)."""
+    titles = {e["title"] for e in entries}
+    for y, title in TRANSCRIBED:
+        assert y != year or title in titles, (year, title)
+    for e in entries:
+        for garbled, fixed in TRANSCRIBED.get((year, e["title"]), []):
+            assert garbled in e["abstract"], (year, e["title"], garbled)
+            e["abstract"] = e["abstract"].replace(garbled, fixed)
+
+
+def assign_ids(year: int, entries: list[dict], previous: list[dict]) -> list[dict]:
+    """The entries with ids: an entry's previous id when the last run had an
+    entry of the same title, presenters and page (or, for a corrected title,
+    the only one of the same presenters and page), else the next free number
+    in the year."""
+
+    def key(e: dict) -> tuple:
+        return (e["page"], tuple((p["first"], p["last"]) for p in e["presenters"]))
+
+    previous = [e for e in previous if e["year"] == year]
+    exact = {(*key(e), e["title"]): e["id"] for e in previous}
+    keys = [key(e) for e in previous]
+    loose = {k: e["id"] for k, e in zip(keys, previous) if keys.count(k) == 1}
+    taken = {e["id"] for e in previous}
+    used = set()
+    n = 0
+    out = []
+    for e in entries:
+        id = exact.get((*key(e), e["title"])) or loose.get(key(e))
+        if id in used:
+            id = None
+        used.add(id)
+        if id is None:
+            n += 1
+            while f"expo-{year}-{n:03d}" in taken:
+                n += 1
+            id = f"expo-{year}-{n:03d}"
+            taken.add(id)
+        out.append({"id": id, "year": year, **e, "source": SOURCES[year]})
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--refresh", action="store_true", help="refetch cached PDFs")
     args = parser.parse_args()
 
+    path = DATA_DIR / "expo_abstracts.json"
+    previous = json.loads(path.read_text()) if path.exists() else []
     out = []
     for year in SOURCES:
         doc = pymupdf.open(fetch(year, args.refresh))
-        if year in OLD_PROGRAM_YEARS:
-            entries = parse_old_program(doc, year)
-        elif year in PROGRAM_YEARS:
-            entries = parse_program(doc)
+        if year in PROGRAM_SECTIONS:
+            entries = parse_program(doc, year)
         else:
             entries = parse_guide(doc, last_first=year in LAST_FIRST_YEARS)
-        for n, e in enumerate(entries, 1):
-            out.append({"id": f"expo-{year}-{n:03d}", "year": year, **e, "source": SOURCES[year]})
+        transcribe(year, entries)
+        out += assign_ids(year, entries, previous)
         print(f"{year}: {len(entries)} abstracts")
     for e in out:
         if e["advisor"]:
             e["advisor"] = affiliations(e["advisor"])
 
-    path = DATA_DIR / "expo_abstracts.json"
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {len(out)} abstracts to {path}")
 
