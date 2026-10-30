@@ -12,7 +12,12 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
   - The 2012-2019 Expo abstracts will add more (expo-2014-061 coins AR for anti-reflection).
 - [ ] Mark the matched words and phrases in results for every query, not only quoted phrases. The guiding principle is that results should explain themselves.
   - Today `Marked` in `frontend/src/App.tsx` highlights only quoted phrases.
-  - Dense matches often share no words with the query, so they need another explanation, such as marking the abstract sentence closest to the query.
+  - First, mark BM25 matches: the query words (by stem) wherever they appear in the title, people, advisors and abstract. This is cheap.
+  - Name matches matter most. When `people.People.pins` puts a person's projects first, mark the name that matched, so a visitor sees why a project they didn't search for by topic came first, and which of several people with that name it is.
+  - Reach goal, likely worth doing: dense matches often share no words with the query, so also mark the abstract sentence closest to the query, shaded more lightly than exact matches. Embed abstract sentences offline and score them against the query vector already computed.
+  - Further reach, worth considering: explain matches that came from a card. "Spectral geometry" finds the SURG grant "Can one hear the shape of a clarinet?" only through its card's concepts and generated queries, and the card shows just the title, year and author, so there is nothing to mark. A quiet line such as "Matched on: spectral geometry (inferred from the title)", with the gloss in a tooltip, would name the card term that actually caused the match (the winning generated query in the dense score, or the card fields BM25 hit).
+    - Show it only when card terms were decisive and the match is strong, never styled as data, so cards still never pass for real data.
+    - It would also make bad cards visible, to be fixed in `data/card_overrides.jsonl`.
 - [ ] Filter results by a set of disciplines (multi-select).
 - [ ] More data sources, largest first. Counts are estimates from sampling each source (October 2026), not full parses.
   - [ ] Expo programs 2012-2019: 1,113 abstracts and creative works, roughly as many as all of Expo 2021-2026. Parsed by `backend/pipeline/parse_expo.py` into `data/expo_abstracts.json`; not linked, carded or embedded yet.
