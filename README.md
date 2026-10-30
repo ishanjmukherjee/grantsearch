@@ -52,6 +52,9 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
   - On "astronomy research i can do with public data", short title-only SURG cards with generic glosses held 5 of the dense top 7, ahead of abstract-backed Expo projects that fit better (Das-Ghosh's Local Bubble project came 13th, Clarendon's [OI] project 16th).
   - Against vague queries, abstract bodies are diluted by specifics (with voyage-4-nano, Das-Ghosh scored 0.422 on full text vs 0.479 on title + fields + concepts alone), while title-only glosses are field-level definitions. One candidate fix is a third vector per project built from title + fields + concepts.
   - BM25 length normalization also favours the ~33-token title-only cards.
+- [ ] Bake in some recency bias.
+  - Once the older sources above are indexed (Expo 2012-2019, SURG 2010-2019, NURJ from 2003, Economics theses from 2000), research goes back decades, and today ranking ignores dates entirely, so a 2004 paper and a 2025 project of equal relevance rank the same.
+- [ ] Study a relatively open search engine like DuckDuckGo and how it handles the gamut of search issues (recency among them), and borrow what fits.
 - [ ] Spot check the LLM-judged SURG <-> Expo links.
   - `data/expo_judgments.jsonl` has one verdict per name-matched candidate pair; only same/high pairs are linked (181 when last counted, one of them, `surg-2024-230|expo-2025-213`, promoted by hand from same/low).
   - Check linked pairs for false merges, and same/low (27) and related (112) pairs for missed links like that one, which was missed because the grant title was vague.
