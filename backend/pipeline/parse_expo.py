@@ -184,6 +184,16 @@ def drop_name_notes(names: str) -> str:
     return re.sub(r"\s*\([^)]*\)(?=\s*(?:,|;|&|\band\b|$))", "", names, flags=re.M)
 
 
+def with_credits(body: list[str], credits: list[str], names: str) -> str:
+    """A description followed by the lines printed with it that name people
+    but have no field of their own, kept so the names stay searchable:
+    credits ("Performed by: ...", "Reader: ...", "Produced by ...") and, when
+    drop_name_notes removed roles or stage names, the names as printed
+    ("Alice Li (Director), Yu Sun Chin (Editor), ...")."""
+    extra = credits + ([names] if drop_name_notes(names) != names else [])
+    return text("\n".join(body + extra))
+
+
 def entry(people: list[dict], advisor: str | None, title: str, abstract: str, page: int) -> dict | None:
     """An entry, or None if a field is missing. page is the 0-based index of
     the page its header starts on."""
@@ -366,7 +376,9 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
         else:
             i += 1
             continue
+        credits = []
         while i < len(lines) and OLD_CREDITS.match(lines[i][0]):
+            credits.append(lines[i][0])
             i += 1
         title = []
         while i < len(lines) and is_title_line(i, title):
@@ -378,8 +390,9 @@ def parse_old_abstracts(spans: list[list[dict]]) -> list[dict]:
         while i < len(lines) and lines[i][1] != "bold" and not is_advisor(i) and not is_advisor(i + 1):
             body.append(lines[i][0])
             i += 1
-        people = split_people(drop_name_notes("\n".join(names)), last_first=False)
-        e = entry(people, text(advisor), text("\n".join(title)), text("\n".join(body)), page)
+        names = "\n".join(names)
+        people = split_people(drop_name_notes(names), last_first=False)
+        e = entry(people, text(advisor), text("\n".join(title)), with_credits(body, credits, names), page)
         if e:
             entries.append(e)
     return entries
@@ -443,7 +456,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
         if not starts(i):
             i += 1
             continue
-        names, title, advisor = [], [], ""
+        names, title, advisor, credits = [], [], "", []
         page = spans[i][0]["page"]
         if is_title_by(i):
             m = TITLE_BY.fullmatch(lines[i][0])
@@ -482,6 +495,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
             advisor = lines[i][0]
             i += 1
         while i < len(lines) and (OLD_CREDITS.match(lines[i][0]) or PRODUCED_BY.match(lines[i][0])):
+            credits.append(lines[i][0])
             i += 1
         if not title:
             while i < len(lines) and lines[i][1] != "plain" and not heading(i) and not SUBHEAD.fullmatch(lines[i][0]):
@@ -491,6 +505,7 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
             title = [lines[i][0]]
             i += 1
         while i < len(lines) and OLD_CREDITS.match(lines[i][0]):
+            credits.append(lines[i][0])
             i += 1
         subtitle = []
         while (
@@ -509,11 +524,12 @@ def parse_old_creative(spans: list[list[dict]], layout: str) -> list[dict]:
         # The description runs to the next entry or section heading; a
         # "Visual Arts, continued" page heading can fall inside it.
         while i < len(lines) and not starts(i) and (not heading(i) or CONTINUED.fullmatch(lines[i][0])):
-            if not (heading(i) or SUBHEAD.fullmatch(lines[i][0]) or OLD_CREDITS.match(lines[i][0])):
+            if not (heading(i) or SUBHEAD.fullmatch(lines[i][0])):
                 body.append(lines[i][0])
             i += 1
-        people = split_people(drop_name_notes("\n".join(names)), last_first=False)
-        e = entry(people, text(advisor), text("\n".join(title)), text("\n".join(body)), page)
+        names = "\n".join(names)
+        people = split_people(drop_name_notes(names), last_first=False)
+        e = entry(people, text(advisor), text("\n".join(title)), with_credits(body, credits, names), page)
         if e:
             entries.append(e)
     return entries
