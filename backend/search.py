@@ -17,9 +17,15 @@ key is expanded only when
 - it is one word with at least two letters or digits,
 - its expansions agree: those whose character trigrams have a Jaccard
   similarity of at least MERGE_SIM are taken as one spelled differently, and
-  the most common such group must hold MIN_SHARE of the votes ("ad" is
-  Alzheimer's disease on 16 of 21 cards; "er" is the endoplasmic reticulum on
-  2 of 6 and the emergency room on 2, so it is not expanded), and
+  the most common such group must hold MIN_SHARE of the votes ("pd" is
+  Parkinson's disease on 9 of 10 cards; "ci" is a confidence interval on 4
+  of 5 and a carbonyl index on 1, so it is not expanded, nor is "ad",
+  Alzheimer's disease on 16 of 21 cards and atopic dermatitis on 4). A
+  wrong expansion pulls the dense side toward another field ("ev uptake"
+  toward extracellular vesicles) with nothing to tell the searcher why,
+  while a missing one costs little: BM25 still matches the acronym as
+  typed, and the searcher can type the expansion. So even one card in five
+  or eight that means something else leaves a key as typed; and
 - when titles and abstracts write it, they nearly always do so in another
   casing than lowercase, not counting a capitalized word without a digit
   ("Fish" but not "Nurr1" or "F1"): at least MIN_CASED_SHARE of the time.
@@ -91,7 +97,7 @@ RRF_K = 60
 # repeating it, which the cards' generated queries and concepts do a lot.
 BM25_K1 = 0.5
 MERGE_SIM = 0.5
-MIN_SHARE = 2 / 3
+MIN_SHARE = 0.9
 MIN_CASED_SHARE = 0.9
 QUOTE_MARKS = "\"\u201c\u201d"
 QUOTED = re.compile(f"[{QUOTE_MARKS}]([^{QUOTE_MARKS}]*)[{QUOTE_MARKS}]")
