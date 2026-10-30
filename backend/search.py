@@ -177,7 +177,8 @@ def public(p: dict) -> dict:
                 "presenters": [presenter(x) for x in e["presenters"]],
                 "advisor": e["advisor"],
                 "abstract": e["abstract"],
-                "url": e["source"],
+                "url": f"{e['source']}#page={e['page']}",
+                "page": e["page"],
             }
             for e in p["expo"]
         ],
