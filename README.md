@@ -20,6 +20,9 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
     - Show it only when card terms were decisive and the match is strong, never styled as data, so cards still never pass for real data.
     - It would also make bad cards visible, to be fixed in `data/card_overrides.jsonl`.
 - [ ] Filter results by a set of disciplines (multi-select).
+- [ ] Autocomplete in the search box.
+  - Suggest completions as a visitor types: people's names (from `backend/people.py`), project titles, disciplines and common topic terms.
+  - Results already update as you type, so suggestions should help finish a query, not replace the live results.
 - [ ] More data sources, largest first. Counts are estimates from sampling each source (October 2026), not full parses.
   - [ ] Expo programs 2012-2019: 1,113 abstracts and creative works, roughly as many as all of Expo 2021-2026. Parsed by `backend/pipeline/parse_expo.py` into `data/expo_abstracts.json`; not linked, carded or embedded yet.
     - The PDFs, from the [program archive](https://undergradresearch.northwestern.edu/share/expo/undergraduate-research-and-arts-exposition-program-archive/), are in `data/raw/expo/`.
