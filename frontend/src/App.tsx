@@ -423,29 +423,33 @@ function Search() {
             ))}
           </div>
           <div className="years">
-            <select value={from} onChange={(e) => {
-                setFrom(e.target.value)
-                setPage(1)
-              }} aria-label="From year">
-              <option value="">Any year</option>
-              {YEARS.map((y) => (
-                <option key={y} value={y}>
-                  {y}
-                </option>
-              ))}
-            </select>
+            <span className="select">
+              <select value={from} onChange={(e) => {
+                  setFrom(e.target.value)
+                  setPage(1)
+                }} aria-label="From year">
+                <option value="">Any year</option>
+                {YEARS.map((y) => (
+                  <option key={y} value={y}>
+                    {y}
+                  </option>
+                ))}
+              </select>
+            </span>
             <span>to</span>
-            <select value={to} onChange={(e) => {
-                setTo(e.target.value)
-                setPage(1)
-              }} aria-label="To year">
-              <option value="">Any year</option>
-              {YEARS.map((y) => (
-                <option key={y} value={y}>
-                  {y}
-                </option>
-              ))}
-            </select>
+            <span className="select">
+              <select value={to} onChange={(e) => {
+                  setTo(e.target.value)
+                  setPage(1)
+                }} aria-label="To year">
+                <option value="">Any year</option>
+                {YEARS.map((y) => (
+                  <option key={y} value={y}>
+                    {y}
+                  </option>
+                ))}
+              </select>
+            </span>
           </div>
         </div>
       </div>
