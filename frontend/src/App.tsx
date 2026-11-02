@@ -172,8 +172,9 @@ function Header({ lede }: { lede?: boolean }) {
       </h1>
       {lede && (
         <p className="lede">
-          Northwestern Summer Undergraduate Research Grants (2020–2024) and Undergraduate Research &amp; Arts Expo
-          projects (2021–2026). Search by topic, method, field or person.
+          Northwestern Summer Undergraduate Research Grants <span className="nowrap">(2020–2024)</span> and Undergraduate
+          Research &amp; Arts Expo projects <span className="nowrap">(2021–2026)</span>. Search by topic, method, field or
+          person.
         </p>
       )}
     </header>
@@ -510,9 +511,15 @@ function Pager({
       {label}
     </a>
   )
+  // Shown dimmed at either end, so the row has the same shape on every page.
+  const disabled = (label: string) => (
+    <span className="step disabled" aria-disabled="true">
+      {label}
+    </span>
+  )
   return (
     <nav className="pager" aria-label="Pages">
-      {page > 1 ? link(page - 1, 'Previous', { className: 'step', rel: 'prev' }) : <span className="step" />}
+      {page > 1 ? link(page - 1, 'Previous', { className: 'step', rel: 'prev' }) : disabled('Previous')}
       <div className="numbers">
         {numbers.map((n) =>
           n === page ? (
@@ -524,7 +531,7 @@ function Pager({
           ),
         )}
       </div>
-      {page < pages ? link(page + 1, 'Next', { className: 'step', rel: 'next' }) : <span className="step" />}
+      {page < pages ? link(page + 1, 'Next', { className: 'step', rel: 'next' }) : disabled('Next')}
     </nav>
   )
 }
