@@ -13,6 +13,8 @@
   --mark-text: #000000;
   /* Between --text and --muted: abstracts stay readable but sit below titles. */
   --soft: color-mix(in srgb, var(--text) 60%, var(--muted));
+  /* Fainter than --border, for rules between results. */
+  --divider: color-mix(in srgb, var(--border) 60%, var(--bg));
   /* The type scale. Every font-size is one of these. */
   --text-display: 2rem; /* 32px, 24px on phones */
   --text-title: 1.125rem; /* 18px */
@@ -316,13 +318,21 @@ h1 a {
   color: var(--error);
 }
 
+/* Results sit on the page itself, split by space and a faint rule rather
+   than boxed as cards. */
 .result {
+  --top: 28px;
   position: relative;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px 20px;
-  margin-bottom: 12px;
+  padding: var(--top) 0 28px;
+}
+
+.result + .result {
+  border-top: 1px solid var(--divider);
+}
+
+/* The first result of a list has no rule above it to clear. */
+.result:not(.result + .result) {
+  --top: 12px;
 }
 
 .tags {
@@ -443,7 +453,7 @@ mark {
   font-size: var(--text-body);
   line-height: 1.5;
   padding-left: 1.75em;
-  background: linear-gradient(to right, transparent, var(--surface) 1.5em);
+  background: linear-gradient(to right, transparent, var(--bg) 1.5em);
 }
 
 .links {
@@ -482,8 +492,10 @@ mark {
    cannot hover. */
 .share {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  /* Centers the 32px button on the first row of tags, and puts the icon's
+     right edge, 7px inside the button, on the column's. */
+  top: calc(var(--top) - 5px);
+  right: -7px;
   display: flex;
   align-items: center;
   gap: 6px;
