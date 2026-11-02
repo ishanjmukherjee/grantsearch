@@ -11,7 +11,9 @@
   --error: #b42318;
   --mark: #ffd6b0;
   --mark-text: #000000;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* Between --text and --muted: abstracts stay readable but sit below titles. */
+  --soft: color-mix(in srgb, var(--text) 60%, var(--muted));
+  font-family: 'Instrument Sans Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
   color: var(--text);
   background: var(--bg);
@@ -348,7 +350,8 @@ h1 a {
 }
 
 .abstract .text {
-  font-size: 0.93rem;
+  color: var(--soft);
+  font-size: 0.9375rem;
   margin: 8px 0 0;
   white-space: pre-line;
 }
