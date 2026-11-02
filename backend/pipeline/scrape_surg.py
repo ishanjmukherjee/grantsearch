@@ -35,6 +35,7 @@ Usage: uv run python -m pipeline.scrape_surg [--refresh]
 """
 
 import argparse
+import html
 import json
 import re
 import unicodedata
@@ -201,18 +202,42 @@ def parse_2018(year: int, html: bytes) -> list[dict]:
     return rows
 
 
+# A character reference some pages escaped twice, so that it shows as written
+# ("A&#946;-Oligomer", 2013 and 2016).
+DOUBLE_ESCAPED = re.compile(r"&#(?:\d+|x[0-9a-fA-F]+);")
+# UTF-8 read as Windows-1252 ("3,3â€™-Disubstituted", 2008): a lead byte's
+# character followed by continuation bytes' characters.
+CONTINUATION = "".join(bytes([b]).decode("cp1252", "ignore") for b in range(0x80, 0xC0))
+MOJIBAKE = re.compile(f"[Â-ô][{re.escape(CONTINUATION)}]+")
+
+
+def repair(text: str) -> str:
+    """Text as the page meant it where its own text is damaged: double escaped
+    character references decoded, and mis-decoded UTF-8 read again (left as
+    is unless the characters are UTF-8 read as Windows-1252)."""
+    text = DOUBLE_ESCAPED.sub(lambda m: html.unescape(m.group()), text)
+
+    def redecode(m: re.Match) -> str:
+        try:
+            return m.group().encode("cp1252").decode("utf-8")
+        except UnicodeError:
+            return m.group()
+
+    return MOJIBAKE.sub(redecode, text)
+
+
 def lines(el) -> list[tuple[str, bool]]:
     """The text lines of an element: each innermost paragraph-like block,
-    split at line breaks, tidied, without empty lines; each with whether its
-    block is a heading (a heading element, or a paragraph holding a named
-    anchor, as the 2007-2009 pages mark their department headings)."""
+    split at line breaks, repaired and tidied, without empty lines; each with
+    whether its block is a heading (a heading element, or a paragraph holding a
+    named anchor, as the 2007-2009 pages mark their department headings)."""
     for br in el.find_all("br"):
         br.replace_with("\n")
     blocks = [b for b in el.find_all(["p", "h1", "h2", "h3", "h4", "h5", "li"]) if not b.find(["p", "li"])]
     out = []
     for b in blocks:
         heading = b.name.startswith("h") or b.find("a", attrs={"name": True}) is not None
-        out += [(t, heading) for line in b.get_text().split("\n") if (t := tidy(line))]
+        out += [(t, heading) for line in b.get_text().split("\n") if (t := tidy(repair(line)))]
     return out
 
 
