@@ -35,7 +35,7 @@ from pathlib import Path
 import httpx
 import pymupdf
 
-from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR, tidy
+from pipeline.scrape_surg import DATA_DIR, HEADERS, PARTICLES, RAW_DIR, tidy
 
 BASE = "https://undergradresearch.northwestern.edu/files"
 SOURCES = {
@@ -103,7 +103,6 @@ LIGATURES = str.maketrans({"\uf001": "fi", "\uf002": "fl"})
 SYMBOL_FONT = str.maketrans({"\uf064": "δ", "\uf044": "Δ", "\uf068": "η", "\uf8e7": "—"})
 # Cambria Math letters (U+1D400-1D7FF) come out of the PDFs twice each.
 MATH_DOUBLED = re.compile(r"([\U0001D400-\U0001D7FF])\1")
-PARTICLES = {"van", "von", "den", "der", "de", "da", "del", "della", "di", "du", "dos", "la", "le", "al", "el"}
 ADVISOR = re.compile(r"Faculty Advisors?:\s*(.*)", re.S)
 # An advisor line in the programs: "Faculty Advisor(s):", and also "Faculty:",
 # "Faculty Adviser:", "Advisor:" and "Faculty/Choreography:".

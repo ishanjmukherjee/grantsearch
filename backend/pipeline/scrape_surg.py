@@ -72,6 +72,10 @@ def tidy(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+# Lower-case words that begin a surname ("Ludwig van Beethoven").
+PARTICLES = {"van", "von", "den", "der", "de", "da", "del", "della", "di", "du", "dos", "la", "le", "al", "el"}
+
+
 
 
 
