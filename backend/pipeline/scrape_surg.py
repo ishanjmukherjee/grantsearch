@@ -221,8 +221,9 @@ QUOTE = "“\""
 # and all ("Advisor, Name" and "Adviosr:" in 2008-2009). A plural label lists
 # several advisors, separated by semicolons.
 ADVISOR = re.compile(r"\s*\(?(?:Faculty\s+)?(Advis[oe]r|Adviosr|Sponsor)(s?)\s*[:,]\s*")
-# A note on how a grant was funded, on its own line after the entry (2012-2013).
-NOTE = re.compile(r"\*?\s*(funded (?:by|in partnership with) .+)")
+# A note on how a grant was funded, on its own line after the entry (2012-2013),
+# once written "funded by *funded by ..." (2013).
+NOTE = re.compile(r"\*?\s*(?:funded by\s+\*)?(funded (?:by|in partnership with) .+)")
 # Notes some years attach to the title or the advisor line.
 TITLE_NOTE = re.compile(r"\s*\((URG-ISEN Grant)\)$")  # 2010
 ADVISOR_NOTE = re.compile(r"\s+(\d{4} ISEN-URG Awardee)$")  # 2015
@@ -250,7 +251,7 @@ def entry(year: int, text: str, advisor: tuple[str, bool] | None) -> dict:
         out["notes"].append(m.group(1))
         title = title[: m.start()]
     title = title.rstrip().removesuffix(",").rstrip()
-    if title[-1:] in "”\"":
+    if title[-1:] in "”“\"":  # 2012 closes three titles with an opening quote
         title = title[:-1]
     # 2014 and 2015 put the sentence's period inside the closing quote.
     if year in (2014, 2015) and title.endswith("."):
@@ -283,7 +284,6 @@ def entry(year: int, text: str, advisor: tuple[str, bool] | None) -> dict:
         if m := ADVISOR_NOTE.search(advisor):
             out["notes"].append(m.group(1))
             advisor = advisor[: m.start()]
-        advisor = re.sub(r"\s+funded by$", "", advisor)  # 2013: the start of the next line's note
         if m := NOTE_AT_END.search(advisor):
             out["notes"].append(m.group(1))
             advisor = advisor[: m.start()]
