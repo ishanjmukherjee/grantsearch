@@ -42,6 +42,7 @@ const MAX_QUERY = 2000 // the longest q the backend accepts; a longer query is c
 const PAGE = 30
 const PAGER_SPAN = 9 // page numbers the pager shows at once; odd, to center the current one
 const SITE = 'Prowl'
+const CLAMP_LINES = 3 // matches the line-clamp of .abstract .text.clamped
 // A share status holds, then fades out with the icon (see .share.fading).
 const STATUS_HOLD_MS = 2000
 const STATUS_FADE_MS = 600 // matches the .share.fading transitions
@@ -588,12 +589,12 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
       <div className="links">
         {grant && (
           <a href={grant.url} target="_blank" rel="noreferrer">
-            SURG {grant.year} winners list
+            SURG {grant.year} winners list <ExternalIcon />
           </a>
         )}
         {parts.map((s) => (
           <a key={s.key} href={s.url} target="_blank" rel="noreferrer">
-            Expo {s.year} listing (PDF)
+            Expo {s.year} listing (PDF) <ExternalIcon />
           </a>
         ))}
       </div>
@@ -699,6 +700,14 @@ function ShareButton({ project }: { project: Project }) {
   )
 }
 
+function ExternalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+    </svg>
+  )
+}
+
 function Abstract({
   section,
   heading,
@@ -711,8 +720,23 @@ function Abstract({
   open: boolean
 }) {
   const [open, setOpen] = useState(initiallyOpen)
+  // Whether the abstract runs past the clamp, so that it has more to show.
+  const [overflows, setOverflows] = useState(false)
   const text = useRef<HTMLParagraphElement>(null)
+  const body = useRef<HTMLSpanElement>(null)
   const quotes = useContext(Quotes)
+  // Counts the abstract's own lines, not the inline toggle's, and counts
+  // again when the card's width changes.
+  useLayoutEffect(() => {
+    const measure = () => {
+      const tops = new Set([...body.current!.getClientRects()].map((r) => Math.round(r.top)))
+      setOverflows(tops.size > CLAMP_LINES)
+    }
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(text.current!)
+    return () => observer.disconnect()
+  }, [section.abstract])
   // Like find in page, open an abstract whose first quoted phrase is cut off.
   useLayoutEffect(() => {
     const mark = text.current?.querySelector('mark')
@@ -730,12 +754,26 @@ function Abstract({
           <Marked text={people} />
         </p>
       )}
-      <p ref={text} className={open ? 'text' : 'text clamped'}>
-        <Marked text={section.abstract} />
-      </p>
-      <button className="more" onClick={() => setOpen(!open)}>
-        {open ? 'Hide abstract' : 'Show abstract'}
-      </button>
+      <div className="clamp">
+        <p ref={text} className={open ? 'text' : 'text clamped'}>
+          <span ref={body}>
+            <Marked text={section.abstract} />
+          </span>
+          {open && overflows && (
+            <>
+              {' '}
+              <button className="more" aria-expanded="true" onClick={() => setOpen(false)}>
+                Show less
+              </button>
+            </>
+          )}
+        </p>
+        {!open && overflows && (
+          <button className="more fade" aria-expanded="false" onClick={() => setOpen(true)}>
+            Show more
+          </button>
+        )}
+      </div>
     </section>
   )
 }

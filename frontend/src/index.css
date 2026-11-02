@@ -378,32 +378,71 @@ mark {
   overflow: hidden;
 }
 
+.clamp {
+  position: relative;
+}
+
 .more {
+  position: relative;
   font: inherit;
-  font-size: 0.85rem;
   color: var(--accent);
   background: none;
   border: 0;
   padding: 0;
-  margin-top: 4px;
+  white-space: nowrap;
   cursor: pointer;
+}
+
+/* A larger hit area than the words, for fingers. Padding would instead
+   grow the line box or paint the fade over the line above. */
+.more::after {
+  content: '';
+  position: absolute;
+  inset: -10px -8px;
+}
+
+/* Sits over the end of the last clamped line. The cut text fades into it
+   over about two characters, which is what says the text goes on. */
+.more.fade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  padding-left: 1.75em;
+  background: linear-gradient(to right, transparent, var(--surface) 1.5em);
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 14px;
   margin-top: 12px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
+/* Grey: the sources are the last thing a reader needs, and purple is kept
+   for what acts on the page. */
 .links a {
-  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
   text-decoration: none;
 }
 
 .links a:hover {
-  text-decoration: underline;
+  color: var(--text);
+}
+
+.links svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* Shown on hover or keyboard focus, and always on touch screens, which
@@ -531,8 +570,18 @@ h2.section {
   font-weight: 600;
 }
 
+/* Equal widths keep the numbers centered; each label sits at its outer
+   edge, the same distance in from the cards. */
 .pager .step {
-  min-width: 72px;
+  min-width: 80px;
+}
+
+.pager .step:first-child {
+  text-align: left;
+}
+
+.pager .step:last-child {
+  text-align: right;
 }
 
 .pager .disabled {
