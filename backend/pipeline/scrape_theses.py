@@ -1,21 +1,31 @@
 """Scrape department honors thesis lists into data/theses.json.
 
-So far one department: Political Science, whose honors theses page lists
-every thesis from 2010-11 on (but 2015-16) under its academic year, as a
-heading "Student | Title" and a body with the abstract (labelled
-"Abstract:" from 2017-18 on) and "Thesis Advisor: Name". The page is saved
-as fetched in data/raw/theses/polisci.html, and parsing reads the saved copy.
+Two departments so far, each page saved as fetched in
+data/raw/theses/<key>.html and parsed from the saved copy:
+
+- Political Science ("polisci") lists every thesis from 2010-11 on (but
+  2015-16) under its academic year, as a heading "Student | Title" and a
+  body with the abstract (labelled "Abstract:" from 2017-18 on) and "Thesis
+  Advisor: Name".
+- Economics ("econ") lists every thesis from 2001 on under its graduating
+  year as "Student - Title", the title in italics: in bulleted lists from
+  2020 on and in tables, one thesis to a cell, before. It gives no advisors
+  or abstracts.
 
 Each thesis is a record:
 
-- id: "polisci-YYYY-NNN", numbered in page order within its year
+- id: "<key>-YYYY-NNN", numbered in page order within its year
 - department, year (the academic year's second, the graduating year),
   academic_year ("2024-2025")
 - students: [{first, last}]; first is "" for the one student named by
   surname alone
-- advisor (the names as printed, without "Professor"), title, source (the page)
-- abstract, or None for the 10 the page has none for: the 8 of 2022-23
-  ("[Update coming soon]"), one withheld for IRB reasons and one left blank
+- advisor (the names as printed, without "Professor"), or None for Economics
+- title, source (the page)
+- mmss (Economics only): whether the page marks the thesis for
+  Interdisciplinary Honors with Mathematical Methods in the Social Sciences
+- abstract, or None for all of Economics and for the 10 Political Science
+  theses the page has none for: the 8 of 2022-23 ("[Update coming soon]"),
+  one withheld for IRB reasons and one left blank
 
 Usage: uv run python -m pipeline.scrape_theses [--refresh]
 """
@@ -32,6 +42,7 @@ from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
 
 SOURCES = {
     "polisci": ("Political Science", "https://polisci.northwestern.edu/undergraduate/honors/honors-theses.html"),
+    "econ": ("Economics", "https://economics.northwestern.edu/undergraduate/major/undergraduate-economics-honors-senior-theses.html"),
 }
 ACADEMIC_YEAR = re.compile(r"(\d{4})\s*-\s*(\d{4})")
 # "Thesis Advisor:", once "Research Advisor:"; the last one in the body, so
@@ -108,6 +119,77 @@ def parse_polisci(html: str) -> list[dict]:
     return out
 
 
+# The dash between an Economics student and title, which the page writes
+# as "-", "–" or "—", spaced or not, inside or outside the italics. A dash
+# inside a name ("Lal-Tabak") is never spaced.
+SEPARATOR = re.compile(r"\s+[-\u2013\u2014]+(?:\s+|$)")
+DASHES = re.compile(r"^[\s\-\u2013\u2014]+|[\s\-\u2013\u2014]+$")
+# Three of the oldest Economics titles have their curly quotes in a symbol
+# font, each as an italic run of its own: "A" opens a quote and "@" closes it.
+SYMBOL_QUOTES = {"A": "\u201c", "@": "\u201d"}
+ECON_SYMBOL_QUOTED = 3
+# "*" after a title marks "Interdisciplinary Honors with Mathematical Methods
+# in the Social Sciences".
+MMSS_MARK = "*"
+
+
+def parse_econ_entry(el) -> tuple[str, str, bool, bool]:
+    """An Economics list item or table cell as its student, title, whether
+    it is marked for MMSS honors, and whether its quotes were in the symbol
+    font. The student is the text before the first italics, up to a spaced
+    dash; the title is the rest (once, "Tom Del Carlo - Poverty<em>
+    Alleviation through Trade?</em>", it starts before the italics)."""
+    strings = el.find_all(string=True)
+    first = next(i for i, x in enumerate(strings) if x.find_parent("em"))
+    quoted = any(x.find_parent("em") and x.strip() == "@" for x in strings)
+    student, *lead = SEPARATOR.split(text("".join(strings[:first])), maxsplit=1)
+    rest = "".join(SYMBOL_QUOTES.get(x.strip(), x) if quoted and x.find_parent("em") else x for x in strings[first:])
+    title = text(DASHES.sub("", " ".join(lead + [rest])))
+    mmss = title.endswith(MMSS_MARK)
+    return text(DASHES.sub("", student)), text(title.removesuffix(MMSS_MARK)), mmss, quoted
+
+
+def parse_econ(html: str) -> list[dict]:
+    """The theses in page order: each <li> under an <h5> year (2020 on) and
+    each non-empty <td> of a table captioned with its year (2001-2019). A
+    thesis two students wrote is listed once for each, one after the other;
+    the two make one record."""
+    department, source = SOURCES["econ"]
+    main = BeautifulSoup(html, "html.parser").find("main")
+    out, quoted = [], 0
+    for el in main.find_all(["li", "td"]):
+        if not el.get_text(strip=True):
+            continue
+        if el.name == "li":
+            heading = el.find_previous("h5")
+            while not heading.get_text(strip=True):
+                heading = heading.find_previous("h5")
+        else:
+            heading = el.find_parent("table").caption
+        year = int(heading.get_text(strip=True))
+        student, title, mmss, symbol_quoted = parse_econ_entry(el)
+        quoted += symbol_quoted
+        if not (student and title) or len(student.split()) > 6 or re.search(r"\b(?:and|the|of)\b|[\u2013\u2014*]|\s-|-\s", student):
+            raise SystemExit(f"unparsed thesis: {el.get_text(' ')[:100]!r}")
+        if out and (out[-1]["year"], out[-1]["title"], out[-1]["mmss"]) == (year, title, mmss):
+            out[-1]["students"] += students(student)
+            continue
+        out.append({
+            "department": department,
+            "year": year,
+            "academic_year": f"{year - 1}-{year}",
+            "students": students(student),
+            "advisor": None,
+            "title": title,
+            "abstract": None,
+            "mmss": mmss,
+            "source": source,
+        })
+    if quoted != ECON_SYMBOL_QUOTED:
+        raise SystemExit(f"expected {ECON_SYMBOL_QUOTED} titles quoted in the symbol font, found {quoted}")
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--refresh", action="store_true", help="refetch the saved pages")
@@ -115,7 +197,7 @@ def main() -> None:
 
     theses = []
     for key in SOURCES:
-        rows = parse_polisci(fetch(key, args.refresh))
+        rows = {"polisci": parse_polisci, "econ": parse_econ}[key](fetch(key, args.refresh))
         counts: dict[int, int] = {}
         for t in rows:
             counts[t["year"]] = counts.get(t["year"], 0) + 1
