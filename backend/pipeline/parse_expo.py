@@ -1,6 +1,7 @@
-"""Parse Undergraduate Research & Arts Expo abstracts, 2012-2019 and 2021-2026.
+"""Parse Undergraduate Research & Arts Expo abstracts, 2012-2026.
 
-Two layouts exist:
+Expo 2020, held online, has no printed abstracts; its listings come from
+ForagerOne (see pipeline.parse_forager). The printed ones come in two layouts:
 
 - Programs (2012-2019, 2021-2023): presenter in bold, "Faculty Advisor:" in
   italics, title in bold, abstract in regular weight, small page footers and a
@@ -47,6 +48,7 @@ SOURCES = {
     2017: f"{BASE}/2020/09/Expo-Program_2017.pdf",
     2018: f"{BASE}/2020/09/Expo-Program-2018_3.pdf",
     2019: f"{BASE}/2016/03/Expo-Program-2019.pdf",
+    2020: f"{BASE}/2024/03/Expo-2020-Program-Guide-a0c8f4b42e540054.pdf",
     2021: f"{BASE}/2024/03/The-2021-Virtual-Undergraduate-Research-and-Arts-Exposition-7e95f42a523aba52.pdf",
     2022: f"{BASE}/2024/03/2022-Undergraduate-Research-Arts-Exposition-Digital-Program-a15a7699ca7c2d29.pdf",
     2023: f"{BASE}/2024/03/2023-Undergraduate-Research-and-Arts-Expo-Program-439f378a3b0164f8.pdf",
@@ -94,6 +96,10 @@ TRANSCRIBED = {
     ],
 }
 LAST_FIRST_YEARS = {2025, 2026}
+# Expo 2020 was held online: its listings come from the ForagerOne
+# presentations (pipeline.parse_forager), and its source is the guide that
+# lists them.
+FORAGER_YEAR = 2020
 
 # The guides' font maps the fi and fl ligatures to private-use code points.
 LIGATURES = str.maketrans({"\uf001": "fi", "\uf002": "fl"})
@@ -629,7 +635,12 @@ def main() -> None:
     out = []
     for year in SOURCES:
         doc = pymupdf.open(fetch(year, args.refresh))
-        if year in PROGRAM_SECTIONS:
+        if year == FORAGER_YEAR:
+            # Imported here: pipeline.parse_forager uses this module's text().
+            from pipeline.parse_forager import entries as forager_entries
+
+            entries = forager_entries(doc)
+        elif year in PROGRAM_SECTIONS:
             entries = parse_program(doc, year)
         else:
             entries = parse_guide(doc, last_first=year in LAST_FIRST_YEARS)

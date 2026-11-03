@@ -9,6 +9,9 @@ type ExpoEntry = {
   advisor: string | null
   abstract: string
   url: string // the program PDF, opening at the abstract's page
+  // Where the abstract is from when the program printed none (Expo 2020's
+  // one project never posted online has the student's abstract from elsewhere).
+  abstract_source: { name: string; url: string } | null
 }
 type Project = { id: string; share: number; title: string; grant: Grant | null; expo: ExpoEntry[] }
 type Source = '' | 'surg' | 'expo'
@@ -601,6 +604,13 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
             Expo {s.year} listing (PDF) <ExternalIcon />
           </a>
         ))}
+        {parts
+          .filter((s) => s.abstractSource)
+          .map((s) => (
+            <a key={`${s.key}-abstract`} href={s.abstractSource!.url} target="_blank" rel="noreferrer">
+              Abstract: {s.abstractSource!.name} <ExternalIcon />
+            </a>
+          ))}
       </div>
     </article>
   )
@@ -608,7 +618,15 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
 
 type Student = { name: string; advisors: string[] }
 // url is the first listing's.
-type Section = { key: string; year: number; title: string; students: Student[]; abstract: string; url: string }
+type Section = {
+  key: string
+  year: number
+  title: string
+  students: Student[]
+  abstract: string
+  url: string
+  abstractSource: ExpoEntry['abstract_source']
+}
 
 function sameSet(a: string[], b: string[]) {
   return a.length === b.length && a.every((x) => b.includes(x))
@@ -633,7 +651,7 @@ function sections(expo: ExpoEntry[]): Section[] {
   for (const e of expo) {
     let s = byAbstract.get(e.abstract)
     if (!s) {
-      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, url: e.url }
+      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, url: e.url, abstractSource: e.abstract_source }
       byAbstract.set(e.abstract, s)
     }
     const advisors = e.advisor ? advisorNames(e.advisor) : []
