@@ -535,9 +535,13 @@ mark {
   stroke: var(--accent);
 }
 
+/* Centering the line box centers the caps on the icon, but the icon's
+   weight is in its tray, so the status reads as high. Down 1px, its
+   lowercase centers on the tray. */
 .share .status {
   font-size: var(--text-small);
   color: var(--muted);
+  translate: 0 1px;
   transition: opacity 0.6s;
 }
 
