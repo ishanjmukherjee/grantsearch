@@ -8,11 +8,20 @@ events (ids 1000-3500 were checked); only event 54's are kept.
 
 Each presentation gets a directory, data/raw/forager/<id>/, holding
 presentation.json as the API serves it and the files it links to: the poster
-or slides as poster.pdf (65 of them) and the platform's thumbnail of its
-first page as thumbnail.jpg. The API's other routes for an event's
-presentations, its public comments and the event itself require a login.
-The videos (64 voiceovers and 8 video presentations) are on YouTube; their ids
-are in the JSON, and they are not downloaded.
+or slides as poster.pdf (71 of them) and the platform's thumbnail of its
+first page as thumbnail.jpg. The videos (64 voiceovers and 8 video
+presentations) are on YouTube; their ids are in the JSON, and they are not
+downloaded.
+
+The API's routes for an event's listing, public comments and the event
+itself now require a login, but the Wayback Machine captured some of what the
+site's API served during the event, on 2020-05-28. ARCHIVED pins those
+captures, read in their original form (Wayback's id_ form):
+- listing.json, the event's full listing, which alone gives each
+  presentation's subject tags (and confirms the 83);
+- <id>/comments.json, the public comments on the two presentations whose
+  comments were captured (2180 and 2207);
+- institution.json, Northwestern's entry in the platform's institutions.
 
 Email addresses are the one thing deliberately not kept:
 - In the JSON, a key naming an email is removed with its value, and the run
@@ -43,11 +52,24 @@ EVENT = 54
 IDS = range(2017, 2313)
 HEADERS = {"User-Agent": "grantsearch/0.1 (student research search tool)"}
 
+WAYBACK = "https://web.archive.org/web"
+# The API the site called in 2020, before it moved to the address above.
+SITE_API = "https://symposium.foragerone.com/api"
+# Saved path: (capture timestamp, route on SITE_API).
+ARCHIVED = {
+    "listing.json": ("20200528183743", "presentations?institutionCodeOrHash=northwestern&q="),
+    "2180/comments.json": ("20200528174233", "comments?institutionCodeOrHash=northwestern&posterId=2180&hash=2180"),
+    "2207/comments.json": ("20200528174347", "comments?institutionCodeOrHash=northwestern&posterId=2207&hash=2207"),
+    "institution.json": ("20200528174228", "institutions"),
+}
+
 EMAIL_KEY = re.compile(r"e-?mail", re.I)
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 # The signed file URLs name the platform's Google service account
 # ("...-compute@developer.gserviceaccount.com"), which is not a person's.
 SERVICE_ACCOUNT = re.compile(r"[\w.-]+@[\w.-]*gserviceaccount\.com")
+# Keys that name email domains the event accepted, not anyone's address.
+NOT_ADDRESSES = {"validEmails"}
 # Thumbnails are the first page rendered at 200 dpi.
 THUMB_SCALE = 200 / 72
 
@@ -57,7 +79,7 @@ def strip_emails(value, dropped: set, path: str = ""):
     if isinstance(value, dict):
         out = {}
         for k, v in value.items():
-            if EMAIL_KEY.search(k):
+            if EMAIL_KEY.search(k) and k not in NOT_ADDRESSES:
                 dropped.add(re.sub(r"\[\d+\]", "[]", f"{path}.{k}"))
             else:
                 out[k] = strip_emails(v, dropped, f"{path}.{k}")
@@ -90,6 +112,28 @@ def get(client: httpx.Client, url: str) -> httpx.Response:
                 return resp
         time.sleep(2 ** attempt)
     return resp
+
+
+def save_json(path: Path, data, dropped: set) -> None:
+    data = strip_emails(data, dropped)
+    if left := email_paths(data):
+        raise SystemExit(f"{path}: an email address is left at {left}")
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+
+
+def fetch_archived(client: httpx.Client, dropped: set) -> None:
+    """Save each ARCHIVED capture not saved yet."""
+    for name, (ts, route) in ARCHIVED.items():
+        path = OUT / name
+        if path.exists():
+            continue
+        resp = get(client, f"{WAYBACK}/{ts}id_/{SITE_API}/{route}")
+        resp.raise_for_status()
+        data = resp.json()
+        if name == "institution.json":
+            (data,) = [i for i in data if i.get("institutionCode") == "northwestern"]
+        save_json(path, data, dropped)
+        time.sleep(2)
 
 
 def background(page: pymupdf.Page, rect: pymupdf.Rect) -> tuple[int, int, int]:
@@ -175,11 +219,8 @@ def main() -> None:
                 if data.get("eventId") != EVENT:
                     other[f"event {data.get('eventId')}"] += 1
                     continue
-                data = strip_emails(data, dropped)
-                if left := email_paths(data):
-                    raise SystemExit(f"presentation {pid}: an email address is left at {left}")
                 d.mkdir()
-                (d / "presentation.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
+                save_json(d / "presentation.json", data, dropped)
                 time.sleep(0.3)
             pres = json.loads((d / "presentation.json").read_text())
             kept.append(pid)
@@ -201,6 +242,8 @@ def main() -> None:
                     redactions[str(pid)] = boxes
             if "thumbnail" in fresh and str(pid) in redactions:
                 paint_thumbnail(d, redactions[str(pid)])
+
+        fetch_archived(client, dropped)
 
     log_path.write_text(json.dumps(dict(sorted(redactions.items())), indent=1) + "\n")
     print(json.dumps({

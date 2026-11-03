@@ -1,0 +1,150 @@
+[
+  {
+    "commentId": 5024,
+    "comment": "Hi June, excellent talk! This reminds me a little of the Wiki Game. Have you looked at how the performance of Snowballer and hand searches depends on the input papers you choose? Or how the performance depends on the structure of the paper network (e.g., how connected and clustered papers are)?",
+    "posterId": 2180,
+    "consumerId": 3138,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-27T15:59:04.000Z",
+    "deleteDate": null,
+    "firstName": "Alexandria",
+    "lastName": "Volkening",
+    "comments": [
+      {
+        "commentId": 5077,
+        "comment": "Thank you and thanks for the questions!\n\nYes, the performance differences between Snowballer and hand searches differ depending on the input papers. One way that this can happen is if the input papers mention papers in the full text without citing them in the references. This was actually the case with our validation experiment, where the input papers were themselves meta-analysis studies, so some input papers would list the works that were included in their meta-analysis in the Appendix/supporting materials but would not actually add them in the references. Snowballer only has access to the citations between papers that are stored in scholarly databases, so it obviously couldn't get access to mentions of papers within the full text like human readers could. This is a rare case though, but I think it's cool that I got to do a validation experiment with this particular data because I have confidence in the model's performance after seeing this more-conservative estimate still being pretty high (88% recovery in the first iteration, 98% in the second - shown in the network graphs).\n\nWith regards to whether the structure of the paper network impacts performance, that's a good question and I haven't looked at this in detail, but my guess is not so much.\n\nFor one, when Snowballer is finding connections between papers, it's working directly off of a portion of a scholarly database (specifically, the open-source Microsoft Academic database) that I have downloaded and pre-processed, so it's very fast. For example, just finding all the connections to the paper for the software R (with 100,000+ citations) only takes a couple minutes (although you then still need to scrape online for abstracts and such). So while there are performance differences in terms of speed depending on the size of the network, I think they're pretty negligible, at least for the scale of meta-analysis research.\n\nA second important feature is that Snowballer is limited to running a single snowball search at once. The design philosophy of Snowballer is that it should be supervised - the researcher(s) should filter the output of the previous iteration to narrow down only the papers that are relevant before running the next iteration (this process detailed in the \"Pilot Study\" section under \"Implementation\"). Hence the computer-\"assisted\" snowball search. So even if Snowballer stumbles upon a connection to a highly-cited paper (like the paper for R) and taps into a very large and dense network, if that paper is not relevant to the research question then the researcher has the chance to throw that out before running the next iteration so that it doesn't return a lot of noise in the output. So this design is a way of safeguarding against highly cited papers sabotaging the snowball search process and making it unmanageable for human coders.\n\nI hope this answers your question!\n",
+        "posterId": 2180,
+        "consumerId": 3115,
+        "flaggerId": null,
+        "parentCommentId": 5024,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-27T18:21:00.000Z",
+        "deleteDate": null,
+        "firstName": "June",
+        "lastName": "Choe"
+      },
+      {
+        "commentId": 5078,
+        "comment": "",
+        "posterId": 2180,
+        "consumerId": -1,
+        "flaggerId": null,
+        "parentCommentId": 5024,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-27T18:21:05.000Z",
+        "deleteDate": "2020-05-27T18:21:11.000Z",
+        "firstName": "",
+        "lastName": ""
+      },
+      {
+        "commentId": 5080,
+        "comment": "",
+        "posterId": 2180,
+        "consumerId": -1,
+        "flaggerId": null,
+        "parentCommentId": 5024,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-27T18:22:08.000Z",
+        "deleteDate": "2020-05-27T18:22:12.000Z",
+        "firstName": "",
+        "lastName": ""
+      }
+    ]
+  },
+  {
+    "commentId": 5083,
+    "comment": "Hi everyone, thanks for stopping by! I just wanted to let you all know that I am in Korea (+14 hours from CST), so I may be responding to comments with some delays.\n\n\nAnd if you'd like more information, there are supporting materials in the bottom right corner of my poster!\n\n\nThanks!",
+    "posterId": 2180,
+    "consumerId": 3115,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-27T18:25:07.000Z",
+    "deleteDate": null,
+    "firstName": "June",
+    "lastName": "Choe",
+    "comments": []
+  },
+  {
+    "commentId": 5110,
+    "comment": "Thanks for the response, June! I'll keep this in mind the next time I'm searching for papers to cite for research :-). What are your next steps for this project?",
+    "posterId": 2180,
+    "consumerId": 3138,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-27T18:54:56.000Z",
+    "deleteDate": null,
+    "firstName": "Alexandria",
+    "lastName": "Volkening",
+    "comments": [
+      {
+        "commentId": 5289,
+        "comment": "My plans for right now is to get a more feedback from meta-analysis researchers (and other who might find this useful, like bibliometricians) so I can finalize the design and functionalities of Snowballer. Related to that, I'm also in the process of figuring out how to host Snowballer online so more people can try it out. My end goal is to hopefully to write up a small methods paper/a companion paper to the actual meta-analysis project that this was piloted in with help from faculty and grad student mentors in the lab!",
+        "posterId": 2180,
+        "consumerId": 3115,
+        "flaggerId": null,
+        "parentCommentId": 5110,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-28T05:04:32.000Z",
+        "deleteDate": null,
+        "firstName": "June",
+        "lastName": "Choe"
+      }
+    ]
+  },
+  {
+    "commentId": 5111,
+    "comment": "Hey June, great presentation! I was wondering what the benefits are for doing the snowball search by hand? It seems like an extremely labor-intensive endeavor to evaluate so many sources and a very automatable process (which you have accomplished well). Is there a trade-off for the automation of snowballing?  If so, how will you incorporate the benefits of hand snowball searching in the future to improve the performance of Snowballer?",
+    "posterId": 2180,
+    "consumerId": 3158,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-27T18:55:56.000Z",
+    "deleteDate": null,
+    "firstName": "Christopher",
+    "lastName": "Lee",
+    "comments": [
+      {
+        "commentId": 5286,
+        "comment": "These are good important question! I think there are a few ways of looking at them, but what I personally think is that there already exists a trade-off between the breadth of snowball search and the depth of the actual analysis given limited resources, and Snowballer simply minimizes the cost of that trade-off between breadth vs. depth. With regards to how Snowballer can incorporate the benefits of both human- and automated-approaches, what Snowballer currently does is that it automates the search process but the design intends for researchers to screen the output of one iteration to keep only the relevant papers as the input to the next iteration to guide the search process. Snowballer hasn't been tested enough to fully understand the consequences of the computer-assisted snowballing, but I hope to look more into it in the future! Hope that answers your questions!",
+        "posterId": 2180,
+        "consumerId": 3115,
+        "flaggerId": null,
+        "parentCommentId": 5111,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-28T04:54:04.000Z",
+        "deleteDate": null,
+        "firstName": "June",
+        "lastName": "Choe"
+      }
+    ]
+  },
+  {
+    "commentId": 5472,
+    "comment": "Nice presentation, June! Just curious...is the search output limited to open-access papers or are you able to pull in all relevant literature?",
+    "posterId": 2180,
+    "consumerId": 3260,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-28T17:06:36.000Z",
+    "deleteDate": null,
+    "firstName": "Tina",
+    "lastName": "Grieco-Calub",
+    "comments": []
+  }
+]

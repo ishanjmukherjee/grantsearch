@@ -1,0 +1,122 @@
+[
+  {
+    "commentId": 5246,
+    "comment": "Did you add any factors that might potentially affect the prediction? For example, major events that happened during a certain time period?",
+    "posterId": 2207,
+    "consumerId": 3206,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-28T01:16:15.000Z",
+    "deleteDate": null,
+    "firstName": "Cindy",
+    "lastName": "Hu",
+    "comments": [
+      {
+        "commentId": 5259,
+        "comment": "Great question! Regarding any special events, we did not hard code any because we wanted to keep the forecasts just based on polling data for this project. We would, however, expect that major events would be reflected in polls conducted afterwards. As for other factors such as possible polling uncertainty, we did introduce random noise in addition to the gamma and beta parameters you see on the third slide. This is what resulted in the different outcomes for each simulation.",
+        "posterId": 2207,
+        "consumerId": 3178,
+        "flaggerId": null,
+        "parentCommentId": 5246,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-28T01:30:14.000Z",
+        "deleteDate": null,
+        "firstName": "William",
+        "lastName": "He"
+      }
+    ]
+  },
+  {
+    "commentId": 5275,
+    "comment": "Hi Chris and William,\nnice work and nice presentation. I have a couple of questions. \nIt did not become clear to me what the temporal evolution of your ODEs represents. Is it meant to be the evolution of public opinion over the months/weeks before the election or is only the final stationary state the relevant output?\n It is not obvious to me why the I_D population, say, is only affected by the I_D and the S, but not by the I_R. ",
+    "posterId": 2207,
+    "consumerId": 3211,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-28T03:02:58.000Z",
+    "deleteDate": null,
+    "firstName": "Hermann",
+    "lastName": "Riecke",
+    "comments": [
+      {
+        "commentId": 5280,
+        "comment": "Thanks for the questions! I am not sure I fully understand your first question, but I believe it may stem from the fact that the equations shown on the PowerPoint are a simplified version of what we actually used, in that it is missing a term: we also add a Wiener process to each ODE, causing a certain strength of noise per time. As a result of this, we do not ever get to a stationary state and instead examine the results at whichever month we decide to cut it off. For example if we want an August forecast, we only use the polls up to August and evaluate the ODEs up to August, then look at the I_D and I_R values at that point. If we do not use noise, then we would indeed have a stationary state and thus consistent result every time since it would be based solely on the polls and parameters. Please let me know if this isn't clear or if you're asking about something else!\n\nAs for the influence on I_D, the adoption of opinions in our model is such that for a Republican voter (I_R) to become a Democrat voter (I_D), they must first transition to undecided (S). That is why I_D is affected by S (to reflect people changing from undecided to Democrat) and by I_D itself (to reflect people shifting from Democrat to undecided).",
+        "posterId": 2207,
+        "consumerId": 3178,
+        "flaggerId": null,
+        "parentCommentId": 5275,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-28T04:05:22.000Z",
+        "deleteDate": null,
+        "firstName": "William",
+        "lastName": "He"
+      }
+    ]
+  },
+  {
+    "commentId": 5276,
+    "comment": "Very nice work!  One basic question: do you weight all polls equally?  If not, what factors determine the weights?  Another question that came to mind is your evaluation metric.  Since most states' electoral votes are either \"all or none,\" you evaluate each state with a binary metric (predicted correctly or not).  Have you thought about using a metric that penalizes when your forecast is far from the true number of statewide votes, even if the state winner is correct?  That might make your accuracy graph on slide 4 look a bit different.",
+    "posterId": 2207,
+    "consumerId": 3213,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-28T03:15:50.000Z",
+    "deleteDate": null,
+    "firstName": "Daniel",
+    "lastName": "Abrams",
+    "comments": [
+      {
+        "commentId": 5285,
+        "comment": "Thanks Professor Abrams! We do in fact weight all polls equally at the moment, but it would be very interesting to explore the case if we do not. One way we could do this would be like FiveThirtyEight's \"Pollster Ratings\", which considers factors such as their average error in previous elections, with recent results weighted more heavily (538 even bans a few pollsters). I also really appreciate the suggestion about using a metric that considers if our forecasts are close or far from the true results. That would indeed result in a different accuracy graph, and I'll definitely look into it! One interesting consideration I can think of right now is that because we did not forecast all states individually due to computing limitations (we only did swing states, and then bundled \"safe\" states together), this means that comparing our forecasts to the true numbers might be a bit difficult for those safe states. For example, if we actually computed those safe states individually, we might find that we over-predict some and under-predict others, but this could all cancel out when we group the states together, causing it to look like our accuracy was perfect. One next step that we do plan on investigating, which is similar to what you suggest, is to investigate the confidence of our forecasts and if those were reflected in the true results. For example, if we predicted a toss-up around 50%, we would expect that about half of those predictions came true. Meanwhile if we predicted about 70%, we would hope to see that about 70% of those forecasts were correct.",
+        "posterId": 2207,
+        "consumerId": 3178,
+        "flaggerId": null,
+        "parentCommentId": 5276,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-28T04:38:01.000Z",
+        "deleteDate": null,
+        "firstName": "William",
+        "lastName": "He"
+      }
+    ]
+  },
+  {
+    "commentId": 5444,
+    "comment": "Very cool work! I think the differentiation between swing states and all states in the accuracy section makes the analysis more robust and answers the questions most would have walking into this presentation. Well done!",
+    "posterId": 2207,
+    "consumerId": 3150,
+    "flaggerId": null,
+    "parentCommentId": null,
+    "flaggedByUserDate": null,
+    "hiddenByAdminDate": null,
+    "createDate": "2020-05-28T16:44:16.000Z",
+    "deleteDate": null,
+    "firstName": "Charles",
+    "lastName": "Stark",
+    "comments": [
+      {
+        "commentId": 5520,
+        "comment": "Hey Charles, thank you for watching the presentation and we appreciate the comment! ",
+        "posterId": 2207,
+        "consumerId": 3158,
+        "flaggerId": null,
+        "parentCommentId": 5444,
+        "flaggedByUserDate": null,
+        "hiddenByAdminDate": null,
+        "createDate": "2020-05-28T17:34:41.000Z",
+        "deleteDate": null,
+        "firstName": "Christopher",
+        "lastName": "Lee"
+      }
+    ]
+  }
+]
