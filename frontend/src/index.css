@@ -10,7 +10,6 @@
   --expo-soft: #e3f2f1;
   --error: #b42318;
   --mark: #ffd6b0;
-  --mark-text: #000000;
   /* Between --text and --muted: abstracts stay readable but sit below titles. */
   --soft: color-mix(in srgb, var(--text) 60%, var(--muted));
   /* Fainter than --border, for rules between results. */
@@ -410,7 +409,7 @@ h1 a {
    with black text on it in both themes. */
 mark {
   background: var(--mark);
-  color: var(--mark-text);
+  color: #000;
 }
 
 .abstract .text.clamped {
