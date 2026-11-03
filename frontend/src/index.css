@@ -1,15 +1,15 @@
 :root {
-  --bg: #f7f6fa;
-  --surface: #ffffff;
-  --text: #1d1b22;
-  --muted: #6b6775;
-  --border: #e3e0ea;
-  --accent: #4e2a84;
-  --accent-soft: #efe9f7;
-  --expo: #0b6e6e;
-  --expo-soft: #e3f2f1;
-  --error: #b42318;
-  --mark: #ffd6b0;
+  --bg: #fdfaf4;
+  --surface: #fffefb;
+  --text: #1d1b26;
+  --muted: #74665b;
+  --border: #e5dfd6;
+  --accent: #683cd2;
+  --accent-soft: #ece9ff;
+  --expo: #007560;
+  --expo-soft: #d7f7ed;
+  --error: #be2323;
+  --mark: #ffcfa1;
   /* Between --text and --muted: abstracts stay readable but sit below titles. */
   --soft: color-mix(in srgb, var(--text) 60%, var(--muted));
   /* Fainter than --border, for rules between results. */
@@ -31,17 +31,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #131217;
-    --surface: #1c1a22;
-    --text: #ebe8f2;
-    --muted: #9c97a8;
-    --border: #2f2c38;
-    --accent: #b9a1e0;
-    --accent-soft: #2c2440;
-    --expo: #7fd1cc;
-    --expo-soft: #183331;
-    --error: #ff8a80;
-    --mark: #f2b78a;
+    --bg: #12111c;
+    --surface: #1e1c2b;
+    --text: #efebe2;
+    --muted: #9e9cb0;
+    --border: #323044;
+    --accent: #b19fff;
+    --accent-soft: #33285d;
+    --expo: #66d5ba;
+    --expo-soft: #0d382f;
+    --error: #fb8276;
+    --mark: #f9b786;
   }
 }
 
