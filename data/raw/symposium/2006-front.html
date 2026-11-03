@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>  </title>
+  <meta name="Author" content="S. P. Donohue">
+  <meta name="LastAuthor" content="gpu730">
+  <meta name="Company" content="Northwestern University">
+  <meta name="CreationTime" content="2006-05-16T09:45:00Z">
+  <meta name="ModificationTime" content="2006-05-16T09:45:00Z">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 16.0px Times}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 48.0px Times}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 36.0px 'Wingdings 2'}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px Times; min-height: 29.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 28.0px Times}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p11 {margin: 0.0px 54.0px 0.0px 36.0px; text-align: justify; font: 12.0px Times; color: #000000}
+    p.p12 {margin: 0.0px 54.0px 0.0px 36.0px; text-align: justify; font: 12.0px Times; color: #000000; min-height: 14.0px}
+    p.p13 {margin: 0.0px 54.0px 0.0px 36.0px; text-align: justify; font: 12.0px Times}
+    p.p14 {margin: 0.0px 54.0px 0.0px 36.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p15 {margin: 0.0px 54.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p16 {margin: 0.0px 54.0px 0.0px 0.0px; font: 12.0px Times}
+    p.p17 {margin: 0.0px 0.0px 0.0px 4.5px; text-align: center; line-height: 21.0px; font: 12.0px Times}
+    p.p18 {margin: 0.0px 0.0px 0.0px 4.5px; text-align: center; line-height: 21.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p19 {margin: 0.0px 0.0px 0.0px 4.5px; text-align: center; line-height: 21.0px; font: 24.0px Times}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 21.0px; font: 26.0px Times}
+    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 22.0px Times; min-height: 28.0px}
+    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 22.0px Times}
+    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Times; min-height: 23.0px}
+    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px 'Wingdings 2'}
+    p.p25 {margin: 0.0px 0.0px 0.0px 72.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p26 {margin: 6.0px 0.0px 0.0px 72.0px; font: 12.0px Times}
+    p.p27 {margin: 6.0px 0.0px 0.0px 121.5px; text-indent: -49.5px; font: 12.0px Times}
+    p.p28 {margin: 0.0px 0.0px 0.0px 72.0px; font: 12.0px Times}
+    p.p29 {margin: 0.0px 36.0px 0.0px 36.0px; text-align: center; font: 16.0px Times; min-height: 19.0px}
+    p.p30 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -36.0px; font: 20.0px Times}
+    p.p31 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -36.0px; font: 10.0px Times; color: #000000; min-height: 13.0px}
+    p.p32 {margin: 0.0px 0.0px 0.0px 126.0px; text-indent: -18.0px; line-height: 21.0px; font: 10.0px Times; color: #000000}
+    p.p33 {margin: 0.0px 0.0px 0.0px 72.0px; text-indent: 36.0px; line-height: 21.0px; font: 10.0px Times; color: #000000}
+    p.p34 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -36.0px; font: 24.0px 'Wingdings 2'; min-height: 25.0px}
+    p.p35 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -36.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p36 {margin: 0.0px 0.0px 0.0px 108.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p37 {margin: 0.0px 0.0px 0.0px 126.0px; text-indent: -18.0px; line-height: 21.0px; font: 10.0px Times}
+    p.p38 {margin: 0.0px 0.0px 0.0px 72.0px; text-indent: 36.0px; line-height: 21.0px; font: 10.0px Times}
+    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 21.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p40 {margin: 0.0px 0.0px 0.0px 108.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p41 {margin: 3.0px 0.0px 0.0px 108.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p42 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -36.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p43 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -36.0px; font: 28.0px Times}
+    p.p44 {margin: 0.0px 0.0px 0.0px 72.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p45 {margin: 3.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px}
+    p.p46 {margin: 6.0px 0.0px 0.0px 108.0px; font: 14.0px Times}
+    p.p47 {margin: 0.0px 0.0px 0.0px 72.0px; font: 10.0px Times}
+    p.p48 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -18.0px; font: 10.0px Times}
+    p.p49 {margin: 0.0px 0.0px 0.0px 108.0px; font: 8.0px Times; min-height: 10.0px}
+    p.p50 {margin: 0.0px 0.0px 0.0px 90.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p51 {margin: 3.0px 90.0px 0.0px 108.0px; text-align: right; font: 8.0px Times}
+    p.p52 {margin: 0.0px 0.0px 0.0px 108.0px; text-indent: -18.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p53 {margin: 0.0px 0.0px 0.0px 108.0px; font: 20.0px Times; min-height: 24.0px}
+    p.p54 {margin: 6.0px 0.0px 0.0px 108.0px; text-indent: -36.0px; font: 14.0px Times}
+    p.p55 {margin: 0.0px 0.0px 0.0px 90.0px; font: 12.0px Times; color: #000000}
+    p.p56 {margin: 0.0px 0.0px 0.0px 90.0px; font: 10.0px Times}
+    p.p57 {margin: 0.0px 0.0px 0.0px 108.0px; font: 14.0px Times}
+    p.p58 {margin: 0.0px 0.0px 0.0px 90.0px; line-height: 21.0px; font: 10.0px Times}
+    p.p59 {margin: 3.0px 0.0px 0.0px 0.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p60 {margin: 3.0px 0.0px 0.0px 72.0px; font: 10.0px Times; min-height: 13.0px}
+    p.p61 {margin: 3.0px 0.0px 0.0px 108.0px; text-align: right; font: 8.0px Times; min-height: 10.0px}
+    p.p62 {margin: 3.0px 0.0px 0.0px 108.0px; font: 8.0px Times; min-height: 10.0px}
+    p.p63 {margin: 3.0px 0.0px 0.0px 72.0px; font: 8.0px Times; min-height: 10.0px}
+    p.p64 {margin: 3.0px 0.0px 0.0px 72.0px; font: 10.0px Times}
+    p.p65 {margin: 2.0px 0.0px 0.0px 0.0px; font: 8.0px Times; min-height: 10.0px}
+    p.p66 {margin: 2.0px 0.0px 0.0px 90.0px; text-align: right; font: 8.0px Times}
+    p.p67 {margin: 2.0px 0.0px 0.0px 72.0px; font: 10.0px Times}
+    span.s1 {font: 12.0px Times}
+    span.s2 {font: 24.0px 'Wingdings 2'}
+    span.s3 {color: #000000}
+    span.s4 {text-decoration: underline}
+    span.s5 {font: 12.0px Times; text-decoration: underline}
+    span.s6 {font: 28.0px 'Wingdings 2'}
+    span.s7 {font: 8.0px Times}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><br></p>
+<p class="p3">The Fourth Annual</p>
+<p class="p2"><br></p>
+<p class="p4"><b>UNDERGRADUATE RESEARCH SYMPOSIUM</b></p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><br></p>
+<p class="p5"></p>
+<p class="p6"><br></p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p1"><br></p>
+<p class="p7"><b>Monday, May 22, 2006</b></p>
+<p class="p8"><br></p>
+<p class="p2"><br></p>
+<p class="p9"><b>Sponsored by the Office of the Provost</b></p>
+<p class="p10"></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p11">May 22, 2006</p>
+<p class="p12"><br></p>
+<p class="p11">To Members of the Northwestern Community:</p>
+<p class="p12"><br></p>
+<p class="p11">Today marks the fourth annual Undergraduate Research Symposium at Northwestern University. The exceptional scholarly and creative accomplishments of more than 100 of our undergraduates are on display in the form of posters and presentations. Northwestern is extraordinarily proud of these students and the work that they have done. Projects from across the University are represented: natural sciences, humanities, engineering, social sciences, and fine arts.</p>
+<p class="p12"><br></p>
+<p class="p13">The time, energy, and thought that went into the creation of this work are remarkable. Equally praiseworthy is the investment made by the faculty mentors of these students. Northwestern faculty members have again shown themselves to be eager to help students become active participants in the scholarly and creative work for which they, our faculty, are justly celebrated.</p>
+<p class="p12"><br></p>
+<p class="p11">I know you look forward as I do to a day of exciting and captivating new ideas.</p>
+<p class="p12"><br></p>
+<p class="p11">Sincerely yours,</p>
+<p class="p12"><br></p>
+<p class="p11">Lawrence B. Dumas</p>
+<p class="p11">Provost</p>
+<p class="p14"><br></p>
+<p class="p15"><br></p>
+<p class="p16"></p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p15"><br></p>
+<p class="p17"></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p18"><br></p>
+<p class="p19"><b>The</b> <b>Fourth Annual<span class="Apple-converted-space"> </span></b></p>
+<p class="p20"><b>Undergraduate Research Symposium</b><b></b></p>
+<p class="p21"><b></b><br></p>
+<p class="p22"><b>Monday, May 22, 2006</b></p>
+<p class="p23"><b></b><br></p>
+<p class="p9"><b>Norris University Center</b></p>
+<p class="p23"><b></b><br></p>
+<p class="p23"><b></b><br></p>
+<p class="p23"><b></b><br></p>
+<p class="p23"><b></b><br></p>
+<p class="p24"></p>
+<p class="p23"><b></b><br></p>
+<p class="p23"><b></b><br></p>
+<p class="p23"><b></b><br></p>
+<p class="p23"><b></b><br></p>
+<p class="p3"><b>Program of Events</b></p>
+<p class="p25"><br></p>
+<p class="p26"><b>11:00</b> <span class="Apple-tab-span">	</span>First Poster Session, Louis Room</p>
+<p class="p27"><b>1:00</b> <span class="Apple-tab-span">	</span>Plenary Session: Presentation of Special Student Projects, Michigan Room, Iowa Room, and Indiana Room</p>
+<p class="p26"><b>2:30</b><span class="Apple-tab-span">	</span>Second Poster Session, Louis Room</p>
+<p class="p26"><b>4:30</b> <span class="Apple-tab-span">	</span>Awards Ceremony: Lawrence B. Dumas, Provost</p>
+<p class="p28"><span class="Apple-tab-span">	</span>Northwestern Room</p>
+<p class="p26"><b>4:45</b><span class="Apple-tab-span">	</span>Reception, Northwestern Room</p>
+<p class="p29"><b></b><br></p>
+<p class="p29"><b></b><br></p>
+<p class="p29"><b></b><br></p>
+<p class="p1"><b></b><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p30"><span class="s1"><b></b></span><span class="s2"><span class="Apple-tab-span">	</span></span><b>2006 Steering Committee</b></p>
+<p class="p31"><br></p>
+<p class="p31"><br></p>
+<p class="p31"><br></p>
+<p class="p32">Steven Fisher, Associate Provost</p>
+<p class="p32">Christopher Hayden, Coordinator</p>
+<p class="p33">Stephen Carr, Associate Dean, McCormick</p>
+<p class="p32">Sheila Donohue, WCAS</p>
+<p class="p32">Susan Dun, Assistant Dean, Communication</p>
+<p class="p32">Richard Gaber, WCAS</p>
+<p class="p32">Susan Olson, Assistant Dean, Education &amp; Social Policy</p>
+<p class="p32">Helen Schwartzman , WCAS</p>
+<p class="p32">Allen Taflove, McCormick</p>
+<p class="p32">David Uttal, WCAS</p>
+<p class="p34"><br></p>
+<p class="p34"><br></p>
+<p class="p30"><span class="s2"><span class="Apple-tab-span">	</span></span><b>Faculty Judges</b></p>
+<p class="p35"><b></b><br></p>
+<p class="p35"><b></b><br></p>
+<p class="p36"><br></p>
+<p class="p37">Richard Ashley, School of Music</p>
+<p class="p37">Henry Binford, History, WCAS</p>
+<p class="p37">Timothy Breen, History, WCAS</p>
+<p class="p37">James Brown, Anthropology, WCAS</p>
+<p class="p37">Stephen Carr, Associate Dean, Materials Science and Engineering, McCormick</p>
+<p class="p37">Catherine Durbin, Psychology, WCAS</p>
+<p class="p37">Stephen Eisenman, Art History, WCAS</p>
+<p class="p37">David Ferster, Neurobiology and Physiology, WCAS</p>
+<p class="p37">Richard Gaber, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p37">Wendi Gardner, Psychology, WCAS</p>
+<p class="p37">Erwin Goldberg, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p37">Jay Grossman, English and American Studies, WCAS</p>
+<p class="p37">Spyridon Konstantopoulos, Human Development and Social Policy, and SESP</p>
+<p class="p37">Christopher Kuzawa, Anthropology, WCAS</p>
+<p class="p37">Carole LaBonne, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p37">Wan Shun Eva Lam, Learning Sciences, SESP and Asian American Studies, WCAS</p>
+<p class="p37">Charles Larson, Communication Sciences and Disorders, School of Communication</p>
+<p class="p37">Jacob Lassner, History, WCAS</p>
+<p class="p37">William Leonard, Anthropology, WCAS</p>
+<p class="p37">Frederick Lewis, Chemistry, WCAS</p>
+<p class="p37">Andreas Matouschek, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p37">Alfonso Mondragon, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p37">Richard Morimoto, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p38">Indira Raman, Neurobiology and Physiology, WCAS</p>
+<p class="p38">Jane Rankin, Assistant Dean, School of Communication</p>
+<p class="p38">William Reno, Political Science, WCAS</p>
+<p class="p38">Jennifer Richeson, Psychology, WCAS</p>
+<p class="p38">Lance Rips, Psychology, WCAS</p>
+<p class="p38">Helen Schwartzman, Anthropology, WCAS</p>
+<p class="p37"><span class="s3">Mark Segraves,</span><span class="s1"> </span>Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p37">Erik Sontheimer, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p37">Allen Taflove, Electrical Engineering and Computer Sciences, McCormick</p>
+<p class="p37">Eric Weiss, Biochemistry, Molecular Biology, and Cell Biology, WCAS</p>
+<p class="p39"><br></p>
+<p class="p40"><br></p>
+<p class="p41"><span class="s4"></span><br></p>
+<p class="p42"><span class="s4"></span><br></p>
+<p class="p43"><span class="s5"><b></b></span><span class="s6"><span class="Apple-tab-span">	</span></span><b>Guide to Presentations</b></p>
+<p class="p8"><br></p>
+<p class="p44"><span class="s4"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></span></p>
+<p class="p44"><span class="s4"></span><br></p>
+<p class="p45"><br></p>
+<p class="p30"><span class="s2"><span class="Apple-tab-span">	</span></span><b>Poster Session One</b><b></b></p>
+<p class="p46">Louis Room</p>
+<p class="p2"><br></p>
+<p class="p8"><span class="s4"></span><br></p>
+<p class="p44"><span class="s4"></span><br></p>
+<p class="p47"><b>Natural Sciences and Engineering</b></p>
+<p class="p8"><br></p>
+<p class="p48">1.<span class="Apple-tab-span">	</span>Benjamin LeMoine, Biochemistry</p>
+<p class="p48">2.<span class="Apple-tab-span">	</span>Magdalena Dumin, Biological Sciences</p>
+<p class="p48">3.<span class="Apple-tab-span">	</span>Viola Koti, Biological Sciences</p>
+<p class="p48">4.<span class="Apple-tab-span">	</span>Victor Liu, Biological Sciences</p>
+<p class="p48">5.<span class="Apple-tab-span">	</span>Stephanie Mui, Biological Sciences</p>
+<p class="p48">6.<span class="Apple-tab-span">	</span>Michelle Oeser, Biological Sciences</p>
+<p class="p48">7.<span class="Apple-tab-span">	</span>Valerie Casey, Chemistry</p>
+<p class="p48">8.<span class="Apple-tab-span">	</span>Vina Chhaya, Chemistry</p>
+<p class="p48">9.<span class="Apple-tab-span">	</span>Sandra Goyal, Chemistry</p>
+<p class="p48">10.<span class="Apple-tab-span">	</span>Chandler Robinson, Chemistry</p>
+<p class="p48">11.<span class="Apple-tab-span">	</span>Claire Schmerberg, Chemistry</p>
+<p class="p48">12.<span class="Apple-tab-span">	</span>Bi-Shun Zeng, Chemistry</p>
+<p class="p48">13.<span class="Apple-tab-span">	</span>Caitlin Feehan, Environmental Engineering</p>
+<p class="p48">14.<span class="Apple-tab-span">	</span>Crystal Lee, Anne Mikelonis, Jennifer Kessler, Environmental Engineering</p>
+<p class="p48">15.<span class="Apple-tab-span">	</span>Sohier Dane, Sara Patrawala, Civil Engineering</p>
+<p class="p49"><br></p>
+<p class="p49"><b></b><br></p>
+<p class="p47"><b>Humanities</b></p>
+<p class="p8"><br></p>
+<p class="p48">16.<span class="Apple-tab-span">	</span>Tyler Jaeckel, American Studies</p>
+<p class="p48">17.<span class="Apple-tab-span">	</span>Alison Kanosky, American Studies</p>
+<p class="p48">18.<span class="Apple-tab-span">	</span>Martin Zacharia, American Studies</p>
+<p class="p48">19.<span class="Apple-tab-span">	</span>John McGlothlin, English</p>
+<p class="p48">20.<span class="Apple-tab-span">	</span>Alexander Rothe, German</p>
+<p class="p48">21.<span class="Apple-tab-span">	</span>Megan Blackwelder, History</p>
+<p class="p48">22.<span class="Apple-tab-span">	</span>Elaine Meyer, History</p>
+<p class="p48">23.<span class="Apple-tab-span">	</span>Sagar Shah, History</p>
+<p class="p48">24.<span class="Apple-tab-span">	</span>Olivia Starr, History</p>
+<p class="p49"><br></p>
+<p class="p49"><br></p>
+<p class="p50"><b></b><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p49"><br></p>
+<p class="p49"><br></p>
+<p class="p49"><br></p>
+<p class="p49"><br></p>
+<p class="p49"><br></p>
+<p class="p51"><i>continued</i></p>
+<p class="p47"><b>Social and Behavioral Sciences</b></p>
+<p class="p8"><br></p>
+<p class="p48">25.<span class="Apple-tab-span">	</span>Yaneth Bello, Anthropology</p>
+<p class="p48">26.<span class="Apple-tab-span">	</span>Jaclyn Stewart, Anthropology</p>
+<p class="p48">27.<span class="Apple-tab-span">	</span>Elizabeth Lhost, Cognitive Science</p>
+<p class="p48">28.<span class="Apple-tab-span">	</span>Marina Chernov, Human Communication Sciences and Disorders</p>
+<p class="p48">29.<span class="Apple-tab-span">	</span>Afeefa Ismail, Speech and Language Pathology</p>
+<p class="p48">30.<span class="Apple-tab-span">	</span>Kiara Lee, Human Communication Sciences and Disorders</p>
+<p class="p48">31.<span class="Apple-tab-span">	</span>Roselyn Wilson, Human Communication Sciences and Disorders</p>
+<p class="p48">32.<span class="Apple-tab-span">	</span>Kathleen Sprangers, Communication Studies</p>
+<p class="p48">33.<span class="Apple-tab-span">	</span>Brian Fryd, Economics</p>
+<p class="p48">34.<span class="Apple-tab-span">	</span>Merry Lin, Economics</p>
+<p class="p48">35.<span class="Apple-tab-span">	</span>Misha Mintz-Roth, Economics</p>
+<p class="p48">36.<span class="Apple-tab-span">	</span>Tiffany Grobelski, Environmental Sciences</p>
+<p class="p48">37.<span class="Apple-tab-span">	</span>M. Mercedes Stickler, Environmental Sciences</p>
+<p class="p48">38.<span class="Apple-tab-span">	</span>Christopher Stolte, Human Development &amp; Psychological Services</p>
+<p class="p48">39.<span class="Apple-tab-span">	</span>Cary Frydman, MMSS</p>
+<p class="p48">40.<span class="Apple-tab-span">	</span>Jodi Anderson, Political Science</p>
+<p class="p48">41.<span class="Apple-tab-span">	</span>Melissa Derr, Political Science</p>
+<p class="p48">42.<span class="Apple-tab-span">	</span>Noora Lori, Political Science</p>
+<p class="p48">43.<span class="Apple-tab-span">	</span>Katharine Lum, Political Science</p>
+<p class="p48">44.<span class="Apple-tab-span">	</span>Jessica Hurst, Science in Human Culture</p>
+<p class="p48">45.<span class="Apple-tab-span">	</span>Denia Garcia, Sociology</p>
+<p class="p48">46.<span class="Apple-tab-span">	</span>Natella Mashkevich, Sociology</p>
+<p class="p52"><br></p>
+<p class="p52"><br></p>
+<p class="p48">47.<span class="Apple-tab-span">	</span>Moira Haller, Psychology</p>
+<p class="p48">48.<span class="Apple-tab-span">	</span>Brianne Hess, Psychology</p>
+<p class="p48">49.<span class="Apple-tab-span">	</span>Grace Joo, Psychology</p>
+<p class="p48">50.<span class="Apple-tab-span">	</span>Melissa Liebert, Michael Remolona, Psychology</p>
+<p class="p48">51.<span class="Apple-tab-span">	</span>Ashley E. Mason, Psychology</p>
+<p class="p48">52.<span class="Apple-tab-span">	</span>Gustavo Medrano, Psychology</p>
+<p class="p48">53.<span class="Apple-tab-span">	</span>Rebecca Newland, Rachel Howland, Psychology</p>
+<p class="p48">54.<span class="Apple-tab-span">	</span>Jennifer Rosner, Psychology</p>
+<p class="p48">55.<span class="Apple-tab-span">	</span>Katie Rushkewicz, Psychology</p>
+<p class="p48">56.<span class="Apple-tab-span">	</span>Lauren Scissors, Psychology</p>
+<p class="p48">57.<span class="Apple-tab-span">	</span>Cara Settipani, Psychology</p>
+<p class="p48">58.<span class="Apple-tab-span">	</span>Lauren Skalina, Psychology</p>
+<p class="p48">59.<span class="Apple-tab-span">	</span>Christopher Warren, Psychology</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p30"><span class="s2"><span class="Apple-tab-span">	</span></span><b>Plenary Sessions: Paper Presentations</b></p>
+<p class="p53"><br></p>
+<p class="p54"><b><span class="Apple-tab-span">	</span></b>Michigan Room</p>
+<p class="p8"><span class="s4"></span><br></p>
+<p class="p8"><span class="s4"></span><br></p>
+<p class="p8"><span class="s4"></span><br></p>
+<p class="p55">Theme--Mass Culture and Media Flows</p>
+<p class="p8"><br></p>
+<p class="p56">1.<span class="Apple-tab-span">	</span>Matthew Olson, History</p>
+<p class="p50"><br></p>
+<p class="p56">2.<span class="Apple-tab-span">	</span>Alysa Handelsman, Anthropology</p>
+<p class="p50"><br></p>
+<p class="p56">3.<span class="Apple-tab-span">	</span>Susan Saddawi-Konefka, Communication Studies</p>
+<p class="p50"><br></p>
+<p class="p56">4.<span class="Apple-tab-span">	</span>Whitney Frick, English</p>
+<p class="p50"><br></p>
+<p class="p56">5.<span class="Apple-tab-span">	</span>Devon Liddel, Anthropology</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p57">Indiana Room</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p56">1.<span class="Apple-tab-span">	</span>Andrew Nelson, History</p>
+<p class="p50"><br></p>
+<p class="p56">2.<span class="Apple-tab-span">	</span>Kathleen McHugh, Social Policy</p>
+<p class="p50"><br></p>
+<p class="p56">3.<span class="Apple-tab-span">	</span>Jason Szanyi, Psychology</p>
+<p class="p50"><br></p>
+<p class="p56">4.<span class="Apple-tab-span">	</span>Arturo Menchaca, Radio-TV-Film<span class="Apple-converted-space"> </span></p>
+<p class="p50"><br></p>
+<p class="p56">5.<span class="Apple-tab-span">	</span>Sailakshmi Rangopal, Classics</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p57">Iowa Room</p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p8"><br></p>
+<p class="p56">1.<span class="Apple-tab-span">	</span>Jeffrey Kaplan, Astronomy</p>
+<p class="p50"><br></p>
+<p class="p56">2.<span class="Apple-tab-span">	</span>Samantha Cruz, Materials Science Engineering</p>
+<p class="p50"><br></p>
+<p class="p56">3.<span class="Apple-tab-span">	</span>Zhipeng Zhang, Biology</p>
+<p class="p50"><br></p>
+<p class="p58">4.<span class="Apple-tab-span">	</span>Carrie Nieman, Biology</p>
+<p class="p2"><br></p>
+<p class="p44"><span class="s4"></span><br></p>
+<p class="p44"><span class="s4"></span><br></p>
+<p class="p8"><span class="s4"></span><br></p>
+<p class="p44"><span class="s4"></span><br></p>
+<p class="p30"><span class="s2"><span class="Apple-tab-span">	</span></span><b>Poster Session Two</b><b></b></p>
+<p class="p46">Louis Room</p>
+<p class="p59"><span class="s4"></span><br></p>
+<p class="p60"><span class="s4"></span><br></p>
+<p class="p47"><b>Engineering</b></p>
+<p class="p8"><br></p>
+<p class="p48">1.<span class="Apple-tab-span">	</span>Dorothea Li Feng Koh, Biomedical Engineering</p>
+<p class="p48">2.<span class="Apple-tab-span">	</span>William Padula, Andrea Swanson, Biomedical Engineering</p>
+<p class="p48">3.<span class="Apple-tab-span">	</span>Rahul Sawlani, Biomedical Engineering</p>
+<p class="p48">4.<span class="Apple-tab-span">	</span>Parmede Vakil, Robin Brusen, Biomedical Engineering</p>
+<p class="p48">5.<span class="Apple-tab-span">	</span>Drew Gentner, Chemical and Environmental Engineering</p>
+<p class="p48">6.<span class="Apple-tab-span">	</span>Gregory Bok, Computer Engineering</p>
+<p class="p48">7.<span class="Apple-tab-span">	</span>Alec Davis, Materials Science &amp; Engineering</p>
+<p class="p48">8.<span class="Apple-tab-span">	</span>James Rondinelli, Materials Science &amp; Engineering</p>
+<p class="p61"><i></i><br></p>
+<p class="p61"><i></i><br></p>
+<p class="p47"><b>Humanities &amp; Arts</b></p>
+<p class="p8"><br></p>
+<p class="p48">9.<span class="Apple-tab-span">	</span>Kyla Gizzi, Art History</p>
+<p class="p48">10.<span class="Apple-tab-span">	</span>Rachel Shana Wolff, Art History</p>
+<p class="p48">11.<span class="Apple-tab-span">	</span>Daniel Abbe, Comparative Literature</p>
+<p class="p48">12.<span class="Apple-tab-span">	</span>Adrienne Bernhard, English</p>
+<p class="p48">13.<span class="Apple-tab-span">	</span>Wesley Meltzer, History</p>
+<p class="p48">14.<span class="Apple-tab-span">	</span>Kristy Tridhavee, History</p>
+<p class="p48">15.<span class="Apple-tab-span">	</span>Caitlin Buysse, Religion</p>
+<p class="p48">16.<span class="Apple-tab-span">	</span>Katherine John, Theatre</p>
+<p class="p62"><br></p>
+<p class="p63"><b></b><br></p>
+<p class="p64"><b>Natural Sciences</b></p>
+<p class="p49"><br></p>
+<p class="p48">17.<span class="Apple-tab-span">	</span>Steven Ehlert, Astronomy</p>
+<p class="p48">18.<span class="Apple-tab-span">	</span>Alexander W. Hertel-Fernandez, Biological Sciences</p>
+<p class="p48">19.<span class="Apple-tab-span">	</span>Michael Kozminski, Biological Sciences</p>
+<p class="p48">20.<span class="Apple-tab-span">	</span>Dominik Rog, Biological Sciences</p>
+<p class="p48">21.<span class="Apple-tab-span">	</span>Brian Lyle, Chemistry</p>
+<p class="p48">22.<span class="Apple-tab-span">	</span>Piyapa Dejtrakulwong, Geological Sciences</p>
+<p class="p48">23.<span class="Apple-tab-span">	</span>Sam Blinstein, Integrated Science</p>
+<p class="p48">24.<span class="Apple-tab-span">	</span>Thomas M. Lippman, Integrated Science</p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p65"><br></p>
+<p class="p66"><i>continued</i></p>
+<p class="p67"><span class="s7"><i></i></span><b>Social and Behavioral Sciences</b></p>
+<p class="p49"><br></p>
+<p class="p48">25.<span class="Apple-tab-span">	</span>Paulina Blackinton, Anthropology</p>
+<p class="p48">26.<span class="Apple-tab-span">	</span>Jonathan Davis, Anthropology</p>
+<p class="p48">27.<span class="Apple-tab-span">	</span>Shauna Gardino, Anthropology</p>
+<p class="p48">28.<span class="Apple-tab-span">	</span>Carla Klehm, Anthropology</p>
+<p class="p48">29.<span class="Apple-tab-span">	</span>Megan Portanova, Anthropology</p>
+<p class="p48">30.<span class="Apple-tab-span">	</span>Lauren Scissors, Sociology</p>
+<p class="p48">31.<span class="Apple-tab-span">	</span>Benjamin Rottman, Cognitive Science</p>
+<p class="p48">32.<span class="Apple-tab-span">	</span>Gabriela Cantarero, Human Communication Sciences and Disorders</p>
+<p class="p48">33.<span class="Apple-tab-span">	</span>Vikas Reddy, Legal Studies</p>
+<p class="p48">34.<span class="Apple-tab-span">	</span>Stefanie Brody, Linguistics</p>
+<p class="p48">35.<span class="Apple-tab-span">	</span>Anne Gooch, Linguistics</p>
+<p class="p48">36.<span class="Apple-tab-span">	</span>Shawn Crowley, Political Science</p>
+<p class="p48">37.<span class="Apple-tab-span">	</span>Samir Mayekar, Political Science</p>
+<p class="p48">38.<span class="Apple-tab-span">	</span>Rabeah Sabri, Political Science</p>
+<p class="p48">39.<span class="Apple-tab-span">	</span>Christopher Tansey, Political Science</p>
+<p class="p48">40.<span class="Apple-tab-span">	</span>Keith Weghorst, Political Science</p>
+<p class="p52"><br></p>
+<p class="p48">41.<span class="Apple-tab-span">	</span>Michelle Ha, Psychology</p>
+<p class="p48">42.<span class="Apple-tab-span">	</span>Melissa Liebert, Psychology</p>
+<p class="p48">43.<span class="Apple-tab-span">	</span>Audrey Meyer, Laurie Gallien, Psychology</p>
+<p class="p48">44.<span class="Apple-tab-span">	</span>Natalia Murashev, Emily Kern, Matthew Braslow, Psychology</p>
+<p class="p48">45.<span class="Apple-tab-span">	</span>Sarah Novis, Psychology</p>
+<p class="p48">46.<span class="Apple-tab-span">	</span>Morgan Rowe, Psychology</p>
+<p class="p48">47.<span class="Apple-tab-span">	</span>Stacey Schwimmer, Psychology</p>
+<p class="p48">48.<span class="Apple-tab-span">	</span>Nirav Shah, Psychology</p>
+<p class="p48">49.<span class="Apple-tab-span">	</span>Katherine Shaul, Psychology</p>
+<p class="p48">50.<span class="Apple-tab-span">	</span>Laura Thompson, Psychology</p>
+<p class="p48">51.<span class="Apple-tab-span">	</span>Catherine Vandenboom, Psychology</p>
+<p class="p50"><br></p>
+<p class="p50"><br></p>
+<p class="p36"><br></p>
+<p class="p36"><br></p>
+<p class="p2"><br></p>
+<p class="p36"><br></p>
+</body>
+</html>

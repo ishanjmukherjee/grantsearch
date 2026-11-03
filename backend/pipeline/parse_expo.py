@@ -1,4 +1,6 @@
-"""Parse Undergraduate Research & Arts Expo abstracts, 2012-2026.
+"""Parse Undergraduate Research & Arts Expo abstracts, 2012-2026, and those of
+its predecessor, the Undergraduate Research Symposium, 2003-2011 (see
+pipeline.parse_symposium; their ids start "symposium-").
 
 Expo 2020, held online, has no printed abstracts; its listings come from
 ForagerOne (see pipeline.parse_forager). The printed ones come in two layouts:
@@ -593,16 +595,16 @@ def transcribe(year: int, entries: list[dict]) -> None:
             e["abstract"] = e["abstract"].replace(garbled, fixed)
 
 
-def assign_ids(year: int, entries: list[dict], previous: list[dict]) -> list[dict]:
-    """The entries with ids: an entry's previous id when the last run had an
-    entry of the same title, presenters and page (or, for a corrected title,
-    the only one of the same presenters and page), else the next free number
-    in the year."""
+def assign_ids(year: int, entries: list[dict], previous: list[dict], prefix: str = "expo", source: str | None = None) -> list[dict]:
+    """The entries with ids "<prefix>-<year>-NNN": an entry's previous id when
+    the last run had an entry of the same title, presenters and page (or, for
+    a corrected title, the only one of the same presenters and page), else
+    the next free number in the year. source defaults to the year's in SOURCES."""
 
     def key(e: dict) -> tuple:
         return (e["page"], tuple((p["first"], p["last"]) for p in e["presenters"]))
 
-    previous = [e for e in previous if e["year"] == year]
+    previous = [e for e in previous if e["year"] == year and e["id"].startswith(f"{prefix}-")]
     exact = {(*key(e), e["title"]): e["id"] for e in previous}
     keys = [key(e) for e in previous]
     loose = {k: e["id"] for k, e in zip(keys, previous) if keys.count(k) == 1}
@@ -617,11 +619,11 @@ def assign_ids(year: int, entries: list[dict], previous: list[dict]) -> list[dic
         used.add(id)
         if id is None:
             n += 1
-            while f"expo-{year}-{n:03d}" in taken:
+            while f"{prefix}-{year}-{n:03d}" in taken:
                 n += 1
-            id = f"expo-{year}-{n:03d}"
+            id = f"{prefix}-{year}-{n:03d}"
             taken.add(id)
-        out.append({"id": id, "year": year, **e, "source": SOURCES[year]})
+        out.append({"id": id, "year": year, **e, "source": source or SOURCES[year]})
     return out
 
 
@@ -633,6 +635,14 @@ def main() -> None:
     path = DATA_DIR / "expo_abstracts.json"
     previous = json.loads(path.read_text()) if path.exists() else []
     out = []
+    # Imported here: pipeline.parse_symposium uses this module's text().
+    from pipeline import parse_symposium
+
+    for year in parse_symposium.PROGRAMS:
+        entries = parse_symposium.listings(year)
+        source = parse_symposium.source(parse_symposium.PROGRAMS[year][0])
+        out += assign_ids(year, entries, previous, prefix="symposium", source=source)
+        print(f"{year}: {len(entries)} Symposium listings")
     for year in SOURCES:
         doc = pymupdf.open(fetch(year, args.refresh))
         if year == FORAGER_YEAR:
