@@ -10150,5 +10150,124 @@
     "abstract": null,
     "mmss": false,
     "source": "https://economics.northwestern.edu/undergraduate/major/undergraduate-economics-honors-senior-theses.html"
+  },
+  {
+    "id": "cs-2022-001",
+    "department": "Computer Science",
+    "year": 2022,
+    "academic_year": "2021-2022",
+    "students": [
+      {
+        "first": "Adam",
+        "last": "Wathieu"
+      }
+    ],
+    "advisor": "Shravas Rao",
+    "title": "Exposition of The Kushilevitz Function",
+    "abstract": "While it is known that all Boolean function complexity measures are equivalent up to polynomial factors, some exact relationships are unknown and separations still exist. This project focuses on the suboptimal degree upper bound on sensitivity, and begins by reproving the best known separation, s(f) ≤ deg(f)^2. The Kushilevitz Boolean function provides the largest known gap between the sensitivity of a function and its degree: s(f) = deg(f)^1.63. Creating a function with a larger gap would not only tighten the bound between sensitivity and degree, but also between other complexity measures that are bounded by the Kushilevitz function. This project reasons about creating similar functions which have high sensitivity but low degree. By defining well balanced sets, this project gives a framework to the properties such a function might possess. Using what is learned about well balanced sets, a constrained exhaustive search over Boolean functions with n = 10, deg(f) = 4, s(f) = n reveals what properties such a Boolean function might have, should one exist. Such a Boolean function would provide a larger gap between the sensitivity and degree: s(f) = deg(f)^1.66. Using results from the search, a n = i, deg(f) = 4, s(f) = i function is presented for i ∈ {7, 8, 9}. This project concludes with a discussion of maximal binary constant weight codes as a source for generating well balanced sets.",
+    "report": "NU-CS-2022-08",
+    "source": "https://www.mccormick.northwestern.edu/computer-science/documents/2022-05-exposition-of-the-kushilevitz-function.pdf"
+  },
+  {
+    "id": "cs-2022-002",
+    "department": "Computer Science",
+    "year": 2022,
+    "academic_year": "2021-2022",
+    "students": [
+      {
+        "first": "Roxanna G.",
+        "last": "Wilcox"
+      }
+    ],
+    "advisor": "Haoqi Zhang",
+    "title": "Knowledge Maps for Building Conceptual and Transferable CSS Knowledge",
+    "abstract": "Despite the abundance of online resources for learning CSS, novice web developers struggle to develop the expert intuition of choosing the best CSS technique to build a given layout. We present Knowledge Maps (KM), a tool that allows users to build transferable and conceptual knowledge of CSS techniques. By interactively exploring professional websites and by categorizing visual features of those sites and the relevant CSS techniques used to create them, KM users discover the relevant similarities, differences, and use cases of various CSS techniques in the process, developing the knowledge that characterizes experts. In an initial study where 6 users learned from conventional CSS tutorials and 7 users learned through KM, KM users identified the appropriate CSS to build a set of layouts with a 48% increase in accuracy as compared to a 15% increase for non-KM users and showed development of transferable knowledge through KM. In a second study where 6 users learned through KM, 5 out of the 6 users were able to build in-depth knowledge maps that show generalized knowledge of CSS layouts.",
+    "report": "NU-CS-2022-09",
+    "source": "https://www.mccormick.northwestern.edu/computer-science/documents/wilcoxseniorthesis.pdf"
+  },
+  {
+    "id": "cs-2024-001",
+    "department": "Computer Science",
+    "year": 2024,
+    "academic_year": "2023-2024",
+    "students": [
+      {
+        "first": "Lucas",
+        "last": "Zurbuchen"
+      }
+    ],
+    "advisor": "Rob Voigt",
+    "title": "A Computational Analysis and Exploration of Linguistic Borrowings in French Rap Lyrics",
+    "abstract": "In France, linguistic borrowing in the French language can occur in several ways due to the frequent contact that French has with different linguistic groups in the country. However, people inside France view this borrowing with widely mixed perspectives. This thesis examines French rap lyrics – one of the country’s largest proponents of borrowed terms and slang – and the usage of linguistic borrowings that appear in them. By doing this, new knowledge about French rap and its implications on the French language (and about linguistic borrowings in general) through computational analysis can be contributed. Collecting over 8000 lyrics (extracted from Spotify and Genius) from 1991 to 2024 and over 700 words and phrases borrowed into the language, four variables about the borrowings (length, origin, semantics, and part of speech) can be analyzed to view both how they shape the number of times a borrowing is used in lyrics and how its usage can change over time, using regression models and temporal analysis respectively. The thesis finds that all four factors can contribute to a borrowing’s popularity in lyrics under several circumstances, with subcategories of these factors experiencing both increases and decreases in popularity over time. It also finds that linguistic borrowing usage in French rap has been increasing over time. Further research will include examining the effect that factors outside the music and its words (such as a song’s popularity) have on the usage trends of a linguistic borrowing as well as using machine learning methods to predict future trends of a linguistic borrowing’s popularity.",
+    "report": "NU-CS-2024-09",
+    "source": "https://www.mccormick.northwestern.edu/computer-science/documents/nu-cs-2024-09-lucas-zurbuchen.pdf"
+  },
+  {
+    "id": "cs-2024-002",
+    "department": "Computer Science",
+    "year": 2024,
+    "academic_year": "2023-2024",
+    "students": [
+      {
+        "first": "William J.",
+        "last": "Hoffmann"
+      }
+    ],
+    "advisor": "Zach Wood-Doughty and Jonathan Raberg",
+    "title": "Hybrid Domain-Transfer Approach for Resolution Increase within Data-Constrained Paleoclimatic Proxy Records",
+    "abstract": "In this paper, we use a Hybrid ViT-CNN model to predict proxy values from sediment core records in two Icelandic lakes, Stóra Viðarvatn, SVID, and Litla Viðarvatn, LVID. We predict the values of paleoclimate proxy variables throughout the sediment record in order to create a tool to impute proxy values and increase the resolution of proxy records at hand. We were limited from a few dozen to a few hundred examples (fewer than 200) for each proxy value. This constraint led us to implement Facebook’s DeiT model as our embedding model for a 3-layer CNN trained specifically on the task at hand. The model was effective at imputation, yet struggled at out-of-domain prediction. We present our results and potential next steps for going beyond our limitations and improving the predictive power of our model.",
+    "report": "NU-CS-2024-12",
+    "source": "https://www.mccormick.northwestern.edu/computer-science/documents/nu-cs-2024-12-william-j-hoffman.pdf"
+  },
+  {
+    "id": "cs-2024-003",
+    "department": "Computer Science",
+    "year": 2024,
+    "academic_year": "2023-2024",
+    "students": [
+      {
+        "first": "Mercedes",
+        "last": "Sandu"
+      }
+    ],
+    "advisor": null,
+    "title": "Imposing Constraints on Randomly Generated Graphs in CatSAT",
+    "abstract": "Graphs are extremely versatile data structures used to represent pieces of data and the connections between them in a variety of computer science fields. Specifically, in the video game development space, graphs can be used to represent a variety of concepts, from character relationships to waypoint-based maps to branching questlines. Oftentimes, game developers seek to randomly generate such game content to promote replayability, integrate content with mechanics, and lessen the manual design workload in the development process. SAT solvers are logic programming systems that can be used to allow video game developers to specify constraints for the content which they wish to randomly generate. Previous game development research has utilized SAT solvers to generate objects such as characters and settings. However, generating relationship graphs between objects has remained an open problem. In particular, graph connectivity and transitive closure are not expressible in first-order logic, so they are generally difficult problems for SAT solvers, but not for ASP. Moreover, previous algorithms for connectivity and pathfinding tend to be slower and more expensive than current SAT algorithms. This paper discusses an extension of the embedded C#-based SAT solver, CatSAT, for generating random graphs under certain imposed constraints. Furthermore, we present and discuss an approach to using CatSAT to generate graphs satisfying constraints including, but not limited to, connectivity, paths between vertices, density, and vertex degree.",
+    "report": "NU-CS-2024-16",
+    "source": "https://www.mccormick.northwestern.edu/computer-science/documents/nu-cs-2024-16-mercedes-sandu.pdf"
+  },
+  {
+    "id": "cs-2025-001",
+    "department": "Computer Science",
+    "year": 2025,
+    "academic_year": "2024-2025",
+    "students": [
+      {
+        "first": "Marko",
+        "last": "Veljanovski"
+      }
+    ],
+    "advisor": "Zach Wood-Doughty",
+    "title": "Causality and Large Language Models: Designing Flexible Estimators and Robust Predictors",
+    "abstract": "Causal inference has shown immense potential in improving the robustness, explainability, and predictive accuracy of Large Language Models (LLMs). Simultaneously, LLMs have been applied to improve treatment effect estimation with text, and causal relationship discovery. While these two fields have different goals and motivation, their recent collaboration has proven to be highly useful, opening up new avenues of future search. In this work, we explore both sides of the relationship: We develop a framework integrating LLMs with Double Machine Learning (DML) to adjust for high-dimensional text confounders. On the best available dataset for evaluating such methods, we obtain a 10.4% reduction in the relative absolute error for the estimated causal effect over existing methods. Moreover, we investigate the applicability and effectiveness of Invariant Risk Minimization (IRM) for fine-tuning LLMs under distribution shifts by empirically testing it on a custom synthetic text dataset. Altogether, our results illustrate the growing connections between causality and LLMs, revealing paths to robust language models and more powerful causal inference methods that are equipped to handle richer and more unstructured data.",
+    "report": "NU-CS-2025-10",
+    "source": "https://www.mccormick.northwestern.edu/computer-science/documents/marko-veljanovski-nu-cs-2025-10.pdf"
+  },
+  {
+    "id": "cs-2026-001",
+    "department": "Computer Science",
+    "year": 2026,
+    "academic_year": "2025-2026",
+    "students": [
+      {
+        "first": "Damian Vincent",
+        "last": "Dobrowolski"
+      }
+    ],
+    "advisor": "Mohammed Alam",
+    "title": "Closing a Gap in Emissions Inventories: Using Machine Learning to Extrapolate Geographically-Limited Combination Truck Idling Data to a Wider Domain",
+    "abstract": "Combustion engines are a major contributor of greenhouse gas (GHG) and air pollutant emissions, which each disproportionately impact marginalized communities. While just a small percentage of vehicles, combination trucks (CT) are one of the highest-polluting vehicle classes. Fueled by just-in-time delivery, the goods-transport sector has become the most rapidly-growing contributor to GHG emissions. To design effective remediation policies, a better understanding of CT emission processes is needed. One key CT uncertainty involves constraining the location and duration of CT idling emissions. At present, the U.S. EPA SMOKE-MOVES emission modeling platform spatially distributes CT idling emissions using a land cover development intensity spatial surrogate, which may miss idling hot spots. Here, to better constrain CT idling activity we leverage telemetry data from the seven-county Chicago metropolitan area. The telemetry data indicates that the current EPA methodology may distribute CT idling emissions too widely and may substantially underestimate CT idling emission magnitudes. While the telemetry data is revealing, it is also cost prohibitive to obtain for large geographic regions. Machine learning can help—by learning relationships between the telemetry-based idling data and other data sources (e.g., location of truck-stops, traffic, warehouses, intermodal terminals, etc.), we extrapolate our limited idling activity data over a larger geographic area. The telemetry-based idling data is zero-inflated and highly right-skewed. As such, we implement a two-part Gradient Boosting (XGBoost) model. This architecture is designed to handle both data characteristics: a classifier first predicts the probability of idling, and if positive, a second-stage regressor—trained only on non-zero data—predicts its duration and location. Our framework aims to better capture CT idling hotspots and magnitudes over wide geographic domains using only a small sample of observed idling data, with the ultimate goal of improving emission inventories and better constraining the impacts of CT idling emissions.",
+    "report": "NU-CS-2026-23",
+    "source": "https://www.mccormick.northwestern.edu/computer-science/documents/nu-cs-2026-23.pdf"
   }
 ]

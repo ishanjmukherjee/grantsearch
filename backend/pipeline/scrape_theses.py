@@ -1,7 +1,7 @@
 """Scrape department honors thesis lists into data/theses.json.
 
-Two departments so far, each page saved as fetched in
-data/raw/theses/<key>.html and parsed from the saved copy:
+Three departments so far. Two list their theses on a page, saved as
+fetched in data/raw/theses/<key>.html and parsed from the saved copy:
 
 - Political Science ("polisci") lists every thesis from 2010-11 on (but
   2015-16) under its academic year, as a heading "Student | Title" and a
@@ -12,15 +12,21 @@ data/raw/theses/<key>.html and parsed from the saved copy:
   2020 on and in tables, one thesis to a cell, before. It gives no advisors
   or abstracts.
 
+Computer Science ("cs") publishes its theses as technical reports instead,
+read from their PDFs by pipeline.parse_cs_theses: 7 from 2022 on, each with
+its advisor (but one) and abstract, and report, its report number.
+
 Each thesis is a record:
 
-- id: "<key>-YYYY-NNN", numbered in page order within its year
+- id: "<key>-YYYY-NNN", numbered in page order (Computer Science: report
+  order) within its year
 - department, year (the academic year's second, the graduating year),
   academic_year ("2024-2025")
 - students: [{first, last}]; first is "" for the one student named by
   surname alone
 - advisor (the names as printed, without "Professor"), or None for Economics
-- title, source (the page)
+  and for the one Computer Science thesis that names none
+- title, source (the page, or for Computer Science the PDF)
 - mmss (Economics only): whether the page marks the thesis for
   Interdisciplinary Honors with Mathematical Methods in the Social Sciences
 - abstract, or None for all of Economics and for the 10 Political Science
@@ -37,6 +43,7 @@ import re
 import httpx
 from bs4 import BeautifulSoup
 
+from pipeline import parse_cs_theses
 from pipeline.parse_expo import split_people, text
 from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
 
@@ -203,6 +210,12 @@ def main() -> None:
             counts[t["year"]] = counts.get(t["year"], 0) + 1
             theses.append({"id": f"{key}-{t['year']}-{counts[t['year']]:03d}", **t})
         print(f"{key}: {len(rows)} theses")
+    rows = parse_cs_theses.parse()
+    counts = {}
+    for t in rows:
+        counts[t["year"]] = counts.get(t["year"], 0) + 1
+        theses.append({"id": f"cs-{t['year']}-{counts[t['year']]:03d}", **t})
+    print(f"cs: {len(rows)} theses")
     path = DATA_DIR / "theses.json"
     path.write_text(json.dumps(theses, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {len(theses)} theses to {path}")
