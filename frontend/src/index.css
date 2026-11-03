@@ -428,9 +428,20 @@ h1 a {
 }
 
 /* Quoted phrases, marked as find in page marks its matches but in apricot,
-   with black text on it in both themes. */
+   with black text on it in both themes. Selection paints the whole line
+   box, so the apricot fills it too: the padding grows it from the font's
+   own height (1.219em, Instrument Sans's ascent plus descent) to 1lh. */
 mark {
   background: var(--mark);
+  color: #000;
+  padding-block: calc((1lh - 1.219em) / 2);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* A selected phrase deepens its apricot rather than turning violet. */
+mark::selection {
+  background: oklch(from var(--mark) calc(l - 0.06) calc(c + 0.04) h);
   color: #000;
 }
 
