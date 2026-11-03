@@ -1,2 +1,5 @@
+# Clones skip the raw sources (about 2.4 GB of PDFs, scans and videos); the
+# app and its build need none of them. To fetch some, for example to rerun a
+# parser: git lfs pull -I "data/raw/expo/**" -X ""
 [lfs]
-	fetchexclude = data/raw/nurj/arch/**/*.mp4,data/raw/nurj/arch/**/*.mov
+	fetchexclude = data/raw/**
