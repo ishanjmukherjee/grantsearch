@@ -22,7 +22,7 @@ import unicodedata
 from collections import defaultdict
 
 from pipeline.parse_expo import PARTICLES
-from pipeline.scrape_surg import DATA_DIR, fold
+from pipeline.scrape_surg import DATA_DIR, SUFFIXES, fold
 
 MIN_PREFIX = 3  # "Al" should not match every Alexander and Alice
 # Word-trigram Jaccard between two abstracts at which they are one poster's.
@@ -36,7 +36,7 @@ def tokens(name: str) -> list[str]:
 
 
 def surname_parts(last: str) -> set[str]:
-    return {t for t in tokens(last) if t not in PARTICLES and len(t) > 1}
+    return {t for t in tokens(last) if t not in PARTICLES and t not in SUFFIXES and len(t) > 1}
 
 
 def first_match(a: str, b: str) -> bool:

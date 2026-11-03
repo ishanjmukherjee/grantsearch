@@ -38,7 +38,7 @@ from pathlib import Path
 import httpx
 import pymupdf
 
-from pipeline.scrape_surg import DATA_DIR, HEADERS, PARTICLES, RAW_DIR, tidy
+from pipeline.scrape_surg import DATA_DIR, HEADERS, PARTICLES, RAW_DIR, split_name, tidy
 
 BASE = "https://undergradresearch.northwestern.edu/files"
 SOURCES = {
@@ -179,11 +179,17 @@ def affiliations(advisor: str) -> str:
     return ", ".join(out)
 
 
+NAME_LABEL = re.compile(r"^\s*Name\s*:\s*")
+
+
 def split_people(s: str, last_first: bool) -> list[dict]:
     """Split a presenter string into first/last names.
 
-    Older years list "First Last and First Last"; 2025 on list "Last, First"
-    with several presenters separated by semicolons or line breaks.
+    Older years list "First Last and First Last", read by
+    pipeline.scrape_surg.split_name (a suffix such as Jr. and any particles
+    stay with the surname); 2025 on list "Last, First" with several
+    presenters separated by semicolons or line breaks. A "Name:" label before
+    a name (one 2021 listing) is dropped.
     """
     people = []
     if last_first:
@@ -194,12 +200,9 @@ def split_people(s: str, last_first: bool) -> list[dict]:
                     people.append({"first": text(first), "last": text(last)})
     else:
         for part in re.split(r"\s*(?:,\s*and\s+|,|;|\n|&| and )\s*", s):
-            words = part.split()
-            if len(words) >= 2:
-                cut = len(words) - 1
-                while cut > 1 and words[cut - 1].lower() in PARTICLES:
-                    cut -= 1
-                people.append({"first": text(" ".join(words[:cut])), "last": text(" ".join(words[cut:]))})
+            part = NAME_LABEL.sub("", part)
+            if len(part.split()) >= 2:
+                people.append({k: text(v) for k, v in split_name(part).items()})
     return people
 
 
@@ -598,22 +601,29 @@ def transcribe(year: int, entries: list[dict]) -> None:
 def assign_ids(year: int, entries: list[dict], previous: list[dict], prefix: str = "expo", source: str | None = None) -> list[dict]:
     """The entries with ids "<prefix>-<year>-NNN": an entry's previous id when
     the last run had an entry of the same title, presenters and page (or, for
-    a corrected title, the only one of the same presenters and page), else
-    the next free number in the year. source defaults to the year's in SOURCES."""
+    a corrected title, the only one of the same presenters and page, and for
+    corrected presenters, the only one of the same title and page), else the
+    next free number in the year. Presenters are compared by full name, so a
+    name split differently into first and last keeps its id. source defaults
+    to the year's in SOURCES."""
 
     def key(e: dict) -> tuple:
-        return (e["page"], tuple((p["first"], p["last"]) for p in e["presenters"]))
+        return (e["page"], tuple(f"{p['first']} {p['last']}" for p in e["presenters"]))
+
+    def unique(keys: list, ids: list[str]) -> dict:
+        return {k: id for k, id in zip(keys, ids) if keys.count(k) == 1}
 
     previous = [e for e in previous if e["year"] == year and e["id"].startswith(f"{prefix}-")]
+    ids = [e["id"] for e in previous]
     exact = {(*key(e), e["title"]): e["id"] for e in previous}
-    keys = [key(e) for e in previous]
-    loose = {k: e["id"] for k, e in zip(keys, previous) if keys.count(k) == 1}
+    loose = unique([key(e) for e in previous], ids)
+    titled = unique([(e["page"], e["title"]) for e in previous], ids)
     taken = {e["id"] for e in previous}
     used = set()
     n = 0
     out = []
     for e in entries:
-        id = exact.get((*key(e), e["title"])) or loose.get(key(e))
+        id = exact.get((*key(e), e["title"])) or loose.get(key(e)) or titled.get((e["page"], e["title"]))
         if id in used:
             id = None
         used.add(id)

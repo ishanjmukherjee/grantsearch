@@ -51,6 +51,7 @@ from nicknames import NickNamer
 
 from pipeline.link_expo import MIN_PREFIX
 from pipeline.parse_expo import PARTICLES, split_people
+from pipeline.scrape_surg import SUFFIXES
 from pipeline.scrape_surg import fold as fold_text
 
 NICKNAMES_SOURCE = "nicknames (github.com/carltonnorthern/nicknames, Apache-2.0)"
@@ -199,7 +200,8 @@ class People:
                 if q not in matched and (kind, w) not in used:
                     matched[q] = (quality, kind, w)
                     used.add((kind, w))
-            surname = [m for m in matched.values() if m[1] == "last" and (m[2] not in PARTICLES or self.only_particles(i))]
+            # A particle or a suffix alone ("van", "jr") does not name anyone.
+            surname = [m for m in matched.values() if m[1] == "last" and (m[2] not in PARTICLES | SUFFIXES or self.only_particles(i))]
             if surname:
                 out.append({"person": self.people[i], "score": sum(m[0] for m in matched.values()), "words": {q: (m[2], m[0]) for q, m in matched.items()}})
         return sorted(out, key=lambda m: -m["score"])

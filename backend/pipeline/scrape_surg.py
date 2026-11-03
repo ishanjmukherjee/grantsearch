@@ -129,8 +129,9 @@ def tidy(text: str) -> str:
 
 
 # Lower-case words that begin a surname ("Ludwig van Beethoven").
-PARTICLES = {"van", "von", "den", "der", "de", "da", "del", "della", "di", "du", "dos", "la", "le", "al", "el"}
-SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv"}
+PARTICLES = {"van", "von", "den", "der", "de", "da", "del", "della", "delos", "di", "du", "dos", "la", "le", "al", "el", "ter"}
+# Words after a surname that are not part of it ("Jr."), as typed without the period.
+SUFFIXES = {"jr", "sr", "ii", "iii", "iv"}
 
 
 def split_name(name: str) -> dict:
@@ -143,7 +144,7 @@ def split_name(name: str) -> dict:
         return {"first": first, "last": last}
     words = name.split()
     cut = len(words) - 1
-    if cut > 1 and words[cut].lower() in SUFFIXES:
+    if cut > 1 and words[cut].lower().rstrip(".") in SUFFIXES:
         cut -= 1
     while cut > 1 and words[cut - 1].lower() in PARTICLES:
         cut -= 1
