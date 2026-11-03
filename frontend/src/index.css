@@ -14,6 +14,11 @@
   --soft: color-mix(in srgb, var(--text) 60%, var(--muted));
   /* Fainter than --border, for rules between results. */
   --divider: color-mix(in srgb, var(--border) 60%, var(--bg));
+  /* The filters' fill, which sets them a step below the outlined search box. */
+  --track: color-mix(in srgb, var(--text) 6%, var(--bg));
+  /* The chosen source on that fill: raised white in light, tinted in dark. */
+  --pill: var(--surface);
+  --pill-shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 0 0 1px rgb(0 0 0 / 0.04);
   /* The type scale. Every font-size is one of these. */
   --text-display: 2rem; /* 32px, 24px on phones */
   --text-title: 1.125rem; /* 18px */
@@ -42,6 +47,8 @@
     --expo-soft: #0d382f;
     --error: #fb8276;
     --mark: #f9b786;
+    --pill: var(--accent-soft);
+    --pill-shadow: none;
   }
 }
 
@@ -243,8 +250,8 @@ h1 a {
 
 .segmented {
   display: inline-flex;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--track);
+  border: 1px solid transparent;
   border-radius: 10px;
   padding: 3px;
 }
@@ -261,7 +268,8 @@ h1 a {
 }
 
 .segmented button.on {
-  background: var(--accent-soft);
+  background: var(--pill);
+  box-shadow: var(--pill-shadow);
   color: var(--accent);
   font-weight: 600;
 }
@@ -304,8 +312,8 @@ h1 a {
   font: inherit;
   font-size: var(--text-meta);
   color: var(--text);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--track);
+  border: 1px solid transparent;
   border-radius: 8px;
   padding: 6px calc(var(--inset) + var(--chevron) + var(--chevron-gap)) 6px var(--inset);
   cursor: pointer;
