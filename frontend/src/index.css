@@ -363,7 +363,7 @@ h1 a {
 
 .result h2 {
   font-size: var(--text-title);
-  text-wrap: balance;
+  text-wrap: pretty;
   line-height: 1.35;
   margin: 0 0 4px;
 }
