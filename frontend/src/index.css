@@ -20,6 +20,8 @@
   --text-body: 1rem; /* 16px */
   --text-meta: 0.875rem; /* 14px */
   --text-small: 0.75rem; /* 12px */
+  /* Scrollbars and the browser's own controls follow the theme too. */
+  color-scheme: light dark;
   font-family: 'Instrument Sans Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
   color: var(--text);
