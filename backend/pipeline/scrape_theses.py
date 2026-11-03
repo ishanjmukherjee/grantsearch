@@ -1,6 +1,6 @@
 """Scrape department honors thesis lists into data/theses.json.
 
-Three departments so far. Two list their theses on a page, saved as
+Four departments so far. Two list their theses on a page, saved as
 fetched in data/raw/theses/<key>.html and parsed from the saved copy:
 
 - Political Science ("polisci") lists every thesis from 2010-11 on (but
@@ -16,23 +16,35 @@ Computer Science ("cs") publishes its theses as technical reports instead,
 read from their PDFs by pipeline.parse_cs_theses: 7 from 2022 on, each with
 its advisor (but one) and abstract, and report, its report number.
 
+Mathematical Methods in the Social Sciences ("mmss") keeps its theses in a
+SharePoint library behind a Northwestern login, backed up in the private
+mmss-papers repository and read from a checkout of it by
+pipeline.parse_mmss_theses: 1,079 from 1980 to 2024, 321 of them with the
+paper, which gives the advisor and abstract where it prints them. Running
+this needs that checkout (see that module).
+
 Each thesis is a record:
 
 - id: "<key>-YYYY-NNN", numbered in page order (Computer Science: report
-  order) within its year
+  order; MMSS: library item order) within its year
 - department, year (the academic year's second, the graduating year),
   academic_year ("2024-2025")
 - students: [{first, last}]; first is "" for the one student named by
   surname alone
 - advisor (the names as printed, without "Professor"), or None for
-  Economics. data/overrides.jsonl gives the one Computer Science
-  thesis that names none its advisor, read from the thesis.
-- title, source (the page, or for Computer Science the PDF)
+  Economics and for the MMSS theses whose paper names none or isn't in the
+  library. data/overrides.jsonl gives the one Computer Science thesis that
+  names none its advisor, read from the thesis.
+- title, source (the page, or for Computer Science the PDF, or for MMSS the
+  paper on SharePoint, or the library where it doesn't have the paper)
 - mmss (Economics only): whether the page marks the thesis for
   Interdisciplinary Honors with Mathematical Methods in the Social Sciences
-- abstract, or None for all of Economics and for the 10 Political Science
-  theses the page has none for: the 8 of 2022-23 ("[Update coming soon]"),
-  one withheld for IRB reasons and one left blank
+- abstract, or None for all of Economics, for the 10 Political Science
+  theses the page has none for (the 8 of 2022-23, "[Update coming soon]",
+  one withheld for IRB reasons and one left blank) and for the MMSS theses
+  without one
+- MMSS only: paper (whether the library has it), funding, prizes and items
+  (see pipeline.parse_mmss_theses)
 
 Usage: uv run python -m pipeline.scrape_theses [--refresh]
 """
@@ -44,7 +56,7 @@ import re
 import httpx
 from bs4 import BeautifulSoup
 
-from pipeline import parse_cs_theses
+from pipeline import parse_cs_theses, parse_mmss_theses
 from pipeline.parse_expo import split_people, text
 from pipeline.projects import OVERRIDES, merge_patch
 from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
@@ -212,12 +224,13 @@ def main() -> None:
             counts[t["year"]] = counts.get(t["year"], 0) + 1
             theses.append({"id": f"{key}-{t['year']}-{counts[t['year']]:03d}", **t})
         print(f"{key}: {len(rows)} theses")
-    rows = parse_cs_theses.parse()
-    counts = {}
-    for t in rows:
-        counts[t["year"]] = counts.get(t["year"], 0) + 1
-        theses.append({"id": f"cs-{t['year']}-{counts[t['year']]:03d}", **t})
-    print(f"cs: {len(rows)} theses")
+    for key, module in (("cs", parse_cs_theses), ("mmss", parse_mmss_theses)):
+        rows = module.parse()
+        counts = {}
+        for t in rows:
+            counts[t["year"]] = counts.get(t["year"], 0) + 1
+            theses.append({"id": f"{key}-{t['year']}-{counts[t['year']]:03d}", **t})
+        print(f"{key}: {len(rows)} theses")
     path = DATA_DIR / "theses.json"
     by_id = {t["id"]: i for i, t in enumerate(theses)}
     patched = 0
