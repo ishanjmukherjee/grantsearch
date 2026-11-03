@@ -61,6 +61,13 @@ body {
   background: var(--bg);
 }
 
+/* Keyboard focus, in the accent rather than the browser's blue. A mouse
+   click shows no ring, as :focus-visible leaves it to keyboard use. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .page {
   max-width: 680px;
   margin: 0 auto;
