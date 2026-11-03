@@ -1,0 +1,112 @@
+{
+  "about": "Expo 2020 entries in the program guide that never appeared on ForagerOne: the Wayback capture of the event's full listing (2020-05-28) has only the 83 presentations in data/raw/forager. For each, other public records of the same project by the same student, kept as their sources give them.",
+  "entries": [
+    {
+      "guide": {
+        "source": "https://undergradresearch.northwestern.edu/files/2024/03/Expo-2020-Program-Guide-a0c8f4b42e540054.pdf",
+        "page": 4,
+        "section": "Poster Presentations",
+        "presenters": [
+          "Amy Rogin"
+        ],
+        "title": "Potential Air Quality and Health Impacts of Electrifying Chicago’s Municipal Vehicles"
+      },
+      "related": [
+        {
+          "source": "https://ui.adsabs.harvard.edu/abs/2019AGUFM.A21P2832R/abstract",
+          "bibcode": "2019AGUFM.A21P2832R",
+          "title": "Air Quality and Health Impacts of Electrifying Chicago's Municipal Vehicle Fleet",
+          "authors": [
+            "Rogin, A.",
+            "Schnell, J.",
+            "Montgomery, A.",
+            "Horton, D. E."
+          ],
+          "publication": "American Geophysical Union, Fall Meeting 2019, abstract #A21P-2832",
+          "date": "2019-12",
+          "keywords": [
+            "3305 Climate change and variability",
+            "3322 Land/atmosphere interactions",
+            "1632 Land cover change",
+            "1637 Regional climate change"
+          ],
+          "abstract": "The Chicago metropolitan region, occupied by approximately 9.5 million people, has begun to grapple with two modern sustainability challenges common to urban centers - climate change and poor air quality. Climate change has exposed Chicagoland's citizens to more intense and persistent heat waves as well as more frequent extreme precipitation and flooding events. In addition, air quality in the Chicago region has been in EPA non-attainment status for ozone concentrations since 2012. These environmental threats have put the public health of Chicagoland residents at risk, with a disproportionate burden falling on disadvantaged and vulnerable populations. As the transportation sector is the largest contributor to urban air pollution and greenhouse gas (GHG) emissions, improvements in this sector could provide a major advance toward meeting emissions reduction and public health goals. Therefore, our research investigates the co-benefits of the electrification of Chicago's municipal vehicle fleet (transit buses, school buses and refuse trucks). Using the two-way coupled Community Multi-Scalar Air Quality-Weather Research and Forecasting (CMAQ-WRF) model to simulate air quality over the city of Chicago, we quantify the air quality benefits and tradeoffs of municipal vehicle electrification at a 1.3 km resolution. Emissions from the National Emissions Inventory for municipal vehicles are altered to simulate enhanced and total electrification. The resolution of the model allows for analyses approaching neighborhood scales, and facilitates identification of populations vulnerable to heightened and/or persistent air pollution exposure, as well as individual bus/municipal vehicle routes for which co-benefits are maximized via EV adoption. To assess the health impacts of EV expansion, we employ the EPA's Environmental Benefits Mapping and Analysis Program (BenMAP-CE) which applies health impact functions to quantify the impact that changes in surface ozone and fine particulate matter have on respiratory illness hospitalizations and premature mortality rates. This research provides a framework for a cost-benefit analysis by city officials and planners to assess the co-benefits of fleet electrification, and how such a transition can support a city's sustainability goals.",
+          "note": "Rogin's own first-author abstract of the project, presented the December before Expo 2020."
+        },
+        {
+          "source": "https://doaj.org/api/articles/0d5f36bc93f04325a0bde313f31dbe1d",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2542519621001054",
+          "note": "The project's later abstract in The Lancet Planetary Health 5, S21 (2021), with Rogin third author; the DOAJ record as served.",
+          "record": {
+            "id": "0d5f36bc93f04325a0bde313f31dbe1d",
+            "created_date": "2021-04-22T14:40:47Z",
+            "last_updated": "2025-08-19T15:31:08Z",
+            "es_type": "article",
+            "admin": {
+              "in_doaj": true
+            },
+            "bibjson": {
+              "title": "Health Benefits of Electrifying Chicago's Municipal Vehicle Fleet",
+              "year": "2021",
+              "month": "04",
+              "abstract": "Background: Approximately 100 000 American citizens die prematurely each year from air pollution exposure. To lower ambient pollution and co-emitted greenhouse gases, some cities have enacted vehicle electrification policies. In this study, we aimed to simulate changes in atmospheric composition due to the electrification of Chicago's municipal vehicle fleet and quantify the corresponding health and climate benefits of this policy. Methods: We simulated air quality at the neighbourhood scale (1·3 × 1·3 km) over the Chicago metropolitan area using the coupled Weather Research Forecast and Community Multiscale Air Quality Modelling System chemistry-climate model. We modified the 2014–16 National Emissions Inventory to create input emissions for baseline and electric vehicle adoption scenarios in Summer (August 2018) and Winter (January 2019) months. In the electric vehicle adoption scenario, we removed combustion products of the municipal vehicle fleet (school buses, transit buses, and refuse trucks) from the emissions data. To quantify the health effects of electric vehicle adoption, we calculated the difference in health response between the baseline and electrification scenarios by use of a suite of health response functions. Findings: We found that fleet electrification reduced CO2 emissions (–1·4%) and NO2 concentrations (–1·0%) while modestly increasing O3 concentrations (+0·3%). Monthly average NO2 reductions were found in high-density areas and along interstate highways, whereas O3 increases were more prominent in the Chicagoland suburbs. Particulate matter changes were modest and spatially heterogenous. The pollutant changes resulted in both positive and negative health outcomes that were largely off setting. Interpretation: The inverse relationship between O3 and NO2 is known as the “weekend effect”, in which the removal of NO2 results in an increase in O3 due to titration in volatile organic compound-limited environments. This relationship is particularly evident over the highways, where excess NO2 reduces O3 concentrations. The decision to electrify vehicles should consider air quality changes in addition to CO2 due to complicating chemical interactions within urban environments. Funding: Ubben Program for Carbon and Climate Science at Northwestern University, US National Science Foundation.",
+              "journal": {
+                "start_page": "S21",
+                "end_page": "",
+                "volume": "5",
+                "number": "",
+                "publisher": "Elsevier",
+                "title": "The Lancet Planetary Health",
+                "country": "GB",
+                "language": [
+                  "EN"
+                ]
+              },
+              "identifier": [
+                {
+                  "type": "pissn",
+                  "id": "2542-5196"
+                },
+                {
+                  "type": "doi",
+                  "id": "10.1016/S2542-5196(21)00105-4"
+                }
+              ],
+              "link": [
+                {
+                  "type": "fulltext",
+                  "url": "http://www.sciencedirect.com/science/article/pii/S2542519621001054"
+                }
+              ],
+              "author": [
+                {
+                  "name": "Anastasia Montgomery, MS",
+                  "affiliation": "Department of Earth and Planetary Sciences, Northwestern University, Evanston, IL, USA; Correspondence to: Anastasia Montgomery, Northwestern University, Chicago, IL 60657, USA"
+                },
+                {
+                  "name": "Jordan L Schnell, PhD",
+                  "affiliation": "Department of Earth and Planetary Sciences, Northwestern University, Evanston, IL, USA; Cooperative Institute for Research in Environmental Sciences, Boulder, CO, USA"
+                },
+                {
+                  "name": "Amy Rogin, BS",
+                  "affiliation": "Program in Environmental Sciences, Northwestern University, Evanston, IL, USA"
+                },
+                {
+                  "name": "Daniel E Horton, ProfPhD",
+                  "affiliation": "Department of Earth and Planetary Sciences, Northwestern University, Evanston, IL, USA"
+                }
+              ],
+              "subject": [
+                {
+                  "scheme": "LCC",
+                  "term": "Environmental sciences",
+                  "code": "GE1-350"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
