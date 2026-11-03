@@ -68,6 +68,11 @@ body {
   outline-offset: 2px;
 }
 
+::selection {
+  background: color-mix(in srgb, var(--accent) 22%, var(--bg));
+  color: var(--text);
+}
+
 .page {
   max-width: 680px;
   margin: 0 auto;
