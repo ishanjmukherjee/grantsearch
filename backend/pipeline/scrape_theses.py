@@ -25,7 +25,7 @@ Each thesis is a record:
 - students: [{first, last}]; first is "" for the one student named by
   surname alone
 - advisor (the names as printed, without "Professor"), or None for
-  Economics. data/thesis_overrides.jsonl gives the one Computer Science
+  Economics. data/overrides.jsonl gives the one Computer Science
   thesis that names none its advisor, read from the thesis.
 - title, source (the page, or for Computer Science the PDF)
 - mmss (Economics only): whether the page marks the thesis for
@@ -46,17 +46,13 @@ from bs4 import BeautifulSoup
 
 from pipeline import parse_cs_theses
 from pipeline.parse_expo import split_people, text
-from pipeline.projects import merge_patch
+from pipeline.projects import OVERRIDES, merge_patch
 from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
 
 SOURCES = {
     "polisci": ("Political Science", "https://polisci.northwestern.edu/undergraduate/honors/honors-theses.html"),
     "econ": ("Economics", "https://economics.northwestern.edu/undergraduate/major/undergraduate-economics-honors-senior-theses.html"),
 }
-# Hand edits, kept apart from the parsers so rerunning them cannot erase
-# them: each line is {file, id, patch, reason}, the patch an RFC 7396 JSON
-# merge patch, as in data/card_overrides.jsonl. Applied before writing.
-OVERRIDES = "thesis_overrides.jsonl"
 ACADEMIC_YEAR = re.compile(r"(\d{4})\s*-\s*(\d{4})")
 # "Thesis Advisor:", once "Research Advisor:"; the last one in the body, so
 # an abstract that mentions an advisor is not cut there.

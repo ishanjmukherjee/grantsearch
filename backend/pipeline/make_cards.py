@@ -19,7 +19,7 @@ matching *_errors.jsonl. Modes:
   data/glosses.jsonl.
 
 The outputs hold only generated cards. Hand edits go in
-data/card_overrides.jsonl, which pipeline.projects applies on load, so
+data/overrides.jsonl, which pipeline.projects applies on load, so
 --fresh regenerates the cards without losing them.
 
 Usage: uv run python -m pipeline.make_cards [--mode title|abstract|expo|gloss] [--fresh] [--limit N] [--ids ID ...] [--jobs 8] [--model M]

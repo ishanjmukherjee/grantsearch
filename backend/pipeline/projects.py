@@ -31,10 +31,13 @@ INDEX_MODEL = "voyage-4-large"
 QUERY_MODEL = "voyageai/voyage-4-nano"
 QUERY_MODEL_REVISION = "433ece5e27a1611e9360dd7134ecaaf79fb3681d"  # pinned: the model ships its own code
 DIM = 2048
-# Hand edits to generated cards and glosses, kept apart from the generated
-# files so regenerating those (make_cards --fresh) cannot erase them. Each line
-# is {file, id, patch, reason}, the patch an RFC 7396 JSON merge patch.
-OVERRIDES = "card_overrides.jsonl"
+# Hand edits to generated files (cards, glosses, theses), kept apart from
+# them so regenerating those (make_cards --fresh, scrape_theses) cannot erase
+# them. Each line is {file, id, patch, reason}: the file it patches, the
+# record's id, an RFC 7396 JSON merge patch and why. load_jsonl applies the
+# card and gloss edits on load; scrape_theses applies the thesis edits before
+# writing.
+OVERRIDES = "overrides.jsonl"
 
 
 def merge_patch(target, patch):
