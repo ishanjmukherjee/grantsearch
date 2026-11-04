@@ -20,6 +20,9 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
     - Show it only when card terms were decisive and the match is strong, never styled as data, so cards still never pass for real data.
     - It would also make bad cards visible, to be fixed in `data/overrides.jsonl`.
 - [ ] Filter results by a set of disciplines (multi-select).
+- [ ] Filter results by event and year, as two filters that combine: events (SURG, Expo, and each source added later, such as the Symposium, NURJ and the theses) and years (a range or a set). A project matches if any of its events falls in the chosen years, so "Expo, 2024" keeps a 2023 SURG grant presented at Expo 2024.
+  - Make the "SURG 20xx" and "Expo 20xx" tags on each result (`frontend/src/App.tsx`) clickable: clicking one sets the event and year filters to that tag. The tags should then look clickable without crowding the result.
+  - This matters more with each source added, as results mix more kinds of work across more years.
 - [ ] Autocomplete in the search box.
   - Suggest completions as a visitor types: people's names (from `backend/people.py`), project titles, disciplines and common topic terms.
   - Results already update as you type, so suggestions should help finish a query, not replace the live results.
