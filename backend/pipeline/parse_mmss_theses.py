@@ -17,7 +17,8 @@ of the same title and year (or, where the library has the paper, the same
 file); those items are one work. For each field the paper's own text is
 used, and the catalog where the paper is silent or its text illegible:
 
-- title: the paper's, else the catalog's.
+- title: the paper's, else the catalog's. A title the paper prints in
+  capitals takes the catalog's case where the catalog's has the same words.
 - students: the paper's authors, else the catalog's (with any coauthors its
   notes name: "with Tony Colucci and Yan Ng"). A name is split at the
   catalog's surname for that person, where the catalog has one, and an
@@ -152,6 +153,19 @@ def year(date: str | None, catalog_year: int | None) -> int | None:
     return catalog_year
 
 
+def title(printed: str | None, catalog: list[str]) -> str | None:
+    """The paper's title, else the catalog's. A title the paper prints in
+    capitals takes the catalog's case where the catalog has the same words
+    not in capitals; otherwise it stays as printed."""
+    if not printed:
+        return catalog[0] if catalog else None
+    if printed.isupper():
+        same = [c for c in catalog if words(c) == words(printed) and not c.isupper()]
+        if same:
+            return same[0]
+    return printed
+
+
 def parse() -> list[dict]:
     """The MMSS theses, one per work, ordered by year and then by library item id."""
     root = checkout()
@@ -171,7 +185,7 @@ def parse() -> list[dict]:
             "academic_year": f"{y - 1}-{y}" if y else None,
             "students": students,
             "advisor": (", ".join(advisor(a["name"]) for a in paper["advisors"]) or None) if paper else None,
-            "title": (paper and paper["title"]) or next((r["title"] for r in group if r["title"]), None),
+            "title": title(paper and paper["title"], [r["title"] for r in group if r["title"]]),
             "abstract": paper and paper["abstract"],
             "source": with_paper["url"] if with_paper else LIBRARY,
             "paper": bool(with_paper),
