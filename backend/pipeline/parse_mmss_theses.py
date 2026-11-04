@@ -2,9 +2,10 @@
 
 The Mathematical Methods in the Social Sciences program keeps its senior
 theses in a SharePoint library that needs a Northwestern login, 1980 to
-2024. The private mmss-papers repository backs it up: records.json, one
-record per library item with the catalog's columns, and fields.jsonl, what
-each of the 325 papers the library actually has prints about itself (title,
+2024. The private mmss-papers repository
+(https://github.com/ishanjmukherjee/mmss-papers) backs it up: records.json,
+one record per library item with the catalog's columns, and fields.jsonl,
+what each of the 325 papers the library actually has prints about itself (title,
 authors, date, advisors, abstract, funding), every string checked against
 the paper's text. The other 814 items are the library's placeholder page for
 a paper it doesn't have (and one item filed with another item's paper), so

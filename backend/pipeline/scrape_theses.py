@@ -18,10 +18,10 @@ its advisor (but one) and abstract, and report, its report number.
 
 Mathematical Methods in the Social Sciences ("mmss") keeps its theses in a
 SharePoint library behind a Northwestern login, backed up in the private
-mmss-papers repository and read from a checkout of it by
-pipeline.parse_mmss_theses: 1,079 from 1980 to 2024, 321 of them with the
-paper, which gives the advisor and abstract where it prints them. Running
-this needs that checkout (see that module).
+mmss-papers repository (https://github.com/ishanjmukherjee/mmss-papers) and
+read from a checkout of it by pipeline.parse_mmss_theses: 1,079 from 1980 to
+2024, 321 of them with the paper, which gives the advisor and abstract where
+it prints them. Running this needs that checkout (see that module).
 
 Each thesis is a record:
 
