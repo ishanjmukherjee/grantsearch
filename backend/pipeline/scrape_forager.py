@@ -9,9 +9,10 @@ events (ids 1000-3500 were checked); only event 54's are kept.
 Each presentation gets a directory, data/raw/forager/<id>/, holding
 presentation.json as the API serves it and the files it links to: the poster
 or slides as poster.pdf (71 of them) and the platform's thumbnail of its
-first page as thumbnail.jpg. The videos (64 voiceovers and 8 video
+first page as thumbnail.jpg. The videos (71 voiceovers and 12 video
 presentations) are on YouTube; their ids are in the JSON, and they are not
-downloaded.
+downloaded here. The 73 still online are backed up in the private
+expo2020-videos repository (https://github.com/ishanjmukherjee/expo2020-videos).
 
 The API's routes for an event's listing, public comments and the event
 itself now require a login, but the Wayback Machine captured some of what the
