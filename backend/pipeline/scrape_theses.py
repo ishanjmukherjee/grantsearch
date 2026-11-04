@@ -24,8 +24,9 @@ Each thesis is a record:
   academic_year ("2024-2025")
 - students: [{first, last}]; first is "" for the one student named by
   surname alone
-- advisor (the names as printed, without "Professor"), or None for Economics
-  and for the one Computer Science thesis that names none
+- advisor (the names as printed, without "Professor"), or None for
+  Economics. data/thesis_overrides.jsonl gives the one Computer Science
+  thesis that names none its advisor, read from the thesis.
 - title, source (the page, or for Computer Science the PDF)
 - mmss (Economics only): whether the page marks the thesis for
   Interdisciplinary Honors with Mathematical Methods in the Social Sciences
@@ -45,12 +46,17 @@ from bs4 import BeautifulSoup
 
 from pipeline import parse_cs_theses
 from pipeline.parse_expo import split_people, text
+from pipeline.projects import merge_patch
 from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
 
 SOURCES = {
     "polisci": ("Political Science", "https://polisci.northwestern.edu/undergraduate/honors/honors-theses.html"),
     "econ": ("Economics", "https://economics.northwestern.edu/undergraduate/major/undergraduate-economics-honors-senior-theses.html"),
 }
+# Hand edits, kept apart from the parsers so rerunning them cannot erase
+# them: each line is {file, id, patch, reason}, the patch an RFC 7396 JSON
+# merge patch, as in data/card_overrides.jsonl. Applied before writing.
+OVERRIDES = "thesis_overrides.jsonl"
 ACADEMIC_YEAR = re.compile(r"(\d{4})\s*-\s*(\d{4})")
 # "Thesis Advisor:", once "Research Advisor:"; the last one in the body, so
 # an abstract that mentions an advisor is not cut there.
@@ -217,6 +223,13 @@ def main() -> None:
         theses.append({"id": f"cs-{t['year']}-{counts[t['year']]:03d}", **t})
     print(f"cs: {len(rows)} theses")
     path = DATA_DIR / "theses.json"
+    by_id = {t["id"]: i for i, t in enumerate(theses)}
+    patched = 0
+    for o in map(json.loads, (DATA_DIR / OVERRIDES).open()):
+        if o["file"] == path.name:
+            theses[by_id[o["id"]]] = merge_patch(theses[by_id[o["id"]]], o["patch"])
+            patched += 1
+    print(f"applied {patched} overrides from {OVERRIDES}")
     path.write_text(json.dumps(theses, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {len(theses)} theses to {path}")
 

@@ -10230,7 +10230,7 @@
         "last": "Sandu"
       }
     ],
-    "advisor": null,
+    "advisor": "Ian Horswill",
     "title": "Imposing Constraints on Randomly Generated Graphs in CatSAT",
     "abstract": "Graphs are extremely versatile data structures used to represent pieces of data and the connections between them in a variety of computer science fields. Specifically, in the video game development space, graphs can be used to represent a variety of concepts, from character relationships to waypoint-based maps to branching questlines. Oftentimes, game developers seek to randomly generate such game content to promote replayability, integrate content with mechanics, and lessen the manual design workload in the development process. SAT solvers are logic programming systems that can be used to allow video game developers to specify constraints for the content which they wish to randomly generate. Previous game development research has utilized SAT solvers to generate objects such as characters and settings. However, generating relationship graphs between objects has remained an open problem. In particular, graph connectivity and transitive closure are not expressible in first-order logic, so they are generally difficult problems for SAT solvers, but not for ASP. Moreover, previous algorithms for connectivity and pathfinding tend to be slower and more expensive than current SAT algorithms. This paper discusses an extension of the embedded C#-based SAT solver, CatSAT, for generating random graphs under certain imposed constraints. Furthermore, we present and discuss an approach to using CatSAT to generate graphs satisfying constraints including, but not limited to, connectivity, paths between vertices, density, and vertex degree.",
     "report": "NU-CS-2024-16",
