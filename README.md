@@ -126,7 +126,7 @@ Search over Northwestern undergraduate research: SURG grants and Undergraduate R
 - [ ] Let visitors upload papers or their own research done at Northwestern that is not indexed yet, reviewed before it is indexed.
 - [ ] Google Analytics, plus careful logging of the queries visitors type in (decide what is stored, for how long, and disclose it on the site).
 - [ ] A proper eval set for ranking.
-  - Today there is only the name-search set (`data/eval/names.jsonl`, built and run by `backend/eval_names.py`) and the hand-written reranker queries below, where every target was already in the baseline top 5.
+  - Today there is only the name-search set (`data/eval/names.jsonl`, built and run by `backend/eval_names.py`) the hand-written reranker queries below, where every target was already in the baseline top 5, and `data/eval/known_items.jsonl`, 29 hand-written topic queries with one known target each, which nothing runs yet.
   - Cover topic, method, plain-language, negation and person queries, with graded relevance over several projects per query rather than a single target, including queries whose answers the current ranking misses.
   - Report standard metrics (e.g. nDCG@10, recall@k, hit@1) from one command, so ranking changes like the reranker or abstract bias are judged on it.
 - [ ] An agentic eval set of session-style tasks, such as "find three plausible advisors for X".
