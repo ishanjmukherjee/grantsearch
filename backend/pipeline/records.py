@@ -18,8 +18,9 @@ A record has these fields, always in this order:
 - kind: "grant", "presentation", "thesis" or "paper".
 - year: the year of the grant, presentation or publication, or a thesis's
   graduating year.
-- title: as printed, or None for the 2003 Symposium, whose program prints no
-  titles.
+- title: as printed, or None when the source prints none (the 2003
+  Symposium's program, the 2010-11 October academic-year URG post). How an
+  untitled record is shown is the frontend's choice.
 - people: everyone the source names, students first, in the source's order.
   Each is {role, first, last, ...}: role is "student" (an awardee, presenter
   or author) or "advisor" (a faculty advisor, sponsor or thesis advisor).
@@ -282,8 +283,8 @@ def check(r: dict, source: str) -> None:
         raise ValueError(f"{r['id']}: source {r['source']!r}, kind {r['kind']!r}")
     if not isinstance(r["year"], int) or not isinstance(r["url"], str) or not r["url"]:
         raise ValueError(f"{r['id']}: year {r['year']!r}, url {r['url']!r}")
-    if r["title"] is None and source != "symposium":
-        raise ValueError(f"{r['id']}: no title")
+    if r["title"] is not None and (not isinstance(r["title"], str) or not r["title"].strip()):
+        raise ValueError(f"{r['id']}: title {r['title']!r}")
     for p in r["people"]:
         if p.get("role") not in ROLES or not isinstance(p.get("first"), str) or not p.get("last"):
             raise ValueError(f"{r['id']}: person {p}")
