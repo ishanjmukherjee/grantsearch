@@ -12,11 +12,19 @@ For each volume this lists its captures with the Wayback CDX API, fetches
 every successful one, and caches it under data/raw/issuu/<slug>/<timestamp>.html.
 It also lists the volume's archived page images (image.isu.pub) and layer
 files (layers.isu.pub), the files Issuu's reader draws pages from: per
-volume a text_info.bin (its text with positions), cached for every volume,
-and per page a page_N.bin. These are protocol buffers, served gzipped. The page
+volume a text_info.bin (its text with positions), and per page a
+page_N.bin. These are protocol buffers, served gzipped. Every archived page
+image and layer file is cached, under images/page_N.jpg and layers/. The page
 layers of a scanned volume each wrap a JPEG of the scanned page (1158x1500
-for NURJ's); for volumes whose captures have no text, the page layers are
-cached under layers/ and their scans written to scans/page_N.jpg.
+for NURJ's); for volumes whose captures have no text, their scans are written
+to scans/page_N.jpg.
+
+The CDX listings are cached too, under <slug>/cdx/, and only captures made
+before CUTOFF are read from them, so a run reads the same captures whether
+or not the Wayback Machine has archived more since; with everything cached,
+a run makes no requests at all. Fetches the Wayback Machine refuses are
+recorded in <slug>/missing.json and not retried. --refresh refetches the
+listings, captures and files and retries the refusals.
 
 Text is cleaned only where Issuu's extraction garbled it: characters of
 symbol fonts that came out in the private use area (U+F020-U+F0FF stand for
@@ -27,8 +35,9 @@ than once.
 Writes data/issuu_pages.json: per volume its slug, label, Issuu document id
 and page count, the capture its pages are read from (fixed in VOLUMES; when
 picked, it was the one with the most pages with text), every capture's
-counts, the archived page images and layer files, the cached text_info.bin
-and scans, and per page its text blocks, each a list of lines.
+counts, the archived page images and layer files and the cached copies
+of each, the cached text_info.bin and scans, and per page its text blocks,
+each a list of lines.
 
 Usage: uv run python -m pipeline.scrape_issuu [--refresh]
 """
@@ -43,6 +52,7 @@ import time
 import httpx
 from bs4 import BeautifulSoup
 
+from pipeline import download
 from pipeline.scrape_nurj import text_of
 from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
 
@@ -71,6 +81,9 @@ VOLUMES = {
     "printvolume15": ("2019-2020", "20240920184219"),
     "print-16-for-online": ("2020-2021", "20240910085902"),
 }
+# Captures made from this day on are left out of the cached CDX listings: the
+# day after data/issuu_pages.json was built from the captures then archived.
+CUTOFF = "20261030"
 DOCUMENT_ID = re.compile(r"\b(\d{12})-([0-9a-f]{32})\b")
 WAIT = 1.5  # seconds between Wayback requests
 # Runs of Windows-1252 characters that are really UTF-8 bytes.
@@ -90,14 +103,14 @@ def get(client: httpx.Client, address: str, **params) -> httpx.Response:
     raise RuntimeError(f"{address}: no response after 5 tries")
 
 
-def cdx(client: httpx.Client, pattern: str) -> list[dict]:
-    params = {"url": pattern, "output": "json", "fl": "timestamp,original,statuscode,mimetype,length", "filter": "statuscode:200"}
+def cdx(slug: str, name: str, pattern: str, refresh: bool) -> list[dict]:
+    """The successful captures of pattern made before CUTOFF, from the listing
+    cached as <slug>/cdx/<name>.json."""
+    params = {"fl": "timestamp,original,statuscode,mimetype,length", "filter": "statuscode:200"}
     if "*" in pattern:
         params["collapse"] = "urlkey"
-    resp = get(client, f"{WAYBACK}/cdx/search/cdx", **params)
-    resp.raise_for_status()
-    rows = resp.json()
-    return [dict(zip(rows[0], r)) for r in rows[1:]] if rows else []
+    rows = download.cdx(ISSUU_DIR / slug / "cdx" / f"{name}.json", pattern, refresh, **params)
+    return [r for r in rows if r["timestamp"] < CUTOFF]
 
 
 def fetch_capture(client: httpx.Client, slug: str, ts: str, original: str, refresh: bool) -> str:
@@ -119,6 +132,24 @@ def fetch_file(client: httpx.Client, ts: str, original: str, path, refresh: bool
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(resp.content)
     return resp.content
+
+
+def fetch_kept(client: httpx.Client, c: dict, path, refresh: bool, missing: dict, jpeg_only: bool = False) -> bool:
+    """Cache capture c at path, as fetch_file does, but record a refusal in
+    missing (original -> status) instead of failing, and skip what missing
+    holds already. Whether the file is cached."""
+    if path.exists() and not refresh:
+        return True
+    if c["original"] in missing and not refresh:
+        return False
+    resp = get(client, f"{WAYBACK}/web/{c['timestamp']}id_/{c['original']}")
+    if resp.status_code != 200 or (jpeg_only and not resp.content.startswith(b"\xff\xd8")):
+        missing[c["original"]] = resp.status_code if resp.status_code != 200 else "not a JPEG"
+        return False
+    missing.pop(c["original"], None)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(resp.content)
+    return True
 
 
 def varint(b: bytes, i: int) -> tuple[int, int]:
@@ -193,7 +224,7 @@ def pages(html: str) -> list[list[list[str]]]:
 
 def volume(client: httpx.Client, slug: str, label: str, capture: str, refresh: bool) -> dict:
     url = f"https://issuu.com/nurj/docs/{slug}"
-    captures = [c for c in cdx(client, f"issuu.com/nurj/docs/{slug}") if c["mimetype"] == "text/html"]
+    captures = [c for c in cdx(slug, "captures", f"issuu.com/nurj/docs/{slug}", refresh) if c["mimetype"] == "text/html"]
     parsed = []
     for c in captures:
         html = fetch_capture(client, slug, c["timestamp"], c["original"], refresh)
@@ -221,9 +252,24 @@ def volume(client: httpx.Client, slug: str, label: str, capture: str, refresh: b
 
     images, layers = [], []
     if doc:
-        images = sorted((c for c in cdx(client, f"image.isu.pub/{doc}/jpg/*") if re.search(r"/page_\d+\.jpg$", c["original"])), key=page_no)
+        images = sorted((c for c in cdx(slug, "images", f"image.isu.pub/{doc}/jpg/*", refresh) if re.search(r"/page_\d+\.jpg$", c["original"])), key=page_no)
         revision, publication = doc.split("-")
-        layers = [c for c in cdx(client, f"layers.isu.pub/{publication}/*") if f"/{revision}/" in c["original"]]
+        layers = [c for c in cdx(slug, "layers", f"layers.isu.pub/{publication}/*", refresh) if f"/{revision}/" in c["original"]]
+    missing_path = ISSUU_DIR / slug / "missing.json"
+    missing = json.loads(missing_path.read_text()) if missing_path.exists() else {}
+    image_files, layer_files = [], []
+    for c in images:
+        path = ISSUU_DIR / slug / "images" / f"page_{page_no(c)}.jpg"
+        if fetch_kept(client, c, path, refresh, missing, jpeg_only=True):
+            image_files.append(str(path.relative_to(DATA_DIR)))
+    for c in layers:
+        path = ISSUU_DIR / slug / "layers" / c["original"].rsplit("/", 1)[1]
+        if fetch_kept(client, c, path, refresh, missing):
+            layer_files.append(str(path.relative_to(DATA_DIR)))
+    if missing:
+        missing_path.write_text(json.dumps(dict(sorted(missing.items())), indent=1) + "\n")
+    elif missing_path.exists():
+        missing_path.unlink()
     text_info = None
     for c in layers:
         if c["original"].endswith("/text_info.bin"):
@@ -241,7 +287,7 @@ def volume(client: httpx.Client, slug: str, label: str, capture: str, refresh: b
             path.write_bytes(scan)
             scans.append(str(path.relative_to(DATA_DIR)))
 
-    print(f"{slug}: {len(parsed)} captures, capture {best['timestamp']} with {best['pages_with_text']}/{count} pages of text, {len(images)} page images, {len(layers)} layer files, {len(scans)} scans", flush=True)
+    print(f"{slug}: {len(parsed)} captures, capture {best['timestamp']} with {best['pages_with_text']}/{count} pages of text, {len(images)} page images ({len(image_files)} cached), {len(layers)} layer files ({len(layer_files)} cached), {len(scans)} scans", flush=True)
     return {
         "slug": slug,
         "label": label,
@@ -255,6 +301,8 @@ def volume(client: httpx.Client, slug: str, label: str, capture: str, refresh: b
         "layers": [c["original"] for c in layers],
         "text_info": text_info and str(text_info.relative_to(DATA_DIR)),
         "scans": scans,
+        "page_image_files": image_files,
+        "layer_files": layer_files,
         "pages": [{"section": i, "blocks": b} for i, b in enumerate(best["pages"])],
     }
 
