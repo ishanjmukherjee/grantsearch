@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState
 // once per presenter.
 type Listing = {
   id: string
-  title: string
+  title: string | null // null when the program prints none (the 2003 Symposium)
   presenters: string[]
   advisors: string[]
   abstract: string
@@ -26,7 +26,8 @@ type ProjectRecord = {
   advisors?: string[]
   listings?: Listing[]
 }
-type Project = { id: string; share: number; title: string; records: ProjectRecord[] }
+// title is null when none of the project's sources prints one.
+type Project = { id: string; share: number; title: string | null; records: ProjectRecord[] }
 type ExpoEntry = Listing & { year: number }
 type Source = '' | 'surg' | 'expo'
 
@@ -128,6 +129,10 @@ function quotePattern(query: string): RegExp | null {
 // The quoted phrases to highlight in results, if any.
 const Quotes = createContext<RegExp | null>(null)
 
+// What a project whose sources print no title is called: on the result
+// itself, as its heading; inside a project, a section says only "untitled".
+const UNTITLED = 'Untitled Project'
+
 // Text with each quoted phrase in it marked, as find in page does.
 function Marked({ text }: { text: string }) {
   const pattern = useContext(Quotes)
@@ -218,7 +223,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
         if (!resp.ok) throw new Error(`/api/project returned ${resp.status}`)
         const page = await resp.json()
         setData(page)
-        document.title = `${page.project.title} — ${SITE}`
+        document.title = `${page.project.title ?? UNTITLED} — ${SITE}`
         // A link to another of a poster's listings shows the project's own number.
         if (String(page.project.share) !== number) window.history.replaceState(null, '', `/p/${page.project.share}`)
       } catch (e) {
@@ -597,7 +602,7 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
       </div>
       <h2>
         <a href={`/p/${project.share}`}>
-          <Marked text={project.title} />
+          {project.title ? <Marked text={project.title} /> : <span className="untitled">{UNTITLED}</span>}
         </a>
       </h2>
       <p className="people">
@@ -613,7 +618,8 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
           ) || s.students.some((x) => lifted.get(x.name) === null)
         const repeat = topShared !== null && s.students.every((x) => sameSet(x.advisors, topShared))
         const people = own ? byline(repeat ? s.students.map((x) => ({ ...x, advisors: [] })) : s.students) : null
-        const heading = s.title !== project.title ? `Expo ${s.year}: ${s.title}` : years.size > 1 ? `Expo ${s.year}` : null
+        const heading =
+          s.title !== project.title ? `Expo ${s.year}: ${s.title ?? 'untitled'}` : years.size > 1 ? `Expo ${s.year}` : null
         return <Abstract key={s.key} section={s} heading={heading} people={people} open={open} />
       })}
       <div className="links">
@@ -644,7 +650,7 @@ type Student = { name: string; advisors: string[] }
 type Section = {
   key: string
   year: number
-  title: string
+  title: string | null
   students: Student[]
   abstract: string
   url: string
@@ -707,7 +713,7 @@ function ShareButton({ project }: { project: Project }) {
     }
     const url = `${window.location.origin}/p/${project.share}`
     if (navigator.share && window.matchMedia('(pointer: coarse)').matches) {
-      await navigator.share({ title: project.title, url }).catch(() => {}) // dismissed
+      await navigator.share({ title: project.title ?? UNTITLED, url }).catch(() => {}) // dismissed
       return
     }
     try {

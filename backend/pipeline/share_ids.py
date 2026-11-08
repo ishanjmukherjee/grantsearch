@@ -9,8 +9,9 @@ year's page or program, so a re-scrape that adds or drops an entry shifts the
 rest. Numbers are therefore kept in data/share_ids.jsonl, one {number, id,
 key} row per entry ever numbered, where key is the entry's source, year,
 normalized title and, but for a SURG grant, its students; the source is a
-thesis's department, as a thesis can be on two departments' lists. A 2003 Symposium
-listing, which has no title, is keyed by its project number instead. An entry
+thesis's department, as a thesis can be on two departments' lists. An entry
+without a title is keyed by its project number instead (a 2003 Symposium
+listing), or by "untitled" and its students. An entry
 keeps the number of the row with its key, wherever its id has moved; failing
 that, of the row with its id, if that row's key is otherwise unclaimed and
 its title nearly the same or, but for a SURG grant, its students the same (a
@@ -49,7 +50,10 @@ def entries() -> list[dict]:
 
 
 def key(e: dict) -> str:
-    title = " ".join(words(e["title"])) if e["title"] else f"project {e['project']}"
+    if e["title"]:
+        title = " ".join(words(e["title"]))
+    else:  # a 2003 Symposium listing keeps its project number; others have none
+        title = "untitled" if e["project"] is None else f"project {e['project']}"
     if e["source"] == "surg":
         return f"surg|{e['year']}|{title}"
     students = sorted(" ".join(words(f"{p['first']} {p['last']}")) for p in e["students"])

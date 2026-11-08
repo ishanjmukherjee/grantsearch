@@ -101,10 +101,12 @@ if FRONTEND_DIR.exists():
         if p is None:
             return HTMLResponse(page, status_code=404)
         r = search.public(p)
-        title, desc = escape(f"{r['title']} — {SITE}"), escape(description(r))
+        # As the frontend shows a project whose sources print no title.
+        name = r["title"] or "Untitled Project"
+        title, desc = escape(f"{name} — {SITE}"), escape(description(r))
         head = (
             f'<meta name="description" content="{desc}" />'
-            f'<meta property="og:title" content="{escape(r["title"])}" />'
+            f'<meta property="og:title" content="{escape(name)}" />'
             f'<meta property="og:description" content="{desc}" />'
             f'<meta property="og:site_name" content="{SITE}" />'
             f'<meta property="og:type" content="article" />'

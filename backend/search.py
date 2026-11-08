@@ -63,7 +63,8 @@ empty the results before it is closed. The frontend finds and highlights the
 phrases the same way.
 
 A project's similar projects are those whose document or summary vectors are
-nearest any of its own; one without vectors uses a search for its title.
+nearest any of its own; one without vectors uses a search for its title, or
+without one its first abstract, and has none if it has neither.
 
 Results carry only real data (titles, people, years, abstracts, source links),
 as the project's records (see public); cards only aid ranking. Index rows are
@@ -150,7 +151,7 @@ def bm25_text(p: dict) -> str:
     for card in (c["card"] for c in p["cards"]):
         parts += card["fields"] + card["concepts"] + card["queries"]
         parts += [f"{k} {v}" for k, v in card["acronyms"].items()]
-    return "\n".join(parts)
+    return "\n".join(x for x in parts if x)
 
 
 def years(p: dict) -> set[int]:
@@ -237,7 +238,7 @@ def shown_text(p: dict) -> list[str]:
         texts += x.get("students", [])
         for e in x.get("listings", []):
             texts += [e["title"], e["abstract"], ", ".join(e["advisors"]), *e["presenters"]]
-    return texts
+    return [t for t in texts if t]
 
 
 def word_forms(word: str) -> list[str]:
@@ -307,7 +308,7 @@ def acronym_expansions(projects: list[dict]) -> dict[str, tuple[str, str]]:
 
     lowercase, cased = Counter(), Counter()
     for p in projects:
-        for text in dict.fromkeys([p["title"], *(x for e in p["entries"] for x in (e["title"], e["abstract"]))]):
+        for text in filter(None, dict.fromkeys([p["title"], *(x for e in p["entries"] for x in (e["title"], e["abstract"]))])):
             for word in fold(text).split():
                 if (form := find_acronym(word, votes)) and form == form.lower():
                     lowercase[form] += 1
@@ -402,7 +403,8 @@ class Index:
         """The n projects most like p; see the module docstring."""
         i = self.position[p["id"]]
         if not self.has_vectors[i]:
-            return [x for x in self.search(p["title"], n=n + 1)[0] if x is not p][:n]
+            query = p["title"] or next((e["abstract"] for e in p["entries"] if e["abstract"]), None)
+            return [x for x in self.search(query, n=n + 1)[0] if x is not p][:n] if query else []
         own = self.vecs[(self.row_project == i) & self.row_is_doc]
         sims = (self.vecs[self.row_is_doc] @ own.T).max(axis=1)
         best = np.full(len(self.projects), -np.inf)
@@ -461,7 +463,7 @@ def main() -> None:
     results, _ = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n)
     for rank, p in enumerate(results, 1):
         tags = [f"{'SURG' if r['source'] == 'surg' else 'Expo'} {r['year']}" for r in p["records"]]
-        print(f"{rank:2}. {p['title']}  [{', '.join(tags)}]")
+        print(f"{rank:2}. {p['title'] or '(untitled)'}  [{', '.join(tags)}]")
 
 
 if __name__ == "__main__":

@@ -115,7 +115,7 @@ class People:
             for card in (c["card"] for c in p["cards"]):
                 texts += [card.get("gloss", ""), *card["fields"], *card["concepts"], *card["queries"]]
                 texts += [f"{k} {v}" for k, v in card["acronyms"].items()]
-            for text in texts:
+            for text in filter(None, texts):
                 self.text_words.update(w for w in query_words(text) if w not in own_names)
         self.people = list(found.values())
 

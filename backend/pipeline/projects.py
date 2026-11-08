@@ -22,8 +22,10 @@ for, with data/overrides.jsonl applied on loading (see load_jsonl):
 
 Each project is a dict:
 
-- id, title: its head record's. The head is its first SURG grant by id or,
-  without one, its first record by id.
+- id: its head record's. The head is its first SURG grant by id or, without
+  one, its first record by id.
+- title: the head's title or, if the head prints none, the first of its
+  other records' or listings' that does; None when none does.
 - records: its records, SURG grants first, each source's by id
 - entries: its posters' listings, by id (see entries), their abstracts
   folded (see fold)
@@ -160,13 +162,16 @@ def load_projects() -> list[dict]:
         if not cards:
             cards = [{"owner": r["id"], "card": c, "body": c["gloss"], "gloss": None} for r in rs if (c := title_cards.get(r["id"])) and c["status"] == "card"]
         head = next((r for r in rs if r["kind"] == "grant"), rs[0])
-        projects.append({"id": head["id"], "title": head["title"], "records": rs, "entries": fold(entries(rs)), "cards": cards})
+        listed = fold(entries(rs))
+        title = next((t for t in [head["title"], *(r["title"] for r in rs), *(e["title"] for e in listed)] if t), None)
+        projects.append({"id": head["id"], "title": title, "records": rs, "entries": listed, "cards": cards})
     return sorted(projects, key=lambda p: order(records[p["id"]]))
 
 
 def card_text(card: dict, body: str) -> str:
-    """A card's title, then body, fields, concepts and acronym expansions."""
-    parts = [card["title"], body]
+    """A card's title (if its record has one), then body, fields, concepts and
+    acronym expansions."""
+    parts = [x for x in (card.get("title"), body) if x]
     if card["fields"]:
         parts.append("Fields: " + "; ".join(card["fields"]))
     if card["concepts"]:
