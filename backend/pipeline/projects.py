@@ -4,21 +4,20 @@ A project is a connected group of records (see pipeline.records) under the
 links in data/links.jsonl whose relation is "same" with high confidence; a
 record no such link touches is a project alone. Projects are computed on
 loading and never stored. Only projects with at least one generated card
-(a title card's refusal counts) are loaded: the rest have not been carded
-yet and are not searchable.
+(a SURG card's skip counts) are loaded: the rest have not been carded yet
+and are not searchable.
 
 Generated files keep their cards by the id of the record each was written
 for, with data/overrides.jsonl applied on loading (see load_jsonl):
 
-- generated/title_cards.jsonl: a card, or a refusal, from a SURG grant's
-  title alone (prompts/concept_card.md); a card's gloss stands in for the
-  abstract the grant does not have.
-- generated/abstract_cards.jsonl: a grant's card written from its title and
-  the abstracts of the posters linked to it (prompts/abstract_card.md).
+- generated/surg_cards.jsonl: every SURG grant's card, or a skip where
+  nothing points to what the project is, written by reading the grant's
+  record and its linked posters (prompts/surg_card.md). A card's gloss
+  stands in for the abstract a grant without posters does not have.
 - generated/expo_cards.jsonl: a poster's card from its own listings
-  (prompts/expo_card.md).
-- generated/glosses.jsonl: a short topic-level gloss for an abstract or
-  Expo card's owner, from the same abstracts (prompts/abstract_gloss.md).
+  (prompts/expo_card.md), for posters no carded grant presents.
+- generated/glosses.jsonl: a short topic-level gloss for an Expo card's
+  owner, from the same abstracts (prompts/abstract_gloss.md).
 
 Each project is a dict:
 
@@ -30,12 +29,13 @@ Each project is a dict:
 - entries: its posters' listings, by id (see entries), their abstracts
   folded (see fold)
 - cards: the cards that stand for it in the index, each {owner, card, body,
-  gloss}. These are its abstract and Expo cards, or without any, its grants'
-  title cards that are not refusals. body is the text the card's document
-  vector is built from besides the card: the distinct abstracts its owner's
-  card was written from (an abstract card's linked posters', an Expo card's
-  poster's), or a title card's gloss. gloss is the owner's gloss, for the
-  summary vector, or None.
+  gloss}. These are its grants' SURG cards that are not skips, and the Expo
+  cards of its posters that no such grant presents. body is the text the
+  card's document vector is built from besides the card: the distinct
+  abstracts its owner's card was written from (a grant's linked posters', an
+  Expo card's poster's), or, for a grant without posters, its card's gloss.
+  gloss is the text for the summary vector: a SURG card's gloss when its
+  body is abstracts, an Expo card's owner's gloss, or None.
 
 Index rows are keyed by the card's owner (see rows).
 """
@@ -148,7 +148,7 @@ def fold(listings: list[dict]) -> list[dict]:
 def load_projects() -> list[dict]:
     """Every carded project, those headed by a grant first, each in head id order."""
     records = {r["id"]: r for r in load()}
-    title_cards, abstract_cards, expo_cards, glosses = (load_jsonl(f"{GENERATED}/{name}.jsonl") for name in ("title_cards", "abstract_cards", "expo_cards", "glosses"))
+    surg_cards, expo_cards, glosses = (load_jsonl(f"{GENERATED}/{name}.jsonl") for name in ("surg_cards", "expo_cards", "glosses"))
     links = same_links()
     # A grant may be linked to two listings of one poster: one link each.
     linked: dict[str, set[str]] = {}
@@ -162,19 +162,21 @@ def load_projects() -> list[dict]:
     projects = []
     for group in components(list(records), links):
         rs = sorted((records[i] for i in group), key=order)
-        if not any(r["id"] in title_cards or r["id"] in abstract_cards or r["id"] in expo_cards for r in rs):
+        if not any(r["id"] in surg_cards or r["id"] in expo_cards for r in rs):
             continue
         cards = []
+        # Posters a carded grant presents: that grant's card was written from them.
+        presented = set()
         for r in rs:
-            if r["id"] in abstract_cards:
-                posters = [records[i] for i in sorted(linked[r["id"]]) if records[i]["kind"] == "presentation"]
-                body = fold_abstracts([e["abstract"] for e in entries(posters)])
-                cards.append({"owner": r["id"], "card": abstract_cards[r["id"]], "body": body, "gloss": glosses.get(r["id"], {}).get("gloss")})
-            elif r["id"] in expo_cards:
+            if (c := surg_cards.get(r["id"])) and c["status"] == "card":
+                posters = [records[i] for i in sorted(linked.get(r["id"], ())) if records[i]["kind"] == "presentation"]
+                presented |= {p["id"] for p in posters}
+                body = fold_abstracts([e["abstract"] for e in entries(posters)]) if posters else None
+                cards.append({"owner": r["id"], "card": c, "body": body or c["gloss"], "gloss": c["gloss"] if body else None})
+        for r in rs:
+            if r["id"] in expo_cards and r["id"] not in presented:
                 body = fold_abstracts([e["abstract"] for e in entries([r])])
                 cards.append({"owner": r["id"], "card": expo_cards[r["id"]], "body": body, "gloss": glosses.get(r["id"], {}).get("gloss")})
-        if not cards:
-            cards = [{"owner": r["id"], "card": c, "body": c["gloss"], "gloss": None} for r in rs if (c := title_cards.get(r["id"])) and c["status"] == "card"]
         head = next((r for r in rs if r["kind"] == "grant"), rs[0])
         listed = fold(entries(rs))
         title = next((t for t in [head["title"], *(r["title"] for r in rs), *(e["title"] for e in listed)] if t), None)
