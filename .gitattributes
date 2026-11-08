@@ -8,5 +8,19 @@ data/raw/**/*.mov filter=lfs diff=lfs merge=lfs -text
 data/raw/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
 data/raw/**/*.png filter=lfs diff=lfs merge=lfs -text
 data/raw/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.gif filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.webp filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.webm filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.m4a filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.wav filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.pptx filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.zip filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.gz filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.bin filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.ttf filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.woff filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.woff2 filter=lfs diff=lfs merge=lfs -text
+data/raw/**/*.eot filter=lfs diff=lfs merge=lfs -text
 data/raw/issuu/** filter=lfs diff=lfs merge=lfs -text
 data/** linguist-generated
