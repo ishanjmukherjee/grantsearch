@@ -454,8 +454,8 @@ mark::selection {
 
 .abstract .text.clamped {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -525,6 +525,15 @@ mark::selection {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+/* Acrobat's red. A filled mark reads smaller than an outline, so it is
+   drawn a little larger than the other icons. */
+.links svg.pdf {
+  width: 14px;
+  height: 14px;
+  fill: #ec1c24;
+  stroke: none;
 }
 
 /* Shown on hover or keyboard focus, and always on touch screens, which
