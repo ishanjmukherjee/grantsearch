@@ -527,12 +527,12 @@ mark::selection {
   stroke-linejoin: round;
 }
 
-/* As tall as the external-link icon's drawing beside it, once its outline
-   is drawn over the edges of the box. Its lines keep their width in screen
-   pixels, so they match that icon's weight. */
+/* Sits on the baseline and rises a little above the capitals, once its
+   outline is drawn over the edges of the box. Its lines keep their width
+   in screen pixels, so they match the external-link icon's weight. */
 .links svg.pdf {
   width: auto;
-  height: 7.8px;
+  height: 8.4px;
   overflow: visible;
   fill: none;
   stroke: currentColor;
