@@ -49,6 +49,8 @@ from pipeline.records import (
     fold_abstracts,
     load,
     merge_patch,
+    similar,
+    trigrams,
     words,
 )
 
@@ -125,10 +127,22 @@ def entries(records: list[dict]) -> list[dict]:
 
 def fold(listings: list[dict]) -> list[dict]:
     """The listings, with an abstract that differs from an earlier one's only in
-    formatting (spacing, punctuation, word order) replaced by that one's text,
-    so that it reads, and is shown, as the same abstract."""
+    formatting (spacing, punctuation, word order), or that is a lightly edited
+    version of an earlier listing's of the same poster (see records.similar),
+    replaced by that one's text, so that it reads, and is shown, as the same
+    abstract. A poster listed once per presenter can print a revised abstract
+    under one of them."""
     first: dict[tuple[str, ...], str] = {}
-    return [{**e, "abstract": first.setdefault(tuple(sorted(words(e["abstract"]))), e["abstract"])} for e in listings]
+    shown: list[tuple[str, set[tuple[str, ...]], str]] = []  # (record, trigrams, abstract)
+    out = []
+    for e in listings:
+        text = first.setdefault(tuple(sorted(words(e["abstract"]))), e["abstract"])
+        grams = trigrams(text)
+        earlier = next((t for record, g, t in shown if record == e["record"] and similar(g, grams)), None)
+        if earlier is None:
+            shown.append((e["record"], grams, text))
+        out.append({**e, "abstract": earlier or text})
+    return out
 
 
 def load_projects() -> list[dict]:

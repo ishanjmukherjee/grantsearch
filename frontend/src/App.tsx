@@ -717,7 +717,9 @@ function sameSet(a: string[], b: string[]) {
 
 // A poster presented by several students is listed once per presenter, usually
 // with the same abstract; show each abstract once, with everyone who presented
-// it. Advisors stay with the students whose listing names them.
+// it. The API gives versions of one abstract one text (see the backend's
+// projects.fold), so the same text is the same abstract. Advisors stay with
+// the students whose listing names them.
 function sections(expo: ExpoEntry[]): Section[] {
   const byAbstract = new Map<string, Section>()
   for (const e of expo) {

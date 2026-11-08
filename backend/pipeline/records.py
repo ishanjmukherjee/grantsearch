@@ -185,6 +185,13 @@ def fold_abstracts(abstracts: list[str]) -> str | None:
     return "\n\n".join(dict.fromkeys(seen.values())) or None
 
 
+def similar(a: set[tuple[str, ...]], b: set[tuple[str, ...]]) -> bool:
+    """Whether two abstracts, by their trigrams, are one abstract extracted or
+    lightly edited differently."""
+    union = a | b
+    return bool(union) and len(a & b) / len(union) >= MIN_OVERLAP
+
+
 def poster_groups(listings: list[dict]) -> list[list[dict]]:
     """Every listing in exactly one group of listings of the same poster,
     ordered by id: same year, and near-identical abstracts or the same title
@@ -207,8 +214,7 @@ def poster_groups(listings: list[dict]) -> list[list[dict]]:
             for j in range(i):
                 b = entries[j]
                 same_listing = a["advisor"] and a["title"] and words(a["title"]) == words(b["title"] or "") and words(a["advisor"]) == words(b["advisor"] or "")
-                union = grams[i] | grams[j]
-                if same_listing or (union and len(grams[i] & grams[j]) / len(union) >= MIN_OVERLAP):
+                if same_listing or similar(grams[i], grams[j]):
                     parent[find(a["id"])] = find(b["id"])
 
     groups: dict[str, list[dict]] = {}
