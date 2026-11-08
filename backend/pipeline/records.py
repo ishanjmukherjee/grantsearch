@@ -49,7 +49,7 @@ from pipeline.parse_expo import INSTITUTION
 from pipeline.scrape_surg import DATA_DIR, PARTICLES, SUFFIXES, fold, split_name
 
 RECORDS_DIR = DATA_DIR / "records"
-SOURCES = ("surg", "expo", "symposium", "theses", "nurj")
+SOURCES = ("surg", "ay_urg", "expo", "symposium", "theses", "nurj")
 KINDS = ("grant", "presentation", "thesis", "paper")
 ROLES = ("student", "advisor")
 FIELDS = ("id", "source", "kind", "year", "title", "people", "abstract", "url", "page", "listings", "extra")
