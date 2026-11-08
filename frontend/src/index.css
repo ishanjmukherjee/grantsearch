@@ -527,13 +527,27 @@ mark::selection {
   stroke-linejoin: round;
 }
 
-/* Filled, not stroked, and a little larger than the other icons, whose
-   outlines it should match in weight. */
+/* As tall as the external-link icon's drawing beside it. Its lines keep
+   their width in screen pixels, so they match that icon's weight. */
 .links svg.pdf {
-  width: 14px;
-  height: 14px;
+  width: auto;
+  height: 9.33px;
   fill: currentColor;
   stroke: none;
+}
+
+.links svg.pdf .page {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25px;
+  vector-effect: non-scaling-stroke;
+}
+
+.links svg.pdf .mark {
+  stroke: currentColor;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
 
 /* Shown on hover or keyboard focus, and always on touch screens, which
