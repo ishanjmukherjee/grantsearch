@@ -14,10 +14,11 @@ pipeline.fetch_nurj_extra saves NURJ's videos, with videos/unavailable.json
 and manifest.jsonl beside them.
 
 YouTube answers a burst of downloads from one address with "Sign in to
-confirm you're not a bot" for every video, for hours. So this waits a few
-minutes between videos, and on that answer it waits longer each time (half
-an hour, doubling to four hours) and tries the same video again; it never
-records a refusal of that kind as the video being gone. Videos that are
+confirm you're not a bot" for every video, for hours, and its video servers
+sometimes answer 403 partway through a download. So this waits a few
+minutes between videos, and on either answer it waits longer each time
+(half an hour, doubling to four hours) and tries the same video again; it
+never records a refusal of that kind as the video being gone. Videos that are
 private or removed are listed in unavailable.json and not tried again
 without --refresh.
 
@@ -48,7 +49,9 @@ YOUTUBE_ID = re.compile(r"(?:youtube\.com/(?:watch\?v=|embed/|shorts/)|youtu\.be
 # Seconds between videos, and the first and longest waits after a bot check.
 GAP = (180, 360)
 BOT_WAIT, BOT_WAIT_MAX = 1800, 4 * 3600
-BOT_CHECK = re.compile(r"confirm you.re not a bot", re.I)
+# YouTube's refusals that pass with time, unlike a private or removed video:
+# the bot check, and a 403 or 429 from its video servers mid-download.
+BOT_CHECK = re.compile(r"confirm you.re not a bot|HTTP Error (403|429)", re.I)
 
 
 def voiceovers() -> dict[str, str]:
