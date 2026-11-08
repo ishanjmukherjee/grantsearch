@@ -527,12 +527,12 @@ mark::selection {
   stroke-linejoin: round;
 }
 
-/* Acrobat's red. A filled mark reads smaller than an outline, so it is
-   drawn a little larger than the other icons. */
+/* Filled, not stroked, and a little larger than the other icons, whose
+   outlines it should match in weight. */
 .links svg.pdf {
   width: 14px;
   height: 14px;
-  fill: #ec1c24;
+  fill: currentColor;
   stroke: none;
 }
 
