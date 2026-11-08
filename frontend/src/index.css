@@ -220,6 +220,14 @@ h1 a {
   animation: rest 12s ease-in-out both;
 }
 
+.prompt.resumed {
+  animation-name: resumed;
+}
+
+.prompt.rest.resumed {
+  animation-name: rest-resumed;
+}
+
 .prompt.held {
   animation: held 0.6s ease-in-out both;
 }
@@ -238,6 +246,26 @@ h1 a {
   5%,
   95% {
     opacity: 1;
+  }
+}
+
+@keyframes rest-resumed {
+  0%,
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes resumed {
+  0%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

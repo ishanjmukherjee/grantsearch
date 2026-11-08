@@ -190,26 +190,28 @@ function useVisible() {
 // The search box's rotating example queries, as an index into ROTATION. With
 // once, they stop on REST after one pass instead of looping. They pause while
 // the tab is out of view or the prompt is not shown, so a visitor who opens
-// the page in the background still sees the first prompts first; on resuming,
-// the current prompt plays from its start. The CSS animation keeps running
-// while the tab is hidden and ends faded out, so key changes on each return to
-// remount the prompt and replay its animation alongside the restarted timer.
+// the page in the background still sees the first prompts first. The CSS
+// animation keeps running while the tab is hidden and ends faded out, so on
+// each return the key changes to remount the prompt, and resumed swaps in an
+// animation that holds it in full view for the restarted timer before fading
+// it out, rather than fading in a prompt already read.
 function usePrompt({ once = false, shown = true } = {}) {
-  const [prompt, setPrompt] = useState(0)
   const { visible, returns } = useVisible()
+  const [{ prompt, since }, setPrompt] = useState({ prompt: 0, since: returns })
   const held = once && ROTATION[prompt] === REST
   useEffect(() => {
     if (held || !visible || !shown) return
     const timer = setTimeout(
-      () => setPrompt((i) => (i + 1) % ROTATION.length),
+      () => setPrompt({ prompt: (prompt + 1) % ROTATION.length, since: returns }),
       ROTATION[prompt] === REST ? REST_MS : PROMPT_MS,
     )
     return () => clearTimeout(timer)
-  }, [prompt, held, visible, shown])
+  }, [prompt, held, visible, shown, returns])
+  const resumed = returns !== since ? ' resumed' : ''
   return {
     prompt,
     key: held ? `${prompt}` : `${prompt}.${returns}`,
-    className: held ? 'prompt held' : ROTATION[prompt] === REST ? 'prompt rest' : 'prompt',
+    className: held ? 'prompt held' : ROTATION[prompt] === REST ? `prompt rest${resumed}` : `prompt${resumed}`,
   }
 }
 
