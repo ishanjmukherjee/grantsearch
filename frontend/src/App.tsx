@@ -640,7 +640,7 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
       <div className="links">
         {grants.map((g) => (
           <a key={g.id} href={g.url} target="_blank" rel="noreferrer">
-            SURG {g.year} winners list <ExternalIcon />
+            SURG {g.year} winners <ExternalIcon />
           </a>
         ))}
         {parts.map((s) => (
