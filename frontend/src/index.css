@@ -527,27 +527,30 @@ mark::selection {
   stroke-linejoin: round;
 }
 
-/* As tall as the external-link icon's drawing beside it. Its lines keep
-   their width in screen pixels, so they match that icon's weight. */
+/* As tall as the external-link icon's drawing beside it, once its outline
+   is drawn over the edges of the box. Its lines keep their width in screen
+   pixels, so they match that icon's weight. */
 .links svg.pdf {
   width: auto;
-  height: 9.33px;
-  fill: currentColor;
-  stroke: none;
-}
-
-.links svg.pdf .page {
+  height: 7.8px;
+  overflow: visible;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.25px;
+  stroke-linejoin: round;
+}
+
+.links svg.pdf path {
   vector-effect: non-scaling-stroke;
 }
 
+/* Heavier than the outline, as in Adobe's icon. */
+.links svg.pdf .fold {
+  stroke-width: 1.5px;
+}
+
 .links svg.pdf .mark {
-  stroke: currentColor;
-  stroke-width: 0.5px;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
+  stroke-width: 0.75px;
 }
 
 /* Shown on hover or keyboard focus, and always on touch screens, which
