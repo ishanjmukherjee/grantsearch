@@ -1,0 +1,4907 @@
+[
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20211216194920",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SETTDUMQCCKRZ3UJNCIZNC6GCP3OBFY5",
+  "length": "16593"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20211227034610",
+  "original": "http://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "392"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20220607104411",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MCHBXB3KBFJT7MGGFHO6MNWXFJWJXSP5",
+  "length": "19551"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20220817173625",
+  "original": "http://thenulj.com/",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "673"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20230121202828",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MK6AJGJCX6VSNRMHKQ6W4PZQ6LP6O2CL",
+  "length": "17305"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20230320234307",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FBUCXGPAS3ZWQPSMN2F7SHN62SRDPMRD",
+  "length": "17306"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20230329135019",
+  "original": "http://www.thenulj.com/",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "705"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20230404051336",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "BQ65YDDXX6Z7RF57LD5X42W4F2ADTZTV",
+  "length": "17805"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20230517055558",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "OYSUEXNYCPVRZQSEGGFAVI4SVV5Z4YI5",
+  "length": "17890"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20231113151306",
+  "original": "http://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "586"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20231113152820",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "7WO45GN4KC5HCIXC4AKMAOSQ25TPCYQ5",
+  "length": "21142"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20231127060516",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "B3KHB7RZTC2VGAHHPMSKJZEWEV46HVU4",
+  "length": "17778"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240118054942",
+  "original": "http://www.thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "334"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240118054944",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FIKI3DYCKL2JGZRGLOX6HCQVLZAKKQOY",
+  "length": "18280"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240118055129",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FIKI3DYCKL2JGZRGLOX6HCQVLZAKKQOY",
+  "length": "18322"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240415060626",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "403",
+  "digest": "ZNEEUHEK2GJLSVBEZKGICWEQPRVH6BIB",
+  "length": "62563"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240415060630",
+  "original": "http://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "403",
+  "digest": "NKQT5WA4A7IQS6ZF22XWXVPKBGKQ3MTR",
+  "length": "62560"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240426101029",
+  "original": "https://thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "403",
+  "digest": "XCXUOOVGYXJYSI5QFWJ6S6NZBCZDHGKL",
+  "length": "62555"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240426101045",
+  "original": "http://thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "403",
+  "digest": "LSK5SO4T4NZALJ3JXJ3U7S3OEOQTOLTN",
+  "length": "62553"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240507044301",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "PG3573PY66LCEZDVI5IJGSXAXAYZLPM4",
+  "length": "21634"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240508023221",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "H3A37L5ZI2VQ4DNHRQTKVDJ5PZ63PNND",
+  "length": "18344"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240710184921",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "CCTYTF3PTTBKR57ZM322FYHERN3QH6HN",
+  "length": "18097"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240902213958",
+  "original": "http://www.thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "586"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240902213958",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "GWVEMOEWYT7V3TXWMG2JSBMZ5XLKEVP2",
+  "length": "21664"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240902213959",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "GWVEMOEWYT7V3TXWMG2JSBMZ5XLKEVP2",
+  "length": "848"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240902214030",
+  "original": "http://thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "403",
+  "digest": "IAVEJRHM5PBEO3JOJJQBPOAAGXYHNIJ7",
+  "length": "1408"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20240927183845",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DNOOMOT7MXSJNABVZUEPCTPGHS3E6KVC",
+  "length": "18085"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241112231432",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VSJ3IAF76LQVQR7JHSSVWIQL6DEYWR25",
+  "length": "17932"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241123061944",
+  "original": "https://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "620"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241123061944",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "ETZYA2UUMBD2ALGIZTCQFCUFG65YXUUD",
+  "length": "21488"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241123061950",
+  "original": "http://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "581"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241123061951",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "ETZYA2UUMBD2ALGIZTCQFCUFG65YXUUD",
+  "length": "858"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241123062034",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "ETZYA2UUMBD2ALGIZTCQFCUFG65YXUUD",
+  "length": "21488"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241123062052",
+  "original": "http://www.thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "583"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20241123062053",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "ETZYA2UUMBD2ALGIZTCQFCUFG65YXUUD",
+  "length": "859"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250120153118",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "3OJKNQYHFX4E7NMGSL5ZRCZH4TYJKNBX",
+  "length": "17574"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250123001429",
+  "original": "https://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "621"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250204085921",
+  "original": "http://www.thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "589"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250204090245",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "I7ZSCBJEUOS3BAWQOBKOYZBNX647RMCH",
+  "length": "21192"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250206222249",
+  "original": "http://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "592"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250330175921",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "THOV52YLL2K7QWCO3IIEV4GWEJMLMVNT",
+  "length": "20882"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250401024701",
+  "original": "https://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "618"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250401024709",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "3VPLO7BWL3MFNEO2GW6JEHJCUJUPKQJS",
+  "length": "20948"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250403101614",
+  "original": "http://thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "403",
+  "digest": "SOBGDWVUYTFZPZBPBPOUVECYUI4JICQ6",
+  "length": "1470"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250418013321",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DMK44E4YYYXZ4LJBP5JRWZKZDAZ5CRJL",
+  "length": "17709"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250519155110",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "X5NRO7GIZF3URG4Y7DQEO7Z2ORU4WA42",
+  "length": "17688"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250714203518",
+  "original": "http://thenulj.com/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "326"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250723214317",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YSQFXJS7YA63OND52NTETM2QET673JQZ",
+  "length": "18284"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250816194335",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KAMOEFSI5TZAURV2PYQFVNOOPCV5YVFQ",
+  "length": "22882"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20250906203607",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "M3SKMTEPT3624FIXTCTOJ2ONEBEUJXSH",
+  "length": "22794"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20251024020834",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "6PBNDYMYQGEVXKHH4OIDJB7VV6U4ZDTE",
+  "length": "37060"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20251028214202",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "7HDJLXLNNO5LS56EOSNIJ6SBDXW4PS33",
+  "length": "27763"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20251109144302",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MPX4SCVP2KZPDCFMX33VP2RWZYRBOKJU",
+  "length": "27516"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20251206095320",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "GT2PTOJT3YWCLSFOJ267IWLPHHVL2UET",
+  "length": "27497"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20260104192233",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "TYRTHEP6DP3VDUGCSSHTUPWCPOR5TRDN",
+  "length": "28301"
+ },
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20260201011516",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "XSW3MA3SZ7L7UH4EQHG24BT55BOCKNOF",
+  "length": "33966"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20231127061424",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WEAN5YIBMN4YKPV2EVWX3V4PGQ5SI35G",
+  "length": "13089"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20240118055141",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "588"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20240508023325",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13116"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20240710203815",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "MT767RKOLVXMSS7KQRZ4WJNW23LQ5HXQ",
+  "length": "12917"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20240927222843",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WPZGSGSLNIIQX7VCM4CG6YOUZDEKGIOT",
+  "length": "12895"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20241112231607",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12781"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20250121003804",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12467"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20250418082032",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "AK7BJPPRU4WRE3HCNSXEI5GWTDISNOOH",
+  "length": "12631"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20250519170259",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12655"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20250723214533",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12695"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20250816195159",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17280"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20250906204059",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "17275"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20251028214627",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23044"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20251109163150",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24135"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/ai-plugin.json",
+  "timestamp": "20260104192726",
+  "original": "https://www.thenulj.com/.well-known/ai-plugin.json",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "515"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20231127134639",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TYDBHISC35QLMMAQNACPWCH6RQAEM6BD",
+  "length": "13130"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20240118055133",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "578"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20240508023402",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13106"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20240710185826",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "MT767RKOLVXMSS7KQRZ4WJNW23LQ5HXQ",
+  "length": "12909"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20240929174258",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "UE6BUZURBHGRNBK4EB7TKK63M6BLW2GW",
+  "length": "12914"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20241112231725",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12749"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20250120153755",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12482"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20250419173349",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "7SZOAQLO5KIJ4HDDA2DGX5YHAMK37CYA",
+  "length": "12602"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20250519161327",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12657"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20250723214326",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12672"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20250816200247",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17277"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20250906204112",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "17199"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20251028222948",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23054"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20251109173708",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24131"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/assetlinks.json",
+  "timestamp": "20260104192732",
+  "original": "https://www.thenulj.com/.well-known/assetlinks.json",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "514"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20231127064152",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WEAN5YIBMN4YKPV2EVWX3V4PGQ5SI35G",
+  "length": "13091"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20240118055147",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "588"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20240508023303",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13126"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20240710202915",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "MT767RKOLVXMSS7KQRZ4WJNW23LQ5HXQ",
+  "length": "12926"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20240927212605",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WPZGSGSLNIIQX7VCM4CG6YOUZDEKGIOT",
+  "length": "12881"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20241112231824",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12763"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20250120153502",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12518"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20250418015619",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFM4VGOZAER5L7NAQCAK5ZI6GFBPVQNJ",
+  "length": "12630"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20250519164347",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12649"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20250723214345",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12672"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20250816203308",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17267"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20250906204227",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "483"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20251028230253",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23058"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20251109151618",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24133"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20251206133227",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "5A4GXOEWIIQ33HWPR7LK4UJAQMRR5JLK",
+  "length": "23521"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/dnt-policy.txt",
+  "timestamp": "20260104192709",
+  "original": "https://www.thenulj.com/.well-known/dnt-policy.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "512"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20231127131233",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TYDBHISC35QLMMAQNACPWCH6RQAEM6BD",
+  "length": "13133"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20240118055132",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "13041"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20240508023355",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13105"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20240710201730",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "MT767RKOLVXMSS7KQRZ4WJNW23LQ5HXQ",
+  "length": "12921"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20240927200505",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WPZGSGSLNIIQX7VCM4CG6YOUZDEKGIOT",
+  "length": "12889"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20241112231800",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12748"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20250120153549",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12484"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20250419075200",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFR4HA4AAE4EZDNE526BNFIBRQHPBB5H",
+  "length": "12622"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20250519160646",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12640"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20250723214346",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12668"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20250816194855",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17265"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20250906204202",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "480"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20251028235908",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23050"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20251109150209",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24130"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/gpc.json",
+  "timestamp": "20260104192736",
+  "original": "https://www.thenulj.com/.well-known/gpc.json",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "508"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20231127064310",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WEAN5YIBMN4YKPV2EVWX3V4PGQ5SI35G",
+  "length": "13077"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20240118055231",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "13010"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20240508023341",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13098"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20240710195702",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "MT767RKOLVXMSS7KQRZ4WJNW23LQ5HXQ",
+  "length": "12919"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20240927195115",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WPZGSGSLNIIQX7VCM4CG6YOUZDEKGIOT",
+  "length": "12868"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20241112231851",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12740"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20250120153529",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12477"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20250419081040",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFR4HA4AAE4EZDNE526BNFIBRQHPBB5H",
+  "length": "12611"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20250519170643",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12627"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20250723214839",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12659"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20250816222152",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17251"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20250906204143",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "493"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20251028220114",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23044"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20251109161401",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24119"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/nodeinfo",
+  "timestamp": "20260104192729",
+  "original": "https://www.thenulj.com/.well-known/nodeinfo",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "503"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20231127062614",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WEAN5YIBMN4YKPV2EVWX3V4PGQ5SI35G",
+  "length": "13095"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20240118055130",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "12959"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20240508023355",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13110"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20240710215315",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TT526ITWLUF5BQ5F3QN5MPTKOVUXMFDF",
+  "length": "12918"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20240927185032",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WPZGSGSLNIIQX7VCM4CG6YOUZDEKGIOT",
+  "length": "12935"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20241112231907",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12756"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20250120153427",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12486"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20250418020104",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFM4VGOZAER5L7NAQCAK5ZI6GFBPVQNJ",
+  "length": "12629"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20250519171552",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12642"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20250723214526",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12698"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20250816200044",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17267"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20250906204104",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "487"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20251028224514",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23045"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20251109160832",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24153"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20251206110405",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "5A4GXOEWIIQ33HWPR7LK4UJAQMRR5JLK",
+  "length": "23517"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/openid-configuration",
+  "timestamp": "20260104192715",
+  "original": "https://www.thenulj.com/.well-known/openid-configuration",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "513"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20231127061244",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WEAN5YIBMN4YKPV2EVWX3V4PGQ5SI35G",
+  "length": "13089"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20240118055134",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "578"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20240508023458",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13120"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20240711014635",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TT526ITWLUF5BQ5F3QN5MPTKOVUXMFDF",
+  "length": "12931"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20240927191147",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WPZGSGSLNIIQX7VCM4CG6YOUZDEKGIOT",
+  "length": "12887"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20241112232633",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12745"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20250120153552",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12453"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20250419201325",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "7SZOAQLO5KIJ4HDDA2DGX5YHAMK37CYA",
+  "length": "12622"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20250519174314",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12640"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20250723214409",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12672"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20250816203418",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17267"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20250906204131",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "488"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20251028231838",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23054"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20251109150821",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24145"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/security.txt",
+  "timestamp": "20260104192713",
+  "original": "https://www.thenulj.com/.well-known/security.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "502"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20231127063118",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WEAN5YIBMN4YKPV2EVWX3V4PGQ5SI35G",
+  "length": "13082"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20240118055320",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "577"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20240508023359",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13122"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20240710224826",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TT526ITWLUF5BQ5F3QN5MPTKOVUXMFDF",
+  "length": "12973"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20240928182536",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "B3AWBWY525QZ77L5BZEI5FZTXBUMLYYZ",
+  "length": "12897"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20241112231615",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12729"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20250120153812",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12483"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20250418015954",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFM4VGOZAER5L7NAQCAK5ZI6GFBPVQNJ",
+  "length": "12623"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20250519163651",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12644"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20250723214457",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12677"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20250816221743",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17263"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20250906204044",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "17197"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20251029013822",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23047"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20251109174231",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24133"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20251206161513",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "5A4GXOEWIIQ33HWPR7LK4UJAQMRR5JLK",
+  "length": "23517"
+ },
+ {
+  "urlkey": "com,thenulj)/.well-known/trust.txt",
+  "timestamp": "20260104192659",
+  "original": "https://www.thenulj.com/.well-known/trust.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "23153"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20230404063756",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "393"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20230517122337",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "395"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20231127062435",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "446"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20240118055146",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "432"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20240508023327",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "483"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20240710200217",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "379"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20240929071653",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "367"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20241112231714",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "372"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20250120153436",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "375"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20250418021659",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "398"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20250519162534",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "409"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20250723214431",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "410"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20250816201951",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "412"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20250906204122",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "424"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20251028224949",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "393"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20251109185035",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "404"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20251207042227",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "419"
+ },
+ {
+  "urlkey": "com,thenulj)/about",
+  "timestamp": "20260104192723",
+  "original": "https://www.thenulj.com/about",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "366"
+ },
+ {
+  "urlkey": "com,thenulj)/account",
+  "timestamp": "20230121202846",
+  "original": "https://www.thenulj.com/account/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QNHGUBOPYDBAJPCDRV6C3Y7HVSCO6L4Z",
+  "length": "1068"
+ },
+ {
+  "urlkey": "com,thenulj)/account",
+  "timestamp": "20250120153730",
+  "original": "https://www.thenulj.com/account/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "2BXRHQ42OO6XL5N3NEHACBUABH4H27CB",
+  "length": "1033"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20231127173057",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TYDBHISC35QLMMAQNACPWCH6RQAEM6BD",
+  "length": "13102"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20240118055135",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "561"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20240508023358",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13094"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20240710201926",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "MT767RKOLVXMSS7KQRZ4WJNW23LQ5HXQ",
+  "length": "12874"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20240927203619",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "WPZGSGSLNIIQX7VCM4CG6YOUZDEKGIOT",
+  "length": "12872"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20241112231808",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12720"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20250120153422",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12459"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20250420115459",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QFXIWOVRG3ZOEDPU4WOP5JGQIKWWFMH6",
+  "length": "12619"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20250519191943",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12604"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20250723214449",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12661"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20250816203436",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17260"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20250906204125",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "17196"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20251028215412",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23024"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20251109152924",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24112"
+ },
+ {
+  "urlkey": "com,thenulj)/ads.txt",
+  "timestamp": "20260104192716",
+  "original": "https://www.thenulj.com/ads.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "493"
+ },
+ {
+  "urlkey": "com,thenulj)/api",
+  "timestamp": "20230121202853",
+  "original": "https://www.thenulj.com/api/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "6ASKMBMVRQ6UFBPBIT6S2X6QWD5NNWXZ",
+  "length": "12657"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/6033fefe8e790b7decab96f2",
+  "timestamp": "20240506203138",
+  "original": "https://www.thenulj.com/api/blog-like-count/6033fefe8e790b7decab96f2",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "OZEQINPBKM3BAR2OCTIKBFLTSFEXV6ST",
+  "length": "673"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/642c6397d3e4187fad53758f",
+  "timestamp": "20250513200617",
+  "original": "https://www.thenulj.com/api/blog-like-count/642c6397d3e4187fad53758f",
+  "mimetype": "text/plain",
+  "statuscode": "400",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "552"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/65ad74873a6f8a14a52ae76e",
+  "timestamp": "20240415161301",
+  "original": "https://www.thenulj.com/api/blog-like-count/65ad74873a6f8a14a52ae76e",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "BP2ZW3R53J6EXK33MXIFWCNYIZYRCSP4",
+  "length": "668"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/65d619e80c56ac0407d9b8eb",
+  "timestamp": "20250702031640",
+  "original": "https://www.thenulj.com/api/blog-like-count/65d619e80c56ac0407d9b8eb",
+  "mimetype": "text/plain",
+  "statuscode": "400",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "549"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/662fb91c87db3a6e2ee49ca7",
+  "timestamp": "20241026204316",
+  "original": "https://www.thenulj.com/api/blog-like-count/662fb91c87db3a6e2ee49ca7",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "S2UXQQBNCDJRSPW2R37CAMYE6NAK6MOA",
+  "length": "672"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/66cb8d9af8011041ceb16ff7",
+  "timestamp": "20250720193348",
+  "original": "https://www.thenulj.com/api/blog-like-count/66cb8d9af8011041ceb16ff7",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "HGBV77PTREBLKAT2NGO3RM4CTCHK3EYR",
+  "length": "644"
+ },
+ {
+  "urlkey": "com,thenulj)/api/census/recordhit",
+  "timestamp": "20240415161301",
+  "original": "https://www.thenulj.com/api/census/RecordHit",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "JBFTAMTBT6Q2ZUJV2EKFMWYKKFTCQHBC",
+  "length": "569"
+ },
+ {
+  "urlkey": "com,thenulj)/api/census/recordhit",
+  "timestamp": "20241026204316",
+  "original": "https://www.thenulj.com/api/census/RecordHit",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "JBFTAMTBT6Q2ZUJV2EKFMWYKKFTCQHBC",
+  "length": "571"
+ },
+ {
+  "urlkey": "com,thenulj)/api/census/recordhit",
+  "timestamp": "20250720193348",
+  "original": "https://www.thenulj.com/api/census/RecordHit",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "JBFTAMTBT6Q2ZUJV2EKFMWYKKFTCQHBC",
+  "length": "555"
+ },
+ {
+  "urlkey": "com,thenulj)/api/ui-extensions",
+  "timestamp": "20230121202848",
+  "original": "https://www.thenulj.com/api/ui-extensions/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "6ASKMBMVRQ6UFBPBIT6S2X6QWD5NNWXZ",
+  "length": "12663"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20231127151439",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TYDBHISC35QLMMAQNACPWCH6RQAEM6BD",
+  "length": "13082"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20240118055244",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "569"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20240508023350",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13082"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20240710205944",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "TT526ITWLUF5BQ5F3QN5MPTKOVUXMFDF",
+  "length": "12940"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20240929083341",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "B3AWBWY525QZ77L5BZEI5FZTXBUMLYYZ",
+  "length": "12910"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20241112231751",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "JLYPXTQC7SIS72QPCHZM6RAIPGOQA3DK",
+  "length": "12725"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20250120153455",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12465"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20250418015211",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFM4VGOZAER5L7NAQCAK5ZI6GFBPVQNJ",
+  "length": "12622"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20250519165438",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12633"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20250723214404",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12670"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20250816195118",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17267"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20250906203942",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "17267"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20251108222237",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "B74X6EPE2LBU3U6QNVBVLSIDAUPQHZXR",
+  "length": "23092"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20251109145835",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24132"
+ },
+ {
+  "urlkey": "com,thenulj)/app-ads.txt",
+  "timestamp": "20260104192714",
+  "original": "https://www.thenulj.com/app-ads.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "500"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20250120153509",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "480"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20250419125100",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFR4HA4AAE4EZDNE526BNFIBRQHPBB5H",
+  "length": "12618"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20250519160828",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12630"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20250723214324",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12656"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20250816195442",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17253"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20250906204128",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "17196"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20251109144733",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24145"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20251109160807",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24110"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20251206112253",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "5A4GXOEWIIQ33HWPR7LK4UJAQMRR5JLK",
+  "length": "23509"
+ },
+ {
+  "urlkey": "com,thenulj)/atom.xml",
+  "timestamp": "20260104192708",
+  "original": "https://www.thenulj.com/atom.xml",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "496"
+ },
+ {
+  "urlkey": "com,thenulj)/config",
+  "timestamp": "20230121202905",
+  "original": "https://www.thenulj.com/config",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "272"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20230404071927",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "CTQGJCPDUAT6HG7JYSR7O3QVMHYUCHPL",
+  "length": "13981"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20230523181641",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KRYEJ47X22UJYACY6F3F5M6BITBSYXLA",
+  "length": "18858"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20231127135154",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "EQ242MUH7DG2HZ6IR5ELVUV74M7NKR4N",
+  "length": "19091"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20240118055231",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RVNPUKM5JX7SZMXOS6GSO3WN7LER3L2E",
+  "length": "19014"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MV3BDJAZWTIGAVQK5SHVLFJLIH2WD3ZR",
+  "length": "21440"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20240508023412",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "Q34QHBPPKNWJLGQZ6HAVNHCEOWYFVBQL",
+  "length": "19194"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20240710200259",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "IXGEYAU7GDQ5UFW2HTCGWSC7H27PMHVT",
+  "length": "18977"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20240929095106",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "67J5JLGHALYIUSTO6XV55L4DJAZD32TS",
+  "length": "18984"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20241112231701",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "P4ERWIUENX3C6IYBK5UTVRGBQ7TFMP34",
+  "length": "18820"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20250120153504",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AGCPO5HLUR22BYZBQNKQDJ5BKCDUHJ3D",
+  "length": "18494"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20250418014245",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "OM32EQY5TFAS46SHJLPSVBW4IOW5JSG7",
+  "length": "18831"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20250519180322",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "POQNC6XPM5PEOUHM6PEMQURZKL4OKN3X",
+  "length": "18793"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20250723214546",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "QJUSY65PGR4UI4FRNS5ATGEACXFN6UKA",
+  "length": "18857"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20250816211822",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FFYHPTXO4IU266XOKUWDF7KM3KHHWBEW",
+  "length": "18995"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20250906203955",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SNHR4IC7DDE6ZGN2VLPFSDS2JSEPNIXS",
+  "length": "18956"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20251028221927",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AXLEDSBS3E2Z3DNYZ2XEJPYO3R556IGC",
+  "length": "24991"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20251206181513",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FUMZVWNANA2LAC2ZXXA6647ZR4FYRMQL",
+  "length": "24396"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20251226034605",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "U4BHKLLCMDJQYOVG7J7TH4RR2JSV7KEI",
+  "length": "24409"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20260104192700",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "BDAS7WQZXVZ4MUVHTDIY45JI6NU62TRF",
+  "length": "24267"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20211216201035",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "529"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20220919084613",
+  "original": "http://thenulj.com/favicon.ico",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "495"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20220919084618",
+  "original": "https://thenulj.com/favicon.ico",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "515"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20220919084619",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "740"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20230121202841",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "466"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20230404050501",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "526"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20230404142037",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "529"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20230517043254",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "532"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20230901150217",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "647"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20231127152925",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "525"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20240118055142",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "515"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20240508023332",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "582"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20240710193042",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "512"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20240927192439",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "495"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20241112231951",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "507"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20250120153507",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "460"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20250419041404",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "509"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20250519160344",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "511"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20250723214324",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "514"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20250816215957",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "524"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20250906204037",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "545"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20251028222259",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "539"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20251109144918",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "543"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20251206101124",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "547"
+ },
+ {
+  "urlkey": "com,thenulj)/favicon.ico",
+  "timestamp": "20260104192733",
+  "original": "https://www.thenulj.com/favicon.ico",
+  "mimetype": "image/png",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "504"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20250120153522",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12448"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20250418015457",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFM4VGOZAER5L7NAQCAK5ZI6GFBPVQNJ",
+  "length": "12602"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20250519234609",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "MVSJN4YGCZ5O7L4RDI2OWUYBSAWAURHY",
+  "length": "12611"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20250723214357",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12660"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20250816194628",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17254"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20250906204235",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "480"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20251028235528",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23021"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20251109162010",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24113"
+ },
+ {
+  "urlkey": "com,thenulj)/feed",
+  "timestamp": "20260104192730",
+  "original": "https://www.thenulj.com/feed/",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "488"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20250120153646",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12453"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20250419071617",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFR4HA4AAE4EZDNE526BNFIBRQHPBB5H",
+  "length": "12611"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20250519171234",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12597"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20250723214429",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12661"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20250816233113",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17253"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20250906204111",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "17192"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20251028221121",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23023"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20251206102520",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "5A4GXOEWIIQ33HWPR7LK4UJAQMRR5JLK",
+  "length": "23511"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20251225235230",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "KIATT4WODXQDD2Z37DBJO6O73QUKMIJZ",
+  "length": "23615"
+ },
+ {
+  "urlkey": "com,thenulj)/feed.xml",
+  "timestamp": "20260104192725",
+  "original": "https://www.thenulj.com/feed.xml",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "496"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20250120153452",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12472"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20250418020349",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFM4VGOZAER5L7NAQCAK5ZI6GFBPVQNJ",
+  "length": "12611"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20250519161853",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12624"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20250723214436",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12651"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20250816204838",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17258"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20250906204126",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "483"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20251029112800",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "FSKVEGNHKY5PK66UIIMVQLTQJR7SVUAQ",
+  "length": "23244"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20251109145325",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24118"
+ },
+ {
+  "urlkey": "com,thenulj)/feeds/all.atom.xml",
+  "timestamp": "20260104192711",
+  "original": "https://www.thenulj.com/feeds/all.atom.xml",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "515"
+ },
+ {
+  "urlkey": "com,thenulj)/forum",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/forum",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "XUMXHJH33JQQQSJFGK42DXAIE3TH5G3O",
+  "length": "22038"
+ },
+ {
+  "urlkey": "com,thenulj)/forum-submissions",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/forum-submissions",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KY372ZSASK4TCPZ4SX24TRMZ5OY3PE6Z",
+  "length": "16719"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2021-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2021-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MUKJ5MEMHKN7L6TM3JWPBTAOKHPZH4ZL",
+  "length": "17109"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2022",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2022",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AHTH6NRDW5T2XLM6PFJ7ZL6BIT7EG6EX",
+  "length": "16984"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2022-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2022-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FPWAHCYBX4V23AGWZ57MB2VNKA6IHT7C",
+  "length": "16682"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2023-winners",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2023-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "5GKCCN45VMU7CRLKOQRH7SFGWAWSFUCP",
+  "length": "16756"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2024",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2024",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HAIDALNDMZGX5LEF3TM6W6ZD4UD65FNI",
+  "length": "16827"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2024-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2024-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "PSRFYQXEIWPF4JUHCDRBPAEQYVA6GGII",
+  "length": "16163"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2025-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2025-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "6QYDN76J4BCQIXBCMMJSQPZFQGHGD3TO",
+  "length": "16140"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/hs-2022-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HSBVAL5DIUM3NYJUZ3ZSHMZAGVHW5XSX",
+  "length": "15960"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners/an-insight-into-the-united-states-mass-incarceration-problem-reform-within-the-criminal-justice-system",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/hs-2022-winners/an-insight-into-the-united-states-mass-incarceration-problem-reform-within-the-criminal-justice-system",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "UPLEJ7ZYL6EQMS72SFO2IS5YFF2HP72U",
+  "length": "20479"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners/liberty-v-profit-how-privatization-erodes-justice-ed6xb",
+  "timestamp": "20230320062625",
+  "original": "https://www.thenulj.com/hs-2022-winners/liberty-v-profit-how-privatization-erodes-justice-ed6xb",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WXXWUNE6EPEY4NARFUX4Z5PTTVPS5V7K",
+  "length": "21619"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners/liberty-v-profit-how-privatization-erodes-justice-ed6xb",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/hs-2022-winners/liberty-v-profit-how-privatization-erodes-justice-ed6xb",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SUZMUMLVS6ZJEUIJDSU6HN7TTS3ZHVYK",
+  "length": "24600"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners/why-predictive-policing-empowers-mass-incarceration-in-the-21st-century",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/hs-2022-winners/why-predictive-policing-empowers-mass-incarceration-in-the-21st-century",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "U63XYSYZXN7WFRSFKBNKLQMNWYT73BZA",
+  "length": "19467"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-essay-contest",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/hs-essay-contest",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KLGBL7V32EMBPWGM4O7EH7UK4KSLVF6D",
+  "length": "17290"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-essay-contest-winners",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/hs-essay-contest-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "J2EYMLJ3YTTFTRBXPRL6MS3B7GQDB7QQ",
+  "length": "16429"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20250120153503",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "SDGNRKVM64ILTDFBZHUVUFTSE53UZWJB",
+  "length": "12442"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20250418015802",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NFM4VGOZAER5L7NAQCAK5ZI6GFBPVQNJ",
+  "length": "12613"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20250519165821",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "DGKL2C6L6RVTIIURVWZH3PG5HI5UZDIR",
+  "length": "12631"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20250723214547",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QY3JISY6T4RAQ5LXBFWY5PO4VANG2AHI",
+  "length": "12660"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20250816195221",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "OM3HF25ISTDDWPWJQ7EJFEDRDRHRV3H7",
+  "length": "17277"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20250906204130",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "LQIS7JPJH3XDJR73LZ5JCIW5XNUURDK7",
+  "length": "470"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20251028225600",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "4QGXYZNRIN27BAV42VUFLAUOM65CQGMC",
+  "length": "23025"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20251109151740",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "P7POSPGQ46B66L2UR2L3WNCNOGZJ5KB7",
+  "length": "24111"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20251207070020",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "GTUB3FGUA52GB6XUM7TYXZULENBDH4CA",
+  "length": "23070"
+ },
+ {
+  "urlkey": "com,thenulj)/index.xml",
+  "timestamp": "20260104192706",
+  "original": "https://www.thenulj.com/index.xml",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "U3GWZYHZPPN24XHFUBOYPAZBVK53YCZ2",
+  "length": "493"
+ },
+ {
+  "urlkey": "com,thenulj)/journal",
+  "timestamp": "20240507044301",
+  "original": "https://www.thenulj.com/journal",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "3NZZ55EQ6TNA55YGVV24Q5KOG62KHYO7",
+  "length": "17428"
+ },
+ {
+  "urlkey": "com,thenulj)/journal-2022",
+  "timestamp": "20240507044301",
+  "original": "https://www.thenulj.com/journal-2022",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "T4T2OH226B2R5HNZPYJFW6DMH7RT67KY",
+  "length": "16087"
+ },
+ {
+  "urlkey": "com,thenulj)/law-school-series",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/law-school-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VHO4DZFQBNPHQIOWYXOBXOASLFPAXQYY",
+  "length": "16483"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20230404063757",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YPV43V5FUIE3L7BQOPE7YE4BRATQY2C6",
+  "length": "13697"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20230517122337",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "OCOZJWIHJXV74J6YLL2AGLDINIM5KOE4",
+  "length": "13671"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20231127062436",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DBPXS22OJCAJJ5YVU5ON3KSU7MAJM26C",
+  "length": "13911"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20240118055146",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DCK45U7FOLBIVVWHMKUB22QIWXYWEKS3",
+  "length": "13885"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "32I4D2FRUTKXG6HA2BYBBVT44X6X5ZYX",
+  "length": "15908"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20240508023327",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "Q66AB574BXIWRHLHK6XTAXWNJYV6UCCH",
+  "length": "13895"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20240710200218",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "L5JMLSF5466TTCLZQKPXMKFOVQWCAVZJ",
+  "length": "13747"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20240929071653",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "TDFCMOTATF4TO754Q234766G4CN5GOQX",
+  "length": "13702"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20241112231714",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "D6BGO64SYCRKGF3SC2RCISZRD5NEQNU4",
+  "length": "13593"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20250120153436",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "EZS75S3B2NJS4SMVSLVNXHY6PKILZXIU",
+  "length": "13288"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20250418021700",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "EQMKY6NQVEK7A6SNFA5ZOUQJQFL75QLX",
+  "length": "13524"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20250519162535",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "5P6FHMI5ZSPY6CE3UBYOIB3YD2PMUPYC",
+  "length": "13531"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20250723214431",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RD3RRWKQYNLLX22MACO4IYXU2LD6BTUL",
+  "length": "13695"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20250816201952",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "JH4FR4FOXUW6HWHGPU64GB5GMP7TON6N",
+  "length": "18324"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20250906204123",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VIMVRNIRNGNQMO55FVYRMCJVYDYV4P53",
+  "length": "18287"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20251028224949",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "TNINXAM4HGQOX4NFYCEDJFAQM6UISFH2",
+  "length": "24099"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20251109185035",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MX3U4AOAUD33KRFTYVLKAIMUNX524JXP",
+  "length": "24927"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20251207042227",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "BJVKFGA5KOIAAGXJQVQPNDNR2MRPTZNG",
+  "length": "24127"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20260104192723",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RGK2T4CZ5TLFIJRAFWWIR7NRC7NBFQ7S",
+  "length": "24210"
+ },
+ {
+  "urlkey": "com,thenulj)/nulj",
+  "timestamp": "20250516120156",
+  "original": "https://www.thenulj.com/nulj",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "HG2L2WHIUNFAGLGHLMYM7CGX6WZHKHZE",
+  "length": "12609"
+ },
+ {
+  "urlkey": "com,thenulj)/nulj",
+  "timestamp": "20250516122455",
+  "original": "http://www.thenulj.com/nulj",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "316"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/nuljforum",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WKRENIQ2FHPMOZURJ4ECWNZQZHZIAYKI",
+  "length": "32589"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum",
+  "timestamp": "20251221150157",
+  "original": "https://www.thenulj.com/nuljforum/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LH5XNJWL5DHM7YGBFW3YLHFURWB6ZYUX",
+  "length": "38447"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum",
+  "timestamp": "20251221163516",
+  "original": "http://www.thenulj.com/nuljforum/",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "339"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/-the-potentiality-for-privacy-rights",
+  "timestamp": "20240710191931",
+  "original": "https://www.thenulj.com/nuljforum/-the-potentiality-for-privacy-rights",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "I4GU4MJ2AQE4AGBGGYHBYGQXAGQUJWUC",
+  "length": "20596"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/a-denial-of-justice",
+  "timestamp": "20250417231229",
+  "original": "https://www.thenulj.com/nuljforum/a-denial-of-justice",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DSBRUYUUJ2ZFLB6ENO6IIMWL75YQKRKB",
+  "length": "21025"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/a-post-covid-crisis-illinois-battle-with-childrens-mental-health",
+  "timestamp": "20240415161300",
+  "original": "https://www.thenulj.com/nuljforum/a-post-covid-crisis-illinois-battle-with-childrens-mental-health",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "ZAR3G5NZIMKITITLWRINXW3YKPJF5PTV",
+  "length": "22996"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/chicagos-criminalization-of-the-homeless",
+  "timestamp": "20230828144548",
+  "original": "https://www.thenulj.com/nuljforum/chicagos-criminalization-of-the-homeless",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NAEVOZZ3CKRWCJHII4X5DWUQGFOVR3EM",
+  "length": "21571"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/chicagos-criminalization-of-the-homeless",
+  "timestamp": "20230828165220",
+  "original": "https://www.thenulj.com/nuljforum/chicagos-criminalization-of-the-homeless",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LSVWYUZ367XUJ3J5Y6SSNY3V5TIIU24F",
+  "length": "21299"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/chicagos-criminalization-of-the-homeless",
+  "timestamp": "20241115132724",
+  "original": "https://www.thenulj.com/nuljforum/chicagos-criminalization-of-the-homeless",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "XNXLAMI3DEQSHD2ND7TWAAYYIWEBPQMT",
+  "length": "21394"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/classaction",
+  "timestamp": "20250816194018",
+  "original": "https://www.thenulj.com/nuljforum/classaction",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SH3FAEHXQ7QHQBY6NHZVI3IXNJVURBDS",
+  "length": "25182"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/crispr-cas-9-technology-legal-implications-of-scientific-advancement",
+  "timestamp": "20240927150454",
+  "original": "https://www.thenulj.com/nuljforum/crispr-cas-9-technology-legal-implications-of-scientific-advancement",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "PKR4CMR3P4CAEGC5VTKDW6GPKBLBE3WB",
+  "length": "18720"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/crispr-cas-9-technology-legal-implications-of-scientific-advancement",
+  "timestamp": "20250702031649",
+  "original": "https://www.thenulj.com/nuljforum/crispr-cas-9-technology-legal-implications-of-scientific-advancement",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "4ZLHNNWSQX4SGLKQCE5NETHFEYXZ5XO5",
+  "length": "20984"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/donald-trump-is-suing-cbs-news-for-10-billion-should-free-speech-lovers-worry",
+  "timestamp": "20250120152728",
+  "original": "https://www.thenulj.com/nuljforum/donald-trump-is-suing-cbs-news-for-10-billion-should-free-speech-lovers-worry",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SZ5FHLNPGNY7MNU3VNYJRQKCG5COLH7W",
+  "length": "18205"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/donald-trump-is-suing-cbs-news-for-10-billion-should-free-speech-lovers-worry",
+  "timestamp": "20250120153522",
+  "original": "https://www.thenulj.com/nuljforum/donald-trump-is-suing-cbs-news-for-10-billion-should-free-speech-lovers-worry",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SZ5FHLNPGNY7MNU3VNYJRQKCG5COLH7W",
+  "length": "18300"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "timestamp": "20240927190131",
+  "original": "https://www.thenulj.com/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NPGI34VNRDSTWDRBPQZK3DEOD4ATDA6E",
+  "length": "16531"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "timestamp": "20241112231721",
+  "original": "https://www.thenulj.com/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "7X26DLVHSNQYBASLD5XQ3NZL6YYHO32X",
+  "length": "16414"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "timestamp": "20250120153642",
+  "original": "https://www.thenulj.com/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "BPOMMHMJTIP4B522MALU43IGGYVSJUJC",
+  "length": "16219"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "timestamp": "20250720193347",
+  "original": "https://www.thenulj.com/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KDWQ6KHPW4FT4UZ6G5INJWSZV6X6F7F2",
+  "length": "18583"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "timestamp": "20251206093040",
+  "original": "https://www.thenulj.com/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VAL3LDQH2EFLZOLIIV6VRJYXLCRSWL6V",
+  "length": "26785"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/environmental-law-a-vital-mechanism-to-address-the-climate-crisis",
+  "timestamp": "20250702031649",
+  "original": "https://www.thenulj.com/nuljforum/environmental-law-a-vital-mechanism-to-address-the-climate-crisis",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WCIUFIO6IJQIVTRYTPXLWBENYAGEI57S",
+  "length": "20617"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/failure-to-protect-laws-who-is-actually-being-protected",
+  "timestamp": "20241112231335",
+  "original": "https://www.thenulj.com/nuljforum/failure-to-protect-laws-who-is-actually-being-protected",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KANDSSUUNXOVZJTEGTFNBFYDLOCQRL7O",
+  "length": "18461"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/failure-to-protect-laws-who-is-actually-being-protected",
+  "timestamp": "20250702031638",
+  "original": "https://www.thenulj.com/nuljforum/failure-to-protect-laws-who-is-actually-being-protected",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "5IDITXEX67SONWYGPGGUZIDWAW4ZINHF",
+  "length": "20595"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/fastfashion-pj6f7",
+  "timestamp": "20231127054924",
+  "original": "https://www.thenulj.com/nuljforum/fastfashion-pj6f7",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NSZ37EXO6AA23BDXZIBVLDIJYGWUO5TX",
+  "length": "17966"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/gerrymandering-and-logical-solutions",
+  "timestamp": "20230121202745",
+  "original": "https://www.thenulj.com/nuljforum/gerrymandering-and-logical-solutions",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "UYRCZZI5NUOERYTSUIQ425GW4SXIY2GW",
+  "length": "18601"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/goodbye-strangers-the-collapse-of-omegle-from-legal-troubles",
+  "timestamp": "20250527075215",
+  "original": "https://www.thenulj.com/nuljforum/goodbye-strangers-the-collapse-of-omegle-from-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YSHS4VYY67YFVPEY6XQVBH6HBYTKSVIC",
+  "length": "19729"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/goodbye-strangers-the-collapse-of-omegle-from-legal-troubles",
+  "timestamp": "20251203055528",
+  "original": "https://www.thenulj.com/nuljforum/goodbye-strangers-the-collapse-of-omegle-from-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "3TIFQF26AGJWPMQDLCM7FYGPYUTNYOTY",
+  "length": "35622"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "timestamp": "20240508023327",
+  "original": "https://www.thenulj.com/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DLQJSV5SI4BQ6C5RFOXJD2V4RRZHFIDN",
+  "length": "19897"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "timestamp": "20241026204315",
+  "original": "https://www.thenulj.com/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "TKR5RGYCV7NLCYNOTH5ZJEALMYHJDBZB",
+  "length": "21857"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "timestamp": "20250516124205",
+  "original": "http://www.thenulj.com/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "371"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "timestamp": "20250517113317",
+  "original": "https://www.thenulj.com/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "TQNWYFTEETC7WLLYE7DIED7TQRSEXWJT",
+  "length": "19314"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "timestamp": "20250723214112",
+  "original": "https://www.thenulj.com/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FLI4CXUFEHHK6OE52LPKFMDPKGA3QFYT",
+  "length": "19335"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "timestamp": "20260830232841",
+  "original": "https://www.thenulj.com/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RFW6VSCEG6HGSJGR37LRZV4UWKQGWZVB",
+  "length": "43860"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/humanitar-",
+  "timestamp": "20240118054954",
+  "original": "http://www.thenulj.com/nuljforum/humanitar-",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "346"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/humanitar-",
+  "timestamp": "20240118054954",
+  "original": "https://www.thenulj.com/nuljforum/humanitar-",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "IRY7ZEVYXAEVG2Q6KHPART45R3MC42V3",
+  "length": "13005"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/humanitarian-fshsh",
+  "timestamp": "20240118055003",
+  "original": "http://www.thenulj.com/nuljforum/humanitarian-fshsh",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "357"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/humanitarian-fshsh",
+  "timestamp": "20240118055048",
+  "original": "https://www.thenulj.com/nuljforum/humanitarian-fshsh",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VUSNULJ4ENIOU757V2N757GAIC74MDQK",
+  "length": "17603"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-",
+  "timestamp": "20251108213220",
+  "original": "http://www.thenulj.com/nuljforum/kramer-vs-kramer-",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "342"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-",
+  "timestamp": "20251109002626",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "B74X6EPE2LBU3U6QNVBVLSIDAUPQHZXR",
+  "length": "23088"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-",
+  "timestamp": "20251028203452",
+  "original": "http://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "343"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-",
+  "timestamp": "20251108131230",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "NUI6LF4N5JO3ZAFPVYD6XC6PSI7J34XA",
+  "length": "23047"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "timestamp": "20251028201631",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WLH65JHSRWRZPSLQUAOTPHFGII2CEUYR",
+  "length": "28424"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "timestamp": "20251109012729",
+  "original": "http://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "375"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "timestamp": "20260204172509",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WWYQMERUBMBIQQKJLEJLLJGOOOBZWGP3",
+  "length": "32152"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law)",
+  "timestamp": "20260305014633",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law)",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "GJI6UGB2DR3VE2E5GU3UIUK26QOQKKCV",
+  "length": "26789"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law)\\n\\n",
+  "timestamp": "20260201171516",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law%29%5Cn%5Cn",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "QNNJKK2MAPNGCCMCHM75EWV5T4ERXR5H",
+  "length": "26792"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law\\",
+  "timestamp": "20260206105050",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law%5C",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "RXR7SJGJ4TUZHEW5F526IBEGCUQVS3PO",
+  "length": "28563"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/legal-realism",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/nuljforum/legal-realism",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "X3SD7YXY37NALJE533WFVAVQIGPY5PZO",
+  "length": "20367"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/legalai",
+  "timestamp": "20230517042808",
+  "original": "https://www.thenulj.com/nuljforum/legalai",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RLGNJ5WZEQYG7HBMC4UNJ7CAPX535HKP",
+  "length": "19608"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nba-youngboy-and-the-law-the-latest-in-a-long-line-of-legal-troubles",
+  "timestamp": "20250418015429",
+  "original": "https://www.thenulj.com/nuljforum/nba-youngboy-and-the-law-the-latest-in-a-long-line-of-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NQLJVOACZIS6TP4U5MWLPILTJIARRO5S",
+  "length": "16793"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nba-youngboy-and-the-law-the-latest-in-a-long-line-of-legal-troubles",
+  "timestamp": "20260104192135",
+  "original": "https://www.thenulj.com/nuljforum/nba-youngboy-and-the-law-the-latest-in-a-long-line-of-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MYSYQNFWNXJEXCYSKDUKBQYAGTIK36PO",
+  "length": "27600"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-",
+  "timestamp": "20240223221640",
+  "original": "https://www.thenulj.com/nuljforum/nfts-and-the-future-",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "E6SYE7VZVNXMDL7R4IC7F7H5CTWUMZV5",
+  "length": "14906"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-",
+  "timestamp": "20240508023113",
+  "original": "https://www.thenulj.com/nuljforum/nfts-and-the-future-",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "ZXP3OG4FNOLA4YOAYKVEOKZB6IMY7VO7",
+  "length": "13066"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-",
+  "timestamp": "20240508023115",
+  "original": "http://www.thenulj.com/nuljforum/nfts-and-the-future-",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "361"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-of-us-",
+  "timestamp": "20240803023516",
+  "original": "https://www.thenulj.com/nuljforum/nfts-and-the-future-of-us-",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "XEJ65SP3APYCJA6QI6BOTNANOLRMLJIS",
+  "length": "12938"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-of-us-",
+  "timestamp": "20240806165603",
+  "original": "http://www.thenulj.com/nuljforum/nfts-and-the-future-of-us-",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "349"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-of-us-copyright-law",
+  "timestamp": "20240508023113",
+  "original": "https://www.thenulj.com/nuljforum/nfts-and-the-future-of-us-copyright-law",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FDJ4HKAWP6QP2SRRMLLJ7NDGOOJEAMAR",
+  "length": "19825"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-of-us-copyright-law",
+  "timestamp": "20240508023129",
+  "original": "http://www.thenulj.com/nuljforum/nfts-and-the-future-of-us-copyright-law",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "303"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20250419192727",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AOXAJHK6JKAJFI2IF6UAVUBJXWZP2QBF",
+  "length": "18805"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20250519162535",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "Q3R3EFS4XRC57OOIONOHXSH2DVN4LUUM",
+  "length": "18817"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20250723214350",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "XW2QRFDOOMVPJEMKJ3463BKC3F2V27Z6",
+  "length": "18855"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20250816202849",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "4MEXAH77RKCLXBXOL4GFBIRNKECOSGEI",
+  "length": "23435"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20250906203949",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HKMN36U5OBKVDH5SN5XIIJZIKGT3NG5V",
+  "length": "23385"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20251028222636",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MPQEIXHRPK5ZYQDZHYNSY26NYLV74OQJ",
+  "length": "29012"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20251109151037",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LW5BDDGE4733YETAWAGIHYU22JJGCWPT",
+  "length": "30066"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20251206095632",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HGVXRZ4IQQZQUWELCFUFS3G6NTT6AMQY",
+  "length": "29010"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20260104192718",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AIF63G34JUHZ22YEKXQHWAQAYLLREPGY",
+  "length": "28974"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/should-the-great-lakes-have-legal-standing",
+  "timestamp": "20250120153447",
+  "original": "https://www.thenulj.com/nuljforum/should-the-great-lakes-have-legal-standing",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "X3PA2YHAGHPNOVMYGMPNAWPC57BYGIUK",
+  "length": "20432"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-adult-survivors-act-the-end-to-a-year-of-record-breaking-sexual-assault-suits",
+  "timestamp": "20250906203417",
+  "original": "https://www.thenulj.com/nuljforum/the-adult-survivors-act-the-end-to-a-year-of-record-breaking-sexual-assault-suits",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MDZFFXCZZX3YRC4O3L34HPNZ2H4NKPIX",
+  "length": "20653"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20250519165330",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "H6BF76SSGMJB27T5WKOYNLJYD4RQVF34",
+  "length": "18966"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20250723214338",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KFF2IHNREKKVEN44EASJOGQCZ2CZTB2T",
+  "length": "19024"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20250816211702",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SBJO375VD7HPKAWMFBPGHQF7XBA5VVOD",
+  "length": "23626"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20250906204000",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "2ZXYYDAADMN66GE3R4N4IVIRPJYQEFW7",
+  "length": "23563"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20251028223226",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SAV5U4BSZ7JXFN24RPQX6OUGXZCWT6DT",
+  "length": "29152"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20251206095452",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LQDXL32EWM66DBYFN24GBTZMUA6NTHWV",
+  "length": "29137"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20251225195238",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "TAWHZGDVUN6CCQOOM3AGLTCEAQJGGUHG",
+  "length": "29778"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20260104192737",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AFP35RNVIAMG2E6WEHA24MHWS2QUAVAU",
+  "length": "29105"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-eu-artificial-intelligence-act-and-the-future-of-ai-regulations",
+  "timestamp": "20250726032947",
+  "original": "https://www.thenulj.com/nuljforum/the-eu-artificial-intelligence-act-and-the-future-of-ai-regulations",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LIITXIQHPPVQBMPOZWQK2YWW2LRPKSRX",
+  "length": "18464"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20250519162255",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "QHDG6M4ESQLGFVB75KIWTFDWHLWX2DYP",
+  "length": "18505"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20250723214440",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "3GNC6LFT7AETZQID46FAJYUDVRXOF2LO",
+  "length": "18590"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20250816195648",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MFX4MGEUWVWANXPRK2NUZRZWRZTLC2I2",
+  "length": "23172"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20250906204124",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "QN7LY2AKPLM2CQTBVKHLD5C5J4K4OULW",
+  "length": "23125"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20251028223334",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KLU6RCXX23COFQ2APOZFCBL4MBDQK3CN",
+  "length": "28863"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20251226154439",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "EYL2O5DR6LVB6QEPRFMLCGI7RMNWQUYE",
+  "length": "29750"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20260104192701",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "ZKCJDQZBJZGAXRIZ346MCVPHY54VUOSO",
+  "length": "28849"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-implications-of-rescheduling-cannabis",
+  "timestamp": "20250418023448",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-implications-of-rescheduling-cannabis",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "JDB6I5P7YQB3QFEQB3RL5NIXNDDCKOVF",
+  "length": "18206"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-us-takes-last-place-the-problem-of-paid-parental-leave",
+  "timestamp": "20240710164322",
+  "original": "https://www.thenulj.com/nuljforum/the-us-takes-last-place-the-problem-of-paid-parental-leave",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "IJN3LCUFF24AGW2DAD6CNSNDPQHYX3KD",
+  "length": "19750"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/two-senator-per-state-rule",
+  "timestamp": "20240506203136",
+  "original": "https://www.thenulj.com/nuljforum/two-senator-per-state-rule",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HXP45N4ZHFEJYIK5OKDFVUEJOBF4FHZO",
+  "length": "25665"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/united-states-v-big-tech-a-rare-antitrust-phenomenon",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/nuljforum/united-states-v-big-tech-a-rare-antitrust-phenomenon",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RM3ILTTIDMYQUMQOHBPZRZLJVIRI3DV2",
+  "length": "20333"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/womenandprison",
+  "timestamp": "20250513200615",
+  "original": "https://www.thenulj.com/nuljforum/womenandprison",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NDBRRTOEOCE5QS5DKHTJ4ZZ2JHAOPZ3T",
+  "length": "19096"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum?author=5fb5d0fec213200135953c05",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/nuljforum?author=5fb5d0fec213200135953c05",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HBB7HCFOGAXUIB2JIRL73744PEEEVKMM",
+  "length": "17001"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum?author=6094c1ba8f0a221893c1e0f6",
+  "timestamp": "20250702031649",
+  "original": "https://www.thenulj.com/nuljforum?author=6094c1ba8f0a221893c1e0f6",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "UEREDNKQK22YITZYVVDOHXWE4VIOQ2H5",
+  "length": "31983"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum?format=rss",
+  "timestamp": "20230901150352",
+  "original": "https://www.thenulj.com/nuljforum?format=rss",
+  "mimetype": "application/rss+xml",
+  "statuscode": "200",
+  "digest": "HPVZ7SOMZR4JBSWXIMNXDP4STNLO3W5R",
+  "length": "76728"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum?format=rss",
+  "timestamp": "20230901150450",
+  "original": "https://www.thenulj.com/nuljforum?format=rss",
+  "mimetype": "application/rss+xml",
+  "statuscode": "200",
+  "digest": "HPVZ7SOMZR4JBSWXIMNXDP4STNLO3W5R",
+  "length": "76727"
+ },
+ {
+  "urlkey": "com,thenulj)/our-members",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/our-members",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LONU5477I7QC2WP3QZOQEIRWZY5KAOD7",
+  "length": "25907"
+ },
+ {
+  "urlkey": "com,thenulj)/our-members",
+  "timestamp": "20250602161033",
+  "original": "https://www.thenulj.com/our-members",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "27SO4KB7VESMN5OB2KQDPMAGKGZPHWQG",
+  "length": "32622"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20250120153602",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "322"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20250418014608",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "403"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20250519165500",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "408"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20250723214322",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "413"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20250816211701",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "420"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20250906204114",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "357"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20251028220602",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "404"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20251109162308",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "404"
+ },
+ {
+  "urlkey": "com,thenulj)/podcast",
+  "timestamp": "20260104192733",
+  "original": "https://www.thenulj.com/podcast",
+  "mimetype": "unk",
+  "statuscode": "302",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "367"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20211216200316",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "630"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20211227034602",
+  "original": "http://thenulj.com/robots.txt",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "451"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20211227034608",
+  "original": "https://thenulj.com/robots.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "556"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20220318021156",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "M2XJG34RFU2VFAZDVC7EITUD6VK34SSG",
+  "length": "985"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20220323171458",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "M2XJG34RFU2VFAZDVC7EITUD6VK34SSG",
+  "length": "984"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20220607104411",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "824"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20220919084612",
+  "original": "http://thenulj.com/robots.txt",
+  "mimetype": "unk",
+  "statuscode": "301",
+  "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+  "length": "478"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20220919084618",
+  "original": "https://thenulj.com/robots.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "582"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20220919084619",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "warc/revisit",
+  "statuscode": "-",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "587"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230121202810",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "664"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230320192804",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "664"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230404083148",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "667"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230521031315",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "666"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230828144547",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "M2XJG34RFU2VFAZDVC7EITUD6VK34SSG",
+  "length": "986"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230828165220",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "828"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230901150217",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "M2XJG34RFU2VFAZDVC7EITUD6VK34SSG",
+  "length": "995"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20230901150445",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "M2XJG34RFU2VFAZDVC7EITUD6VK34SSG",
+  "length": "993"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20231127060907",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "CKLO5AM2RUJ52QEZG5JD6CQ6TJZWREXT",
+  "length": "704"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20240118055304",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "CKLO5AM2RUJ52QEZG5JD6CQ6TJZWREXT",
+  "length": "680"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20240508023355",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "CKLO5AM2RUJ52QEZG5JD6CQ6TJZWREXT",
+  "length": "754"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20240710224839",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "AMC76VVOQXMKTKNSZUNL7AF7AR6NSZL5",
+  "length": "691"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20240929113516",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "ZBWNABOJNF3GMUJ4FI3TYM4EYWQJ6RMB",
+  "length": "706"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20241112232255",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "ZBWNABOJNF3GMUJ4FI3TYM4EYWQJ6RMB",
+  "length": "706"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20250120153511",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "ZBWNABOJNF3GMUJ4FI3TYM4EYWQJ6RMB",
+  "length": "711"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20250418022857",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "ZBWNABOJNF3GMUJ4FI3TYM4EYWQJ6RMB",
+  "length": "711"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20250519170749",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "T4CT4ZPYFI45LNAIHZJITJQMUDX7WTJR",
+  "length": "779"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20250723214326",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "T4CT4ZPYFI45LNAIHZJITJQMUDX7WTJR",
+  "length": "781"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20250816213338",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "T4CT4ZPYFI45LNAIHZJITJQMUDX7WTJR",
+  "length": "766"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20250906204034",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "T4CT4ZPYFI45LNAIHZJITJQMUDX7WTJR",
+  "length": "723"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20251109125228",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "YSRPIAR6OUKX4MMA7MRZRQFVB2D3HMAX",
+  "length": "842"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20251111160803",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "YSRPIAR6OUKX4MMA7MRZRQFVB2D3HMAX",
+  "length": "839"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20260104192738",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "YSRPIAR6OUKX4MMA7MRZRQFVB2D3HMAX",
+  "length": "784"
+ },
+ {
+  "urlkey": "com,thenulj)/search",
+  "timestamp": "20230121202857",
+  "original": "https://www.thenulj.com/search",
+  "mimetype": "application/octet-stream",
+  "statuscode": "200",
+  "digest": "NRNPFAZKRR4XYGQDSMP57VTRA5UATO7V",
+  "length": "12590"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20230121202841",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "X4GIC5VAOFFFIIKAGMFYN4IB7R56ZT6J",
+  "length": "7671"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20230320183752",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "M7MY7UCJ6EIFU3S7TDIDRY24HJMIM3OX",
+  "length": "7938"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20230404071351",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "QKEHY2G4PG453SAOFN26UEGNFJ3QZKSL",
+  "length": "8090"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20230521041825",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "L6YWY4R55TI6WS56UWUDADUXVGUE3FW6",
+  "length": "8109"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20230523221848",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "L6YWY4R55TI6WS56UWUDADUXVGUE3FW6",
+  "length": "8161"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20231127062806",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "BFGZACMZ6W47O4ZDXETE6ESBRCAFZSRQ",
+  "length": "8871"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20240118055242",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "QOPIHSDVDPMSDN6GYTA4NSZWO5AJ7S7V",
+  "length": "7847"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20240508023324",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "XAXDAMAO5EXCIBO4PGUESH4LJIENV7KA",
+  "length": "9406"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20240710191351",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "2UX4TQJ2EY7FDVAWRJ7Y2PU6G26ETZF4",
+  "length": "9658"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20240928185321",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "X3BH7RGX2O2QW3RS2FXCVAKSH4J7OBUC",
+  "length": "9880"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20241112231753",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "X3BH7RGX2O2QW3RS2FXCVAKSH4J7OBUC",
+  "length": "9911"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20250120153400",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "6KX5GN57GIVU6BLLPAP7CGN6EEV7OHT2",
+  "length": "10165"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20250419083242",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "JWATLNNLOFJYM4TPAYHSLKCPIDMJFG4K",
+  "length": "13822"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20250519161855",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "Z2UWDAE3ZV4BIDS43I2DHHTPPVWIFHDF",
+  "length": "14471"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20250723214438",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "BNXQTFWIH57HBV2OZPJA4GUM7Z5LNHZE",
+  "length": "14503"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20250816194846",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "BNXQTFWIH57HBV2OZPJA4GUM7Z5LNHZE",
+  "length": "14502"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20250906204125",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "BNXQTFWIH57HBV2OZPJA4GUM7Z5LNHZE",
+  "length": "14424"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20251028215644",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "76CMUJKNYRJOXESKTDKHQSNDB3CXVKBH",
+  "length": "14835"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20251109143351",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "76CMUJKNYRJOXESKTDKHQSNDB3CXVKBH",
+  "length": "14838"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20251206124425",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "YFNPZL5MJBVZXHC2CMTQCHK2TJSPTX6L",
+  "length": "15266"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20260104192727",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "YFNPZL5MJBVZXHC2CMTQCHK2TJSPTX6L",
+  "length": "15212"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MXOTBYKGDY33A26WVY5W3LPQIDOHYNEJ",
+  "length": "22405"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20250120153603",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "ULK45PMWXEB6ZYX3IQSCFEWKYRRSK2UY",
+  "length": "19453"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20250418014609",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NVOMRICK5TCTHAA7RNIXLMGWTHKXCO2M",
+  "length": "19734"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20250519165501",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RLL2WFHBEPG7SKIX64SGSM5JLUHYG7VX",
+  "length": "19732"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20250723214322",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "BPVHW5ECXJ5YBTRGP4YYPQS6VNL6ZQRO",
+  "length": "19759"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20250816211701",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "GFYYGVKK7ICQHPTL5MQCBTNS5BPJRENX",
+  "length": "24348"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20250906204114",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AQH2SUMJLLLL4QYPQXXUFE56FOEV6PWK",
+  "length": "24256"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20251028220602",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "EFJ7KHVJUPZSZLXQCV35DH6FOS74BOR6",
+  "length": "30272"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20251109162308",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YH6ZPXPLJDTWDTXAIYOVIIJYBNBAVZWU",
+  "length": "30247"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20260104192733",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "43SXBQKM3DLLDEAGM3KYOHNXOLMFHBQP",
+  "length": "31352"
+ },
+ {
+  "urlkey": "com,thenulj)/static",
+  "timestamp": "20230121202927",
+  "original": "https://www.thenulj.com/static/",
+  "mimetype": "text/html",
+  "statuscode": "404",
+  "digest": "6ASKMBMVRQ6UFBPBIT6S2X6QWD5NNWXZ",
+  "length": "12702"
+ },
+ {
+  "urlkey": "com,thenulj)/symposium",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/symposium",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YIMWQ6W6F64X7PE4IGC3Y2UFMRF4UWXY",
+  "length": "17822"
+ },
+ {
+  "urlkey": "com,thenulj)/symposium-recordings",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/symposium-recordings",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "2SN2MZPPHTFFP3S5HXU5TGHDZUPQG4LG",
+  "length": "16573"
+ },
+ {
+  "urlkey": "com,thenulj)/the-20202021-journal-1",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/the-20202021-journal-1",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "6BPR6YSJ22JTTDAOR4TMFJL5H2B7IJ47",
+  "length": "16008"
+ }
+]

@@ -1,0 +1,623 @@
+[
+ {
+  "urlkey": "com,thenulj)/",
+  "timestamp": "20211216194920",
+  "original": "https://www.thenulj.com/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SETTDUMQCCKRZ3UJNCIZNC6GCP3OBFY5",
+  "length": "16593"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/6033fefe8e790b7decab96f2",
+  "timestamp": "20240506203138",
+  "original": "https://www.thenulj.com/api/blog-like-count/6033fefe8e790b7decab96f2",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "OZEQINPBKM3BAR2OCTIKBFLTSFEXV6ST",
+  "length": "673"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/65ad74873a6f8a14a52ae76e",
+  "timestamp": "20240415161301",
+  "original": "https://www.thenulj.com/api/blog-like-count/65ad74873a6f8a14a52ae76e",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "BP2ZW3R53J6EXK33MXIFWCNYIZYRCSP4",
+  "length": "668"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/662fb91c87db3a6e2ee49ca7",
+  "timestamp": "20241026204316",
+  "original": "https://www.thenulj.com/api/blog-like-count/662fb91c87db3a6e2ee49ca7",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "S2UXQQBNCDJRSPW2R37CAMYE6NAK6MOA",
+  "length": "672"
+ },
+ {
+  "urlkey": "com,thenulj)/api/blog-like-count/66cb8d9af8011041ceb16ff7",
+  "timestamp": "20250720193348",
+  "original": "https://www.thenulj.com/api/blog-like-count/66cb8d9af8011041ceb16ff7",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "HGBV77PTREBLKAT2NGO3RM4CTCHK3EYR",
+  "length": "644"
+ },
+ {
+  "urlkey": "com,thenulj)/api/census/recordhit",
+  "timestamp": "20240415161301",
+  "original": "https://www.thenulj.com/api/census/RecordHit",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "JBFTAMTBT6Q2ZUJV2EKFMWYKKFTCQHBC",
+  "length": "569"
+ },
+ {
+  "urlkey": "com,thenulj)/contact",
+  "timestamp": "20230404071927",
+  "original": "https://www.thenulj.com/contact",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "CTQGJCPDUAT6HG7JYSR7O3QVMHYUCHPL",
+  "length": "13981"
+ },
+ {
+  "urlkey": "com,thenulj)/forum",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/forum",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "XUMXHJH33JQQQSJFGK42DXAIE3TH5G3O",
+  "length": "22038"
+ },
+ {
+  "urlkey": "com,thenulj)/forum-submissions",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/forum-submissions",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KY372ZSASK4TCPZ4SX24TRMZ5OY3PE6Z",
+  "length": "16719"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2021-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2021-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MUKJ5MEMHKN7L6TM3JWPBTAOKHPZH4ZL",
+  "length": "17109"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2022",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2022",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AHTH6NRDW5T2XLM6PFJ7ZL6BIT7EG6EX",
+  "length": "16984"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2022-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2022-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FPWAHCYBX4V23AGWZ57MB2VNKA6IHT7C",
+  "length": "16682"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2023-winners",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2023-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "5GKCCN45VMU7CRLKOQRH7SFGWAWSFUCP",
+  "length": "16756"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2024",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2024",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HAIDALNDMZGX5LEF3TM6W6ZD4UD65FNI",
+  "length": "16827"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2024-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2024-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "PSRFYQXEIWPF4JUHCDRBPAEQYVA6GGII",
+  "length": "16163"
+ },
+ {
+  "urlkey": "com,thenulj)/high-school-essay-contest-2025-winners",
+  "timestamp": "20250602161051",
+  "original": "https://www.thenulj.com/high-school-essay-contest-2025-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "6QYDN76J4BCQIXBCMMJSQPZFQGHGD3TO",
+  "length": "16140"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/hs-2022-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HSBVAL5DIUM3NYJUZ3ZSHMZAGVHW5XSX",
+  "length": "15960"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners/an-insight-into-the-united-states-mass-incarceration-problem-reform-within-the-criminal-justice-system",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/hs-2022-winners/an-insight-into-the-united-states-mass-incarceration-problem-reform-within-the-criminal-justice-system",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "UPLEJ7ZYL6EQMS72SFO2IS5YFF2HP72U",
+  "length": "20479"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners/liberty-v-profit-how-privatization-erodes-justice-ed6xb",
+  "timestamp": "20230320062625",
+  "original": "https://www.thenulj.com/hs-2022-winners/liberty-v-profit-how-privatization-erodes-justice-ed6xb",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WXXWUNE6EPEY4NARFUX4Z5PTTVPS5V7K",
+  "length": "21619"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-2022-winners/why-predictive-policing-empowers-mass-incarceration-in-the-21st-century",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/hs-2022-winners/why-predictive-policing-empowers-mass-incarceration-in-the-21st-century",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "U63XYSYZXN7WFRSFKBNKLQMNWYT73BZA",
+  "length": "19467"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-essay-contest",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/hs-essay-contest",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KLGBL7V32EMBPWGM4O7EH7UK4KSLVF6D",
+  "length": "17290"
+ },
+ {
+  "urlkey": "com,thenulj)/hs-essay-contest-winners",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/hs-essay-contest-winners",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "J2EYMLJ3YTTFTRBXPRL6MS3B7GQDB7QQ",
+  "length": "16429"
+ },
+ {
+  "urlkey": "com,thenulj)/journal",
+  "timestamp": "20240507044301",
+  "original": "https://www.thenulj.com/journal",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "3NZZ55EQ6TNA55YGVV24Q5KOG62KHYO7",
+  "length": "17428"
+ },
+ {
+  "urlkey": "com,thenulj)/journal-2022",
+  "timestamp": "20240507044301",
+  "original": "https://www.thenulj.com/journal-2022",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "T4T2OH226B2R5HNZPYJFW6DMH7RT67KY",
+  "length": "16087"
+ },
+ {
+  "urlkey": "com,thenulj)/law-school-series",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/law-school-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VHO4DZFQBNPHQIOWYXOBXOASLFPAXQYY",
+  "length": "16483"
+ },
+ {
+  "urlkey": "com,thenulj)/mission",
+  "timestamp": "20230404063757",
+  "original": "https://www.thenulj.com/mission",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YPV43V5FUIE3L7BQOPE7YE4BRATQY2C6",
+  "length": "13697"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/nuljforum",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WKRENIQ2FHPMOZURJ4ECWNZQZHZIAYKI",
+  "length": "32589"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/-the-potentiality-for-privacy-rights",
+  "timestamp": "20240710191931",
+  "original": "https://www.thenulj.com/nuljforum/-the-potentiality-for-privacy-rights",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "I4GU4MJ2AQE4AGBGGYHBYGQXAGQUJWUC",
+  "length": "20596"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/a-denial-of-justice",
+  "timestamp": "20250417231229",
+  "original": "https://www.thenulj.com/nuljforum/a-denial-of-justice",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DSBRUYUUJ2ZFLB6ENO6IIMWL75YQKRKB",
+  "length": "21025"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/a-post-covid-crisis-illinois-battle-with-childrens-mental-health",
+  "timestamp": "20240415161300",
+  "original": "https://www.thenulj.com/nuljforum/a-post-covid-crisis-illinois-battle-with-childrens-mental-health",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "ZAR3G5NZIMKITITLWRINXW3YKPJF5PTV",
+  "length": "22996"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/chicagos-criminalization-of-the-homeless",
+  "timestamp": "20230828144548",
+  "original": "https://www.thenulj.com/nuljforum/chicagos-criminalization-of-the-homeless",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NAEVOZZ3CKRWCJHII4X5DWUQGFOVR3EM",
+  "length": "21571"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/classaction",
+  "timestamp": "20250816194018",
+  "original": "https://www.thenulj.com/nuljforum/classaction",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SH3FAEHXQ7QHQBY6NHZVI3IXNJVURBDS",
+  "length": "25182"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/crispr-cas-9-technology-legal-implications-of-scientific-advancement",
+  "timestamp": "20240927150454",
+  "original": "https://www.thenulj.com/nuljforum/crispr-cas-9-technology-legal-implications-of-scientific-advancement",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "PKR4CMR3P4CAEGC5VTKDW6GPKBLBE3WB",
+  "length": "18720"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/donald-trump-is-suing-cbs-news-for-10-billion-should-free-speech-lovers-worry",
+  "timestamp": "20250120152728",
+  "original": "https://www.thenulj.com/nuljforum/donald-trump-is-suing-cbs-news-for-10-billion-should-free-speech-lovers-worry",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "SZ5FHLNPGNY7MNU3VNYJRQKCG5COLH7W",
+  "length": "18205"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "timestamp": "20240927190131",
+  "original": "https://www.thenulj.com/nuljforum/effectiveness-and-implications-of-the-california-consumer-privacy-act",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NPGI34VNRDSTWDRBPQZK3DEOD4ATDA6E",
+  "length": "16531"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/environmental-law-a-vital-mechanism-to-address-the-climate-crisis",
+  "timestamp": "20250702031649",
+  "original": "https://www.thenulj.com/nuljforum/environmental-law-a-vital-mechanism-to-address-the-climate-crisis",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WCIUFIO6IJQIVTRYTPXLWBENYAGEI57S",
+  "length": "20617"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/failure-to-protect-laws-who-is-actually-being-protected",
+  "timestamp": "20241112231335",
+  "original": "https://www.thenulj.com/nuljforum/failure-to-protect-laws-who-is-actually-being-protected",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "KANDSSUUNXOVZJTEGTFNBFYDLOCQRL7O",
+  "length": "18461"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/fastfashion-pj6f7",
+  "timestamp": "20231127054924",
+  "original": "https://www.thenulj.com/nuljforum/fastfashion-pj6f7",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NSZ37EXO6AA23BDXZIBVLDIJYGWUO5TX",
+  "length": "17966"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/gerrymandering-and-logical-solutions",
+  "timestamp": "20230121202745",
+  "original": "https://www.thenulj.com/nuljforum/gerrymandering-and-logical-solutions",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "UYRCZZI5NUOERYTSUIQ425GW4SXIY2GW",
+  "length": "18601"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/goodbye-strangers-the-collapse-of-omegle-from-legal-troubles",
+  "timestamp": "20250527075215",
+  "original": "https://www.thenulj.com/nuljforum/goodbye-strangers-the-collapse-of-omegle-from-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YSHS4VYY67YFVPEY6XQVBH6HBYTKSVIC",
+  "length": "19729"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "timestamp": "20240508023327",
+  "original": "https://www.thenulj.com/nuljforum/how-the-mountain-valley-pipeline-has-continued-to-survive-its-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "DLQJSV5SI4BQ6C5RFOXJD2V4RRZHFIDN",
+  "length": "19897"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/humanitarian-fshsh",
+  "timestamp": "20240118055048",
+  "original": "https://www.thenulj.com/nuljforum/humanitarian-fshsh",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VUSNULJ4ENIOU757V2N757GAIC74MDQK",
+  "length": "17603"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "timestamp": "20251028201631",
+  "original": "https://www.thenulj.com/nuljforum/kramer-vs-kramer-and-the-kafkaesque-resolution-of-disputes-in-family-law",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "WLH65JHSRWRZPSLQUAOTPHFGII2CEUYR",
+  "length": "28424"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/legal-realism",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/nuljforum/legal-realism",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "X3SD7YXY37NALJE533WFVAVQIGPY5PZO",
+  "length": "20367"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/legalai",
+  "timestamp": "20230517042808",
+  "original": "https://www.thenulj.com/nuljforum/legalai",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RLGNJ5WZEQYG7HBMC4UNJ7CAPX535HKP",
+  "length": "19608"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nba-youngboy-and-the-law-the-latest-in-a-long-line-of-legal-troubles",
+  "timestamp": "20250418015429",
+  "original": "https://www.thenulj.com/nuljforum/nba-youngboy-and-the-law-the-latest-in-a-long-line-of-legal-troubles",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NQLJVOACZIS6TP4U5MWLPILTJIARRO5S",
+  "length": "16793"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/nfts-and-the-future-of-us-copyright-law",
+  "timestamp": "20240508023113",
+  "original": "https://www.thenulj.com/nuljforum/nfts-and-the-future-of-us-copyright-law",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "FDJ4HKAWP6QP2SRRMLLJ7NDGOOJEAMAR",
+  "length": "19825"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "timestamp": "20250419192727",
+  "original": "https://www.thenulj.com/nuljforum/one-nation-under-god-legal-challenges-to-the-separation-of-church-and-state",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AOXAJHK6JKAJFI2IF6UAVUBJXWZP2QBF",
+  "length": "18805"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/should-the-great-lakes-have-legal-standing",
+  "timestamp": "20250120153447",
+  "original": "https://www.thenulj.com/nuljforum/should-the-great-lakes-have-legal-standing",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "X3PA2YHAGHPNOVMYGMPNAWPC57BYGIUK",
+  "length": "20432"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-adult-survivors-act-the-end-to-a-year-of-record-breaking-sexual-assault-suits",
+  "timestamp": "20250906203417",
+  "original": "https://www.thenulj.com/nuljforum/the-adult-survivors-act-the-end-to-a-year-of-record-breaking-sexual-assault-suits",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MDZFFXCZZX3YRC4O3L34HPNZ2H4NKPIX",
+  "length": "20653"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "timestamp": "20250519165330",
+  "original": "https://www.thenulj.com/nuljforum/the-effect-of-supreme-court-decisions-on-illinois-gun-policy",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "H6BF76SSGMJB27T5WKOYNLJYD4RQVF34",
+  "length": "18966"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-eu-artificial-intelligence-act-and-the-future-of-ai-regulations",
+  "timestamp": "20250726032947",
+  "original": "https://www.thenulj.com/nuljforum/the-eu-artificial-intelligence-act-and-the-future-of-ai-regulations",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LIITXIQHPPVQBMPOZWQK2YWW2LRPKSRX",
+  "length": "18464"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "timestamp": "20250519162255",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-battles-of-the-federal-funding-freeze",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "QHDG6M4ESQLGFVB75KIWTFDWHLWX2DYP",
+  "length": "18505"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-legal-implications-of-rescheduling-cannabis",
+  "timestamp": "20250418023448",
+  "original": "https://www.thenulj.com/nuljforum/the-legal-implications-of-rescheduling-cannabis",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "JDB6I5P7YQB3QFEQB3RL5NIXNDDCKOVF",
+  "length": "18206"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/the-us-takes-last-place-the-problem-of-paid-parental-leave",
+  "timestamp": "20240710164322",
+  "original": "https://www.thenulj.com/nuljforum/the-us-takes-last-place-the-problem-of-paid-parental-leave",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "IJN3LCUFF24AGW2DAD6CNSNDPQHYX3KD",
+  "length": "19750"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/two-senator-per-state-rule",
+  "timestamp": "20240506203136",
+  "original": "https://www.thenulj.com/nuljforum/two-senator-per-state-rule",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HXP45N4ZHFEJYIK5OKDFVUEJOBF4FHZO",
+  "length": "25665"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/united-states-v-big-tech-a-rare-antitrust-phenomenon",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/nuljforum/united-states-v-big-tech-a-rare-antitrust-phenomenon",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RM3ILTTIDMYQUMQOHBPZRZLJVIRI3DV2",
+  "length": "20333"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum/womenandprison",
+  "timestamp": "20250513200615",
+  "original": "https://www.thenulj.com/nuljforum/womenandprison",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "NDBRRTOEOCE5QS5DKHTJ4ZZ2JHAOPZ3T",
+  "length": "19096"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum?author=5fb5d0fec213200135953c05",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/nuljforum?author=5fb5d0fec213200135953c05",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "HBB7HCFOGAXUIB2JIRL73744PEEEVKMM",
+  "length": "17001"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum?author=6094c1ba8f0a221893c1e0f6",
+  "timestamp": "20250702031649",
+  "original": "https://www.thenulj.com/nuljforum?author=6094c1ba8f0a221893c1e0f6",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "UEREDNKQK22YITZYVVDOHXWE4VIOQ2H5",
+  "length": "31983"
+ },
+ {
+  "urlkey": "com,thenulj)/nuljforum?format=rss",
+  "timestamp": "20230901150352",
+  "original": "https://www.thenulj.com/nuljforum?format=rss",
+  "mimetype": "application/rss+xml",
+  "statuscode": "200",
+  "digest": "HPVZ7SOMZR4JBSWXIMNXDP4STNLO3W5R",
+  "length": "76728"
+ },
+ {
+  "urlkey": "com,thenulj)/our-members",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/our-members",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "LONU5477I7QC2WP3QZOQEIRWZY5KAOD7",
+  "length": "25907"
+ },
+ {
+  "urlkey": "com,thenulj)/robots.txt",
+  "timestamp": "20211216200316",
+  "original": "https://www.thenulj.com/robots.txt",
+  "mimetype": "text/plain",
+  "statuscode": "200",
+  "digest": "EV77H66GGWTJYF6OK53F6URIW42Z6FIL",
+  "length": "630"
+ },
+ {
+  "urlkey": "com,thenulj)/search",
+  "timestamp": "20230121202857",
+  "original": "https://www.thenulj.com/search",
+  "mimetype": "application/octet-stream",
+  "statuscode": "200",
+  "digest": "NRNPFAZKRR4XYGQDSMP57VTRA5UATO7V",
+  "length": "12590"
+ },
+ {
+  "urlkey": "com,thenulj)/sitemap.xml",
+  "timestamp": "20230121202841",
+  "original": "https://www.thenulj.com/sitemap.xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "X4GIC5VAOFFFIIKAGMFYN4IB7R56ZT6J",
+  "length": "7671"
+ },
+ {
+  "urlkey": "com,thenulj)/speaker-series",
+  "timestamp": "20240507044303",
+  "original": "https://www.thenulj.com/speaker-series",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "MXOTBYKGDY33A26WVY5W3LPQIDOHYNEJ",
+  "length": "22405"
+ },
+ {
+  "urlkey": "com,thenulj)/symposium",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/symposium",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "YIMWQ6W6F64X7PE4IGC3Y2UFMRF4UWXY",
+  "length": "17822"
+ },
+ {
+  "urlkey": "com,thenulj)/symposium-recordings",
+  "timestamp": "20240507044304",
+  "original": "https://www.thenulj.com/symposium-recordings",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "2SN2MZPPHTFFP3S5HXU5TGHDZUPQG4LG",
+  "length": "16573"
+ },
+ {
+  "urlkey": "com,thenulj)/the-20202021-journal-1",
+  "timestamp": "20240507044302",
+  "original": "https://www.thenulj.com/the-20202021-journal-1",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "6BPR6YSJ22JTTDAOR4TMFJL5H2B7IJ47",
+  "length": "16008"
+ }
+]
