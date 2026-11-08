@@ -649,10 +649,12 @@ h2.section {
   }
 }
 
+/* Equal side columns keep the numbers centered whatever Prev and Next
+   say, so each can be only as wide as its label. */
 .pager {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 8px;
   margin: 28px 0 8px;
 }
@@ -690,18 +692,16 @@ h2.section {
   font-weight: 600;
 }
 
-/* Equal widths keep the numbers centered; each label sits at its outer
-   edge, the same distance in from the cards. */
-.pager .step {
-  min-width: 56px;
-}
-
+/* Each label's text lines up with the cards' edge; its padding and hover
+   background extend past it. */
 .pager .step:first-child {
-  text-align: left;
+  justify-self: start;
+  margin-left: -8px;
 }
 
 .pager .step:last-child {
-  text-align: right;
+  justify-self: end;
+  margin-right: -8px;
 }
 
 .pager .disabled {
