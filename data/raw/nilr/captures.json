@@ -1,0 +1,272 @@
+[
+ {
+  "rel": "pages/home_20110820143107.html",
+  "ts": "20110820143107",
+  "original": "http://www.nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/2011.html_20121025171706.html",
+  "ts": "20121025171706",
+  "original": "http://www.nilr.org:80/2011.html",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/about_20141024125959.html",
+  "ts": "20141024125959",
+  "original": "http://www.nilr.org:80/about/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/about.html_20121026134847.html",
+  "ts": "20121026134847",
+  "original": "http://www.nilr.org:80/about.html",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "articles/2011AroldFriedman.pdf",
+  "ts": "20121030085835",
+  "original": "http://www.nilr.org:80/articles/2011AroldFriedman.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2011Godwin.pdf",
+  "ts": "20121030085816",
+  "original": "http://www.nilr.org:80/articles/2011Godwin.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2011Jackson.pdf",
+  "ts": "20121030085953",
+  "original": "http://www.nilr.org:80/articles/2011Jackson.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2011Spiropoulos.pdf",
+  "ts": "20121030085825",
+  "original": "http://www.nilr.org:80/articles/2011Spiropoulos.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2011TableofContents.pdf",
+  "ts": "20121030090000",
+  "original": "http://www.nilr.org:80/articles/2011TableofContents.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2011Tao.pdf",
+  "ts": "20121030085831",
+  "original": "http://www.nilr.org:80/articles/2011Tao.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012Baek.pdf",
+  "ts": "20121030131117",
+  "original": "http://www.nilr.org:80/articles/2012Baek.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012Cox.pdf",
+  "ts": "20121030131124",
+  "original": "http://www.nilr.org:80/articles/2012Cox.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012Delahunty.pdf",
+  "ts": "20121030131129",
+  "original": "http://www.nilr.org:80/articles/2012Delahunty.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012frontpage.pdf",
+  "ts": "20121030044720",
+  "original": "http://www.nilr.org:80/articles/2012frontpage.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012Gee.pdf",
+  "ts": "20121030131134",
+  "original": "http://www.nilr.org:80/articles/2012Gee.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012Krishnamurthy.pdf",
+  "ts": "20121030131140",
+  "original": "http://www.nilr.org:80/articles/2012Krishnamurthy.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012letterfromtheeditors.pdf",
+  "ts": "20121030131205",
+  "original": "http://www.nilr.org:80/articles/2012letterfromtheeditors.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012Musa.pdf",
+  "ts": "20121030131145",
+  "original": "http://www.nilr.org:80/articles/2012Musa.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "articles/2012Zunker.pdf",
+  "ts": "20121030131150",
+  "original": "http://www.nilr.org:80/articles/2012Zunker.pdf",
+  "mimetype": "application/pdf"
+ },
+ {
+  "rel": "pages/blog_20141025140226.html",
+  "ts": "20141025140226",
+  "original": "http://www.nilr.org:80/blog/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/contact_20141024043448.html",
+  "ts": "20141024043448",
+  "original": "http://www.nilr.org:80/contact/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/contact.html_20121026134641.html",
+  "ts": "20121026134641",
+  "original": "http://www.nilr.org:80/contact.html",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/index.html_20110909012756.html",
+  "ts": "20110909012756",
+  "original": "http://www.nilr.org/index.html",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/issues_20141024043625.html",
+  "ts": "20141024043625",
+  "original": "http://www.nilr.org:80/issues/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/issues.html_20121025171731.html",
+  "ts": "20121025171731",
+  "original": "http://www.nilr.org:80/issues.html",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/issues_volume-1-number-1-september-2008_20141025140927.html",
+  "ts": "20141025140927",
+  "original": "http://www.nilr.org:80/issues/volume-1-number-1-september-2008/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/issues_volume-2-number-1-fall-2009_20141025134431.html",
+  "ts": "20141025134431",
+  "original": "http://www.nilr.org:80/issues/volume-2-number-1-fall-2009/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/issues_volume-3-number-1-spring-2010_20141025134436.html",
+  "ts": "20141025134436",
+  "original": "http://www.nilr.org:80/issues/volume-3-number-1-spring-2010/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/issues_volume-4-number-1-2011_20141025141308.html",
+  "ts": "20141025141308",
+  "original": "http://www.nilr.org:80/issues/volume-4-number-1-2011/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/issues_volume-5-number-1-spring-2012_20141025134721.html",
+  "ts": "20141025134721",
+  "original": "http://www.nilr.org:80/issues/volume-5-number-1-spring-2012/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/submissions_20141025020903.html",
+  "ts": "20141025020903",
+  "original": "http://www.nilr.org:80/submissions/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/submissions.html_20121026134739.html",
+  "ts": "20121026134739",
+  "original": "http://www.nilr.org:80/submissions.html",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/subscriptions_20141024044702.html",
+  "ts": "20141024044702",
+  "original": "http://www.nilr.org:80/subscriptions/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/subscriptions.html_20110909000634.html",
+  "ts": "20110909000634",
+  "original": "http://www.nilr.org/subscriptions.html",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20130719140532.html",
+  "ts": "20130719140532",
+  "original": "http://www.nilr.org:80/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20140208035822.html",
+  "ts": "20140208035822",
+  "original": "http://www.nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20150227002156.html",
+  "ts": "20150227002156",
+  "original": "http://www.nilr.org:80/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20160208033643.html",
+  "ts": "20160208033643",
+  "original": "http://www.nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20170927054153.html",
+  "ts": "20170927054153",
+  "original": "http://nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20180307085739.html",
+  "ts": "20180307085739",
+  "original": "http://nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20211219152500.html",
+  "ts": "20211219152500",
+  "original": "http://nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20221104153919.html",
+  "ts": "20221104153919",
+  "original": "http://www.nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20231023112614.html",
+  "ts": "20231023112614",
+  "original": "https://nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20250718104822.html",
+  "ts": "20250718104822",
+  "original": "http://nilr.org/",
+  "mimetype": "text/html"
+ },
+ {
+  "rel": "pages/home_20260113093039.html",
+  "ts": "20260113093039",
+  "original": "http://nilr.org/",
+  "mimetype": "text/html"
+ }
+]

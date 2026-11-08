@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.nilr.org/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="NILR &raquo; Feed" href="http://www.nilr.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NILR &raquo; Comments Feed" href="http://www.nilr.org/comments/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.nilr.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='googlefonts-css'  href='http://fonts.googleapis.com/css?family=Della+Respira:400|Donegal+One:400|ABeeZee:400&subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='pinboard-web-font-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic|Oswald:300,300italic,regular,italic,600,600italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='pinboard-css'  href='http://www.nilr.org/wp-content/themes/pinboard/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='colorbox-css'  href='http://www.nilr.org/wp-content/themes/pinboard/styles/colorbox.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelementplayer-css'  href='http://www.nilr.org/wp-content/themes/pinboard/styles/mediaelementplayer.css' type='text/css' media='all' />
+	<!--[if lt IE 9]>
+	<script src="http://www.nilr.org/wp-content/themes/pinboard/scripts/html5.js" type="text/javascript"></script>
+	<![endif]-->
+<script type='text/javascript' src='http://www.nilr.org/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/ios-orientationchange-fix.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/fitvids.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Download File":"Download File","Download Video":"Download Video","Play\/Pause":"Play\/Pause","Mute Toggle":"Mute Toggle","None":"None","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Unmute":"Unmute","Mute":"Mute","Captions\/Subtitles":"Captions\/Subtitles"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.nilr.org/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.13.0'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/mediaelementplayer.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/colorbox.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.nilr.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.nilr.org/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Contact' href='http://www.nilr.org/contact/' />
+<link rel='next' title='Issues' href='http://www.nilr.org/issues/' />
+<meta name="generator" content="WordPress 3.6" />
+<link rel='canonical' href='http://www.nilr.org/' />
+<style type='text/css' media='screen'>
+	#site-title { 
+font-family: 'Della Respira', serif;
+font-size: 40px;
+}
+	#site-description {
+font-family: 'Donegal One', serif;
+font-size: 16px;
+}
+	#access {
+font-family: 'ABeeZee', sans-serif;
+}
+</style>
+<!-- fonts delivered by Wordpress Google Fonts, a plugin by Adrian3.com --><script>
+/* <![CDATA[ */
+	jQuery(document).ready(function($) {
+		$('#access .menu > li > a').each(function() {
+			var title = $(this).attr('title');
+			if(typeof title !== 'undefined' && title !== false) {
+				$(this).append('<br /> <span>'+title+'</span>');
+				$(this).removeAttr('title');
+			}
+		});
+		function pinboard_move_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-container', container).before(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-container', container).before(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-container', container).before(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-container', container).after(meta);
+			}
+		}
+		function pinboard_restore_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-header', container).after(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-header', container).after(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-header', container).after(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-header', container).append(meta);
+				else
+					$('.entry-header', container).html(meta.html());
+			}
+		}
+		if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+			// Viewport is greater than tablet: portrait
+		} else {
+			$('#content .post').each(function() {
+				pinboard_move_elements($(this));
+			});
+		}
+		$(window).resize(function() {
+			if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+									$('.page-template-template-full-width-php #content .post, .page-template-template-blog-full-width-php #content .post, .page-template-template-blog-four-col-php #content .post').each(function() {
+						pinboard_restore_elements($(this));
+					});
+							} else {
+				$('#content .post').each(function() {
+					pinboard_move_elements($(this));
+				});
+			}
+			if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+				var maxh = 0;
+				$('#access .menu > li > a').each(function() {
+					if(parseInt($(this).css('height'))>maxh) {
+						maxh = parseInt($(this).css('height'));
+					}
+				});
+				$('#access .menu > li > a').css('height', maxh);
+			} else {
+				$('#access .menu > li > a').css('height', 'auto');
+			}
+		});
+		if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+			var maxh = 0;
+			$('#access .menu > li > a').each(function() {
+				var title = $(this).attr('title');
+				if(typeof title !== 'undefined' && title !== false) {
+					$(this).append('<br /> <span>'+title+'</span>');
+					$(this).removeAttr('title');
+				}
+				if(parseInt($(this).css('height'))>maxh) {
+					maxh = parseInt($(this).css('height'));
+				}
+			});
+			$('#access .menu > li > a').css('height', maxh);
+							$('#access li').mouseenter(function() {
+					$(this).children('ul').css('display', 'none').stop(true, true).fadeIn(250).css('display', 'block').children('ul').css('display', 'none');
+				});
+				$('#access li').mouseleave(function() {
+					$(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
+				});
+					} else {
+			$('#access li').each(function() {
+				if($(this).children('ul').length)
+					$(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow"></span></span>');
+			});
+			$('.drop-down-toggle').click(function() {
+				$(this).parent().children('ul').slideToggle(250);
+			});
+		}
+					$('#slider').flexslider({
+				selector: '.slides > li',
+				video: true,
+				prevText: '&larr;',
+				nextText: '&rarr;',
+				pausePlay: true,
+				pauseText: '||',
+				playText: '>',
+				before: function() {
+					$('#slider .entry-title').hide();
+				},
+				after: function() {
+					$('#slider .entry-title').fadeIn();
+				}
+			});
+						$('audio,video').mediaelementplayer({
+			videoWidth: '100%',
+			videoHeight: '100%',
+			audioWidth: '100%',
+			alwaysShowControls: true,
+			features: ['playpause','progress','tracks','volume'],
+			videoVolume: 'horizontal'
+		});
+		$(".entry-attachment, .entry-content").fitVids({ customSelector: "iframe, object, embed"});
+	});
+	jQuery(window).load(function() {
+					jQuery('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+				maxWidth: '100%',
+				maxHeight: '100%',
+			});
+			});
+/* ]]> */
+</script>
+<style type="text/css">
+			#header input#s {
+			width:168px;
+			box-shadow:inset 1px 1px 5px 1px rgba(0, 0, 0, .1);
+			text-indent: 0;
+		}
+					@media screen and (max-width: 760px) {
+			#sidebar {
+				display: none;
+			}
+		}
+				@media screen and (max-width: 760px) {
+			#footer-area {
+				display: none;
+			}
+		}
+																																								.entry-header {
+visibility: hidden;
+}
+
+.entry-content {
+margin-top: -80px;
+}
+
+#menu-menu1 {
+left: 215px;
+position: relative;
+}
+
+#access,
+#copyright {
+background: #31043F;
+}
+
+.font1 {
+font-family: Times New Roman, Times, serif;
+font-size: 26px;
+color: #480058;
+}
+
+.font2 {
+font-family: Times New Roman, Times, serif;
+font-size: 19px;
+color: #ffae00;
+}
+
+#sidebar {
+color: #000;
+}
+
+#access a:hover, 
+#access li.current_page_item a, 
+#access li.current-menu-item a {
+background: #F2F2F2;
+}
+
+#site-title a, #site-description {
+color: #3D007A;
+position: relative;
+}
+
+#site-description {
+left: 121px;
+top: 27px;
+}
+
+.home {
+left: 286px;
+top: -7px;
+}
+
+#header {
+background: #480058;
+}
+
+.widget-title {
+color: #ffae00;
+}
+
+#access a:hover, #access li.current_page_item a, #access li.current-menu-item a {
+color: #ffae00;
+}
+
+#site-title img {
+position: absolute;
+margin: 0px 0;
+width: 231px;
+height: 154px;
+}</style>
+<style type="text/css">
+	#site-title a,
+	#site-description {
+		color:#ffffff;
+	}
+</style>
+</head>
+
+<body class="home page page-id-11 page-template-default page-template-template-sidebar-content-php">
+	<div id="wrapper">
+		<header id="header">
+			<div id="site-title">
+									<a href="http://www.nilr.org/" rel="home">
+						<img src="http://www.nilr.org/wp-content/uploads/2013/09/copy-nu-logo1.png" alt="NILR" width="115" height="77" />
+					</a>
+								<a class="home" href="http://www.nilr.org/" rel="home">NILR</a>
+			</div>
+							<div id="site-description">NORTHWESTERN INTERDISCIPLINARY LAW REVIEW</div>
+							<form role="search" method="get" id="searchform" action="http://www.nilr.org//" >
+	<input type="text" value="" placeholder="Search this website&#8230;" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+</form>				<div class="clear"></div>
+			<nav id="access">
+				<a class="nav-show" href="#access">Show Navigation</a>
+				<a class="nav-hide" href="#nogo">Hide Navigation</a>
+				<div class="menu-menu1-container"><ul id="menu-menu1" class="menu"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-11 current_page_item menu-item-30"><a href="http://www.nilr.org/">Home</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://www.nilr.org/about/">About</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://www.nilr.org/issues/">Issues</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://www.nilr.org/submissions/">Submissions</a></li>
+<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://www.nilr.org/subscriptions/">Subscriptions</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="http://www.nilr.org/contact/">Contact</a></li>
+</ul></div>				<div class="clear"></div>
+			</nav><!-- #access -->
+		</header><!-- #header -->														<div id="container">
+		<section id="content" class="column twothirdcol">
+							<article class="post-11 page type-page status-publish hentry column onecol" id="post-11">
+					<div class="entry">
+						<header class="entry-header">
+							<h1 class="entry-title">Home</h1>
+						</header><!-- .entry-header -->
+						<div class="entry-content">
+							<div id="headline1"><img class="alignnone  wp-image-104" style="border: 0px;" alt="NILR" src="http://www.nilr.org/wp-content/uploads/2013/09/NILR-homepage1-1024x475.jpg" width="680" /></div>
+<p></p>
+<div id="article1">
+<span class="font1">The Double Helix of Supremacy and Commerce Clause Constitutional Restraints Encircling the New Energy Frontier</span><br />
+<span class="font2">Steven Ferrey, Suffolk University Law School</span><br />
+This article unwinds the legal double helix to examine the constitutional jurisdictional assault on American energy infrastructure and law. We examine pivotal elements of the Commerce Clause, the Supremacy Clause, and procedural aspects of ongoing challenges on energy and climate change law. We untwist and dissect energy law and regulation, focusing on key cases in the East, the Midwest, and California. In integrating the recent federal court interpretations, the Article I and VI constitutional double helix remains the critical legal restriction arresting the future of U.S. energy policy and infrastructure. Each region’s law creates a distinct wedge into energy infrastructure, and the viability of state regulation encountering constitutional ‘trip wires.’ The article explores recent state energy law, successful complex constitutional challenges to its viability, and the resultant constitutional U.S. energy future.
+</div>
+<p></p>
+<div id="article2">
+<span class="font1">Agrarians Feeding Communities: Reconnecting Federal Farm Policy and Nutrition Assistance For a More Just Agri-food System</span><br />
+<span class="font2">Nicole M. Civita, University of Arkansas School of Law</span></p>
+<p>This paper (i) surveys the promise of and the obstacles facing the diverse and diffuse food movement, (ii) examines the objectives of, problems with, and politics related to past and present federal farm and food policy, and (iii) explores opportunities for using federal policy to simultaneously support farmers, nourish the hungry, reward socially and ecologically responsible practices, generate economic opportunity, and strengthen communities. This article strives to bridge the gap between federal farm policy and the food movement by identifying legitimate shared goals and looking for synergistic solutions. It recommends a holistic and coordinated approach to federal agricultural and nutrition policy based on the natural interconnectedness of producers and consumers. Finally, it advances substantial support for responsible regional agriculture through a market-based reform of nutrition assistance.
+</p></div>
+<div id="article3">
+<span class="font1">Taxing Migrants: A Smart and Humane Approach to Immigration Policy</span><br />
+<span class="font2">Kevin J. Fandl, Temple University</span></p>
+<p>In the midst of heated debates over how tightly to secure the Southern border against an influx of unlawful migrants, businesses and consumers in the United States are relegated to the sidelines to await yet another ineffective and potentially harmful immigration reform proposal. The problem according to policymakers is that borders are porous and unlawful migrants can and do enter and occupy jobs that American citizens could have. With this problem in mind, policy solutions have centered on legalization of existing unlawful migrants and strengthening the border to stop intending migrants. Stepping away from the political fray, it becomes clear that this is not the problem at all. The real immigration problem is that protectionist laws and policies are exacerbating the existing imbalance between supply of and demand for migrant labor. The use of quotas to severely restrict skilled and unskilled migrants has made U.S. businesses less competitive than many U.S. trading partners, has maintained artificially high consumer prices, and has cost taxpayers billions of dollars in unnecessary enforcement programs. In this article, I explain why current immigration laws and reform proposals use protectionism to benefit narrow political interests that cost the U.S. economy jobs and economic growth. I propose reevaluating the need to separate immigration from other types of trade policy and regulation by legalizing and regulating labor migrants rather than criminalizing and dehumanizing them.
+</p></div>
+<div id="article4">
+<span class="font1">Pain Capable Abortion Bans: Establishing a New Legal Standard for Abortion</span><br />
+<span class="font2">Deanna Wallace Candler, Louisiana State University Law Center</span></p>
+<p>More than 40 years after the decision in Roe v. Wade, the debate over abortion is still very much at the forefront of America’s political and legal landscape. More and more, opponents of abortion are turning to legislation to attempt to chip away at the foundations of legalized abortion, and have succeeded in many of these attempts. Recently, abortion opponents have cited evidence regarding the capability of a fetus to experience pain at 20 weeks post-fertilization to craft legislation called Pain Capable Abortion Bans. These bans present the Court with a chance to look at the abortion debate from a novel and fresh perspective. In this article I demonstrate that there is substantial scientific evidence supporting the bans, which creates the strong potential that the Court will recognize fetal pain as a new state interest to add to the previously acknowledged state interests. I will show how the Court’s evolving treatment of abortion, from Roe’ s quasi-fundamental right, to Gonzales’ blurring of the lines between pre- and post-viability, show a clear line of precedent that indicate the Court could be receptive to Pain Capable Abortion Bans, and that it is even possible that the Court could find that fetal pain compelling enough to stand alone as an alternative standard to viability.
+</p></div>
+<div id="article5">
+<span class="font1">A System of Men and Not of Laws: What Due Process Tells Us About the Deficiencies in Institutional Review Boards</span><br />
+<span class="font2">Greer Donley, University of Michigan Law School</span></p>
+<p>Governmental regulation of human subjects research involves unique agency action. It delegates power to non-expert committees, Institutional Review Boards, to decide whether research protocols are “ethical” according to vague federal regulations. Without IRB approval, the protocol cannot be instigated. The empirical evidence regarding this system demonstrates that IRBs render deeply inconsistent and inaccurate outcomes. This Article argues that the lack of due process in the IRB system is to blame for such arbitrary agency action. By juxtaposing the levels of process required for IRB approval of research with FDA new drug approval—agency action involving similar interests—this Article highlights that IRBs lack even the most basic procedural safeguards. This conclusion indicates that one of two solutions must be pursued: IRBs must be injected with processes to become minimally competent or the IRB system should be abolished in favor of a better alternative. Because the cost of infusing these protections into IRB decision- making is unfeasible, I conclude that a combination of tort liability and licensing for medical researchers can protect research participants in a less burdensome and more equitable way.
+</p></div>
+<div id="article6">
+<span class="font1">The “IDEA” of Special Education: Producing Results or Appealing to Emotion?</span><br />
+<span class="font2">Richard Bahrenburg, Georgetown University Law Center</span></p>
+<p>Education is a topic of hot debate in American politics and daily life. Much of the debate regarding education is focused on reform to achieve a higher level of achievement output. Special education is often overlooked in the popular debate on education, but not many would argue against the need for special education. What most people may not know is just how expensive special education programs in America are, and what impact special education has on local school district budgets. This article attempts to survey the data regarding the achievement of students in special education programs. This article also discusses the costs of special education and how it affects the budget of local school districts. Throughout this article, the cost of special education will be weighed against the results of special education. The point of this article is to better inform the public and legislatures about special education in hopes that special education reform becomes part of the popular debate.
+</p></div>
+<div id="article7">
+<span class="font1">The Limits of Free Movement of Capital: The Status of Customary International Law of Money</span><br />
+<span class="font2">Farshad Ghodoosi, Yale Law School</span></p>
+<p>The legal framework surrounding globalization is far from clear. Globalization is inextricably linked to the idea of free movement of capital vis-à-vis states’ restrictions. The leading approach in international law argues that states have the ultimate right to regulate their money. Invoking the Serbian Loans case, this approach opines that the default rule is ultimate monetary sovereignty for states in customary international law of money. On the other hand, the hyperbolic rhetoric of globalization celebrates the victory of neo-liberalism including free flow of capital. A multitude of international treaties restricting states’ monetary sovereignty mainly in the last two decades is employed as an attestation of this victory. Invoking these treaties, the second approach concludes that free movement of capital has become the default rule in customary international law of money. This Article, however disagrees with both schools of thought. By showing the shortcomings of both approaches, this Article calls the current period the Fragmented State of Monetary Sovereignty, in which neither monetary sovereignty nor free flow of capital determines the default rule in customary international law. It starts off by laying out an overview of the status of monetary sovereignty versus free movement of capital from the interwar period until the present time. In the second section the Article puts forward the structural limitations on free movement of capital as carved into the edifice of today’ s international trade law. Section III depicts the formidable limitations in investment law, albeit the unrestricted language of investment treaties. Subsequently, Section IV investigates economic sanctions as a major hindrance to free flow of capital. The Article concludes that despite the rhetoric on the triumph of neo-liberalism, legally speaking, one of its basic tenets (i.e. free flow of capital) still has a long journey to surpass the present limitations.
+</p></div>
+<div id="article8">
+<span class="font1">Dark Pools: How Regulation Catches up to Financial Innovation</span><br />
+<span class="font2">Michael Rühl-Wolfe, Northwestern University</span></p>
+<p>Dark pools of liquidity have recently attracted regulatory attention and coverage in the press. By examining dark pool regulation, this study seeks to investigate how financial regulation evolves as a response to challenges brought about by innovation. While it is true to an extent that law fosters innovation and vice versa, it will become apparent that regulators are less concerned with catching up to innovation than they are with being proactive about long-term market stability. How regulation occurs is thus driven by normative concerns about what regulation should look like. By analyzing the regulatory discussion surrounding dark pools within the Securities and Exchange Commission, Congress, and the Financial Industry Regulatory Authority, I hope to show how these bodies interact with one another and with the broader financial industry to find regulatory solutions. In this context, it is of particular interest that financial regulation is heavily reliant on industry insiders and expertise. While there is concern for industry capture when regulation requires sophisticated insider knowledge, I suggest that it is critical to consider differences of opinion among actors. Because the financial industry is heavily divided on the issue of dark pool regulation and different industry insiders support different levels of regulation, there is little threat of capture for regulators and the disjointed process we observe may prove effective.
+</p></div>
+							<div class="clear"></div>
+						</div><!-- .entry-content -->
+											</div><!-- .entry -->
+									</article><!-- .post -->
+					</section><!-- #content -->
+					<div id="sidebar" class="column threecol">
+		<div id="sidebar-top" class="widget-area" role="complementary">
+		<div class="column onecol"><aside id="text-2" class="widget widget_text"><h3 class="widget-title">CURRENT ISSUE</h3>			<div class="textwidget"><p><br><strong>TABLE OF CONTENTS</STRONG></p>
+<p>About the NILR <em>iv</em></p>
+<p>Letter from the Editors <em>v</em><br />
+<em>John Secaras, Northwestern University</em></p>
+<p><strong>Law and Public Policy</strong></p>
+<p>The Double Helix of Supremacy and Commerce Clause Constitutional Restraints Encircling the New Energy Frontier <em>1</em><br />
+<em>Steven Ferrey, Suffolk University Law School</em></p>
+<p>Agrarians Feeding Communities: Reconnecting Federal Farm Policy and Nutrition Assistance For a More Just Agri-food System <em>69</em><br />
+<em>Nicole M. Civita, University of Arkansas School of Law</em></p>
+<p>Taxing Migrants: A Smart and Humane Approach to Immigration Policy <em>127</em><br />
+<em>Kevin J. Fandl, Temple University</em></p>
+<p>Pain Capable Abortion Bans: Establishing a New Legal Standard for Abortion <em>171</em><br />
+<em>Deanna Wallace Candler, Louisiana State University Law Center</em></p>
+<p><strong>Law and Organizational Behavior</strong></p>
+<p>A System of Men and Not of Laws: What Due Process Tells Us About the Deficiencies in Institutional Review Boards <em>197</em><br />
+<em>Greer Donley, University of Michigan Law School</em></p>
+<p>The “IDEA” of Special Education: Producing Results or Appealing to Emotion? <em>243</em><br />
+<em>Richard Bahrenburg, Georgetown University Law Center</em> </p>
+<p><strong>Law and Economics</strong></p>
+<p>The Limits of Free Movement of Capital: The Status of Customary International Law of Money <em>287</em><br />
+<em>Farshad Ghodoosi, Yale Law School</em></p>
+<p>Dark Pools: How Regulation Catches up to Financial Innovation <em>327</em><br />
+<em>Michael Rühl-Wolfe, Northwestern University</em></p>
+</div>
+		</aside><!-- .widget --></div><div class="column onecol"><aside id="text-3" class="widget widget_text"><h3 class="widget-title">FROM THE EDITORS</h3>			<div class="textwidget">This fall, the Northwestern Interdisciplinary Law Review (NILR) enters its eighth year of publication. The Review's first seven volumes have established the journal as a consistent and accessible source of interdisciplinary legal scholarship, drawing from fields such as history, literature, economics, art theory, and philosophy. Working alongside talented law students, practitioners, and professors, consecutive classes of Northwestern University students have carved out a space for substantial legal dialogue amongst scholars of various disciplines and perspectives. The current editorial board feels privileged to carry on this tradition and remains committed to featuring the same high-quality literature that readers have come to expect from the NILR.</div>
+		</aside><!-- .widget --></div>	</div><!-- #sidebar-top -->
+			</div><!-- #sidebar -->				<div class="clear"></div>
+	</div><!-- #container -->
+									<div id="footer">
+						<div id="copyright">
+				<p class="copyright twocol">© 2015 NILR</p>
+								<div class="clear"></div>
+			</div><!-- #copyright -->
+		</div><!-- #footer -->
+	</div><!-- #wrapper -->
+<script type='text/javascript' src='http://www.nilr.org/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.nilr.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2'></script>
+</body>
+</html>

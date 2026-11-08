@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>  Blog &#124; NILR</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.nilr.org/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="NILR &raquo; Feed" href="http://www.nilr.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NILR &raquo; Comments Feed" href="http://www.nilr.org/comments/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.nilr.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='googlefonts-css'  href='http://fonts.googleapis.com/css?family=Della+Respira:400|Donegal+One:400|ABeeZee:400&subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='pinboard-web-font-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic|Oswald:300,300italic,regular,italic,600,600italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='pinboard-css'  href='http://www.nilr.org/wp-content/themes/pinboard/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='colorbox-css'  href='http://www.nilr.org/wp-content/themes/pinboard/styles/colorbox.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelementplayer-css'  href='http://www.nilr.org/wp-content/themes/pinboard/styles/mediaelementplayer.css' type='text/css' media='all' />
+	<!--[if lt IE 9]>
+	<script src="http://www.nilr.org/wp-content/themes/pinboard/scripts/html5.js" type="text/javascript"></script>
+	<![endif]-->
+<script type='text/javascript' src='http://www.nilr.org/wp-includes/js/jquery/jquery.js?ver=1.10.2'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/ios-orientationchange-fix.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/fitvids.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mejsL10n = {"language":"en-US","strings":{"Close":"Close","Fullscreen":"Fullscreen","Download File":"Download File","Download Video":"Download Video","Play\/Pause":"Play\/Pause","Mute Toggle":"Mute Toggle","None":"None","Turn off Fullscreen":"Turn off Fullscreen","Go Fullscreen":"Go Fullscreen","Unmute":"Unmute","Mute":"Mute","Captions\/Subtitles":"Captions\/Subtitles"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.nilr.org/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.13.0'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/mediaelementplayer.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/jquery.infinitescroll.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/jquery.masonry.min.js'></script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/themes/pinboard/scripts/colorbox.js'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.nilr.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.nilr.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.6" />
+<style type='text/css' media='screen'>
+	#site-title { 
+font-family: 'Della Respira', serif;
+font-size: 40px;
+}
+	#site-description {
+font-family: 'Donegal One', serif;
+font-size: 16px;
+}
+	#access {
+font-family: 'ABeeZee', sans-serif;
+}
+</style>
+<!-- fonts delivered by Wordpress Google Fonts, a plugin by Adrian3.com --><script>
+/* <![CDATA[ */
+	jQuery(document).ready(function($) {
+		$('#access .menu > li > a').each(function() {
+			var title = $(this).attr('title');
+			if(typeof title !== 'undefined' && title !== false) {
+				$(this).append('<br /> <span>'+title+'</span>');
+				$(this).removeAttr('title');
+			}
+		});
+		function pinboard_move_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-container', container).before(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-container', container).before(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-container', container).before(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-container', container).after(meta);
+			}
+		}
+		function pinboard_restore_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-header', container).after(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-header', container).after(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-header', container).after(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-header', container).append(meta);
+				else
+					$('.entry-header', container).html(meta.html());
+			}
+		}
+		if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+			// Viewport is greater than tablet: portrait
+		} else {
+			$('#content .post').each(function() {
+				pinboard_move_elements($(this));
+			});
+		}
+		$(window).resize(function() {
+			if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+									$('.page-template-template-full-width-php #content .post, .page-template-template-blog-full-width-php #content .post, .page-template-template-blog-four-col-php #content .post').each(function() {
+						pinboard_restore_elements($(this));
+					});
+							} else {
+				$('#content .post').each(function() {
+					pinboard_move_elements($(this));
+				});
+			}
+			if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+				var maxh = 0;
+				$('#access .menu > li > a').each(function() {
+					if(parseInt($(this).css('height'))>maxh) {
+						maxh = parseInt($(this).css('height'));
+					}
+				});
+				$('#access .menu > li > a').css('height', maxh);
+			} else {
+				$('#access .menu > li > a').css('height', 'auto');
+			}
+		});
+		if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+			var maxh = 0;
+			$('#access .menu > li > a').each(function() {
+				var title = $(this).attr('title');
+				if(typeof title !== 'undefined' && title !== false) {
+					$(this).append('<br /> <span>'+title+'</span>');
+					$(this).removeAttr('title');
+				}
+				if(parseInt($(this).css('height'))>maxh) {
+					maxh = parseInt($(this).css('height'));
+				}
+			});
+			$('#access .menu > li > a').css('height', maxh);
+							$('#access li').mouseenter(function() {
+					$(this).children('ul').css('display', 'none').stop(true, true).fadeIn(250).css('display', 'block').children('ul').css('display', 'none');
+				});
+				$('#access li').mouseleave(function() {
+					$(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
+				});
+					} else {
+			$('#access li').each(function() {
+				if($(this).children('ul').length)
+					$(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow"></span></span>');
+			});
+			$('.drop-down-toggle').click(function() {
+				$(this).parent().children('ul').slideToggle(250);
+			});
+		}
+					$('#slider').flexslider({
+				selector: '.slides > li',
+				video: true,
+				prevText: '&larr;',
+				nextText: '&rarr;',
+				pausePlay: true,
+				pauseText: '||',
+				playText: '>',
+				before: function() {
+					$('#slider .entry-title').hide();
+				},
+				after: function() {
+					$('#slider .entry-title').fadeIn();
+				}
+			});
+							var $content = $('.entries');
+			$content.imagesLoaded(function() {
+				$content.masonry({
+					itemSelector : '.hentry',
+					columnWidth : function( containerWidth ) {
+						return containerWidth / 12;
+					},
+				});
+			});
+												$('#content .entries').infinitescroll({
+						debug           : false,
+						nextSelector    : "#posts-nav .nav-all a, #posts-nav .nav-next a",
+						loadingImg      : ( window.devicePixelRatio > 1 ? "http://www.nilr.org/wp-content/themes/pinboard/images/ajax-loading_2x.gif" : "http://www.nilr.org/wp-content/themes/pinboard/images/ajax-loading.gif" ),
+						loadingText     : "Loading more posts &#8230;",
+						donetext        : "There are no more posts to display.",
+						navSelector     : "#posts-nav",
+						contentSelector : "#content .entries",
+						itemSelector    : "#content .entries .post",
+					}, function(entries){
+						var $entries = $( entries ).css({ opacity: 0 });
+						$entries.imagesLoaded(function(){
+							$entries.animate({ opacity: 1 });
+							$content.masonry( 'appended', $entries, true );
+						});
+						if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+							// Viewport is greater than tablet: portrait
+						} else {
+							$('#content .post').each(function() {
+								pinboard_move_elements($(this));
+							});
+						}
+						$('audio,video').mediaelementplayer({
+							videoWidth: '100%',
+							videoHeight: '100%',
+							audioWidth: '100%',
+							alwaysShowControls: true,
+							features: ['playpause','progress','tracks','volume'],
+							videoVolume: 'horizontal'
+						});
+						$(".entry-attachment, .entry-content").fitVids({ customSelector: "iframe, object, embed"});
+													$('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+								maxWidth: '100%',
+								maxHeight: '100%',
+							});
+											});
+											$('audio,video').mediaelementplayer({
+			videoWidth: '100%',
+			videoHeight: '100%',
+			audioWidth: '100%',
+			alwaysShowControls: true,
+			features: ['playpause','progress','tracks','volume'],
+			videoVolume: 'horizontal'
+		});
+		$(".entry-attachment, .entry-content").fitVids({ customSelector: "iframe, object, embed"});
+	});
+	jQuery(window).load(function() {
+					jQuery('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+				maxWidth: '100%',
+				maxHeight: '100%',
+			});
+			});
+/* ]]> */
+</script>
+<style type="text/css">
+			#header input#s {
+			width:168px;
+			box-shadow:inset 1px 1px 5px 1px rgba(0, 0, 0, .1);
+			text-indent: 0;
+		}
+					@media screen and (max-width: 760px) {
+			#sidebar {
+				display: none;
+			}
+		}
+				@media screen and (max-width: 760px) {
+			#footer-area {
+				display: none;
+			}
+		}
+																																								.entry-header {
+visibility: hidden;
+}
+
+.entry-content {
+margin-top: -80px;
+}
+
+#menu-menu1 {
+left: 215px;
+position: relative;
+}
+
+#access,
+#copyright {
+background: #31043F;
+}
+
+.font1 {
+font-family: Times New Roman, Times, serif;
+font-size: 26px;
+color: #480058;
+}
+
+.font2 {
+font-family: Times New Roman, Times, serif;
+font-size: 19px;
+color: #ffae00;
+}
+
+#sidebar {
+color: #000;
+}
+
+#access a:hover, 
+#access li.current_page_item a, 
+#access li.current-menu-item a {
+background: #F2F2F2;
+}
+
+#site-title a, #site-description {
+color: #3D007A;
+position: relative;
+}
+
+#site-description {
+left: 121px;
+top: 27px;
+}
+
+.home {
+left: 286px;
+top: -7px;
+}
+
+#header {
+background: #480058;
+}
+
+.widget-title {
+color: #ffae00;
+}
+
+#access a:hover, #access li.current_page_item a, #access li.current-menu-item a {
+color: #ffae00;
+}
+
+#site-title img {
+position: absolute;
+margin: 0px 0;
+width: 231px;
+height: 154px;
+}</style>
+<style type="text/css">
+	#site-title a,
+	#site-description {
+		color:#ffffff;
+	}
+</style>
+</head>
+
+<body class="blog page-template-template-sidebar-content-php">
+	<div id="wrapper">
+		<header id="header">
+			<h1 id="site-title">
+									<a href="http://www.nilr.org/" rel="home">
+						<img src="http://www.nilr.org/wp-content/uploads/2013/09/copy-nu-logo1.png" alt="NILR" width="115" height="77" />
+					</a>
+								<a class="home" href="http://www.nilr.org/" rel="home">NILR</a>
+			</h1>
+							<div id="site-description">NORTHWESTERN INTERDISCIPLINARY LAW REVIEW</div>
+							<form role="search" method="get" id="searchform" action="http://www.nilr.org//" >
+	<input type="text" value="" placeholder="Search this website&#8230;" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="Search" />
+</form>				<div class="clear"></div>
+			<nav id="access">
+				<a class="nav-show" href="#access">Show Navigation</a>
+				<a class="nav-hide" href="#nogo">Hide Navigation</a>
+				<div class="menu-menu1-container"><ul id="menu-menu1" class="menu"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://www.nilr.org/">Home</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://www.nilr.org/about/">About</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://www.nilr.org/issues/">Issues</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://www.nilr.org/submissions/">Submissions</a></li>
+<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://www.nilr.org/subscriptions/">Subscriptions</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="http://www.nilr.org/contact/">Contact</a></li>
+</ul></div>				<div class="clear"></div>
+			</nav><!-- #access -->
+		</header><!-- #header -->														<div id="container">
+		<section id="content" class="column twothirdcol">
+											<article class="post hentry column onecol" id="post-0">
+		<h2 class="entry-title">Content not found</h2>
+		<div class="entry-content">
+			The content you are looking for could not be found.</p>
+								</div><!-- .entry-content -->
+	</article><!-- .post -->
+	<div class="clear"></div>
+					</section><!-- #content -->
+					<div id="sidebar" class="column threecol">
+		<div id="sidebar-top" class="widget-area" role="complementary">
+		<div class="column onecol"><aside id="text-2" class="widget widget_text"><h3 class="widget-title">CURRENT ISSUE</h3>			<div class="textwidget"><p><strong>Law and Public Policy</strong></p>
+<p>Applying International Human Rights Standards to National Curricula: Insights From Literature Education at Jewish and Arab High Schools<br />
+<em>Lotem Perry-Hazan, University of Haifa<br />
+Shulamit Almog, University of Haifa<br />
+Nohad A’li, Western Galilee Academic College and the University of Haifa</em></p>
+<p>Smoke and Mirrors: First Amendment Protection of Commercial Speech and the FDA’s New Graphic Warning Labels for Tobacco<br />
+<em>David D. Coyle, Emory Law School</em></p>
+<p><strong>Law and Technology</strong></p>
+<p>Ill-Suited to the Digital Age: Problems With Emerging Judicial Perspectives on Warrantless Searches of Cell Site Location Information<br />
+<em>Christopher D. Browne, Northeastern University School of Law</em></p>
+<p>Human and Computerized Facial Recognition: Comparison and Constitutional Analysis<br />
+<em>Tom Wiehl, University of Connecticut Law School Law and International Politics</em> </p>
+<p><strong>Law and International Politics</strong></p>
+<p>Providential Products: Reconciling the American and European Constitutional Experiences<br />
+<em>Seth A. Meyer, University of Virginia School of Law</em></p>
+<p>Revising the Law-Growth Hypothesis: A Case Study of Reform-Era China<br />
+<em>Alice Xie, University of Pennsylvania</em></p>
+</div>
+		</aside><!-- .widget --></div><div class="column onecol"><aside id="text-3" class="widget widget_text"><h3 class="widget-title">FROM THE EDITORS</h3>			<div class="textwidget">This fall, the Northwestern Interdisciplinary Law Review (NILR) enters its sixth year of publication. The Review's first five volumes have established the journal as a consistent and accessible source of interdisciplinary legal scholarship, drawing from fields such as history, literature, economics, art theory, and philosophy. Working alongside talented law students, practitioners, and professors, consecutive classes of Northwestern University students have carved out a space for substantial legal dialogue amongst scholars of various disciplines and perspectives. The current editorial board feels privileged to carry on this tradition and remains committed to featuring the same high-quality literature that readers have come to expect from the NILR.</div>
+		</aside><!-- .widget --></div>	</div><!-- #sidebar-top -->
+			</div><!-- #sidebar -->				<div class="clear"></div>
+	</div><!-- #container -->
+									<div id="footer">
+						<div id="copyright">
+				<p class="copyright twocol">© 2014 NILR</p>
+								<div class="clear"></div>
+			</div><!-- #copyright -->
+		</div><!-- #footer -->
+	</div><!-- #wrapper -->
+<script type='text/javascript' src='http://www.nilr.org/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.40.0-2013.08.13'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.nilr.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.nilr.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.5.2'></script>
+</body>
+</html>
