@@ -171,25 +171,32 @@ export default function App() {
   return <ProjectPage key={page[1]} number={page[1]} onSearch={search} />
 }
 
-// Whether the page's tab is in view.
+// Whether the page's tab is in view, and how many times it has come back into
+// view.
 function useVisible() {
   const [visible, setVisible] = useState(!document.hidden)
+  const [returns, setReturns] = useState(0)
   useEffect(() => {
-    const update = () => setVisible(!document.hidden)
+    const update = () => {
+      setVisible(!document.hidden)
+      if (!document.hidden) setReturns((n) => n + 1)
+    }
     document.addEventListener('visibilitychange', update)
     return () => document.removeEventListener('visibilitychange', update)
   }, [])
-  return visible
+  return { visible, returns }
 }
 
 // The search box's rotating example queries, as an index into ROTATION. With
 // once, they stop on REST after one pass instead of looping. They pause while
 // the tab is out of view or the prompt is not shown, so a visitor who opens
 // the page in the background still sees the first prompts first; on resuming,
-// the current prompt plays from its start.
+// the current prompt plays from its start. The CSS animation keeps running
+// while the tab is hidden and ends faded out, so key changes on each return to
+// remount the prompt and replay its animation alongside the restarted timer.
 function usePrompt({ once = false, shown = true } = {}) {
   const [prompt, setPrompt] = useState(0)
-  const visible = useVisible()
+  const { visible, returns } = useVisible()
   const held = once && ROTATION[prompt] === REST
   useEffect(() => {
     if (held || !visible || !shown) return
@@ -199,7 +206,11 @@ function usePrompt({ once = false, shown = true } = {}) {
     )
     return () => clearTimeout(timer)
   }, [prompt, held, visible, shown])
-  return { prompt, className: held ? 'prompt held' : ROTATION[prompt] === REST ? 'prompt rest' : 'prompt' }
+  return {
+    prompt,
+    key: held ? `${prompt}` : `${prompt}.${returns}`,
+    className: held ? 'prompt held' : ROTATION[prompt] === REST ? 'prompt rest' : 'prompt',
+  }
 }
 
 function Header({ lede }: { lede?: boolean }) {
@@ -224,7 +235,7 @@ function Header({ lede }: { lede?: boolean }) {
 function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: string) => void }) {
   const [data, setData] = useState<{ project: Project; similar: Project[] } | null>(null)
   const [error, setError] = useState('')
-  const { prompt, className } = usePrompt({ once: true })
+  const { prompt, key, className } = usePrompt({ once: true })
 
   useEffect(() => {
     const controller = new AbortController()
@@ -260,7 +271,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
           </svg>
           <div className="field">
             <input type="search" value="" onChange={(e) => onSearch(e.target.value)} aria-label="Search projects" />
-            <span key={prompt} className={className} aria-hidden="true">
+            <span key={key} className={className} aria-hidden="true">
               {ROTATION[prompt]}
             </span>
           </div>
@@ -297,7 +308,7 @@ function Search() {
   // The quoted phrases of the query the shown results are for, not of one
   // still being typed.
   const [quotes, setQuotes] = useState<RegExp | null>(null)
-  const { prompt, className } = usePrompt({ shown: !q })
+  const { prompt, key, className } = usePrompt({ shown: !q })
   const input = useRef<HTMLInputElement>(null)
   // The query string the shown results belong to.
   const shown = useRef('')
@@ -421,7 +432,7 @@ function Search() {
               autoFocus
             />
             {!q && (
-              <span key={prompt} className={className} aria-hidden="true">
+              <span key={key} className={className} aria-hidden="true">
                 {ROTATION[prompt]}
               </span>
             )}
@@ -549,7 +560,12 @@ function Pager({
       const slot = numbers.firstElementChild as HTMLElement
       const gap = parseFloat(getComputedStyle(row).columnGap)
       const numberGap = parseFloat(getComputedStyle(numbers).columnGap)
-      const room = row.clientWidth - prev.offsetWidth - next.offsetWidth - 2 * gap
+      // The side columns are equal, so each must hold the wider label.
+      const side = (el: HTMLElement) => {
+        const style = getComputedStyle(el)
+        return el.offsetWidth + parseFloat(style.marginLeft) + parseFloat(style.marginRight)
+      }
+      const room = row.clientWidth - 2 * Math.max(side(prev), side(next)) - 2 * gap
       const fits = Math.floor((room + numberGap) / (slot.offsetWidth + numberGap))
       setSpan(Math.max(1, Math.min(PAGER_SPAN, fits)))
     }
