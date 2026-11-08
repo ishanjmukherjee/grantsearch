@@ -1,0 +1,119 @@
+[
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/academic-year-fletcher-award-winner-2015",
+  "timestamp": "20150905134941",
+  "original": "http://undergradresearch.northwestern.edu/academic-year-fletcher-award-winner-2015",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "XZUVQVZMOQVO2YDR3JFIGZPRS2ULJYOR",
+  "length": "8293"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/academic-year-fletcher-award-winners-2016",
+  "timestamp": "20160601175754",
+  "original": "http://undergradresearch.northwestern.edu/academic-year-fletcher-award-winners-2016",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "AYWVGXGZA34UFZIQZ7FHHJ6ETEZX2RSX",
+  "length": "9704"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/featured-student-researchers/academic-year-fletcher-award-winner-2015",
+  "timestamp": "20211203040819",
+  "original": "https://undergradresearch.northwestern.edu/featured-student-researchers/academic-year-fletcher-award-winner-2015/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RKCTQ3CXZCXS3TL2YDVGKFU66DHA3OOC",
+  "length": "20397"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/fletcher-awardees",
+  "timestamp": "20220601175734",
+  "original": "https://undergradresearch.northwestern.edu/fletcher-awardees/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "27UBDYXVTKNOZCFBHYCGLVIAPUL7J24B",
+  "length": "16589"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/fletcher-awardees/embed",
+  "timestamp": "20220711052854",
+  "original": "https://undergradresearch.northwestern.edu/fletcher-awardees/embed/",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "2BCLCHHH4SERULTDHT7RHDKG5AHUS5SB",
+  "length": "6368"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/sites/urg/files/styles/16_9_full/public/group%20fletcher%20award.jpg?itok=ln9gklo2",
+  "timestamp": "20160601175815",
+  "original": "http://undergradresearch.northwestern.edu/sites/urg/files/styles/16_9_full/public/Group%20Fletcher%20Award.jpg?itok=lN9gKlO2",
+  "mimetype": "image/jpeg",
+  "statuscode": "200",
+  "digest": "7AEJYQZGEDUV3RJWUF7CUQ3EEKUANG2I",
+  "length": "144054"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/urnu-news-and-events/fletcher-undergraduate-research-grant-awards",
+  "timestamp": "20140202013201",
+  "original": "http://undergradresearch.northwestern.edu/urnu-news-and-events/fletcher-undergraduate-research-grant-awards",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "R4NIQUWWJE2WIBSKXS7MOXFECXUKKQBO",
+  "length": "4452"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/urnu-news-and-events/fletcher-urg-prize-winners-new-award",
+  "timestamp": "20140202012923",
+  "original": "http://undergradresearch.northwestern.edu/urnu-news-and-events/fletcher-urg-prize-winners-new-award",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "RNJJHL4WHY5RWF7ALXSDD5ONI3RDYFLT",
+  "length": "4270"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/urnu-news-and-events/new-fletcher-urg-award-ceremony",
+  "timestamp": "20140202014039",
+  "original": "http://undergradresearch.northwestern.edu/urnu-news-and-events/new-fletcher-urg-award-ceremony",
+  "mimetype": "text/html",
+  "statuscode": "200",
+  "digest": "VOWJR7VW2QVYISVUZKZDJFVDGBBGL4LS",
+  "length": "4182"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/wp-json/oembed/1.0/embed?format=xml&url=https://undergradresearch.northwestern.edu/featured-student-researchers/academic-year-fletcher-award-winner-2015/",
+  "timestamp": "20211203041040",
+  "original": "https://undergradresearch.northwestern.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fundergradresearch.northwestern.edu%2Ffeatured-student-researchers%2Facademic-year-fletcher-award-winner-2015%2F&format=xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "OWNMLCG4MRVAROTZTQS4R3NEFSM37UDY",
+  "length": "1798"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/wp-json/oembed/1.0/embed?format=xml&url=https://undergradresearch.northwestern.edu/fletcher-awardees/",
+  "timestamp": "20220708123948",
+  "original": "https://undergradresearch.northwestern.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fundergradresearch.northwestern.edu%2Ffletcher-awardees%2F&format=xml",
+  "mimetype": "text/xml",
+  "statuscode": "200",
+  "digest": "APAUCYR3X6G5JG5XP44YMHJBLY6ADZCE",
+  "length": "1748"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/wp-json/oembed/1.0/embed?url=https://undergradresearch.northwestern.edu/featured-student-researchers/academic-year-fletcher-award-winner-2015/",
+  "timestamp": "20211203040915",
+  "original": "https://undergradresearch.northwestern.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fundergradresearch.northwestern.edu%2Ffeatured-student-researchers%2Facademic-year-fletcher-award-winner-2015%2F",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "AUXGCEVRBBSISKS66AWDGVWQUA3OKU5D",
+  "length": "1764"
+ },
+ {
+  "urlkey": "edu,northwestern,undergradresearch)/wp-json/oembed/1.0/embed?url=https://undergradresearch.northwestern.edu/fletcher-awardees/",
+  "timestamp": "20220708123832",
+  "original": "https://undergradresearch.northwestern.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fundergradresearch.northwestern.edu%2Ffletcher-awardees%2F",
+  "mimetype": "application/json",
+  "statuscode": "200",
+  "digest": "O6IB7N6GMR6PGHR7ZBXCNFA2ATGJIYTS",
+  "length": "1713"
+ }
+]
