@@ -39,6 +39,12 @@ pages where it has them, and from the cover where it doesn't:
   joined without its hyphen if the document spells it whole elsewhere or
   does not spell it hyphenated anywhere else, and keeps the hyphen if the
   document hyphenates it mid-line.
+- text: the thesis's full text, from its title page on (from the cover
+  for the two without one), each text block of the PDF a paragraph, cleaned
+  as the abstract is, without page numbers or email addresses. TeX's "ff"
+  ligature and α are restored where the text layer gives "↵" (FONT_GLYPHS);
+  other math symbols set in fonts without Unicode mappings (NU-CS-2022-08,
+  2025-10) keep the characters the text layer gives them.
 
 Each record also keeps report, the technical report number, and source, the
 PDF's address.
@@ -75,28 +81,55 @@ STOP = re.compile(
 # "≤" and the font's character code for "∈", checked against the page. TeX
 # spaces relations itself, so the text layer has no spaces around them.
 CMSY = str.maketrans({"\uf8ff": " ≤ ", "2": " ∈ "})
+# The same character code means different glyphs in TeX's text and math
+# italic fonts, and the text layer gives both as "↵": the "ff" ligature in
+# CMR ("di↵erent") and α in CMMI (NU-CS-2022-08's Jacobi polynomials,
+# "P (↵,β)"). These are the glyphs checked against the pages; the other math
+# symbols those fonts lack mappings for are left as the text layer gives them.
+FONT_GLYPHS = {"CMSY": CMSY, "CMR": str.maketrans({"↵": "ff"}), "CMMI": str.maketrans({"↵": "α"})}
+CONTROL = re.compile(r"[\x00-\x08\x0b-\x1f\x7f]")
+EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 PAGE_NUMBER = re.compile(r"^\s*(?:\d+|[ivxlc]+)\s*$", re.I)
 
 
-def lines(page) -> list[str]:
-    """A page's lines in reading order, each run of superscript spans marked
-    by one caret ("1", ".", "63" set raised give "^1.63"), and TeX math
-    symbols that have no Unicode mapping restored (CMSY)."""
+def block_lines(block: dict) -> list[str]:
+    """A text block's lines, each run of superscript spans marked by one
+    caret ("1", ".", "63" set raised give "^1.63"), and TeX math symbols that
+    have no Unicode mapping restored (FONT_GLYPHS)."""
     out = []
-    for block in page.get_text("dict")["blocks"]:
-        for line in block.get("lines", []):
-            s, raised = "", False
-            for span in line["spans"]:
-                t = span["text"]
-                if span["font"].startswith("CMSY"):
-                    t = t.translate(CMSY)
-                sup = bool(span["flags"] & pymupdf.TEXT_FONT_SUPERSCRIPT) and bool(t.strip()) and bool(s.strip())
-                if sup:
-                    t = ("" if raised else "^") + t.strip()
-                s += t
-                raised = sup or (raised and not t.strip())
-            out.append(s.strip())
+    for line in block.get("lines", []):
+        s, raised = "", False
+        for span in line["spans"]:
+            t = span["text"]
+            for font, glyphs in FONT_GLYPHS.items():
+                if span["font"].startswith(font):
+                    t = t.translate(glyphs)
+            sup = bool(span["flags"] & pymupdf.TEXT_FONT_SUPERSCRIPT) and bool(t.strip()) and bool(s.strip())
+            if sup:
+                t = ("" if raised else "^") + t.strip()
+            s += t
+            raised = sup or (raised and not t.strip())
+        out.append(s.strip())
     return out
+
+
+def lines(page) -> list[str]:
+    """A page's lines in reading order (see block_lines)."""
+    return [s for block in page.get_text("dict")["blocks"] for s in block_lines(block)]
+
+
+def full_text(doc, start: int, whole: str) -> str:
+    """The thesis's text from page start on: each text block a paragraph,
+    its lines joined as the abstract's are (see join_lines), paragraphs
+    separated by blank lines; blocks of only a page number are left out, and
+    so are control characters and email addresses, which are not kept."""
+    paragraphs = []
+    for page in list(doc)[start:]:
+        for block in page.get_text("dict")["blocks"]:
+            rows = [s for s in block_lines(block) if s]
+            if rows and not (len(rows) == 1 and PAGE_NUMBER.match(rows[0])):
+                paragraphs.append(EMAIL.sub("", CONTROL.sub("", text(join_lines(rows, whole)))).strip())
+    return "\n\n".join(p for p in paragraphs if p)
 
 
 def join_lines(rows: list[str], whole: str) -> str:
@@ -169,6 +202,7 @@ def parse_thesis(report: dict) -> dict:
         "advisor": advisor,
         "title": title,
         "abstract": text(join_lines(rows, whole)),
+        "text": full_text(doc, start, whole),
         "report": report["number"],
         "source": report["url"],
     }

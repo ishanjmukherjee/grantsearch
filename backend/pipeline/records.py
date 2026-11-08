@@ -30,6 +30,8 @@ A record has these fields, always in this order:
   notes or urg, an advisor's department or affiliation.
 - abstract: the abstract or description, or None. A poster listed once per
   presenter has its distinct abstracts joined (see fold_listings).
+- text: the work's full text, where the source has it and its parser reads
+  it (the Computer Science theses so far), or None.
 - url: where a visitor can check the record: the winners page, program or
   guide PDF, thesis page or PDF, or NURJ's own copy.
 - page: the 1-based page of url the record starts on, or None.
@@ -53,8 +55,8 @@ RECORDS_DIR = DATA_DIR / "records"
 SOURCES = ("surg", "ay_urg", "expo", "symposium", "theses", "nurj")
 KINDS = ("grant", "presentation", "thesis", "paper")
 ROLES = ("student", "advisor")
-FIELDS = ("id", "source", "kind", "year", "title", "people", "abstract", "url", "page", "listings", "extra")
-REQUIRED = FIELDS[:9]
+FIELDS = ("id", "source", "kind", "year", "title", "people", "abstract", "text", "url", "page", "listings", "extra")
+REQUIRED = FIELDS[:10]
 OVERRIDES = DATA_DIR / "overrides.jsonl"
 
 # Word-trigram Jaccard between two abstracts at which they are one poster's.
@@ -105,9 +107,9 @@ def trigrams(s: str) -> set[tuple[str, ...]]:
     return {tuple(w[i : i + 3]) for i in range(len(w) - 2)}
 
 
-def record(id: str, source: str, kind: str, year: int, title: str | None, people: list[dict], abstract: str | None, url: str, page: int | None = None, listings: list[dict] | None = None, extra: dict | None = None) -> dict:
+def record(id: str, source: str, kind: str, year: int, title: str | None, people: list[dict], abstract: str | None, url: str, page: int | None = None, listings: list[dict] | None = None, extra: dict | None = None, text: str | None = None) -> dict:
     """A record with its fields in order, leaving out empty listings and extra."""
-    r = {"id": id, "source": source, "kind": kind, "year": year, "title": title, "people": people, "abstract": abstract, "url": url, "page": page}
+    r = {"id": id, "source": source, "kind": kind, "year": year, "title": title, "people": people, "abstract": abstract, "text": text, "url": url, "page": page}
     if listings:
         r["listings"] = listings
     if extra := {k: v for k, v in (extra or {}).items() if v is not None}:
@@ -281,6 +283,8 @@ def check(r: dict, source: str) -> None:
         raise ValueError(f"{r.get('id')}: fields {list(r)}")
     if r["source"] != source or r["kind"] not in KINDS:
         raise ValueError(f"{r['id']}: source {r['source']!r}, kind {r['kind']!r}")
+    if r["text"] is not None and (not isinstance(r["text"], str) or not r["text"]):
+        raise ValueError(f"{r['id']}: text {r['text']!r:.40}")
     if not isinstance(r["year"], int) or not isinstance(r["url"], str) or not r["url"]:
         raise ValueError(f"{r['id']}: year {r['year']!r}, url {r['url']!r}")
     if r["title"] is not None and (not isinstance(r["title"], str) or not r["title"].strip()):

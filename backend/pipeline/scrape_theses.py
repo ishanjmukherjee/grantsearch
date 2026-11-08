@@ -46,9 +46,12 @@ Each thesis is read as:
 - MMSS only: paper (whether the library has it), funding, prizes and items
   (see pipeline.parse_mmss_theses)
 
+- Computer Science only: text, the thesis's full text
+
 and written as a record (see pipeline.records): its people are the students
-and then the advisors on the advisor line, its url is the source, and its
-extra has the department, academic year and the fields after abstract.
+and then the advisors on the advisor line, its url is the source, its text
+the full text, and its extra has the department, academic year and the
+fields after abstract.
 
 Usage: uv run python -m pipeline.scrape_theses [--refresh]
 """
@@ -240,7 +243,7 @@ def as_record(t: dict) -> dict:
     """A thesis as a record (see pipeline.records)."""
     people = [records.person("student", s) for s in t["students"]] + records.advisors(t["advisor"])
     extra = {k: t.get(k) for k in ("department", "academic_year", "mmss", "report", "paper", "funding", "prizes", "items")}
-    return records.record(t["id"], "theses", "thesis", t["year"], t["title"], people, t["abstract"], t["source"], extra=extra)
+    return records.record(t["id"], "theses", "thesis", t["year"], t["title"], people, t["abstract"], t["source"], extra=extra, text=t.get("text"))
 
 if __name__ == "__main__":
     main()
