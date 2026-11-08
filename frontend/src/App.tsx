@@ -71,19 +71,34 @@ const PRESS_MS = 250
 
 // The search in the page's URL. A value the controls can't show, as from an
 // old or hand-edited link, is dropped rather than sent on to the backend.
-function readUrl() {
+// A search: its query, filters and page of results.
+type Query = { q: string; source: Source; from: string; to: string; page: number }
+
+function readUrl(): Query {
   const p = new URLSearchParams(window.location.search)
   const source = p.get('source')
   const year = (y: string | null) => (YEARS.some((v) => String(v) === y) ? y! : '')
   const page = Number.parseInt(p.get('page') ?? '')
   return {
     q: p.get('q') ?? '',
-    source: source === 'surg' || source === 'expo' ? source : ('' as Source),
+    source: source === 'surg' || source === 'expo' ? source : '',
     from: year(p.get('from')),
     to: year(p.get('to')),
     // A page so large its offset loses precision would be sent in exponent form.
     page: page >= 1 && Number.isSafeInteger(page * PAGE) ? page : 1,
   }
+}
+
+// The page's URL for a search at page n; page 1 is left out.
+function searchUrl({ q, source, from, to }: Query, n: number) {
+  const params = new URLSearchParams()
+  if (q.trim()) params.set('q', q.trim())
+  if (source) params.set('source', source)
+  if (from) params.set('from', from)
+  if (to) params.set('to', to)
+  if (n > 1) params.set('page', String(n))
+  const qs = params.toString()
+  return qs ? `?${qs}` : window.location.pathname
 }
 
 // A request that got no response, or one from a proxy that couldn't reach
@@ -238,8 +253,6 @@ function Header({ lede }: { lede?: boolean }) {
 function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: string) => void }) {
   const [data, setData] = useState<{ project: Project; similar: Project[] } | null>(null)
   const [error, setError] = useState('')
-  const { prompt, key, className } = usePrompt({ once: true })
-
   useEffect(() => {
     const controller = new AbortController()
     ;(async () => {
@@ -267,18 +280,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
     <div className="page">
       <Header />
       <div className="controls">
-        <div className="searchbox">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="10.5" cy="10.5" r="6.5" />
-            <path d="M15.5 15.5L20 20" />
-          </svg>
-          <div className="field">
-            <input type="search" value="" onChange={(e) => onSearch(e.target.value)} aria-label="Search projects" />
-            <span key={key} className={className} aria-hidden="true">
-              {ROTATION[prompt]}
-            </span>
-          </div>
-        </div>
+        <SearchBox value="" onChange={onSearch} once />
       </div>
       <main>
         {error && <p className="notice error">{error}</p>}
@@ -298,12 +300,8 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
 }
 
 function Search() {
-  const initial = readUrl()
-  const [q, setQ] = useState(initial.q)
-  const [source, setSource] = useState<Source>(initial.source)
-  const [from, setFrom] = useState(initial.from)
-  const [to, setTo] = useState(initial.to)
-  const [page, setPage] = useState(initial.page)
+  const [query, setQuery] = useState(readUrl)
+  const { q, source, from, to, page } = query
   const [results, setResults] = useState<Project[] | null>(null)
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -311,43 +309,33 @@ function Search() {
   // The quoted phrases of the query the shown results are for, not of one
   // still being typed.
   const [quotes, setQuotes] = useState<RegExp | null>(null)
-  const { prompt, key, className } = usePrompt({ shown: !q })
-  const input = useRef<HTMLInputElement>(null)
   // The query string the shown results belong to.
   const shown = useRef('')
   // Set when the next search should skip the debounce: the page's first load,
   // and moves between pages, which are not typed.
   const instant = useRef(true)
 
-  // The page's URL for the current search at page n; page 1 is left out.
-  function href(n: number) {
-    const params = new URLSearchParams()
-    if (q.trim()) params.set('q', q.trim())
-    if (source) params.set('source', source)
-    if (from) params.set('from', from)
-    if (to) params.set('to', to)
-    if (n > 1) params.set('page', String(n))
-    const qs = params.toString()
-    return qs ? `?${qs}` : window.location.pathname
+  // A changed query or filter starts again from the first page.
+  function change(edit: Partial<Omit<Query, 'page'>>) {
+    setQuery((s) => ({ ...s, ...edit, page: 1 }))
+  }
+
+  function setPage(n: number) {
+    instant.current = true
+    setQuery((s) => ({ ...s, page: n }))
   }
 
   // Each page of results is its own history entry, so Back returns to the
   // page before.
   function goTo(n: number) {
-    window.history.pushState(null, '', href(n))
-    instant.current = true
+    window.history.pushState(null, '', searchUrl(query, n))
     setPage(n)
   }
 
   useEffect(() => {
     const back = () => {
-      const url = readUrl()
-      setQ(url.q)
-      setSource(url.source)
-      setFrom(url.from)
-      setTo(url.to)
-      setPage(url.page)
       instant.current = true
+      setQuery(readUrl())
     }
     window.addEventListener('popstate', back)
     return () => window.removeEventListener('popstate', back)
@@ -359,7 +347,7 @@ function Search() {
   }, [])
 
   useEffect(() => {
-    const url = href(page)
+    const url = searchUrl({ q, source, from, to, page }, page)
     window.history.replaceState(null, '', url)
     const params = new URLSearchParams(url.startsWith('?') ? url : '')
     // The URL keeps the whole query; the search uses only its start.
@@ -381,7 +369,6 @@ function Search() {
           // results or fewer to a page, shows the last page instead. The
           // search reruns for it and replaces this URL with its own.
           if (data.results.length === 0 && data.total > 0) {
-            instant.current = true
             setPage(Math.ceil(data.total / PAGE))
             return
           }
@@ -406,7 +393,6 @@ function Search() {
       clearTimeout(timer)
       controller.abort()
     }
-    // href reads the search state listed here.
   }, [q, source, from, to, page])
 
   const pages = Math.ceil(total / PAGE)
@@ -417,45 +403,7 @@ function Search() {
       <Header lede />
 
       <div className="controls">
-        <div className={`searchbox ${loading ? 'loading' : ''}`}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="10.5" cy="10.5" r="6.5" />
-            <path d="M15.5 15.5L20 20" />
-          </svg>
-          <div className="field">
-            <input
-              ref={input}
-              type="search"
-              value={q}
-              onChange={(e) => {
-                setQ(e.target.value)
-                setPage(1)
-              }}
-              aria-label="Search projects"
-              autoFocus
-            />
-            {!q && (
-              <span key={key} className={className} aria-hidden="true">
-                {ROTATION[prompt]}
-              </span>
-            )}
-          </div>
-          {q && (
-            <button
-              className="clear"
-              onClick={() => {
-                setQ('')
-                setPage(1)
-                input.current?.focus()
-              }}
-              aria-label="Clear search"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M6 6l12 12M18 6L6 18" />
-              </svg>
-            </button>
-          )}
-        </div>
+        <SearchBox value={q} onChange={(value) => change({ q: value })} loading={loading} autoFocus />
         <div className="filters">
           <div className="segmented" role="group" aria-label="Source">
             {(
@@ -465,42 +413,15 @@ function Search() {
                 ['expo', 'Expo projects'],
               ] as const
             ).map(([value, label]) => (
-              <button key={value} className={source === value ? 'on' : ''} onClick={() => {
-                  setSource(value)
-                  setPage(1)
-                }}>
+              <button key={value} className={source === value ? 'on' : ''} onClick={() => change({ source: value })}>
                 {label}
               </button>
             ))}
           </div>
           <div className="years">
-            <span className="select">
-              <select value={from} onChange={(e) => {
-                  setFrom(e.target.value)
-                  setPage(1)
-                }} aria-label="From year">
-                <option value="">Any year</option>
-                {YEARS.map((y) => (
-                  <option key={y} value={y}>
-                    {y}
-                  </option>
-                ))}
-              </select>
-            </span>
+            <YearSelect value={from} onChange={(value) => change({ from: value })} label="From year" />
             <span>to</span>
-            <span className="select">
-              <select value={to} onChange={(e) => {
-                  setTo(e.target.value)
-                  setPage(1)
-                }} aria-label="To year">
-                <option value="">Any year</option>
-                {YEARS.map((y) => (
-                  <option key={y} value={y}>
-                    {y}
-                  </option>
-                ))}
-              </select>
-            </span>
+            <YearSelect value={to} onChange={(value) => change({ to: value })} label="To year" />
           </div>
         </div>
       </div>
@@ -517,9 +438,80 @@ function Search() {
           <p className="notice">No projects match. Try different words or widen the filters.</p>
         )}
         <Quotes.Provider value={quotes}>{results?.map((p) => <Result key={p.id} project={p} />)}</Quotes.Provider>
-        {pages > 1 && <Pager page={page} pages={pages} href={href} onGo={goTo} />}
+        {pages > 1 && <Pager page={page} pages={pages} href={(n) => searchUrl(query, n)} onGo={goTo} />}
       </main>
     </div>
+  )
+}
+
+// The search box, with the rotating example queries while it is empty. With
+// once, they stop after one pass, as usePrompt's once does.
+function SearchBox({
+  value,
+  onChange,
+  loading = false,
+  autoFocus = false,
+  once = false,
+}: {
+  value: string
+  onChange: (value: string) => void
+  loading?: boolean
+  autoFocus?: boolean
+  once?: boolean
+}) {
+  const { prompt, key, className } = usePrompt({ once, shown: !value })
+  const input = useRef<HTMLInputElement>(null)
+  return (
+    <div className={loading ? 'searchbox loading' : 'searchbox'}>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="M15.5 15.5L20 20" />
+      </svg>
+      <div className="field">
+        <input
+          ref={input}
+          type="search"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          aria-label="Search projects"
+          autoFocus={autoFocus}
+        />
+        {!value && (
+          <span key={key} className={className} aria-hidden="true">
+            {ROTATION[prompt]}
+          </span>
+        )}
+      </div>
+      {value && (
+        <button
+          className="clear"
+          onClick={() => {
+            onChange('')
+            input.current?.focus()
+          }}
+          aria-label="Clear search"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      )}
+    </div>
+  )
+}
+
+function YearSelect({ value, onChange, label }: { value: string; onChange: (value: string) => void; label: string }) {
+  return (
+    <span className="select">
+      <select value={value} onChange={(e) => onChange(e.target.value)} aria-label={label}>
+        <option value="">Any year</option>
+        {YEARS.map((y) => (
+          <option key={y} value={y}>
+            {y}
+          </option>
+        ))}
+      </select>
+    </span>
   )
 }
 
