@@ -171,19 +171,34 @@ export default function App() {
   return <ProjectPage key={page[1]} number={page[1]} onSearch={search} />
 }
 
+// Whether the page's tab is in view.
+function useVisible() {
+  const [visible, setVisible] = useState(!document.hidden)
+  useEffect(() => {
+    const update = () => setVisible(!document.hidden)
+    document.addEventListener('visibilitychange', update)
+    return () => document.removeEventListener('visibilitychange', update)
+  }, [])
+  return visible
+}
+
 // The search box's rotating example queries, as an index into ROTATION. With
-// once, they stop on REST after one pass instead of looping.
-function usePrompt(once = false) {
+// once, they stop on REST after one pass instead of looping. They pause while
+// the tab is out of view or the prompt is not shown, so a visitor who opens
+// the page in the background still sees the first prompts first; on resuming,
+// the current prompt plays from its start.
+function usePrompt({ once = false, shown = true } = {}) {
   const [prompt, setPrompt] = useState(0)
+  const visible = useVisible()
   const held = once && ROTATION[prompt] === REST
   useEffect(() => {
-    if (held) return
+    if (held || !visible || !shown) return
     const timer = setTimeout(
       () => setPrompt((i) => (i + 1) % ROTATION.length),
       ROTATION[prompt] === REST ? REST_MS : PROMPT_MS,
     )
     return () => clearTimeout(timer)
-  }, [prompt, held])
+  }, [prompt, held, visible, shown])
   return { prompt, className: held ? 'prompt held' : ROTATION[prompt] === REST ? 'prompt rest' : 'prompt' }
 }
 
@@ -209,7 +224,7 @@ function Header({ lede }: { lede?: boolean }) {
 function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: string) => void }) {
   const [data, setData] = useState<{ project: Project; similar: Project[] } | null>(null)
   const [error, setError] = useState('')
-  const { prompt, className } = usePrompt(true)
+  const { prompt, className } = usePrompt({ once: true })
 
   useEffect(() => {
     const controller = new AbortController()
@@ -282,7 +297,7 @@ function Search() {
   // The quoted phrases of the query the shown results are for, not of one
   // still being typed.
   const [quotes, setQuotes] = useState<RegExp | null>(null)
-  const { prompt, className } = usePrompt()
+  const { prompt, className } = usePrompt({ shown: !q })
   const input = useRef<HTMLInputElement>(null)
   // The query string the shown results belong to.
   const shown = useRef('')
