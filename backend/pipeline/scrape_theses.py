@@ -1,4 +1,4 @@
-"""Scrape department honors thesis lists into data/theses.json.
+"""Scrape department honors thesis lists into data/records/theses.jsonl.
 
 Four departments so far. Two list their theses on a page, saved as
 fetched in data/raw/theses/<key>.html and parsed from the saved copy:
@@ -23,7 +23,7 @@ read from a checkout of it by pipeline.parse_mmss_theses: 1,079 from 1980 to
 2024, 321 of them with the paper, which gives the advisor and abstract where
 it prints them. Running this needs that checkout (see that module).
 
-Each thesis is a record:
+Each thesis is read as:
 
 - id: "<key>-YYYY-NNN", numbered in page order (Computer Science: report
   order; MMSS: library item order) within its year
@@ -46,19 +46,21 @@ Each thesis is a record:
 - MMSS only: paper (whether the library has it), funding, prizes and items
   (see pipeline.parse_mmss_theses)
 
+and written as a record (see pipeline.records): its people are the students
+and then the advisors on the advisor line, its url is the source, and its
+extra has the department, academic year and the fields after abstract.
+
 Usage: uv run python -m pipeline.scrape_theses [--refresh]
 """
 
 import argparse
-import json
 import re
 
 import httpx
 from bs4 import BeautifulSoup
 
-from pipeline import parse_cs_theses, parse_mmss_theses
+from pipeline import parse_cs_theses, parse_mmss_theses, records
 from pipeline.parse_expo import split_people, text
-from pipeline.projects import OVERRIDES, merge_patch
 from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
 
 SOURCES = {
@@ -231,17 +233,14 @@ def main() -> None:
             counts[t["year"]] = counts.get(t["year"], 0) + 1
             theses.append({"id": f"{key}-{t['year']}-{counts[t['year']]:03d}", **t})
         print(f"{key}: {len(rows)} theses")
-    path = DATA_DIR / "theses.json"
-    by_id = {t["id"]: i for i, t in enumerate(theses)}
-    patched = 0
-    for o in map(json.loads, (DATA_DIR / OVERRIDES).open()):
-        if o["file"] == path.name:
-            theses[by_id[o["id"]]] = merge_patch(theses[by_id[o["id"]]], o["patch"])
-            patched += 1
-    print(f"applied {patched} overrides from {OVERRIDES}")
-    path.write_text(json.dumps(theses, indent=2, ensure_ascii=False) + "\n")
-    print(f"wrote {len(theses)} theses to {path}")
+    records.write("theses", [as_record(t) for t in theses])
 
+
+def as_record(t: dict) -> dict:
+    """A thesis as a record (see pipeline.records)."""
+    people = [records.person("student", s) for s in t["students"]] + records.advisors(t["advisor"])
+    extra = {k: t.get(k) for k in ("department", "academic_year", "mmss", "report", "paper", "funding", "prizes", "items")}
+    return records.record(t["id"], "theses", "thesis", t["year"], t["title"], people, t["abstract"], t["source"], extra=extra)
 
 if __name__ == "__main__":
     main()

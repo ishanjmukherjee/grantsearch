@@ -25,18 +25,19 @@ endorses the proposal), so both are recorded as advisors. They also mark some
 grants as co-funded (by ISEN, a department fellowship and the like), kept
 verbatim as the awardee's notes.
 
-Writes data/grants.json with one record per project: students who share a title
-within a year are one project with several awardees. A record has id, year,
-title and awardees (first, last, and when the page gives them school, majors
-as written, and notes); then advisors (name and department as given) and, for 2007-2010,
-fields (the department headings it is listed under), when the page has them.
+Writes data/records/surg.jsonl (see pipeline.records), one record per
+project: students who share a title within a year are one project with
+several awardees. Its people are the awardees (with school, majors as
+written, and notes, when the page gives them), then the advisors (with their
+department as given); its url is the page it was read from, and for
+2007-2010 its extra has the fields, the department headings it is listed
+under.
 
 Usage: uv run python -m pipeline.scrape_surg [--refresh]
 """
 
 import argparse
 import html
-import json
 import re
 import unicodedata
 from pathlib import Path
@@ -442,9 +443,19 @@ def main() -> None:
         print(f"{year}: {len(rows)} rows, {len(grouped)} projects, {advised} with advisors")
         projects.extend(grouped)
 
-    out = DATA_DIR / "grants.json"
-    out.write_text(json.dumps(projects, indent=2, ensure_ascii=False) + "\n")
-    print(f"wrote {len(projects)} projects to {out}")
+    # Imported here: pipeline.records uses this module's names.
+    from pipeline import records
+
+    records.write("surg", [as_record(p) for p in projects])
+
+
+def as_record(p: dict) -> dict:
+    """A grant as a record (see pipeline.records)."""
+    from pipeline import records
+
+    people = [records.person("student", a) for a in p["awardees"]]
+    people += [records.person("advisor", records.name_parts(a["name"]), department=a["department"]) for a in p.get("advisors", [])]
+    return records.record(p["id"], "surg", "grant", p["year"], p["title"], people, None, PAGES[p["year"]], extra={"fields": p.get("fields")})
 
 
 if __name__ == "__main__":

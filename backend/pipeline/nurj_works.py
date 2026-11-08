@@ -19,10 +19,12 @@ Works on related topics by the same student (a 2020 Expo poster and a 2021 talk
 with a new title) stay separate works; linking them is a later step, as for
 SURG grants and Expo abstracts.
 
-Writes data/nurj_works.json: works, each with its title, authors and advisors
-(from the most formal record: print edition, then post, then CAURS entry), the
-earliest year, and its records (sources) with the rule that joined each; and
-the records left out, each with the reason.
+Writes the works to data/records/nurj.jsonl (see pipeline.records), each with
+its title, authors and advisors (from the most formal record: print edition,
+then post, then CAURS entry) as its people, the earliest year, its lead
+record's url, and in its extra its records (sources) with the rule that
+joined each. The records left out, each with the reason, go to
+data/nurj_left_out.json.
 
 Usage: uv run python -m pipeline.nurj_works [--candidates]
   --candidates prints the pairs of separate works whose texts are most alike,
@@ -37,6 +39,7 @@ from collections import Counter
 from difflib import SequenceMatcher
 
 from pipeline.link_expo import surname_parts, words
+from pipeline.records import names, record, write
 from pipeline.scrape_surg import DATA_DIR
 
 # Title similarity (difflib ratio of the folded titles) at which two records
@@ -341,12 +344,20 @@ def main() -> None:
     if "--candidates" in sys.argv:
         candidates(works)
         return
-    out = DATA_DIR / "nurj_works.json"
-    out.write_text(json.dumps({"works": works, "left_out": left}, indent=1, ensure_ascii=False) + "\n")
+    write("nurj", [as_record(w) for w in works])
+    out = DATA_DIR / "nurj_left_out.json"
+    out.write_text(json.dumps(left, indent=1, ensure_ascii=False) + "\n")
     kinds = Counter(tuple(sorted({s["type"] for s in w["sources"]})) for w in works)
-    print(f"{len(works)} works from {len(keep)} records ({len(left)} left out) -> {out}")
+    print(f"{len(works)} works from {len(keep)} records ({len(left)} left out -> {out})")
     for k, n in kinds.most_common():
         print(f"  {n:4} {' + '.join(k)}")
+
+
+def as_record(w: dict) -> dict:
+    """A work as a record (see pipeline.records)."""
+    people = [p for a in w["authors"] for p in names(a, "student")] + [p for a in w["advisors"] for p in names(a, "advisor")]
+    lead = next(s for s in w["sources"] if s["joined_by"] == "lead record")
+    return record(w["id"], "nurj", "paper", w["year"], w["title"], people, None, lead["url"], extra={"sources": w["sources"]})
 
 
 if __name__ == "__main__":

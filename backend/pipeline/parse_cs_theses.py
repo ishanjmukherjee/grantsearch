@@ -26,7 +26,7 @@ pages where it has them, and from the cover where it doesn't:
   "Supervisor(s)" there, without "Dr." and "Ph.D.", several joined by "and".
   NU-CS-2024-16 names no advisor, so advisor is None here; the advisor
   read from its acknowledgements is a hand edit in
-  data/overrides.jsonl, which scrape_theses applies.
+  data/overrides.jsonl, applied as the record is written.
 - year from the title page's date (each is dated in the spring of the year
   the student graduates), academic_year the year before it to it.
 - abstract: the text under the first "Abstract" heading from the title page

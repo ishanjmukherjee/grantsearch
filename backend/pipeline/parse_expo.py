@@ -21,17 +21,18 @@ as one advisor, "Joseph Contessa (Yale University)".
 Each entry records the 1-based PDF page its header starts on, so a link can
 open the program at the abstract (`source#page=N`).
 
-Ids are kept across runs: an entry already in data/expo_abstracts.json keeps
-its id, which cards, glosses, links and share ids refer to, and a new one
-takes the next free number in its year (see assign_ids).
+Ids are kept across runs: a listing the last run wrote keeps its id, which
+cards, glosses, links and share ids refer to, and a new one takes the next
+free number in its year (see assign_ids).
 
-Writes data/expo_abstracts.json.
+Writes the listings, one record per poster (see
+pipeline.records.fold_listings), to data/records/expo.jsonl and, for the
+Symposium, data/records/symposium.jsonl.
 
 Usage: uv run python -m pipeline.parse_expo [--refresh]
 """
 
 import argparse
-import json
 import re
 from pathlib import Path
 
@@ -129,7 +130,7 @@ CONTINUED = re.compile(r".*, continued\s*")
 TITLE_BY = re.compile(r"\s*(.+?) by ([A-Z][\w.’'-]*(?: [A-Z][\w.’'-]*)+)\s*")
 GUIDE_END = "Presentation Format:"
 # An advisor list item naming an institution rather than a person.
-INSTITUTION = re.compile(r"\b(?:University|College|Laborator(?:y|ies)|Hospital|Clinic|Institute|School|Center|Department|Films|Retired)\b")
+INSTITUTION = re.compile(r"\b(?:University|College|Laborator(?:y|ies)|Bank|Hospital|Clinic|Institute|School|Center|Department|Films|Retired)\b")
 BOLD = 16
 ITALIC = 2
 HEADING_SIZE = 13  # section headings, times and rooms are set larger than the 12pt body
@@ -642,11 +643,12 @@ def main() -> None:
     parser.add_argument("--refresh", action="store_true", help="refetch cached PDFs")
     args = parser.parse_args()
 
-    path = DATA_DIR / "expo_abstracts.json"
-    previous = json.loads(path.read_text()) if path.exists() else []
+    # Imported here: pipeline.parse_symposium and pipeline.records use this
+    # module's names.
+    from pipeline import parse_symposium, records
+
+    previous = records.expand_listings(records.load("expo", "symposium"))
     out = []
-    # Imported here: pipeline.parse_symposium uses this module's text().
-    from pipeline import parse_symposium
 
     for year in parse_symposium.PROGRAMS:
         entries = parse_symposium.listings(year)
@@ -671,8 +673,9 @@ def main() -> None:
         if e["advisor"]:
             e["advisor"] = affiliations(e["advisor"])
 
-    path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
-    print(f"wrote {len(out)} abstracts to {path}")
+    for source in ("expo", "symposium"):
+        listings = [e for e in out if e["id"].startswith(f"{source}-")]
+        records.write(source, records.fold_listings(source, listings))
 
 
 if __name__ == "__main__":

@@ -26,7 +26,7 @@ Entries are found by their advisor line, so the two ensemble recitals the
 programs describe without one (2009's Apollo Saxophone Quartet, 2010's
 Obsidian Brass Quintet, both mostly of other composers' music) are left out.
 
-Used by pipeline.parse_expo, which writes data/expo_abstracts.json.
+Used by pipeline.parse_expo, which writes the records.
 """
 
 import html

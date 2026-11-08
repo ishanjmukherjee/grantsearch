@@ -22,7 +22,7 @@ has the guide's title and, as its abstract, the student's own abstract of
 the project from another venue, which abstract_source names ({name, url}),
 so that a result can say where the text is from.
 
-Used by pipeline.parse_expo, which writes data/expo_abstracts.json.
+Used by pipeline.parse_expo, which writes the records.
 """
 
 import json

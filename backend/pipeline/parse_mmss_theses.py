@@ -37,7 +37,7 @@ MMSS works also keep what only this library has: paper (whether the library
 has it), funding (grants the paper credits), prizes (from the catalog's
 notes, such as the Dacey awards) and items (the library item ids).
 
-Used by pipeline.scrape_theses, which writes data/theses.json.
+Used by pipeline.scrape_theses, which writes the records.
 """
 
 import json
