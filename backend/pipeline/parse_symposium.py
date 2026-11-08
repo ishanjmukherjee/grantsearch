@@ -38,8 +38,8 @@ from pathlib import Path
 import httpx
 import pymupdf
 
-from pipeline.link_expo import first_match, words
 from pipeline.parse_expo import RAW_DIR, split_people, text
+from pipeline.records import first_match, words
 from pipeline.scrape_surg import HEADERS
 
 SYMPOSIUM_DIR = RAW_DIR / "symposium"

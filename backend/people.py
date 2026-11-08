@@ -1,8 +1,8 @@
 """The people named on projects, and matching typed names against them.
 
 Each person is a distinct name in one role, "student" (a grant awardee or Expo
-presenter) or "advisor" (from an Expo listing's advisor line), with the
-projects that name them. A name is stored only as its parts:
+presenter) or "advisor" (a grant's advisor, or one on an Expo listing's
+advisor line), with the projects that name them. A name is stored only as its parts:
 
 - first: given names, including a preferred name the source puts in
   parentheses ("Xinyuan (Joyce) Pu" has first names Xinyuan and Joyce)
@@ -13,7 +13,7 @@ Everything a searcher might type differently lives on the matching side,
 built at startup and never stored: word order (a query's words are compared
 with a person's name parts in any order), accents and case, apostrophes and
 hyphens (O'Connor is "oconnor" and "connor"), nicknames (NICKNAMES_SOURCE, plus
-first names one of which is a prefix of the other, as in pipeline.link_expo),
+first names one of which is a prefix of the other, as in pipeline.records.first_match),
 typos (edit distance, scaled to word length) and spelling by sound (Metaphone,
 checked against spelling).
 
@@ -49,9 +49,8 @@ from collections import defaultdict
 import jellyfish
 from nicknames import NickNamer
 
-from pipeline.link_expo import MIN_PREFIX
-from pipeline.parse_expo import PARTICLES, split_people
-from pipeline.scrape_surg import SUFFIXES
+from pipeline.records import MIN_PREFIX
+from pipeline.scrape_surg import PARTICLES, SUFFIXES
 from pipeline.scrape_surg import fold as fold_text
 
 NICKNAMES_SOURCE = "nicknames (github.com/carltonnorthern/nicknames, Apache-2.0)"
@@ -92,11 +91,6 @@ def split_name(record: dict) -> dict:
     return {"first": words[:1] + [p.strip() for p in preferred if p.strip()], "middle": words[1:], "last": record["last"]}
 
 
-def advisor_names(advisor: str | None) -> list[dict]:
-    """The people on an Expo advisor line, without affiliations in parentheses."""
-    return split_people(re.sub(r"\s*\([^)]*\)", "", advisor or ""), last_first=False)
-
-
 class People:
     def __init__(self, projects: list[dict]) -> None:
         # Every word of every project's own text (titles, abstracts, cards,
@@ -106,10 +100,10 @@ class People:
         self.text_words: set[str] = set()
         found: dict[tuple, dict] = {}
         for p in projects:
-            mentions = [("student", x) for x in p["grant"]["awardees"]] if p["grant"] else []
-            for e in p["expo"]:
+            mentions = [(x["role"], x) for r in p["records"] if r["kind"] == "grant" for x in r["people"]]
+            for e in p["entries"]:
                 mentions += [("student", x) for x in e["presenters"]]
-                mentions += [("advisor", x) for x in advisor_names(e["advisor"])]
+                mentions += [("advisor", x) for x in e["advisors"]]
             for role, x in mentions:
                 key = (role, fold(x["first"]).strip(), fold(x["last"]).strip())
                 person = found.setdefault(key, {**split_name(x), "role": role, "projects": []})
@@ -117,8 +111,8 @@ class People:
                     person["projects"].append(p["id"])
 
             own_names = {f for _, x in mentions for word in f"{x['first']} {x['last']}".split() for f in forms(word)}
-            texts = [p["title"], p.get("gloss") or "", *(x for e in p["expo"] for x in (e["title"], e["abstract"]))]
-            if card := p["card"]:
+            texts = [p["title"], *(c["gloss"] or "" for c in p["cards"]), *(x for e in p["entries"] for x in (e["title"], e["abstract"]))]
+            for card in (c["card"] for c in p["cards"]):
                 texts += [card.get("gloss", ""), *card["fields"], *card["concepts"], *card["queries"]]
                 texts += [f"{k} {v}" for k, v in card["acronyms"].items()]
             for text in texts:
@@ -164,7 +158,7 @@ class People:
             for w in self.typos(full):
                 add(w, TYPO)
         if len(q) >= MIN_PREFIX:
-            # pipeline.link_expo.first_match on words already folded and split
+            # pipeline.records.first_match on words already folded and split
             for w in self.words:
                 if w != q and len(w) >= MIN_PREFIX and (w.startswith(q) or q.startswith(w)):
                     add(w, NICKNAME)

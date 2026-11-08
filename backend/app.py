@@ -77,12 +77,14 @@ def project(number: int) -> dict:
 def description(r: dict) -> str:
     """A link preview's description: the start of the first abstract, or who
     won a title-only grant."""
-    if r["expo"]:
-        text = " ".join(r["expo"][0]["abstract"].split())
+    listings = sorted((e for x in r["records"] for e in x.get("listings", [])), key=lambda e: e["id"])
+    if listings:
+        text = " ".join(listings[0]["abstract"].split())
         return text if len(text) <= DESCRIPTION_CHARS else text[:DESCRIPTION_CHARS].rsplit(" ", 1)[0] + "…"
-    awardees = r["grant"]["awardees"]
+    grant = next(x for x in r["records"] if x["kind"] == "grant")
+    awardees = grant["students"]
     names = " and ".join(awardees) if len(awardees) <= 2 else f"{', '.join(awardees[:-1])}, and {awardees[-1]}"
-    return f"SURG {r['grant']['year']} grant awarded to {names}."
+    return f"SURG {grant['year']} grant awarded to {names}."
 
 
 @app.get("/api/health")

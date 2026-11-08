@@ -1,19 +1,33 @@
 import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
-type Grant = { year: number; awardees: string[]; url: string }
-type ExpoEntry = {
+// A poster's listing: a poster presented by several students may be listed
+// once per presenter.
+type Listing = {
   id: string
-  year: number
   title: string
   presenters: string[]
-  advisor: string | null
+  advisors: string[]
   abstract: string
   url: string // the program PDF, opening at the abstract's page
   // Where the abstract is from when the program printed none (Expo 2020's
   // one project never posted online has the student's abstract from elsewhere).
   abstract_source: { name: string; url: string } | null
 }
-type Project = { id: string; share: number; title: string; grant: Grant | null; expo: ExpoEntry[] }
+// One source's account of the project: a SURG grant (with its students and
+// advisors) or an Expo poster (with its listings).
+type ProjectRecord = {
+  id: string
+  source: string
+  kind: 'grant' | 'presentation' | 'thesis' | 'paper'
+  year: number
+  title: string | null
+  url: string
+  students?: string[]
+  advisors?: string[]
+  listings?: Listing[]
+}
+type Project = { id: string; share: number; title: string; records: ProjectRecord[] }
+type ExpoEntry = Listing & { year: number }
 type Source = '' | 'surg' | 'expo'
 
 const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
@@ -545,13 +559,18 @@ function Pager({
 }
 
 function Result({ project, open = false }: { project: Project; open?: boolean }) {
-  const { grant, expo } = project
+  const grants = project.records.filter((r) => r.kind === 'grant')
+  const expo: ExpoEntry[] = project.records
+    .flatMap((r) => (r.listings ?? []).map((e) => ({ ...e, year: r.year })))
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
   const parts = sections(expo)
 
   // The byline under the title: the awardees, or for an Expo-only project
   // everyone who presented it, with each person's advisors when every
   // listing they presented names the same ones.
-  const names = grant ? grant.awardees : [...new Set(parts.flatMap((s) => s.students.map((x) => x.name)))]
+  const names = grants.length
+    ? [...new Set(grants.flatMap((g) => g.students ?? []))]
+    : [...new Set(parts.flatMap((s) => s.students.map((x) => x.name)))]
   const lifted = new Map<string, string[] | null>() // null: advisors vary across their listings
   for (const name of names) {
     const lists = parts.flatMap((s) => s.students.filter((x) => x.name === name).map((x) => x.advisors))
@@ -565,7 +584,11 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
     <article className="result">
       <ShareButton project={project} />
       <div className="tags">
-        {grant && <span className="tag surg">SURG {grant.year}</span>}
+        {grants.map((g) => (
+          <span key={g.id} className="tag surg">
+            SURG {g.year}
+          </span>
+        ))}
         {[...years].map((year) => (
           <span key={year} className="tag expo">
             Expo {year}
@@ -594,11 +617,11 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
         return <Abstract key={s.key} section={s} heading={heading} people={people} open={open} />
       })}
       <div className="links">
-        {grant && (
-          <a href={grant.url} target="_blank" rel="noreferrer">
-            SURG {grant.year} winners list <ExternalIcon />
+        {grants.map((g) => (
+          <a key={g.id} href={g.url} target="_blank" rel="noreferrer">
+            SURG {g.year} winners list <ExternalIcon />
           </a>
-        )}
+        ))}
         {parts.map((s) => (
           <a key={s.key} href={s.url} target="_blank" rel="noreferrer">
             Expo {s.year} listing (PDF) <ExternalIcon />
@@ -632,17 +655,6 @@ function sameSet(a: string[], b: string[]) {
   return a.length === b.length && a.every((x) => b.includes(x))
 }
 
-// Split an advisor list on commas, semicolons and "and", but not inside
-// parentheses, which hold an advisor's affiliation.
-function advisorNames(advisor: string): string[] {
-  const groups: string[] = []
-  const masked = advisor.replace(/\([^()]*\)/g, (m) => `\u0000${groups.push(m) - 1}\u0000`)
-  return masked
-    .split(/\s*[,;]\s*(?:and\s+)?|\s+and\s+/)
-    .filter(Boolean)
-    .map((name) => name.replace(/\u0000(\d+)\u0000/g, (_, i) => groups[Number(i)]))
-}
-
 // A poster presented by several students is listed once per presenter, usually
 // with the same abstract; show each abstract once, with everyone who presented
 // it. Advisors stay with the students whose listing names them.
@@ -654,7 +666,7 @@ function sections(expo: ExpoEntry[]): Section[] {
       s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, url: e.url, abstractSource: e.abstract_source }
       byAbstract.set(e.abstract, s)
     }
-    const advisors = e.advisor ? advisorNames(e.advisor) : []
+    const advisors = e.advisors
     for (const name of e.presenters) {
       const student = s.students.find((x) => x.name === name)
       if (student) student.advisors = [...new Set([...student.advisors, ...advisors])]

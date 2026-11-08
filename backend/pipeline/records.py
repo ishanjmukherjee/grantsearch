@@ -46,7 +46,7 @@ import re
 import unicodedata
 
 from pipeline.parse_expo import INSTITUTION
-from pipeline.scrape_surg import DATA_DIR, SUFFIXES, fold, split_name
+from pipeline.scrape_surg import DATA_DIR, PARTICLES, SUFFIXES, fold, split_name
 
 RECORDS_DIR = DATA_DIR / "records"
 SOURCES = ("surg", "expo", "symposium", "theses", "nurj")
@@ -64,6 +64,34 @@ DEGREE = re.compile(r"^(?:ph\.?\s?d|m\.?d|j\.?d|m\.?s|m\.?a|m\.?b\.?a)\.?$", re.
 # A doctorate written into a name, before or after it.
 DEGREES = re.compile(r"(?:,\s*)?\b(?:Ph\.?\s?D|M\.D)\b\.?", re.I)
 ADVISOR_SEPARATOR = re.compile(r"\s*(?:,\s*and\s+|,|;|\n|&|\band\b)\s*")
+
+
+MIN_PREFIX = 3  # "Al" should not match every Alexander and Alice
+
+
+def tokens(name: str) -> list[str]:
+    name = unicodedata.normalize("NFKD", fold(name)).encode("ascii", "ignore").decode()
+    return re.findall(r"[a-z]+", name.casefold())
+
+
+def surname_parts(last: str) -> set[str]:
+    return {t for t in tokens(last) if t not in PARTICLES and t not in SUFFIXES and len(t) > 1}
+
+
+def first_match(a: str, b: str) -> bool:
+    """Whether two first names may be one person's: the same, or one a prefix
+    of the other of at least MIN_PREFIX letters (Alex / Alexander)."""
+    ta, tb = tokens(a), tokens(b)
+    if not ta or not tb:
+        return False
+    x, y = sorted((ta[0], tb[0]), key=len)
+    return x == y or (len(x) >= MIN_PREFIX and y.startswith(x))
+
+
+def same_person(a: dict, b: dict) -> bool:
+    """Whether two {first, last} likely name one person: a shared surname part
+    and first names one of which is a prefix of the other (Josh / Joshua)."""
+    return bool(surname_parts(a["last"]) & surname_parts(b["last"])) and first_match(a["first"], b["first"])
 
 
 def words(s: str) -> list[str]:

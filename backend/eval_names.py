@@ -11,10 +11,10 @@ queries, each in the forms people type:
 - typo: "first last" with one seeded edit to a surname of 5+ letters
 - surname: "last" alone
 
-A query's relevant projects are those naming someone who is likely the same
-person (as in search.same_person: a shared surname part and first names one of
-which is a prefix of the other), or, for a surname query, anyone with that
-surname. A surname that is only particles ("Le", "Du") counts whole.
+A query's relevant records are those naming someone who is likely the same
+person (as in pipeline.records.same_person: a shared surname part and first
+names one of which is a prefix of the other), or, for a surname query, anyone
+with that surname; a result is relevant when it holds one. A surname that is only particles ("Le", "Du") counts whole.
 Students and advisors are matched among students and among advisors
 respectively.
 
@@ -36,12 +36,11 @@ Usage: uv run python -m eval_names build | run [--by surname|abstract] [--no-pin
 import argparse
 import json
 import random
-import re
 import unicodedata
 from collections import defaultdict
 
-from pipeline.link_expo import first_match, surname_parts, tokens
 from pipeline.projects import load_projects
+from pipeline.records import first_match, surname_parts, tokens
 from pipeline.scrape_surg import DATA_DIR
 from pipeline.scrape_surg import fold as fold_text
 
@@ -54,9 +53,6 @@ N_ADVISORS = 100
 DEPTH = 50  # results fetched per query; a relevant project below this counts as missed
 TOPIC_SHARE = 0.2
 
-ADVISOR_SPLIT = re.compile(r"\s*[,;&]\s*(?:and\s+)?|\s+and\s+")
-HONORIFICS = {"professor", "prof", "dr"}
-AFFILIATION = re.compile(r"\b(?:university|college|laboratory|hospital|institute|school|office|center|lab)\b", re.I)
 NICKNAMES = {
     "abigail": "abby", "alexander": "alex", "alexandra": "alex", "alexandria": "alex", "andrew": "andy",
     "anthony": "tony", "benjamin": "ben", "catherine": "cathy", "christina": "chris", "christine": "chris",
@@ -77,26 +73,17 @@ def fold(s: str) -> str:
     return unicodedata.normalize("NFKD", fold_text(s)).encode("ascii", "ignore").decode().casefold().strip()
 
 
-def advisors(advisor: str | None) -> list[dict]:
-    """An Expo advisor string as first/last names, skipping affiliations and
-    single-word names."""
-    out = []
-    for name in ADVISOR_SPLIT.split(re.sub(r"[\[(][^\])]*[\])]", "", advisor or "")):
-        t = [w for w in name.split() if w.rstrip(".").casefold() not in HONORIFICS]
-        if len(t) >= 2 and not AFFILIATION.search(name):
-            out.append({"first": t[0], "last": " ".join(t[1:])})
-    return out
-
-
 def people() -> dict[str, list[tuple[dict, str]]]:
     """Each kind ("student", "advisor") -> (name record, project id) per mention."""
     found = defaultdict(list)
     for p in load_projects():
-        for x in p["grant"]["awardees"] if p["grant"] else []:
-            found["student"].append((x, p["id"]))
-        for e in p["expo"]:
+        for r in p["records"]:
+            if r["kind"] == "grant":
+                found["student"] += [(x, p["id"]) for x in r["people"] if x["role"] == "student"]
+        for e in p["entries"]:
             found["student"] += [(x, p["id"]) for x in e["presenters"]]
-            found["advisor"] += [(x, p["id"]) for x in advisors(e["advisor"])]
+            # Advisors named in full; one named by surname alone is no query.
+            found["advisor"] += [(x, p["id"]) for x in e["advisors"] if x["first"]]
     return found
 
 
@@ -106,7 +93,7 @@ def surname(last: str) -> set[str]:
 
 
 def likely_same(a: dict, b: dict) -> bool:
-    """search.same_person, without importing search and its model, and with surname()."""
+    """pipeline.records.same_person, with surname()."""
     return bool(surname(a["last"]) & surname(b["last"])) and first_match(a["first"], b["first"])
 
 
@@ -122,7 +109,7 @@ def typo(word: str, rng: random.Random) -> str:
 
 def build() -> None:
     found = people()
-    has_abstract = {p["id"] for p in load_projects() if p["expo"]}
+    has_abstract = {p["id"] for p in load_projects() if p["entries"]}
     surname_people = defaultdict(set)  # surname part -> distinct full names, students and advisors alike
     for mentions in found.values():
         for x, _ in mentions:
@@ -179,10 +166,12 @@ def run(by: str | None, pins: bool) -> None:
     if not pins:
         index.people.pins = lambda query: ({}, False)
     rows = [json.loads(line) for line in OUT.open()]
+    # Relevant ids are records'; a result is relevant when it holds one.
+    project_of = {x["id"]: p["id"] for p in index.projects for x in p["records"]}
     scores = defaultdict(list)
     for r in rows:
         ranked = [p["id"] for p in index.search(r["query"], n=DEPTH)[0]]
-        rel = set(r["relevant"])
+        rel = {project_of.get(x, x) for x in r["relevant"]}
         first = next((i for i, pid in enumerate(ranked, 1) if pid in rel), None)
         k = len(rel)
         group = (r["kind"], r["form"])
@@ -207,7 +196,7 @@ def topics() -> None:
 
     projects = load_projects()
     people = People(projects)
-    queries = sorted({q for p in projects if p["card"] for q in p["card"]["queries"]})
+    queries = sorted({q for p in projects for c in p["cards"] for q in c["card"]["queries"]})
     sample = random.Random(SEED + 2).sample(queries, round(TOPIC_SHARE * len(queries)))
     fired = []
     for q in sample:

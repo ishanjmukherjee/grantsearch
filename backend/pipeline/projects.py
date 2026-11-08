@@ -1,28 +1,54 @@
-"""The searchable projects, assembled from grants, Expo abstracts and cards.
+"""Projects: the records that links judge one piece of work, with their cards.
 
-Projects come in three disjoint sets: SURG grants with only a title, SURG
-grants linked to Expo abstracts judged the same project with high confidence,
-and Expo posters not linked to a grant. A poster may have several listings,
-one per presenter (see pipeline.link_expo.expo_groups). Each project is a dict:
+A project is a connected group of records (see pipeline.records) under the
+links in data/links.jsonl whose relation is "same" with high confidence; a
+record no such link touches is a project alone. Projects are computed on
+loading and never stored. Only projects with at least one generated card
+(a title card's refusal counts) are loaded: the rest have not been carded
+yet and are not searchable.
 
-- id, title: the grant's, or the poster's first listing's when there is no grant
-- grant: the grants.json record, or None
-- expo: the linked or own expo_abstracts.json records (may be empty), with
-  formatting-only variants of an abstract folded into one (see fold)
-- card: the search card for the project, or None when the title-only card is a
-  refusal
-- body: the text the document vector is built from besides the card: the
-  gloss for title-only grants, the distinct abstracts (joined) otherwise;
-  None with no card
-- gloss: for projects with abstracts, a short topic-level description generated
-  from them (data/glosses.jsonl); None otherwise. Title-only grants already
-  have one as their body.
+Generated files keep their cards by the id of the record each was written
+for, with data/overrides.jsonl applied on loading (see load_jsonl):
+
+- generated/title_cards.jsonl: a card, or a refusal, from a SURG grant's
+  title alone (prompts/concept_card.md); a card's gloss stands in for the
+  abstract the grant does not have.
+- generated/abstract_cards.jsonl: a grant's card written from its title and
+  the abstracts of the posters linked to it (prompts/abstract_card.md).
+- generated/expo_cards.jsonl: a poster's card from its own listings
+  (prompts/expo_card.md).
+- generated/glosses.jsonl: a short topic-level gloss for an abstract or
+  Expo card's owner, from the same abstracts (prompts/abstract_gloss.md).
+
+Each project is a dict:
+
+- id, title: its head record's. The head is its first SURG grant by id or,
+  without one, its first record by id.
+- records: its records, SURG grants first, each source's by id
+- entries: its posters' listings, by id (see entries), their abstracts
+  folded (see fold)
+- cards: the cards that stand for it in the index, each {owner, card, body,
+  gloss}. These are its abstract and Expo cards, or without any, its grants'
+  title cards that are not refusals. body is the text the card's document
+  vector is built from besides the card: the distinct abstracts its owner's
+  card was written from (an abstract card's linked posters', an Expo card's
+  poster's), or a title card's gloss. gloss is the owner's gloss, for the
+  summary vector, or None.
+
+Index rows are keyed by the card's owner (see rows).
 """
 
 import json
 
-from pipeline.link_expo import linked_abstracts, unlinked_groups, words
-from pipeline.scrape_surg import DATA_DIR
+from pipeline.records import (
+    DATA_DIR,
+    SOURCES,
+    advisors,
+    fold_abstracts,
+    load,
+    merge_patch,
+    words,
+)
 
 INDEX_DIR = DATA_DIR / "index"
 # The index is embedded with INDEX_MODEL; user queries with QUERY_MODEL, which
@@ -31,88 +57,115 @@ INDEX_MODEL = "voyage-4-large"
 QUERY_MODEL = "voyageai/voyage-4-nano"
 QUERY_MODEL_REVISION = "433ece5e27a1611e9360dd7134ecaaf79fb3681d"  # pinned: the model ships its own code
 DIM = 2048
-# Hand edits to generated files (cards, glosses, theses), kept apart from
-# them so regenerating those (make_cards --fresh, scrape_theses) cannot erase
-# them. Each line is {file, id, patch, reason}: the file it patches, the
-# record's id, an RFC 7396 JSON merge patch and why. load_jsonl applies the
-# card and gloss edits on load; scrape_theses applies the thesis edits before
-# writing.
-OVERRIDES = "overrides.jsonl"
-
-
-def merge_patch(target, patch):
-    """RFC 7396: patch's keys replace target's, recursively; null deletes a key."""
-    if not isinstance(patch, dict):
-        return patch
-    merged = dict(target) if isinstance(target, dict) else {}
-    for k, v in patch.items():
-        if v is None:
-            merged.pop(k, None)
-        else:
-            merged[k] = merge_patch(merged.get(k), v)
-    return merged
+GENERATED = "generated"
+LINKS = DATA_DIR / "links.jsonl"
+# Hand edits to generated files, kept apart from them so regenerating those
+# cannot erase them. Each line is {file, id, patch, reason}: the file it
+# patches (relative to data/), the record's id, an RFC 7396 JSON merge patch
+# and why. load_jsonl applies the edits to generated files; pipeline.records
+# applies those to records.
+OVERRIDES = DATA_DIR / "overrides.jsonl"
 
 
 def load_jsonl(name: str) -> dict[str, dict]:
     """A generated file's records by id, with their overrides applied."""
     records = {c["id"]: c for c in map(json.loads, (DATA_DIR / name).open())}
-    for o in map(json.loads, (DATA_DIR / OVERRIDES).open()):
+    for o in map(json.loads, OVERRIDES.open()):
         if o["file"] == name:
             records[o["id"]] = merge_patch(records[o["id"]], o["patch"])
     return records
 
 
-def fold(entries: list[dict]) -> list[dict]:
-    """The entries, with abstracts differing from an earlier one's only in
-    formatting (spacing, punctuation, word order) replaced by that one's text.
-    A poster's listings often carry one abstract extracted slightly differently."""
+def same_links() -> list[tuple[str, str]]:
+    return [(link["a"], link["b"]) for link in map(json.loads, LINKS.open()) if link["relation"] == "same" and link["confidence"] == "high"]
+
+
+def components(ids: list[str], links: list[tuple[str, str]]) -> list[list[str]]:
+    """The ids in connected groups under the links, each group in id order."""
+    parent = {i: i for i in ids}
+
+    def find(x: str) -> str:
+        while parent[x] != x:
+            x = parent[x] = parent[parent[x]]
+        return x
+
+    for a, b in links:
+        parent[find(a)] = find(b)
+    groups: dict[str, list[str]] = {}
+    for i in sorted(ids):
+        groups.setdefault(find(i), []).append(i)
+    return list(groups.values())
+
+
+def unrole(person: dict) -> dict:
+    return {k: v for k, v in person.items() if k != "role"}
+
+
+def entries(records: list[dict]) -> list[dict]:
+    """The listings of the posters among records, by id: a poster listed once
+    per presenter has several. Each is {id, record, source, year, title,
+    presenters, advisors, abstract, url, page, abstract_source}, presenters
+    and advisors as {first, last, ...}."""
+    out = []
+    for r in records:
+        if r["kind"] != "presentation":
+            continue
+        common = {"record": r["id"], "source": r["source"], "year": r["year"], "url": r["url"]}
+        if "listings" in r:
+            for e in r["listings"]:
+                out.append({"id": e["id"], **common, "title": e["title"], "presenters": e["presenters"], "advisors": [unrole(a) for a in advisors(e["advisor"])], "abstract": e["abstract"], "page": e["page"], "abstract_source": e.get("abstract_source")})
+        else:
+            students = [unrole(p) for p in r["people"] if p["role"] == "student"]
+            advisor_people = [unrole(p) for p in r["people"] if p["role"] == "advisor"]
+            out.append({"id": r["id"], **common, "title": r["title"], "presenters": students, "advisors": advisor_people, "abstract": r["abstract"], "page": r["page"], "abstract_source": r.get("extra", {}).get("abstract_source")})
+    return sorted(out, key=lambda e: e["id"])
+
+
+def fold(listings: list[dict]) -> list[dict]:
+    """The listings, with an abstract that differs from an earlier one's only in
+    formatting (spacing, punctuation, word order) replaced by that one's text,
+    so that it reads, and is shown, as the same abstract."""
     first: dict[tuple[str, ...], str] = {}
-    return [{**e, "abstract": first.setdefault(tuple(sorted(words(e["abstract"]))), e["abstract"])} for e in entries]
-
-
-def abstracts(entries: list[dict]) -> str:
-    """The entries' distinct abstracts, joined; a poster's listings often repeat one."""
-    return "\n\n".join(dict.fromkeys(e["abstract"] for e in entries))
+    return [{**e, "abstract": first.setdefault(tuple(sorted(words(e["abstract"]))), e["abstract"])} for e in listings]
 
 
 def load_projects() -> list[dict]:
-    grants = json.loads((DATA_DIR / "grants.json").read_text())
-    cards, abstract_cards, expo_cards, glosses = map(load_jsonl, ("cards.jsonl", "cards_abstract.jsonl", "cards_expo.jsonl", "glosses.jsonl"))
-    linked = linked_abstracts()
+    """Every carded project, those headed by a grant first, each in head id order."""
+    records = {r["id"]: r for r in load()}
+    title_cards, abstract_cards, expo_cards, glosses = (load_jsonl(f"{GENERATED}/{name}.jsonl") for name in ("title_cards", "abstract_cards", "expo_cards", "glosses"))
+    links = same_links()
+    # A grant may be linked to two listings of one poster: one link each.
+    linked: dict[str, set[str]] = {}
+    for a, b in links:
+        linked.setdefault(a, set()).add(b)
+        linked.setdefault(b, set()).add(a)
+
+    def order(r: dict) -> tuple:
+        return (SOURCES.index(r["source"]), r["id"])
 
     projects = []
-    for g in grants:
-        entries = fold(linked.get(g["id"], []))
-        if entries:
-            card, body = abstract_cards[g["id"]], abstracts(entries)
-        elif cards[g["id"]]["status"] == "card":
-            card, body = cards[g["id"]], cards[g["id"]]["gloss"]
-        else:
-            card, body = None, None
-        gloss = glosses[g["id"]]["gloss"] if entries else None
-        projects.append({"id": g["id"], "title": g["title"], "grant": g, "expo": entries, "card": card, "body": body, "gloss": gloss})
-    for group in map(fold, unlinked_groups(linked)):
-        first = group[0]
-        projects.append({"id": first["id"], "title": first["title"], "grant": None, "expo": group, "card": expo_cards[first["id"]], "body": abstracts(group), "gloss": glosses[first["id"]]["gloss"]})
-    return projects
+    for group in components(list(records), links):
+        rs = sorted((records[i] for i in group), key=order)
+        if not any(r["id"] in title_cards or r["id"] in abstract_cards or r["id"] in expo_cards for r in rs):
+            continue
+        cards = []
+        for r in rs:
+            if r["id"] in abstract_cards:
+                posters = [records[i] for i in sorted(linked[r["id"]]) if records[i]["kind"] == "presentation"]
+                body = fold_abstracts([e["abstract"] for e in entries(posters)])
+                cards.append({"owner": r["id"], "card": abstract_cards[r["id"]], "body": body, "gloss": glosses.get(r["id"], {}).get("gloss")})
+            elif r["id"] in expo_cards:
+                body = fold_abstracts([e["abstract"] for e in entries([r])])
+                cards.append({"owner": r["id"], "card": expo_cards[r["id"]], "body": body, "gloss": glosses.get(r["id"], {}).get("gloss")})
+        if not cards:
+            cards = [{"owner": r["id"], "card": c, "body": c["gloss"], "gloss": None} for r in rs if (c := title_cards.get(r["id"])) and c["status"] == "card"]
+        head = next((r for r in rs if r["kind"] == "grant"), rs[0])
+        projects.append({"id": head["id"], "title": head["title"], "records": rs, "entries": fold(entries(rs)), "cards": cards})
+    return sorted(projects, key=lambda p: order(records[p["id"]]))
 
 
-def doc_text(p: dict) -> str:
-    """The text of a project's document vector: title + body + fields + concepts + acronym expansions."""
-    return card_text(p, p["body"])
-
-
-def summary_text(p: dict) -> str | None:
-    """The text of a project's summary vector, built like a title-only grant's
-    document vector with the gloss as its body; None for projects without one.
-
-    A full abstract is mostly specifics, which pull its vector away from broad,
-    topic-level queries; the summary vector lets those queries find it."""
-    return p["gloss"] and card_text(p, p["gloss"])
-
-
-def card_text(p: dict, body: str) -> str:
-    card = p["card"]
+def card_text(card: dict, body: str) -> str:
+    """A card's title, then body, fields, concepts and acronym expansions."""
     parts = [card["title"], body]
     if card["fields"]:
         parts.append("Fields: " + "; ".join(card["fields"]))
@@ -121,3 +174,19 @@ def card_text(p: dict, body: str) -> str:
     if card["acronyms"]:
         parts.append("; ".join(f"{k}: {v}" for k, v in card["acronyms"].items()))
     return "\n".join(parts)
+
+
+def rows(p: dict) -> list[tuple[str, str, str]]:
+    """A project's index rows, (owner, kind, text) for each of its cards: a
+    document row from the card and its body, a summary row built the same way
+    with the gloss as body when there is one, and a row per generated query.
+
+    A full abstract is mostly specifics, which pull its vector away from
+    broad, topic-level queries; the summary row lets those queries find it."""
+    out = []
+    for c in p["cards"]:
+        out.append((c["owner"], "doc", card_text(c["card"], c["body"])))
+        if c["gloss"]:
+            out.append((c["owner"], "summary", card_text(c["card"], c["gloss"])))
+        out += [(c["owner"], "query", q) for q in c["card"]["queries"]]
+    return out

@@ -38,8 +38,7 @@ import sys
 from collections import Counter
 from difflib import SequenceMatcher
 
-from pipeline.link_expo import surname_parts, words
-from pipeline.records import names, record, write
+from pipeline.records import names, record, surname_parts, words, write
 from pipeline.scrape_surg import DATA_DIR
 
 # Title similarity (difflib ratio of the folded titles) at which two records

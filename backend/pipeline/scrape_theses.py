@@ -61,7 +61,7 @@ from bs4 import BeautifulSoup
 
 from pipeline import parse_cs_theses, parse_mmss_theses, records
 from pipeline.parse_expo import split_people, text
-from pipeline.scrape_surg import DATA_DIR, HEADERS, RAW_DIR
+from pipeline.scrape_surg import HEADERS, RAW_DIR
 
 SOURCES = {
     "polisci": ("Political Science", "https://polisci.northwestern.edu/undergraduate/honors/honors-theses.html"),

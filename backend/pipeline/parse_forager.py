@@ -30,8 +30,8 @@ import re
 
 import pymupdf
 
-from pipeline.link_expo import words
 from pipeline.parse_expo import PARTICLES, RAW_DIR, text
+from pipeline.records import words
 
 FORAGER_DIR = RAW_DIR / "forager"
 SUPPLEMENTS = RAW_DIR / "expo2020_supplements.json"

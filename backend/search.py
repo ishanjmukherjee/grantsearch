@@ -39,8 +39,8 @@ key is expanded only when
 An empty query browses every project matching the filters in a fixed order.
 SURG (2020-2024) and Expo (2021-2026) cover different years, so a single
 newest-first list would open on two years of Expo projects alone. Instead,
-grants (by grant year) and Expo projects without a grant (by latest Expo year)
-are each sorted newest first, shuffled within a year by a hash of the id, and
+grants (by latest grant year) and Expo projects without a grant (by latest
+Expo year) are each sorted newest first, shuffled within a year by a hash of the id, and
 merged in proportion to their sizes so both run out together. Filtered to one
 source, browsing is newest first by that source's year.
 
@@ -65,8 +65,9 @@ phrases the same way.
 A project's similar projects are those whose document or summary vectors are
 nearest any of its own; one without vectors uses a search for its title.
 
-Results carry only real data (titles, people, years, abstracts, source links);
-cards only aid ranking.
+Results carry only real data (titles, people, years, abstracts, source links),
+as the project's records (see public); cards only aid ranking. Index rows are
+keyed by the record whose card they come from (see pipeline.projects.rows).
 
 Usage: uv run python -m search QUERY [--source surg|expo] [--years FROM TO] [-n 10]
 """
@@ -84,11 +85,18 @@ import numpy as np
 import Stemmer
 from sentence_transformers import SentenceTransformer
 
-from pipeline.link_expo import first_match, surname_parts
-from pipeline.projects import DIM, INDEX_DIR, QUERY_MODEL, QUERY_MODEL_REVISION, doc_text, load_projects, summary_text
-from pipeline.scrape_surg import PAGES, fold
-from pipeline.share_ids import key, load_rows
 from people import People
+from pipeline import share_ids
+from pipeline.projects import (
+    DIM,
+    INDEX_DIR,
+    QUERY_MODEL,
+    QUERY_MODEL_REVISION,
+    load_projects,
+    rows,
+)
+from pipeline.records import same_person
+from pipeline.scrape_surg import fold
 
 W_DOC = 1.0
 W_QUERY = 0.6  # query-query cosines run well above query-doc ones
@@ -113,22 +121,40 @@ def names(people: list[dict]) -> list[str]:
     return [f"{p['first']} {p['last']}" for p in people]
 
 
+def advisor_name(a: dict) -> str:
+    """An advisor as shown: their name, then any affiliation in parentheses."""
+    name = f"{a['first']} {a['last']}".strip()
+    return f"{name} ({a['affiliation']})" if a.get("affiliation") else name
+
+
+def advisor_line(people: list[dict]) -> str:
+    return ", ".join(advisor_name(a) for a in people)
+
+
+def grants(p: dict) -> list[dict]:
+    return [r for r in p["records"] if r["kind"] == "grant"]
+
+
+def students(r: dict) -> list[dict]:
+    return [x for x in r["people"] if x["role"] == "student"]
+
+
 def bm25_text(p: dict) -> str:
     parts = [p["title"]]
-    if p["grant"]:
-        parts += names(p["grant"]["awardees"])
-    for e in p["expo"]:
+    for g in grants(p):
+        parts += names(students(g))
+    for e in p["entries"]:
         parts += names(e["presenters"])
     # A poster's listings repeat its title, advisor and abstract; count each once.
-    parts += dict.fromkeys(x for e in p["expo"] for x in (e["title"], e["advisor"] or "", e["abstract"]))
-    if card := p["card"]:
+    parts += dict.fromkeys(x for e in p["entries"] for x in (e["title"], advisor_line(e["advisors"]), e["abstract"]))
+    for card in (c["card"] for c in p["cards"]):
         parts += card["fields"] + card["concepts"] + card["queries"]
         parts += [f"{k} {v}" for k, v in card["acronyms"].items()]
     return "\n".join(parts)
 
 
 def years(p: dict) -> set[int]:
-    return ({p["grant"]["year"]} if p["grant"] else set()) | {e["year"] for e in p["expo"]}
+    return {r["year"] for r in p["records"]}
 
 
 def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
@@ -137,58 +163,59 @@ def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
         ids = [i for i, p in enumerate(projects) if keep(p)]
         return sorted(ids, key=lambda i: (-year(projects[i]), hashlib.sha1(projects[i]["id"].encode()).hexdigest()))
 
-    def expo_year(p: dict) -> int:
-        return max(e["year"] for e in p["expo"])
+    def grant_year(p: dict) -> int:
+        return max(g["year"] for g in grants(p))
 
-    grants = newest_first(lambda p: p["grant"], lambda p: p["grant"]["year"])
-    expo = newest_first(lambda p: not p["grant"], expo_year)
+    def expo_year(p: dict) -> int:
+        return max(e["year"] for e in p["entries"])
+
+    granted = newest_first(lambda p: grants(p), grant_year)
+    expo = newest_first(lambda p: not grants(p), expo_year)
     order, g, e = [], 0, 0
-    while g < len(grants) or e < len(expo):
-        if e == len(expo) or (g < len(grants) and (g + 1) / len(grants) <= (e + 1) / len(expo)):
-            order.append(grants[g])
+    while g < len(granted) or e < len(expo):
+        if e == len(expo) or (g < len(granted) and (g + 1) / len(granted) <= (e + 1) / len(expo)):
+            order.append(granted[g])
             g += 1
         else:
             order.append(expo[e])
             e += 1
-    return {None: order, "surg": grants, "expo": newest_first(lambda p: p["expo"], expo_year)}
-
-
-def same_person(a: dict, b: dict) -> bool:
-    """Whether two name records likely name one person: a shared surname part
-    and first names one of which is a prefix of the other (Josh / Joshua)."""
-    return bool(surname_parts(a["last"]) & surname_parts(b["last"])) and first_match(a["first"], b["first"])
+    return {None: order, "surg": granted, "expo": newest_first(lambda p: p["entries"], expo_year)}
 
 
 def public(p: dict) -> dict:
     """What a result shows: real data and source links, nothing from the card.
 
-    A presenter who is one of the grant's awardees is named as the grant names
-    them, so that the card shows one person once."""
-    g = p["grant"]
-    awardees = g["awardees"] if g else []
+    {id, share, title, records}: each record is {id, source, kind, year,
+    title, url} with, for a grant, its students and advisors, and for a
+    poster, its listings, each {id, title, presenters, advisors, abstract,
+    url, abstract_source}, its url at the listing's page. A presenter who is
+    one of a grant's awardees is named as the grant names them, so that the
+    card shows one person once."""
+    awardees = [a for g in grants(p) for a in students(g)]
 
     def presenter(x: dict) -> str:
         return next((f"{a['first']} {a['last']}" for a in awardees if same_person(a, x)), f"{x['first']} {x['last']}")
 
-    return {
-        "id": p["id"],
-        "share": p["share"],
-        "title": p["title"],
-        "grant": g and {"year": g["year"], "awardees": names(g["awardees"]), "url": PAGES[g["year"]]},
-        "expo": [
+    def shown(r: dict) -> dict:
+        out = {k: r[k] for k in ("id", "source", "kind", "year", "title", "url")}
+        if r["kind"] == "grant":
+            return out | {"students": names(students(r)), "advisors": [advisor_name(a) for a in r["people"] if a["role"] == "advisor"]}
+        listings = [
             {
                 "id": e["id"],
-                "year": e["year"],
                 "title": e["title"],
                 "presenters": [presenter(x) for x in e["presenters"]],
-                "advisor": e["advisor"],
+                "advisors": [advisor_name(a) for a in e["advisors"]],
                 "abstract": e["abstract"],
-                "url": f"{e['source']}#page={e['page']}",
-                "abstract_source": e.get("abstract_source"),
+                "url": f"{e['url']}#page={e['page']}" if e["page"] else e["url"],
+                "abstract_source": e["abstract_source"],
             }
-            for e in p["expo"]
-        ],
-    }
+            for e in p["entries"]
+            if e["record"] == r["id"]
+        ]
+        return out | {"listings": listings}
+
+    return {"id": p["id"], "share": p["share"], "title": p["title"], "records": [shown(r) for r in p["records"]]}
 
 
 def phrases(query: str) -> list[re.Pattern]:
@@ -205,9 +232,11 @@ def phrases(query: str) -> list[re.Pattern]:
 def shown_text(p: dict) -> list[str]:
     """The texts of a project that a result shows and quoted phrases must appear in."""
     r = public(p)
-    texts = [r["title"]] + (r["grant"]["awardees"] if r["grant"] else [])
-    for e in r["expo"]:
-        texts += [e["title"], e["abstract"], e["advisor"] or "", *e["presenters"]]
+    texts = [r["title"]]
+    for x in r["records"]:
+        texts += x.get("students", [])
+        for e in x.get("listings", []):
+            texts += [e["title"], e["abstract"], ", ".join(e["advisors"]), *e["presenters"]]
     return texts
 
 
@@ -271,14 +300,14 @@ def acronym_expansions(projects: list[dict]) -> dict[str, tuple[str, str]]:
     the acronyms the module docstring says to expand."""
     votes, spellings = defaultdict(Counter), defaultdict(Counter)
     for p in projects:
-        for key, expansion in (p["card"]["acronyms"] if p["card"] else {}).items():
+        for key, expansion in (x for c in p["cards"] for x in c["card"]["acronyms"].items()):
             if " " not in key and sum(c.isalnum() for c in key) >= 2:
                 votes[key.lower()][expansion] += 1
                 spellings[key.lower()][key] += 1
 
     lowercase, cased = Counter(), Counter()
     for p in projects:
-        for text in dict.fromkeys([p["title"], *(x for e in p["expo"] for x in (e["title"], e["abstract"]))]):
+        for text in dict.fromkeys([p["title"], *(x for e in p["entries"] for x in (e["title"], e["abstract"]))]):
             for word in fold(text).split():
                 if (form := find_acronym(word, votes)) and form == form.lower():
                     lowercase[form] += 1
@@ -305,35 +334,37 @@ def rrf(scores: np.ndarray, floor: float) -> np.ndarray:
 
 
 class Index:
-    def __init__(self) -> None:
+    def __init__(self, strict: bool = True) -> None:
+        """strict: refuse to start when the index's rows are not exactly the
+        projects' (see pipeline.projects.rows); otherwise use its rows as
+        they are, matched to projects by owner."""
         self.projects = load_projects()
-        rows = [json.loads(line) for line in (INDEX_DIR / "vectors.jsonl").open()]
-        expected = {(p["id"], "doc", doc_text(p)) for p in self.projects if p["card"]}
-        expected |= {(p["id"], "summary", t) for p in self.projects if p["card"] and (t := summary_text(p))}
-        expected |= {(p["id"], "query", q) for p in self.projects if p["card"] for q in p["card"]["queries"]}
-        if {(r["id"], r["kind"], r["text"]) for r in rows} != expected:
+        index_rows = [json.loads(line) for line in (INDEX_DIR / "vectors.jsonl").open()]
+        expected = {row for p in self.projects for row in rows(p)}
+        if strict and {(r["id"], r["kind"], r["text"]) for r in index_rows} != expected:
             raise SystemExit(f"{INDEX_DIR} does not match the cards; rerun pipeline.embed")
 
         vecs = np.load(INDEX_DIR / "vectors.npy").astype(np.float32)
         self.vecs = vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
         self.position = {p["id"]: i for i, p in enumerate(self.projects)}
-        self.row_project = np.array([self.position[r["id"]] for r in rows])
-        self.row_is_doc = np.array([r["kind"] in ("doc", "summary") for r in rows])
-        self.has_vectors = np.array([p["card"] is not None for p in self.projects])
+        owner = {c["owner"]: i for i, p in enumerate(self.projects) for c in p["cards"]}
+        self.row_project = np.array([owner[r["id"]] for r in index_rows])
+        self.row_is_doc = np.array([r["kind"] in ("doc", "summary") for r in index_rows])
+        self.has_vectors = np.array([bool(p["cards"]) for p in self.projects])
 
-        # A row is live when its id's entry still has its key; others are numbers
-        # whose entry is gone (see pipeline.share_ids).
-        entry_keys = {e["id"]: key(e) for p in self.projects for e in ([p["grant"]] if p["grant"] else []) + p["expo"]}
-        share = {r["id"]: r["number"] for r in load_rows() if entry_keys.get(r["id"]) == r["key"]}
-        if share.keys() != entry_keys.keys():
-            raise SystemExit("data/share_ids.jsonl does not cover every entry; rerun pipeline.share_ids")
+        # Every record and listing of a project leads to it by its number. A
+        # row is live when its id's entry still has its key; others are
+        # numbers whose entry is gone (see pipeline.share_ids).
+        current = sorted(share_ids.entries(), key=lambda e: e["id"])
+        keys = dict(zip((e["id"] for e in current), share_ids.keys(current)))
+        share = {r["id"]: r["number"] for r in share_ids.load_rows() if keys.get(r["id"]) == r["key"]}
         self.by_number = {}
         for i, p in enumerate(self.projects):
+            for id in dict.fromkeys([r["id"] for r in p["records"]] + [e["id"] for e in p["entries"]]):
+                if id not in share:
+                    raise SystemExit("data/share_ids.jsonl does not cover every record; rerun pipeline.share_ids")
+                self.by_number[share[id]] = i
             p["share"] = share[p["id"]]
-            for e in p["expo"]:
-                self.by_number.setdefault(share[e["id"]], i)
-        # A project's own number wins over a listing it shares with another grant.
-        self.by_number |= {p["share"]: i for i, p in enumerate(self.projects)}
 
         self.bm25 = bm25s.BM25(k1=BM25_K1)
         self.bm25.index(bm25s.tokenize([fold(bm25_text(p)) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
@@ -384,7 +415,7 @@ class Index:
         for the query, or in browse order when it is empty, and how many match
         in all."""
         keep = np.array([
-            (source is None or (source == "surg" and p["grant"] is not None) or (source == "expo" and bool(p["expo"])))
+            (source is None or any(r["source"] == source for r in p["records"]))
             and (year_range is None or any(year_range[0] <= y <= year_range[1] for y in years(p)))
             for p in self.projects
         ])
@@ -429,9 +460,8 @@ def main() -> None:
 
     results, _ = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n)
     for rank, p in enumerate(results, 1):
-        r = public(p)
-        tags = ([f"SURG {r['grant']['year']}"] if r["grant"] else []) + [f"Expo {e['year']}" for e in r["expo"]]
-        print(f"{rank:2}. {r['title']}  [{', '.join(tags)}]")
+        tags = [f"{'SURG' if r['source'] == 'surg' else 'Expo'} {r['year']}" for r in p["records"]]
+        print(f"{rank:2}. {p['title']}  [{', '.join(tags)}]")
 
 
 if __name__ == "__main__":

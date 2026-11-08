@@ -176,7 +176,7 @@ Material that is not public stays out of this repository, in private repositorie
   - Web engines apply freshness per query ("query deserves freshness"): strongly for news-like queries, barely for evergreen ones. Google Scholar keeps relevance as the default and offers a separate recent-first mode that it says ranks recent papers "the way researchers do" rather than sorting by date alone. The year filter already covers explicit intent, so a mild default bias may be enough.
 - [ ] Study a relatively open search engine like DuckDuckGo and how it handles the gamut of search issues (recency among them), and borrow what fits.
 - [ ] Spot check the LLM-judged SURG <-> Expo links.
-  - `data/expo_judgments.jsonl` has one verdict per name-matched candidate pair; only same/high pairs are linked (181 when last counted, one of them, `surg-2024-230|expo-2025-213`, promoted by hand from same/low).
+  - `data/links.jsonl` has one verdict per name-matched candidate pair, between a grant and a poster's record; only same/high pairs are linked (181 when last counted, one of them, `surg-2024-230` and `expo-2025-213`, promoted by hand from same/low).
   - Check linked pairs for false merges, and same/low (27) and related (112) pairs for missed links like that one, which was missed because the grant title was vague.
 - [ ] Lead linked results with the most complete version of the project.
   - Today a card linking a SURG grant to Expo presentations is headed by the SURG title, with the Expo entries nested under it. That is backwards: the grant title is a proposal written before the work, while the Expo title and abstract describe what was actually done.

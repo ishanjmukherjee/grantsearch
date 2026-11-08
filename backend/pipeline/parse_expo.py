@@ -39,7 +39,7 @@ from pathlib import Path
 import httpx
 import pymupdf
 
-from pipeline.scrape_surg import DATA_DIR, HEADERS, PARTICLES, RAW_DIR, split_name, tidy
+from pipeline.scrape_surg import HEADERS, PARTICLES, RAW_DIR, split_name, tidy  # noqa: F401 (PARTICLES is imported from here)
 
 BASE = "https://undergradresearch.northwestern.edu/files"
 SOURCES = {
