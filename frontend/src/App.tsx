@@ -58,7 +58,7 @@ const REST_MS = 12000 // matches the .prompt.rest animation
 const DEBOUNCE_MS = 200
 const MAX_QUERY = 2000 // the longest q the backend accepts; a longer query is cut to it
 const PAGE = 30
-const PAGER_SPAN = 9 // page numbers the pager shows at once; odd, to center the current one
+const PAGER_SPAN = 9 // the most page numbers the pager shows at once, where they fit
 const SITE = 'Prowl'
 const CLAMP_LINES = 5 // matches the line-clamp of .abstract .text.clamped
 // A share status holds, then fades out with the icon (see .share.fading).
@@ -512,11 +512,12 @@ function Search() {
 // The page numbers the pager shows: the current page, the pages after it in
 // order, and before it page 1 and pages evenly spaced from there to the
 // current one, so that any earlier page is a click or two away. Half the
-// numbers go to each side, or more to one where the other runs out of pages.
-function pageNumbers(page: number, pages: number) {
-  const half = (PAGER_SPAN - 1) / 2
-  const after = Math.min(pages - page, PAGER_SPAN - 1 - Math.min(page - 1, half))
-  const before = Math.min(page - 1, PAGER_SPAN - 1 - after)
+// span goes to each side (the odd one after), or more to one side where the
+// other runs out of pages.
+function pageNumbers(page: number, pages: number, span: number) {
+  const half = Math.floor((span - 1) / 2)
+  const after = Math.min(pages - page, span - 1 - Math.min(page - 1, half))
+  const before = Math.min(page - 1, span - 1 - after)
   const step = (page - 1) / before
   return [
     ...Array.from({ length: before }, (_, i) => Math.round(1 + i * step)),
@@ -525,7 +526,7 @@ function pageNumbers(page: number, pages: number) {
   ]
 }
 
-// Previous and Next around the page numbers.
+// Prev and Next around as many page numbers as fit in one row.
 function Pager({
   page,
   pages,
@@ -537,7 +538,27 @@ function Pager({
   href: (n: number) => string
   onGo: (n: number) => void
 }) {
-  const numbers = pageNumbers(page, pages)
+  const [span, setSpan] = useState(PAGER_SPAN)
+  const nav = useRef<HTMLElement>(null)
+  // Every number is as wide as the widest page's, so how many fit does not
+  // depend on which are shown. Counts again when the row's width changes.
+  useLayoutEffect(() => {
+    const row = nav.current!
+    const fit = () => {
+      const [prev, numbers, next] = [...row.children] as HTMLElement[]
+      const slot = numbers.firstElementChild as HTMLElement
+      const gap = parseFloat(getComputedStyle(row).columnGap)
+      const numberGap = parseFloat(getComputedStyle(numbers).columnGap)
+      const room = row.clientWidth - prev.offsetWidth - next.offsetWidth - 2 * gap
+      const fits = Math.floor((room + numberGap) / (slot.offsetWidth + numberGap))
+      setSpan(Math.max(1, Math.min(PAGER_SPAN, fits)))
+    }
+    fit()
+    const observer = new ResizeObserver(fit)
+    observer.observe(row)
+    return () => observer.disconnect()
+  }, [pages])
+  const numbers = pageNumbers(page, pages, span)
   // Plain links, so that a page can open in a new tab; a click stays in place.
   const link = (n: number, label: React.ReactNode, props: React.AnchorHTMLAttributes<HTMLAnchorElement> = {}) => (
     <a
@@ -560,9 +581,11 @@ function Pager({
     </span>
   )
   return (
-    <nav className="pager" aria-label="Pages">
-      {page > 1 ? link(page - 1, 'Previous', { className: 'step', rel: 'prev' }) : disabled('Previous')}
-      <div className="numbers">
+    <nav ref={nav} className="pager" aria-label="Pages">
+      {page > 1
+        ? link(page - 1, 'Prev', { className: 'step', rel: 'prev', 'aria-label': 'Previous page' })
+        : disabled('Prev')}
+      <div className="numbers" style={{ '--digits': String(pages).length } as React.CSSProperties}>
         {numbers.map((n) =>
           n === page ? (
             <span key={n} className="current" aria-current="page">

@@ -659,9 +659,15 @@ h2.section {
 
 .pager .numbers {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 4px;
+}
+
+/* All as wide as the widest page number (--digits long), which the pager
+   needs to count how many fit. */
+.pager .numbers > * {
+  min-width: max(36px, calc(var(--digits) * 1ch + 16px));
+  font-variant-numeric: tabular-nums;
 }
 
 .pager a,
@@ -687,7 +693,7 @@ h2.section {
 /* Equal widths keep the numbers centered; each label sits at its outer
    edge, the same distance in from the cards. */
 .pager .step {
-  min-width: 80px;
+  min-width: 56px;
 }
 
 .pager .step:first-child {
