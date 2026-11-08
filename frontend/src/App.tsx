@@ -9,6 +9,7 @@ type Listing = {
   advisors: string[]
   abstract: string
   url: string // the program PDF, opening at the abstract's page
+  page: number | null
   // Where the abstract is from when the program printed none (Expo 2020's
   // one project never posted online has the student's abstract from elsewhere).
   abstract_source: { name: string; url: string } | null
@@ -640,6 +641,10 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
   const top = names.map((name) => ({ name, advisors: lifted.get(name) ?? [] }))
   const topShared = top.every((x) => sameSet(x.advisors, top[0].advisors)) ? top[0].advisors : null
   const years = new Set(parts.map((s) => s.year))
+  // Every listing gets its own link, also where its abstract is shown merged
+  // with another's; a year's listings are told apart by their pages.
+  const listed = new Map<number, number>()
+  for (const e of expo) listed.set(e.year, (listed.get(e.year) ?? 0) + 1)
 
   return (
     <article className="result">
@@ -684,9 +689,9 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
             SURG {g.year} winners <ExternalIcon />
           </a>
         ))}
-        {parts.map((s) => (
-          <a key={s.key} href={s.url} target="_blank" rel="noreferrer">
-            Expo {s.year} listing <PdfIcon /> <ExternalIcon />
+        {expo.map((e) => (
+          <a key={e.id} href={e.url} target="_blank" rel="noreferrer">
+            Expo {e.year} listing{listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''} <PdfIcon /> <ExternalIcon />
           </a>
         ))}
         {parts
@@ -702,14 +707,12 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
 }
 
 type Student = { name: string; advisors: string[] }
-// url is the first listing's.
 type Section = {
   key: string
   year: number
   title: string | null
   students: Student[]
   abstract: string
-  url: string
   abstractSource: ExpoEntry['abstract_source']
 }
 
@@ -727,7 +730,7 @@ function sections(expo: ExpoEntry[]): Section[] {
   for (const e of expo) {
     let s = byAbstract.get(e.abstract)
     if (!s) {
-      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, url: e.url, abstractSource: e.abstract_source }
+      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, abstractSource: e.abstract_source }
       byAbstract.set(e.abstract, s)
     }
     const advisors = e.advisors

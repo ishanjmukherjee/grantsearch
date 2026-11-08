@@ -189,7 +189,7 @@ def public(p: dict) -> dict:
     {id, share, title, records}: each record is {id, source, kind, year,
     title, url} with, for a grant, its students and advisors, and for a
     poster, its listings, each {id, title, presenters, advisors, abstract,
-    url, abstract_source}, its url at the listing's page. A presenter who is
+    url, page, abstract_source}, its url at the listing's page. A presenter who is
     one of a grant's awardees is named as the grant names them, so that the
     card shows one person once."""
     awardees = [a for g in grants(p) for a in students(g)]
@@ -209,6 +209,7 @@ def public(p: dict) -> dict:
                 "advisors": [advisor_name(a) for a in e["advisors"]],
                 "abstract": e["abstract"],
                 "url": f"{e['url']}#page={e['page']}" if e["page"] else e["url"],
+                "page": e["page"],
                 "abstract_source": e["abstract_source"],
             }
             for e in p["entries"]
