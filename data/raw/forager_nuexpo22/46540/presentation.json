@@ -1,0 +1,101 @@
+{
+  "presentationId": 46540,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>The Effect of Building Materials on Spatial Conversations During A Playful Construction Activity</p>",
+  "abstract": "<p><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">The effect of building materials on families’ spatial conversations during a playful construction activity</strong></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Authors: Evan Vlahandreas, Claire Mason, Naomi Polinsky, Catherine A. Haden, &amp; David H. Uttal</span></p><p><br></p><p><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">A. Problem</strong></p><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Children’s and parents’ spatial language use — talk about shapes, sizes and locations — supports children’s spatial skills and future STEM success. Families use considerable spatial language during construction activities. However, spatial language use varies with the activity’s design characteristics; for example, families use more spatial language when activities have specified goals. Here, we examine another design characteristic of construction activities: building&nbsp; materials. We ask whether variations in the materials families used during a play-at-home construction activity are associated with spatial language use.</span></p><p><br></p><p><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">B. Procedure&nbsp;</strong></p><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">22&nbsp; 4- to 10-year-old children (</span><em style=\"background-color: transparent; color: rgb(0, 0, 0);\">M</em><span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> = 8 years, </span><em style=\"background-color: transparent; color: rgb(0, 0, 0);\">SD</em><span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> = 1.8) and their parents were recorded over Zoom completing an at-home construction activity. Their goal was to build a 6-foot-long ramp out of materials families had at home. We found that 11 families constructed their ramps out of one or two recyclables (e.g., one large Amazon box) and 11 families used three or more recyclables (e.g., several paper towel tubes).&nbsp;</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Recordings were split into 15-second intervals, each coded for the presence or absence of each type of spatial conversation. Then, parents’ and children’s utterances containing spatial language were sorted into 9 categories representing different functions of spatial language. Functions ranged from using spatial language to discuss measurement (e.g., “it is 6 feet”) to describing part-whole relations (e.g., “two of Mommy’s fingers is 1 inch”). Results indicate that materials had no effect on spatial conversation variety, but children who used 3 or more materials engaged in spatial conversations in a marginally larger proportion of intervals than those who built their ramps out of fewer than 3 materials. However, again, no correlation was seen amongst parents.</span></p><p><br></p><p><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">D. Conclusion</strong></p><p>Our results indicate that spatial conversations are not associated with the number of materials families use. This is not necessarily bad news as it could be an indicator that at-home construction activities are an equitable way to support spatial learning because families will still be able to develop spatial skills through tinkering activities regardless of the materials used. Future research could examine the role of specific spatial features of the materials on spatial conversations.</p><p><br></p><p><br></p>",
+  "subjects": [
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "VYmf9C4tGUI",
+  "originalVoiceoverLink": "https://youtu.be/VYmf9C4tGUI",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "9056ca5f250a5f8ed4991e5f119bc188",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "9056ca5f250a5f8ed4991e5f119bc188",
+  "createDate": "2022-05-13T19:41:18.000Z",
+  "lastUpdated": "2022-05-13T19:41:18.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Evan",
+  "presenterLastName": "Vlahandreas",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Cognitive Science, French",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Evan",
+      "lastName": "Vlahandreas",
+      "major": "Cognitive Science, French",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/Him",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Psychology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "David H. Uttal"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/9056ca5f250a5f8ed4991e5f119bc188.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106323&Signature=ji8CB9PYiKQOKNa2C8qaoAyinOkGlb1niLYS0DdQtLzWCtQvqOu5KoHh%2FKxLvmHcG4sWTJRUV%2FG7%2FBBut%2B0hFifmbLbXBTYBg7C367mkBNzhc%2Bg00%2FdC39BlQ8X6nkxi9Y%2FdwHQ2sC7066JXdRaTpZnIFgrIlihL249NI9DDNlG0gwTKdbphqMIPH1zxfCkQFRr%2Byb1UZt22Txffgv3Rvjpyph9tPot41%2FhU9pHY7XwV2LNQd9%2F5eP86w%2BKUVC5j5b4gq7ogtaBxEVR1aNldim1ZKYlD5WnFI7pO9coMRGr0tRxnvHHHGa8kBIhQ2vRV6NMSVCwHCf%2B%2BzSdYZ6kC%2FA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/9056ca5f250a5f8ed4991e5f119bc188.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662975&Signature=cycPHlTNVdJMcNkLlJ6c7boPjipc9RxRvNGmy0OUdAKvsarwsZ95Ijv8vZONU5Ta5GICIA8LriUeZTMvQhXPqIYx0%2Fvvvg9DMkFxBI6xSgE5FMw7vuZSVpCvuQtKF0lQZmjfYnBvZmHE8IxE4QYa9ImmbhPS7v6tkkZNILEqBA65zuSW0u%2FbASGFgUFIBcZdXxkJaR6AiG7c%2FgixIN3lqOL8tUcW87GvJbcTEaYSv5uDHqyjfeOnp%2Bx2Pl9o6wiy%2ByQq4or4I7rPHkiWMPFpwWrRMSSOgaY%2Bdy%2B2lT6iV6bZF4iN0zVno4yx1I9WecfVabXxJgXWt%2FHcmPGl1pbpig%3D%3D"
+}

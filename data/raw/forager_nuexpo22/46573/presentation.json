@@ -1,0 +1,101 @@
+{
+  "presentationId": 46573,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong>Determining Splice Factors for Poison Exon Inclusion in SCN1A Disorders</strong></p><p><strong style=\"color: rgb(99, 46, 98);\">&nbsp;</strong></p>",
+  "abstract": "<p>Dravet Syndrome (DS) is a severe developmental and epileptic encephalopathy. Over 80% of patients with DS exhibit variants in the SCN1A gene, which encodes the alpha subunit of voltage-gated sodium channel, Nav1.1. Mutations in the SCN1A gene leads to a decrease in channel function, leading to haploinsufficiency/dysfunctional cells. Genome and exome sequencing has successfully identified disease-causing variants in between 30-50% of patients with severe pediatric epilepsies. For around 20% of patients with DS, these techniques have been unsuccessful, implying that variants causing DS are located outside of the region typically sequenced and lie in the intronic region. Intronic variants can affect gene function via inclusion of a poison exon, 20N, through alternative splicing mechanisms. Inclusion of 20N causes a premature termination codon within the final transcript, targeting the RNA for NMD and therefore decreasing the amount of SCN1A protein produced. A previous study sequenced the poison exon and surrounding intron in 640 patients with severe pediatric epilepsies and five likely pathogenic variants were found. Our project confirmed that three of these pathogenic variants do lead to increased levels of 20N inclusion. Additionally, differing levels of exons 20 and 21 (neighboring the poison exon) suggest a potential exon usage mechanism when 20N is included in the transcript. Our work also determined unique proteins bound to the 20N region in each of the five variants using a pull-down method. Many of these proteins play a role in splicing and mRNA processing.</p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "ws1YKUMRDdg",
+  "originalVoiceoverLink": "https://youtu.be/ws1YKUMRDdg",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "cf41b68d7af179e39130c1724e686b15",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "cf41b68d7af179e39130c1724e686b15",
+  "createDate": "2022-05-14T02:48:42.000Z",
+  "lastUpdated": "2022-05-14T02:48:42.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Eleanor",
+  "presenterLastName": "Goes",
+  "presenterYear": "Senior",
+  "presenterMajor": "Biology ",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Eleanor",
+      "lastName": "Goes",
+      "major": "Biology ",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Neurology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Gemma Carvill"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/cf41b68d7af179e39130c1724e686b15.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106363&Signature=yt2vrkHKpLqbskg8OJG%2F9LyjcQbKwJVW1OwcDn5Uwfd%2BNrv3D%2FZf2YGGb%2BCK6lhSNs8lWsDbMvi7zBN6iHB9Au1U2y7%2FW6jtSURowRFX%2FaDzvUbp8LOj3O5q3InEyN60P8xCo9JJgOkOhvJyMtoEHGu6MzPkE1EqMTQWXXkD4dBYyElhSwZCDNtGdTvh%2BzzhwxBWIcXDWQ8yyH76PBRbIHljzpB9OP%2Bfna%2FePDairNmOxXJvnwGf91vBreUThYT3OuM%2BDZtVki%2BBOPUi74jYwilB62cyLrsj%2B28VVloE51Dfxf4MubaI9vh7spG%2BWEooLyCoIM6H6dDpefuuxxlOlw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/cf41b68d7af179e39130c1724e686b15.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663015&Signature=ocfmRMhlTlye1LiJmOKPVFfrOXU5s1uG5exH%2B2LWhyFzM2PsD9VF%2Fo8qaBu%2Bnsc8Z4Qsm%2B3jfgeVgEVTDfU6Hi5aew5Nndx4tLMHICS1Zep9zd%2FWvknxateZ2lMuu4%2FBlDGrVmiaQllO9DmAfedGPWQneGzoBIuxhBluYYl2oWP%2BMpfGrrO9KoKM6MGenZ7Th3yQimDyBOsNbA3MfciSvR%2F2TQKk6EFm6WA8w6idat%2Bc2pxsSvLJGMzXpWzqAZjYaewqrkmVrh45LLcxa4uT9FTbdjUhulMP6FyEC5Bwh7lrmz68hHddS%2FjPdaZJixrW2wkMvmdhR5PVX7M3uOrNag%3D%3D"
+}

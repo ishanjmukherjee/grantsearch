@@ -1,0 +1,101 @@
+{
+  "presentationId": 46568,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Sex Differences in Autism: A Prosodic Analysis</p>",
+  "abstract": "<p class=\"ql-align-justify\">Autism spectrum disorder (ASD) is a neurodevelopmental disability involving impaired social communication and ritualistic, repetitive behaviors. In ASD, diagnosed at a 3:1 male-to-female ratio, sex differences have been reported in cognition, behavior, and language. Of the latter, there are differences in pragmatic, or social, language, of which one important aspect is prosody (rate, rhythm, and intonation of speech). Though females with ASD tend to have better social communication abilities than males with ASD, no research has examined sex differences in prosody. This study sought to examine sex differences in prosody in individuals with ASD and assess how prosody may relate to pragmatic language difficulties. Participants included 21 males and 13 females with ASD and 26 male and 26 female controls. Participants narrated a wordless picture book with speech recorded using a microphone and transcribed. Prosodic features were extracted using Praat scripts at the utterance-level, including average (mean) and variation (SD, range, excursion) of fundamental frequency (F0), an acoustic measure for pitch. Males with ASD had higher mean, maximum, range, and excursion F0 than control males, whereas no significant differences were found between ASD and control female groups. In males with ASD, higher mean F0 was associated with more social communication impairment, but no associations emerged in females. These results suggest sex-specific prosodic profiles, where prosody appears more noticeably affected and related to larger social communication difficulties in males. Findings contribute to a deeper understanding of sex differences in social communication difficulties in ASD and may implicate sex-specific intervention considerations.</p>",
+  "subjects": [
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "q3wGavMr_fM",
+  "originalVoiceoverLink": "https://youtu.be/q3wGavMr_fM",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "27abd75af896bf6da032d312cda798f4",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "27abd75af896bf6da032d312cda798f4",
+  "createDate": "2022-05-14T00:56:41.000Z",
+  "lastUpdated": "2022-05-14T00:56:41.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Gabrielle",
+  "presenterLastName": "Olson",
+  "presenterYear": "Senior",
+  "presenterMajor": "Psychology and Linguistics",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Gabrielle",
+      "lastName": "Olson",
+      "major": "Psychology and Linguistics",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Communication Sciences and Disorders",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Molly Losh"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/27abd75af896bf6da032d312cda798f4.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106356&Signature=ChU7Xne2f5OdjHjj9DlKdHJWmil8vn1xpNDi1WqoUecfgAa4dsB4MO57zfTgeqQiBSHv7SM9zTXqL%2FdUtsJycGnAUiHFck4LeZ6ik3xajxB5TJVZwFKQr1fsyLuLe3Lz9BN0chvoj7GJ6N5IMm1QX%2BSipJVgIw738La7jn6aIZUx81PhemMfF5hzRaRQaW5qZlfNCvs2EwMhkgt6lqh16%2Fk%2F7GQrdDGVWJUluEvlr%2B%2BDOIAyRXlyzGVw3VuB%2F2zyq4rBUNokF3QUh2OVVAeyGJOK2L%2FJqOuqX3f0%2BgENkjlPS2kUZV1XdLqhJbytWKQGb%2FYyoOHBNFkeQjUgWjYT4w%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/27abd75af896bf6da032d312cda798f4.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663008&Signature=Fy%2FWl3N6GxTbKw3Q3%2BkV7vq7QGJP66LeTmuPtjXQiUJ7uTKcYKRwGqeV0zOOV04lVcMHYHZQBI0QVVRdgrHJYp0CTqx%2F5Ga%2BOS5h%2BD%2BMR6LGteMyKdxO%2BkX1243yz34nRzVrCK%2B14gGprFPefmoDVT5fbo9BZv%2FovKgUgxSq3TGwh0uJQ3nJQiJRWrJL4FZ0NFB0WtMO5BYXT7rPnNmDUwc9c3IoVgqhmYePV81%2FvhygTHWwWyfC4IyNa4cqDwU9n1UbKH9IWeGLTNVY5R%2F4dHgUiMgKgsFlcZfDtwa50hQ8w4%2FNoHM64YV%2FUh9FFWb%2BQkz0KKw37fizh%2BgtKkH49w%3D%3D"
+}

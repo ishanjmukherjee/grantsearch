@@ -1,0 +1,102 @@
+{
+  "presentationId": 46598,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Advancing cell-free glycoconjugate vaccine production</p>",
+  "abstract": "<p class=\"ql-align-justify\">Glycoconjugate vaccines, composed of a pathogen-specific sugar antigen attached to a protein that stimulates the immune system, are an effective method to prevent bacterial infection. Currently, vaccine production uses cells, requiring centralized facilities and distribution under refrigerated conditions. The Jewett Lab has developed a freeze-dried, cell-free system to produce glycoconjugate vaccines at the point-of-care. Within this cell-free glycoprotein synthesis (CFGpS) platform, a specialized protein, known as PglB, transfers sugars to proteins forming the glycoconjugate vaccine. However, three main challenges prevent the adoption of this technology. First, the PglB enzyme is specific to certain sugars and cannot transfer all vaccine-relevant sugar antigens, such as those from diarrheal disease-causing bacteria <em>Shigella flexneri </em>and <em>Shigella dysenteriae</em>. Second, the platform requires an expensive energy source. Third, the platform is not stable at elevated temperatures. To address the first challenge, we hypothesized mutating PglB would expand its transfer capabilities for non-native sugars. Through western blotting, we demonstrated that mutating PglB increased transfer efficiency of sugar antigens from <em>Shigella flexneri </em>5-fold and <em>Shigella dysenteriae </em>2-fold compared to wild-type PglB. To address the second and third challenges, we developed a low-cost, thermostable CFGpS reaction formulation by screening low-cost alternative energy sources that could also increase thermostability. Using this formulation, we produced glycoconjugate vaccines against enterotoxigenic <em>E. coli </em>078 for ~$0.50 per dose after storage for up to four weeks at 37⁰C. Overall, we advanced cell-free glycoconjugate vaccine production by increasing the number of potential disease targets and developing a low-cost, thermostable formulation for accessible distribution.</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Engineering"
+  ],
+  "voiceoverId": "yxLwN2bN138",
+  "originalVoiceoverLink": "https://youtu.be/yxLwN2bN138",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "acf4d96e4566f49f94a3178fe68946ab",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "acf4d96e4566f49f94a3178fe68946ab",
+  "createDate": "2022-05-14T05:00:19.000Z",
+  "lastUpdated": "2022-05-14T20:10:32.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Sarah",
+  "presenterLastName": "Sobol",
+  "presenterYear": "Junior",
+  "presenterMajor": "Chemical Engineering, Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Sarah",
+      "lastName": "Sobol",
+      "major": "Chemical Engineering, Biological Sciences",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/Her/Hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemical and Biological Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Michael Jewett"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/acf4d96e4566f49f94a3178fe68946ab.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106398&Signature=We7byaxbjUZ%2Fm8fLtyoxTQLXVbAPYfnfSu%2FxDOkrmCWgW%2FjDIKg11vHSH9Rr7xC9ShdzBpBUHml6Jz8wpYEe5vAo7vesOwzrMzDNsWIzc4DgIOmBg8Ei%2BTgvfSUIF0taQQdRpvQnSd6feT6klxsDtJ56mtFg%2BqnjV%2FmsATIikcAOy1OD74XAWciARmB7ALhNAPAvxyfYKYLKYkGmq%2BKmZm5tgP4djfCqqeciuSEMbVPRr7RWXcwI8LGKiJIV%2BheE9%2BvGinQcuF8uEqkDJ5P4kHKWUgwxjJZNOD%2BdRp4KNc30oVh8f0xtXvkYpTAc%2FdTMJL2if4mLNz5sGEhmscmeqw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/acf4d96e4566f49f94a3178fe68946ab.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663050&Signature=oA8oX822o7ehWRasuJ8%2FVfID%2BjPjHLXs8cXaCpq6Cp1zTp6GkI%2BQ175J2DNv8BOONON6TooBFtaUOVwypgO0NeDgOaqFRdCthvPQX66dOYVJ3xyVhm40WcOriMv7MRvhcimnIRxzx9YKs1IJYfSJ6Wgcb1wI5SUTlu%2BlIAy%2FVvfmRfs89qnXmXgHzyxxqD%2BgwcCoMoAT8KUPAzDuPBeYXHc2yab8sRG9NgchUc86M0MF%2FshyL0lRKSZXrH%2Bhv9x0ar8dLPcuDi2%2B3o4RK2ZbPmcKLGfPYJOGnBDnj6A2knO61OUVqDo%2BzxKxa3eCWLJimc4SHqcfaQ6hLC87alNcQA%3D%3D"
+}

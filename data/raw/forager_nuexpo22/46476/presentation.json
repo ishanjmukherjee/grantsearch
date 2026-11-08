@@ -1,0 +1,101 @@
+{
+  "presentationId": 46476,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Attempts to Augment Refutation Text Benefits with Visualizations</p>",
+  "abstract": "<p>Conflicting information can lead people to develop misconceptions about complex topics. One approach to support comprehension involves presenting texts that confront potential misconceptions (“Climate change is a natural process”) and additionally, directly refute them (“Some people think climate change is natural. Most scientists disagree with this.”). While these refutation texts are often useful, in general it can be difficult to change people’s beliefs. So, how might refutations be designed more effectively? Visualizations offer a solution as they offload cognitive work to the perceptual system. We conducted two experiments to explore visualizations as a tool for refuting climate change misconceptions. For both experiments, we designed a “refutation visualization.” In the first experiment, we used open-response knowledge assessments to evaluate whether refutation materials promoted knowledge revision and a belief measure to determine whether participants’ opinions changed after viewing the refutation. In the second experiment, we used these belief measures and new multiple-choice knowledge assessments that strategically targeted information from the text and visualization. Participants (n[exp1]=59, n[exp2]=89) were assigned to one of two experimental conditions: <em>refutation text only </em>or <em>refutation text+visualization</em>. They answered knowledge and belief questions before and after viewing the refutation materials. While results were inconclusive across the experiments, the observed patterns suggest that visualizations may augment refutation text benefits. However, further research is required to understand precisely what elements of a visualization might support learning. </p>",
+  "subjects": [
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "DAOREhgw4tU",
+  "originalVoiceoverLink": "https://youtu.be/DAOREhgw4tU",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "a8909042610e05cb19d45a927f2fb2c8",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "a8909042610e05cb19d45a927f2fb2c8",
+  "createDate": "2022-05-12T22:56:17.000Z",
+  "lastUpdated": "2022-05-12T22:56:17.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Kylie",
+  "presenterLastName": "Lin",
+  "presenterYear": "Junior",
+  "presenterMajor": "Communication Studies, Cognitive Science",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Kylie",
+      "lastName": "Lin",
+      "major": "Communication Studies, Cognitive Science",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "Communications"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Northwestern Dept. of Psychology (Rapp), UMass Amherst College of Information and Computer Sciences (Xiong)",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "David Rapp, Cindy Xiong"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/a8909042610e05cb19d45a927f2fb2c8.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106268&Signature=IvppA1FlaATMctfyt13FnsFHWoMHwQ8vxZk%2Fuz%2BFilHk1vfUR%2FEGUeuf6t23K1IpaM2ko%2BC%2FluVVWI5x6hZ1nzzcestIuAYaonLZ23SNChxgh9i1f%2FcvwD8HAJQc%2FGSbf5eQFiFXmT3b54eNt0cazrlXgb2t1laKfukWygvDQ2wCwmMBpEdr%2FQGseBd37JWGJJugouSPMmG7ebvI4gnF1wpJgizibZAlzBLCvoOYMWNPrRc%2FIj1Hizuq%2B4fyk5d%2FXVwY7BUM79%2BZDyicrze%2BEr0s2Nqn21TuP2lr%2F6JLE5Njt8aInob8sQuJ%2FoYJyVgL8Yqtj32lzVPU1w6IsqKotQ%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/a8909042610e05cb19d45a927f2fb2c8.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662920&Signature=Lpg0GJ%2Fw6f%2F4KvsrCWddNN8La4EdUbY4HW6t7zhjT%2Bu2A6HzzKUiv8RfNmUXWg0opdKwu%2F2EauKRhgg6illpmvbNEF3fY6nnylpWjKGguDIZUr0mo1PHFw3Xh5m0asCxik5BziiMYf7nd743eOzhgk743Q0B5yRBQMMk0borlBhRnrQ0%2BHR2jag1ufrEkSF7id2dWtB9yL2dJEvrXzcQ4XDXJCoqkljWM%2BKploGISMpxlL2N8oG8AAUbHhnZCukMpaN%2BPaNnASnaxEAMHtgDMJVh7AaZIiFy62PRGFNQ4t1HAyMWKHJ0oHUH5EPXXfuvwGUaReo3wkx3P9%2Fu7srGPA%3D%3D"
+}

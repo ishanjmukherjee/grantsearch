@@ -1,0 +1,101 @@
+{
+  "presentationId": 46526,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Measuring Risk-Sharing in a Developing Economy: A Study of Rural Thailand</p>",
+  "abstract": "<p><span style=\"color: rgb(0, 0, 0);\">Due to limited financial services in developing economies, the world’s poor often form informal credit and insurance agreements with relatives, neighbors, and moneylenders. Sparse records of informal transactions make them difficult to track. As a result, economists studying developing economies may conclude that the level of financial risk-sharing is far lower than it actually is. This project seeks to accurately measure the level of risk-sharing in rural Thailand using models based on the theory of full insurance. The theory posits that households receive money from others in their village to maintain similar consumption levels. Therefore, changes in household consumption should track changes in village average consumption rather than changes in household income if risk-sharing is complete. I tested the theory of full insurance for Thai provinces with household data from the Townsend Thai Project. Using survey responses, I constructed consumption variables and estimated two models: one that analyzed year-to-year changes of the variables and another that focused on fluctuations of the variables around a long-term average. Both models demonstrated that changes in household consumption partially tracked changes in household income, rejecting the theory of full insurance. However, the regressions also provided evidence of considerable, though incomplete, risk-sharing. The study’s conclusions did not change when additional models considered provincial differences or household savings. This project demonstrates that informal borrowing mechanisms allow households to engage in risk-sharing in Thailand even if formal institutions are limited. This result has important implications for development efforts in the region, particularly microfinance initiatives.</span></p>",
+  "subjects": [
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "QZTFRnZ5D3E",
+  "originalVoiceoverLink": "https://youtu.be/QZTFRnZ5D3E",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "36f7e6a5081342fbaf8fe15cf85490cc",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "36f7e6a5081342fbaf8fe15cf85490cc",
+  "createDate": "2022-05-13T17:37:00.000Z",
+  "lastUpdated": "2022-05-13T17:37:00.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Irena",
+  "presenterLastName": "Petryk",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Economics & International Studies",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Irena",
+      "lastName": "Petryk",
+      "major": "Economics & International Studies",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Economics",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Joel Horowitz"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/36f7e6a5081342fbaf8fe15cf85490cc.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106303&Signature=osTfvysoIWiR085WuuidMbLPmbEx1H12%2Bgbp8la4xyKlriRGl7DAS0sB5mGcWLpEQ0zumK%2FNNA7CcPsufuPpsTs1FSpwjkRbbBwWfBcYDW8f3Oq0YnXxkvbOfqNHcQSKJXV78qms%2FAICcvQqNHQ5biBzOU188uvHupUgpyCloss5ynL6CdmmGk0R2G5PB1veEAasoWpMtbZpnv2aTtTHGMtE4dP3Ek%2BLI%2FRhLJsR4LIGVzcM3YldxMV17tvsKam1z84OpBfri4POhDgr%2FjI8RCKYt2Pj9h6d8tb%2BXgwlt%2BZj21BDTxsoWi37IVThSAa1TiORiGuJaREszWNjyPSF5g%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/36f7e6a5081342fbaf8fe15cf85490cc.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662955&Signature=lGlgVo%2BmZ1weYN03LQBzzwRCMJ6nTjBjdJbkoaok9k9DayqS1JE4fYcsOKyrSvBDLIFFvNad4XD64hEuuzoHu4Ngf7y72cQIEjbAn7bVGU5%2FkhtoF2Kbpvb9YAr9TYZ8LV4wqU3TrSrK5NnsntMA4hi8jwexxCIJ18dquODo%2FJpOxLwTHgI%2BRmPj68k56xSWZ8LN0yldTzq2XRglFiPB3ThPn2oTxfHR8KOrjpRbGyku5xSnl0Pa7oHtV08ImJNodkDlT%2Fm0C0lbmb9iiH31Zrbx%2FhV3dz5x2VL9umxn6oLAk0YOmabhrJPY5vYsWCDk%2FRu9LObfgWssU5%2F%2F5twFNg%3D%3D"
+}

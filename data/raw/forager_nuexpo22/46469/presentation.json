@@ -1,0 +1,102 @@
+{
+  "presentationId": 46469,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Perception of Teachers and Student Experience During Covid-19</p>",
+  "abstract": "<p>During the summer of 2021, I set out to better understand how the public perception of teachers and the education system throughout the start of the COVID-19 pandemic shifted. Prior research showed how teacher self-esteem greatly influences student engagement and performance, but there was a gap in understanding how the public’s attitudes during the pandemic could affect academic experiences and outcomes. I interviewed parents of public high school students in the north shore of Chicago and used grounded theory to craft a coding scheme on the data I collected from these interviews. This coding scheme helped me better understand how interpersonal dynamics surrounding educational spaces changed the way students and parents perceived the value of education, and how the changing social construction of teachers impacted the way parents viewed teachers, their work, and the quality of education. This research illuminated the impact that public discourse can have on the quality and value of education within the context of a public health crisis, such as a pandemic.&nbsp;</p>",
+  "subjects": [
+    "Education",
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "RCn7CE9mnsI",
+  "originalVoiceoverLink": "https://youtu.be/RCn7CE9mnsI",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "b33a3c8f068f00fd076cb9277c161f94",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "b33a3c8f068f00fd076cb9277c161f94",
+  "createDate": "2022-05-12T21:44:07.000Z",
+  "lastUpdated": "2022-05-12T21:44:07.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Annie",
+  "presenterLastName": "Goss",
+  "presenterYear": "Junior",
+  "presenterMajor": "Human Development in Context ",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Annie",
+      "lastName": "Goss",
+      "major": "Human Development in Context ",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her/hers ",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "SESP"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "SESP",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Lilah Shapiro"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/b33a3c8f068f00fd076cb9277c161f94.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106264&Signature=jufNKoJVMMrch8k9yOB5rHKnaL8hv9N7IWYmycGX0SPPYmrwvGWkyb4GwP7sPY3dTTlvWsPe5A%2FTtEZwVw2LQn6fUVhl2sRhtrANVx2HJPLhmFZZgyaB2opAZwYVwNYXozR2axmOmzqHBV6rCnaTq5BZ0OMOrGj2ibnYE3YC1hFKtEov%2Fk6xksRYuSekKb6phX1MZWRcBAULlaOs%2BypUhDKmcmqKktoABs825l%2BE7%2Fq40j0w%2BX9jJ4YYxDY1VU54BjqrxbOWYGAk8r1WnKf1oNBn8qSiOCUFBfQqs%2FB0pl8x2lfMQIs73AKIdkljQ3WT0r0T%2Bjg2Gc%2Brz5MNvGLV1A%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/b33a3c8f068f00fd076cb9277c161f94.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662916&Signature=hFCgaTzM%2FASHjeaI7p%2BqTczBe0duIfYcjvVwISE7XJQgf1SE1orQgJVEZld9giUV2ap2RGhb1B9ZCWxsM7qJNlfvZokUdU%2Bz9fuZ0XKngGybG1DHszRm7ItTtO%2Bh15%2FFQPR%2B4MTmJpCpwWJL5npOmlOztib3PRr5Ya%2BcdBJ2anLUh2dZYxOb9RchckLHD0Rr1WZn%2FIL9yC6cFO1nQWs5u6fALf14BDF%2B3WpRaQRvovRnz2MSaCDSdmo4LRLa1CRFLo0k9MGTebdHUmgyEboHGEZfzTKaNcUwY%2FxQsQoyNO32GudW%2FvgZs0LsOTsQS7G4mPePUnyZGJMiwuPq%2FQKRWw%3D%3D"
+}

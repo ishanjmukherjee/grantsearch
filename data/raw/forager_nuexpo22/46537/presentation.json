@@ -1,0 +1,101 @@
+{
+  "presentationId": 46537,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>How Work From Home Will Reshape our Cities</p>",
+  "abstract": "<p>I analyze housing price changes throughout the pandemic at the zip-code level as a function of individual and regional characteristics of the zip-code. To this end, I use Zillow time-series housing data from January 2020 to January 2022, U.S. Census American Community Survey 2015-2019 5-year data release, and Google Maps API geographic data. I find that the share of work that can be done remotely adversely affects the change in housing demand over the two-year period for highly populated counties. This effect is less pronounced or non-existent in less populated counties. A model designed to analyze the changes in optimal worker housing location when offered remote work concludes this is a result of bid-rent functions differentiated by population size. Furthermore, there are statistically significant differences in remote work’s effect on housing demand by worker characteristics, such as education, age, marital status, and income. The model identifies two potential causal channels for this effect: heterogeneous amenity preferences or relocation costs.</p>",
+  "subjects": [
+    "Business & Economics"
+  ],
+  "voiceoverId": "wA0emnCF45c",
+  "originalVoiceoverLink": "https://youtu.be/wA0emnCF45c",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "1cb37ae33ef67d97eff4fa3281875ac4",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "1cb37ae33ef67d97eff4fa3281875ac4",
+  "createDate": "2022-05-13T19:28:42.000Z",
+  "lastUpdated": "2022-05-13T19:28:42.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Ethan",
+  "presenterLastName": "Nourbash",
+  "presenterYear": "Senior",
+  "presenterMajor": "Economics and Mathematics",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Ethan",
+      "lastName": "Nourbash",
+      "major": "Economics and Mathematics",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/Him/His",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Economics and History",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Joel Mokyr"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/1cb37ae33ef67d97eff4fa3281875ac4.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106318&Signature=lzuygjtaELb3%2FtQfRp%2ByqJMQQgQNEbJ%2FyQi7RnDqIcErnSLZ8g38bVe%2BzS5dxDiZsy9kPHAf9hWf59oj4kr4GmLXqBsioQiR5tvrkdrNR%2FkCmNfQNOl4TOlr7tLI3A9yIUosqwTKf%2FfRqh5T%2F3F9PlD7JGykyBhjtV6R%2FROVSjbcuu1WLxmf4MTmQtRZESSay3NiE4eAVSw5skq%2BUtPqRome6XFvhf6xE77S8%2BcbYMwH3faHoxrSJIYpw4A9e5kwFL2Gn7Pkled8fSs%2ByyxRQNa2ytX91MPrRihQbBbhf5qQFvPQTtav8tUQenyCHLQ0uhnErGYCRdymA7FGxOLUeg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/1cb37ae33ef67d97eff4fa3281875ac4.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662970&Signature=x3qN%2BuabWhAPAN39lB56ycaOrDahdyPBn3u0nvePbWXSbbUbhbFM%2BLfrYzM63hjAzXn%2BT8A8k3194Z8bwhRKn%2B2M%2BS%2FC6Vwe1ITfyHP35jaWMSYCWXsnPIxkZfan6XlxFwQIBTd7xbuRvmqeq6edumJ3u0fDGx9YMiDUb9FpN4guFGh0LDx%2FuNU4iQ3H2puXQiz5xC9Bmiljzzhlshp0MnDGsE9UMx5Md1w6fS5fII8L01gFcA9SR8WrhvFdiRaNNqXcz6Ku6zUt3hsWbkEUv7W8mo8813PP3p8BetmlZMgpLMNaUD3QnFR2dIK8DBLBXtXg52ra7NZQKEEUTlK2QA%3D%3D"
+}

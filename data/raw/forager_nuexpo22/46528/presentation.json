@@ -1,0 +1,102 @@
+{
+  "presentationId": 46528,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Mapping Personality across the United States</p>",
+  "abstract": "<p class=\"ql-align-justify\">Informational maps are innately interesting as they provide a quick yet comprehensive way to display information gathered over a geographic region. Specifically, maps of personality characteristics offer a high-level view of sociocultural trends across different regions; however, many existing attempts at mapping have lacked a significantly expansive source of personality inventory data. The Synthetic Aperture Personality Assessment project (SAPA), a personality assessment voluntarily taken online by thousands of participants every year, offers a new approach to mapping personality characteristics that combines a large dataset with sophisticated mathematical reasoning to provide a powerful addition to existing research on personality maps. Thus, one of the goals of the current study is to utilize SAPA data and the R programming language to map Big 5 and Little 27 personality traits across the contiguous United States. In addition, this study will attempt to create a depression scale from existing SAPA questions using advanced statistical learning techniques and validate it against national depression trends from the Behavioral Risk Factors Surveillance System. Additionally, SAPA depression data will be mapped and compared to a national map of depression levels at the county level. If SAPA is shown to be a reliable indicator of depression across the United States, it would add a significantly large and ever-growing dataset to the world of depression research. In any case, the maps generated can be used by scholars in other fields attempting to link personality to different phenomena across the country. </p><p><br></p>",
+  "subjects": [
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "5SAKBQwsunE",
+  "originalVoiceoverLink": "https://youtu.be/5SAKBQwsunE",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "b6a90ff93debfdb78b45da283b2ed83b",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "b6a90ff93debfdb78b45da283b2ed83b",
+  "createDate": "2022-05-13T18:01:52.000Z",
+  "lastUpdated": "2022-05-17T13:02:01.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Joshua",
+  "presenterLastName": "Kennedy",
+  "presenterYear": "Senior",
+  "presenterMajor": "Psychology, Computer Science",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Joshua",
+      "lastName": "Kennedy",
+      "major": "Psychology, Computer Science",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "he/him/his",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick",
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Psychology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. William Revelle"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/b6a90ff93debfdb78b45da283b2ed83b.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106306&Signature=sh3h%2F3nelSt9M1E1poimMhM3uqrwpCpFcIFPa2hfPZwnChIyncN2A2hMpyw6QIYfU5LTtoaPFmoopMqVvovbfHnuexyeq7Ws6H5vtsucHHixi6zWNbbia0D2JRsW5ssvsVYCLr00%2Bhz8CA0SmFjtED6hUgjInbp9nmCbnPejdAgIQt9KfyZrM797qHu4PYdQOhJUMX0ZHztAktUrLOopFCf0DwevpXeUz4PEW7CBDCn2gi0zZ3SYWJDKhE0NDEdCDTTNV4y3cnrYBtRAyWRwOmRL%2BRuSvsetFHhMzhgtO2mgJUdyh8DvK8qs7YqpHRXss4HRIwEmBhWcbEsuiu1Rdw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/b6a90ff93debfdb78b45da283b2ed83b.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662958&Signature=eSs4DjYvJ6XMWkhk5RcIAMXxNomFayskrMf%2Fl0advH%2Bspa2Odl3Jp1Y6dSsz4MXIW6%2B0p9NmhJ9UipHm2M%2FrtoO5Vsi%2FLA5OPGfih3cVm0VRn0msPc2t1xGcu8CWSioXrAGxKK%2Fxwod4yMotAHjBdpOn97m9KP2Yjv1zsrK2Un%2BiZlOlhDbwikSxWerL3QuxwnA2io%2BXTGDjy%2Fy1BNma6bVXjgscz4AsJ3YJPJu0y6tp5kyKWVq8%2Bch3rdiN7HVtOPDcUY%2BJ6E7H%2F6VvsHp6WAqmQobpFrLFMeKkNXKhaNVYY%2BA8vpSLcZ4gf71yhLHFmz06cotH%2F7PL%2FlqpU0JNSw%3D%3D"
+}

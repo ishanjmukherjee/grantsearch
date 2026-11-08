@@ -1,0 +1,102 @@
+{
+  "presentationId": 46580,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Treatment of epliepsy by the inhibition of GABA-AT</p>",
+  "abstract": "<p class=\"ql-align-justify\"><span style=\"color: rgb(14, 16, 26);\">Epilepsy is a chronic disorder, with recurrent, unprovoked seizures. One of the possible causes of epilepsy is the low level of the inhibitory neurotransmitter, gamma-aminobutyric acid (GABA) in the brain. When the GABA concentration drops below a certain threshold level, the balance between GABA and its corresponding excitatory neurotransmitter </span><em style=\"color: rgb(14, 16, 26);\">L</em><span style=\"color: rgb(14, 16, 26);\">-glutamate (</span><em style=\"color: rgb(14, 16, 26);\">L</em><span style=\"color: rgb(14, 16, 26);\">-Glu) is interrupted, and convulsion occurs. However, GABA cannot freely penetrate through the blood-brain barrier (BBB). Thus, direct administration of GABA cannot be used as a treatment for neurological disorders. Indirect methods have to be found to raise levels of GABA in brains. Gamma-aminobutyric acid aminotransferase (GABA-AT) regulates the GABA levels in the brain. Inhibition of GABA-AT has been shown to ameliorate low levels of GABA and stop convulsions. Currently, vigabatrin is the only FDA-approved drug that is an inhibitor of GABA-AT. However, research has shown that long-term use of vigabatrin causes retinal toxicity and does not readily cross the BBB. The Silverman lab developed two GABA-AT inactivators that are vigabatrin analogues known as CPP-115 and OV-329. However, both compounds still inhibit ornithine aminotransferase (OAT). My project primarily focuses on increasing the inhibitor selectivity for GABA-AT over OAT. </span>My current work focuses on the synthesis of CPP-115 analogue. The bicyclic ketone intermediate can be converted to the alpha-hydroxyl ketone through Davis and Rubottom oxidationsThen, <em>O</em>-alkylation, followed by difluoroolefination and acid-catalysed ring opening of the lactam will give the final compound. The overall goal is to make alkyl derivatives of CPP-115,  with selective binding interactions to GABA-AT.</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Chemical Sciences"
+  ],
+  "voiceoverId": "4IEdC95SMfE",
+  "originalVoiceoverLink": "https://youtu.be/4IEdC95SMfE",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "1bcde724f201b475d633748f959afe27",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "1bcde724f201b475d633748f959afe27",
+  "createDate": "2022-05-14T03:52:51.000Z",
+  "lastUpdated": "2022-05-14T20:12:10.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Tiger",
+  "presenterLastName": "Wang",
+  "presenterYear": "Junior",
+  "presenterMajor": "Chemistry",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Tiger",
+      "lastName": "Wang",
+      "major": "Chemistry",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He, him, his",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemistry",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Richard Bruce Silverman"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/1bcde724f201b475d633748f959afe27.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106373&Signature=N%2Flzt6J%2F6PNQy7jMNSgxBnbL2Bh2A5y4ALFYh37m4CAwaLh8b8vtGjDBVj3otAlHyGNXb2G%2BUduWlig8EjDXdsIPEGpi6wIAGwgXDAMmzzZKqBIrAzRRc0woDmxuPnttqp1qWH%2FyAF%2FDN8w7OFCN8w4BSTjVbijA4SpYjQUiVNErmZKIyqSpwJbkBpuCprac1VIG8RZJY%2BTHC4OrAo2N%2BPfmAz1O9YHijuyiarXyz1SSi1zbw6YcM4oyIU3%2BzVT4xK%2BY6VzH9tw4rWJRIsaR4d%2B%2Bs%2Bk1%2BhalnkNodP4TTU6cPvdFhx4pRhM1qmmQlRKp1hKq83QFzZ0pn%2FmqKS4LUg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/1bcde724f201b475d633748f959afe27.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663025&Signature=D3qkwdaIsjg1ukjzVkIrNEWbvEz%2FQSRdKuFIRdpBxambLz6GgONG19M9OckzFSVXMR6n7Tk7Cl57zLTcfVB0h5YNS6qarniWxUUBs6aeIR9QoBSiTNUU5mDOH%2B%2F1WCiQrcpE6cAL%2BgF9PC33kzReaDa96wmhzuManywDLA7zIL6fLCF199Q4F8rB4ea3GJp2AYfczZdkVOuxMDaKnMn4Q8DJpx1Uf%2FiU6KnWsGW8eX1LVjM1K7cbDF1RgqovguRcTNBtlGbCDv4EbHVByBoFUxMmkRJFFm5kKs548CQ1DTPOrg4u6sinlG9s1Lf7w3%2FtSnBbDiO8Y9vu65XcTSEk3w%3D%3D"
+}

@@ -1,0 +1,101 @@
+{
+  "presentationId": 46566,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong>Assessing the functional impact of phosphorylation on the neurological receptor mGluR2</strong></p><p><br></p>",
+  "abstract": "<p class=\"ql-align-justify\">Our survival depends on the way our bodies respond to the environment. Receptor proteins communicate environmental signals to our cells to begin these responses. Metabotropic glutamate receptors (mGluRs) are a class of receptors that trigger responses in the central nervous system, especially the brain. The mGluR2 receptor can be regulated by phosphorylation, which is when chemical phosphate groups get added onto specific parts of it. mGluR2’s tail can have various differing phosphorylation codes with specific patterns that are essential to control its function in helping the cell respond properly to the environment. The purpose of this study is to map the location and number of detected phosphorylation sites to relate them back to the signaling of mGluR2. I hypothesized that the specificity of this code, at least partially, is responsible for controlling the sensitivity of mGluR2. To understand how phosphorylation impacts receptor sensitivity in a human cell line, I created and cloned two mutant versions of mGluR2. One mutant mimicked phosphorylation sites, while the other removed phosphorylation from these sites. Samples of cells with these mutants, as well as the unaltered mGluR2, were imaged and then quantified to compare their level of sensitivity. We found that the unaltered and phosphorylation mimicking mutants had the highest sensitivity, while sensitivity was lost when removing the phosphorylation sites. Therefore, these findings determined that the phosphorylation code can indeed regulate sensitivity of mGluR2. Future work can use this methodology to study how various neurological drugs affect the phosphorylation state of mGluR2.</p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "n9pKJyR-ngY",
+  "originalVoiceoverLink": "https://www.youtube.com/watch?v=n9pKJyR-ngY",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "945c288042a31bac0f09d151ed461c46",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "945c288042a31bac0f09d151ed461c46",
+  "createDate": "2022-05-14T00:23:17.000Z",
+  "lastUpdated": "2022-05-14T00:23:17.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Erica",
+  "presenterLastName": "Chavez",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Neuroscience",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Erica",
+      "lastName": "Chavez",
+      "major": "Neuroscience",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Molecular Biosciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Reza Vafabakhsh"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/945c288042a31bac0f09d151ed461c46.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106353&Signature=MNS02wlNFhUePH2mOss0Z7PguvN6uNUusQY9BVdqpe6qZlaWt%2FYhzfnW5NcziubYQXxRS1Ft%2FqAoSqdbjmzMekwC1Ibm%2Fr1dWEjCqGAsMr1jxfVbcxKwIKXjYHzyUnSlq24oUZDUAqrZ2NWsyUpSe6ReifIr%2BFlPWPuayOnrshiufTLiqlvYanbS%2FQkI%2F039K6ptI8o%2F2b8NN0sHekFlzF5G6pDtUeTSwnTTI2VglVL0yn%2Fi4R2dBDXxMLZO6fUMSeNkQipGKgNqgf1Juj7pyhG7BbwCc46RnUeylorgkHjv2XnGqRhYbI3Ca8CzTUzcQ4eQberXfIyEcke9rNqPOw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/945c288042a31bac0f09d151ed461c46.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663005&Signature=NbAXnuBJo2dQx6TjgRImM%2BiD75k53Pjw5Z1OUyqaAv0H8Kfu8%2FnW6uqWiPujMmZlw0B3GM%2FubUs6MlBxqkTXwbL%2FHXNN7V0J%2BJALZsTTCQwOUTPvezLC%2BXCJinLplfNkrmG1Vx9v3jIMgdegDB0AzPjBoXCDoEpbvA7UEiKjq85i8ZCzt6M3GC1WkpV%2FjFRuu5281Fm7WVszTC6GdEbpk4Zz7VLPjwesesOSeH%2FE4lWh2XPzruW8Nho0ga1Qyfqczdz2lyLQ0ZiNppZ57T76rb6dkxkXorOohIClGpAW3X67aujN2YImvxyCO7KgEdd7ayuWTY9RdaYyy3zTw2wKig%3D%3D"
+}

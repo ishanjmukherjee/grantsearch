@@ -1,0 +1,101 @@
+{
+  "presentationId": 46574,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong>Tuning Gas Diffusion Electrode Construction to Mitigate Flooding and Degradation Processes for Electrochemical CO</strong><sub><strong>2 </strong></sub><strong>Reduction</strong></p><p><br></p>",
+  "abstract": "<p>Carbon dioxide (CO<sub>2</sub>) makes up 80% of the total man-made greenhouse gas emissions, which are a major contributor to climate change. Electrochemical CO<sub>2</sub> reduction (ECR) is a promising technology for converting CO<sub>2</sub> to useful fuels and chemicals using renewable electricity, potentially enabling net-negative emissions. A critical limitation of overall ECR performance is suboptimal construction of gas diffusion electrodes (GDEs). Commercialized GDEs start to lose their hydrophobicity after ~2hrs of electrocatalytic reaction, leading to flooding and failure of the entire reactor system. Compared to catalyst development, there is scant work towards fundamentally understanding GDE’s local reaction environment and the process of electrode degradation. Herein, we prepare 2 different catalysts (Cu and CuO) with varied loadings of polytetrafluoroethylene (PTFE) (the addition of PTFE particles to the catalyst layer of GDEs can enhance CO<sub>2</sub> electrolysis by improving hydrophobicity) and carbon black deposited on PTFE membrane or carbon paper support to investigate overall GDE properties and monitor time-dependent changes. We alternate ECR reaction with electrochemical impedance spectroscopy (EIS) and goniometer contact angle measurements to track changes in impedance and hydrophobicity as a function of GDE construction and operating conditions (i.e., time, applied potential). We find that GDE made from PTFE membrane/spray casted carbon black/catalyst to be incompatible for further analysis at different time intervals as the PTFE membrane is innately insulating and leads to high ohmic loss. Results from this work will guide continuing investigation and improved GDE construction to mitigate degradation processes.</p>",
+  "subjects": [
+    "Engineering"
+  ],
+  "voiceoverId": "LnJ9nOU7NUU",
+  "originalVoiceoverLink": "https://youtu.be/LnJ9nOU7NUU",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "253d7f8df07ca316c00806a77c950c00",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "253d7f8df07ca316c00806a77c950c00",
+  "createDate": "2022-05-14T03:06:10.000Z",
+  "lastUpdated": "2022-05-14T03:06:10.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Khantey",
+  "presenterLastName": "Lim",
+  "presenterYear": "Junior",
+  "presenterMajor": "Chemical Engineering ",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Khantey",
+      "lastName": "Lim",
+      "major": "Chemical Engineering ",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/Her/Hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemical Engineering ",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Linsey Seitz"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/253d7f8df07ca316c00806a77c950c00.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106364&Signature=sWlNdehxJgy4QVAEXw02kBMdP8h4Fi8ebdfL1NB90drvhE5MHXnnKozMaX446iBB8ZVTUTuj1BwqSf%2Bcoiua47m2%2BAK%2F3wdJMxenlcas63%2Fx1jgL64H3B1Ck0ve%2FZ3Dcx2OCjqMxBjto4i3TVuhwg8N%2F%2ByiaxlrU%2Ff394b%2FyhLXxv%2B2xxJZj6apmMeCk9X3Epyg2UpAfRTmECw7hA4ddutskzwiF%2BJZrrU00E%2FTfkV8JD8hX63yesYkJPiOyQcI2vjqJeSNy7hft8lKnuPVYhIPQsck5KXWHL%2Bvzxw3ALZC0nFsJRRIxxksn3I4JLaYPjvGynvVuLEM39BcWKtipOg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/253d7f8df07ca316c00806a77c950c00.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663016&Signature=BqnmmhGAG%2B4d9G4hyU1b%2FbktSd0mKi8YOJJFuTZ7K8Um%2BsW5NlXEi4DX5UQV6DJQ4tYgjuERfqewdqJEWhWy2sTl5RlZkW%2BlgK5E15SkwRDDvCqheE0Lyto0bHborTWRTSe59nQ60ZlthqVKLMTcpqfyHyYjV2McWzQuQisjKuZXQISmVkFretdPhXUZGn%2FsSXMnLCOkPe%2FgQ17FA57b7cUHHRqJGY7Zoor3M2AP7C774WJv8OMiOmpMevJaG4Y8BQxZ0qUGQuYA5zLMoi0WsEwSZ8jUBq1mQkCE4Ktsbp2TvwMXsdLjG32vS1c%2FUhzHU0UkuCbvsZxFcm8Xc2jXOA%3D%3D"
+}

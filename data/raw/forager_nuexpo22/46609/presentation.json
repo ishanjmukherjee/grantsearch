@@ -1,0 +1,103 @@
+{
+  "presentationId": 46609,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Synthesis of a New Cyclopentene-based Compound as a Selective Inactivator of Ornithine Aminotransferase</p>",
+  "abstract": "<p class=\"ql-align-justify\">Ornithine aminotransferase (OAT) is overexpressed in hepatocellular carcinoma (HCC), an aggressive liver cancer, and contributes to proliferation. Inactivation of overexpressed OAT is a potential therapeutic treatment for HCC. Mechanism based inactivators (MBIs) are unreactive compounds that specifically bind a target enzyme’s active site and are activated by the enzyme’s normal catalytic mechanism into a species that may inactivate the enzyme. BisCF3 is an existing selective OAT MBI that inhibits OAT through a covalent bonding adduct. Based on the determination of the BisCF3 inactivation mechanism, we intend to develop a novel inactivator with improved potency. Prior work on the synthesis and characterization of MBIs for similar aminotransferase enzymes suggest that incorporation of a double bond (olefin) into the cyclopentane of previously developed MBIs can improve potency. Introduction of an olefin to BisCF3 would lower the pKa of the adjacent hydrogen and modify the inactivator structure to reduce distance between the trifluoromethyl warhead and the enzyme’s catalytic Lys292 residue, which both have the potential to increase inactivator potency. The previous synthesis of a BisCF3 analog which incorporated an endocyclic olefin failed due to isomerization of an exocyclic olefin from its desired position. Recent crystallographic studies of the BisCF3 inactivation mechanism suggest that only one of the two trifluoromethyl groups participates in inactivation. We propose the synthesis of a BisCF3 analog with an endocyclic double bond where one trifluoromethyl group is replaced with a carboxylate methyl ester (COOMe) electron-withdrawing group, which could potentially stabilize the exocyclic olefin and prevent the isomerization previously observed.</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Chemical Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "VM412sS3SJs",
+  "originalVoiceoverLink": "https://youtu.be/VM412sS3SJs",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "7689836352f9dea2a271b6eea42e9559",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "7689836352f9dea2a271b6eea42e9559",
+  "createDate": "2022-05-14T06:16:58.000Z",
+  "lastUpdated": "2022-05-16T20:42:23.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Alejandro",
+  "presenterLastName": "Medina",
+  "presenterYear": "Junior",
+  "presenterMajor": "Chemistry, Biology",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Alejandro",
+      "lastName": "Medina",
+      "major": "Chemistry, Biology",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/ Him",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Chemistry",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Richard B. Silverman"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/7689836352f9dea2a271b6eea42e9559.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106411&Signature=tmnRJtwRmZpYYO1XZMecqAWy5d9njaOKHRQB8babLpn2UEvdPGPH7jI7Ima51FQwnvo3TfTp38RtDDjVtAoFqswYWYm32bqCEK7GK7aPb%2BvdYXELmkZXGhjED5Juflh32p4rsNG2cCYDhR9AN0yhCNjh5kUVFmGG%2FK9P8Fu0VbcrIDbSIFkZaOBiI0dUm5UvDcnydBL%2BgqR8GD%2FgABIbdzlAVeUMx%2FXt0u2U3NEe1em3uoC5HQLnLLH5xIt9QQzLCRpj65ay%2FLL4KfU6dhgTly4Wy2lWnSAGak6c8QLt3Dyta8pOJpfeHccoKLliL%2FgOyCAW6G4YJPwcCtuKZOjQVQ%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/7689836352f9dea2a271b6eea42e9559.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663063&Signature=tFtMst2d3wKSr0QKw4TP7zvHQ6%2Bl7FXVzpO7f078zqTgZawPQgBLVjFDb8zm1Ls%2F%2F5tOOatG3qH7E%2FHtrlu9Xu4rYRW9CC2oH8nnLTMdQVgIzQXPkfcm8HFXbXTXBmCEx%2B1IiU74OjT1g8QQNwb1gj9BspicmEOSnjkZJOu%2BvCmMJ1qd5HoHArf%2F1l2IDh852fp%2Fo2T5QP2kc59gbawRFCpNe4nTymp5HO3w5MenydKRTqqx%2Blu2N51hRBSpV%2BbU8hv3IjnY3Nx3ttcw%2BBQ7nBBfAx5qr%2FPnJPki3rUFksqT1BmDVtARRMZgF0b1xynkHTTqoCnT7NkqfabKpeelng%3D%3D"
+}

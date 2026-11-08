@@ -1,0 +1,103 @@
+{
+  "presentationId": 46599,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong style=\"color: black;\">Synthesis of Protein Aggregation Inhibitors for the Treatment of ALS</strong></p>",
+  "abstract": "<p class=\"ql-align-center\"><strong style=\"color: black;\"> </strong></p><p class=\"ql-align-justify\">Amyotrophic lateral sclerosis (ALS) is a fatal neurodegenerative disease that affects both upper motor neurons (UMNs) and spinal motor neurons, causing rapid loss of muscle control and eventual paralysis. The two clinically approved treatments for ALS have limited efficacy, and there is an urgent need for a better treatment. Previously, a cyclohexane-1,3-dione (CHD) scaffold was identified as an inhibitor of mutant SOD1-dependent protein aggregation, which is a characteristic of a common type of ALS, through a cytotoxicity protection assay. Over the years, the scaffold has shown promise as a treatment for ALS, with some analogues improving UMN health more effectively than the current clinically approved treatments. My project aims to synthesize a new series of amide-containing CHD analogues, namely cyclic β-ketoamides. In general, incorporation of a tertiary amine/amide group has been reported to improve blood brain barrier (BBB) permeability. While current CHD analogs show good efficacy, good BBB permeability is necessary to treat neurological diseases. Two different synthetic routes have been explored to access the desired compounds, including a novel hydrogenation reaction. The compounds will then be assayed for their abilities to improve UMN health through mouse models. Compounds that improve UMN health will serve as promising candidates for the treatment of ALS. They also help the study of target identification and guide further modifications to the CHD scaffold.</p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Chemical Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "MlOJIHp-S48",
+  "originalVoiceoverLink": "https://youtu.be/MlOJIHp-S48",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "73f22da6bfd02067a4037794d21bde62",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "73f22da6bfd02067a4037794d21bde62",
+  "createDate": "2022-05-14T05:01:46.000Z",
+  "lastUpdated": "2022-05-14T20:03:00.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Rosalind",
+  "presenterLastName": "Wang",
+  "presenterYear": "Junior",
+  "presenterMajor": "Neuroscience and Mathematics",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Rosalind",
+      "lastName": "Wang",
+      "major": "Neuroscience and Mathematics",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "They/them",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Chemistry",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Richard B. Silverman"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/73f22da6bfd02067a4037794d21bde62.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106399&Signature=FhaSoTG6UTnpT3ZHvPdmDEgjJJNyDX0k%2B3vqq9LiBNY4daGuFFpr7FVVs6Xw%2FArN4CJvVuSvujFW3BArr2z1nDrfTnHzG4UEI04aG2Ci3TzGf9GsvWUjIUjgCjG6rk8zWKD2GzVzWeTA4o3FYN9KX1ByOc%2FJSll133Ak0p2gv4ZnlYPwpMs7P3nX4TXvNep%2Bh1pQTms%2BYse05si2nS83DsH8Ki4GZi%2BwRIu2MbNKKPpQ2alZ8sDwc%2BDZLJKknM1oBKNAFz5UJXEhxl4S6nvAFoO%2FAKx8tf1gSgJp6QvaDGogGXNHJNr7tpHB5qz2RUhRXpj3PHJpoKyJtEwXX6x43A%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/73f22da6bfd02067a4037794d21bde62.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663051&Signature=hOijm3Ww9ybmrmTa2rZy5iESw0F7695X8WaatXjTXrwx3F1Lhtqc8F5Akj%2FD6qWQ6iBKhBoMq0vHJzrgnvM3rIMbl3DieA0%2FFATJdx8NSJPA2GwvFTwTNW6EKwAdYDHo1J3D3lJ5m%2F0cK4dcVpH%2F1NoguvjuaKgwzFxu60FQ6ymKpq7RslwH0fmOfnq8zvbBhTCHhF7QK3jExDXerCF1noWhgas7O6apqbc1rcPgvi%2B0M373CLPMlnxSD95ru%2F4CyAta31EYfeywxCMYpGlso8B9W6CEwuJoobpPvhAinx3TDIIHhQ%2BWlvquirYOQMTDxFiE1F74hXtWPpBOiYZdHw%3D%3D"
+}

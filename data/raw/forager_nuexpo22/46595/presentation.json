@@ -1,0 +1,101 @@
+{
+  "presentationId": 46595,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Imaging Hydrated Harbor Seal Whiskers to Better Understand Perception</p>",
+  "abstract": "<p class=\"ql-align-justify\">For over a century, researchers have been using the vibrissae (whisker) system as a model for the study of sensorimotor integration and tactile sensing. Seals have whiskers with specialized geometry that can sense small disturbances in the water as they swim, and they use this ability as their primary means for catching prey. In this project, I focused on devising and carrying out methods to use a computed tomography (CT) machine to create 3D images of seal whiskers to quantify their geometry. Because seal whiskers are specialized for sensing in sea water, it is important to characterize their geometry in a hydrated state, as the geometry of their whiskers change as they dehydrate. Scanning whiskers purely in water, however, is not feasible as both materials have similar radio density, making them indifferentiable in a CT scan. I conducted experiments to determine the time to hydrate and dehydrate whiskers based on size, while also visually characterizing the changes in geometry. It was determined that large whiskers dehydrate too quickly to be scanned. I then tested the viability of the use of contrast materials to increase the contrast between whiskers and water and determined iodine to be a suitable candidate for further testing. I constructed jigs to hold the whiskers during the scanning process and scans of the surface of hydrated small and medium whiskers in air were successfully completed. We expect the usage of a contrast material to yield effective scans of larger whiskers, which will aid in further sensing models.</p>",
+  "subjects": [
+    "Engineering"
+  ],
+  "voiceoverId": "nSaadoxeFbg",
+  "originalVoiceoverLink": "https://youtu.be/nSaadoxeFbg",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "a2837c383c6c4289c2c3d7f9501ce729",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "a2837c383c6c4289c2c3d7f9501ce729",
+  "createDate": "2022-05-14T04:58:24.000Z",
+  "lastUpdated": "2022-05-14T04:58:24.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Khadijat",
+  "presenterLastName": "Kokumo",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Biomedical Engineering",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Khadijat",
+      "lastName": "Kokumo",
+      "major": "Biomedical Engineering",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Biomedical Engineering and Mechanical Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Mitra Hartmann"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/a2837c383c6c4289c2c3d7f9501ce729.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106394&Signature=brXv6i%2Blqtmtt%2BKRv%2BJwKbzI7jqump%2F3LMvZTsH3vPjZzA3%2BmERElqmwj3wq2GH3zJbSBVaVDxJX4eHw8AJX2KeeOz7UkaVRbYXJZJ3l8CuglkXJbqYDwNADY3HlXMBDeTasHz90vGEoaicQhXbNrjZFcJsbrP098xsp6gYTeujx1YL5BnRsICTk0jX98rQVY2L8BVCvvqCDUs8XfQnoych0gfMufc8gARfsQJUvpz6R4fwHGSIH7y9yDTNP3044M%2FkS3HxgTpOC4GvAAwuTZHzqGJ3ncYRZ8FRE2zK9qdmI9KDXpYQ%2FZSMer03k9d0YWsjTRAkpsVQb%2F7FsYSLI0Q%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/a2837c383c6c4289c2c3d7f9501ce729.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663046&Signature=xu5JbZK4Au2jTsbPDKXczmW0oy3L%2FZ2%2FKUod438%2Bbnu86vxUcZZ9g4Ea7MtLsG70C06H1EmJbBzTPPD7avQwO%2FQzijs8THr%2BSwbtWns8f2iKAUa6Xqffj5U2%2F%2FdOjTQMBUmHpV%2FN1XmTSERcQawQBzvhj9fQz5zVHacmzjh2BJwaCynehrgV8A2uzT2DCys9PhxsS1yhnDfYLWIe8qM9k2AH98SMB4HtcvjGffTc6yuX7XMGt7GtSI6oE1koEq1OFbpbnjrdbcYg5iA0XZgI6Q2ZDcAPFPsnEse5uvpAo1cYjn5jIX0JV%2FEwW1w8ZwUtL%2F0JkeqsK9eh%2BDlyKaq%2B4w%3D%3D"
+}

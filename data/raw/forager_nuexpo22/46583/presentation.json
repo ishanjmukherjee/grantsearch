@@ -1,0 +1,101 @@
+{
+  "presentationId": 46583,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Impacts of SPI-2 Expression on <em>Salmonella enterica</em> Growth and Infection Ability</p>",
+  "abstract": "<p class=\"ql-align-justify\"><em>Salmonella enterica </em>is a widespread bacterial pathogen that causes gastrointestinal disease. During an infection, <em>Salmonella</em> first invade, then replicate inside a host cell. Replication within a host cell requires specialized machinery controlled by a network of regulatory genes. One critical regulatory gene for this machinery, <em>ssrB</em>, allows for replication within a host cell when expressed at high levels.<em> </em>While this is an essential function, <em>ssrB’</em>s effects on other important stages of the <em>Salmonella</em> life cycle, including growth and invasion ability, remain ill-defined. To investigate these relationships, I created three plasmids, customized DNA that can be taken up and expressed by bacteria, each encoding for <em>ssrB</em> at incremental levels. I inserted these plasmids into <em>Salmonella </em>to obtain strains with low, medium, and high <em>ssrB</em> expression. Then, I measured the growth rate of each strain in high- and low-nutrient conditions. Although there was no difference in growth in high-nutrient conditions, there was a slight deficit associated with higher <em>ssrB</em> expression when grown in low-nutrient conditions. This suggests that while Salmonella can grow normally while expressing <em>ssrB</em>, there is a small energetic cost of<em> </em>expression that can inhibit population growth when resources are limited. Additionally, I infected mammalian cells with the <em>ssrB</em> strains and found that all were ineffective at invading cells. Together, these results show that <em>ssrB</em> expression limits growth and invasion ability, highlighting some adverse effects of a necessary gene. Continued investigation will illuminate the carefully balanced tradeoffs that determine infection outcomes, providing further insight to treat&nbsp;infections more effectively.</p><p class=\"ql-align-justify\">This project was funded in part by the Office of Undergraduate Research’s Academic Year Undergraduate Research Grant.</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "LqlcrQ7nrZk",
+  "originalVoiceoverLink": "https://www.youtube.com/watch?v=LqlcrQ7nrZk",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "23b9a54ad13aad953d67c56469794959",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "23b9a54ad13aad953d67c56469794959",
+  "createDate": "2022-05-14T04:25:03.000Z",
+  "lastUpdated": "2022-05-14T04:25:03.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Cecilia",
+  "presenterLastName": "Stumpf",
+  "presenterYear": "Junior",
+  "presenterMajor": "Biological Science",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Cecilia",
+      "lastName": "Stumpf",
+      "major": "Biological Science",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Molecular Biosciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Keara Lane"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/23b9a54ad13aad953d67c56469794959.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106377&Signature=EHDt23BSLcnwRV37PbLbBwmKlEgFk4%2FyZ4eHxWcAFGxd3zZHPu9jKE9d3BNRFCvGsZ1yooP21TFQRf01pWeqqP0%2Fg7MdbP6JA5Ohw1SbBOGjaKj%2BEHcqDptpK%2FppH%2FGWs2CszXPveeCZiLyuFhC0iUi8vMw4hdsOaolfHZ08h%2F7%2BOklJ%2BbEB1R3x3%2FNZMVshz2pn%2BArCQL1axxHiCXUcF30vy2s7Z%2BYO7AYZ3pA4k7z4mprH3lb8uGkkRxwy8JIqmnl7%2FnDNdLS4axPrNIvmLHjhq%2F2peSgs6eEwzY62bJEnkH8cl2oVfazv2O9BX74NvTYn1XuOCxF62%2Bnfd3I0XA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/23b9a54ad13aad953d67c56469794959.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663029&Signature=aXuGQiX7eIEUDMC%2FS0%2BFdLULgYKHid%2FA8hqnc%2B0x%2FTZWp5o1DxvZdCMxYXs1uS%2FYfM0dKErxyxs3l4wTKQuB27JkVklQK7sfUqaOQetlD%2BSOL4XLFrkFJxpGKnKS0YEj%2Bz5B8mC5FpAs9d4vyY4kgUnS20ULjUZBX%2FzcMoGzJeBksO54Q4ZOF%2FKPzgqdiJzbM5f0A6hrrWqCfBiV1S6rjfXhdzEgPo%2F0VkExSuWfgoHgqngZRVXiVlkugoBb6jcJ%2BeWToygQGoM%2BsUmX02WPccYHpYycStrPUvGEwa1%2B52cQymQVesotU%2BXPkwfISmwxG8cYcarCBMH1hCfjF0BhnQ%3D%3D"
+}

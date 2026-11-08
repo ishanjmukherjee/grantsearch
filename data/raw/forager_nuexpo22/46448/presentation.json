@@ -1,0 +1,102 @@
+{
+  "presentationId": 46448,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>The Impact of Wage Spending on Team Performance in Soccer</p>",
+  "abstract": "<p><span style=\"color: rgb(13, 13, 13);\">In the past two decades wage and transfer fee spending in professional soccer have increased significantly as more and more teams hope to improve performance with financial investment. In this research, I use ordinary least squares (OLS) regressions to investigate the impact of wage spending on team performance in soccer via three different models. In particular, the first model analyzes the effect of team total wage bill on performance, the second model analyzes the effect of wage dispersion on team performance, and the third model examines the so-called \"superstar effect\". The results in the first two models suggest that team total spending, but not wage dispersion, has a statistically significant positive impact on team performance. The results in the third model confirms the existence of the superstar effect in soccer, as the playing time of superstars has a statistically significant positive effect on average points per game for a team, which indicates that targeted high-quality spending may be more effective at improving team performance.</span></p>",
+  "subjects": [
+    "Business & Economics",
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "Tpi5ikVYiFU",
+  "originalVoiceoverLink": "https://youtu.be/Tpi5ikVYiFU",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "04cfbed06dcbcf6cf72868fd95a56ebd",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "04cfbed06dcbcf6cf72868fd95a56ebd",
+  "createDate": "2022-05-11T14:55:42.000Z",
+  "lastUpdated": "2022-05-11T14:55:42.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Ruichen",
+  "presenterLastName": "Gao",
+  "presenterYear": "Senior",
+  "presenterMajor": "Economics and Mathematics",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Ruichen",
+      "lastName": "Gao",
+      "major": "Economics and Mathematics",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/Him/His",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Economics",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Jeffrey Lewis"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/04cfbed06dcbcf6cf72868fd95a56ebd.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106259&Signature=tYEiqvdfA6oZkeTRY1Y2JOY31wEFTbdTbdWKHVrEghwIQ8BgVoWhThCeGmQ4mXjxQvzoUjLSt1PV6QJaMLSUKw%2F7q7HcjHfO%2BmlgHUDsDdnP1OS1%2BZN%2FsKK2Dx53U9jznKKo7uswuDGL1Y4qwWcF7RZNRrpSt5vircUPDz8ACTm2nGrcjJ0vdZ8j35Xe2NKgZPsoUqndIpW8i4RUYS562%2B8d69bW06%2BS04GLJyJ0eDv5dpob0DXd%2FZkwRrjz3ZM%2FhnMmA8qtl7fycC1Rfz2xXym%2FL8ZyGm5SIIYf7H%2BV%2F2SVTR1tyDbgAwSB53GLPb%2FoyXtjMvLI9A4DcPzwB16zRw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/04cfbed06dcbcf6cf72868fd95a56ebd.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662911&Signature=AL1R%2F4YubSn3nr2fo3Y6Mo4VcKjrxxBo2cwG5v2ifJhXRzhVtVm%2FA64lOPEQtG2DKQCbFSMfmGH5BXrTxp3hD2AgG8gekH5LCXrkN4dBrDWpH5P6KCq%2Beg9fCKq5WWNzX6BFxRG8Hir9mvIuLxqc%2F0zbgt3%2FxuVVeKXJmlMUWMyZ6jBa%2FwxjQoVPjt3RBedCQw7lXLGATsyuHMv8dY9cPATdGyEMnJyUHqPUR7fuKX9DIlkaknH9c0kQBgoK4gvubPMrC3HCGxV1qcVHQ8Www4tflK37ZaNOgNNSKPXOA52lEh4RrZ8%2FPWp%2Fz%2FAMExSUMSIkeMnRW4HeHIik380puw%3D%3D"
+}

@@ -1,0 +1,101 @@
+{
+  "presentationId": 46576,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><strong>The Insider Effect: CEO Employment History and Firm Performance, 1990 to 2021</strong></p>",
+  "abstract": "<p>We study the effect of insider Chief Executive Officers on firm performance of publicly-traded firms in the S&P 1500, using data on 507 unique CEOs who started in their roles between 1990 and 2021. We analyze Chief Executive Officers’ previous history at the hiring firm, and discuss how new CEO-hire decisions are made by the Board of Directors. We find that more than 70% of CEOs are insiders, defined as the CEO having worked at the hiring firm for two or more years before being hired into the CEO role. The evidence suggests that a CEO’s insider status acts as a statistically significant predictor of firm performance over their tenure, in specific situations, but not taken alone. Such situations vary by firm size classifications. </p>",
+  "subjects": [
+    "Business & Economics"
+  ],
+  "voiceoverId": "6L8yGS53CeY",
+  "originalVoiceoverLink": "https://youtu.be/6L8yGS53CeY",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "5717044bbbb4e7b444c4d39ea187647d",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "5717044bbbb4e7b444c4d39ea187647d",
+  "createDate": "2022-05-14T03:09:18.000Z",
+  "lastUpdated": "2022-05-17T12:59:07.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Nicole",
+  "presenterLastName": "Manning",
+  "presenterYear": "Senior",
+  "presenterMajor": "Economics",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Nicole",
+      "lastName": "Manning",
+      "major": "Economics",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/Her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Economics",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "James Hornsten"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/5717044bbbb4e7b444c4d39ea187647d.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106367&Signature=GwlL%2FRpRtJ%2BM2ANWCi9G%2Fl8qlw1nhxZsaTOGhZet6cQSCjDSygEPLHwslVmH%2Fq0yJw%2B%2F5RmPDB7tzuBnkz1mvkMAd6GsvLsO99x5kFB2M12x8UJB%2FW0UCFaKLkwM33BuJgAnoBWnEA09xTUBtipMynkpAAWTdKA7tZF9ycNzsprxrjTbcmxb%2FTRVeBwfVu%2B%2B67bqQPR92rDHAvlUw7xCbszaRMaUg8%2BLYSP2B0g%2BJG5WOdSxx%2Bzkm%2BT8B4T3gbK6pQ8vy5mInSdSUi8o%2FBOFeZIQJXMexlqqcBG7ooxQyU6hqL2rjV2WNwYlNtUX5fVpZF1F8sx3vt569gwVm2SfdQ%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/5717044bbbb4e7b444c4d39ea187647d.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663019&Signature=cDMpqn2%2F5hidDgDNlnGFzi0S8MSK%2FMKmCP%2FQlFDXDUiZ%2BYmC7NOGVhLUqgIdlYetQM8FRtLm6R5Wa96BKAW6tVM4HTEB4kyCZrnI8dXP%2Bl7YjKTTUOyClfS%2FSO5HjEBpc7gljX5yAhMJ3AThThqhKZ9Vbc3vIf%2FqMCPnLF8Pauoh0YmjIwPfJzA97ug%2BmCxb%2F5%2B%2FiqdnxBcdigA0XbgmOidQto%2F3EcYfr1vYYBqOpf055MoV7LRGM7m6BMJFDFHD5ZaU1aQlCRl5Ji7d390NJwSas3SHTq7Zqk4gaKGGllhNj9MF0lVpTI2mnnq9Ac3ykAyq4%2BAUsFa3fwqGs5w7Zg%3D%3D"
+}

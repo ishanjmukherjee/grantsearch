@@ -1,0 +1,101 @@
+{
+  "presentationId": 46544,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Investigating the Role of Alix in the Spread of Amyloid Pathology in APP Knock-In Mouse Models</p>",
+  "abstract": "<p>Alzheimer’s Disease (AD) affects roughly 24 million people worldwide and has been predicted to increase 4-fold prior to 2050. AD is caused by a toxic buildup of Aβ42 misfolded proteins, so if we could prevent the spread of these peptides between neurons, there is a chance we could stop the progression of dementia. Currently, there is no way to prevent nor eliminate AD pathology completely. For my project, I began investigating the role of the Alix protein functioning in the release of extracellular vesicles (EV) in the cortexes of mouse brains. Alix is a membrane scission factor in cells and works to release vesicles from cell membranes. Alix-dependent processes provide a potential mechanism for the spread of AD Aβ42 pathology through Aβ42-filled vesicles.&nbsp;Inhibition of vesicle release could provide a mechanism for slowing down AD pathology. My hypothesis was that by knocking out Alix, the spread of amyloid would decrease due to reduced release of vesicles containing Aβ42 from the pre-synaptic membrane. To do this, I created transgenic mice that had advanced humanized-AD pathology and performed Thioflavin S staining and quantification on sagittal brain slices. I then performed an Aβ42 ELISA to quantify amyloid burdens. After analyzing the data, the project findings indicated that the Alix protein does not have a negative effect on total amyloid deposition throughout the brain. This finding eliminated further research of Alix has a possible therapeutic target for slowing the progression of AD.</p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "6Lyk2sF9kQ4",
+  "originalVoiceoverLink": "https://youtu.be/6Lyk2sF9kQ4",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "964d023bb586f845a43058095a5a33b0",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "964d023bb586f845a43058095a5a33b0",
+  "createDate": "2022-05-13T20:23:31.000Z",
+  "lastUpdated": "2022-05-13T20:23:31.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Olivia",
+  "presenterLastName": "DeGulis",
+  "presenterYear": "Junior",
+  "presenterMajor": "Neuroscience",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Olivia",
+      "lastName": "DeGulis",
+      "major": "Neuroscience",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/Her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Neurology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Jeffrey Savas"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/964d023bb586f845a43058095a5a33b0.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106326&Signature=QwnI3CgEdpVJ3WU09wXdcVBa2eVo9HF%2F4ntjrpoE3WG1fwnuiYZce%2F%2FUQWhu2SRJlPxjxx3ux6zCgU8tYJ4NFBjMboATU1Qm9yREEe5di%2FYcs4ThJpUEDmuw6He4D%2BI2nGFbvekhnEGVKFigiRU0VMeoR3rF%2FlBH8aJk0K4Sh6jWN26eOj8%2BirztznKSnHUTYWdyzYJJJ6DcIfA7KE5U82KSwdzSScAZKNgHCL4V5kg8RVQtgIcicGXDn2FYcI06IH%2Fj02PhDP2VrbMgYruYx4CXp3LWZt1RjH5Acw0O4xEQ%2FFu29AnA8JIDo9hYyhBl4X8wAktDMyuVEZ9sv5CSVw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/964d023bb586f845a43058095a5a33b0.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662978&Signature=ya1Vw9fRrpS5t%2FNxxwloEXqQXT2deXaSQPoqxSMEqnaWREYApk97jdfpXP076hLgNk5Q%2BmTpe6bHAZeb%2BZ4%2FX4l9UW%2Bq35IuPGW4Rp%2FEGzMW1n96LG1bjDHRuL6YLfhuUp4QOD3tTwQ0K0rU%2FkIqlbDi6oCRAxPjfDUq94ztQhUS9BPlQpZ7Ee%2Bmx8WIOWMmCBHs%2BUmDden7dLwSw5%2FgWJXpG3coBfas7QgA3PFO6AFllKiY8MB1kvNXBZ3h967VzIahKekiuTWCJjGgSwf8GHy6w1%2FKcqcG9N5lx12QvP%2Fnp2Y6cIfSfusxib%2FdV25UqQyejSbSWfvIzU5F2U7Ffg%3D%3D"
+}

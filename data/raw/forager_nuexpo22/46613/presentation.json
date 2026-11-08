@@ -1,0 +1,102 @@
+{
+  "presentationId": 46613,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Plasmonic Copper Nanoparticles for Photocatalytic Dry Methane Reforming: Synthesis, Surface, and Performance</p>",
+  "abstract": "<p>Synthesis gas (Syngas) is composed of carbon monoxide and hydrogen and is in high demand for its wide variety of uses in electricity generation and production of common chemicals. The most environmentally-friendly production method is dry methane reforming (DMR) which reacts methane with carbon dioxide, two potent greenhouse gases, sequestering them before entering the environment. However, modern DMR is prohibitively energy intensive, requiring temperatures between 1000-1200K. Plasmonic metal nanostructures (PMNs) have garnered considerable research interest due to their potential for sustainable photocatalytic chemistry, with promising evidence supporting copper-based Antenna-Reactor PMNs specifically for photocatalytic DMR (pDMR). Previous research indicates that modification of synthetic methods for supported nanoparticles affects their surface areas, morphologies, and dispersion; reports also link such surface characteristics to the PMNs’ photocatalytic activity. A project was designed to answer how these factors relate to each other in pDMR, addressing the research need to comprehensively compare how different supports (host material on which the nanoparticles are placed) and loading (amount of supported active catalyst) affect pDMR kinetics, selectivity, and stability. Supported copper nanoparticles will be synthesized via co-precipitation while systematically varying metal oxide support types and copper-precursor concentration, then screened for copper loading relative to single and mixed oxide phases through different characterization techniques. The results will be collected into a library for comparative photocatalytic performance testing with the purpose of narrowing down the ideal range of characteristics for an optimal low-temperature, energy-efficient pDMR photocatalyst. The complete project will be reported, including future work on photoreactor design for performance testing.</p>",
+  "subjects": [
+    "Chemical Sciences",
+    "Engineering"
+  ],
+  "voiceoverId": "Jgo9w5NOWh8",
+  "originalVoiceoverLink": "https://youtu.be/Jgo9w5NOWh8",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "21b8a49261fd7235074d3d8e33ef742b",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "21b8a49261fd7235074d3d8e33ef742b",
+  "createDate": "2022-05-14T09:53:50.000Z",
+  "lastUpdated": "2022-05-17T12:56:06.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Javiera",
+  "presenterLastName": "Cabezas Parra",
+  "presenterYear": "Junior",
+  "presenterMajor": "Chemical Engineering",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Javiera",
+      "lastName": "Cabezas Parra",
+      "major": "Chemical Engineering",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemistry and Chemical and Biological Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dayne Swearer"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/21b8a49261fd7235074d3d8e33ef742b.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106416&Signature=JC1apn3RqREKPY1ulFeA9R5aRhvH0uaAe5Lzf477knPcu%2B4EWhh82DWHLDJ%2FMv0QSm26O2VbxOUsn7qPegOfOFjqNQLZOZHrwXdTp3SH%2FfTRD4NjevgTJC0%2FkkoYll11rmBIfsQy3XANrKpWgMbAePVGLUSoDsBvFi2lAhbmGIDmuk7hDYhS8PeJrJFDjkAnLJX7dMDFHeEDn%2BiFnN1d%2FFM7PMiQ1pQdajBRAvlPm95Xvhx8q7Nm0ftUyaddVaGYCfovR77Mk%2BrPL%2F%2FnZSbh%2BnMMPUJm9GJ7KfmOhqYNVCGhDOMKwSRjuFMd02Aon%2BhE93p5YCdgSd%2BJOUlvDK0PsQ%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/21b8a49261fd7235074d3d8e33ef742b.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663068&Signature=DfPz2LUDnVf0kY9udoQVP%2FxjrEjrYpyiMf3mOBYANEbkJKRRoo2GG60NiOSeJkO9CzuE%2Bug5yWFyb%2BjgGYJ438z5VAt7WnKt2cV59xyCMv20XToEEYS8p1SAwBraXTdBFRGppQ6%2FqHt7nT2P%2B%2FD9%2BRsmey8boq%2F%2FdSkgd37Ndbi9gFKW6NY2OipmXZjvh1WwMfMBH2OGH5PJVS6XrqAYhRMtL7tjn8QwzDbl%2BEz5DFgNoRxZkkQGJUYXeGxZgM3Z6nJv3IDHY0GkcnElvW6Z7wnD8d%2FovEmR8q%2FfMugRKeoZEk1Tjtlkua6u438BSpjB1SNK60y%2FDwBDE0bBlpRobA%3D%3D"
+}

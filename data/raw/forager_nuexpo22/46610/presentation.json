@@ -1,0 +1,101 @@
+{
+  "presentationId": 46610,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Screening for Contributing Factors and Countermeasures to Spaceflight-Induced Changes to the Gut Microbiome through Bioinformatical Analysis using STARMAPs</p>",
+  "abstract": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Astronauts face multiple health ramifications in spaceflight, several of which resemble the effects of disruptions to the gut microbiome, including metabolic changes, interference with immune functions, and gastrointestinal problems. Interestingly, spaceflight-induced shifts to the gut microbiome have been observed. Microbiome responses vary depending on the environment and stressor, thus opening the potential of finding Earth-based analogs to study the effects of spaceflight by identifying stressors that produce significantly similar gut microbiome shifts. Furthermore, finding factors with opposite shifts to spaceflight-induced gut microbiome changes could reveal potential countermeasures to these changes. We performed bioinformatics analyses using the analytical tool STARMAPs (</span><u style=\"background-color: transparent; color: rgb(0, 0, 0);\">S</u><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">imilarity </span><u style=\"background-color: transparent; color: rgb(0, 0, 0);\">T</u><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">est for </span><u style=\"background-color: transparent; color: rgb(0, 0, 0);\">A</u><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">ccordant and </span><u style=\"background-color: transparent; color: rgb(0, 0, 0);\">R</u><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">eproducible </span><u style=\"background-color: transparent; color: rgb(0, 0, 0);\">M</u><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">icrobiome </span><u style=\"background-color: transparent; color: rgb(0, 0, 0);\">A</u><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">bundance </span><u style=\"background-color: transparent; color: rgb(0, 0, 0);\">P</u><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">atterns). I compared gut microbiome shifts shown in mice from a previous International Space Station experiment (RR-1) to microbiome shifts in other independent datasets. We tested the microbiome changes from factors potentially contributing to the spaceflight environment, exercise and hypercapnia (elevated CO2), to the changes observed during RR-1 spaceflight. Additionally, we used STARMAPs to screen for factors that produce opposite shifts to spaceflight-induced gut microbiome changes, including various prebiotic, probiotic, and symbiotic supplements. We found that neither hypercapnia nor lack of exercise produced a similar shift in the gut microbiome to that observed in spaceflight, suggesting these factors are unlikely to significantly contribute to gut microbiome changes during spaceflight. However, STARMAPs demonstrated a significant, opposite, microbiome shift in mice given galactooligosaccharides (GOS) prebiotic supplements to the spaceflight-induced shift in RR-1, suggesting its potential as a preventative countermeasure to microbiome changes in spaceflight.</span></p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "GU4l_mo2Pqg",
+  "originalVoiceoverLink": "https://youtu.be/GU4l_mo2Pqg",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "b6c130b2d4104b5d9c78635ebeda5d26",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "b6c130b2d4104b5d9c78635ebeda5d26",
+  "createDate": "2022-05-14T06:33:07.000Z",
+  "lastUpdated": "2022-05-14T06:33:07.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Sarah",
+  "presenterLastName": "Kim",
+  "presenterYear": "Senior",
+  "presenterMajor": "Biological Sciences and Global Health",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Sarah",
+      "lastName": "Kim",
+      "major": "Biological Sciences and Global Health",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Neurobiology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Martha Vitaterna"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/b6c130b2d4104b5d9c78635ebeda5d26.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106412&Signature=MgjelRlEmq1E1o%2BXHup25y0Lo53DX5uC5zps0qWkdqfTOWEqWf16qRQIYQoBm%2F6zV8iPUj%2Fy%2Bxk2hnW%2FLnXvkNlGzvJVql8KDkt%2Fxv387WHTTtFvVFhkK%2FV5WOtulZ9DRw8QuBhwK5w7YDDlHa8siqyK5FxP%2BHSZ6j5loY6LAPgpsp2ZTBjzCz0kZX8Gr7zpyJAWxASdGqwXrrKKCmyDvLQBLI4ZtFjc%2BCND0la%2FyATvTSYL4jDvPt2eWJKhnJxd6LtteXUArkxejkfr%2BfE4tCzYJXTVnTXMrqqLPDTbkwWP78JQ9fOSDixPf%2F2LcXcje3PS0Fw9N17%2FDg35rW7zoA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/b6c130b2d4104b5d9c78635ebeda5d26.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663064&Signature=gn5EwKxzke6QCEL9SOoGo%2B3iDZQfIv5xiumigaA9bSzUjbhqg9HT8Qr7bl%2BjkXD3YnGUoBzgKaondQcJMUbVnGeyfuoEc8LWLSzC7h9lAMaYEX%2F7kD7W9Er9BGpnqPoBhvH7Ob5%2FuYR%2BKFtteMZpnmIA2zgYdXVXBSvP41Mspu25omwAd8ihiaj%2BtG1ojEUUeLa%2F97Nki8HkpfUlKk4fRVXzuoU59Q7AvpsaTkCHxCGgLdrsLiIjvnYGjsJOBI7iq1K23DTir8ZLQnap4WwGdjnu%2BnQFDn2HmOzzt%2BfBgjJPeboOQ0uSo0ZUsyfnHCaCcsaaAu7IG14qyQVGOlHxMw%3D%3D"
+}

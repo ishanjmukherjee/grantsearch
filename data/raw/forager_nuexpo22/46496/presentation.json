@@ -1,0 +1,102 @@
+{
+  "presentationId": 46496,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Quantifying the Air Quality and Public Health Benefits of LED Adoption in the Continental United States</p>",
+  "abstract": "<p>In the fall of 2019, the Trump administration repealed the 2007 Energy Independence and Security Act (EISA), allowing Americans to continue purchasing incandescent light bulbs despite their energy inefficiency. The recall of EISA created significant controversy because it potentially derailed the nation from a path towards green energy infrastructure. While attempting to understand the negative impacts of EISA’s repeal, we discovered that there has yet to be a study conducted on the relationship between lighting efficiency, air quality, and human health. While the United States Department of Energy (DOE) has estimated the energy and monetary savings of widespread residential light-emitting diode (LED) light bulb adoption, their estimates are not geographically specific, nor do they address the ancillary air quality and human health impacts due to reduced electricity demand and lesser emission of pollutants. Here, I estimate the number of light bulbs in the residential, industrial, and commercial sectors of the continental United States (CONUS) in the Northeast, Midwest, South, and West. I then assess their associated electricity demand in accordance with the DOE’s LED adoption estimates. To assess the benefits of more efficient lighting, I model the 2016 technical potential savings of LEDs, i.e., how much electricity is saved if CONUS replaces all incandescent bulbs with LEDs. Using the Spatial Matrix Operating Kernel Emissions model (SMOKE) I calculate the change in emissions at electricity generating units (EGUs) due to full LED implementation. Using the two-way coupled Community Multi-Scale Air Quality Weather-Research and Forecasting model (CMAQ-WRF), we determine the air quality changes that would result from full LED implementation on a 4 km scale. CMAQ-WRF allows for complex modeling of air chemistry to understand how emissions interact in the atmosphere and form pollutants. Finally, I implement datasets from the Environmental Protection Agency’s (EPA) Environmental Benefits and Mapping Tool – Community Edition (BenMap-CE) to contextualize these changes in air quality in terms of human health impacts. I find that full LED implementation would result in a 16% decrease in electricity demand; a 17.3% reduction in EGU emissions of carbon monoxide (CO), sulfur dioxide (SO<sub>2</sub>), and nitrogen dioxide (NO<sub>2</sub>); annual reductions in premature mortality of 1,261 due to reductions in particulate matter (PM<sub>2.5</sub>), and 98 deaths avoided due to decreased ground level ozone (O<sub>3</sub>) formation. This research provides a compelling framework for policy makers because it illustrates the multiple benefits, in addition to reduced costs and energy burden, that accompany reductions in energy demand.</p>",
+  "subjects": [
+    "Environmental Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "ZQsRQLPcjKU",
+  "originalVoiceoverLink": "https://youtu.be/ZQsRQLPcjKU",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "74e4b1f6c126b49bbeefe24fca5ff7ac",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "74e4b1f6c126b49bbeefe24fca5ff7ac",
+  "createDate": "2022-05-13T03:21:59.000Z",
+  "lastUpdated": "2022-05-13T03:21:59.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Grace",
+  "presenterLastName": "Hauser",
+  "presenterYear": "Senior",
+  "presenterMajor": "Environmental Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Grace",
+      "lastName": "Hauser",
+      "major": "Environmental Sciences",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Earth and Planetary Sciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Daniel Horton"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/74e4b1f6c126b49bbeefe24fca5ff7ac.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106281&Signature=s5Ur2BF6GSrKVFv6Hm0z6lA8o2i0OLSuoPuWe%2FMADvElyczNWJICTv6a2fHtNPfOUgok3%2FlCria88jpdxtRyu6sJk%2FYP2EQl4cHCQlP9GchINgXOPGrADxvWHBf%2Flkvb2TspZgbnIanEwO3mlzhc2VwY3JwkMswwdKTzMRqYnTdvXIjXMA3QUvAzlQfAvw2fGcDmy969fxDdPFR8AtmKC7XQlpArjc0MaOZEDRgNMlzPKgft3ASYhTf5qFC6qlKLFT3fID7pYrQVv1qWNxS4nh9g3QvSZWaKWJX5kafZjReaqQ2jYYM53TAbkjj%2BlZo6E3XiOQ%2F%2FBcLa6wwqyKJT8A%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/74e4b1f6c126b49bbeefe24fca5ff7ac.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662933&Signature=SW1Jc13l3JOezyy8LxrBC2uVA%2FcFk7VHXyBSG5dAoDuR6%2Fz36oZy1%2FPHjVEX8i2aiph22oG4a%2FV9w8lYQQbDxC%2FfonwzQfbp4lJeIEnEIS%2BeSlYiM5KHgdq2z2WIHtCmCPcX3JPmCL2%2F5AuGVbZG0DVxB7%2B2uiml1RH5OtMw7oWn9sN9Ufm4QS4bGPbnRweaIFfE7jWsy445N2OrVQUVn3LV8xN0ZTrF2xC8SvpcFWVmqdvppRhGx0NTT6myS5Th8p2TVxLSk5yCMjVVF6UB%2BL4np6N%2F80IsYNjRG2Q3yd2sEChDvpVpfXn3ZmYGlH%2BFtzr3J%2BQpINNv1WtN2YQyLA%3D%3D"
+}

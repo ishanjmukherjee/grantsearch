@@ -1,0 +1,102 @@
+{
+  "presentationId": 46542,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Investigating Relationships between Asthma Mortalities, Air Quality, and Social Determinants of Health in Chicago</p>",
+  "abstract": "<p class=\"ql-align-justify\">Chicago has one of the highest asthma mortality rates in the country, particularly among BIPOC communities. Previous studies have posited a host of underlying causal mechanisms for this disparity, including increased air pollutant exposure. However, a key limitation in these analyses is the lack of robust neighborhood-scale air quality data. Here, we employ a novel high spatial resolution air quality dataset and additional social determinants data to assess relationships between asthma mortality and social and environmental factors in Chicago. We used the Cook County Medical Examiner Case Archive to quantify asthma mortalities on a community-area scale over a four-year period (2015-2018). To assess the potential influence of poor air quality, a newly developed neighborhood-scale resolution (1 km<sup>2</sup>) fine particulate matter (PM<sub>2.5</sub>) dataset from the University of Chicago’s Spatial Lab was utilized. In addition, we included demographic and housing data from American Community Survey, and a multidimensional summary index that estimates the effect of social determinates of health on community areas. A Poisson Regression model was used to assess the relationship of each variable to asthma mortalities. We identify 189 acute asthma mortalities in this period, excluding those related to drug overdoses. By using different variables in each regression, the effect of PM<sub>2.5</sub>&nbsp;without the possibility of confounding variables is assessed, and we find that PM<sub>2.5</sub>&nbsp;does not have a significant association with asthma mortalities. Of the tested social determinants of health, we find that only minority group status has a positive and statistically significant association with asthma mortalities.&nbsp;</p><p><br></p>",
+  "subjects": [
+    "Environmental Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "g1k1x5DF67I",
+  "originalVoiceoverLink": "https://youtu.be/g1k1x5DF67I",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "5a0fc230138995fbb074fb7c7ef2dc8a",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "5a0fc230138995fbb074fb7c7ef2dc8a",
+  "createDate": "2022-05-13T20:06:35.000Z",
+  "lastUpdated": "2022-05-13T20:06:35.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Regan",
+  "presenterLastName": "Cronk",
+  "presenterYear": "Senior",
+  "presenterMajor": "Environmental Sciences, Global Health",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Regan",
+      "lastName": "Cronk",
+      "major": "Environmental Sciences, Global Health",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Earth and Planetary Sciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Daniel Horton"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/5a0fc230138995fbb074fb7c7ef2dc8a.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106324&Signature=wdzI9E%2FJz%2FxZRPymJhajlLo4VLXv0JuZ62isVjYcfDN3vhhUE1vNODXop4HZ%2B96lAMyGDcoQ8C7Gq2iIAUkDAuT5G1APdq3WUHlg%2Fc2j9lVmT2d6sBCBrWG6FFBsXz9sdNijl31WKy8N1WRt3rXoupmw7a%2FCU%2FDg2SM9gZtFj%2BTvi3Q0IJ1JHAH6OgNFMJuDkzdkZTcI2AAK9G03LYAu6cy8LegQm%2FtocLixtiqoXTA1DEMBpGX3GWLHzIYTBcLOfDA0kC91igNr%2BcSC93ua326Iy6kmq9eM8bpz8hVLJXKH0dLRpGvaouDVf5PMBHXb5LhYSuUZnTdHguqEEuK1Zg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/5a0fc230138995fbb074fb7c7ef2dc8a.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662976&Signature=WwDDDQjtcVX0mpm1qAii7gXku3OrJt1ljLl6UBxsOYmDK5fqN0vtQ6u0kgO8QxahaszuipsvT3MhU6apj6TB2zR%2F%2B7XWftgtIqcoASEmhr21S0HZ0sNkKCq7Dqwdx7yzQ6yEuzweorKkDFnZJuLPQzROYLAGf4BDw21O4aQKXXG5F3J31VW5O4cVp4Ixe5HJlDihHW%2Bi%2BTdodT1jBM0KEERcjOKBiELFBBEoPUj0oK8iyL2LABQMn54gyVBHmxNL9j%2B6mLL2aNLBCdMM2Bx%2BxwMoSAWQs%2FgLyHKXCmdy%2Fpr7rPl5qhdc%2Ftg3vjhRk0gCkDMKXu68iHIR4nIWsvjbvw%3D%3D"
+}

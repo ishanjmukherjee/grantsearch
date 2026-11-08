@@ -1,0 +1,101 @@
+{
+  "presentationId": 46489,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Clock Regulation of Glucose Metabolism During Diabetes</p>",
+  "abstract": "<p class=\"ql-align-justify\">Type 2 diabetes is characterized by elevated blood glucose due to the development of insulin resistance. Skeletal muscle is responsible for taking up 70-90% of blood glucose after a meal and is a key site for insulin resistance in diabetes. Previous studies show that circadian rhythms, an internal clock that tracks the time of day, control glucose metabolism and response to insulin in muscle. This skeletal muscle clock is driven by a key protein, BMAL1, and deletion of the <em>Bmal1</em> gene leads to reduced glucose uptake in muscle. Due to the clock’s vital role in glucose metabolism and insulin signaling, we investigated the role of circadian rhythms in diabetes. We hypothesized that <em>Bmal1</em> disruption in muscle during diet-induced obesity, a model for type 2 diabetes, leads to accelerated diabetes development. To test this hypothesis, we used mice with muscle-specific deletion of <em>Bmal1</em> and control mice fed regular chow or 60% high-fat diet. Contrary to our hypothesis, glucose tolerance test (GTT) and immunoblot results showed equal glucose clearance and increased insulin sensitivity in <em>Bmal1</em> knockout mice compared to controls. This suggested a compensatory mechanism may be maintaining glucose clearance in knockout mice. To overcome this mechanism, we repeated the experiment for an extended 12 weeks. GTT results showed reduced glucose clearance in <em>Bmal1</em> knockout mice, consistent with our hypothesis. The next step is to immunoblot to investigate mechanisms contributing to reduced glucose clearance. Our preliminary results suggest that skeletal muscle clock disruption may lead to decreased ability to adapt to diabetes.</p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "ii3nrJTjQF4",
+  "originalVoiceoverLink": "https://youtu.be/ii3nrJTjQF4",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "a47a8c80bf6e80cbf1378c5c0fef4236",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "a47a8c80bf6e80cbf1378c5c0fef4236",
+  "createDate": "2022-05-13T02:21:55.000Z",
+  "lastUpdated": "2022-05-13T02:21:55.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Kaitlyn",
+  "presenterLastName": "Hung",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Kaitlyn",
+      "lastName": "Hung",
+      "major": "Biological Sciences",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Biochemistry and Molecular Genetics",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Clara Peek"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/a47a8c80bf6e80cbf1378c5c0fef4236.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106275&Signature=e%2B4amaaDkRIKVtqny%2FuEcm99dOfmKkFm%2Fopj%2Ft3K1yAEGUFMtsfFI86GemziJd3jVGFAXtXUxvgbcPQvxxPHJfzGvL6UTEeMEziT6e9LHqQ7ed9wmRFVbByXweYVkhX7XuygdV68r0dSSc5b2lDBviWj55YrIdPFd6T3QSn5nqJbcydHergyQxs3DWtmadXv9C9geWgseavs%2B2VlMgHA%2BYJdPb8Wh887DpL346REk1n%2BM3nRLIqgU92uvRqjie4aAkuaHyLYSmNrGOkzcSzudgCsc%2Bb1G8IoKH3L72dPft33k%2BZ%2B76jJbBJNcrGxT9D%2Br9nWbeB8XF52UoBgY80hUA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/a47a8c80bf6e80cbf1378c5c0fef4236.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662927&Signature=DGXHMZ%2BJvQQ5eSaC2w6j%2Bf2aRDtxFVJwK7GA2FIHgAdrb3gvOlA30VYODPVn5lpsqtbs91x7Kl%2F0EcJwaUT0XGjGkyAMrCDd8nVDdDuOIM21EBVaUm44H4Vet%2B49sAwIjLzC9TlnojcTGD5rwGCRg0UED03jBTuoTQaShb5QNpFB4BXpOLiKhcD7eaMmeIriH3jLzahgQ46q7zNTKv%2FWOTNuh6agNVay3gMjCdiFwrhp%2FeM%2FUgFgqwOeAP8NS0W6jWpLwCFDyjEYW%2FTwmFMke3Y2cFZFOD4Lciyc8k2nRHtHAmd3%2Fkp4RMBclY7kAyaqccOjSGeVzlbLLhlV50Wy5w%3D%3D"
+}

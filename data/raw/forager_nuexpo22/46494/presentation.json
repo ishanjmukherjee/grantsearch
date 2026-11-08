@@ -1,0 +1,127 @@
+{
+  "presentationId": 46494,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>GoodAsNU: A Community-Based Approach to Reducing E-Waste Through Electronics Self-Repair</p>",
+  "abstract": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">As society’s demand for smart devices and consumer electronics grows, the amount of electronic waste (e-waste) created is drastically increasing. The influx of electronic materials such as rare earth metals and lithium-ion batteries into our waste streams has far-reaching effects on societal health and wellness, and the increased demand for these materials causes irreparable damage to our environment. To help break this cycle of electronics demand, our project, GoodAsNU, wants to better understand: (a) how the university currently repairs, repurposes, and recycles electronic devices, (b) whether students would be interested in learning about computer repair and maintenance, and (c) the types of repairs that students typically need. To explore these questions, we conducted 17 interviews with Northwestern students, staff, and faculty. Additionally, we performed repairs on 7 electronic devices ranging from smartphone screen replacements to laptop battery replacements. Through our research, we learned that students actually want to fix their electronics before outright replacing them, but can often face significant economic or technical barriers preventing them from doing so. Furthermore, tech companies often make device repairs more difficult through incompatibility with third-party components or by making device disassembly exceedingly difficult for the average consumer. Our research findings will inform the design of a self-repair workshop that we plan to organize and host in the spring. Our findings also have implications for how we might discourage companies’ reliance on planned obsolescence, and how we might foster a culture of repair among consumers.</span></p>",
+  "subjects": [
+    "Computational Sciences"
+  ],
+  "voiceoverId": "tmMvWwyv66M",
+  "originalVoiceoverLink": "https://youtu.be/tmMvWwyv66M",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "e5cdd3c02ea99aca88eb689a6d093799",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "e5cdd3c02ea99aca88eb689a6d093799",
+  "createDate": "2022-05-13T02:57:56.000Z",
+  "lastUpdated": "2022-05-13T02:57:56.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Aden",
+  "presenterLastName": "Weiser",
+  "presenterYear": "Junior",
+  "presenterMajor": "Computer Science, Materials Science + Engineering",
+  "presenter2FirstName": "Molly",
+  "presenter2LastName": "Schneck",
+  "presenter2Year": "Junior",
+  "presenter2Major": "Computer Science",
+  "presenter3FirstName": "Jack",
+  "presenter3LastName": "Burkhardt",
+  "presenter3Year": "Sophomore",
+  "presenter3Major": "Computer Science, Sociology",
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Aden",
+      "lastName": "Weiser",
+      "major": "Computer Science, Materials Science + Engineering",
+      "level": "Junior",
+      "isMainPresenter": true
+    },
+    {
+      "firstName": "Molly",
+      "lastName": "Schneck",
+      "level": "Junior",
+      "major": "Computer Science",
+      "isMainPresenter": false
+    },
+    {
+      "firstName": "Jack",
+      "lastName": "Burkhardt",
+      "level": "Sophomore",
+      "major": "Computer Science, Sociology",
+      "isMainPresenter": false
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "he/him",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      },
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      },
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "he/him",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Computer Science",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Prof. Sarah Van Wart"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/e5cdd3c02ea99aca88eb689a6d093799.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106279&Signature=pJG0Ah9FjHC31XnOIJBeuZIkypTUpiFlKEJXHSTyaygT6R9VgLo7ZshGlLRgb%2BiEbyR%2B5Hr4gRBhmdYWnhxnSYvi2PcYROAe66hsxjJtaxfIgYv86xdiKZ06xo5AGyy%2B6lO8HzcfflD3%2B0qiTRq2hqmpWyNOA1Ma0M4NAKmuQ2kS%2BvbWHVlDjbYK1Q82QHG0XpcD2C17tQpQrFiIm%2BUHAejBwbrD2v8ReIozcjwh%2BGYkcyFRJbZzxsYqAlTsOAH%2FXZq%2BFzsIbpmCJdT5sHV7R95vB2Ns45vAogasKWmyWPdsxGwDMCDMB7MqU2nVs%2FwBJnSNK3wuBzYfQqlM%2BJH9Ug%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/e5cdd3c02ea99aca88eb689a6d093799.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662931&Signature=I39hOiHmzw8rNvdlqnYQ%2BG34fxE%2FXdfTQhBJeLLAyfm0D4HPa9xRTl5kOvAwAPpsmPLTs%2B7gl6iND6YwzKbQnE7y8FxmCmqZaRnNN7XyJmQV1v%2BI7XFOgVjt8VLUEGqzPK2ixjoppGw35y7upkMwRWZ420IJdhIID7AqtS9fxN9zTqscD9i7Jvg9hWLe8jZtRlEbxOOvijA0zWyWrPNY%2F3XdL0ivgM53gzfKoO0ts3G%2B9HpY4T0vuJdTo4OLA%2BIBcTo8baISiOPWwdUqHvwn%2BGfAE6MlP%2BWTh689TdjKVN9ERGuD%2FDGQzsElr2V9hcpqcMg%2B14V4RXJEp0Xr8FSnwg%3D%3D"
+}

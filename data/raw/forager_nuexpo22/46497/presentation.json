@@ -1,0 +1,101 @@
+{
+  "presentationId": 46497,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><span style=\"color: rgb(0, 0, 0); background-color: transparent;\">Examining the Relationship Between Parent Stress and Infant Development</span></p>",
+  "abstract": "<p><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">Denise Kao</strong></p><p class=\"ql-align-center\"><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">&nbsp;</strong></p><p class=\"ql-align-center\"><em style=\"background-color: transparent; color: rgb(0, 0, 0);\">Faculty Advisors: Theresa Moulton and Colleen Peyton&nbsp;</em></p><p class=\"ql-align-center\"><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">Examining the Relationship Between Parent Stress and Infant Development</strong></p><p class=\"ql-align-center\"><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\"><span class=\"ql-cursor\">﻿</span></strong></p><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Parents of newborns have many daily responsibilities that may lead to high levels of stress. However, caring for an infant with additional health complications may amplify the stress and worry experienced by parents. For these mothers, regulating their stress levels is not only necessary for their own wellbeing, but can also influence how they interact with their children. This study seeks to examine the association between parent stress levels and delays in developmental areas for premature infants. We hypothesized that parents with infants with a medical diagnosis will experience higher stress levels than parents with infants without a medical diagnosis. Data was acquired through three questionnaires: Parental Stress Scale, 12 month Ages and Stages Questionnaire, and a 12 month survey developed for an adjacent study. Pearson’s correlation coefficients were calculated from parent stress levels and scores from the Ages and Stages Questionnaire. Currently, data from 30 mothers of infants born 36 weeks or earlier have been analyzed. Preliminary data suggest that higher parent stress levels are most strongly correlated to delayed personal and social development in their children (r=-0.36, p=0.03). The negative correlation suggests that parent stress levels increase as scores for personal and social development in infants decrease. Furthermore, current data implies that parents of infants with a medical diagnosis do not have significantly higher stress levels than parents of infants without a medical diagnosis. Although not conclusive, this suggests earlier support for parents of babies with delayed personal and social development may be warranted.&nbsp;&nbsp;</span></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>",
+  "subjects": [
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "AfkGRMdLksg",
+  "originalVoiceoverLink": "https://youtu.be/AfkGRMdLksg",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "dc4966a13745ce2f2385d5592c23a6a2",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "dc4966a13745ce2f2385d5592c23a6a2",
+  "createDate": "2022-05-13T03:33:50.000Z",
+  "lastUpdated": "2022-05-13T03:33:50.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Denise",
+  "presenterLastName": "Kao",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Biology and Psychology",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Denise",
+      "lastName": "Kao",
+      "major": "Biology and Psychology",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Feinberg School of Medicine Physical Therapy and Human Movement Sciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Theresa Moulton and Colleen Peyton"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/dc4966a13745ce2f2385d5592c23a6a2.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106282&Signature=lmfu6MLtR00rgnGJ3vN7kkAsYCoM4X%2F6L%2FnIc51LPCJEXl3WY%2F0YX653DEv4PxYSmzS3IQZqzSpFEM2FYgcgzlhfMXUG2ngK8DtPqpnjqsRsOnrapSBtAOQPSs7f%2BERbKWbBeTMA2u1bhhOiH0X7nJrdNTxFcQLfKEcvOwM%2BgkGmgAGQkDssTEvBMObYTRqE8zwGG0sLWfyzXVr6qopa7rvO7GoAJmgpsDgDI8C9Vh4sGs3VnTzDxF8IW%2Bf7NMWpmW%2BiMhuivg7pD8tFaD1Vz0%2BFgB9GwRXGHRt2zZQvkoKaUleP3aVRyw55n%2FEUK4KchFrvBPcvcZ%2Bm1PT%2BQ30E4A%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/dc4966a13745ce2f2385d5592c23a6a2.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662934&Signature=Yx5w7ygSBXcwq04OLNLVBxT6ZnyGzluDcpyq9KldgWRztHmjkyp9sfObDYYDrwyoRt%2BgIHuuaXfc46tKQ2WrsvaJkq3agW2d1192Eklllw608dOJUU1xKaEz1LB%2FsBDnE9PSp6vGoguvGQfuXEahDJgJy3Cvh%2F5PlhV3TdFOTOHHP81vPlB49xoYvi4VNCnX%2ByY2AqlTbJcme1v2MddNgjBoHuT8lB0aAAYe9LOQP%2BXhogYC1f978WVngaIECcZHgHGR%2FhLzLRjjPff9qy6wR9R7ZCj1BwE5BvKgkmpN%2BE4qCIBZ0f57LPtvGWrmCiu5w0%2BvFT6Ic%2Fz0UUt8Pad8%2BA%3D%3D"
+}

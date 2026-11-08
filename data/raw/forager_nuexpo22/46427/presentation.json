@@ -1,0 +1,103 @@
+{
+  "presentationId": 46427,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Characterizing Carbon Slurry Properties with a Custom Built Device</p>",
+  "abstract": "<p>Wind and solar sources today are now competitive with carbon fossil fields thanks to investment in renewable energy generation technology. However, innovation in grid-scale energy storage systems is required to integrate these renewable energy sources. One promising system are semi solid flow batteries (SSFBs) that utilize solid material in an electrolyte solution, commonly referred to as a slurry, for electrical storage. Compared to existing pure aqueous batteries, SSFBs have higher storage capacity while compared to existing pure solid batteries, SSFBs can be more easily scaled to grid-level energy storage. Highly conductive carbon black - structurally engineered soot - is an appealing potential active material for slurries due to its high surface area corresponding with high storage capacitance and low capital. Prior studies have extensively shown the electrical properties of carbon slurries are affected by how well the slurry flows, or rheology. This project aims to characterize the relationship between capacitance and rheology for carbon slurries. To measure rheology, a pre-existing machine - known as a rheometer - physically induces pressure, or shear, onto a sample to force it to flow. To generate electrical measurements, a custom-built apparatus was attached to the rheometer allowing current to run through the sample and acquiring electrical impedance data. By using a Python code, the electrical impedance data was converted into capacitance per unit area of the slurry. Thereby, capacitance can be shown as a function of shear rate. Overall, this project showcases how rheology and capacitance can be simultaneously measured as a function of one another.</p>",
+  "subjects": [
+    "Chemical Sciences",
+    "Engineering",
+    "Environmental Sciences"
+  ],
+  "voiceoverId": "JUbYexedgpE",
+  "originalVoiceoverLink": "https://youtu.be/JUbYexedgpE",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "68aae03a40b8cb3b0ce70803e730ee58",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "68aae03a40b8cb3b0ce70803e730ee58",
+  "createDate": "2022-05-10T02:58:53.000Z",
+  "lastUpdated": "2022-05-16T15:14:48.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Kaua'i",
+  "presenterLastName": "Wu",
+  "presenterYear": "Junior",
+  "presenterMajor": "Chemical Engineering",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Kaua'i",
+      "lastName": "Wu",
+      "major": "Chemical Engineering",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/Him",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemical & Biological Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Jeffrey Richards"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/68aae03a40b8cb3b0ce70803e730ee58.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106255&Signature=w40n8XwJJKEJJ2c7LQ7b%2F66Q0q7j0wwldVfiSAwF7FX5GhdIxEJ0u416FhqjQrNc%2BoOsqCW71pbYYyh%2FIMGq2zarhlfDBcOfTlkH4hzOvrV6CCLoLE0AjTFbG8HlJyOb4oYSHKHzVDKFSsfz1ydWvzrYKal%2FEHc%2BUe21KWzPZq5jX8IhI7qCIqIUq1KI2mlEMvzhzxYkxO%2Bu3eESVAJuSfjHFCJptC%2Bd1BF7UKpKkgYz2CFdxN3L7QoKrGrPmIitN2ZTxyOK3ZbCVJUk8cSkOKSfhbaDIDGdalrwO8t7JNnozSJHNZJitp88ZMeJPPRwSbz1IoYVLwkK5N9oM9sjtg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/68aae03a40b8cb3b0ce70803e730ee58.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662907&Signature=IUJtn8g7yJ68L06Q2pufyPE%2Bmv540I7B%2FLjMlFQtHcBZNDJluhUJ28SBqjHLylGavSV%2Bo1ijWV8kdbWkxTEXegLGkO0pgQjs7pYMCREcmcqQnH7leEbY9xcs1SCJ9tePN%2Bial%2BisusahBczQCTrgeWexZAVuoqF4I8O68CcO%2Bxa5C15B0TUDaraKVTqFxthhMiWi8UQavsG6%2BlD0UA9cb77gstxMeJ9B9FMCG%2FTdaKIuv2wE8lW19d%2BtaxsCZWLbyv70FZSZ7FWuL5QSgjqVvZJUgr%2FisXPTt0tdkuzIrXtwP0qUg9EKdnQ1PF966Kp7INPz3z5bFW5WMBSw6fSTng%3D%3D"
+}

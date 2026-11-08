@@ -1,0 +1,102 @@
+{
+  "presentationId": 46499,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><span style=\"color: black;\">Protein Expression Optimization for a Novel Point-of-care Disease Biomarker Detection Scheme</span></p>",
+  "abstract": "<p>While many point-of-care diagnostic devices, such as the paper-based lateral flow assay, can rapidly detect the presence of specific proteins at high concentrations, they have limited sensitivity due to a lack of signal amplification as leveraged in DNA amplification-based diagnostics (i.e., PCR). This project focuses on the development of an ultrasensitive <em>in vitro </em>detection scheme for proteins and small molecules via self-amplifying split adenylate cyclase system. The proposed proof-of-concept detection scheme for small molecule rapamycin includes a recombinant split protein network, in which the split adenylate cyclase halves are fused to rapamycin binding protein domains for producing the initial sensing signal. In this study, we optimize the expression for these proteins, investigating the addition of a genetically encoded solubility tag maltose binding protein (MBP) to enhance final protein solubility, which signifies proper protein folding. This was tested through site-directed mutagenesis via Gibson Assembly of the fusion tag, followed by IPTG-induced expression in T7 Express <em>E. coli</em> and subsequent purification via immobilized metal affinity chromatography. Qualitative comparison between the amounts of soluble/insoluble fractions was assessed by SDS-PAGE, and quantitative measurement of enzymatic activity was conducted via cAMP accumulation assays to confirm the retained activity of split adenylate cyclase. Our results indicated that MBP fusion yielded a significant increase for both soluble expression and enzymatic viability. With further optimization of protein expression, we believe the engineering of this split protein network-based detection scheme will be much more feasible for scaled-production that will enable its development into a commercial platform for antigen diagnostics.</p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Engineering"
+  ],
+  "voiceoverId": "FIoSel7ipRw",
+  "originalVoiceoverLink": "https://youtu.be/FIoSel7ipRw",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "b31c5cd83d19be10ea4c68638501c5f5",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "b31c5cd83d19be10ea4c68638501c5f5",
+  "createDate": "2022-05-13T03:44:07.000Z",
+  "lastUpdated": "2022-05-13T03:44:07.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Unsun",
+  "presenterLastName": "Lee",
+  "presenterYear": "Senior",
+  "presenterMajor": "Biomedical Engineering and Global Health Studies",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Unsun",
+      "lastName": "Lee",
+      "major": "Biomedical Engineering and Global Health Studies",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "SHe/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemical and Biological Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Keith Tyo"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/b31c5cd83d19be10ea4c68638501c5f5.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106285&Signature=ZJAF46yuwfEIIBHMR2biX1woPhLXogoXJ9XLmpCnQg6zLgzLfm8Bhjj9cVIvSJuPXXTpqVAKAXwj%2Fi%2BzzL0tG7jJ1lnLNPB2WTfq8Cbeblc8dT1%2Ftf1jP63tM9hR00fKn7%2FWlRo469o4Q7uGUh9MmjdGn5Jc5bbpG4KPoGh0JqkYF9KErKNkDMDW3Nm%2BHEEUpVgd%2BElVUfvoCIlTN2wuKimRy97QsNIKtODzy%2Fq3lVbz1Aa3e7OTtTVkolIc2BtBSyyxt857P4SbtzQyaHvInvjAb%2BZpIWQqW608vTnHoHUSGZnKkUnuHaPQ1ZD%2Fl7em6VCB%2BO6W28lv88YWW6GBBg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/b31c5cd83d19be10ea4c68638501c5f5.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662937&Signature=x1AObaOjLaUAafvreeHooKwiSuMKs0vsHBVO4P5UFwgcRJ2kEnqMRefDFybpMMn%2F9Kxt4Ku6li%2FsTnQaORqoO27olfJHZeFR%2BDj1YawZdopY1C684hxb3WA%2FjBgYqJ7Rd3stwlVr8MjeZPmfakZ04lLJLwxQ9EUil73fFuvq%2Bb8yhZVkW0spAgqGzjiDf2Oqmz359fUVE9kcRS26PmWTrO5ji%2BepLd5lTNNAGdC%2FWdeYgz9wN1HZ8L3G6j%2BHb7tkpi4YrurLlezALS8nd%2BGwhqsPYlgrLjZwltCceKEB2NnfandnoUPEzqIwvNbYqXfQR4tpISsrWfA%2BB%2BqMOXDayg%3D%3D"
+}

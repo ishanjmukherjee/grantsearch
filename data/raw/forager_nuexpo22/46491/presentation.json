@@ -1,0 +1,102 @@
+{
+  "presentationId": 46491,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Investigation of whether environmental context affects the antimicrobial efficacy of copper-coated surfaces</p>",
+  "abstract": "<p>In both indoor and outdoor environments, the survival of bacteria depends on the surface conditions and materials on which they reside. In particular, copper-containing surfaces have been shown to reduce bacterial viability, and copper coatings are thus attractive antimicrobial treatments. Although the antimicrobial properties of copper surfaces have been studied before, the effect of the chemical compositions of the bacteria-containing liquid medium and the surrounding environmental conditions are poorly understood. My project simulates the conditions experienced by bacteria on high-touch surfaces, such as bedrails in hospitals, and evaluates how exposure to these conditions affects their viability on copper-coated surfaces. I am investigating the effects of medium composition (saline solution and artificial saliva), as well as dry, ambient, and wet humidity conditions, on the survival of bacteria on copper-coated metal surfaces. I apply the bacteria-containing solutions to copper-coated metal surfaces before incubating them in glass jars set to a specific humidity condition. The amount of living bacteria remaining on the surfaces is quantified by swabbing the surfaces and performing colony counts on resulting cultures. The results thus far suggest that the copper coating is equally effective under all treated conditions. Future work will be performed to corroborate these observations and expand the range of environmental conditions tested. Results from this project will improve our understanding of when and how to use copper-containing materials in healthcare and residential facilities, and reveal considerations we should make before replacing traditional materials with antimicrobial copper ones.&nbsp;</p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Environmental Sciences"
+  ],
+  "voiceoverId": "maYjqfRKIl4",
+  "originalVoiceoverLink": "https://youtu.be/maYjqfRKIl4",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "e101c9435d7fd31dd93dc78be31415c6",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "e101c9435d7fd31dd93dc78be31415c6",
+  "createDate": "2022-05-13T02:31:56.000Z",
+  "lastUpdated": "2022-05-13T02:31:56.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "John",
+  "presenterLastName": "Chen",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Biomedical Engineering",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "John",
+      "lastName": "Chen",
+      "major": "Biomedical Engineering",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/him/his",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Civil and Environmental Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Erica Hartmann"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/e101c9435d7fd31dd93dc78be31415c6.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106276&Signature=xwrdNfnEwfUq8QeQ20HeiwLW3lgvdIpVtV3mjbYlWmIyXFXjQHqx9uoRrAaam97%2FUL9Oa%2FwLfjtIC9lFfwQJTYwgm192pdGlYSRaEq41AJMHJ5TGUVeQk3HPsFJzpfLdK5%2Fy6ur%2FTAt75Z8ey%2FmOzZmb6ktfWfJmM%2B9uuDN%2B%2BjE2kWLEkRBQn3fZmkYKKupS8ZgKj1xpVKl5tuMPfWSCBVleVZAEMqMaxnKjZDhd3b%2Bprio30q68IN5gEbKDwQ3DxHIV7Nqzhrav0t30MX9sPcMFSt90Tq5Tl1Pbyn0iZiA7I1wcbzwvP98mMhzBGjv1VWx271%2FdtqlLctAJqnwSXQ%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/e101c9435d7fd31dd93dc78be31415c6.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662928&Signature=Xup01HnFykBEpTcbJnS1JzVD2lOfJDm8XKsM6H7%2FcDQHWZUYSLkxSQYL6xXjIbstPAwUkksgbyEp6oB44rf0O7aMuz%2F897wa%2BxocuzPpWuR46vn21GPiQRHDAIqHjg80m7afh79IWRAOIP7YGLzx%2FmcNhj0lrBdipyf%2BWD3nquBL1qLzRNl1GJSK9ytc8YmMGtCllIanYm5DwuXMiJUOVo9XeacmCluqiLXCTPmtU6McHq5ZuDDBSRmm0OdS5noSZ79qeXVK7W%2Fa0ak6DDidIpWIXXv0TlMr7bqo2Pp60z5m9CrtTTWAlr0dzPo9YED1CrXPKrBDzbx6ovbPGxVSIg%3D%3D"
+}

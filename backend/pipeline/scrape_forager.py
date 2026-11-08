@@ -33,7 +33,19 @@ Email addresses are the one thing deliberately not kept:
   the thumbnail. redactions.json records each box (not the address).
 Nothing else is dropped.
 
-Run from backend/: uv run python pipeline/scrape_forager.py
+Reruns read what is saved and make no requests for it. By default a run
+walks the presentations in listing.json; --scan walks the whole id range
+instead, as the first run did. checked.json records every id checked that is
+not one of the event's (with what the API answered) and every file the
+platform and the Wayback Machine refused, so neither is asked for again
+without --refresh. One poster, 2276's ("Hungry Thirsty Roots", a talk), is
+gone: the platform's storage no longer has the file or its thumbnail, and
+the Wayback Machine has no copy.
+
+EVENTS also holds the 2022 Expo's event, nuexpo22 (--event nuexpo22), saved
+the same way under data/raw/forager_nuexpo22/; see its entry.
+
+Usage: uv run python -m pipeline.scrape_forager [--event nuexpo22] [--scan] [--refresh]
 """
 
 import argparse
@@ -46,22 +58,43 @@ from pathlib import Path
 import httpx
 import pymupdf
 
+from pipeline import download
+
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "data" / "raw" / "forager"
 API = "https://symposium-api-prod-ivu2siwqia-uc.a.run.app/api"
-EVENT = 54
-IDS = range(2017, 2313)
 HEADERS = {"User-Agent": "grantsearch/0.1 (student research search tool)"}
 
 WAYBACK = "https://web.archive.org/web"
 # The API the site called in 2020, before it moved to the address above.
 SITE_API = "https://symposium.foragerone.com/api"
-# Saved path: (capture timestamp, route on SITE_API).
-ARCHIVED = {
-    "listing.json": ("20200528183743", "presentations?institutionCodeOrHash=northwestern&q="),
-    "2180/comments.json": ("20200528174233", "comments?institutionCodeOrHash=northwestern&posterId=2180&hash=2180"),
-    "2207/comments.json": ("20200528174347", "comments?institutionCodeOrHash=northwestern&posterId=2207&hash=2207"),
-    "institution.json": ("20200528174228", "institutions"),
+# Per event: its id, the directory under data/raw/ it is saved in, the ids
+# its presentations lie between, and ARCHIVED, the Wayback captures it keeps
+# (saved path: (capture timestamp, route on SITE_API)).
+EVENTS = {
+    "expo2020": {
+        "event": 54,
+        "dir": "forager",
+        "ids": range(2017, 2313),
+        "archived": {
+            "listing.json": ("20200528183743", "presentations?institutionCodeOrHash=northwestern&q="),
+            "2180/comments.json": ("20200528174233", "comments?institutionCodeOrHash=northwestern&posterId=2180&hash=2180"),
+            "2207/comments.json": ("20200528174347", "comments?institutionCodeOrHash=northwestern&posterId=2207&hash=2207"),
+            "institution.json": ("20200528174228", "institutions"),
+        },
+    },
+    # The 2022 Expo's online posters and talks (symposium.foragerone.com/nuexpo22,
+    # linked from the 2022 program), event 627, under a second Northwestern
+    # institution record (id 627, not 54). It has expired too, and the Wayback
+    # Machine has none of it. Its presentations were submitted May 9-16, 2022;
+    # they were found by matching presenters to the 2022 program, and sampling
+    # every 4th id from 44000 to 49500 found none outside 46420-46690, so the
+    # range scanned is 46000-47000.
+    "nuexpo22": {
+        "event": 627,
+        "dir": "forager_nuexpo22",
+        "ids": range(46000, 47001),
+        "archived": {},
+    },
 }
 
 EMAIL_KEY = re.compile(r"e-?mail", re.I)
@@ -122,10 +155,10 @@ def save_json(path: Path, data, dropped: set) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
 
 
-def fetch_archived(client: httpx.Client, dropped: set) -> None:
+def fetch_archived(client: httpx.Client, out: Path, archived: dict, dropped: set) -> None:
     """Save each ARCHIVED capture not saved yet."""
-    for name, (ts, route) in ARCHIVED.items():
-        path = OUT / name
+    for name, (ts, route) in archived.items():
+        path = out / name
         if path.exists():
             continue
         resp = get(client, f"{WAYBACK}/{ts}id_/{SITE_API}/{route}")
@@ -197,29 +230,61 @@ def extension(resp: httpx.Response, url: str) -> str:
     return {"application/pdf": ".pdf", "image/jpeg": ".jpg", "image/png": ".png"}.get(kind, "")
 
 
+def from_wayback(client: httpx.Client, url: str) -> httpx.Response | None:
+    """A Wayback copy of a platform file, looked up by its address without the
+    signature, which changes; None if there is none."""
+    bare = url.split("?", 1)[0]
+    resp = get(client, f"https://web.archive.org/cdx/search/cdx?url={bare}&matchType=prefix&output=json&filter=statuscode:200")
+    rows = resp.json() if resp.status_code == 200 and resp.text.strip() else []
+    for ts, original in [(r[1], r[2]) for r in rows[1:]]:
+        copy = get(client, download.wayback(ts, original))
+        if copy.status_code == 200:
+            return copy
+    return None
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("--first", type=int, default=IDS.start, help="first id to try")
-    ap.add_argument("--last", type=int, default=IDS.stop - 1, help="last id to try")
+    ap.add_argument("--event", choices=EVENTS, default="expo2020", help="the event to save")
+    ap.add_argument("--scan", action="store_true", help="walk the event's whole id range, not only listing.json's presentations")
+    ap.add_argument("--first", type=int, help="first id to scan")
+    ap.add_argument("--last", type=int, help="last id to scan")
+    ap.add_argument("--refresh", action="store_true", help="ask again for the ids and files checked.json records")
     args = ap.parse_args()
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    log_path = OUT / "redactions.json"
+    event = EVENTS[args.event]
+    out = ROOT / "data" / "raw" / event["dir"]
+    out.mkdir(parents=True, exist_ok=True)
+    log_path = out / "redactions.json"
     redactions = json.loads(log_path.read_text()) if log_path.exists() else {}
+    checked_path = out / "checked.json"
+    checked = json.loads(checked_path.read_text()) if checked_path.exists() else {"other": {}, "refused": {}}
+    listing = out / "listing.json"
+    saved = {int(d.name) for d in out.iterdir() if d.name.isdigit()}
+    if args.scan or not listing.exists():
+        ids = range(args.first or event["ids"].start, (args.last or event["ids"].stop - 1) + 1)
+    else:
+        ids = sorted(saved | {p["presentationId"] for p in json.loads(listing.read_text())})
     dropped: set[str] = set()
     kept, other, missing = [], Counter(), {}
     with httpx.Client(headers=HEADERS, follow_redirects=True, timeout=120) as client:
-        for pid in range(args.first, args.last + 1):
-            d = OUT / str(pid)
+        for pid in ids:
+            d = out / str(pid)
             if not d.exists():
+                if str(pid) in checked["other"] and not args.refresh:
+                    other[checked["other"][str(pid)]] += 1
+                    continue
                 resp = get(client, f"{API}/presentations/{pid}")
                 if resp.status_code != 200:
-                    other[f"HTTP {resp.status_code}"] += 1
+                    checked["other"][str(pid)] = f"HTTP {resp.status_code}"
+                    other[checked["other"][str(pid)]] += 1
                     continue
                 data = resp.json()
-                if data.get("eventId") != EVENT:
-                    other[f"event {data.get('eventId')}"] += 1
+                if data.get("eventId") != event["event"]:
+                    checked["other"][str(pid)] = f"event {data.get('eventId')}"
+                    other[checked["other"][str(pid)]] += 1
                     continue
+                checked["other"].pop(str(pid), None)
                 d.mkdir()
                 save_json(d / "presentation.json", data, dropped)
                 time.sleep(0.3)
@@ -227,14 +292,22 @@ def main() -> None:
             kept.append(pid)
 
             fresh = set()
+            refused = checked["refused"].setdefault(str(pid), {})
             for key, name in [("posterFileURL", "poster"), ("posterThumbnailImageURL", "thumbnail")]:
                 url = pres.get(key)
                 if not url or any(f.stem == name for f in d.iterdir()):
                     continue
+                if key in refused and not args.refresh:
+                    missing.setdefault(pid, []).append(f"{key}: {refused[key]}")
+                    continue
                 resp = get(client, url)
                 if resp.status_code != 200:
-                    missing.setdefault(pid, []).append(f"{key}: HTTP {resp.status_code}")
+                    resp = from_wayback(client, url) or resp
+                if resp.status_code != 200:
+                    refused[key] = f"HTTP {resp.status_code}, and no Wayback copy"
+                    missing.setdefault(pid, []).append(f"{key}: {refused[key]}")
                     continue
+                refused.pop(key, None)
                 (d / f"{name}{extension(resp, url)}").write_bytes(resp.content)
                 fresh.add(name)
                 time.sleep(0.3)
@@ -244,9 +317,14 @@ def main() -> None:
             if "thumbnail" in fresh and str(pid) in redactions:
                 paint_thumbnail(d, redactions[str(pid)])
 
-        fetch_archived(client, dropped)
+        fetch_archived(client, out, event["archived"], dropped)
 
     log_path.write_text(json.dumps(dict(sorted(redactions.items())), indent=1) + "\n")
+    checked = {
+        "other": dict(sorted(checked["other"].items(), key=lambda kv: int(kv[0]))),
+        "refused": {k: v for k, v in sorted(checked["refused"].items(), key=lambda kv: int(kv[0])) if v},
+    }
+    checked_path.write_text(json.dumps(checked, indent=1) + "\n")
     print(json.dumps({
         "kept": len(kept), "first": min(kept, default=None), "last": max(kept, default=None),
         "other": dict(other), "missing": missing, "dropped_keys": sorted(dropped),

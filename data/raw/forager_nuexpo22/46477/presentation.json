@@ -1,0 +1,101 @@
+{
+  "presentationId": 46477,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong>Feasibility and Acceptability of Fit2ThriveMB: A Technology-Based Intervention for Patients with Metastatic Breast Cancer</strong></p><p><br></p>",
+  "abstract": "<p class=\"ql-align-justify\">Increased incidence and treatment have resulted in a growing population of patients with metastatic breast cancer (MBC). These individuals have high rates of morbidity and mortality which could be attenuated with increased physical activity (PA). Mobile health (mHealth) PA interventions may be useful for MBC patients to remotely monitor and tailor interventions to patients’ abilities. Yet, no studies have examined a mHealth PA intervention in this population. This study aims to test the feasibility and acceptability of Fit2ThriveMB, a mHealth intervention to promote increasing daily steps in insufficiently active (&lt;150 min/week of moderate PA) patients with MBC (n=49; Mean age=54.8(SD=11.3); 55% on chemotherapy). Participants were randomized to Fit2ThriveMB (Fit2ThriveMB app, Fitbit, weekly coaching calls) or a Healthy Lifestyle control for 12 weeks. Fit2ThriveMB participants completed an online questionnaire and interview post-program to gauge intervention acceptability. Quantitative data were analyzed using descriptive statistics. Transcribed interviews were evaluated using a thematic content analysis approach and consensus review. Participant retention was high (98%; 1 Fit2ThriveMB participant died). All participants (100%) reported using the app more than 5-6 times per week and overall satisfaction with their study experience. The majority were satisfied with the app design (68%) and content (73%) and found it easy to use (86%). Participants indicated they were, generally, satisfied with the intervention; however, areas for improvement were identified for some study components. Overall, Fit2ThriveMB was feasible and acceptable for increasing activity in MBC patients and warrants future refinement and testing in trials with larger sample sizes.</p><p><br></p>",
+  "subjects": [
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "FmpOikS49Jw",
+  "originalVoiceoverLink": "https://youtu.be/FmpOikS49Jw",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "64a9b066016633a1d409f7ce5855593f",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "64a9b066016633a1d409f7ce5855593f",
+  "createDate": "2022-05-12T23:01:42.000Z",
+  "lastUpdated": "2022-05-12T23:01:42.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Ria ",
+  "presenterLastName": "Desai",
+  "presenterYear": "Junior",
+  "presenterMajor": "Biomedical Engineering",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Ria ",
+      "lastName": "Desai",
+      "major": "Biomedical Engineering",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Preventative Medicine Department - Feinberg School of Medicine",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Siobhan Phillips"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/64a9b066016633a1d409f7ce5855593f.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106269&Signature=VhI9qcd%2B768DDafbGB0G7M6HJuOkZ6m6wgRambMnF5xAE05jH7SP7sfiQMOz718MU4oKZ%2BcRHoOI1ErnL4jom8DSHHQYxvZMB96qrr%2Fdo7JCyeEPWhQPHyoneClOBsG63yFAoRSndhvaJjRAWN8nuD9STJYJeHI2rjcbiappubW0lCy5eFAQpQiLfk5ZpAxD4VkuJ08fAXq4ABe5l%2BxDbOsR8rRAmsFCV32vOZWgj1d99A4EAKIuDxs9Y4Jq37DJp%2FxJA5YvweJIF9F3aBrS68Ro1PfgwpN5meL0jBFf9WL8XfSwnYLLNEDV6TSTKt5dZPgEqWyURvvZz%2FyDa6DWAg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/64a9b066016633a1d409f7ce5855593f.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662921&Signature=nY7o4jEdxkhMJF1fbz1t85irCFmm%2F9NMYLFm74N9tBOTiprtTQXloXRDPm5Ytw1H59REXxihV1E%2FFRsygIqFBNw13aG98Icfj2iQ59%2Bq8bMAPswT%2BED%2BEx4gakTUUeVp6VABvAEOyMDsUDkCOxkeUwFYlYZyJmNW6WrVKwaP1m1mnFvO%2BedsoK3Pp2lk6qJQqWFeMkhBDNizyLSqoaPEwCzaVVG2LRN4qez5hnuRZWWScqSVuPIL88aW6fbDCP%2B4DGdyiUxTjyWSaYe2RcjjP3jr1hWAzxAhhVj3xZYiC%2FFiIn45Jx0rxL17I6T0ey8L7LrKvmtqtNti3RI%2BwhbLAw%3D%3D"
+}

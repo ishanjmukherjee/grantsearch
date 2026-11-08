@@ -1,0 +1,103 @@
+{
+  "presentationId": 46509,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Temporal Strain Data Reconstruction from Echocardiographic Strain Graphs</p>",
+  "abstract": "<p>Strain imaging allows us to visualize the movement of the heart muscle, but it is often reduced to a single parameter, global longitudinal peak strain (GLPS). Raw strain time-series data is largely unexplored and restricted as studies only save images of graphs lacking numerical data. The troves of retrospective strain studies saved as images can be unlocked by reconstructing the numerical values contained in strain graphs. Such datasets would be critical to future artificial intelligence strain analysis and advanced detection of heart disease. This study aims to investigate the methods of extracting and reconstructing strain curve graphs to raw numerical outputs. By using an automated curve recognition algorithm, individual curves can be isolated as scattergram type plots of pixels. Intelligence-guided filtering, interpolation, and curve filling can convert the pixel scattergrams into clean and complete temporal strain data. Using a set of 21 studies containing 6 regional curves, 126 unique curves were reconstructed and compared to prospectively exported temporal strain data. Results demonstrate that this method reconstructs the numerical data with high accuracy and precision. The reconstructed data was compared with the exported numerical data, yielding an average R2 of .996 with an average runtime per study of 7.32s. The minute deviation from fidelity can be attributed to the finite resolution of the pixels in the analyzed graph. Ultimately, highly accurate strain data can be extracted from routine strain studies, which may allow for advanced statistical and artificial intelligence analysis of strain.&nbsp;</p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Computational Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "TJiz_ZXbsFE",
+  "originalVoiceoverLink": "https://youtu.be/TJiz_ZXbsFE",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "2be8ee53bf3a1ded35bde5c306d4cc0a",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "2be8ee53bf3a1ded35bde5c306d4cc0a",
+  "createDate": "2022-05-13T05:28:51.000Z",
+  "lastUpdated": "2022-05-13T05:28:51.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Rahul",
+  "presenterLastName": "Devathu",
+  "presenterYear": "Junior",
+  "presenterMajor": "Neuroscience and Data Science",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Rahul",
+      "lastName": "Devathu",
+      "major": "Neuroscience and Data Science",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "he/him/his",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Feinberg School of Medicine - Cardiology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. James D. Thomas"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/2be8ee53bf3a1ded35bde5c306d4cc0a.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106295&Signature=o%2BHL7b2SmvRA%2BvUwT0ALBrwtxRZBsX5oV2MKVnCDx1dMW3%2BBF3fbsnqxv52l3suOG2HksswPMWdm2poobLYJojm%2BlrKSKEscKLbAs4O%2FETpdp%2B4KxQjbxpdb8Y%2FMk5ls8KKW2N4uS5qo%2F9rzSxGYjmJ6n5A%2FT4KZhZb6FdEVyPgQV4sJykDgk5krzqvqbaBWh3kQS09AtE6zj2gfqaOlQKQAnlIp8CU%2F%2BfjQnqG8jM5X7gh8C%2BEJ5orTSOMma7KKKOz%2F5e5QNOAIKFYhCRhawJqDq1jGP6qesPCHfv2O40g%2FpjS41W%2BlW3QXQPTcHi%2F5qfP9pyQx3nFic%2BhsOp0u%2BA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/2be8ee53bf3a1ded35bde5c306d4cc0a.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662947&Signature=Y1%2Fe7iWYCp0mPZDYc3RM8pkTD15M2V7mrqiGqXCb5OzDtqEcXeyh7%2F%2BP9ykXKlv4dz0JTbDwhczU2%2Bo22NRUqBEjtAOuS9q2b2R%2BsxA8GYsX8Dc6FgHd5eT2Oa9Ff%2FneyhALA7E9wUrfvbUPl%2FYUYLgkOYF8qWayyvT2OVZIkaf4GizNx60EppnBko4OrNv0RKH2ib5ybSzK04V9tS6%2FuoopjHSLw%2FSguRxkiVGvU63OkuYg2R75%2Bm9gUtxrSz1%2FL5bu6Bg3Ku8o9g4WZQ%2BTm7HC2eTIVkxuun7Poe1sbPAPbxlDgo3OqJb%2FVxQi4DKjj4MN6UKWlSQg1QZD%2FWuLEA%3D%3D"
+}

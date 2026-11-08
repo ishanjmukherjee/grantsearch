@@ -1,0 +1,103 @@
+{
+  "presentationId": 46492,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>CRISPRi Mediated Mutation of <em>Pseudomonas Aeruginosa </em>for Targeting Genes Involved with Biofilm Formation</p><p><br></p>",
+  "abstract": "<p><em>Pseudomonas aeruginosa </em>is a common pathogen that can lead to infection in the bloodstream, lungs and other parts of the body post-surgery. This organism is found in various environments and has shown resistance to a variety of antibiotics. Because antibiotic resistance in <em>P. aeruginosa </em>is so common, there is a dire need for novel therapeutics to treat these infections. One mechanism that protects this pathogen from antibiotics is the development of rigid biofilms. These surface- attached microbial communities form a layer of organic material that provides extra protection to a cluster of bacteria. Biofilms can develop phenotypic and biochemical properties that are distinct from their planktonic counterparts and allow for easier transfer of antibiotic resistance genes between present bacteria. Within <em>P. aeruginosa, algU, rpoN, recA, </em>and <em>lecB </em>have all been identified as contributors to biofilm formation. We study generated mutants targeting the three specified genes for suppression by designing CRISPR-mediated modifications. We examined methods of salt extraction and the plasmid backbone in order to ensure successful transfer of the CRISPRi plasmid system into <em>P. aeruginosa. </em>We further tested six sgRNAs, two for each targeted gene, denoted as lecB1/2, rpoN1/2, and algU1/2. This resulted in a total of 12 mutant strains, 6 targeting <em>lecB </em>(4 lecB1, 2 lecB2), 2 targeting <em>rpoN </em>(rpoN2), 4 targeting <em>algU </em>(algU2), and 4 targeting <em>recA </em>(recA2). The mutated <em>P. aeruginosa </em>strains were analyzed through a crystal violet assay to demonstrate the targeted gene’s repression and effects on biofilm growth and cell density<em>.&nbsp;</em></p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Engineering",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "x5yIgL0R6fw",
+  "originalVoiceoverLink": "https://youtu.be/x5yIgL0R6fw",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "79d251cbe0a18aafa582156dcf318200",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "79d251cbe0a18aafa582156dcf318200",
+  "createDate": "2022-05-13T02:36:57.000Z",
+  "lastUpdated": "2022-05-13T02:36:57.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Wm. Henry",
+  "presenterLastName": "Schirmer",
+  "presenterYear": "Junior",
+  "presenterMajor": "Environmental Engineering",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Wm. Henry",
+      "lastName": "Schirmer",
+      "major": "Environmental Engineering",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "he/him/his",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Civil and Environmental Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Erica Hartmann"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/79d251cbe0a18aafa582156dcf318200.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106278&Signature=GtSqr4gmNHDJXRPXYSwQmrmj%2F0BI1ohRzdXzQag26fV1MN5sDQSZbpjl0QqxrcGVNwxW1exoYf02ilxUuwy6bPwd%2B6cwkahqEh3PQTsxTPFgPati0%2Bpq%2BYOxmAwRdFfql3GPujHYYm1fM58sVucoz%2B8MLmm%2BYBTYzNzS402yzyZ%2BZW0gEUSvpUAkzZ7qpCgM7urIn5Pc5DROi0fcqlFxD8JbTsMZ0cgGN%2Fiu3jhGDvBd%2FyXkt25iDpX2U8PYWnKfn52E5pfhPjiddLIiKlmd%2FCz34XoTbYZ2Ldz%2FzNYJcEv6jC%2Fp6MneU4PLNNAOdmgKh1F6Wm7C1wGVLGHS98mrjw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/79d251cbe0a18aafa582156dcf318200.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662930&Signature=nypL%2BV3SStvybG34mDnqi8WjYxLfUzjGEhvFx0k5nlyyFQScuouajYQ2fd6UaBo8tqn5eZAL%2FwbxlHfFBBNJ2T3BKi3aSMuz8%2B8NU5TdFiTmCg%2BCmb8Z1kDAwHkB3iqLWcFdIARXOZFoJZrW2szK4Gf8N0PywnlMoK2hs2QZ5WLaD29Pczd3ekhF27Sk8MAJ5Eg0DszyYWQ6OE%2FdcsTXYRuauz%2FSOdh7dFDQa6m1OtG0Fx4DyuyEdcitVGiTTynmMsJyZ6%2B2z6mZF0MUmx8m6RprpHBZG4kUoeqvpefv0OFxTcZkRmfxk%2Bdbx7Oj889jHZvVxI%2B20gmaJZ5WYgMskg%3D%3D"
+}

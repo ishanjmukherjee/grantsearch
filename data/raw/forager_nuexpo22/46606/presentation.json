@@ -1,0 +1,102 @@
+{
+  "presentationId": 46606,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><span style=\"color: rgb(13, 13, 13);\">Application of Ovarian Anatomy Nomenclature to Classify and Quantify Follicles in the Rhesus Macaque Ovary</span></p>",
+  "abstract": "<p>Ovarian follicles are units within the ovary which house developing reproductive cells called oocytes. Females are born with a finite number of follicles, which declines with age and is associated with a decline in fertility. Therefore, assessing the types and quantities of follicles present in an ovary provides valuable information about an individual’s reproductive lifespan. Our team pioneered a method to systematically classify follicles from non-human primate (NHP) ovaries based on categories established by the National Institutes of Health’s 2021 Ovarian Anatomy Nomenclature Workshop. First, we defined criteria to classify follicles by developmental stage (primordial, transitional primordial, primary, transitional primary, secondary, multilayer, antral) based on characteristic morphological features. We also classified follicles with abnormal morphologies. Next, we prepared hematoxylin-and-eosin-stained cross sections of ovarian tissue from old and young rhesus macaques, and three individuals each counted one section per ovary (N=12). We conducted blinded counts in a subset of the tissue and found an inter-observer variability of 1.9% across &gt;700 follicles. In total, 3315 healthy follicles were identified in the 12 representative sections from 4 young animals, with 276 ± 62 healthy follicles per section (mean ± SEM, range 58-731), and 467 were identified in the 24 representative sections from 8 old animals, with 19 ± 8 healthy follicles per section (mean ± SEM, range 0-153). As expected, follicle counts were lower in old animals compared to young animals. Our method enables rigorous, reproducible NHP follicle classification and counting across the field, which can be applied to future studies in fertility.</p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "gX7Or791Xq0",
+  "originalVoiceoverLink": "https://youtu.be/gX7Or791Xq0",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "b838efa6353e0256e262e290279131d9",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "b838efa6353e0256e262e290279131d9",
+  "createDate": "2022-05-14T05:44:50.000Z",
+  "lastUpdated": "2022-05-14T05:44:50.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Rebecca",
+  "presenterLastName": "Gu",
+  "presenterYear": "Junior",
+  "presenterMajor": "Pre-Medicine Post-Baccalaureate Certificate",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Rebecca",
+      "lastName": "Gu",
+      "major": "Pre-Medicine Post-Baccalaureate Certificate",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "SPS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Obstetrics & Gynecology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Francesca Duncan"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/b838efa6353e0256e262e290279131d9.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106408&Signature=x8kl3QKyvMm2nUx0QZiFpIBYxjlatBLnMoAAb0qwlVhBKtIDgPY9c2qdUU%2FNHeqp0xfdnCi7k24w47xihI9%2F%2BV0lYrV28rdtKWZ9Ri2Pgg2umfJps0dp5XVgCRPs7kLrxQ46YSAEg7eVoXvMCrlSKXHB8irrxPbnQ3RYPicLcrWglRA68AD89gGDQjz9yzapaKmdwvb9ld0%2FAzs3cVGf64dAO8fRTS%2Ft5%2Ft3NzmlyU%2BLwZru%2BSVN%2BKyOaLeVuIeKWfYJzm42JldD9QJSHlRiBpOv24reBjd2avwEcCfACEDOUZtMAZrOF7AkPGELGkFgXswqxAcTOnrxn0CqwPM9fw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/b838efa6353e0256e262e290279131d9.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663060&Signature=ODNaYDz%2BFe8Fb8s9vEOwsCfss78cS%2FFmBRF5eWxalW5RpX3fwOFYXYsHLo3I%2FbbRVBAXcFnwzgDNtA4rk637mTq1YXE5v9UZwSbMapOzAZwgskPsxe94cMqKFQjil0Ra1CicNs7Ms7cg6IVv7uzR5NHNtNcJYvEkD7xgkv0kvpumZrCbqYpvvJoK4IJmFUzl1%2FXwM7KBjQ24yaIQ9s5JgpEzLntr2NxhAufCtNxrev4a7eGxMjPhS01Zi1rI7%2BkxNXQF%2FCKob9AiQRg3xjVqpKjhJvfruzwvkfY9viP0A7zXAkcPLeg9bPmfoctZaMqfF0tAGRN2bee2gH4%2FA22WiQ%3D%3D"
+}

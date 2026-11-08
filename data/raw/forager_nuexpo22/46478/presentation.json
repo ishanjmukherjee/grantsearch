@@ -1,0 +1,102 @@
+{
+  "presentationId": 46478,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong>Vimentin is a Requirement for Complete Closure of the Ductus Arteriosus</strong></p>",
+  "abstract": "<p class=\"ql-align-justify\">Prenatally, the ductus arteriosus (DA) shunts blood from the pulmonary artery to the aorta bypassing the lungs. Immediately post-birth, the DA closes, allowing the lungs to oxygenate blood. Failure of the DA to close, termed a patent ductus arteriosus (PDA), is responsible for 5-10% of all congenital heart defects. While existing treatments can help close a PDA, many cases require surgery. For this reason, the molecular mechanisms surrounding DA closure must be further investigated. Single-cell RNA sequencing of the DA from mice just before and after birth identified vimentin, an intermediate filament (which maintain cell structure and stability), as a potential candidate in DA remodeling. A combination of RNA analysis, established vimentin knock-out mice and their wild-type controls, and analysis of DA remodeling were used to further elucidate the impact of vimentin loss. RNA analysis found that vimentin was the highest expressed intermediate filament in vascular cells, and expression peaked at 0.5 days post-birth before returning to baseline levels, the time at which the DA closes. Concurrently, expression of Notch signaling genes, known to be important for DA closure and interact with vimentin, peak at this time point. Histological analysis revealed differences in remodeling of the DA. Adult vimentin knock-out mice demonstrate open, intact lumens as demonstrated by the presence of blood through the DA whereas wild-type mice have proper closure of the DA. These findings demonstrate vimentin as a requirement for the complete closure of the DA and indicate possible involvement with Notch signaling.</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "5JNb19cIjeU",
+  "originalVoiceoverLink": "https://youtu.be/5JNb19cIjeU",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "9579ae3e74510cc081f7ea6ea9c4c288",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "9579ae3e74510cc081f7ea6ea9c4c288",
+  "createDate": "2022-05-12T23:19:52.000Z",
+  "lastUpdated": "2022-05-12T23:19:52.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Cyrus",
+  "presenterLastName": "Abrahamson",
+  "presenterYear": "Junior",
+  "presenterMajor": "Neuroscience and Global Health Studies",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Cyrus",
+      "lastName": "Abrahamson",
+      "major": "Neuroscience and Global Health Studies",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/Him/His",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Feinberg School of Medicine Department of Cell and Developmental Biology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Professor M. Luisa Iruela-Arispe"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/9579ae3e74510cc081f7ea6ea9c4c288.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106271&Signature=GaOEIA4tWrh5f%2FjrngOKgqjTXknwwKAlbC7Dji2pPMQoEUGQoCD9tXBp219RV6Lt7AQtwlUT6Lh5baUHoHcQMYm2I359Hgcj%2F%2Fvfgruejh%2FN8VZwSTnHGfmzXlu1VSWDvcEup6MfQPYNmjhPmgGfefLbXOcd2cagOkVY9XCQKybBLv%2BI9mIk8pdsJn%2B4MNeV%2BG%2Fnd2qdDC5vIs08meQPebkpWLEOtP%2BF8AhNjAdp3Px2FlNeOqNvU1fwTwd6wcBwnWlYS1e2s%2B9VD7j8E3A0k9CkenavKtAN8zwd7%2Fjxp1%2Bi22Zi22ENZkWb%2FEsXUuew7uzGDcCR9ED3%2FrDYshpSbg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/9579ae3e74510cc081f7ea6ea9c4c288.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662923&Signature=sbr1H2oNhQAdd5yYqmM5oc1CXOKmL37CYc5Kc0U9BJIY%2B36%2BcQpLrARLClRfe7sEcuZlJKosg7Y4cgKafMmoe%2BN3sbU8TO9HzlBDPfessQ6TN83JCoEUBuF%2FjVsloij55MkMp5hZcTZ3xMwvYTzm%2FTpfwe5dvey7i0uwsKg6NXb1jyQ7oDffAdyMvwjDAi7FtY%2FQ1uNJMogiI3IiAdSRR0sgg7wUxQur3G1%2FLkeOyJn6YTvIQWAf2L%2F6i%2BycpXVczLA9EUI9wdNY1PxnnuTxt1PnKVPN5jSeoGmSt3SBJ5N6Hj0kWK%2B0OOc0VWN48kKYM3ZgS45DNsb5vldV5G9WiQ%3D%3D"
+}

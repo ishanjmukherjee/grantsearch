@@ -1,0 +1,101 @@
+{
+  "presentationId": 46602,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><span style=\"color: black;\">Designing metastable protein biosensors for quality control in stress and aging&nbsp;</span></p>",
+  "abstract": "<p class=\"ql-align-justify\">The functionality of the network of proteins and associated molecules used for protein homeostasis in cells, also known as the proteostasis network (PN), declines in aging leading to a variety of pathologies, including neurodegenerative diseases. Understanding the dynamics of this decline could reveal more about the process and mechanisms of aging and provide necessary information to combat disease development. Quantification of proteostasis capacity can be accomplished using biosensors in living cells. My project aims to generate a collection of metastable proteins as biosensors in the model organism <em>C. elegans</em> through rational design. The goal is to expand the toolbox of fluorescent proteostasis biosensors for monitoring the PN and tissue dynamics of PN decline. By using conditionally destabilized protein biosensors, a larger range of protein sensitivity can be detected. I introduce destabilizing mutations into the enzyme dihydrofolate reductase (DHFR) and plan to characterize the mutant DHFR proteins both <em>in vivo </em>and <em>in vitro</em>. The selection of destabilizing mutations was based on existing literature of DHFR mutagenesis studies and prediction programs of amino acid replacement stability. The tools and protocols used for the generation of new DHFR biosensors for <em>in vitro</em> and <em>in vivo</em> studies have been optimized for success and are outlined in this project. Experiments using assays to measure the functionality of the protein biosensors, such as enzymatic activity, are currently ongoing.&nbsp;</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "wtSSqG6el0A",
+  "originalVoiceoverLink": "https://youtu.be/wtSSqG6el0A",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "7e45bc693a28eb7d1fd025bdb83f587f",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "7e45bc693a28eb7d1fd025bdb83f587f",
+  "createDate": "2022-05-14T05:16:20.000Z",
+  "lastUpdated": "2022-05-14T05:16:20.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Cindy",
+  "presenterLastName": "Zhao",
+  "presenterYear": "Junior",
+  "presenterMajor": "Biological Sciences, Psychology",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Cindy",
+      "lastName": "Zhao",
+      "major": "Biological Sciences, Psychology",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Molecular Biosciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Richard Morimoto"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/7e45bc693a28eb7d1fd025bdb83f587f.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106404&Signature=nN0AoF1F5axuvXgBNuyL9YgsEeTXaP1hxtcXqmMCAjeeDULyZP8lE6qhOQry3Heg%2FbnWtUk5Gq7avygO9T8jE3Cx3VxTDeV6y13qyUoN1%2Fsv8ZjOvI2gXxy2B5aBAZ7ge3FcXcFZoX9BMDNxwHzCi6vmnfJX9MAuo3%2BW5ImYGrG%2FBtTFVVq%2FqbOmyxqdArBGPOEd%2Bx05aF%2FVmIwN5CTGOuTcRdJMvYEiSgqrS%2FdnCdy%2Fh0AkFWxHX1R2sb2Y5%2FkVbF6GPod4fNUNshugU9Kkt70yb1IZ0SsqNkonHCt3OARSa00yvxiaEx298LvuXaEdvJv6zxF%2FVPwOiabqe08%2BWA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/7e45bc693a28eb7d1fd025bdb83f587f.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663056&Signature=D34Mgvew6nr%2B7QLJlbN2G1kWggwFoUZYaFILDFAS%2BuzmUXPMxqz7vGpfolO%2Bkae3F4%2FrsnzHbo1NtxbYUZhpltJ7wCZS5fmp9JQDcHPoIQmTNjJmLDIqXqRz%2BV4VzUQy%2BCwayrhpogAHKZk33QaukbeD2gbGN1roAAJS%2FCNPLu%2F2HQP6NI8hHvwxlC1%2FVLXExCdNOAAm5aoCHV%2FGH%2FyP1XdYtHGcxBim7AcHOs2tHxBlFYB9tyKf9%2B6f6KoDKtRaUUMDYA6po6hTpP8uFGskokETvC1ZKGprVG8ehYbjmwnvh8qlWiyjZrJ3Bo5Z60Z7CHhTw2gMjAoKSO1ViUsUsw%3D%3D"
+}

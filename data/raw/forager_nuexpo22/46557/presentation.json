@@ -1,0 +1,101 @@
+{
+  "presentationId": 46557,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>The Non-typeable <em>Haemophilus influenzae </em>Phasevarion Regulates Macrophage-Mediated Phagocytosis</p>",
+  "abstract": "<p><span style=\"color: rgb(0, 0, 0);\">The phasevarion, or the phase variable regulon, is an epigenetic regulatory system that, through its spontaneous switching between its ON and OFF form, can increase the pathogenesis of bacteria that use it. The pathogen </span><em style=\"color: rgb(0, 0, 0);\">Haemophilus influenzae </em><span style=\"color: rgb(0, 0, 0);\">utilizes a phasevarion to evade immune clearance and increase persistence within its human host. However, the role of the </span><em style=\"color: rgb(0, 0, 0);\">Haemophilus</em><span style=\"color: rgb(0, 0, 0);\"> phasevarion in altering the host’s innate immune response is not fully understood. Given that macrophage-mediated phagocytosis is one of the first steps in the innate immune response, the purpose of this study was to determine if the non-typeable </span><em style=\"color: rgb(0, 0, 0);\">Haemophilus influenzae</em><span style=\"color: rgb(0, 0, 0);\"> (NTHi) phasevarion affects this stage. THP-1 monocytes were differentiated into macrophages and infected with modA ON or modA OFF variants of four clinical NTHi strains, each with a different </span><em style=\"color: rgb(0, 0, 0);\">modA</em><span style=\"color: rgb(0, 0, 0);\"> phasevarion type. After 30-minute incubation to allow for phagocytosis,&nbsp; macrophages were lysed and intracellular NTHi were enumerated. We found that when the </span><em style=\"color: rgb(0, 0, 0);\">modA2</em><span style=\"color: rgb(0, 0, 0);\"> gene of strain 723 was OFF, more bacteria were phagocytosed than when </span><em style=\"color: rgb(0, 0, 0);\">modA2</em><span style=\"color: rgb(0, 0, 0);\"> was ON. However, two of the other variants, </span><em style=\"color: rgb(0, 0, 0);\">modA4</em><span style=\"color: rgb(0, 0, 0);\"> and </span><em style=\"color: rgb(0, 0, 0);\">modA9 </em><span style=\"color: rgb(0, 0, 0);\">exhibited the opposite pattern of </span><em style=\"color: rgb(0, 0, 0);\">modA2</em><span style=\"color: rgb(0, 0, 0);\">. Irrespective of phasevarion status, we observed that strains 477 and 1209 phagocytosed significantly less compared to strains 723 and C486, suggesting that the strains 477 and 1209 are overall more resistant to phagocytosis. Future studies aim to elucidate the mechanisms underlining phasevarion-dependent and independent phagocytosis of NTHi, as well as the effects of the ModA phasevarion on important steps of macrophage-mediated phagocytosis.</span></p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "E5C29v_TITQ",
+  "originalVoiceoverLink": "https://youtu.be/E5C29v_TITQ",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "9d453f142b584205d71ad49e051f0ea0",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "9d453f142b584205d71ad49e051f0ea0",
+  "createDate": "2022-05-13T22:45:30.000Z",
+  "lastUpdated": "2022-05-13T22:45:30.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Ashley",
+  "presenterLastName": "Zhu",
+  "presenterYear": "First Year",
+  "presenterMajor": "Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Ashley",
+      "lastName": "Zhu",
+      "major": "Biological Sciences",
+      "level": "First Year",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Microbiology and Immunology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Kenneth Brockman"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/9d453f142b584205d71ad49e051f0ea0.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106340&Signature=gd%2B2HMPJ3jpmEyJsMYurb8fby7ej9azMn8W3aPJG9PkK1S6NuG1cjvoLgV4gNt5EJF6ZLRSiHwdiTHXpNpD%2FAT5xw%2F%2BjcrHc%2BEEnYk33cNhMOjcU6MdIvr%2B1l60nvYYx3KdgjUuoem9s8n4crL%2FMq9ZzXEjUb8%2FFJxNIukD3pmCiyLReucC8w7khis0BwXyhLX6zv%2BPVXzlIvxCstBX%2FBdJs8EPWsLa5sy7%2B6JsPHMFJBzuak0wyHoz5lhx8MJOj8mUPsUvoBa4jJnSHzedXoUSNdkB1Vg0IxxIbObVTQOxeCfxr2WTad622V4FPRrpyVwQEL1Vbzq75aJyPK3y4Fw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/9d453f142b584205d71ad49e051f0ea0.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662992&Signature=dK%2F7sfS%2FH8NnzdVWFUC3R0AMmD515%2BjMOkhWmGqxlX2Tr%2BE8vUsMeo7KGiFBMTKovW85jrRFN89i6smYPbto9L1LTFGJwYFhIA31%2F4xD7Oa7m4OAsc15i2lo9bASnoFe%2FPwYDGCGcE9OAW9nNbMK1nJFdVsEMfUdNEJOJ4GmTOmnFNiTftUKV8ox1McCJu8h1v8WdDMQlVGEQJ6NiuDazl00dfMkxqepyVVMhPVPw69qykX0OuI7asaiDrLwAVnMPrYcizykHxKBOgz7R1grkoT4g3%2FVQsSiEpzdTm%2FUGdydWHb6U2wGsQuL7a%2FbgjjZcjsg3pQbufRO8atZyf%2BESQ%3D%3D"
+}

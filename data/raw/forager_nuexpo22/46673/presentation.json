@@ -1,0 +1,101 @@
+{
+  "presentationId": 46673,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><strong style=\"color: black;\">Towards Water-Soluble Weak-Link Approach Constructs</strong></p>",
+  "abstract": "<p class=\"ql-align-justify\">The Weak-Link Approach (WLA) is a versatile platform to prepare stimuli-responsive metal-organic compounds, constructed based on a metal center connecting to two organic molecules via four coordination bonds. These organic molecules are also called hemilabile ligands, which have an inert and labile site, each bound to the metal. The WLA compounds have two configurational states: the four sites fully occupied by the ligands, and two labile “weak-link” sites displaced by anionic effectors, such as Cl<sup>-</sup>. The exchange between these two states is reversible, but it has only been demonstrated in organic solvents previously. This project aims to design new WLA complexes that retain their dynamic functionalities in water, achieving reconfigurable Deoxyribonucleic Acid architectures with aqueous WLA-DNA constructs. I hypothesize that using weaker labile binders, such as ether instead of the previous thioether moieties, and water-soluble motifs such as amides will enable reversible control in water because anionic effectors will displace the labile sites more readily. I synthesized a series of ligand precursors using air-stable and air-free techniques and characterized the products using <sup>1</sup>H nuclear magnetic resonance spectroscopy, single-crystal X-ray diffraction, and electrospray ionization mass spectrometry. I discovered that the choice of water-soluble functionalities is important as my work showed that the amide functionality did not exhibit stability in strongly basic conditions necessary for the synthesis of the phosphino-ether and N-heterocyclic carbene-ether based ligands. Hence, another stable, water-soluble functional group that can be synthesized easily needs to be considered to formulate complexes capable of reversible binding behaviors in water.</p><p><br></p>",
+  "subjects": [
+    "Chemical Sciences"
+  ],
+  "voiceoverId": "MCNo2E_WVGI",
+  "originalVoiceoverLink": " https://youtu.be/MCNo2E_WVGI",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "add41eb5be3be741270527548e312b6a",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "add41eb5be3be741270527548e312b6a",
+  "createDate": "2022-05-16T09:34:33.000Z",
+  "lastUpdated": "2022-05-17T13:01:18.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Fiona",
+  "presenterLastName": "Wang",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "ISP, Chemistry, Math",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Fiona",
+      "lastName": "Wang",
+      "major": "ISP, Chemistry, Math",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemistry",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Chad A. Mirkin"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/add41eb5be3be741270527548e312b6a.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106434&Signature=BLmefHv46OhkbiYPjdYjfsqeAZm4xpZ8FvkZFKnVaccWsi5g554ulteGh%2BR1bD3VQlPK4c0XcrVKJYSvnKo%2FFvxnA4U%2FIbLYqe5QCjg5DnL5TEgSr%2BWE4G2BINDLxMGwXyjlgup4w4f2v%2Fd3l4ZyPxwf%2FyRrfB%2BcO6peqZUh3tISlwg3G%2Bha18t2V6X76E%2FhmMvKMKROWKsQS5v2%2FVRCNu9aLWzu%2BOL6vU9DIhWLLM%2BI3KWZX3JhDXABVASNRZ1%2B3gvMeK44JbZ4zpZnfdpnPBajIoreEPEPa2T22h7fD0WucIa4RokcSeqbKHRaMxGtJ5l9enkPj5R9TQ1JXVYJ3w%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/add41eb5be3be741270527548e312b6a.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663086&Signature=mtXwZ4msplcp0zIAW%2FlOetaYXppxm2vnbVX5UARgmvyj6KlLTQpAZmJE3xQsaUz2yhOKtcPBtI8I%2BQ8%2FEeFyajYQKY4tXFthokm36EuNumj8JiIHbHgeqJgR6uRY4MtvRqoZ423eQhd6HKH1JikrX7QieR%2FHX5elUvYq7LeykAXeq6u0svEx0yLOmx9H6hbjbsDXx%2BxWA9nHTfCDLLt8Ax3P5w3rjq6MWS%2B7wTdzKMS7ZUNTDHjPuieW9LYWt4NZy4bIzvlf0zKLoX2rCxNWZxmT6%2FkAUMuvkb2aRp%2FjLgUPUpP83T%2FYkNM9%2BDkglulHy6qZqPkGYNEaIMsKUBB%2B1A%3D%3D"
+}

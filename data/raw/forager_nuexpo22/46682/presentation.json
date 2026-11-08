@@ -1,0 +1,101 @@
+{
+  "presentationId": 46682,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong>Biophysical Forces on VSMC Nucleus Regulate the Onset of Vascular Calcification through Epigenetic Remodeling</strong></p><p><br></p>",
+  "abstract": "<p class=\"ql-align-justify\">Pathological vascular calcification is the hardening of blood vessels into bone-like structures. Vascular smooth muscle cells (VSMCs), which normally constricts or dilates to regulate blood flow and pressure, are capable of transdifferentiating into the osteogenic/bone-like phenotype. Moreover, biophysical forces, or forces applied to induce a physical change, can alter chromatin (complex of DNA) structure within the nucleus and regulate cell fate for several cell lines. The aim of this project is to investigate how biophysical forces can impact VSMC phenotype and the onset of vascular calcification. To that end, biochemically induced biophysical forces are applied to VSMCs via the vasodilator Sodium Nitroprusside (1µM, 10µM, 100µM) and the vasoconstrictor Phenylephrine (0.1µM, 1µM, 10µM, 50µM). No-treatment control groups are included. Immunofluorescence of nuclear DNA was used to confirm that the biochemical treatments generated the nuclear morphological changes expected from the corresponding biophysical forces. Changes in epigenetics and transcriptional activity will be evaluated via Acetyl H3 Staining and immunofluorescence imaging. Lastly, VSMC cell fate will be determined via immunofluorescence imaging for myogenic/contractile versus osteogenic protein markers. Preliminary data collected confirm that SNP-treated cells display the elongated morphological changes expected with cellular dilation. PE validation assays are currently in progress, with histone acetylation immunofluorescence imaging and VSMC protein expression analysis due to follow. There is currently no known treatment for vascular calcification. Therefore, this project will not only increase fundamental knowledge concerning the mechanism of calcification and the role of mechanical forces on VSMC cell fate, but also introduce new therapeutic targets to combat vascular calcification.&nbsp;</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "kJgZqtz2RSo",
+  "originalVoiceoverLink": "https://youtu.be/kJgZqtz2RSo",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "fec22eaee5307ccfdf39db3130978e20",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "fec22eaee5307ccfdf39db3130978e20",
+  "createDate": "2022-05-16T16:31:00.000Z",
+  "lastUpdated": "2022-05-16T16:31:00.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Danyi",
+  "presenterLastName": "Wang",
+  "presenterYear": "Senior",
+  "presenterMajor": "Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Danyi",
+      "lastName": "Wang",
+      "major": "Biological Sciences",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/Her/Hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Biomedical Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Bin Jiang"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/fec22eaee5307ccfdf39db3130978e20.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106436&Signature=T9mfyx0s%2FTOldBvIEKKK7Ws0ZilxBoqervfkjmLWSnaeOl25Lm6OxfUV5jgVBzkWEU20zF%2BQUIw%2FnWKieg2gzVa3dfWnw5SdfMxSL7JN58HWLi4JV7%2FW6fu8yLYzxJSeYkGRHKEo6HD7mPnqwXq6I7vFDOg1LU97ppB9ZjHDHQj80Vb5B3fe6oDH4R2SQYH7ubFQ57QZIfGcHNk%2FuxeVGI3zDVQwjxVT1rlMRcikL8tHvpmwhWiRNwS3qbcKEN3PO%2BLzDrUcVLRchienZ5MgBxCM2O%2FkG6fqckPzhS5RWxoSiRUKkjnnqHnBmELYa7uWpREcUEwCHLERzdVytUrcCQ%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/fec22eaee5307ccfdf39db3130978e20.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663088&Signature=KENfdLyItYDbzzcnhXbEHhOqNxf3btLgEClquwOsXQ3fDRpPbkewQrDvAlmI9HJrrP1W1z8ErqivmMuLQMB0I8jnmpRnasl8MIeUp%2BRCMlWwKs7vbzmjcafAk8rFhWEAWjfEPZwJihBQWF0TVH%2BtJkypjX08MPbK0s%2Bs%2B9UEMz4FmF7HFTi6TvlQFT9HUbNk0QXZOEwDBYK%2B3Z3DuAkskL2KUMWgnRMx4Y%2BbylILa4TlKa03QrSy9SJN017obB8GgrtYzI6leKgVP1iejebeNkrl%2BFr2CO1p4H1bkd1AzWb0qP%2FHH5TvUPXrHXbm2Rou5VAzKC7joAOTpai%2BcGHYOg%3D%3D"
+}

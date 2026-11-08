@@ -1,0 +1,103 @@
+{
+  "presentationId": 46501,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Extraction of a robotic measure of joint stiffness in individuals post hemiparetic stroke for comparison with a shear wave ultrasound elastography measure</p><p><br></p>",
+  "abstract": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">After a stroke, structural changes in the skeletal muscle can lead to joint stiffness that impairs everyday arm function. The gold-standard measurement of joint stiffness requires a time-consuming procedure with an expensive robotic device that is impractical outside the laboratory. By contrast, current clinical measurement systems are subjective, limiting rehabilitative therapy efficacy. Ongoing works propose shear wave ultrasound elastography (SWUE) as an auxiliary measurement approach given its low barriers in cost, maintenance, and training for device setup. To provide evidence supporting its clinical use, SWUE must be evaluated against the laboratory gold-standard. My project focuses on extracting the robotic measurement of passive joint torque at seven distinct angles to reflect elbow joint stiffness. Each forearm of twelve individuals with moderate to severe hemiparetic stroke was rotated at a constant velocity by a robotic device to seven discrete angles. The robotic device held the forearm still at each angle, where angular position and joint torque were measured. Muscle quiescence was ensured with surface electromyography muscle activity measurements at the biceps brachii and triceps brachii. For each angle, average joint torque was determined from a subsegment of data captured. Preliminary visual inspection suggests a positive correlation between average joint torque and angular position as the arm extends, and a negative correlation as the arm flexes. In combination with an observed lack of muscle activity throughout the subsegments, this result supports use of the extracted average torques as the gold standard robotic measure in further statistical analyses with SWUE measurements.&nbsp;</span></p>",
+  "subjects": [
+    "Computational Sciences",
+    "Mathematics & Quantitative Studies",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "M0wixLnMVUI",
+  "originalVoiceoverLink": "https://www.youtube.com/watch?v=M0wixLnMVUI",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "0c836e1f3894828f1d9539794d84a6c8",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "0c836e1f3894828f1d9539794d84a6c8",
+  "createDate": "2022-05-13T03:58:17.000Z",
+  "lastUpdated": "2022-05-13T03:58:17.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Amy",
+  "presenterLastName": "Wang",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Amy",
+      "lastName": "Wang",
+      "major": "Biological Sciences",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Physical Therapy and Human Movement Sciences, Department of Mechanical Engineering",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Netta Gurari"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/0c836e1f3894828f1d9539794d84a6c8.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106289&Signature=BYKmsrJ%2FW6q6ezPzNkzxjokdV9PUgpYOFfA5UTsVZv7I7Yl7ilAJudFOP1Vvnyc7QQJf9ViJvZ4E0%2BBC9Tdq2PjdhIERzzf8gJwjtNm%2BwVm4QnBrdXSE%2FxGHsVfo55%2Fw3hfQ9jRzVe42crhowhJzrYF7YNF%2BIlgaQaMCz35nzbSPRUpBhGiTt%2B1EUjecVC%2BLEfdjjOUS9rGSLwUnCbB7BxTykCikQfcW2vdZeV%2BtJmwXIpwVCee43T1SAashrXPm8wdmHJIULqK77noxHdFH4MQP0t8q86YYS5PZ3n5KdMQruzzTbsfUTJAxVQTiifoTpsYCMWPXHfOBp%2FBNfCT1Ww%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/0c836e1f3894828f1d9539794d84a6c8.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662941&Signature=CwMCwzrLk%2BY9B10bgUzTVeZNuwJIOrYeYau6IzVIJ4XyyV9TQLdBXRzOsErq2b0%2Bwklp75qFaLK1ye0UOsAQqIIN9xPQFBVmgsjNNgGdutKcel6cO%2Bnqy8%2FGsRB2KDn4IcsGRYyc%2FpHu7vyeJB28fHShm0Kq7zCCUY1vw7f9Ehf5MZ8OtG3N91yTeVw97JUlJ7%2BIxFVvCw4RYW1rAIKN4OsnpY3JtdFLexdPETFbt7ddbcThqrWmV2AnAFdT%2BJjohVTW%2B%2BuvLxx5e5xVVZiN65MrgQVVl%2FD2ICJqHDWC01VqFQMVaXQFpDi22TPXLC5%2B9Q2XuZozJGHu4LVFw1TLsw%3D%3D"
+}

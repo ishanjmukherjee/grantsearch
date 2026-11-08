@@ -1,0 +1,101 @@
+{
+  "presentationId": 46593,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Can actual administration of prescribed acetaminophen be used as a quality improvement measure? </p>",
+  "abstract": "<p>Acetaminophen is a well-known analgesic used to treat moderate post-surgical pain. The drug is opioid sparing, a strategy which could be incredibly useful in combating the ongoing opioid crisis. Acetaminophen should be prescribed in conjunction with opioids as part of a multimodal analgesia plan aiming to reduce total opioid consumption. A number of patients will not have acetaminophen prescribed, but even if the drug is prescribed, the question remains, how often is it actually given? Can the acetaminophen prescription rate and number of completed doses after surgery be used as a quality improvement measure to identify if tertiary care centers are effectively utilizing this medication to the fullest extent? This QI project investigated this question with a retrospective data extraction from an electronic medical record describing post-surgical acetaminophen prescriptions at a university medical center in March 2021. Analysis consisted of a stratification by surgeon and service, and average prescription was identified for each. Other notable patterns were identified as well. Analysis of the medical record revealed that the hospital-wide average post-surgical acetaminophen prescription falls at roughly 3⁄4 of the maximum recommended dose, and that there is significant variation in prescribing habits by various surgical services. This data informs us that improving upon current prescription habits by substituting a portion of prescription opioids with acetaminophen to treat moderate post-surgical pain in a tertiary care setting may have the potential to better post-surgical analgesia, reduce opioid related side effects, and improve post-surgical outcomes for patients at risk for substance use disorders.</p>",
+  "subjects": [
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "75XKIxKG2iA",
+  "originalVoiceoverLink": "https://youtu.be/75XKIxKG2iA",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "1217cf7558b3023942735dbad5f6ad39",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "1217cf7558b3023942735dbad5f6ad39",
+  "createDate": "2022-05-14T04:53:36.000Z",
+  "lastUpdated": "2022-05-14T04:53:36.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Emma",
+  "presenterLastName": "Burnham",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Neuroscience",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Emma",
+      "lastName": "Burnham",
+      "major": "Neuroscience",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Anesthesiology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Monika Nanda"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/1217cf7558b3023942735dbad5f6ad39.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106391&Signature=RGAqjVhrKBuE7QQ7aITIIpx9RuHVxJ2zmWzy1S3DNCdjff9ODZLJLNrR1t1hfIyLlWA%2FF8PokuKf3jhkWyL1IF7qc%2B9K6z1Pm%2FgCzEJUP091JDv6xhm%2FbADGDMsUNZix6SlskbXMyK5VSQBTQPWV0sbhnwb2TPfQ4KaFBWS3B7p5I2LSdFYJ7rD9Q9n6KENIjGTzn0oX9rt8y6yJuWeopb97fuXg83Tf1iv12yLHas6OgE%2Bust48dTCEp%2FjkhKGU77Lt0520N2TFbDBwYuwtpYO%2B3GPviTW1SIVEmf1SW5wjCUwgDaJYkiZWeG66XCN%2FKRllI2GojqZ4cD3dq4HBAg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/1217cf7558b3023942735dbad5f6ad39.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663043&Signature=ZQFYIreeVh5c27nd5TUk3D4%2Bp1s7wbpg4Bn6ee%2B6HPBfj%2F84vqGsRY0V5Dkxz8w8bjbErqQEXXq%2FnuHgt1nq8kjvcraxKYo3T936kQXisy2QEeyEKseU00N2A14E5kU%2FgNuP4mkHNVUVrQW7vR0r1cfaqkSdEGKBsXw478HwBgbcE0SpcVbJyYFtv6vekS63%2FW0%2Fb2d%2FLuq%2FiOBXRmTBhJE%2BuaCPZ1MAkcQpXSNQDYUmzkf0Avg6b3L%2Fh66flBLpSA%2Bzp3oXDG2xadJbPuAaBNeX4%2BDHzYxZi%2FSmuQKDr1KlPw6Ezre%2Fg5BKL8MHCvfZBVA9H5H5DbEJKj9CqPu6ww%3D%3D"
+}

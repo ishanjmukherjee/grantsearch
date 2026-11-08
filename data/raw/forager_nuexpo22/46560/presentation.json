@@ -1,0 +1,101 @@
+{
+  "presentationId": 46560,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Identifying the role of niche signaling in <em>Hofstenia miamia </em>regeneration</p>",
+  "abstract": "<p>Regeneration is a complex biological phenomenon, whose elucidated mechanisms could inform development of countless therapeutic practices in human medicine. Several model systems have been developed to study animals capable of whole body regeneration, the newest of these being the acoel worm <em>Hofstenia miamia. Hofstenia </em>are a saltwater species that possess a population of adult, pluripotent stem cells called neoblasts, which function under stunningly conserved mechanisms of regeneration, across millions of years of convergent evolution. As these neoblasts are known to express several markers shared with human embryonic stem cells, understanding their mechanisms of proliferation remain important. Stem cells often differentiate under the direction of signals secreted by niche cells. The niche in <em>Hofstenia </em>has not yet been explored, and the location and nature of the secreted signals that promote neoblast differentiation remain unknown. My project seeks to uncover the signaling pathways that directly impact regeneration of <em>Hofstenia</em>. Starting with known niche signaling factors in other model systems, I experimentally silenced genes and challenged animals to regenerate in the absence of their expression. If they were not able to generate new tissue a week after lateral amputation, it would indicate that the silenced gene acts in a regenerative pathway. I found that several of the <em>TGF</em>-𝛽 homologs play an essential role in whole-body regeneration, with their absence causing stunted and missing head and tail phenotypes across individuals. As <em>TGF</em>-𝛽 factors have a role in human stem cell differentiation, this further supports the conserved nature of regenerative pathways across pluripotent cell species. </p><p><strong>&nbsp;</strong></p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "Wj9hUUwjSNo",
+  "originalVoiceoverLink": "https://www.youtube.com/watch?v=Wj9hUUwjSNo",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "d7bddaaf40abd27bb00517ea27dbdfb0",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "d7bddaaf40abd27bb00517ea27dbdfb0",
+  "createDate": "2022-05-13T23:07:05.000Z",
+  "lastUpdated": "2022-05-13T23:07:05.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Heather",
+  "presenterLastName": "Humbert",
+  "presenterYear": "Junior",
+  "presenterMajor": "Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Heather",
+      "lastName": "Humbert",
+      "major": "Biological Sciences",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Molecular Biosciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Christian Petersen"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/d7bddaaf40abd27bb00517ea27dbdfb0.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106344&Signature=HsINcHuUp7s4bagmVD8enA0IDRc5BP4C3JwIIDc8D5iayM0od0elkpuA5t2q5JU9JiOscoPKYtpqyM89zEXXrEorXC2FS1l94xB%2BiiCABFJA1dDWBvNwoA8pc%2BS84d%2BcIrm4Scee0WVr0D3BajOAQAwBBDN3%2Bi3JN93aXDP4%2BIXjGhSZAevWedLgCyCMaJllI0ZS2kKoVyyvaaBnObS43%2FWMqW%2BQPnLVW35oO7ZS79UQ%2B3QYicm4vRtkc9bwa7iFNJSSp20mLfbyTnDusgUNOG14bsAP6XFF%2BxyXvpwL%2Bn9Xy3u7nmGKpWQL4K7s8rLXFy1sTIBJYnTIR%2B%2FxLmPKFg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/d7bddaaf40abd27bb00517ea27dbdfb0.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662996&Signature=hv%2BVoC6LW%2BW9TlFRxrL0D2AwH31loCF7C7gYFySKu9eKBsgtmvRLhyLUPquw5OFlACLabSKXjGn6ttZdSO8vMcc9lhnpfItJ5PDozmn9Dtf%2BZUT9pne74wf5DNpZMED6fWvC3zM%2F%2Fdo2BwfoHWDgPsvso%2FqUrwmZ3sA0RhPUThss3lf07v7YZJIi9jt7AdVJNXxcKFXX8b%2BC0%2FyfunLN%2FNcXe1valPXV3RQmUCGYkOLowlrCHaDhRaQ9cSqNpOIo94KbEi2muCQhXI8WiTcxXPATZxyQAv6SwEsNcXvHLu%2BO7%2BqcW6DmcljCsYyUDE1tyZN8xLabmpDERLia1%2BAdaA%3D%3D"
+}

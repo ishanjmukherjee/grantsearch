@@ -1,0 +1,103 @@
+{
+  "presentationId": 46534,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><strong style=\"color: rgb(0, 0, 0);\">Intelligent Coaching Systems: Understanding One-to-many Coaching for Ill-Structured Problem Solving (Entrepreneurship)</strong></p>",
+  "abstract": "<p><span style=\"color: rgb(0, 0, 0);\">One-to-many coaching is a common, yet difficult, coaching technique used in learning environments with many novices learning to solve ill-structured problems. Intelligent systems might be designed to support 1-to-many coaching by automating routine and repetitive tasks. To explore how to do so, we need a detailed task model of novices’ challenges, coaches’ strategies, and coaches’ goals. To build a task model, we observed 1-to-many coaching with novices developing new products in a university incubator and conducted interaction analysis on 24 coaching session video recordings and retrospective analysis with 3 coaches and 30 novices. We contribute a detailed task model of novices’ challenges, coaching strategies, and goals that shows how coaches offload some coaching to peers, support accountability and self-efficacy, and help novices test frequently and regularly through 1-to-many coaching. Our task model informs emergent design implications for future intelligent coaching systems to assist coaches in monitoring large numbers of novices’ progress with ease, build a network of expertise among novices and help both coaches and novices access the network, as well as support novices in developing help-seeking and communication skills.</span></p>",
+  "subjects": [
+    "Arts, Design, and Performing Arts",
+    "Computational Sciences",
+    "Education"
+  ],
+  "voiceoverId": "7z_63UsqHPo",
+  "originalVoiceoverLink": "https://youtu.be/7z_63UsqHPo",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "20f560ab3acf59914211b488305e3062",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "20f560ab3acf59914211b488305e3062",
+  "createDate": "2022-05-13T19:17:01.000Z",
+  "lastUpdated": "2022-05-13T19:17:01.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Shubhanshi",
+  "presenterLastName": "Gaudani",
+  "presenterYear": "Sophomore",
+  "presenterMajor": "Computer Science",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Shubhanshi",
+      "lastName": "Gaudani",
+      "major": "Computer Science",
+      "level": "Sophomore",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/Her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Mechanical Engineering, Design ",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Elizabeth Gerber"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/20f560ab3acf59914211b488305e3062.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106314&Signature=Zodpial%2BVyApEymN8Cdv8MuStxJVGhh8n0Ed4i24xz%2Fs2BzxtollxTNUXSUaiKfmMbWrFOfagUtPKCuvaLurmEvD80MXoEDjMdf63FZ7iTX6mRIarYTzSA5b1I4BSABJs1iZXVFOgNPRwpOBgJx677q7i1jreQY3h7gJhPZDkWt%2F3G1wUpyXzIRWpxOhmM6aAy6pBSka%2FY10hOnCEGb8SPxquNlL5QxBhYihrzeLQmHAPe4%2B5V7kEXGYZNtaztM2g0pxOsQVzfrwy76U7enamv9h8kTVD3z6FUDROC5GH74j0U7hbsHscP8mgZAyIUpjKEPu2ZwnZ905wmRNyBD8Ow%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/20f560ab3acf59914211b488305e3062.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662966&Signature=H046rR49SGbvjN5VOdaEFSK82ZOcORWLoRjquw2BNAU3hD4sCls23K%2BN1n7o1Z9c8f94g%2FVUssfmx79Wte5bHIzEV5GtTuIe5phZnFdguujP0XyYr8BgC4bvD5eT66E%2BCbK0Mv7LbrBvmDswnhbLNejTFnG60TbfOxeJJmpOrIQp8A4yN70xx2g%2Bh9J7ku%2BeajM9vY2Nmjg0fhzNybFjSd7zk9eNb%2FloMl3%2BsNuMQ7Xg91dOkuRLYgV046525o2XXLhQJl31CR0lQEWSXGnwqE5bTeVt4sZUiwggmY3Zs%2FC6F4hMmTk0wRxjwm8vMjHkaGwLBosCACa9dUJMjyjwmw%3D%3D"
+}

@@ -1,0 +1,115 @@
+{
+  "presentationId": 46500,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Synergistic Movement Patterns in Infants with Cerebral Palsy</p>",
+  "abstract": "<p><span style=\"color: rgb(0, 0, 0);\">Cerebral palsy (CP), caused by a brain injury during early infancy, results in impaired movement and coordination. Emerging independent joint motor control is seen in typically developing infants as early as 6-8 weeks of age, indicating intact corticospinal motor connections. However, infants with </span><span style=\"color: windowtext;\">spastic </span><span style=\"color: rgb(0, 0, 0);\">CP who have damage to the motor cortex may compensate with increased reliance on brainstem motor pathways, resulting in less independent joint movements and more synergistic joint contractions. This study quantified synergistic movement patterns of infants with and without CP through overlap analysis. The length and frequency of movement patterns (knee flexion/extension, hip flexion/extension, ankle plantar/dorsiflexion) for the right and left extremities were recorded in 28 preterm infants (14 CP, 14 non-CP). Videos of infants aged 12-14 week</span><span style=\"color: windowtext;\">s </span><span style=\"color: rgb(0, 0, 0);\">were coded using Datavyu software and analyzed for observable correlations between movement patterns and CP diagnosis. The coder was blinded to CP diagnosis to prevent bias. The percent times of different overlapping combinations of the three different movements were calculated using Python software</span>\t<span style=\"color: rgb(0, 0, 0);\"> and compared between the two groups. Preliminary data suggest significant differences in the coupling between the right knee flexion and ankle dorsiflexion (p = 0.048). This behavior was observed in a combined 3.27% in the non-CP group and 1.80% in the CP group, considering both right and left sides. Further study is needed to investigate differences in the time course of joint movement patterns during development and can contribute to a better characterization of the natural history of CP, revealing potential for intervention.</span>\t<span style=\"color: rgb(0, 0, 0);\"> </span></p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "Old4_BNgYCs",
+  "originalVoiceoverLink": "https://youtu.be/Old4_BNgYCs",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "e09cc3a6079a86b2cd244d7424804ff1",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "e09cc3a6079a86b2cd244d7424804ff1",
+  "createDate": "2022-05-13T03:52:08.000Z",
+  "lastUpdated": "2022-05-16T15:14:04.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Isabelle",
+  "presenterLastName": "Kang",
+  "presenterYear": "Junior",
+  "presenterMajor": "Neuroscience",
+  "presenter2FirstName": "Michelle",
+  "presenter2LastName": "Kee",
+  "presenter2Year": "Sophomore",
+  "presenter2Major": "Neuroscience",
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Isabelle",
+      "lastName": "Kang",
+      "major": "Neuroscience",
+      "level": "Junior",
+      "isMainPresenter": true
+    },
+    {
+      "firstName": "Michelle",
+      "lastName": "Kee",
+      "level": "Sophomore",
+      "major": "Neuroscience",
+      "isMainPresenter": false
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      },
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/Her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Feinberg Department of Physical Therapy and Pediatrics ",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Theresa Moulton, Colleen Peyton"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/e09cc3a6079a86b2cd244d7424804ff1.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106287&Signature=FfErHuaiteejnn53FyU0ZmD2o786QGyhjMUYgl4OJ%2FwBVLutuMCa44uSMtKGhguU1pWLc4%2BdX9tDbEn59nQWq7ATCSPdtAp8s5S6ihhbfza5aDX%2FZaTAl9BDXAuVUXhibutht14V82aMHvHQw9FXAxxcqW1wjrbdbaA6wizeMj%2BldDx5JNKZrMkD0HkqJwUFVspGfR6wwxn0nEXstGkC5plMYubVDCbFn9p%2BlqdqKtoV4P6WTWEcsEDv56XRRRsdQuUEicg4PW86UD%2FmaIshXXWUKMPL96ffxRY0dEHkxEziVmrjzAOgVfozBMKl1evlynlwclSuyka5Zrg3N13IMw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/e09cc3a6079a86b2cd244d7424804ff1.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662939&Signature=Rih6b0u3fKIurUS3aVNH4g9xhzan4aJ7Zp9h%2FtbVcBd%2FsJDrEmLfoajLzqSIvLDqS6YZGTO9mr1fKL90xE5K4nbzLbJ3TYLpOwKfxnRyeSzxWlAqpHD5Dig%2Bzwnr7CCnWaqtgGdK1LFwG8qeCwm6hLXiUFo5foZwp8Z8awBh0jdIuOARvkxLJYd7A3%2BeiBfhgN8wOjzKIhfNDRNAy64LOSmsqy9XE5WXgxrK7REm8vb7TeiAk9jiE7Q0FWFQJTm32C94oI1EALLsGz5GrhhL0LweKI2GjWoIWVgMLzCpZ4GKgEnjUIRn08bJsTjyRBKtWsZmJjgOmohDR8EgoDi%2FBw%3D%3D"
+}

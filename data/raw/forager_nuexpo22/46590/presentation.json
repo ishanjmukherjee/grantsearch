@@ -1,0 +1,101 @@
+{
+  "presentationId": 46590,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Amyloid-Beta Oligomers in the Embryonic Chick Retina: Understanding the Role of These Toxic Proteins in the Development of the Central Nervous System</p>",
+  "abstract": "<p>\tToxic proteins known as amyloid-beta oligomers (AβOs) have been implicated in Alzheimer’s Disease, but our laboratory has now discovered that AβO expression in the central nervous system, surprisingly, is required for proper neurodevelopment. Using embryonic chicks as a model system, we have found that AβOs are briefly expressed in the retina and show marked spatiotemporal regulation. Treatments that decrease AβOs cause retinal malformation, suggesting that AβOs are required for proper retina formation. Which particular retinal cells rely on AβOs for their development is unknown, but imaging suggests possible involvement of a cell type known as horizontal cells. I have begun investigating this hypothesis through immunolabeling experiments in which I label the horizontal cells with cell-specific antibodies in order to monitor the effect of blocking AβO formation. I block AβO formation with an inhibitor of Aβ metabolism, which I inject into the developing eyes of shell-free chick embryo cultures. Understanding the defects that occur in the absence of AβOs will help to elucidate their natural function. After injections, I dissect, slice, and image the retinae to (1) observe whether AβO inhibition resulted in retinal malformations and (2) determine if horizontal cells are involved in such malformations. I have not yet been able to induce retinal malformations, so the involvement of horizontal cells is still to be determined. This project is important because understanding the non-pathological role of AβOs can lead to greater understanding of what causes pathological AβO appearance in Alzheimer’s disease, which could lead to new approaches to therapeutic intervention.&nbsp;</p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "ikx84qlnXm8",
+  "originalVoiceoverLink": "https://youtu.be/ikx84qlnXm8",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "2eb2ace3181accfd0725046218133991",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "2eb2ace3181accfd0725046218133991",
+  "createDate": "2022-05-14T04:50:17.000Z",
+  "lastUpdated": "2022-05-14T04:50:17.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Shreya",
+  "presenterLastName": "Mukherjee",
+  "presenterYear": "Senior",
+  "presenterMajor": "Neuroscience",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Shreya",
+      "lastName": "Mukherjee",
+      "major": "Neuroscience",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Neurobiology",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. William Klein"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/2eb2ace3181accfd0725046218133991.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106387&Signature=xTK0NWRJTta%2Fzp497g6fVYCZSemjtelTX74M3V%2F1ZzqeE%2FxrAi5l1jkrAV8zCuxj5PSYISfuDGUUr1cdBdDoZKCX%2FZ5LAUgCXq5IQDlAiCHpmKaK18ZuGlYJ9lD9qpEo6Fnd%2FZazs37akPplM%2Fnau6OPnWO929tZBHXoJmgsGe6SyU3jfsI12pHD4DL2sru9I9FEqTB95PB1iZ7Qyri%2BXGJzLL3BHqaFQiDrTy8h9cTYtqhAI44lYNOWsTgJBO1gfC8KyJldmdwEYAv6Thtl6l%2B5MGqe4vdmlr5E3WayN2V3S7PGtrrL7nqIuX%2FCII14qfakPTUAWzE96WllRtmuuw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/2eb2ace3181accfd0725046218133991.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663039&Signature=YIAzdp7u1RQKty1X3tabCPYBa4SexTMc5NiCNte%2FGH7MphbO1axmwFClbqpD9RhDko9%2BHmgvnY9uxuG3qmsmUxPhoXJnfxDGUYsUXkhTR%2FQzswSd9agLlF0kLHUsi65lUtBTfG1KA3VJxCuAfMlGGAspeA1ODoe5tFhAZagmYJjdKmydaf%2FnnABK9tEcqqZSxWyLr543lwXorQRlclySprcI%2BzRV74V57%2Fj0%2By%2FFz7T8QHOUtp3I8HDeTdbk0xMCF8nIbwC4d%2F6K8jIGZwz5mJ9jlXLkVvfXowu2Ihvz1oDS%2Bh3Jzk28u7FbCp0gjD%2FPYmJ5cAZo8InTfV%2BD%2BGL0vA%3D%3D"
+}

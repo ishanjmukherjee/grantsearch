@@ -1,0 +1,101 @@
+{
+  "presentationId": 46582,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>The Optimization of Blood-Brain Barrier Permeability for Potent and Selective 2-Aminopyridine Neuronal Nitric Oxide Synthase Inhibitors</p>",
+  "abstract": "<p class=\"ql-align-justify\">Neuronal nitric oxide synthase (nNOS) is an enzyme that produces the small molecule nitric oxide, which has been linked to neurodegenerative diseases, such as Alzheimer’s disease, at high concentrations. A potential therapeutic approach to prevent neurodegeneration is inhibition of nNOS by small molecules. Although previous molecules have shown good potency and good selectivity for nNOS over other NOS isoforms, they lack the blood-brain barrier (BBB) permeability necessary to enter the central nervous system where nNOS is located. Thus, this project intends to optimize the most effective published molecule through the incorporation of an oxygen atom in the linker of the scaffold and functionalization of the tail amine to enhance lipophilicity and BBB permeability. Though synthesis of final compounds has not been completed, key intermediates have been produced for both the head and tail fragments. Organic chemistry methods, such as palladium-catalyzed cross-coupling, hydroboration, tosylation, and radical bromination were used to synthesize a tosylated 2-ethanol-5,6-difluorophenol tail fragment and a 2-amino-6-bromomethyl-4-methylpyridine head fragment. So far, these results suggest that many new nNOS inhibitors may be accessed from the tosylated intermediate due to its ease of synthesis and functionalization, which has important implications for quickly screening their characteristics. Once the final products are completed using S<sub>N</sub>2 chemistry to combine the two fragments, results for potency and BBB permeability can be obtained using the respective hemoglobin capture and PAMPA-BBB assays, which will indicate whether these modifications balance potency, selectivity, and permeability, and what other changes might be necessary before a clinical candidate is found.</p><p><br></p>",
+  "subjects": [
+    "Chemical Sciences"
+  ],
+  "voiceoverId": "9cROTdYF83Q",
+  "originalVoiceoverLink": "https://youtu.be/9cROTdYF83Q",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "48a00dc1fee2d293c8e76971886fcde0",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "48a00dc1fee2d293c8e76971886fcde0",
+  "createDate": "2022-05-14T04:24:27.000Z",
+  "lastUpdated": "2022-05-14T04:24:27.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Radoslaw",
+  "presenterLastName": "Chrzanowski",
+  "presenterYear": "Junior",
+  "presenterMajor": "Chemistry",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Radoslaw",
+      "lastName": "Chrzanowski",
+      "major": "Chemistry",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/Him/His",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Chemistry",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Richard B. Silverman"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/48a00dc1fee2d293c8e76971886fcde0.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106375&Signature=oDJ%2BeCnYhpd0k9ytZ1o41Mqj7hT4aXGK4u82SjwFvGLLB%2BvrcIu%2B%2F8Y%2F8H6OxbfbdBff1rQ29rGQozoTJp8zEuaLBsHzNnwNxUlWObGw%2BYYGPxbl%2FSw7e5yH%2Fz4Jn%2FG0QgPzFNG7noJ1tMG%2BGkA7Z3oOz%2Fr%2B3ADkZ0Kse36GRnfHOFwbJ%2FgGMISDT3nrmmFuZDX%2B8LKq7Pdy0daglmw%2F06DxZfskV1LNCMpMucydnX61sxdNtIrXL2RqFLtE8aelFyGqqk0ZqDL9NpEFHhawiULKrDJsPk3DZdKy4BVBWBZRdNfdFwtkW0JVKugSxJvu60%2Fm3iOCXQNLie2Bp%2Bi0ig%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/48a00dc1fee2d293c8e76971886fcde0.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663027&Signature=mdhqKJwtC7GLhyV%2Bz700A%2FfgqfxUo148mo0IRb04Y4mhl8v0Eek%2Bm7eKYQzGGUOxOUoJ0lhY7fhcqQzeSL4Xf9tL4BL%2BZCSFjykurOvhl46gd7pDWOLgPerwzoIZ87n6B0XEuxsutzlAhG6hHWCydAjf%2FJxrPYo1s0eC%2F6m8KalTChrU50sknc17cLROvSQn38xjbCW04bn7YWR2pxe435qQ4vCOAne9xPhFhW3q6nIvYtST%2BHsKONoNpfKHSzXMTwixz1PcK9wZbh7wIQNRFqV%2FlpSVvFc83TaOuojg%2BSsED9C6pdbz%2BhsmhZDyIJOVUJ%2BqIeVeyVL8a96TXTYejQ%3D%3D"
+}

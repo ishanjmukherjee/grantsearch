@@ -1,0 +1,101 @@
+{
+  "presentationId": 46563,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>The Impact of Youth-Onset Type 2 Diabetes Mellitus on Postoperative Wound Healing Complications</p>",
+  "abstract": "<p>Youth-Onset Type Two Diabetes Mellitus (YOT2DM) is characterized by a very rapid decline in beta cells, as well as accelerated microvascular and macrovascular complications compared to adult-onset type 2 diabetes, highlighting the value of viewing this disease as a unique clinical entity. However, it remains unclear if, like adult-onset diabetics, YOT2DM patients experience increased surgical complications with respect to tissue repair and regeneration. The purpose of this study is to determine whether YOT2DM is a risk factor for postoperative surgical complications compared to age-matched non-diabetic patients. The National Surgical Quality Improvement Program Database (NSQIP) for years 2012- 2019 was used to identify patients aged 18- 24 with non-insulin dependent diabetes. Patient demographic information and comorbidities were recorded. Outcomes of interest included wound infections, wound dehiscence, readmissions, and re-operation. Univariate analysis (Independent sample T-test and ChiSquared) was initially performed to identify differences between YOT2DM and non-diabetic patients for relevant variables and postoperative outcomes followed by multivariate logistic regression to control for potential confounders. This analysis of the NSQIP surgical outcomes database found that when compared to non-diabetics, youth-onset type two diabetics exhibited a higher incidence of superficial surgical site infections in the 30-day postoperative period. Higher rates of SSI were found, despite the YOT2DM cohort exhibiting lower rates of wound contamination. After controlling for confounding variables, YOT2DM remained a significant predictor of SSI. </p>",
+  "subjects": [
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "9E6SEIhR-rg",
+  "originalVoiceoverLink": "https://youtu.be/9E6SEIhR-rg",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "8bb5a71b34b180764c017dfefef08bac",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "8bb5a71b34b180764c017dfefef08bac",
+  "createDate": "2022-05-13T23:51:09.000Z",
+  "lastUpdated": "2022-05-13T23:51:09.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Grace",
+  "presenterLastName": "McDonnell",
+  "presenterYear": "Junior",
+  "presenterMajor": "Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Grace",
+      "lastName": "McDonnell",
+      "major": "Biological Sciences",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Division of Plastics, Dept of Surgery, Feinberg School of Medicine",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Robert Galiano"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/8bb5a71b34b180764c017dfefef08bac.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106349&Signature=UjcH5YLypR4svMeq9bsnE9ppc0A34q0q4D6ZVUK6EuE%2B5%2FKV8Bdmd9bE51qUHGPnLGmFoPtjqg85nb9BuftdS67umjPDXR60IlCNwddCNBvmMpg2IjKgknJBsjRa5mvg1gV3ofJIRCP1r9PUP6Srn3Tl10vwHdkZZWkol0MhtFTlOlROMxCRIeEI80GPJcSTSgo0zrqnYvfQenMeiRJ7KtaYGD%2FAcMS5JD9uMPZuAdqtB94UjOqcHxGQnvyZI%2FF3dz2NQKh0xWfhAt3dR6e%2FDFIX4X2fmAzZDe3XLtqMp63OSiQ%2BjmGiSVHSe5cDVvE6c%2BSQOvGe2cvXQCTSIlGjVA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/8bb5a71b34b180764c017dfefef08bac.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663001&Signature=PuQTEUwG81LpofPnS1nFQAx2decfGUcWH06%2B5nwHt%2F6x2pJdcjPBJIRzKomXyB6kwG9oM0CMLGIbFjPs7hNrwCjnLWx13tfc6syO49x%2F3freNtOi4CP0mxt0sShBzwNTuxhLpZ19ArKYlZUYc7dsISbzQS%2BKtVoLfCrHZHeA9X%2BW6MolZy3LuLmMfzILlapJaB8m0jYl70tjv2AdTwH%2FzFgw%2BnCoS5%2FO0gH2EaSzbBMsiDydDGwqFj%2FnrdofRkLjlXaX%2BSlrEefLxxj8uMKbYLn7MTyYJP4KhpidT6TwSV39hu5PnhHfi1nA66B9PgVQ1Y1cMmekWuM7VnnWsZx0CQ%3D%3D"
+}

@@ -1,0 +1,101 @@
+{
+  "presentationId": 46475,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\">Establishing A Quantitative Proteostasis Probe for Neuronal Signaling Receptor Trafficking Upon Protein Aggregation</p><p><br></p>",
+  "abstract": "<p class=\"ql-align-justify\">In neurodegenerative diseases, such as Alzheimer’s and Parkinson’s diseases, genetic mutations can lead to an accumulation of misfolded proteins in neuronal cells. The aggregation that occurs when misfolded proteins clump together results in cellular toxicity. Molecular chaperones are a type of protein that aid in the clearance of these aggregates. However, chaperones also play key roles in other vital cellular processes. One such process is called clathrin-mediated endocytosis (CME), a type of vesicular trafficking that cells use to transport materials. When aggregates are present, they sequester the limited pool of chaperones available to the cell, causing a collapse in CME. The quantification of CME can therefore serve as an indicator of the chaperone availability in the cell. My research aims to develop a molecular probe to measure the collapse of CME upon protein aggregation. The probe generated uses a tag to fluorescently label CME cargo. Study results demonstrate that the probe effectively quantifies CME activity in the cell. Further, the data obtained is consistent with the literature that CME decreases upon protein aggregation. This indicates that the probe can effectively be used to measure the availability of chaperones in the cell. Further development of this probe can then be used for testing candidate small molecules that can be used in therapeutics for neurodegenerative disease.</p><p><br></p>",
+  "subjects": [
+    "Biological & Life Sciences"
+  ],
+  "voiceoverId": "nQ2CSg2K5ck",
+  "originalVoiceoverLink": "https://youtu.be/nQ2CSg2K5ck",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "0caa3063f49779a26faaa52ebe6c5339",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "0caa3063f49779a26faaa52ebe6c5339",
+  "createDate": "2022-05-12T22:19:31.000Z",
+  "lastUpdated": "2022-05-12T22:19:31.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Eirene",
+  "presenterLastName": "Fithian",
+  "presenterYear": "Senior",
+  "presenterMajor": "Biology",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Eirene",
+      "lastName": "Fithian",
+      "major": "Biology",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her/hers",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Molecular Biosciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Richard Morimoto"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/0caa3063f49779a26faaa52ebe6c5339.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106266&Signature=p0yQrP0wkcHROxt6nyL63KxyP5cNULTB2idi6YuAC71e9BiCAOWsVLtwcV2gmwqagfg9bTRDHFjj08KaF3waNC2MXGbKIA2ri5LqgddBu5lQzcQk5MjuHWh6%2Fjc3DPVapLekWUrAK34amsxzlDyAQ7WtzIP0EEYZl5cvQhW2Ug2xirS%2Bnoj5KWjWY8dfdkycIZllEDxAFgr9nUqa%2FWzrVsUd%2FLuZyU44Io14KPnP6eZkMdzQQyYbgfs6DS7MaJfWCNFExdYekw1mcOcmvl9zdplmvxTeanS%2FPCsjID9KLXt4XTZ%2B1%2FN3JUPLgn%2BTAeEWj1IZwnPTEkadI1pamso58A%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/0caa3063f49779a26faaa52ebe6c5339.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662918&Signature=BbukvgjJfnz3levw%2BO0LQGV4mUhn6soFAJeO0fDP1bFPp0sR0d2symZmv1vl%2BHcRdsuAab9fvbBUtALkbD5mXvZ9Zjsl9Cl1bcLLyo7GMHA%2B6pVvG6FiSPGhU1EehUdwvj%2B6p7YIZS2IvjATZrINXW%2BGyChK3JPZULWG8MfNubAYsXZDRglg2L117ay7l3Cadu7k05CFP5DVvT8%2FUgONknXx1DGrwdPRqF%2BEwOSiIYSwQ5meIDtaU2beqktpIGCXow7NQAK8DbLwUyDJjxe8B7Au3X8%2BqiATPtSucc0gRHHEIZi0WZhIs7bFH3EMXO9GkFCr%2Brx4fLI7GINMfJaXwg%3D%3D"
+}

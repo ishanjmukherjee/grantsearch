@@ -1,0 +1,127 @@
+{
+  "presentationId": 46527,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\">TECtalks: A Podcast Series on The Environmental Effects of Technology</p>",
+  "abstract": "<p><span style=\"color: black;\">Despite increasing awareness of environmental issues, few people stop to consider the effects of their daily use of technologies on the environment, from the electricity and water required to maintain data centers to the mining of minerals required for manufacturing batteries for electric cars. We seek to educate everyday people by answering the following research questions: What do researchers and climate advocates want people to understand about technology and the environment and what actions can be taken, individually or collectively, towards mitigating the negative effects of technology on the environment? In pursuit of discovering more, we have reviewed research papers, conducted interviews with experts, and gathered captivating and veracious content for the production of our podcast episodes. Based on our analysis of interview transcripts, we have found that experts and practitioners possess very different theories of change. There are various kinds of actions that we may take as individuals and as a society to mitigate environmental degradation. For example, individuals can work towards maintaining their personal technology devices for longer periods of time before throwing them away or that society can employ better methods in regulating large technology companies that obtain energy from unethical sources. The experts we interviewed all mentioned that it is critical to understand and take responsibility for these effects in order to better collectively fight climate change and environmental injustices. Moving forward we aim to continue to seek expert insight into such problems, produce insightful episodes for our listeners, and inspire positive change for our world.</span></p>",
+  "subjects": [
+    "Environmental Sciences"
+  ],
+  "voiceoverId": "_3GIXpEefg8",
+  "originalVoiceoverLink": "https://youtu.be/_3GIXpEefg8",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "610d51592ed1ff7688587c340a512132",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "610d51592ed1ff7688587c340a512132",
+  "createDate": "2022-05-13T17:52:57.000Z",
+  "lastUpdated": "2022-05-13T17:52:57.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Aino",
+  "presenterLastName": "Alkio",
+  "presenterYear": "Junior",
+  "presenterMajor": "Industrial Engineering",
+  "presenter2FirstName": "Kelly ",
+  "presenter2LastName": "Su",
+  "presenter2Year": "Senior",
+  "presenter2Major": "Computer Science",
+  "presenter3FirstName": "Rachel",
+  "presenter3LastName": "McCardell",
+  "presenter3Year": "Senior",
+  "presenter3Major": "Computer Science",
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Aino",
+      "lastName": "Alkio",
+      "major": "Industrial Engineering",
+      "level": "Junior",
+      "isMainPresenter": true
+    },
+    {
+      "firstName": "Kelly ",
+      "lastName": "Su",
+      "level": "Senior",
+      "major": "Computer Science",
+      "isMainPresenter": false
+    },
+    {
+      "firstName": "Rachel",
+      "lastName": "McCardell",
+      "level": "Senior",
+      "major": "Computer Science",
+      "isMainPresenter": false
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      },
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      },
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "She/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "McCormick"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Computer Science",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Sarah Van Wart"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/610d51592ed1ff7688587c340a512132.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106305&Signature=daN6WRGKTD0QM9zXfbIxSsEJ8LGYFbRQ4pQIkxGLAro9G%2BOjBeps8rZwLZubtRtQQEzNJxXs%2FS7cNH1SBwiFJpc%2BNOdQ7vxgAHySuU2NgMSiZg6Z27O4RSxFso9QRDzNS37f56g9Hk8cAzDYroFhEbbCxA%2BAT%2FJDhnejUTOivVeXfXtsI6D4g8bRiNP7dQgpoYoxJl4imYUh8ZyUp7SCACx6%2FcOl718rRXvbqezpzbvBn%2FVx%2FJYJ3kXYiBXj0Hb7U1XWw5iJ2JQpYQwS7VdUxmjm9I1BHy5ZJsx%2BxRArlG0on1lTK3YF8NmYXzMwG6hCLcfDceRhxGdCNP201Arlxg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/610d51592ed1ff7688587c340a512132.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662957&Signature=ZcqZ3UCRNypGlQdB7zgGJYqrILMBbJI798V4q4a%2BqvBabB9PVYLnaPdgPibPCBU%2F0kqxDBWlWqe91O6zoizfegvfIaQiNR1lN%2BVThiuBXXhoOUtIZjPBOt0KCgSLXhFeLHT6tnmZ4In2ug2GTwqtrv3uFPE1cbzuuAJgOaJCIDYRa0TAIuqYoS%2FstGdE%2B9wlQN9%2BK7TsQ4lUeVfbRCMgRAbrXQgd1MDGWxy2%2Bk7UVY0VncLxmn2rQB%2BOKCus3X8ObrPYCEXISqW9JhEh5I8BT9YTQyi6AvunI24s6g216adNFWtnD60OAMIOIemFrau%2B6ZGDO0kmCXm5Mt%2BRiPJDyg%3D%3D"
+}

@@ -1,0 +1,103 @@
+{
+  "presentationId": 46625,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p><strong style=\"color: rgb(39, 63, 104);\">Learning Loss and COVID-19: Pandemic Schooling Mode for U.S. Public Schools and Student Test Scores&nbsp;</strong></p>",
+  "abstract": "<p class=\"ql-align-justify\">School districts across the United States varied in their responses to the COVID-19 pandemic. While the shift to remote learning was nearly universal in the Spring of 2020, there was robust heterogeneity in the modality of instruction (in-person, hybrid, and fully remote) during the 2020-21 school year at the district level. The unevenness of school openings allows researchers to broadly consider the short- and long-term consequences of a lack of in-person schooling. In context of an educational learning production function—with foundations in microeconomic theory—schools faced the choice of instruction modality without clear evidence on the efficacy of remote learning. Literature, particularly by Oster et al. (2021), have begun to point towards the learning loss from decreased face-to-face instruction. I utilize a detailed database on schooling mode from academic school year 2020-2021 alongside Spring 2021 test score data from over fifteen states. I find an overall drop in average test scores through empirical statistical analysis. I quantify the decrease for students Grades 3-8 to be 8.5 percentage points and 6 percentage points for Math and ELA scores respectively. However, test scores for students in Grade 11 performed only minimally worse, if not the same, on the Scholastic Aptitude Test. This may be due to positive selection bias and lower participation rates. This research can be utilized by school districts in the future when faced with modality of instruction choices, as evidence now exists to demonstrate that virtual learning cannot directly substitute for in-person learning, at least, for younger students.</p><p><br></p>",
+  "subjects": [
+    "Business & Economics",
+    "Education",
+    "Social & Behavioral Sciences"
+  ],
+  "voiceoverId": "9oOMB6-5ObQ",
+  "originalVoiceoverLink": "https://youtu.be/9oOMB6-5ObQ",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "418ebd589b063246915f825b66990e9f",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "418ebd589b063246915f825b66990e9f",
+  "createDate": "2022-05-15T15:04:00.000Z",
+  "lastUpdated": "2022-05-17T12:58:24.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Caroline",
+  "presenterLastName": "Forbess",
+  "presenterYear": "Senior",
+  "presenterMajor": "Economics",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Caroline",
+      "lastName": "Forbess",
+      "major": "Economics",
+      "level": "Senior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "she/her",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Economics",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Scott Ogawa"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/418ebd589b063246915f825b66990e9f.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106424&Signature=leh8lkLx4Y0%2F72Z%2BkGxndDrBumxBK6UTS4O5XiRDbiI09dx2f%2FpIwTYOQhwG1ZHgW9vmnfjnsvyPzRFrXH%2FqUUQwBsuh%2BLV74G%2BN6bf%2FEUXrH7mTwrS7FIDUPVqA5ENoYQ5jOQeyD4A2FUelTAbvLnzxWdGpRKrluhz5nS3xp8aFpDhql9R9fplox3q5EiDnQ0U7qjeKKUy1tULmtIi5zSLgDrfzDtUVlp08TD49Evxf7JWZYDHImROz48vTAaz7cVIvrbH9YUnB%2Fu3ihRvq7k8mes%2F8Z8o%2Frtw%2FjY6UIsYBv%2FMUjyl35sM7H11WNlfzG5zi9elNP9ZMLvyOo3H8Fg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/418ebd589b063246915f825b66990e9f.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663076&Signature=EL4%2BujG%2BdiGG9JBiMNnBl7m%2BddE3AymPsspuMST1M1muXQb91m%2FpSA4OcR9%2FU3%2FLm5VUlVfnkB%2FVI4cbA4udKdcP%2FO%2FX4DwY2XbwH%2FhDCL4Y1TLIlYQBZNs90yZ3BfTwFei%2BxuNB7NEJBvstd8LWRUn1jg6D%2BArAu%2F8V6k4wf0soP8FNZzd6qDHiDd9jXmmGbFWFDIApHe7KiG2dXIaTCiue1QVs%2FgkSiG5anvWLGaVzpZ729qYnP6EW%2FLsHeLwlozLLKE7dPgoF2Dn5nRhMSdunuFcwGLScEHGC69JIwiBVo6pEal72BH0kjJ%2FYPdW37zx82UNEPmSOxDg0IoQC9A%3D%3D"
+}

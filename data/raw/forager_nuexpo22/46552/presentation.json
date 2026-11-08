@@ -1,0 +1,102 @@
+{
+  "presentationId": 46552,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Novel Mechanisms in Nuclear Receptor Gene Regulation</p>",
+  "abstract": "<p class=\"ql-align-justify\">Parkinson’s disease is a neurodegenerative disorder associated with impaired motor function and reduced lifespan. Although the molecular mechanism of Parkinson’s remains poorly understood, reduced levels of Nurr1 have been shown to cause a Parkinson’s disease-like state, suggesting its importance to potential therapeutics. Nurr1 is a nuclear receptor (NR), a class of proteins that respond to environmental signals through binding small molecule ligands. This binding event allows the NR to interact with other proteins, called coactivators, to turn genes on or off. Unlike other NRs, however, Nurr1 is an “orphan” NR, lacking the canonical ligand-binding pocket. Not much is known about Nurr1’s alternative mechanism to modulate gene expression. Instead of binding Nurr1, I hypothesize that small molecules can bind a pocket on the PAS-B domain of a coactivator protein, modulating its affinity with Nurr1 to affect gene expression. To identify potential ligands that can bind to the coactivator, I developed a high-throughput screening protocol <em>in silico</em> to model PAS-B's binding against a library of compounds. In addition to screening, I also used Rosetta to predict the binding conformation of various compounds which have been demonstrated, by <em>in vitro</em> experiments, to bind the coactivator. Although more work is needed to characterize the effect of ligand-binding on the coactivator-nuclear receptor interaction, current results propose a likely group of lipid ligands and their binding configurations. Since orphan NR mechanisms have yet to be discovered, and such proteins have vital roles in cellular metabolism, development, and homeostasis, our research also holds potential implications for other maladies, too.</p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Chemical Sciences"
+  ],
+  "voiceoverId": "nPAhIBoGUxI",
+  "originalVoiceoverLink": "https://youtu.be/nPAhIBoGUxI",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "80f8d48da1d67aa865c664673576eade",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "80f8d48da1d67aa865c664673576eade",
+  "createDate": "2022-05-13T21:56:53.000Z",
+  "lastUpdated": "2022-05-13T21:56:53.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Kade",
+  "presenterLastName": "Kelley",
+  "presenterYear": "Junior",
+  "presenterMajor": "Biological Sciences, Chemistry",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Kade",
+      "lastName": "Kelley",
+      "major": "Biological Sciences, Chemistry",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "he/him",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Molecular Biosciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Oral Presentation",
+      "964181684a9956120f7898ccdeb61310": "Ishwar Radhakrishnan"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/80f8d48da1d67aa865c664673576eade.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106335&Signature=OWfmLciOK1qgLtkDm9jwkai%2B1FoVyW3Ft804GTgf9DMjziB4H8rLFrdoEHBASykvNhGlIFUmoGMg5hZH75J%2BnUZJXpb7G89qex1t%2FBFEx13XUOWh14yOGlXNZtcW2GqaMKuXMeBC7pfU60OfSfqOnN6kpLrOOo2GdHb1kBneXWvkIDDTrnyy58nS%2B43x7nkFhazHVmWarrhuFG1XGP7jNH7td%2FI8WNQQZNlD718M0D5iwtkUNasZ1W66XyLLv%2Bp%2FXnDp6xZ1a8t30VDh5oxwm4KXCYu5ds8FcOMPmjWD8cblnS5G5POv%2FcDYOsQfV7vkxWc3hsu9hIbYyVyyREWrMw%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/80f8d48da1d67aa865c664673576eade.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662987&Signature=yX8BkbyxWDHyxjjAdn7T5IQwfbvlPG51ACoCgXRMIQbf40GGjUPUG5M6yJ6wCNqN5xHriBH7U%2FDg5GrzYRmpmezZP86OsJPUxBfvCKuBuMWZDdeg4Qefkjlmnwgb6hDCFolxPxmoBUpAOk%2Fq1TLTRmyOXuLQbwcMctVBruKCPZFVjjNWWkDNiJJP85p%2FuQ9Ic3k5TpYXdDgBVeQh83mFRtr9s7g169gpcGdwDzp%2BGgZHqnrSXEh%2FQ4zSVjQMLI5I350Imww0OLKavCRrGD0XiEDalJpgM9kAUgh%2Fx3DjqqwVZU45HJbHmfXUulAEiU8Dd%2FFPJidBTs35AXKpv2sBzg%3D%3D"
+}

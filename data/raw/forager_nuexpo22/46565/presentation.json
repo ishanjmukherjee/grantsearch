@@ -1,0 +1,102 @@
+{
+  "presentationId": 46565,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p class=\"ql-align-center\"><strong style=\"background-color: transparent; color: rgb(0, 0, 0);\">Alterations in Basal Ganglia Connectivity in Primary Progressive Aphasia Caused by Frontotemporal Degeneration and Alzheimer’s Disease</strong></p><p><br></p><p><br></p>",
+  "abstract": "<p class=\"ql-align-center\"><strong>Daniel Seog</strong></p><p class=\"ql-align-center\"><strong>&nbsp;</strong></p><p class=\"ql-align-center\"><em>Faculty Advisor: Borna Bonakdarpour [Mesulam Center for Cognitive Neurology and Alzheimer’s Disease</em></p><p class=\"ql-align-center\"><em>Northwestern University Feinberg School of Medicine]</em></p><p class=\"ql-align-center\"><br></p><p class=\"ql-align-center\"><strong>Alterations in Basal Ganglia Connectivity in Primary Progressive Aphasia Caused by Frontotemporal Degeneration and Alzheimer’s Disease</strong></p><p class=\"ql-align-center\"><strong>&nbsp;</strong></p><p class=\"ql-align-justify\">Primary progressive aphasia (PPA) is a syndrome of progressive language impairment caused by neurodegenerative disease. A group of structures in the base of the brain involved in coordination of movement known as the Basal Ganglia (BG) have been shown to be affected by the underlying causes of PPA, however, the pattern of involvement may differ in PPA cases due to Alzheimer’s disease (AD) versus frontotemporal degeneration (FTLD), disorders caused by progressive nerve cell loss in the areas of the brain behind the forehead and ears. In this study, we investigated whether connectivity between Basal Ganglia and the language network is more impaired in agrammatic PPA (PPA-G; characterized by gradual loss of ability to speak) versus logopenic PPA (PPA-L; characterized by difficulty finding words). This study consisted of 30 controls, 27 individuals with PPA-G and 16 with PPA-L. Functional MRIs, an imaging technique used to identify regions of the brain with cognitive processes, were conducted for each participant and statistical comparisons comparing connectivity in the brain for the two subtypes were executed. Results for PPA-G and PPA-L patients showed worse decreased connectivity between the Basal Ganglia and other regions on the left side of the brain. The pattern of decreased connectivity in the two subtypes seems to be different from our original hypothesis which stated that PPA-G would display more decreased connectivity. To determine whether our finding is due to more abnormal function within specific areas of the BG, we plan to compare regional brain metabolism in PPA-L and PPA-G patients.</p><p>&nbsp;</p>",
+  "subjects": [
+    "Biological & Life Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "z9TLElZPsyI",
+  "originalVoiceoverLink": "https://youtu.be/z9TLElZPsyI",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "106b6904fb29dc670959ba11dbf4cf3a",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "106b6904fb29dc670959ba11dbf4cf3a",
+  "createDate": "2022-05-14T00:00:08.000Z",
+  "lastUpdated": "2022-05-14T00:00:08.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Daniel",
+  "presenterLastName": "Seog",
+  "presenterYear": "Junior",
+  "presenterMajor": "Biological Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Daniel",
+      "lastName": "Seog",
+      "major": "Biological Sciences",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "He/Him/His",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Department of Neurology - Feinberg School of Medicine",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Borna Bonakdarpour"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/106b6904fb29dc670959ba11dbf4cf3a.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106351&Signature=OPTDT5qKHbcKMa79krp1R9F2FoGJyj%2FZFpwptDuzcePq5ZUtBc6F98hkLpjw04FcpHxGiVi6Wbsn%2FDwV35XYbDyhYKh63pq6BsIaJNzsOm3ghhEaaLKbL%2FtADGOf2gDxY%2BntNjmZg6%2BkeSXXprZIUPkLU%2Fvv2SVg%2Bg7Dlb4xWg8dnWDvW8%2FkY6c75kw9YNsYLkTiI1Jy6V6R4QnMzB7wsrKO6rvzuyw8eJouWdlklPf8J%2B4144dKXf0NeASaG18rrsc4fZ2YTjE4bOof0esP%2FN7dxGTvckuc9fJ7OZMYd0NbcJ%2BNtAa8KSux4c8Zpto6mq6NsnIXK%2BZmd5TexUZwEg%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/106b6904fb29dc670959ba11dbf4cf3a.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825663003&Signature=dtB4tCSueeKsl2g0wE4xKBouSIY%2BvHrB7MlLSEm1bxWLa4b0qvc1zw1MEEr8qzeaQsrmKONInJPI6UR01R8eJUhUoVOIW%2BLbxP%2BUtD3P4KwteUPoKUt9zIqXMeqlBtV3EfeM0PVfkjKyUXHzcvelt8TP79%2Fc%2BWYvg8yC9P1Ep83aup7V4h4%2Fa4AEg%2FqCYB%2BGfPPR%2FzOl7x5gO5t8I514vmpPPh2ID24nUEirzbBx0FJzoUfaVMvCUStrErbx3fVAqTcEE06Y3P%2BRntluyrYqN6KKW81jCRianOzkO%2B4BUla%2BxMYovxjY0hWqeqBv1UIsAPwPiJRXXRphN26h1VK9uw%3D%3D"
+}

@@ -1,0 +1,103 @@
+{
+  "presentationId": 46530,
+  "institutionSetUniquePresentationId": null,
+  "title": "<p>Air Quality Benefits and Tradeoffs from 30% Vehicle Electrification over the Midwest-Great Lakes Region</p>",
+  "abstract": "<p>\tWith the recent advent of automaker production commitments, increasing consumer options, and greater affordability, the United States’ vehicle fleet is fast becoming more electric. The appeal of electric vehicles (EVs) is multifaceted, but largely contingent on the assumption that an EV emits less greenhouse gas and fewer air pollutants than an internal combustion engine vehicle (ICEV). Studies have largely borne out this assumption for greenhouse gases, but the net effect of EV adoption on air quality depends on numerous nonlinear factors including the source of electricity used to charge EV batteries, the type, magnitude, and proximity of other emission sources, meteorology, season, and time of day of charging.&nbsp;</p><p>\t\tWe use the two-way coupled Community Multi-Scalar Air Quality and Weather Research and Forecasting (CMAQ-WRF) modeling system to simulate the changes in air quality that result from the replacement of 30% of all vehicles with EVs. We scale tailpipe, refueling infrastructure, and power plant emissions according to ICEV replacement and EV charging demands using an emissions remapping algorithm designed to emulate U.S. grid behavior. Our simulations are run at neighborhood-scale (i.e., 1.3 km<sup>2</sup>), and air quality changes are contextualized&nbsp;by computing public health impacts across health endpoints using community health response functions.&nbsp;</p><p>\tOur results indicate that EV adoption results in surface-level O<sub>3</sub>&nbsp;increase, with NO<sub>2</sub>&nbsp;and PM<sub>2.5</sub>&nbsp;decrease over the modeling domain. We find that populations collocated with major interstates are most affected by air quality changes, and we demonstrate that the added deaths due to O<sub>3</sub>&nbsp;increases are largely negated by the lives saved from NO<sub>2</sub>&nbsp;and PM<sub>2.5</sub>decreases.&nbsp;</p><p>\t<span style=\"color: black;\">Our 30% EV adoption scenario demonstrates a net public health benefit over the southern Lake Michigan region. Census tract-level mortality data is more nuanced, however, necessitating demographic overlay to ascertain the environmental justice implications of the proposed EV transition over our domain.</span></p>",
+  "subjects": [
+    "Computational Sciences",
+    "Environmental Sciences",
+    "Medical & Health Sciences"
+  ],
+  "voiceoverId": "rhBDdI6Mo7E",
+  "originalVoiceoverLink": "https://youtu.be/rhBDdI6Mo7E",
+  "presentationVideoId": null,
+  "originalPresentationVideoLink": null,
+  "posterId": "6a92d5ecc11d52043e9d912e1178779a",
+  "slidesId": null,
+  "mentor": null,
+  "originalPosterLink": null,
+  "eventId": 627,
+  "institutionId": 627,
+  "posterType": "pdf",
+  "voiceoverType": "youtube",
+  "hash": "6a92d5ecc11d52043e9d912e1178779a",
+  "createDate": "2022-05-13T18:20:55.000Z",
+  "lastUpdated": "2022-05-13T18:20:55.000Z",
+  "insertRun": null,
+  "debugPresentationType": "poster",
+  "deleteDate": null,
+  "metadataInstitutionName": null,
+  "internalSymposiumTitle": null,
+  "customPresentationType": null,
+  "customFields": null,
+  "primaryPresenterBiography": null,
+  "presenterFirstName": "Maxime",
+  "presenterLastName": "Visa",
+  "presenterYear": "Junior",
+  "presenterMajor": "Environmental Sciences",
+  "presenter2FirstName": null,
+  "presenter2LastName": null,
+  "presenter2Year": null,
+  "presenter2Major": null,
+  "presenter3FirstName": null,
+  "presenter3LastName": null,
+  "presenter3Year": null,
+  "presenter3Major": null,
+  "presenter4FirstName": null,
+  "presenter4LastName": null,
+  "presenter4Year": null,
+  "presenter4Major": null,
+  "presenter5FirstName": null,
+  "presenter5LastName": null,
+  "presenter5Year": null,
+  "presenter5Major": null,
+  "presenter6FirstName": null,
+  "presenter6LastName": null,
+  "presenter6Year": null,
+  "presenter6Major": null,
+  "presenter7FirstName": null,
+  "presenter7LastName": null,
+  "presenter7Year": null,
+  "presenter7Major": null,
+  "presenter8FirstName": null,
+  "presenter8LastName": null,
+  "presenter8Year": null,
+  "presenter8Major": null,
+  "additionalPresenters": null,
+  "posterVideoId": null,
+  "thumbnailPic": null,
+  "posterPdfId": null,
+  "presenters": [
+    {
+      "firstName": "Maxime",
+      "lastName": "Visa",
+      "major": "Environmental Sciences",
+      "level": "Junior",
+      "isMainPresenter": true
+    }
+  ],
+  "presentationDate": null,
+  "isCommentsPrivate": 0,
+  "isJudgeable": 1,
+  "supervisorConsentText": null,
+  "submissionFormExtraValues": {
+    "presenters": [
+      {
+        "2bb7b90098fd6964caa676db86d538ae": "he/him",
+        "3b3113123845a711d415a2c179ad80c9": [
+          "WCAS"
+        ]
+      }
+    ],
+    "presentation": {
+      "59088b36dba99947c708489d00d9e2de": "Earth and Planetary Sciences",
+      "834db3d8f28b7efc13f2e074230c4ad9": "Poster Presentation",
+      "964181684a9956120f7898ccdeb61310": "Dr. Daniel E. Horton"
+    }
+  },
+  "videoSDKMeetingId": null,
+  "consumerId": null,
+  "presentationType": "poster",
+  "posterFileURL": "https://storage.googleapis.com/fg1-submissions/6a92d5ecc11d52043e9d912e1178779a.pdf?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1794106309&Signature=jP96dLtVgXfiybLSYXPinLnIsa06CYgVyafChLZ86BxJnDXZHsjplNniTKhlm9zk4Qrni2itE2xxEBT5luvUgoo2QSXzPdcYgGgAU2Q%2FXHq5XHXEl3xVueS30%2BeEXvERR4c3SltS%2BjZ3jSa7pGRSGlqih%2FGavC5%2FO5e5%2BPL%2FJUgNAABon3pvNZ2J6%2B0rrIyIR45NuA5PT5vCQ3%2BFjnbtZyXhBeVMXPRY7vGWnLKhp9F4GroVLZ4ZgtbvMHnLrNVHp%2FNmZ55xzCmAXQG2VaswhQlx0%2F2GjcflFBZITJW3UZEOBJbmJsMV1e8OdDjEEAzPcl%2BQN8FmnAP28JU7CYJ5jA%3D%3D",
+  "posterThumbnailImageURL": "https://storage.googleapis.com/fg1-submissions/6a92d5ecc11d52043e9d912e1178779a.jpg?GoogleAccessId=656367108343-compute%40developer.gserviceaccount.com&Expires=1825662961&Signature=ETPDK02RXPzXizRBzYSwBqJMzfAtgA5QxCNjvysviAYGzFtYK4dIopfu0jRwk57Xeet6lU45vR3Sji9dKWbmkpvY5GD4jdfh63yn7LoLEv1UKjRLq6qSnInV7U8jDwxNtBSi6B%2Bdg6QTuxeep%2FPmRWmf0vEFr9NAr3f4u4NDdssUkCcJKqJEw4ewi7Dvpq%2BHfgN7x0VWQKXQultanBt69zaAe1of6hxmAobeEg2dLNolpEPmgljvfg1UmtpmljLWMpTkcx9BCvTKkuW1OUZkNXC3WoBb7DfvTSMvWgNXco12zryV9A3w7nqhS0XJ2iiVRcRsmPqceMDXNz%2BPKnyDtQ%3D%3D"
+}
