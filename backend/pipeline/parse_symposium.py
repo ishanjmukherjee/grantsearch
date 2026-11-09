@@ -317,6 +317,18 @@ def recase(word: str, case: dict[str, str]) -> str:
     return case.get(word.casefold()) or "-".join(part.capitalize() for part in word.split("-"))
 
 
+# The draft's page header and footer where they fall inside a description:
+# "Project Descrition PAGE 56", "PAGE 55 Project Description".
+RUNNING_HEAD = re.compile(r"^(?:Project Descri\w*\s+PAGE\s+\d+|PAGE\s+\d+\s+Project Description)$")
+
+
+def letter_heading(p: dict) -> bool:
+    """Whether a paragraph heads the entries under a letter of the alphabet:
+    the letter alone, in bold or after a Wingdings symbol ("\uf063B")."""
+    t = re.sub(r"[\ue000-\uf8ff]", "", p["text"]).strip()
+    return len(t) == 1 and t.isalpha() and (p["bold"] or t != p["text"])
+
+
 def parse_2006(paras: list[dict], case: dict[str, str]) -> list[dict]:
     """The 2006 descriptions: presenters in capitals, the title in bold, the
     advisor line in italics, then the description. case maps each word of
@@ -332,9 +344,10 @@ def parse_2006(paras: list[dict], case: dict[str, str]) -> list[dict]:
         stop = anchors[n + 1] if n + 1 < len(anchors) else len(paras)
         body = []
         for p in paras[k + 1 : stop]:
-            if capitals(p["text"]) or (p["bold"] and len(p["text"]) == 1):
+            if capitals(p["text"]) or letter_heading(p):
                 break  # the next entry's presenters, or a letter heading
-            body.append(p["text"])
+            if not RUNNING_HEAD.search(p["text"]):
+                body.append(p["text"])
         names = re.split(r"\s*(?:,\s*and\s+|,|&|\band\b)\s*", paras[first]["text"], flags=re.I)
         people = []
         for name in filter(None, names):
