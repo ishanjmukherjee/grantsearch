@@ -277,8 +277,8 @@ function Header({ lede }: { lede?: boolean }) {
           <a href="https://undergradresearch.northwestern.edu/funding/surg/">SURG</a> grants{' '}
           <span className="nowrap">(2007–2024)</span>,{' '}
           <a href="https://undergradresearch.northwestern.edu/share/expo/">Expo</a> projects{' '}
-          <span className="nowrap">(2003–2026)</span> and honors theses <span className="nowrap">(1980–2026)</span>.
-          Search by topic, method, field or person.
+          <span className="nowrap">(2003–2026)</span>, and honors theses <span className="nowrap">(1980–2026)</span>.
+          Search by topic, method, field, or person.
         </p>
       )}
     </header>
