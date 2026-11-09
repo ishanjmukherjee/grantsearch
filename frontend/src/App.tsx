@@ -748,7 +748,7 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
         return <Abstract key={s.key} section={s} heading={heading} people={people(s.students)} open={open} />
       })}
       {written.map((w) => {
-        const heading = w.title !== project.title ? `${w.label}: ${w.title}` : multiple ? w.label! : null
+        const heading = !sameTitle(w.title, project.title) ? `${w.label}: ${w.title}` : multiple ? w.label! : null
         const who = people(w.students)
         if (!heading && !who && !w.abstract) return null
         return <Abstract key={w.key} section={w} heading={heading} people={who} open={open} />
@@ -794,6 +794,12 @@ function thesisLink(t: ProjectRecord) {
   if (department(t) === 'MMSS') return 'MMSS thesis library (Northwestern login)'
   const [from, to] = t.academic_year!.split('-')
   return `${t.department} honors theses, ${from}–${to.slice(2)}`
+}
+
+// Whether two titles are one however they are capitalized or punctuated.
+function sameTitle(a: string | null, b: string | null) {
+  const key = (t: string | null) => (t?.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join(' ')
+  return key(a) === key(b)
 }
 
 // Whether two abstracts are one, perhaps one trimmed from the other: most of
