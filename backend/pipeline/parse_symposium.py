@@ -10,8 +10,9 @@ Each listing has the shape pipeline.parse_expo gives an Expo listing, with
 "symposium-" ids. The programs come in three layouts:
 
 - 2003: "Project #N", "Student Presenter(s):", "Faculty Sponsor(s):" in
-  bold, then the description. The program prints no titles, so a 2003
-  listing's title is None; it keeps its project number.
+  bold, then the description. 32 of the 184 descriptions open with a title
+  in italics; the rest have none, so their title is None. Every 2003
+  listing keeps its project number.
 - 2004 and 2008-2011: presenters, an advisor line ("Faculty:"), the title,
   then the abstract. Presenters and titles are bold, except in 2010, which is
   set in one weight throughout; there the title is the lines after the
@@ -163,6 +164,10 @@ def parse_2003(ls: list[dict]) -> list[dict]:
         header = " ".join(header)
         sponsor = SPONSOR_2003.search(header)
         names = PRESENTERS_2003.match(header[: sponsor.start()] if sponsor else header)
+        title = []
+        while i < len(ls) and ls[i].get("italic") and not ls[i].get("bold"):
+            title.append(ls[i]["text"])
+            i += 1
         body = []
         while i < len(ls) and not PROJECT.fullmatch(ls[i].get("text", "")):
             if "text" in ls[i]:
@@ -172,7 +177,7 @@ def parse_2003(ls: list[dict]) -> list[dict]:
             "project": number,
             "presenters": split_people(text(names.group(1)), last_first=False) if names else [],
             "advisor": text(sponsor.group(1)) if sponsor else None,
-            "title": None,
+            "title": text("\n".join(title)) or None,
             "abstract": text("\n".join(body)),
             "page": page + 1,
         })
