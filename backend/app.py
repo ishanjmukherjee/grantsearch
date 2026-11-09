@@ -1,6 +1,6 @@
 """HTTP API for project search.
 
-- GET /api/search?q=...&source=surg|expo&from=YEAR&to=YEAR&n=20&offset=0
+- GET /api/search?q=...&source=surg|expo|theses&from=YEAR&to=YEAR&n=20&offset=0
   returns {"results": [...], "total": int}, each result as search.public
   describes it; "total" counts the matches at every offset. An empty or
   missing q browses all projects, most recent first.
@@ -55,7 +55,7 @@ async def canonical_host(request: Request, call_next):
 @app.get("/api/search")
 def search_projects(
     q: str = Query("", max_length=2000),
-    source: Literal["surg", "expo"] | None = None,
+    source: Literal["surg", "expo", "theses"] | None = None,
     year_from: int | None = Query(None, alias="from"),
     year_to: int | None = Query(None, alias="to"),
     n: int = Query(20, ge=1, le=50),
@@ -75,16 +75,23 @@ def project(number: int) -> dict:
 
 
 def description(r: dict) -> str:
-    """A link preview's description: the start of the first abstract, or who
-    won a title-only grant."""
+    """A link preview's description: the start of the first abstract (a
+    poster's, else a thesis's or paper's), or who won a title-only grant or
+    wrote a title-only thesis."""
     listings = sorted((e for x in r["records"] for e in x.get("listings", [])), key=lambda e: e["id"])
-    if listings:
-        text = " ".join(listings[0]["abstract"].split())
+    abstracts = [e["abstract"] for e in listings] + [x["abstract"] for x in r["records"] if x.get("abstract")]
+    if abstracts:
+        text = " ".join(abstracts[0].split())
         return text if len(text) <= DESCRIPTION_CHARS else text[:DESCRIPTION_CHARS].rsplit(" ", 1)[0] + "…"
-    grant = next(x for x in r["records"] if x["kind"] == "grant")
-    awardees = grant["students"]
-    names = " and ".join(awardees) if len(awardees) <= 2 else f"{', '.join(awardees[:-1])}, and {awardees[-1]}"
-    return f"SURG {grant['year']} grant awarded to {names}."
+
+    def names(people: list[str]) -> str:
+        return " and ".join(people) if len(people) <= 2 else f"{', '.join(people[:-1])}, and {people[-1]}"
+
+    if grant := next((x for x in r["records"] if x["kind"] == "grant"), None):
+        return f"{'AY URG' if grant['source'] == 'ay_urg' else 'SURG'} {grant['year']} grant awarded to {names(grant['students'])}."
+    x = next(x for x in r["records"] if x["kind"] in ("thesis", "paper"))
+    what = f"{x['department']} honors thesis" if x["kind"] == "thesis" else "NURJ paper"
+    return f"{what} by {names(x['students'])}, {x['year']}."
 
 
 @app.get("/api/health")

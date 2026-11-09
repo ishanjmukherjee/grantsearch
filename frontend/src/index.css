@@ -8,6 +8,10 @@
   --accent-soft: #ece9ff;
   --expo: #007560;
   --expo-soft: #d7f7ed;
+  --thesis: #8a4b00;
+  --thesis-soft: #fbead2;
+  --nurj: #1f5aa6;
+  --nurj-soft: #dde9fb;
   --error: #be2323;
   --mark: #ffcfa1;
   /* Between --text and --muted: abstracts stay readable but sit below titles. */
@@ -45,6 +49,10 @@
     --accent-soft: #33285d;
     --expo: #66d5ba;
     --expo-soft: #0d382f;
+    --thesis: #f2b766;
+    --thesis-soft: #3d2a10;
+    --nurj: #94bff5;
+    --nurj-soft: #152a4a;
     --error: #fb8276;
     --mark: #f9b786;
     --pill: var(--accent-soft);
@@ -408,6 +416,16 @@ h1 a {
 .tag.expo {
   color: var(--expo);
   background: var(--expo-soft);
+}
+
+.tag.thesis {
+  color: var(--thesis);
+  background: var(--thesis-soft);
+}
+
+.tag.nurj {
+  color: var(--nurj);
+  background: var(--nurj-soft);
 }
 
 .result h2 {

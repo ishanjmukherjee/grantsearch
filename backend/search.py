@@ -37,10 +37,10 @@ key is expanded only when
   piece ("co-culture") does not count against it.
 
 An empty query browses every project matching the filters in a fixed order.
-SURG (2020-2024) and Expo (2021-2026) cover different years, so a single
-newest-first list would open on two years of Expo projects alone. Instead,
-grants (by latest grant year) and Expo projects without a grant (by latest
-Expo year) are each sorted newest first, shuffled within a year by a hash of the id, and
+SURG (2007-2024) and the posters (2003-2026) cover different years, so a
+single newest-first list would open on two years of posters alone. Instead,
+grants (by latest grant year) and projects without a grant (by latest Expo
+or Symposium year, or for a thesis alone its year) are each sorted newest first, shuffled within a year by a hash of the id, and
 merged in proportion to their sizes so both run out together. Filtered to one
 source, browsing is newest first by that source's year.
 
@@ -70,7 +70,7 @@ Results carry only real data (titles, people, years, abstracts, source links),
 as the project's records (see public); cards only aid ranking. Index rows are
 keyed by the record whose card they come from (see pipeline.projects.rows).
 
-Usage: uv run python -m search QUERY [--source surg|expo] [--years FROM TO] [-n 10]
+Usage: uv run python -m search QUERY [--source surg|expo|theses] [--years FROM TO] [-n 10]
 """
 
 import argparse
@@ -112,6 +112,12 @@ QUOTE_MARKS = "\"\u201c\u201d"
 QUOTED = re.compile(f"[{QUOTE_MARKS}]([^{QUOTE_MARKS}]*)[{QUOTE_MARKS}]")
 
 stemmer = Stemmer.Stemmer("english")
+
+
+# The record sources each source filter keeps: Expo includes its predecessor,
+# the Undergraduate Research Symposium.
+TAGS = {"surg": "SURG", "ay_urg": "AY URG", "expo": "Expo", "symposium": "Symposium", "theses": "Thesis", "nurj": "NURJ"}
+FILTERS = {"surg": ("surg",), "expo": ("expo", "symposium"), "theses": ("theses",)}
 
 
 def tokenize(texts: list[str]) -> list[list[str]]:
@@ -183,7 +189,15 @@ def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
         else:
             order.append(expo[e])
             e += 1
-    return {None: order, "surg": granted, "expo": newest_first(lambda p: p["entries"], expo_year)}
+    def thesis_year(p: dict) -> int:
+        return max(r["year"] for r in p["records"] if r["kind"] == "thesis")
+
+    return {
+        None: order,
+        "surg": granted,
+        "expo": newest_first(lambda p: p["entries"], expo_year),
+        "theses": newest_first(lambda p: any(r["kind"] == "thesis" for r in p["records"]), thesis_year),
+    }
 
 
 def public(p: dict) -> dict:
@@ -192,8 +206,11 @@ def public(p: dict) -> dict:
     which is always shown as such ("Untitled Project: <made_title>").
 
     {id, share, title, made_title, records}: each record is {id, source, kind, year,
-    title, url} with, for a grant, its students and advisors, and for a
-    poster, its listings, each {id, title, presenters, advisors, abstract,
+    title, url} with, for a grant, its students and advisors; for a thesis or
+    paper, its students, advisors and abstract (None where its source gives
+    none), and for a thesis its department, academic year and, for a
+    Computer Science thesis, its technical report number; and for a poster,
+    its listings, each {id, title, presenters, advisors, abstract,
     url, page, abstract_source}, its url at the listing's page. A presenter who is
     one of a grant's awardees is named as the grant names them, so that the
     card shows one person once."""
@@ -204,8 +221,15 @@ def public(p: dict) -> dict:
 
     def shown(r: dict) -> dict:
         out = {k: r[k] for k in ("id", "source", "kind", "year", "title", "url")}
+        people = {"students": names(students(r)), "advisors": [advisor_name(a) for a in r["people"] if a["role"] == "advisor"]}
         if r["kind"] == "grant":
-            return out | {"students": names(students(r)), "advisors": [advisor_name(a) for a in r["people"] if a["role"] == "advisor"]}
+            return out | people
+        if r["kind"] in ("thesis", "paper"):
+            extra = r["extra"] or {}
+            out |= people | {"abstract": r["abstract"]}
+            if r["kind"] == "thesis":
+                out |= {"department": extra["department"], "academic_year": extra["academic_year"], "report": extra.get("report")}
+            return out
         listings = [
             {
                 "id": e["id"],
@@ -242,6 +266,8 @@ def shown_text(p: dict) -> list[str]:
     texts = [r["title"]]
     for x in r["records"]:
         texts += x.get("students", [])
+        if x["kind"] in ("thesis", "paper"):
+            texts += [x["title"], x["abstract"], ", ".join(x["advisors"])]
         for e in x.get("listings", []):
             texts += [e["title"], e["abstract"], ", ".join(e["advisors"]), *e["presenters"]]
     return [t for t in texts if t]
@@ -423,7 +449,7 @@ class Index:
         for the query, or in browse order when it is empty, and how many match
         in all."""
         keep = np.array([
-            (source is None or any(r["source"] == source for r in p["records"]))
+            (source is None or any(r["source"] in FILTERS[source] for r in p["records"]))
             and (year_range is None or any(year_range[0] <= y <= year_range[1] for y in years(p)))
             for p in self.projects
         ])
@@ -461,14 +487,14 @@ class Index:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("query")
-    parser.add_argument("--source", choices=("surg", "expo"))
+    parser.add_argument("--source", choices=FILTERS)
     parser.add_argument("--years", nargs=2, type=int, metavar=("FROM", "TO"))
     parser.add_argument("-n", type=int, default=10)
     args = parser.parse_args()
 
     results, _ = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n)
     for rank, p in enumerate(results, 1):
-        tags = [f"{'SURG' if r['source'] == 'surg' else 'Expo'} {r['year']}" for r in p["records"]]
+        tags = [f"{TAGS[r['source']]} {r['year']}" for r in p["records"]]
         print(f"{rank:2}. {p['title'] or '(untitled)'}  [{', '.join(tags)}]")
 
 

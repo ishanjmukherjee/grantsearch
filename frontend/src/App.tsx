@@ -14,8 +14,10 @@ type Listing = {
   // one project never posted online has the student's abstract from elsewhere).
   abstract_source: { name: string; url: string } | null
 }
-// One source's account of the project: a SURG grant (with its students and
-// advisors) or an Expo poster (with its listings).
+// One source's account of the project: a SURG or AY URG grant (with its
+// students and advisors), an Expo or Symposium poster (with its listings), or
+// an honors thesis or NURJ paper (with its students, advisors and abstract,
+// which a thesis list may not give).
 type ProjectRecord = {
   id: string
   source: string
@@ -26,14 +28,41 @@ type ProjectRecord = {
   students?: string[]
   advisors?: string[]
   listings?: Listing[]
+  abstract?: string | null
+  department?: string
+  academic_year?: string
+  report?: string | null // a Computer Science thesis's technical report number
 }
 // title is null when none of the project's sources prints one; made_title is
 // then a plain description of it written from its abstract, if it has one.
-type Project = { id: string; share: number; title: string | null; made_title: string | null; records: ProjectRecord[] }
-type ExpoEntry = Listing & { year: number }
-type Source = '' | 'surg' | 'expo'
+type Project = {
+  id: string
+  share: number
+  title: string | null
+  made_title: string | null
+  records: ProjectRecord[]
+}
+type ExpoEntry = Listing & { year: number; source: string }
+type Source = '' | 'surg' | 'expo' | 'theses'
 
-const YEARS = [2020, 2021, 2022, 2023, 2024, 2025, 2026]
+// The years any record falls in: the oldest thesis is from 1980.
+const FIRST_YEAR = 1980
+const LAST_YEAR = 2026
+const YEARS = Array.from({ length: LAST_YEAR - FIRST_YEAR + 1 }, (_, i) => FIRST_YEAR + i)
+// What tags and links call each source.
+const SOURCE_NAMES: Record<string, string> = {
+  surg: 'SURG',
+  ay_urg: 'AY URG',
+  expo: 'Expo',
+  symposium: 'Symposium',
+  theses: 'Thesis',
+  nurj: 'NURJ',
+}
+// A department as a thesis tag names it.
+const DEPARTMENTS: Record<string, string> = {
+  'Mathematical Methods in the Social Sciences': 'MMSS',
+}
+const department = (r: ProjectRecord) => DEPARTMENTS[r.department!] ?? r.department!
 // Ordered to onboard visitors quickly: most start typing after two or three
 // prompts, so the first few do most of the work and should show the range of
 // the index.
@@ -82,7 +111,7 @@ function readUrl(): Query {
   const page = Number.parseInt(p.get('page') ?? '')
   return {
     q: p.get('q') ?? '',
-    source: source === 'surg' || source === 'expo' ? source : '',
+    source: source === 'surg' || source === 'expo' || source === 'theses' ? source : '',
     from: year(p.get('from')),
     to: year(p.get('to')),
     // A page so large its offset loses precision would be sent in exponent form.
@@ -243,9 +272,9 @@ function Header({ lede }: { lede?: boolean }) {
       </h1>
       {lede && (
         <p className="lede">
-          Northwestern Summer Undergraduate Research Grants <span className="nowrap">(2020–2024)</span> and Undergraduate
-          Research &amp; Arts Expo projects <span className="nowrap">(2021–2026)</span>. Search by topic, method, field or
-          person.
+          Northwestern Summer Undergraduate Research Grants <span className="nowrap">(2007–2024)</span>, Undergraduate
+          Research Expo and Symposium projects <span className="nowrap">(2003–2026)</span> and senior honors theses{' '}
+          <span className="nowrap">(1980–2026)</span>. Search by topic, method, field or person.
         </p>
       )}
     </header>
@@ -415,6 +444,7 @@ function Search() {
                 ['', 'All'],
                 ['surg', 'SURG grants'],
                 ['expo', 'Expo projects'],
+                ['theses', 'Theses'],
               ] as const
             ).map(([value, label]) => (
               <button key={value} className={source === value ? 'on' : ''} onClick={() => change({ source: value })}>
@@ -618,29 +648,62 @@ function Pager({
 
 function Result({ project, open = false }: { project: Project; open?: boolean }) {
   const grants = project.records.filter((r) => r.kind === 'grant')
+  const theses = project.records.filter((r) => r.kind === 'thesis')
+  const papers = project.records.filter((r) => r.kind === 'paper')
   const expo: ExpoEntry[] = project.records
-    .flatMap((r) => (r.listings ?? []).map((e) => ({ ...e, year: r.year })))
+    .flatMap((r) => (r.listings ?? []).map((e) => ({ ...e, year: r.year, source: r.source })))
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
   const parts = sections(expo)
+  // A thesis or paper whose abstract a poster above already shows (an Expo
+  // poster often prints the thesis's, or most of it) shows only its heading.
+  const written = writings(theses, papers).map((w) =>
+    parts.some((s) => sameAbstract(s.abstract, w.abstract)) ? { ...w, abstract: '' } : w,
+  )
 
-  // The byline under the title: the awardees, or for an Expo-only project
-  // everyone who presented it, with each person's advisors when every
-  // listing they presented names the same ones.
+  // The byline under the title: the awardees; for a project without a grant,
+  // everyone who presented it; or for a thesis or paper alone, its authors.
+  // Each person's advisors are named with them when every listing they
+  // presented names the same ones.
   const names = grants.length
     ? [...new Set(grants.flatMap((g) => g.students ?? []))]
-    : [...new Set(parts.flatMap((s) => s.students.map((x) => x.name)))]
+    : parts.length
+      ? [...new Set(parts.flatMap((s) => s.students.map((x) => x.name)))]
+      : [...new Set(written.flatMap((w) => w.students.map((x) => x.name)))]
+  const pool = parts.length ? parts : written
   const lifted = new Map<string, string[] | null>() // null: advisors vary across their listings
   for (const name of names) {
-    const lists = parts.flatMap((s) => s.students.filter((x) => x.name === name).map((x) => x.advisors))
+    const lists = pool.flatMap((s) => s.students.filter((x) => x.name === name).map((x) => x.advisors))
+    // Someone no listing names, as the awardee of a grant without posters,
+    // has the advisors the grant names.
+    if (!lists.length) {
+      lifted.set(name, grants.find((g) => g.students?.includes(name))?.advisors ?? [])
+      continue
+    }
     lifted.set(name, lists.every((l) => sameSet(l, lists[0] ?? [])) ? (lists[0] ?? []) : null)
   }
   const top = names.map((name) => ({ name, advisors: lifted.get(name) ?? [] }))
   const topShared = top.every((x) => sameSet(x.advisors, top[0].advisors)) ? top[0].advisors : null
-  const years = new Set(parts.map((s) => s.year))
+  const years = [...new Map(parts.map((s) => [`${s.source} ${s.year}`, s])).values()]
+  const multiple = parts.length + written.length > 1
   // Every listing gets its own link, also where its abstract is shown merged
   // with another's; a year's listings are told apart by their pages.
   const listed = new Map<number, number>()
   for (const e of expo) listed.set(e.year, (listed.get(e.year) ?? 0) + 1)
+
+  // A section names its students only when they differ from the byline
+  // above, and their advisors only when those differ from it too.
+  function people(students: Student[]) {
+    const own =
+      !sameSet(
+        students.map((x) => x.name),
+        names,
+      ) ||
+      students.some(
+        (x) => lifted.get(x.name) === null || (x.advisors.length > 0 && !sameSet(x.advisors, lifted.get(x.name)!)),
+      )
+    const repeat = topShared !== null && students.every((x) => sameSet(x.advisors, topShared))
+    return own ? byline(repeat ? students.map((x) => ({ ...x, advisors: [] })) : students) : null
+  }
 
   return (
     <article className="result">
@@ -648,12 +711,22 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
       <div className="tags">
         {grants.map((g) => (
           <span key={g.id} className="tag surg">
-            SURG {g.year}
+            {SOURCE_NAMES[g.source]} {g.year}
           </span>
         ))}
-        {[...years].map((year) => (
-          <span key={year} className="tag expo">
-            Expo {year}
+        {years.map((s) => (
+          <span key={`${s.source} ${s.year}`} className="tag expo">
+            {SOURCE_NAMES[s.source]} {s.year}
+          </span>
+        ))}
+        {theses.map((t) => (
+          <span key={t.id} className="tag thesis">
+            {department(t)} thesis {t.year}
+          </span>
+        ))}
+        {papers.map((x) => (
+          <span key={x.id} className="tag nurj">
+            NURJ {x.year}
           </span>
         ))}
       </div>
@@ -666,28 +739,40 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
         <Marked text={byline(top)} />
       </p>
       {parts.map((s) => {
-        // A section names its students only when they differ from the byline
-        // above, and their advisors only when those differ from it too.
-        const own =
-          !sameSet(
-            s.students.map((x) => x.name),
-            names,
-          ) || s.students.some((x) => lifted.get(x.name) === null)
-        const repeat = topShared !== null && s.students.every((x) => sameSet(x.advisors, topShared))
-        const people = own ? byline(repeat ? s.students.map((x) => ({ ...x, advisors: [] })) : s.students) : null
         const heading =
-          s.title !== project.title ? `Expo ${s.year}: ${s.title ?? 'untitled'}` : years.size > 1 ? `Expo ${s.year}` : null
-        return <Abstract key={s.key} section={s} heading={heading} people={people} open={open} />
+          s.title !== project.title
+            ? `${SOURCE_NAMES[s.source]} ${s.year}: ${s.title ?? 'untitled'}`
+            : years.length > 1 || written.length
+              ? `${SOURCE_NAMES[s.source]} ${s.year}`
+              : null
+        return <Abstract key={s.key} section={s} heading={heading} people={people(s.students)} open={open} />
+      })}
+      {written.map((w) => {
+        const heading = w.title !== project.title ? `${w.label}: ${w.title}` : multiple ? w.label! : null
+        const who = people(w.students)
+        if (!heading && !who && !w.abstract) return null
+        return <Abstract key={w.key} section={w} heading={heading} people={who} open={open} />
       })}
       <div className="links">
         {grants.map((g) => (
           <a key={g.id} href={g.url} target="_blank" rel="noreferrer">
-            SURG {g.year} winners <ExternalIcon />
+            {SOURCE_NAMES[g.source]} {g.year} winners <ExternalIcon />
           </a>
         ))}
         {expo.map((e) => (
           <a key={e.id} href={e.url} target="_blank" rel="noreferrer">
-            Expo {e.year} listing{listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''} <PdfIcon /> <ExternalIcon />
+            {SOURCE_NAMES[e.source]} {e.year} listing
+            {listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''} <PdfIcon /> <ExternalIcon />
+          </a>
+        ))}
+        {theses.map((t) => (
+          <a key={t.id} href={t.url} target="_blank" rel="noreferrer">
+            {thesisLink(t)} {t.url.endsWith('.pdf') && <PdfIcon />} <ExternalIcon />
+          </a>
+        ))}
+        {papers.map((x) => (
+          <a key={x.id} href={x.url} target="_blank" rel="noreferrer">
+            NURJ {x.year} <ExternalIcon />
           </a>
         ))}
         {parts
@@ -702,14 +787,90 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
   )
 }
 
+// Where a thesis's link goes: its technical report, the MMSS library (behind
+// a Northwestern login), or its department's list of honors theses.
+function thesisLink(t: ProjectRecord) {
+  if (t.report) return `Technical report ${t.report}`
+  if (department(t) === 'MMSS') return 'MMSS thesis library (Northwestern login)'
+  const [from, to] = t.academic_year!.split('-')
+  return `${t.department} honors theses, ${from}–${to.slice(2)}`
+}
+
+// Whether two abstracts are one, perhaps one trimmed from the other: most of
+// the shorter's word trigrams are in the longer.
+function sameAbstract(a: string, b: string) {
+  const [x, y] = [trigrams(a), trigrams(b)].sort((p, q) => p.size - q.size)
+  if (!x.size) return false
+  let shared = 0
+  for (const t of x) if (y.has(t)) shared++
+  return shared / x.size >= 0.6
+}
+
+function trigrams(text: string) {
+  const words = text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []
+  return new Set(words.slice(2).map((w, i) => `${words[i]} ${words[i + 1]} ${w}`))
+}
+
+// A project's theses and papers as sections: a thesis two departments list
+// (or one library catalogues twice) is one thesis, shown once with every
+// department that lists it and the first abstract any listing gives.
+function writings(theses: ProjectRecord[], papers: ProjectRecord[]): Section[] {
+  const people = (r: ProjectRecord) => (r.students ?? []).map((name) => ({ name, advisors: r.advisors ?? [] }))
+  const out: Section[] = []
+  if (theses.length) {
+    const t = theses[0]
+    const students: Student[] = []
+    for (const r of theses)
+      for (const x of people(r)) {
+        const student = students.find((y) => y.name === x.name || sameName(y.name, x.name))
+        if (student) student.advisors = [...new Set([...student.advisors, ...x.advisors])]
+        else students.push(x)
+      }
+    const departments = [...new Set(theses.map(department))]
+    out.push({
+      key: t.id,
+      year: t.year,
+      source: t.source,
+      title: t.title,
+      students,
+      abstract: theses.find((r) => r.abstract)?.abstract ?? '',
+      abstractSource: null,
+      label: `${list(departments)} thesis ${t.year}`,
+    })
+  }
+  for (const x of papers)
+    out.push({
+      key: x.id,
+      year: x.year,
+      source: x.source,
+      title: x.title,
+      students: people(x),
+      abstract: x.abstract ?? '',
+      abstractSource: null,
+      label: `NURJ ${x.year}`,
+    })
+  return out
+}
+
+// Whether two spellings of a name are one person's as listings write them:
+// the same surname and one first name the start of the other ("Chris Bull",
+// "Christopher Bull").
+function sameName(a: string, b: string) {
+  const [fa, ...ra] = a.split(' ')
+  const [fb, ...rb] = b.split(' ')
+  return ra.at(-1) === rb.at(-1) && (fa.startsWith(fb) || fb.startsWith(fa))
+}
+
 type Student = { name: string; advisors: string[] }
 type Section = {
   key: string
   year: number
+  source: string
   title: string | null
   students: Student[]
-  abstract: string
+  abstract: string // '' where a thesis or paper has none
   abstractSource: ExpoEntry['abstract_source']
+  label?: string // a thesis's or paper's name for itself in a heading
 }
 
 function sameSet(a: string[], b: string[]) {
@@ -726,7 +887,15 @@ function sections(expo: ExpoEntry[]): Section[] {
   for (const e of expo) {
     let s = byAbstract.get(e.abstract)
     if (!s) {
-      s = { key: e.id, year: e.year, title: e.title, students: [], abstract: e.abstract, abstractSource: e.abstract_source }
+      s = {
+        key: e.id,
+        year: e.year,
+        source: e.source,
+        title: e.title,
+        students: [],
+        abstract: e.abstract,
+        abstractSource: e.abstract_source,
+      }
       byAbstract.set(e.abstract, s)
     }
     const advisors = e.advisors
@@ -839,6 +1008,7 @@ function Abstract({
   // Counts the abstract's own lines, not the inline toggle's, and counts
   // again when the card's width changes.
   useLayoutEffect(() => {
+    if (!body.current) return
     const measure = () => {
       const tops = new Set([...body.current!.getClientRects()].map((r) => Math.round(r.top)))
       setOverflows(tops.size > CLAMP_LINES)
@@ -865,26 +1035,28 @@ function Abstract({
           <Marked text={people} />
         </p>
       )}
-      <div className="clamp">
-        <p ref={text} className={open ? 'text' : 'text clamped'}>
-          <span ref={body}>
-            <Marked text={section.abstract} />
-          </span>
-          {open && overflows && (
-            <>
-              {' '}
-              <button className="more" aria-expanded="true" onClick={() => setOpen(false)}>
-                Show less
-              </button>
-            </>
+      {section.abstract && (
+        <div className="clamp">
+          <p ref={text} className={open ? 'text' : 'text clamped'}>
+            <span ref={body}>
+              <Marked text={section.abstract} />
+            </span>
+            {open && overflows && (
+              <>
+                {' '}
+                <button className="more" aria-expanded="true" onClick={() => setOpen(false)}>
+                  Show less
+                </button>
+              </>
+            )}
+          </p>
+          {!open && overflows && (
+            <button className="more fade" aria-expanded="false" onClick={() => setOpen(true)}>
+              Show more
+            </button>
           )}
-        </p>
-        {!open && overflows && (
-          <button className="more fade" aria-expanded="false" onClick={() => setOpen(true)}>
-            Show more
-          </button>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   )
 }
