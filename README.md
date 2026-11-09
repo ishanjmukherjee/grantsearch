@@ -1,6 +1,6 @@
 # Prowl
 
-Search over Northwestern undergraduate research: SURG grants and Undergraduate Research Expo projects.
+Decades of Northwestern undergraduate research: [SURG](https://undergradresearch.northwestern.edu/funding/surg/) grants (2007–2024), [Expo](https://undergradresearch.northwestern.edu/share/expo/) projects (2003–2026) and honors theses (1980–2026). Search by topic, method, field or person.
 
 ## Raw data
 

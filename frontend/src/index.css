@@ -104,6 +104,16 @@ h1 a {
   margin: 0 0 28px;
 }
 
+/* Underlined in the lede's grey, so the links read as part of the sentence. */
+.lede a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.lede a:hover {
+  color: var(--text);
+}
+
 /* Keeps a year range from breaking at its en dash. */
 .nowrap {
   white-space: nowrap;

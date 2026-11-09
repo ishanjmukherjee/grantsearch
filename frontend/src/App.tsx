@@ -273,9 +273,12 @@ function Header({ lede }: { lede?: boolean }) {
       </h1>
       {lede && (
         <p className="lede">
-          Northwestern Summer Undergraduate Research Grants <span className="nowrap">(2007–2024)</span>, Undergraduate
-          Research Expo and Symposium projects <span className="nowrap">(2003–2026)</span> and senior honors theses{' '}
-          <span className="nowrap">(1980–2026)</span>. Search by topic, method, field or person.
+          Decades of Northwestern undergraduate research:{' '}
+          <a href="https://undergradresearch.northwestern.edu/funding/surg/">SURG</a> grants{' '}
+          <span className="nowrap">(2007–2024)</span>,{' '}
+          <a href="https://undergradresearch.northwestern.edu/share/expo/">Expo</a> projects{' '}
+          <span className="nowrap">(2003–2026)</span> and honors theses <span className="nowrap">(1980–2026)</span>.
+          Search by topic, method, field or person.
         </p>
       )}
     </header>
