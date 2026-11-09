@@ -146,6 +146,9 @@ def bm25_text(p: dict) -> str:
         parts += names(students(g))
     for e in p["entries"]:
         parts += names(e["presenters"])
+    for r in p["records"]:
+        if r["kind"] in ("thesis", "paper"):
+            parts += [r["title"], *names(students(r)), advisor_line([a for a in r["people"] if a["role"] == "advisor"]), r["abstract"]]
     # A poster's listings repeat its title, advisor and abstract; count each once.
     parts += dict.fromkeys(x for e in p["entries"] for x in (e["title"], advisor_line(e["advisors"]), e["abstract"]))
     for card in (c["card"] for c in p["cards"]):
@@ -168,7 +171,7 @@ def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
         return max(g["year"] for g in grants(p))
 
     def expo_year(p: dict) -> int:
-        return max(e["year"] for e in p["entries"])
+        return max((e["year"] for e in p["entries"]), default=max(years(p)))
 
     granted = newest_first(lambda p: grants(p), grant_year)
     expo = newest_first(lambda p: not grants(p), expo_year)

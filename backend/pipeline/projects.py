@@ -4,7 +4,7 @@ A project is a connected group of records (see pipeline.records) under the
 links in data/links.jsonl whose relation is "same" with high confidence; a
 record no such link touches is a project alone. Projects are computed on
 loading and never stored. Only projects with at least one generated card
-(a SURG card's skip counts) are loaded: the rest have not been carded yet
+(a SURG or thesis card's skip counts) are loaded: the rest have not been carded yet
 and are not searchable.
 
 Generated files keep their cards by the id of the record each was written
@@ -18,6 +18,11 @@ for, with data/overrides.jsonl applied on loading (see load_jsonl):
   that no carded grant presents, written by reading the poster's record
   (prompts/poster_card.md). A poster whose program prints no title has a
   made_title, a plain description written from its abstract.
+- generated/thesis_cards.jsonl: one card, or a skip, per thesis: all the
+  thesis listings of one project (a thesis two departments list, or the
+  MMSS library catalogues twice, is one thesis), kept under the first
+  listing's id. Written by reading the listings, the thesis's paper where
+  one is on file, and the project's other records (prompts/thesis_card.md).
 
 Each project is a dict:
 
@@ -32,10 +37,12 @@ Each project is a dict:
   folded (see fold)
 - cards: the cards that stand for it in the index, each {owner, card, body,
   gloss}. These are its grants' SURG cards that are not skips, and the poster
-  cards of its posters that no such grant presents. body is the text the
-  card's document vector is built from besides the card: the distinct
-  abstracts its owner's card was written from (a grant's linked posters', a
-  poster card's poster's), or, for a grant without posters, its card's gloss.
+  cards of its posters that no such grant presents, and its thesis card that
+  is not a skip. body is the text the card's document vector is built from
+  besides the card: the distinct abstracts its owner's card was written from
+  (a grant's linked posters', a poster card's poster's, a thesis card's
+  listings'), or, for a grant without posters or a thesis without an
+  abstract, its card's gloss.
   gloss is the text for the summary vector: the card's gloss when its body
   is abstracts, otherwise None.
 
@@ -150,7 +157,7 @@ def fold(listings: list[dict]) -> list[dict]:
 def load_projects() -> list[dict]:
     """Every carded project, those headed by a grant first, each in head id order."""
     records = {r["id"]: r for r in load()}
-    surg_cards, poster_cards = (load_jsonl(f"{GENERATED}/{name}.jsonl") for name in ("surg_cards", "poster_cards"))
+    surg_cards, poster_cards, thesis_cards = (load_jsonl(f"{GENERATED}/{name}.jsonl") for name in ("surg_cards", "poster_cards", "thesis_cards"))
     links = same_links()
     # A grant may be linked to two listings of one poster: one link each.
     linked: dict[str, set[str]] = {}
@@ -164,7 +171,7 @@ def load_projects() -> list[dict]:
     projects = []
     for group in components(list(records), links):
         rs = sorted((records[i] for i in group), key=order)
-        if not any(r["id"] in surg_cards or r["id"] in poster_cards for r in rs):
+        if not any(r["id"] in surg_cards or r["id"] in poster_cards or r["id"] in thesis_cards for r in rs):
             continue
         cards = []
         # Posters a carded grant presents: that grant's card was written from them.
@@ -179,6 +186,10 @@ def load_projects() -> list[dict]:
             if (c := poster_cards.get(r["id"])) and r["id"] not in presented:
                 body = fold_abstracts([e["abstract"] for e in entries([r])])
                 cards.append({"owner": r["id"], "card": c, "body": body, "gloss": c["gloss"]})
+        theses = [r for r in rs if r["kind"] == "thesis"]
+        if theses and (c := thesis_cards.get(theses[0]["id"])) and c["status"] == "card":
+            body = fold_abstracts([r["abstract"] for r in theses if r["abstract"]])
+            cards.append({"owner": theses[0]["id"], "card": c, "body": body or c["gloss"], "gloss": c["gloss"] if body else None})
         head = next((r for r in rs if r["kind"] == "grant"), rs[0])
         listed = fold(entries(rs))
         title = next((t for t in [head["title"], *(r["title"] for r in rs), *(e["title"] for e in listed)] if t), None)

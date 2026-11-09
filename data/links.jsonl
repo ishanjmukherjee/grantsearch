@@ -1461,3 +1461,4 @@
 {"a": "polisci-2026-014", "b": "surg-2024-172", "relation": "same", "confidence": "high", "method": "llm", "reason": "2024 SURG on the Northern Irish Troubles and Irish far-right xenophobia is the research for the 2026 thesis of matching subject."}
 {"a": "polisci-2026-015", "b": "expo-2025-156", "relation": "related", "confidence": "low", "method": "llm", "reason": "2025 poster on Airbnb and racial dynamics in Chicago shares urban housing and tourism concerns with the 2026 right-to-the-city thesis but is a different study."}
 {"a": "polisci-2026-015", "b": "surg-2023-208", "relation": "unrelated", "confidence": "high", "method": "llm", "reason": "2023 SURG on airport privatization and passenger experience differs from the 2026 right-to-the-city thesis."}
+{"a": "econ-2022-004", "b": "mmss-2022-004", "relation": "same", "confidence": "high", "method": "title", "reason": "Same title, and a student of one is a student of the other."}
