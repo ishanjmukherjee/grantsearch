@@ -48,7 +48,8 @@ type Source = '' | 'surg' | 'expo' | 'theses'
 // The years any record falls in: the oldest thesis is from 1980.
 const FIRST_YEAR = 1980
 const LAST_YEAR = 2026
-const YEARS = Array.from({ length: LAST_YEAR - FIRST_YEAR + 1 }, (_, i) => FIRST_YEAR + i)
+// Newest first, as the year dropdowns list them.
+const YEARS = Array.from({ length: LAST_YEAR - FIRST_YEAR + 1 }, (_, i) => LAST_YEAR - i)
 // What tags and links call each source.
 const SOURCE_NAMES: Record<string, string> = {
   surg: 'SURG',
