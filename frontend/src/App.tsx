@@ -27,8 +27,9 @@ type ProjectRecord = {
   advisors?: string[]
   listings?: Listing[]
 }
-// title is null when none of the project's sources prints one.
-type Project = { id: string; share: number; title: string | null; records: ProjectRecord[] }
+// title is null when none of the project's sources prints one; made_title is
+// then a plain description of it written from its abstract, if it has one.
+type Project = { id: string; share: number; title: string | null; made_title: string | null; records: ProjectRecord[] }
 type ExpoEntry = Listing & { year: number }
 type Source = '' | 'surg' | 'expo'
 
@@ -148,6 +149,9 @@ const Quotes = createContext<RegExp | null>(null)
 // What a project whose sources print no title is called: on the result
 // itself, as its heading; inside a project, a section says only "untitled".
 const UNTITLED = 'Untitled Project'
+// A project's name where it has no printed title: "Untitled Project", and
+// what it is about when it has a made title.
+const untitled = (project: Project) => (project.made_title ? `${UNTITLED}: ${project.made_title}` : UNTITLED)
 
 // Text with each quoted phrase in it marked, as find in page does.
 function Marked({ text }: { text: string }) {
@@ -265,7 +269,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
         if (!resp.ok) throw new Error(`/api/project returned ${resp.status}`)
         const page = await resp.json()
         setData(page)
-        document.title = `${page.project.title ?? UNTITLED} — ${SITE}`
+        document.title = `${page.project.title ?? untitled(page.project)} — ${SITE}`
         // A link to another of a poster's listings shows the project's own number.
         if (String(page.project.share) !== number) window.history.replaceState(null, '', `/p/${page.project.share}`)
       } catch (e) {
@@ -655,7 +659,7 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
       </div>
       <h2>
         <a href={`/p/${project.share}`}>
-          {project.title ? <Marked text={project.title} /> : <span className="untitled">{UNTITLED}</span>}
+          {project.title ? <Marked text={project.title} /> : <span className="untitled">{untitled(project)}</span>}
         </a>
       </h2>
       <p className="people">
@@ -766,7 +770,7 @@ function ShareButton({ project }: { project: Project }) {
     }
     const url = `${window.location.origin}/p/${project.share}`
     if (navigator.share && window.matchMedia('(pointer: coarse)').matches) {
-      await navigator.share({ title: project.title ?? UNTITLED, url }).catch(() => {}) // dismissed
+      await navigator.share({ title: project.title ?? untitled(project), url }).catch(() => {}) // dismissed
       return
     }
     try {

@@ -184,9 +184,11 @@ def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
 
 
 def public(p: dict) -> dict:
-    """What a result shows: real data and source links, nothing from the card.
+    """What a result shows: real data and source links, nothing from the card
+    but made_title, a title written for a project whose sources print none,
+    which is always shown as such ("Untitled Project: <made_title>").
 
-    {id, share, title, records}: each record is {id, source, kind, year,
+    {id, share, title, made_title, records}: each record is {id, source, kind, year,
     title, url} with, for a grant, its students and advisors, and for a
     poster, its listings, each {id, title, presenters, advisors, abstract,
     url, page, abstract_source}, its url at the listing's page. A presenter who is
@@ -217,7 +219,7 @@ def public(p: dict) -> dict:
         ]
         return out | {"listings": listings}
 
-    return {"id": p["id"], "share": p["share"], "title": p["title"], "records": [shown(r) for r in p["records"]]}
+    return {"id": p["id"], "share": p["share"], "title": p["title"], "made_title": p["made_title"], "records": [shown(r) for r in p["records"]]}
 
 
 def phrases(query: str) -> list[re.Pattern]:

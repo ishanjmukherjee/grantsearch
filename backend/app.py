@@ -102,7 +102,7 @@ if FRONTEND_DIR.exists():
             return HTMLResponse(page, status_code=404)
         r = search.public(p)
         # As the frontend shows a project whose sources print no title.
-        name = r["title"] or "Untitled Project"
+        name = r["title"] or (f"Untitled Project: {r['made_title']}" if r["made_title"] else "Untitled Project")
         title, desc = escape(f"{name} — {SITE}"), escape(description(r))
         head = (
             f'<meta name="description" content="{desc}" />'
