@@ -142,6 +142,18 @@ def parse_polisci(html: str) -> list[dict]:
             "abstract": abstract(body[: m.start()]),
             "source": source,
         })
+    # The page prints four abstracts under two theses each, a neighbor's
+    # pasted under the other (2025-26's Jun Park carries 2024-25's Tess
+    # Wagner's): each is kept for the thesis whose title shares the most of
+    # its words, which picks the right one for all four.
+    by_abstract: dict[str, list[dict]] = {}
+    for t in out:
+        if t["abstract"]:
+            by_abstract.setdefault(t["abstract"], []).append(t)
+    for abstract_text, ts in by_abstract.items():
+        said = set(records.words(abstract_text))
+        for t in sorted(ts, key=lambda t: -len(said & set(records.words(t["title"]))))[1:]:
+            t["abstract"] = None
     return out
 
 
