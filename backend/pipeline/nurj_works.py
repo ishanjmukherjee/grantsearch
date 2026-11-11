@@ -22,8 +22,8 @@ SURG grants and Expo abstracts.
 Writes the works to data/records/nurj.jsonl (see pipeline.records), each with
 its title, authors and advisors (from the most formal record: print edition,
 then post, then CAURS entry) as its people, the earliest year, its lead
-record's url, its text (see work_text), and in its extra its records (sources)
-with the rule that joined each. The records left out, each with the reason, go to
+record's url, its text (see work_text), its abstract (see abstracts), and in
+its extra its records (sources) with the rule that joined each. The records left out, each with the reason, go to
 data/nurj_left_out.json.
 
 Usage: uv run python -m pipeline.nurj_works [--candidates]
@@ -321,6 +321,37 @@ def work_text(w: dict, text: dict[str, str]) -> str | None:
     return next((text[s["id"]] for t in ("post", "caurs entry") for s in w["sources"] if s["type"] == t and text[s["id"]].strip()), None)
 
 
+def abstracts(works: list[dict], text: dict[str, str]) -> dict[str, str]:
+    """Each work's abstract, from data/nurj_abstracts.jsonl.
+
+    Its lines are {id, abstract, source, labeled, note}: for every work, the
+    summary its authors wrote (under an Abstract heading, labeled, or the
+    summary paragraph many print papers set between the byline and the
+    introduction), copied out by a model that read the openings of all its
+    versions, or null where none has one. Each paragraph must appear in the
+    named source's text, whitespace aside, in order."""
+    def squash(t: str) -> str:
+        return re.sub(r"\s+", " ", t).strip()
+
+    rows = {r["id"]: r for r in map(json.loads, (DATA_DIR / "nurj_abstracts.jsonl").open())}
+    if missing := {w["id"] for w in works} - set(rows):
+        raise ValueError(f"no abstract line for {sorted(missing)[:5]}")
+    out = {}
+    for w in works:
+        r = rows[w["id"]]
+        if r["abstract"] is None:
+            continue
+        if r["source"] not in {s["id"] for s in w["sources"]}:
+            raise ValueError(f"{w['id']}: abstract source {r['source']} is not one of its records")
+        source, at = squash(text[r["source"]]), 0
+        for para in re.split(r"\n\s*\n", r["abstract"]):
+            at = source.find(squash(para), at)
+            if at < 0:
+                raise ValueError(f"{w['id']}: abstract paragraph not in {r['source']}: {para[:80]}")
+        out[w["id"]] = re.sub("\u00ad\\s*", "", r["abstract"])  # soft hyphens the transcription kept, often before a space
+    return out
+
+
 def candidates(works: list[dict], top: int = 40) -> None:
     """Print the pairs of separate works whose title and opening text (first 400
     words) are most alike by TF-IDF cosine, for reading by hand."""
@@ -360,7 +391,8 @@ def main() -> None:
         candidates(works)
         return
     text = texts()
-    write("nurj", [as_record(w, work_text(w, text)) for w in works])
+    abstract = abstracts(works, text)
+    write("nurj", [as_record(w, work_text(w, text), abstract.get(w["id"])) for w in works])
     out = DATA_DIR / "nurj_left_out.json"
     out.write_text(json.dumps(left, indent=1, ensure_ascii=False) + "\n")
     kinds = Counter(tuple(sorted({s["type"] for s in w["sources"]})) for w in works)
@@ -369,11 +401,11 @@ def main() -> None:
         print(f"  {n:4} {' + '.join(k)}")
 
 
-def as_record(w: dict, text: str | None) -> dict:
+def as_record(w: dict, text: str | None, abstract: str | None) -> dict:
     """A work as a record (see pipeline.records)."""
     people = [p for a in w["authors"] for p in names(a, "student")] + [p for a in w["advisors"] for p in names(a, "advisor")]
     lead = next(s for s in w["sources"] if s["joined_by"] == "lead record")
-    return record(w["id"], "nurj", "paper", w["year"], w["title"], people, None, lead["url"], extra={"sources": w["sources"]}, text=text)
+    return record(w["id"], "nurj", "paper", w["year"], w["title"], people, abstract, lead["url"], extra={"sources": w["sources"]}, text=text)
 
 
 if __name__ == "__main__":
