@@ -300,10 +300,30 @@ def check(r: dict, source: str) -> None:
             raise ValueError(f"{r['id']}: person {p}")
 
 
+# A Roman numeral after a name ("John Hughes III") stays in capitals.
+NUMERAL = re.compile(r"^[IVX]+$")
+
+
+def unshout(name: str) -> str:
+    """A name with each word a source printed in capitals ("ANDREA MARCOS
+    HADJÓPULOS", NURJ's bylines) in title case; initials ("MJ Kim") and
+    numerals stay as written."""
+
+    def fix(m: re.Match) -> str:
+        w = m.group()
+        return w[0] + w[1:].lower() if len(w) >= 3 and w.isupper() and not NUMERAL.match(w) else w
+
+    return re.sub(r"[^\W\d_]+", fix, name)
+
+
 def write(source: str, records: list[dict]) -> list[dict]:
-    """Apply the overrides for data/records/<source>.jsonl, check every
-    record and write them sorted by id. Returns the records written."""
+    """Apply the overrides for data/records/<source>.jsonl, unshout every
+    person's name (see unshout), check every record and write them sorted by
+    id. Returns the records written."""
     name = f"records/{source}.jsonl"
+    for r in records:
+        for p in r["people"]:
+            p["first"], p["last"] = unshout(p["first"]), unshout(p["last"])
     by_id = {r["id"]: r for r in records}
     if len(by_id) != len(records):
         raise ValueError(f"{source}: duplicate ids")
