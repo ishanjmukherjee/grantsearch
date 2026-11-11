@@ -1,8 +1,9 @@
 """Pair records that may be one piece of work, by student name.
 
 Each pairing names the sources whose records are paired with whose (see
-PAIRINGS): SURG grants with Expo and Symposium posters, and senior theses
-with grants, posters, NURJ papers and each other. A pair is a candidate when
+PAIRINGS): SURG grants with Expo and Symposium posters, senior theses with
+grants, posters, NURJ papers and each other, and NURJ papers with grants,
+posters and each other. A pair is a candidate when
 some student on one record and some student on the other may be one person
 (see pipeline.records.same_person), in any years: for grants and posters, a
 window of one year before the grant to three after leaves out only 21 of 710
@@ -16,7 +17,7 @@ confidence and method "title". The rest are written to --out, one pair per
 line with both records in full, for judging by reading them; their verdicts
 go into data/links.jsonl by hand.
 
-Usage: uv run python -m pipeline.link_candidates {posters,theses} --out PATH [--dry-run]
+Usage: uv run python -m pipeline.link_candidates {posters,theses,nurj} --out PATH [--dry-run]
 """
 
 import argparse
@@ -30,6 +31,7 @@ POSTER_SOURCES = ("expo", "symposium")
 PAIRINGS = {
     "posters": (("surg",), POSTER_SOURCES),
     "theses": (("theses",), ("surg", "ay_urg", *POSTER_SOURCES, "nurj", "theses")),
+    "nurj": (("nurj",), ("surg", "ay_urg", *POSTER_SOURCES, "nurj")),
 }
 
 
