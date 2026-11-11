@@ -22,8 +22,8 @@ SURG grants and Expo abstracts.
 Writes the works to data/records/nurj.jsonl (see pipeline.records), each with
 its title, authors and advisors (from the most formal record: print edition,
 then post, then CAURS entry) as its people, the earliest year, its lead
-record's url, and in its extra its records (sources) with the rule that
-joined each. The records left out, each with the reason, go to
+record's url, its text (see work_text), and in its extra its records (sources)
+with the rule that joined each. The records left out, each with the reason, go to
 data/nurj_left_out.json.
 
 Usage: uv run python -m pipeline.nurj_works [--candidates]
@@ -293,16 +293,32 @@ def work(group: list[tuple[dict, str]]) -> dict:
     }
 
 
+def post_text(p: dict) -> str:
+    """A post's body: its sections, each under its heading."""
+    return "\n\n".join(x for s in p["sections"] for x in (s["heading"], s["text"]) if x and x.strip())
+
+
 def texts() -> dict[str, str]:
-    """Each record's text, for --candidates."""
+    """Each record's text: a post's body, a document's or print paper's
+    transcription, a CAURS entry's abstract."""
     nurj = json.loads((DATA_DIR / "nurj.json").read_text())
-    out = {p["id"]: " ".join(b.get("text") or "" for b in p["blocks"] if b["type"] == "text") for p in nurj["posts"]}
+    out = {p["id"]: post_text(p) for p in nurj["posts"]}
     out |= {d["id"]: d["text"] for d in json.loads((DATA_DIR / "document_texts.json").read_text())}
     out |= {p["id"]: p["text"] for p in json.loads((DATA_DIR / "print_papers.json").read_text())}
+    nurj_pages = {p["id"]: p for p in nurj["pages"]}
     for pid, year in CAURS_PAGES.items():
-        nurj_pages = {p["id"]: p for p in nurj["pages"]}
         out |= {e["id"]: e["text"] for e in caurs_entries(nurj_pages[pid], year)}
     return out
+
+
+def work_text(w: dict, text: dict[str, str]) -> str | None:
+    """A work's full text: the longest of its print paper and documents, which
+    are the paper itself (a print edition can run a shortened version of the
+    paper a post attaches), or else its post's body, or else its CAURS entry."""
+    papers = [text[s["id"]] for s in w["sources"] if s["type"] in ("print", "document") and text[s["id"]].strip()]
+    if papers:
+        return max(papers, key=len)
+    return next((text[s["id"]] for t in ("post", "caurs entry") for s in w["sources"] if s["type"] == t and text[s["id"]].strip()), None)
 
 
 def candidates(works: list[dict], top: int = 40) -> None:
@@ -343,7 +359,8 @@ def main() -> None:
     if "--candidates" in sys.argv:
         candidates(works)
         return
-    write("nurj", [as_record(w) for w in works])
+    text = texts()
+    write("nurj", [as_record(w, work_text(w, text)) for w in works])
     out = DATA_DIR / "nurj_left_out.json"
     out.write_text(json.dumps(left, indent=1, ensure_ascii=False) + "\n")
     kinds = Counter(tuple(sorted({s["type"] for s in w["sources"]})) for w in works)
@@ -352,11 +369,11 @@ def main() -> None:
         print(f"  {n:4} {' + '.join(k)}")
 
 
-def as_record(w: dict) -> dict:
+def as_record(w: dict, text: str | None) -> dict:
     """A work as a record (see pipeline.records)."""
     people = [p for a in w["authors"] for p in names(a, "student")] + [p for a in w["advisors"] for p in names(a, "advisor")]
     lead = next(s for s in w["sources"] if s["joined_by"] == "lead record")
-    return record(w["id"], "nurj", "paper", w["year"], w["title"], people, None, lead["url"], extra={"sources": w["sources"]})
+    return record(w["id"], "nurj", "paper", w["year"], w["title"], people, None, lead["url"], extra={"sources": w["sources"]}, text=text)
 
 
 if __name__ == "__main__":
