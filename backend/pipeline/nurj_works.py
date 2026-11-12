@@ -22,7 +22,8 @@ SURG grants and Expo abstracts.
 Writes the works to data/records/nurj.jsonl (see pipeline.records), each with
 its title, authors and advisors (from the most formal record: print edition,
 then post, then CAURS entry) as its people, the earliest year, its lead
-record's url, its text (see work_text), its abstract (see abstracts), and in
+record's url, its people (see people), its text (see work_text), its abstract
+(see abstracts), and in
 its extra its records (sources) with the rule that joined each. The records left out, each with the reason, go to
 data/nurj_left_out.json.
 
@@ -38,7 +39,7 @@ import sys
 from collections import Counter
 from difflib import SequenceMatcher
 
-from pipeline.records import names, record, surname_parts, words, write
+from pipeline.records import SOURCES, load, names, record, same_person, surname_parts, words, write
 from pipeline.scrape_surg import DATA_DIR
 
 # Title similarity (difflib ratio of the folded titles) at which two records
@@ -392,7 +393,8 @@ def main() -> None:
         return
     text = texts()
     abstract = abstracts(works, text)
-    write("nurj", [as_record(w, work_text(w, text), abstract.get(w["id"])) for w in works])
+    faculty = [p for r in load(*(s for s in SOURCES if s != "nurj")) for p in r["people"] if p["role"] == "advisor"]
+    write("nurj", [as_record(w, work_text(w, text), abstract.get(w["id"]), faculty) for w in works])
     out = DATA_DIR / "nurj_left_out.json"
     out.write_text(json.dumps(left, indent=1, ensure_ascii=False) + "\n")
     kinds = Counter(tuple(sorted({s["type"] for s in w["sources"]})) for w in works)
@@ -401,11 +403,31 @@ def main() -> None:
         print(f"  {n:4} {' + '.join(k)}")
 
 
-def as_record(w: dict, text: str | None, abstract: str | None) -> dict:
+def people(w: dict, faculty: list[dict]) -> list[dict]:
+    """A work's people: its byline's authors as students, then its advisors.
+
+    A byline can name the student's faculty co-authors too ("Alison Moy,
+    Viorica Marian"). The first author is the student; a later one is an
+    advisor instead when the work names them as its advisor, or when another
+    source's record names them as an advisor (faculty)."""
+    authors = [p for a in w["authors"] for p in names(a, "student")]
+    advisors = [p for a in w["advisors"] for p in names(a, "advisor")]
+    students = authors[:1]
+    for p in authors[1:]:
+        if any(same_person(p, a) for a in advisors):
+            continue
+        if any(same_person(p, f) for f in faculty):
+            advisors.append({**p, "role": "advisor"})
+        else:
+            students.append(p)
+    return students + advisors
+
+
+def as_record(w: dict, text: str | None, abstract: str | None, faculty: list[dict]) -> dict:
     """A work as a record (see pipeline.records)."""
-    people = [p for a in w["authors"] for p in names(a, "student")] + [p for a in w["advisors"] for p in names(a, "advisor")]
+    people_ = people(w, faculty)
     lead = next(s for s in w["sources"] if s["joined_by"] == "lead record")
-    return record(w["id"], "nurj", "paper", w["year"], w["title"], people, abstract, lead["url"], extra={"sources": w["sources"]}, text=text)
+    return record(w["id"], "nurj", "paper", w["year"], w["title"], people_, abstract, lead["url"], extra={"sources": w["sources"]}, text=text)
 
 
 if __name__ == "__main__":
