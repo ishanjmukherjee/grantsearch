@@ -20,11 +20,11 @@ with a new title) stay separate works; linking them is a later step, as for
 SURG grants and Expo abstracts.
 
 Writes the works to data/records/nurj.jsonl (see pipeline.records), each with
-its title, authors and advisors (from the most formal record: print edition,
-then post, then CAURS entry) as its people, the earliest year, its lead
-record's url, its people (see people), its text (see work_text), its abstract
-(see abstracts), and in
-its extra its records (sources) with the rule that joined each. The records left out, each with the reason, go to
+its title, its authors and advisors (from the most formal record: print
+edition, then post, then CAURS entry) as its people (see people), the earliest
+year, its lead record's url, its text (see work_text), its abstract (see
+abstracts), and in its extra its records (sources) with the rule that joined
+each. The records left out, each with the reason, go to
 data/nurj_left_out.json.
 
 Usage: uv run python -m pipeline.nurj_works [--candidates]
