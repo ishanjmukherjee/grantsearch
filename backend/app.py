@@ -1,6 +1,6 @@
 """HTTP API for project search.
 
-- GET /api/search?q=...&source=surg|expo|theses&from=YEAR&to=YEAR&n=20&offset=0
+- GET /api/search?q=...&source=surg|expo|theses|nurj&from=YEAR&to=YEAR&n=20&offset=0
   returns {"results": [...], "total": int}, each result as search.public
   describes it; "total" counts the matches at every offset. An empty or
   missing q browses all projects, most recent first.
@@ -55,7 +55,7 @@ async def canonical_host(request: Request, call_next):
 @app.get("/api/search")
 def search_projects(
     q: str = Query("", max_length=2000),
-    source: Literal["surg", "expo", "theses"] | None = None,
+    source: Literal["surg", "expo", "theses", "nurj"] | None = None,
     year_from: int | None = Query(None, alias="from"),
     year_to: int | None = Query(None, alias="to"),
     n: int = Query(20, ge=1, le=50),

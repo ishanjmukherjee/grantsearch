@@ -43,7 +43,7 @@ type Project = {
   records: ProjectRecord[]
 }
 type ExpoEntry = Listing & { year: number; source: string }
-type Source = '' | 'surg' | 'expo' | 'theses'
+type Source = '' | 'surg' | 'expo' | 'theses' | 'nurj'
 
 // The years any record falls in: the oldest thesis is from 1980.
 const FIRST_YEAR = 1980
@@ -112,7 +112,7 @@ function readUrl(): Query {
   const page = Number.parseInt(p.get('page') ?? '')
   return {
     q: p.get('q') ?? '',
-    source: source === 'surg' || source === 'expo' || source === 'theses' ? source : '',
+    source: source === 'surg' || source === 'expo' || source === 'theses' || source === 'nurj' ? source : '',
     from: year(p.get('from')),
     to: year(p.get('to')),
     // A page so large its offset loses precision would be sent in exponent form.
@@ -277,8 +277,9 @@ function Header({ lede }: { lede?: boolean }) {
           <a href="https://undergradresearch.northwestern.edu/funding/surg/">SURG</a> grants{' '}
           <span className="nowrap">(2007–2024)</span>,{' '}
           <a href="https://undergradresearch.northwestern.edu/share/expo/">Expo</a> projects{' '}
-          <span className="nowrap">(2003–2026)</span>, and honors theses <span className="nowrap">(1980–2026)</span>.
-          Search by topic, method, field, or person.
+          <span className="nowrap">(2003–2026)</span>, honors theses <span className="nowrap">(1980–2026)</span>, and{' '}
+          <a href="https://thenurj.com/">NURJ</a> papers <span className="nowrap">(2004–2026)</span>. Search by topic,
+          method, field, or person.
         </p>
       )}
     </header>
@@ -449,6 +450,7 @@ function Search() {
                 ['surg', 'SURG grants'],
                 ['expo', 'Expo projects'],
                 ['theses', 'Theses'],
+                ['nurj', 'NURJ papers'],
               ] as const
             ).map(([value, label]) => (
               <button key={value} className={source === value ? 'on' : ''} onClick={() => change({ source: value })}>

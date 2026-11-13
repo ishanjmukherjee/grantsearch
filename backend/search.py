@@ -40,7 +40,7 @@ An empty query browses every project matching the filters in a fixed order.
 SURG (2007-2024) and the posters (2003-2026) cover different years, so a
 single newest-first list would open on two years of posters alone. Instead,
 grants (by latest grant year) and projects without a grant (by latest Expo
-or Symposium year, or for a thesis alone its year) are each sorted newest first, shuffled within a year by a hash of the id, and
+or Symposium year, or for a thesis or paper alone its year) are each sorted newest first, shuffled within a year by a hash of the id, and
 merged in proportion to their sizes so both run out together. Filtered to one
 source, browsing is newest first by that source's year.
 
@@ -70,7 +70,7 @@ Results carry only real data (titles, people, years, abstracts, source links),
 as the project's records (see public); cards only aid ranking. Index rows are
 keyed by the record whose card they come from (see pipeline.projects.rows).
 
-Usage: uv run python -m search QUERY [--source surg|expo|theses] [--years FROM TO] [-n 10]
+Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj] [--years FROM TO] [-n 10]
 """
 
 import argparse
@@ -117,7 +117,7 @@ stemmer = Stemmer.Stemmer("english")
 # The record sources each source filter keeps: Expo includes its predecessor,
 # the Undergraduate Research Symposium.
 TAGS = {"surg": "SURG", "ay_urg": "AY URG", "expo": "Expo", "symposium": "Symposium", "theses": "Thesis", "nurj": "NURJ"}
-FILTERS = {"surg": ("surg",), "expo": ("expo", "symposium"), "theses": ("theses",)}
+FILTERS = {"surg": ("surg",), "expo": ("expo", "symposium"), "theses": ("theses",), "nurj": ("nurj",)}
 
 
 def tokenize(texts: list[str]) -> list[list[str]]:
@@ -192,11 +192,15 @@ def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
     def thesis_year(p: dict) -> int:
         return max(r["year"] for r in p["records"] if r["kind"] == "thesis")
 
+    def paper_year(p: dict) -> int:
+        return max(r["year"] for r in p["records"] if r["source"] == "nurj")
+
     return {
         None: order,
         "surg": granted,
         "expo": newest_first(lambda p: p["entries"], expo_year),
         "theses": newest_first(lambda p: any(r["kind"] == "thesis" for r in p["records"]), thesis_year),
+        "nurj": newest_first(lambda p: any(r["source"] == "nurj" for r in p["records"]), paper_year),
     }
 
 
