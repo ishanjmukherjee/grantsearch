@@ -412,15 +412,29 @@ def main() -> None:
         print(f"  {n:4} {' + '.join(k)}")
 
 
+def complete(p: dict, faculty: list[dict]) -> dict:
+    """An advisor named by surname or initial alone ("L. Hein") with the full
+    name of the one advisor another source's record gives with that surname
+    and initial; unchanged when there is none or more than one."""
+    first = p["first"].strip(". ")
+    if len(first) > 1:
+        return p
+    found = Counter(f["first"] for f in faculty if words(f["last"]) == words(p["last"]) and f["first"][:1].lower() == first[:1].lower() and len(f["first"].strip(". ")) > 1)
+    if len({words(f)[0] for f in found if words(f)}) != 1:
+        return p
+    return {**p, "first": found.most_common(1)[0][0]}
+
+
 def people(w: dict, faculty: list[dict]) -> list[dict]:
     """A work's people: its byline's authors as students, then its advisors.
 
     A byline can name the student's faculty co-authors too ("Alison Moy,
     Viorica Marian"). The first author is the student; a later one is an
     advisor instead when the work names them as its advisor, or when another
-    source's record names them as an advisor (faculty)."""
+    source's record names them as an advisor (faculty). An advisor named by
+    initial alone gets the full name another record gives (see complete)."""
     authors = [p for a in w["authors"] for p in names(a, "student")]
-    advisors = [p for a in w["advisors"] for p in names(a, "advisor")]
+    advisors = [complete(p, faculty) for a in w["advisors"] for p in names(a, "advisor")]
     students = authors[:1]
     for p in authors[1:]:
         if any(same_person(p, a) for a in advisors):
