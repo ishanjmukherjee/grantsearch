@@ -171,7 +171,7 @@ The site logs every search with the results it returned, every project page load
 - [x] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). `backend/pipeline/parse_expo.py` records the page each entry starts on, and the link reads "Expo 2024 listing (PDF)".
 - [ ] Google OAuth accounts, so visitors can save cards to their profile.
 - [ ] Let visitors upload papers or their own research done at Northwestern that is not indexed yet, reviewed before it is indexed.
-- [x] Log the queries visitors type in, what they were shown and what they did with it (see Query log above), disclosed in the site's footer.
+- [x] Log the queries visitors type in, what they were shown and what they did with it (see Query log above).
 - [ ] Google Analytics.
 - [ ] A proper eval set for ranking.
   - Today there is only the name-search set (`data/eval/names.jsonl`, built and run by `backend/eval_names.py`) the hand-written reranker queries below, where every target was already in the baseline top 5, and `data/eval/known_items.jsonl`, 29 hand-written topic queries with one known target each, which nothing runs yet.

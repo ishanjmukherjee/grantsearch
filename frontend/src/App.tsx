@@ -428,7 +428,6 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
           </>
         )}
       </main>
-      <Footer />
     </div>
   )
 }
@@ -594,7 +593,6 @@ function Search() {
         </Quotes.Provider>
         {pages > 1 && <Pager page={page} pages={pages} href={(n) => searchUrl(query, n)} onGo={goTo} />}
       </main>
-      <Footer />
     </div>
   )
 }
@@ -764,15 +762,6 @@ function Pager({
       </div>
       {page < pages ? link(page + 1, 'Next', { className: 'step', rel: 'next' }) : disabled('Next')}
     </nav>
-  )
-}
-
-// What the site keeps of a visit (see the backend's querylog).
-function Footer() {
-  return (
-    <footer>
-      Prowl logs searches and clicks, without your IP address or an account, to improve its results.
-    </footer>
   )
 }
 

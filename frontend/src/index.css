@@ -87,13 +87,6 @@ body {
   padding: 48px 16px 80px;
 }
 
-footer {
-  color: var(--muted);
-  font-size: var(--text-small);
-  text-wrap: pretty;
-  margin-top: 48px;
-}
-
 h1 {
   font-size: var(--text-display);
   letter-spacing: -0.02em;
