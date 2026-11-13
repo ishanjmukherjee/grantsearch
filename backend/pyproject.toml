@@ -5,6 +5,7 @@ requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4>=4.15.0",
     "bm25s>=0.3.14",
+    "boto3>=1.44.2",
     "fastapi>=0.149.0",
     "fonttools[woff]>=4.68.0",
     "httpx>=0.28.1",
