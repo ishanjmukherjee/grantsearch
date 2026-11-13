@@ -169,8 +169,17 @@ def caurs_entries(page: dict, year: int) -> list[dict]:
     return out
 
 
+def from_email(value: str) -> str:
+    """An advisor a post names by a Northwestern email instead, as a name:
+    joanna.grisinger@northwestern.edu is Joanna Grisinger, l-hein@ is L. Hein."""
+    if not re.fullmatch(r"[\w.-]+@northwestern\.edu", value):
+        return value
+    parts = re.split(r"[.-]", value.split("@")[0])
+    return " ".join(w.capitalize() if len(w) > 1 else w.upper() + "." for w in parts)
+
+
 def post_record(p: dict) -> dict:
-    advisors = list(dict.fromkeys(lab["value"] for person in p["people"] for lab in person["labels"] if lab["label"] in ("Adviser", "Advisor", "Faculty Advisor", "Faculty Adviser")))
+    advisors = list(dict.fromkeys(from_email(lab["value"]) for person in p["people"] for lab in person["labels"] if lab["label"] in ("Adviser", "Advisor", "Faculty Advisor", "Faculty Adviser")))
     authors = [person["name"] for person in p["people"]]
     if p["id"] in POST_PEOPLE:
         if authors:

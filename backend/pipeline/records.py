@@ -304,14 +304,26 @@ def check(r: dict, source: str) -> None:
 NUMERAL = re.compile(r"^[IVX]+$")
 
 
+# Lowercase words a name keeps lowercase ("Ludwig van Beethoven", "Inés de la Cruz").
+PARTICLES = {"al", "bin", "da", "das", "de", "del", "della", "den", "der", "di", "do", "dos", "du", "e", "el", "ibn", "la", "le", "ten", "ter", "van", "von", "y"}
+
+
 def unshout(name: str) -> str:
     """A name with each word a source printed in capitals ("ANDREA MARCOS
-    HADJÓPULOS", NURJ's bylines) in title case; initials ("MJ Kim") and
+    HADJÓPULOS", NURJ's bylines) in title case, and each word typed all in
+    lowercase ("Lucy london") capitalized, but for particles (see PARTICLES)
+    and the parts after a hyphen or apostrophe; initials ("MJ Kim") and
     numerals stay as written."""
 
     def fix(m: re.Match) -> str:
         w = m.group()
-        return w[0] + w[1:].lower() if len(w) >= 3 and w.isupper() and not NUMERAL.match(w) else w
+        if len(w) >= 3 and w.isupper() and not NUMERAL.match(w):
+            return w[0] + w[1:].lower()
+        if w.islower() and m.start() and name[m.start() - 1] in "'’-":
+            return w  # after an apostrophe or hyphen ("D’angelo", "Hye-won")
+        if w.islower() and w not in PARTICLES:
+            return w[0].upper() + w[1:]
+        return w
 
     return re.sub(r"[^\W\d_]+", fix, name)
 
