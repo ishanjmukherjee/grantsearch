@@ -25,7 +25,7 @@ The site logs every search with the results it returned, every project page load
 - Results update as a visitor types, so most logged searches are of a query half typed; the last before a pause, a click or the visit's end is the one they settled on. `shown` says which results were really on screen.
 - Open `/?internal=1` once in each browser you build or test the site in (`/?internal=0` undoes it), and its events are marked `internal`. Requests from scripts have no visit id.
 - The app logs only when `DATABASE_URL` is set, which on Railway refers to the Postgres service's. The database has no public address, so it is read from inside the project.
-- To read the log, from a checkout linked to the Railway project: `railway ssh --service web python -m querylog export --days 7` prints it as JSON lines, and `railway connect Postgres` opens `psql` on it.
+- To read the log, from a checkout linked to the Railway project: `railway ssh --service web python -m querylog export --days 7` prints it as JSON lines, and `railway connect Postgres` opens `psql` on it. Both go over SSH, so the machine's key must be registered with Railway first (`railway ssh keys add`).
 
 ## Roadmap
 
