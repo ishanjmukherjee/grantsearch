@@ -269,6 +269,7 @@ def word_pdf(path: Path) -> bytes | None:
 
 def save(doc: pymupdf.Document, path: Path, title: str, authors: list[str], subject: str) -> None:
     doc.set_metadata({"title": title, "author": ", ".join(authors), "subject": subject, "creator": "", "producer": "", "creationDate": "", "modDate": ""})
+    doc.xref_set_key(-1, "ID", "null")  # a converter's random file ID would change the file on every run
     doc.save(path, garbage=4, deflate=True, no_new_id=True)
 
 
@@ -318,7 +319,7 @@ def main() -> None:
                         if sid in old:
                             rows.append(old[sid])
                         continue
-                    out.write_bytes(pdf)
+                    save(pymupdf.open(stream=pdf, filetype="pdf"), out, w["title"], names, "Northwestern Undergraduate Research Journal")
                     row["made"] = "Word file by LibreOffice"
                 else:
                     pictures = [f for f in files if f.suffix.lower() in (".jpg", ".jpeg", ".png")]
