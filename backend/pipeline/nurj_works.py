@@ -27,9 +27,11 @@ abstracts), and in its extra its records (sources) with the rule that joined
 each. The records left out, each with the reason, go to
 data/nurj_left_out.json.
 
-Usage: uv run python -m pipeline.nurj_works [--candidates]
+Usage: uv run python -m pipeline.nurj_works [--candidates | --incomplete]
   --candidates prints the pairs of separate works whose texts are most alike,
   for checking by hand that no merge is missed (see SAME and DIFFERENT).
+  --incomplete prints the advisors named by initials alone, with what a judge
+  needs to complete them (see judged_names).
 """
 
 import json
@@ -403,7 +405,11 @@ def main() -> None:
     text = texts()
     abstract = abstracts(works, text)
     faculty = [p for r in load(*(s for s in SOURCES if s != "nurj")) for p in r["people"] if p["role"] == "advisor"]
-    write("nurj", [as_record(w, work_text(w, text), abstract.get(w["id"]), faculty) for w in works])
+    if "--incomplete" in sys.argv:
+        incomplete(works, text)
+        return
+    judged = judged_names()
+    write("nurj", [as_record(w, work_text(w, text), abstract.get(w["id"]), faculty, judged) for w in works])
     out = DATA_DIR / "nurj_left_out.json"
     out.write_text(json.dumps(left, indent=1, ensure_ascii=False) + "\n")
     kinds = Counter(tuple(sorted({s["type"] for s in w["sources"]})) for w in works)
@@ -412,29 +418,57 @@ def main() -> None:
         print(f"  {n:4} {' + '.join(k)}")
 
 
-def complete(p: dict, faculty: list[dict]) -> dict:
-    """An advisor named by surname or initial alone ("L. Hein") with the full
-    name of the one advisor another source's record gives with that surname
-    and initial; unchanged when there is none or more than one."""
-    first = p["first"].strip(". ")
-    if len(first) > 1:
-        return p
-    found = Counter(f["first"] for f in faculty if words(f["last"]) == words(p["last"]) and f["first"][:1].lower() == first[:1].lower() and len(f["first"].strip(". ")) > 1)
-    if len({words(f)[0] for f in found if words(f)}) != 1:
-        return p
-    return {**p, "first": found.most_common(1)[0][0]}
+def initials_only(p: dict) -> bool:
+    """Whether a name gives its first name by initials alone ("L.", "P.W.") or
+    not at all."""
+    return all(len(t) <= 1 for t in re.split(r"[.\s]+", p["first"]))
 
 
-def people(w: dict, faculty: list[dict]) -> list[dict]:
+def incomplete(works: list[dict], text: dict[str, str]) -> None:
+    """Print, one JSON line each, the advisors works name by initials alone,
+    for a judge to complete in data/nurj_advisor_names.jsonl: the work (title,
+    year, people as printed, text) and every other source's record naming an
+    advisor with that surname."""
+    others = list(load(*(s for s in SOURCES if s != "nurj")))
+    for w in works:
+        for a in w["advisors"]:
+            for p in names(a, "advisor"):
+                if not initials_only(p):
+                    continue
+                near = [{k: r[k] for k in ("id", "source", "year", "title")} | {"advisors": [f"{x['first']} {x['last']}" for x in r["people"] if x["role"] == "advisor"]}
+                        for r in others if any(x["role"] == "advisor" and words(x["last"]) == words(p["last"]) for x in r["people"])]
+                print(json.dumps({"id": w["id"], "name": a, "title": w["title"], "year": w["year"], "authors": w["authors"], "advisors": w["advisors"],
+                                  "text": work_text(w, text), "records": near}, ensure_ascii=False))
+
+
+def judged_names() -> dict[tuple[str, str], dict]:
+    """Full names for advisors works name by initials alone, from
+    data/nurj_advisor_names.jsonl, keyed by (work id, name as printed).
+
+    Its lines are {id, name, first, last, reason}: a model's judgment, from the
+    work's text, the other records naming an advisor with that surname and what
+    it knows for certain, of who the advisor is, or null first and last where
+    it can't say."""
+    path = DATA_DIR / "nurj_advisor_names.jsonl"
+    return {(r["id"], r["name"]): r for r in map(json.loads, path.open())} if path.exists() else {}
+
+
+def people(w: dict, faculty: list[dict], judged: dict[tuple[str, str], dict]) -> list[dict]:
     """A work's people: its byline's authors as students, then its advisors.
 
     A byline can name the student's faculty co-authors too ("Alison Moy,
     Viorica Marian"). The first author is the student; a later one is an
     advisor instead when the work names them as its advisor, or when another
     source's record names them as an advisor (faculty). An advisor named by
-    initial alone gets the full name another record gives (see complete)."""
+    initials alone takes the full name judged for them (see judged_names)."""
     authors = [p for a in w["authors"] for p in names(a, "student")]
-    advisors = [complete(p, faculty) for a in w["advisors"] for p in names(a, "advisor")]
+    advisors = []
+    for a in w["advisors"]:
+        for p in names(a, "advisor"):
+            j = judged.get((w["id"], a))
+            if initials_only(p) and j is None:
+                print(f"{w['id']}: no judged name for advisor {a!r} (see --incomplete)", file=sys.stderr)
+            advisors.append({**p, "first": j["first"], "last": j["last"]} if initials_only(p) and j and j["first"] else p)
     students = authors[:1]
     for p in authors[1:]:
         if any(same_person(p, a) for a in advisors):
@@ -446,9 +480,9 @@ def people(w: dict, faculty: list[dict]) -> list[dict]:
     return students + advisors
 
 
-def as_record(w: dict, text: str | None, abstract: str | None, faculty: list[dict]) -> dict:
+def as_record(w: dict, text: str | None, abstract: str | None, faculty: list[dict], judged: dict[tuple[str, str], dict]) -> dict:
     """A work as a record (see pipeline.records)."""
-    people_ = people(w, faculty)
+    people_ = people(w, faculty, judged)
     lead = next(s for s in w["sources"] if s["joined_by"] == "lead record")
     return record(w["id"], "nurj", "paper", w["year"], w["title"], people_, abstract, lead["url"], extra={"sources": w["sources"]}, text=text)
 
