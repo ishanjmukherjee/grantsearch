@@ -289,6 +289,10 @@ class Index:
         owner = {c["owner"]: i for i, p in enumerate(self.projects) for c in p["cards"]}
         self.row_project = np.array([owner[r["id"]] for r in index_rows])
         self.row_is_doc = np.array([r["kind"] in ("doc", "summary") for r in index_rows])
+        # The document and summary rows on their own, which every project
+        # page compares its project against (see similar).
+        self.doc_vecs = self.vecs[self.row_is_doc]
+        self.doc_project = self.row_project[self.row_is_doc]
         self.has_vectors = np.array([bool(p["cards"]) for p in self.projects])
 
         # Every record and listing of a project leads to it by its number. A
@@ -342,10 +346,9 @@ class Index:
         if not self.has_vectors[i]:
             query = p["title"] or next((e["abstract"] for e in p["entries"] if e["abstract"]), None)
             return [x for x in self.search(query, n=n + 1)[0] if x is not p][:n] if query else []
-        own = self.vecs[(self.row_project == i) & self.row_is_doc]
-        sims = (self.vecs[self.row_is_doc] @ own.T).max(axis=1)
+        sims = (self.doc_vecs @ self.doc_vecs[self.doc_project == i].T).max(axis=1)
         best = np.full(len(self.projects), -np.inf)
-        np.maximum.at(best, self.row_project[self.row_is_doc], sims)
+        np.maximum.at(best, self.doc_project, sims)
         best[i] = -np.inf
         return [self.projects[j] for j in np.argsort(-best, kind="stable")[:n]]
 
