@@ -123,9 +123,9 @@ def argb(u: int) -> tuple[tuple[float, float, float], float]:
     return ((u >> 16 & 255) / 255, (u >> 8 & 255) / 255, (u & 255) / 255), (u >> 24 & 255) / 255
 
 
-def woff_font(data: bytes) -> tuple[pymupdf.Font, bool]:
-    """A WOFF font as a font MuPDF can embed, and whether it maps the private
-    use characters U+F020-U+F0FF (a symbol font's encoding).
+def woff_font(data: bytes) -> tuple[pymupdf.Font, bool, str]:
+    """A WOFF font as a font MuPDF can embed, whether it maps the private use
+    characters U+F020-U+F0FF (a symbol font's encoding), and its new name.
 
     Issuu's subsets mostly share a few names ("Medium"), and MuPDF writes fonts
     of the same name as one, so each is renamed after a hash of its file. A
@@ -151,11 +151,125 @@ def woff_font(data: bytes) -> tuple[pymupdf.Font, bool]:
                 table.cmap = plain | {c - 0xF000: g for c, g in table.cmap.items() if 0xF020 <= c <= 0xF0FF and c - 0xF000 not in plain}
     out = io.BytesIO()
     font.save(out)
-    return pymupdf.Font(fontbuffer=out.getvalue()), symbol
+    return pymupdf.Font(fontbuffer=out.getvalue()), symbol, name
 
 
-def layer_page(doc: pymupdf.Document, data: bytes, stats: Counter) -> pymupdf.Page:
-    """Draw a page from its Issuu layer file (see the module docstring)."""
+def private(ch: str, symbol: bool) -> bool:
+    """Whether a run's character is a private use code standing for a glyph,
+    not text (a symbol font's U+F020-U+F0FF are handled by woff_font)."""
+    return 0xE000 <= ord(ch) <= 0xF8FF and not (symbol and 0xF020 <= ord(ch) <= 0xF0FF)
+
+
+def text_lines(path: Path) -> dict[int, list[tuple[str, float, float]]]:
+    """Each page's lines of text from a volume's text_info.bin, the text Issuu
+    extracted for search, by page number (section + 1): field 1 is a page, its
+    field 1 the number, 3 its height in points, and each field 4 a line, with
+    its string (1) and transform (3, six floats, the last two its origin). The
+    origins are given here as fractions of the page's height."""
+    data = path.read_bytes()
+    if data[:2] == b"\x1f\x8b":
+        data = gzip.decompress(data)
+    out = {}
+    for number, value in fields(data):
+        if number != 1:
+            continue
+        page = fields(value)
+        head = dict(page)
+        height = head.get(3) or 792
+        out[head[1]] = [(line[1].decode(errors="replace"), floats(line[3])[4] / height, floats(line[3])[5] / height)
+                        for line in (dict(fields(v)) for n, v in page if n == 4) if 1 in line and 3 in line]
+    return out
+
+
+def read_codes(text: str, symbol: bool, origin: tuple[float, float], lines: list[tuple[str, float, float]]) -> dict[str, str] | None:
+    """What each private use code in a run stands for, read off the line of
+    Issuu's text that it is: the run's other characters must match the line's,
+    each code one to three of its characters (a ligature can stand for
+    "ffi"), the same each time it occurs; of the lines that match, the one
+    nearest the run's origin; failing that, the one place in the page's text
+    it matches. None when there is none."""
+    pattern, groups = [], {}
+    for ch in text.strip():
+        if private(ch, symbol):
+            if ch in groups:
+                pattern.append(f"(?P=g{groups[ch]})")
+            else:
+                groups[ch] = len(groups)
+                pattern.append(f"(?P<g{groups[ch]}>\\S{{1,3}}?)")
+        elif ch.isspace():
+            pattern.append(r"\s*")
+        else:
+            pattern.append(re.escape(ch))
+    regex = re.compile("".join(pattern))
+    found = []
+    for line, x, y in lines:
+        if m := regex.fullmatch(line.strip()):
+            found.append(((x - origin[0]) ** 2 + (y - origin[1]) ** 2, m))
+    if not found:
+        # A run and a line can split the page's text differently: look for the
+        # run anywhere in the page's text, if it is there just once.
+        page = " ".join(line.strip() for line, _, _ in lines)
+        hits = list(re.finditer(regex.pattern.replace(r"\s*", r"\s+"), page)) if groups else []
+        if len(hits) != 1:
+            return None
+        found = [(0.0, hits[0])]
+    m = min(found, key=lambda f: f[0])[1]
+    return {ch: m.group(f"g{i}") for ch, i in groups.items()}
+
+
+def fix_text(doc: pymupdf.Document, codes: dict[str, dict[str, Counter]], report: list[str]) -> None:
+    """Make text drawn with private use codes read back as what they stand for.
+
+    A PDF's text comes from each font's ToUnicode map, glyph to characters,
+    which MuPDF writes from the font's own cmap; where that gives a private use
+    code that codes reads (font name to code to the readings of it), the map
+    is rewritten to give its reading instead: the one found, or of readings
+    that differ, the most common when it is found more than twice as often as
+    any other. Readings that are themselves private use codes don't count."""
+    for xref in range(1, doc.xref_length()):
+        base = doc.xref_get_key(xref, "BaseFont")[1].lstrip("/")
+        name = base.split("+")[-1][:13]
+        if name not in codes or doc.xref_get_key(xref, "ToUnicode")[0] != "xref":
+            continue
+        reading = {}
+        for code, votes in codes[name].items():
+            ranked = [(r, n) for r, n in votes.most_common() if not any(0xE000 <= ord(c) <= 0xF8FF for c in r)]
+            if not ranked:
+                continue
+            (best, n), *rest = ranked
+            if rest and n <= 2 * rest[0][1]:
+                report.append(f"{name}: U+{ord(code):04X} read as {dict(votes)}; left as it is")
+                continue
+            reading[code] = best
+        cmap_xref = int(doc.xref_get_key(xref, "ToUnicode")[1].split()[0])
+        cmap = doc.xref_stream(cmap_xref).decode()
+        pairs = {}
+        for block in re.findall(r"beginbfchar(.*?)endbfchar", cmap, re.S):
+            for g, u in re.findall(r"<([0-9a-fA-F]+)>\s*<([0-9a-fA-F]+)>", block):
+                pairs[int(g, 16)] = bytes.fromhex(u).decode("utf-16-be")
+        for block in re.findall(r"beginbfrange(.*?)endbfrange", cmap, re.S):
+            for a, b, u in re.findall(r"<([0-9a-fA-F]+)>\s*<([0-9a-fA-F]+)>\s*<([0-9a-fA-F]+)>", block):
+                for k in range(int(b, 16) - int(a, 16) + 1):
+                    pairs[int(a, 16) + k] = chr(int(u, 16) + k)
+        if not any(v in reading for v in pairs.values()):
+            continue
+        pairs = {g: reading.get(v, v) for g, v in sorted(pairs.items())}
+        items = list(pairs.items())
+        body = "".join(
+            f"{len(chunk)} beginbfchar\n" + "".join(f"<{g:04x}> <{v.encode('utf-16-be').hex()}>\n" for g, v in chunk) + "endbfchar\n"
+            for chunk in (items[i : i + 100] for i in range(0, len(items), 100))
+        )
+        head = cmap[: cmap.index("endcodespacerange") + len("endcodespacerange\n")]
+        doc.update_stream(cmap_xref, (head + body + "endcmap\nCMapName currentdict /CMap defineresource pop\nend\nend\n").encode())
+
+
+def layer_page(doc: pymupdf.Document, data: bytes, stats: Counter, lines: list[tuple[str, float, float]], codes: dict[str, dict[str, Counter]]) -> pymupdf.Page:
+    """Draw a page from its Issuu layer file (see the module docstring).
+
+    Some fonts give characters private use codes in place of text, so that
+    a run's string has codes where its letters should be. What they stand for
+    is read off lines, the page's text as Issuu extracted it (see read_codes),
+    into codes, by font, for fix_text to apply."""
     if data[:2] == b"\x1f\x8b":
         data = gzip.decompress(data)
     top = defaultdict(list)
@@ -165,6 +279,7 @@ def layer_page(doc: pymupdf.Document, data: bytes, stats: Counter) -> pymupdf.Pa
     s = PAGE_HEIGHT / height
     page = doc.new_page(width=width * s, height=height * s)
     fonts = [woff_font(dict(fields(f))[1]) for f in top[10]]
+    height_px = height
     background = dict(fields(top[11][0])).get(1) if top[11] else None
     for item in top[9]:
         for kind, value in fields(item):
@@ -177,14 +292,23 @@ def layer_page(doc: pymupdf.Document, data: bytes, stats: Counter) -> pymupdf.Pa
                 xs, ys = floats(run.get(6, b"")), floats(run.get(7, b""))
                 size = floats(run[3])[0] if 3 in run else 50.0
                 color, opacity = argb(run.get(4, 0xFF000000))
-                font, symbol = fonts[run.get(2, 0)]
+                font, symbol, name = fonts[run.get(2, 0)]
+                text = run.get(1, b"").decode()
+                if any(private(ch, symbol) for ch in text):
+                    read = read_codes(text, symbol, (e / height_px, f / height_px), lines)
+                    if read is None:
+                        stats["runs with private use codes no line matches"] += 1
+                    else:
+                        stats["runs with private use codes read"] += 1
+                        for code, chars in read.items():
+                            codes.setdefault(name, {}).setdefault(code, Counter())[chars] += 1
                 writer = pymupdf.TextWriter(page.rect, color=color, opacity=opacity)
                 # Characters are placed unrotated from the run's origin, and a
                 # rotated run is turned about that origin as a whole (morph
                 # turns the other way from the layer's matrix, hence -b, -c).
                 scale = (a * a + b * b) ** 0.5
                 rotated = abs(b) > 1e-6 or abs(c) > 1e-6
-                for i, ch in enumerate(run.get(1, b"").decode()):
+                for i, ch in enumerate(text):
                     if ch.isspace():
                         continue
                     x, y = (xs[i] if i < len(xs) else 0.0), (ys[i] if i < len(ys) else 0.0)
@@ -235,21 +359,28 @@ def issuu_pdf(item: dict, volume: dict, raw: Path, stats: Counter, report: list[
     doc, made, missing = pymupdf.open(), Counter(), []
     folder = raw / "issuu" / volume["slug"]
     sections = {p["section"]: p for p in volume["pages"]}
+    info = folder / "layers" / "text_info.bin"
+    lines = text_lines(info) if info.exists() else {}
+    codes: dict[str, dict[str, Counter]] = {}
+    drawn = []
     for sec in item["pages"]:
         layer, image, scan = (folder / "layers" / f"page_{sec + 1}.bin", folder / "images" / f"page_{sec + 1}.jpg", folder / "scans" / f"page_{sec + 1}.jpg")
         if layer.exists():
-            page = layer_page(doc, layer.read_bytes(), stats)
+            layer_page(doc, layer.read_bytes(), stats, lines.get(sec + 1, []), codes)
             made["layers"] += 1
-            expected = words(" ".join(" ".join(b) for b in sections.get(sec, {}).get("blocks", [])))
-            drawn = words(page.get_text())
-            if len(expected) >= 20 and drawn and len(expected & drawn) / len(expected) < OVERLAP:
-                report.append(f"{item['id']}: section {sec} shares {len(expected & drawn)}/{len(expected)} words with its capture text")
+            drawn.append((doc.page_count - 1, sec))
         elif image.exists() or scan.exists():
             image_page(doc, (image if image.exists() else scan).read_bytes())
             made["images"] += 1
         else:
             text_page(doc, f"Page {sec + 1} of this volume was not archived; its text, as Issuu's archived page gives it, follows.", sections.get(sec, {}).get("blocks", []))
             missing.append(sec)
+    fix_text(doc, codes, report)
+    for i, sec in drawn:
+        expected = words(" ".join(" ".join(b) for b in sections.get(sec, {}).get("blocks", [])))
+        got = words(doc[i].get_text())
+        if len(expected) >= 20 and got and len(expected & got) / len(expected) < OVERLAP:
+            report.append(f"{item['id']}: section {sec} shares {len(expected & got)}/{len(expected)} words with its capture text")
     return doc, "issuu " + " and ".join(f"page {k}" for k in sorted(made)) if made else "issuu archived text", missing
 
 
