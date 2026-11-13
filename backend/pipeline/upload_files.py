@@ -14,7 +14,9 @@ read the prowl.nu zone and edit its DNS:
 A run lists the bucket and uploads the files that are missing from it or whose
 MD5 differs from the object's ETag (R2's ETag of a single-part upload is its
 MD5), so it uploads only what changed. Objects with no file are listed, and
-deleted with --delete.
+deleted with --delete. Cloudflare's edge keeps a file for a day
+(CACHE_CONTROL), so every file it replaces or deletes is purged from the
+prowl.nu zone's cache, which takes the token's cache purge permission too.
 
 It talks to R2's S3-compatible API with an API token from the environment (the
 repository's .env): CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN, a token
@@ -53,6 +55,18 @@ def token_id(token: str, account: str) -> str:
         if r.status_code == 200 and r.json().get("success"):
             return r.json()["result"]["id"]
     raise SystemExit("CLOUDFLARE_API_TOKEN did not verify as a user or account token")
+
+
+def purge(keys: list[str]) -> None:
+    """Purge these objects' URLs from the edge cache, 30 to a request (the
+    most Cloudflare takes)."""
+    headers = {"Authorization": f"Bearer {os.environ['CLOUDFLARE_API_TOKEN']}"}
+    api = "https://api.cloudflare.com/client/v4"
+    zone = httpx.get(f"{api}/zones", params={"name": "prowl.nu"}, headers=headers, timeout=30).json()["result"][0]["id"]
+    for i in range(0, len(keys), 30):
+        r = httpx.post(f"{api}/zones/{zone}/purge_cache", json={"files": [PUBLIC + k for k in keys[i : i + 30]]}, headers=headers, timeout=30)
+        if not r.json().get("success"):
+            raise SystemExit(f"cache purge failed: {r.text}")
 
 
 def client():
@@ -98,6 +112,10 @@ def main() -> None:
         if args.delete:
             s3.delete_object(Bucket=BUCKET, Key=key)
         print(("deleted " if args.delete else "no file ") + key)
+    replaced = [key for key, _ in upload if key in remote] + (stale if args.delete else [])
+    if replaced:
+        purge(replaced)
+        print(f"purged {len(replaced)} from the edge cache")
     if upload:
         print(f"uploaded {len(upload)}; for example {PUBLIC}{upload[0][0]}")
 

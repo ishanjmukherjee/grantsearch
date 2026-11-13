@@ -4,8 +4,8 @@ A NURJ paper's versions (the sources of its record in data/records/nurj.jsonl)
 come from four kinds of file, and each becomes a PDF its own way:
 
 - A paper in a print edition recovered from Issuu (pipeline.scrape_issuu):
-  its pages, cut from the volume by the sections data/print_papers.json gives
-  it. No PDF of these volumes survives, so each page is drawn again from the
+  its pages, cut from the volume: every section (page) data/print_papers.json
+  gives it in pages. No PDF of these volumes survives, so each page is drawn again from the
   layer file Issuu's reader drew it from (layers/page_<section + 1>.bin), a
   protocol buffer holding the page's size, its background image, its fonts
   and a list of items in painting order:
@@ -235,7 +235,7 @@ def issuu_pdf(item: dict, volume: dict, raw: Path, stats: Counter, report: list[
     doc, made, missing = pymupdf.open(), Counter(), []
     folder = raw / "issuu" / volume["slug"]
     sections = {p["section"]: p for p in volume["pages"]}
-    for sec in item["sections"]:
+    for sec in item["pages"]:
         layer, image, scan = (folder / "layers" / f"page_{sec + 1}.bin", folder / "images" / f"page_{sec + 1}.jpg", folder / "scans" / f"page_{sec + 1}.jpg")
         if layer.exists():
             page = layer_page(doc, layer.read_bytes(), stats)
@@ -257,7 +257,7 @@ def edition_pdf(item: dict, volume: dict, raw: Path) -> pymupdf.Document:
     """A print paper's pages from its edition's PDF."""
     doc = pymupdf.open()
     with pymupdf.open(raw / volume["files"][0].removeprefix("raw/")) as edition:
-        for sec in item["sections"]:
+        for sec in item["pages"]:
             doc.insert_pdf(edition, from_page=sec, to_page=sec)
     return doc
 

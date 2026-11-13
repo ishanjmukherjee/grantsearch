@@ -316,6 +316,7 @@ def build_print(volumes: dict[str, dict]) -> list[dict]:
                 "slug": volume["slug"],
                 **{k: item.get(k) for k in ("kind", "title", "authors", "department", "advisors", "printed_pages", "notes")},
                 "sections": [sections[0], sections[-1]] if sections else None,
+                "pages": sections,
                 "source": volume["capture_url"] if volume["source"] == "issuu" else volume["source_url"],
                 "transcribed": any(s in volume["transcribed"] for s in sections),
                 "text": paragraphs(blocks, words_seen),
