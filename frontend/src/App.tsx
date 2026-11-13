@@ -132,16 +132,110 @@ function searchUrl({ q, source, from, to }: Query, n: number) {
   return qs ? `?${qs}` : window.location.pathname
 }
 
+// What the query log (the backend's querylog) is told about this tab.
+//
+// A visit is one tab's stay: a random id kept in sessionStorage, which ends
+// with the tab, so the log can tell which searches and clicks were one
+// visitor's without knowing who they are or following them to another day.
+// Its searches are numbered in order, also across the tab's page loads.
+// Where the browser refuses storage, both last until the page is left.
+const kept = new Map<string, string>()
+
+function recall(key: string) {
+  try {
+    return window.sessionStorage.getItem(key) ?? kept.get(key) ?? null
+  } catch {
+    return kept.get(key) ?? null
+  }
+}
+
+function keep(key: string, value: string) {
+  kept.set(key, value)
+  try {
+    window.sessionStorage.setItem(key, value)
+  } catch {
+    // Kept in memory alone.
+  }
+}
+
+function visit() {
+  let id = recall('visit')
+  if (!id) {
+    // randomUUID needs a secure page, which a phone on the dev server lacks.
+    const bytes = () =>
+      Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16).padStart(2, '0'))
+    id = crypto.randomUUID?.() ?? bytes().join('')
+    keep('visit', id)
+  }
+  return id
+}
+
+function nextSeq() {
+  const seq = Number(recall('seq') ?? 0) + 1
+  keep('seq', String(seq))
+  return seq
+}
+
+// Whether this browser is one the site is built and tested on, whose searches
+// the log sets apart from visitors': opening /?internal=1 once marks it so
+// from then on, and /?internal=0 unmarks it.
+const internal = (() => {
+  try {
+    const mark = new URLSearchParams(window.location.search).get('internal')
+    if (mark === '1') window.localStorage.setItem('internal', '1')
+    if (mark === '0') window.localStorage.removeItem('internal')
+    return window.localStorage.getItem('internal') === '1'
+  } catch {
+    return false
+  }
+})()
+
+// The headers that tell the log whose request this is.
+function visitHeaders(): Record<string, string> {
+  return internal ? { 'X-Visit': visit(), 'X-Internal': '1' } : { 'X-Visit': visit() }
+}
+
+// Why a search was sent: the page opened on it (as from a link), the query
+// was typed, a filter was changed, a page of results was chosen, or the
+// visitor went back or forward to it.
+type Cause = 'load' | 'type' | 'filter' | 'page' | 'back'
+// The cause of the search the search page opens on: typing on a project page
+// switches to it with what was typed.
+let arrival: Cause = 'load'
+// The number of the search whose results are on screen, if any are.
+let shownSeq: number | null = null
+
+// Where a result is on the page: among a search's results (with the search's
+// number and the result's rank in the whole ranking, from 1), the project its
+// page is for, or one of the similar projects under it (with its rank there).
+type Place = { project: string; on: 'search' | 'project' | 'similar'; seq?: number; rank?: number }
+
+// Tells the log what a visitor did with a result. A beacon is still sent
+// when the click itself leaves the page.
+function report(
+  kind: 'click' | 'expand' | 'share',
+  place: Place,
+  more: { link?: string; record?: string } = {},
+) {
+  const body = JSON.stringify({ kind, visit: visit(), internal, ...place, ...more })
+  try {
+    if (navigator.sendBeacon?.('/api/event', body)) return
+  } catch {
+    // Try a plain request instead.
+  }
+  fetch('/api/event', { method: 'POST', body, keepalive: true }).catch(() => {})
+}
+
 // A request that got no response, or one from a proxy that couldn't reach
 // the server, as while it restarts on a deploy.
 class Unreachable extends Error {}
 
 // A fetch whose failure to get a response is told apart from errors thrown
 // later, in our own code. The caller checks for an abort itself.
-async function get(url: string, signal: AbortSignal) {
+async function get(url: string, signal: AbortSignal, headers: Record<string, string> = {}) {
   let resp: Response
   try {
-    resp = await fetch(url, { signal })
+    resp = await fetch(url, { signal, headers: { ...visitHeaders(), ...headers } })
   } catch (e) {
     throw new Unreachable(`${url} got no response`, { cause: e })
   }
@@ -215,6 +309,7 @@ export default function App() {
   // Typing on a project page switches to the search page in place, so results
   // show as on the search page; Back returns to the project.
   const search = (q: string) => {
+    arrival = 'type'
     window.history.pushState(null, '', `/?${new URLSearchParams({ q })}`)
     setPath('/')
   }
@@ -325,14 +420,15 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
         {!data && !error && <p className="notice">Loading…</p>}
         {data && (
           <>
-            <Result project={data.project} open />
+            <Result project={data.project} place={{ on: 'project' }} open />
             {data.similar.length > 0 && <h2 className="section">Similar projects</h2>}
-            {data.similar.map((p) => (
-              <Result key={p.id} project={p} />
+            {data.similar.map((p, i) => (
+              <Result key={p.id} project={p} place={{ on: 'similar', rank: i + 1 }} />
             ))}
           </>
         )}
       </main>
+      <Footer />
     </div>
   )
 }
@@ -341,6 +437,9 @@ function Search() {
   const [query, setQuery] = useState(readUrl)
   const { q, source, from, to, page } = query
   const [results, setResults] = useState<Project[] | null>(null)
+  // The search the shown results answer: its number, and how many results
+  // rank above the first shown.
+  const [listed, setListed] = useState({ seq: 0, offset: 0 })
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -352,14 +451,18 @@ function Search() {
   // Set when the next search should skip the debounce: the page's first load,
   // and moves between pages, which are not typed.
   const instant = useRef(true)
+  // Why the next search is sent, for the query log.
+  const cause = useRef<Cause>(arrival)
 
   // A changed query or filter starts again from the first page.
   function change(edit: Partial<Omit<Query, 'page'>>) {
+    cause.current = 'q' in edit ? 'type' : 'filter'
     setQuery((s) => ({ ...s, ...edit, page: 1 }))
   }
 
   function setPage(n: number) {
     instant.current = true
+    cause.current = 'page'
     setQuery((s) => ({ ...s, page: n }))
   }
 
@@ -373,6 +476,7 @@ function Search() {
   useEffect(() => {
     const back = () => {
       instant.current = true
+      cause.current = 'back'
       setQuery(readUrl())
     }
     window.addEventListener('popstate', back)
@@ -382,6 +486,7 @@ function Search() {
   // Arriving from a project page, which titles the tab after the project.
   useEffect(() => {
     document.title = SITE
+    arrival = 'load'
   }, [])
 
   useEffect(() => {
@@ -400,7 +505,10 @@ function Search() {
       async () => {
         setLoading(true)
         try {
-          const resp = await get(`/api/search?${params}`, controller.signal)
+          const seq = nextSeq()
+          const sent: Record<string, string> = { 'X-Seq': String(seq), 'X-Cause': cause.current }
+          if (shownSeq !== null) sent['X-Shown'] = String(shownSeq)
+          const resp = await get(`/api/search?${params}`, controller.signal, sent)
           if (!resp.ok) throw new Error(`/api/search returned ${resp.status}`)
           const data = await resp.json()
           // A page past the last, as from a link made when there were more
@@ -414,6 +522,8 @@ function Search() {
           // start deep in the old list; show the new list from its top.
           if (shown.current !== url) window.scrollTo(0, 0)
           shown.current = url
+          shownSeq = seq
+          setListed({ seq, offset: (page - 1) * PAGE })
           setResults(data.results)
           setQuotes(quotePattern(used))
           setTotal(data.total)
@@ -477,9 +587,14 @@ function Search() {
         {results !== null && total === 0 && !error && (
           <p className="notice">No projects match. Try different words or widen the filters.</p>
         )}
-        <Quotes.Provider value={quotes}>{results?.map((p) => <Result key={p.id} project={p} />)}</Quotes.Provider>
+        <Quotes.Provider value={quotes}>
+          {results?.map((p, i) => (
+            <Result key={p.id} project={p} place={{ on: 'search', seq: listed.seq, rank: listed.offset + i + 1 }} />
+          ))}
+        </Quotes.Provider>
         {pages > 1 && <Pager page={page} pages={pages} href={(n) => searchUrl(query, n)} onGo={goTo} />}
       </main>
+      <Footer />
     </div>
   )
 }
@@ -652,7 +767,33 @@ function Pager({
   )
 }
 
-function Result({ project, open = false }: { project: Project; open?: boolean }) {
+// What the site keeps of a visit (see the backend's querylog).
+function Footer() {
+  return (
+    <footer>
+      Prowl logs searches and clicks, without your IP address or an account, to improve its results.
+    </footer>
+  )
+}
+
+function Result({
+  project,
+  place: where,
+  open = false,
+}: {
+  project: Project
+  place: Omit<Place, 'project'>
+  open?: boolean
+}) {
+  const place = { project: project.id, ...where }
+  // A click on any of the result's links, also one that opens it in a new
+  // tab (a middle click is an auxclick).
+  function clicked(e: React.MouseEvent) {
+    const a = (e.target as Element).closest<HTMLElement>('a[data-link]')
+    if (a && (e.type === 'click' || e.button === 1)) {
+      report('click', place, { link: a.dataset.link, record: a.dataset.record })
+    }
+  }
   const grants = project.records.filter((r) => r.kind === 'grant')
   const theses = project.records.filter((r) => r.kind === 'thesis')
   const papers = project.records.filter((r) => r.kind === 'paper')
@@ -712,8 +853,8 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
   }
 
   return (
-    <article className="result">
-      <ShareButton project={project} />
+    <article className="result" onClick={clicked} onAuxClick={clicked}>
+      <ShareButton project={project} place={place} />
       <div className="tags">
         {grants.map((g) => (
           <span key={g.id} className="tag surg">
@@ -737,7 +878,7 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
         ))}
       </div>
       <h2>
-        <a href={`/p/${project.share}`}>
+        <a href={`/p/${project.share}`} data-link="page">
           {project.title ? <Marked text={project.title} /> : <span className="untitled">{untitled(project)}</span>}
         </a>
       </h2>
@@ -751,40 +892,49 @@ function Result({ project, open = false }: { project: Project; open?: boolean })
             : years.length > 1 || written.length
               ? `${SOURCE_NAMES[s.source]} ${s.year}`
               : null
-        return <Abstract key={s.key} section={s} heading={heading} people={people(s.students)} open={open} />
+        return (
+          <Abstract key={s.key} section={s} heading={heading} people={people(s.students)} place={place} open={open} />
+        )
       })}
       {written.map((w) => {
         const heading = !sameTitle(w.title, project.title) ? `${w.label}: ${w.title}` : multiple ? w.label! : null
         const who = people(w.students)
         if (!heading && !who && !w.abstract) return null
-        return <Abstract key={w.key} section={w} heading={heading} people={who} open={open} />
+        return <Abstract key={w.key} section={w} heading={heading} people={who} place={place} open={open} />
       })}
       <div className="links">
         {grants.map((g) => (
-          <a key={g.id} href={g.url} target="_blank" rel="noreferrer">
+          <a key={g.id} href={g.url} target="_blank" rel="noreferrer" data-link={g.source} data-record={g.id}>
             {SOURCE_NAMES[g.source]} {g.year} winners <ExternalIcon />
           </a>
         ))}
         {expo.map((e) => (
-          <a key={e.id} href={e.url} target="_blank" rel="noreferrer">
+          <a key={e.id} href={e.url} target="_blank" rel="noreferrer" data-link={e.source} data-record={e.id}>
             {SOURCE_NAMES[e.source]} {e.year} listing
             {listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''} <PdfIcon /> <ExternalIcon />
           </a>
         ))}
         {theses.map((t) => (
-          <a key={t.id} href={t.url} target="_blank" rel="noreferrer">
+          <a key={t.id} href={t.url} target="_blank" rel="noreferrer" data-link={t.source} data-record={t.id}>
             {thesisLink(t)} {t.url.endsWith('.pdf') && <PdfIcon />} <ExternalIcon />
           </a>
         ))}
         {papers.map((x) => (
-          <a key={x.id} href={x.url} target="_blank" rel="noreferrer">
+          <a key={x.id} href={x.url} target="_blank" rel="noreferrer" data-link={x.source} data-record={x.id}>
             NURJ {x.year} <ExternalIcon />
           </a>
         ))}
         {parts
           .filter((s) => s.abstractSource)
           .map((s) => (
-            <a key={`${s.key}-abstract`} href={s.abstractSource!.url} target="_blank" rel="noreferrer">
+            <a
+              key={`${s.key}-abstract`}
+              href={s.abstractSource!.url}
+              target="_blank"
+              rel="noreferrer"
+              data-link="abstract"
+              data-record={s.key}
+            >
               Abstract: {s.abstractSource!.name} <ExternalIcon />
             </a>
           ))}
@@ -933,7 +1083,7 @@ function byline(students: Student[]) {
 }
 
 // Opens the share sheet on touch devices, which have one; elsewhere copies the link.
-function ShareButton({ project }: { project: Project }) {
+function ShareButton({ project, place }: { project: Project; place: Place }) {
   const [status, setStatus] = useState({ text: '', n: 0, fading: false })
   const timers = useRef<number[]>([])
   function show(text: string) {
@@ -949,6 +1099,7 @@ function ShareButton({ project }: { project: Project }) {
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       e.currentTarget.animate(PRESS, { duration: PRESS_MS, easing: 'ease-out' })
     }
+    report('share', place)
     const url = `${window.location.origin}/p/${project.share}`
     if (navigator.share && window.matchMedia('(pointer: coarse)').matches) {
       await navigator.share({ title: project.title ?? untitled(project), url }).catch(() => {}) // dismissed
@@ -1004,11 +1155,13 @@ function Abstract({
   section,
   heading,
   people,
+  place,
   open: initiallyOpen,
 }: {
   section: Section
   heading: string | null
   people: string | null
+  place: Place
   open: boolean
 }) {
   const [open, setOpen] = useState(initiallyOpen)
@@ -1063,7 +1216,14 @@ function Abstract({
             )}
           </p>
           {!open && overflows && (
-            <button className="more fade" aria-expanded="false" onClick={() => setOpen(true)}>
+            <button
+              className="more fade"
+              aria-expanded="false"
+              onClick={() => {
+                report('expand', place, { record: section.key })
+                setOpen(true)
+              }}
+            >
               Show more
             </button>
           )}

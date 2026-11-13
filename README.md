@@ -16,6 +16,17 @@ Material that is not public stays out of this repository, in private repositorie
 - [`expo2020-videos`](https://github.com/ishanjmukherjee/expo2020-videos): the Expo 2020 presentations' YouTube videos, posted unlisted by the students.
 - [`expo2022-videos`](https://github.com/ishanjmukherjee/expo2022-videos): the voiceovers of the 2022 Expo's ForagerOne posters, also unlisted, downloaded by `backend/pipeline/fetch_forager_videos.py` into a checkout at `expo2022-videos-wt/expo2022-videos`.
 
+## Query log
+
+The site logs every search with the results it returned, every project page loaded, and each click, opened abstract and share of a result, to one Postgres table (`events`, in the Railway project's Postgres service). `backend/querylog.py` describes each field and writes the rows; the frontend sends the reports and the headers that tie a tab's requests together (`report` and `visitHeaders` in `frontend/src/App.tsx`).
+
+- A visit is one browser tab: a random id in the tab's `sessionStorage`, gone when it closes. No IP address, cookie or User-Agent is stored. Railway keeps its own request logs, which do hold addresses and URLs, for as long as its plan retains them.
+- Nothing is deleted from the log. Queries often name people, so it stays in the database: don't commit an export. A query that goes into `data/eval/` should be read first.
+- Results update as a visitor types, so most logged searches are of a query half typed; the last before a pause, a click or the visit's end is the one they settled on. `shown` says which results were really on screen.
+- Open `/?internal=1` once in each browser you build or test the site in (`/?internal=0` undoes it), and its events are marked `internal`. Requests from scripts have no visit id.
+- The app logs only when `DATABASE_URL` is set, which on Railway refers to the Postgres service's. The database has no public address, so it is read from inside the project.
+- To read the log, from a checkout linked to the Railway project: `railway ssh --service web python -m querylog export --days 7` prints it as JSON lines, and `railway connect Postgres` opens `psql` on it.
+
 ## Roadmap
 
 - [x] Exact search with single or double quotes around a phrase.
@@ -160,7 +171,8 @@ Material that is not public stays out of this repository, in private repositorie
 - [x] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). `backend/pipeline/parse_expo.py` records the page each entry starts on, and the link reads "Expo 2024 listing (PDF)".
 - [ ] Google OAuth accounts, so visitors can save cards to their profile.
 - [ ] Let visitors upload papers or their own research done at Northwestern that is not indexed yet, reviewed before it is indexed.
-- [ ] Google Analytics, plus careful logging of the queries visitors type in (decide what is stored, for how long, and disclose it on the site).
+- [x] Log the queries visitors type in, what they were shown and what they did with it (see Query log above), disclosed in the site's footer.
+- [ ] Google Analytics.
 - [ ] A proper eval set for ranking.
   - Today there is only the name-search set (`data/eval/names.jsonl`, built and run by `backend/eval_names.py`) the hand-written reranker queries below, where every target was already in the baseline top 5, and `data/eval/known_items.jsonl`, 29 hand-written topic queries with one known target each, which nothing runs yet.
   - Cover topic, method, plain-language, negation and person queries, with graded relevance over several projects per query rather than a single target, including queries whose answers the current ranking misses.

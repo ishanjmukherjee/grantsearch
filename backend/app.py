@@ -7,10 +7,16 @@
 - GET /api/project/NUMBER returns {"project": ..., "similar": [...]} for the
   project a share number leads to (see pipeline.share_ids), or 404.
 - GET /api/health returns {"ok": true} once the index is loaded.
+- POST /api/event takes a browser's report of what a visitor did with a
+  result (see querylog.report) and always answers 204.
 - GET /p/NUMBER serves the frontend's page with the project's title and a
   description in its head, for link previews.
 - Everything else serves the built frontend from frontend/dist, when it
   exists; in development the Vite dev server serves it instead.
+
+Searches, project page loads and those reports go to the query log (see
+querylog), with the X-Visit, X-Seq, X-Shown, X-Cause and X-Internal headers
+the frontend sends.
 
 Requests for www.prowl.nu are redirected permanently to the same path and
 query on prowl.nu, the site's one canonical host.
@@ -18,15 +24,17 @@ query on prowl.nu, the site's one canonical host.
 Usage: uv run uvicorn app:app [--reload]
 """
 
+import time
 from contextlib import asynccontextmanager
 from html import escape
 from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 
+import querylog
 import search
 
 FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
@@ -34,12 +42,17 @@ SITE = "Prowl"
 DESCRIPTION_CHARS = 200
 CANONICAL_HOST = "prowl.nu"
 REDIRECTED_HOSTS = {"www.prowl.nu"}
+CAUSES = ("load", "type", "filter", "page", "back")
+MAX_REPORT = 2000  # bytes of a browser's report; they run to about 200
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.index = search.Index()
+    app.state.index = index = search.Index()
+    app.state.known = {r["id"] for p in index.projects for r in p["records"]} | {e["id"] for p in index.projects for e in p["entries"]}
+    app.state.log = querylog.QueryLog()
     yield
+    app.state.log.close()
 
 
 app = FastAPI(lifespan=lifespan)
@@ -52,8 +65,15 @@ async def canonical_host(request: Request, call_next):
     return await call_next(request)
 
 
+def log(request: Request, kind: str, data: dict) -> None:
+    """Add what a request did to the query log, with the visit its headers name."""
+    headers = request.headers
+    app.state.log.put(querylog.visit(headers.get("x-visit")), kind, headers.get("x-internal") == "1", headers.get("user-agent"), data)
+
+
 @app.get("/api/search")
 def search_projects(
+    request: Request,
     q: str = Query("", max_length=2000),
     source: Literal["surg", "expo", "theses", "nurj"] | None = None,
     year_from: int | None = Query(None, alias="from"),
@@ -62,16 +82,47 @@ def search_projects(
     offset: int = Query(0, ge=0),
 ) -> dict:
     years = None if year_from is None and year_to is None else (year_from or 0, year_to or 9999)
+    start = time.perf_counter()
     results, total = app.state.index.search(q, source, years, n, offset)
+    cause = request.headers.get("x-cause")
+    log(request, "search", {
+        "q": q.replace("\x00", ""),  # Postgres refuses JSON holding a NUL
+        "source": source,
+        "from": year_from,
+        "to": year_to,
+        "n": n,
+        "offset": offset,
+        "total": total,
+        "results": [p["id"] for p in results],
+        "ms": round((time.perf_counter() - start) * 1000),
+        "seq": querylog.number(request.headers.get("x-seq")),
+        "shown": querylog.number(request.headers.get("x-shown")),
+        "cause": cause if cause in CAUSES else None,
+    })
     return {"results": [search.public(p) for p in results], "total": total}
 
 
 @app.get("/api/project/{number}")
-def project(number: int) -> dict:
+def project(request: Request, number: int) -> dict:
     p = app.state.index.project(number)
+    similar = app.state.index.similar(p) if p else []
+    log(request, "project", {"number": number, "project": p and p["id"], "similar": [x["id"] for x in similar]})
     if p is None:
         raise HTTPException(404, "No project has this number.")
-    return {"project": search.public(p), "similar": [search.public(x) for x in app.state.index.similar(p)]}
+    return {"project": search.public(p), "similar": [search.public(x) for x in similar]}
+
+
+@app.post("/api/event", status_code=204)
+async def event(request: Request) -> Response:
+    body = b""
+    async for chunk in request.stream():
+        body += chunk
+        if len(body) > MAX_REPORT:
+            return Response(status_code=204)
+    if (found := querylog.report(body, app.state.known)) and app.state.log.allow_report():
+        visit, kind, internal, data = found
+        app.state.log.put(visit, kind, internal, request.headers.get("user-agent"), data)
+    return Response(status_code=204)
 
 
 def description(r: dict) -> str:
