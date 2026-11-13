@@ -32,7 +32,7 @@ When the paper has an abstract, search already matches it word for word (BM25) a
   - an adjacent field that would find it relevant
 
   Write as many as the paper supports, usually somewhere around 5 to 12: fewer for a short piece with little to go on, more for a rich paper. Skip near-duplicates, and don't just restate the title. Everything on the site is Northwestern undergraduate work, so qualifiers like "undergraduate", "student research", "journal article" or "at Northwestern" add nothing to a query; spend the words on the topic.
-- `acronyms`: a map from acronym to expansion. Search uses these site-wide: once any card defines an acronym, every query containing that word gets the expansion added. So include an acronym only when all of these hold:
+- `acronyms`: a map from acronym to expansion. Search can use these site-wide: an acronym a card defines becomes a candidate for expanding in every query that contains that word, and each candidate is then judged once for the whole site. So include an acronym only when all of these hold:
   - It's in standard use in its field (PCR, fMRI, GDP, NAFTA), not coined by one paper for itself.
   - It isn't also an ordinary word or name someone might type: leave out US, IT, AI, EU, UN, ACT, AIM, CAP and the like.
   - It's at least three characters, unless it's a two-letter one nobody would read any other way.

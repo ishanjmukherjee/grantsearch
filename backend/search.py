@@ -10,31 +10,14 @@
 
 The query model cannot read many acronyms, lowercase ones especially: it
 splits "qpcr" into "q", "pc" and "r" and matches quantum physics. So before
-embedding, each word of the query that is a known acronym gets its expansion
-appended ("qpcr (qPCR, quantitative polymerase chain reaction)"); BM25 sees
-the query as typed. The acronyms come from the cards the projects use, and a
-key is expanded only when
-- it is one word with at least two letters or digits,
-- its expansions agree: those whose character trigrams have a Jaccard
-  similarity of at least MERGE_SIM are taken as one spelled differently, and
-  the most common such group must hold MIN_SHARE of the votes ("pd" is
-  Parkinson's disease on 9 of 10 cards; "ci" is a confidence interval on 4
-  of 5 and a carbonyl index on 1, so it is not expanded, nor is "ad",
-  Alzheimer's disease on 16 of 21 cards and atopic dermatitis on 4). A
-  wrong expansion pulls the dense side toward another field ("ev uptake"
-  toward extracellular vesicles) with nothing to tell the searcher why,
-  while a missing one costs little: BM25 still matches the acronym as
-  typed, and the searcher can type the expansion. So even one card in five
-  or eight that means something else leaves a key as typed; and
-- when titles and abstracts write it, they nearly always do so in another
-  casing than lowercase, not counting a capitalized word without a digit
-  ("Fish" but not "Nurr1" or "F1"): at least MIN_CASED_SHARE of the time.
-  Ordinary words that are also acronyms ("or", "stem", and "fish", which the
-  abstracts write as FISH 4 times and as fish twice) stay as typed, as do
-  keys the projects' own text never writes; real acronyms that also appear in
-  lowercase clear it easily ("AD" 85 times, "ad" 3). Writing it cased inside
-  a longer word counts too ("SuperCDMS", "CRISPR-Cas9", "RBCs"); a lowercase
-  piece ("co-culture") does not count against it.
+embedding, each word of the query that is an acronym search expands gets its
+expansion appended ("qpcr (qPCR, quantitative polymerase chain reaction)");
+BM25 sees the query as typed. Which acronyms those are is judged once for the
+whole site, apart from the cards that propose them (see pipeline.acronyms): a
+wrong expansion pulls the dense side toward another field ("sec filings"
+toward the Super Elongation Complex) with nothing to tell the searcher why,
+while a missing one costs little, since BM25 still matches the acronym as
+typed and the searcher can type the expansion.
 
 An empty query browses every project matching the filters in a fixed order.
 SURG (2007-2024) and the posters (2003-2026) cover different years, so a
@@ -75,11 +58,8 @@ Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj] [--years F
 
 import argparse
 import hashlib
-import itertools
 import json
 import re
-import string
-from collections import Counter, defaultdict
 
 import bm25s
 import numpy as np
@@ -87,7 +67,7 @@ import Stemmer
 from sentence_transformers import SentenceTransformer
 
 from people import People
-from pipeline import share_ids
+from pipeline import acronyms, share_ids
 from pipeline.projects import (
     DIM,
     INDEX_DIR,
@@ -105,9 +85,6 @@ RRF_K = 60
 # Low term-frequency saturation: containing a query word counts for more than
 # repeating it, which the cards' generated queries and concepts do a lot.
 BM25_K1 = 0.5
-MERGE_SIM = 0.5
-MIN_SHARE = 0.9
-MIN_CASED_SHARE = 0.9
 QUOTE_MARKS = "\"\u201c\u201d"
 QUOTED = re.compile(f"[{QUOTE_MARKS}]([^{QUOTE_MARKS}]*)[{QUOTE_MARKS}]")
 
@@ -277,90 +254,6 @@ def shown_text(p: dict) -> list[str]:
     return [t for t in texts if t]
 
 
-def word_forms(word: str) -> list[str]:
-    """A word as written, without surrounding brackets, quotes and sentence
-    punctuation, and without any punctuation at its ends; tried in that order
-    so that "cd8+", "U.S." and "qPCR." are all found."""
-    return list(dict.fromkeys((word, word.strip(",;:!?\"'()[]"), word.strip(string.punctuation))))
-
-
-def word_parts(word: str) -> list[str]:
-    """A word of a title or abstract and the acronyms it may write inside it:
-    its pieces between hyphens and slashes ("TDP-43", "Keap1/Nrf2"), the
-    capitalized runs after a lowercase letter ("SuperCDMS", "ipRGC"), and
-    each of these without a plural s ("RBCs", "ipRGCs")."""
-    pieces = [word, *re.split(r"[-/]", word)]
-    pieces += [run for piece in pieces[1:] for run in re.split(r"(?<=[a-z])(?=[A-Z])", piece)]
-    pieces += [m[1] for piece in pieces if (m := re.fullmatch(r"(.*[A-Z0-9])s[^A-Za-z0-9]*", piece))]
-    return list(dict.fromkeys(p for p in pieces if p))
-
-
-def find_acronym(word: str, keys) -> str | None:
-    return next((f for f in word_forms(word) if f.lower() in keys), None)
-
-
-def trigrams(expansion: str) -> set[str]:
-    """Character trigrams of an expansion, lowercased, with any space-led
-    parenthetical dropped (not the parentheses of "poly(ethylene glycol)")
-    and only letters and digits kept."""
-    s = re.sub(r"[^a-z0-9]", "", re.sub(r" \([^()]*\)", "", expansion.lower()))
-    return {s[i : i + 3] for i in range(len(s) - 2)} or {s}
-
-
-def majority_expansion(votes: Counter) -> str | None:
-    """The expansion of a key given each spelling's votes, if its spellings
-    agree; see the module docstring. It is the most voted spelling in the
-    winning group, the shortest on a tie."""
-    spellings = list(votes)
-    grams = [trigrams(s) for s in spellings]
-    group = list(range(len(spellings)))
-
-    def root(i: int) -> int:
-        while group[i] != i:
-            i = group[i]
-        return i
-
-    for i, j in itertools.combinations(range(len(spellings)), 2):
-        if len(grams[i] & grams[j]) / len(grams[i] | grams[j]) >= MERGE_SIM:
-            group[root(i)] = root(j)
-    totals = Counter()
-    for i, s in enumerate(spellings):
-        totals[root(i)] += votes[s]
-    best, n = totals.most_common(1)[0]
-    if n < MIN_SHARE * votes.total():
-        return None
-    return max((s for i, s in enumerate(spellings) if root(i) == best), key=lambda s: (votes[s], -len(s)))
-
-
-def acronym_expansions(projects: list[dict]) -> dict[str, tuple[str, str]]:
-    """Lowercased acronym -> (its most common spelling, its expansion), for
-    the acronyms the module docstring says to expand."""
-    votes, spellings = defaultdict(Counter), defaultdict(Counter)
-    for p in projects:
-        for key, expansion in (x for c in p["cards"] for x in c["card"]["acronyms"].items()):
-            if " " not in key and sum(c.isalnum() for c in key) >= 2:
-                votes[key.lower()][expansion] += 1
-                spellings[key.lower()][key] += 1
-
-    lowercase, cased = Counter(), Counter()
-    for p in projects:
-        for text in filter(None, dict.fromkeys([p["title"], *(x for e in p["entries"] for x in (e["title"], e["abstract"]))])):
-            for word in fold(text).split():
-                if (form := find_acronym(word, votes)) and form == form.lower():
-                    lowercase[form] += 1
-                # A word's pieces show where it writes an acronym cased, but
-                # a lowercase piece is a prefix ("co-culture"), not the acronym.
-                for form in dict.fromkeys(f for part in word_parts(word) if (f := find_acronym(part, votes))):
-                    if form != form.lower() and (form != form.capitalize() or any(c.isdigit() for c in form)):
-                        cased[form.lower()] += 1
-
-    return {
-        key: (spellings[key].most_common(1)[0][0], expansion)
-        for key, v in votes.items()
-        if cased[key] and cased[key] >= MIN_CASED_SHARE * (cased[key] + lowercase[key]) and (expansion := majority_expansion(v))
-    }
-
-
 def rrf(scores: np.ndarray, floor: float) -> np.ndarray:
     """Reciprocal-rank credit for each project scoring above floor."""
     hits = np.flatnonzero(scores > floor)
@@ -408,7 +301,7 @@ class Index:
 
         self.browse_orders = browse_orders(self.projects)
         self.shown = [shown_text(p) for p in self.projects]
-        self.acronyms = acronym_expansions(self.projects)
+        self.acronyms = acronyms.expansions()
         self.people = People(self.projects)
 
         self.model = SentenceTransformer(QUERY_MODEL, revision=QUERY_MODEL_REVISION, trust_remote_code=True, truncate_dim=DIM, device="cpu")
@@ -418,8 +311,7 @@ class Index:
 
     def expand(self, query: str) -> str:
         """The query with the expansions of its acronyms appended, for the dense side."""
-        found = dict.fromkeys(self.acronyms[form.lower()] for word in query.split() if (form := find_acronym(word, self.acronyms)))
-        return f"{query} ({'; '.join(f'{spelling}, {expansion}' for spelling, expansion in found)})" if found else query
+        return acronyms.expand(query, self.acronyms)
 
     def dense_scores(self, query: str) -> np.ndarray:
         """Per-project dense score; -inf for projects without vectors."""

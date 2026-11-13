@@ -29,7 +29,7 @@ Search already matches the title and abstract word for word (BM25), and embeds t
   - an adjacent field that would find it relevant
 
   Write as many as the project supports, usually somewhere around 5 to 12. Skip near-duplicates, and don't just restate the title. Everything on the site is Northwestern undergraduate work, so qualifiers like "undergraduate research", "student project", "thesis" or "at Northwestern" add nothing to a query; spend the words on the topic.
-- `acronyms`: a map from acronym to expansion. Search uses these site-wide: once any card defines an acronym, every query containing that word gets the expansion added. So include an acronym only when all of these hold:
+- `acronyms`: a map from acronym to expansion. Search can use these site-wide: an acronym a card defines becomes a candidate for expanding in every query that contains that word, and each candidate is then judged once for the whole site. So include an acronym only when all of these hold:
   - It's in standard use in its field (TLR4, fMRI, PTSD, NGO, CRISPR), not coined by this abstract for itself ("antibiotic resistance (AR)").
   - It isn't also an ordinary word or name someone might type: leave out AM, ANS, AIM, CAT, MAP, US, IT, ART, GO, STEM, FISH, STING and the like.
   - It's at least three characters, unless it's a two-letter one nobody would read any other way.
