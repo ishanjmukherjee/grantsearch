@@ -8,3 +8,4 @@ frontend/dist
 data/raw
 data/index_qwen4b
 data/*.log
+data/pdfs

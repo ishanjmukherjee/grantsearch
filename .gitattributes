@@ -24,3 +24,4 @@ data/raw/**/*.woff2 filter=lfs diff=lfs merge=lfs -text
 data/raw/**/*.eot filter=lfs diff=lfs merge=lfs -text
 data/raw/issuu/** filter=lfs diff=lfs merge=lfs -text
 data/** linguist-generated
+data/pdfs/** filter=lfs diff=lfs merge=lfs -text
