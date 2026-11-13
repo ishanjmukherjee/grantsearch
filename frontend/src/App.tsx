@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { createContext, Fragment, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 // A poster's listing: a poster presented by several students may be listed
 // once per presenter.
@@ -32,6 +32,7 @@ type ProjectRecord = {
   department?: string
   academic_year?: string
   report?: string | null // a Computer Science thesis's technical report number
+  pdf?: string | null // a NURJ paper's PDF, hosted at files.prowl.nu
 }
 // title is null when none of the project's sources prints one; made_title is
 // then a plain description of it written from its abstract, if it has one.
@@ -909,9 +910,16 @@ function Result({
           </a>
         ))}
         {papers.map((x) => (
-          <a key={x.id} href={x.url} target="_blank" rel="noreferrer" data-link={x.source} data-record={x.id}>
-            NURJ {x.year} <ExternalIcon />
-          </a>
+          <Fragment key={x.id}>
+            {x.pdf && (
+              <a href={x.pdf} target="_blank" rel="noreferrer" data-link="nurj-pdf" data-record={x.id}>
+                NURJ {x.year} paper <PdfIcon /> <ExternalIcon />
+              </a>
+            )}
+            <a href={x.url} target="_blank" rel="noreferrer" data-link={x.source} data-record={x.id}>
+              {paperLink(x)} <ExternalIcon />
+            </a>
+          </Fragment>
         ))}
         {parts
           .filter((s) => s.abstractSource)
@@ -930,6 +938,15 @@ function Result({
       </div>
     </article>
   )
+}
+
+// Where a NURJ paper's link goes: its post on thenurj.com, Scribd, or the
+// Wayback Machine's capture of the Issuu volume it was printed in.
+function paperLink(x: ProjectRecord) {
+  const host = new URL(x.url).hostname
+  if (host === 'web.archive.org') return `NURJ ${x.year} on Issuu (archived)`
+  if (host.endsWith('scribd.com')) return `NURJ ${x.year} on Scribd`
+  return `NURJ ${x.year} post`
 }
 
 // Where a thesis's link goes: its technical report, the MMSS library (behind

@@ -42,9 +42,12 @@ refuses to embed such a font, so for those the restricted bit is cleared.
 No font sets it alone.
 
 Writes data/pdfs/nurj/<source id>.pdf and data/nurj_pdfs.jsonl, one line per
-version: {source, work, file, pages, bytes, made} where made says how the
+version: {source, work, file, url, pages, bytes, made} where url is where
+files.prowl.nu serves it (see pipeline.upload_files) and made says how the
 PDF was made, plus missing (the sections drawn from archived text) where
-there are any. Versions that get no PDF are reported, with the reason. As a
+there are any, and lead on the one PDF of each work that search links: the
+version with the longest text, the one pipeline.nurj_works takes the work's
+text from. Versions that get no PDF are reported, with the reason. As a
 check that a section is the page its layer file draws, every drawn page's
 words are compared with the text the Issuu capture gives that section, and
 pages that share less than half their words are reported.
@@ -71,7 +74,9 @@ from pathlib import Path
 import pymupdf
 from fontTools.ttLib import TTFont
 
+from pipeline.nurj_works import texts
 from pipeline.scrape_surg import DATA_DIR, RAW_DIR
+from pipeline.upload_files import PUBLIC, ROOT
 
 OUT_DIR = DATA_DIR / "pdfs" / "nurj"
 MANIFEST = DATA_DIR / "nurj_pdfs.jsonl"
@@ -337,6 +342,14 @@ def main() -> None:
                 row["pages"] = doc.page_count
             row["bytes"] = out.stat().st_size
             rows.append(row)
+    text = texts()
+    by_work = defaultdict(list)
+    for r in rows:
+        r["url"] = PUBLIC + (DATA_DIR / r["file"]).relative_to(ROOT).as_posix()
+        r.pop("lead", None)
+        by_work[r["work"]].append(r)
+    for group in by_work.values():
+        max(group, key=lambda r: len(text.get(r["source"], "")))["lead"] = True
     rows.sort(key=lambda r: r["source"])
     MANIFEST.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows))
     made = Counter(r["made"] for r in rows)

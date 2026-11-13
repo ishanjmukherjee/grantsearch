@@ -77,7 +77,7 @@ from pipeline.projects import (
     rows,
 )
 from pipeline.records import same_person
-from pipeline.scrape_surg import fold
+from pipeline.scrape_surg import DATA_DIR, fold
 
 W_DOC = 1.0
 W_QUERY = 0.6  # query-query cosines run well above query-doc ones
@@ -189,7 +189,8 @@ def public(p: dict) -> dict:
     {id, share, title, made_title, records}: each record is {id, source, kind, year,
     title, url} with, for a grant, its students and advisors; for a thesis or
     paper, its students, advisors and abstract (None where its source gives
-    none), and for a thesis its department, academic year and, for a
+    none), for a NURJ paper its pdf (the url of the PDF Prowl hosts, or None),
+    and for a thesis its department, academic year and, for a
     Computer Science thesis, its technical report number; and for a poster,
     its listings, each {id, title, presenters, advisors, abstract,
     url, page, abstract_source}, its url at the listing's page. A presenter who is
@@ -208,6 +209,8 @@ def public(p: dict) -> dict:
         if r["kind"] in ("thesis", "paper"):
             extra = r["extra"] or {}
             out |= people | {"abstract": r["abstract"]}
+            if r["source"] == "nurj":
+                out["pdf"] = r.get("pdf")
             if r["kind"] == "thesis":
                 out |= {"department": extra["department"], "academic_year": extra["academic_year"], "report": extra.get("report")}
             return out
@@ -269,6 +272,12 @@ class Index:
         projects' (see pipeline.projects.rows); otherwise use its rows as
         they are, matched to projects by owner."""
         self.projects = load_projects()
+        # A NURJ paper's PDF, as files.prowl.nu serves it (see pipeline.nurj_pdfs).
+        pdfs = {r["work"]: r["url"] for r in map(json.loads, (DATA_DIR / "nurj_pdfs.jsonl").open()) if r.get("lead")}
+        for p in self.projects:
+            for r in p["records"]:
+                if r["source"] == "nurj":
+                    r["pdf"] = pdfs.get(r["id"])
         index_rows = [json.loads(line) for line in (INDEX_DIR / "vectors.jsonl").open()]
         expected = {row for p in self.projects for row in rows(p)}
         if strict and {(r["id"], r["kind"], r["text"]) for r in index_rows} != expected:
