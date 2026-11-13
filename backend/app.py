@@ -18,8 +18,9 @@ Searches, project page loads and those reports go to the query log (see
 querylog), with the X-Visit, X-Seq, X-Shown, X-Cause and X-Internal headers
 the frontend sends.
 
-Requests for www.prowl.nu are redirected permanently to the same path and
-query on prowl.nu, the site's one canonical host.
+Requests for www.prowl.nu and the service's Railway address are redirected
+permanently to the same path and query on prowl.nu, the site's one canonical
+host.
 
 Usage: uv run uvicorn app:app [--reload]
 """
@@ -41,7 +42,7 @@ FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
 SITE = "Prowl"
 DESCRIPTION_CHARS = 200
 CANONICAL_HOST = "prowl.nu"
-REDIRECTED_HOSTS = {"www.prowl.nu"}
+REDIRECTED_HOSTS = {"www.prowl.nu", "web-production-b5a13.up.railway.app"}
 CAUSES = ("load", "type", "filter", "page", "back")
 MAX_REPORT = 2000  # bytes of a browser's report; they run to about 200
 

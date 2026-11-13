@@ -205,5 +205,4 @@ The site logs every search with the results it returned, every project page load
   - Today a card linking a SURG grant to Expo presentations is headed by the SURG title, with the Expo entries nested under it. That is backwards: the grant title is a proposal written before the work, while the Expo title and abstract describe what was actually done.
   - This gets worse as sources are added. A project that runs from SURG grant to Expo to NURJ paper or honors thesis should be headed by the paper or thesis, with the earlier stages shown after it.
   - Settle on a display format that orders a project's linked records from most to least complete, so a linked SURG grant comes after its Expo presentation.
-- [ ] Redirect the Railway address.
-  - web-production-b5a13.up.railway.app still serves the full site, so it's a second copy that search engines could index, and share links copied there would carry the Railway address.
+- [x] Redirect the Railway address. web-production-b5a13.up.railway.app redirects permanently to the same path and query on prowl.nu, as www.prowl.nu does (`REDIRECTED_HOSTS` in `backend/app.py`), so search engines find one copy of the site and share links carry prowl.nu.
