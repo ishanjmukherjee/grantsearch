@@ -2,7 +2,9 @@
 
 Every file under data/pdfs/ goes to the R2 bucket BUCKET under its path there,
 so data/pdfs/nurj/issuu-2003-2004-03.pdf is served at
-https://files.prowl.nu/nurj/issuu-2003-2004-03.pdf. The bucket is public only
+https://files.prowl.nu/nurj/issuu-2003-2004-03.pdf. data/pdfs/mmss/ is not in
+git: pipeline.mmss_pdfs copies it from the mmss-papers checkout, and has to
+have run before --delete, which would otherwise delete those objects. The bucket is public only
 through its custom domain, files.prowl.nu (prowl.nu's DNS is on Cloudflare).
 Both were set up once with Cloudflare's API, using a token that could also
 read the prowl.nu zone and edit its DNS:

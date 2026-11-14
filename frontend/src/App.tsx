@@ -32,7 +32,7 @@ type ProjectRecord = {
   department?: string
   academic_year?: string
   report?: string | null // a Computer Science thesis's technical report number
-  pdf?: string | null // a NURJ paper's PDF, hosted at files.prowl.nu
+  pdf?: string | null // a NURJ paper's PDF or an MMSS thesis's paper, hosted at files.prowl.nu
 }
 // title is null when none of the project's sources prints one; made_title is
 // then a plain description of it written from its abstract, if it has one.
@@ -841,7 +841,11 @@ function Result({
       }),
       ...(s.records ?? []).flatMap((r) =>
         r.kind === 'thesis'
-          ? [sourceLink(r.id, r.source, r.url, thesisLink(r), r.url.endsWith('.pdf'))]
+          ? [
+              r.pdf
+                ? sourceLink(r.id, 'thesis-pdf', r.pdf, 'Paper', true)
+                : sourceLink(r.id, r.source, r.url, thesisLink(r), r.url.endsWith('.pdf')),
+            ]
           : [
               ...(r.pdf ? [sourceLink(r.id, 'nurj-pdf', r.pdf, label(`NURJ ${r.year}`, 'paper'), true)] : []),
               sourceLink(r.id, r.source, r.url, label(`NURJ ${r.year}`, paperLink(r))),
@@ -957,11 +961,12 @@ function paperLink(x: ProjectRecord) {
   return 'post'
 }
 
-// Where a thesis's link goes: its technical report, the MMSS library (behind
-// a Northwestern login), or its department's list of honors theses.
+// Where a thesis without a paper Prowl hosts links: its technical report,
+// the MMSS library (whose catalog has the thesis but not its paper), or its
+// department's list of honors theses.
 function thesisLink(t: ProjectRecord) {
   if (t.report) return 'Technical report'
-  if (department(t) === 'MMSS') return 'MMSS thesis library (Northwestern login)'
+  if (department(t) === 'MMSS') return 'MMSS thesis library (paper unavailable)'
   const [from, to] = t.academic_year!.split('-')
   return `${t.department} honors theses, ${from}–${to.slice(2)}`
 }

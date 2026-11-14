@@ -188,9 +188,9 @@ def public(p: dict) -> dict:
 
     {id, share, title, made_title, records}: each record is {id, source, kind, year,
     title, url} with, for a grant, its students and advisors; for a thesis or
-    paper, its students, advisors and abstract (None where its source gives
-    none), for a NURJ paper its pdf (the url of the PDF Prowl hosts, or None),
-    and for a thesis its department, academic year and, for a
+    paper, its students, advisors, abstract (None where its source gives
+    none) and pdf (the url of the PDF Prowl hosts for a NURJ paper or MMSS
+    thesis, or None), and for a thesis its department, academic year and, for a
     Computer Science thesis, its technical report number; and for a poster,
     its listings, each {id, title, presenters, advisors, abstract,
     url, page, abstract_source}, its url at the listing's page. A presenter who is
@@ -209,8 +209,7 @@ def public(p: dict) -> dict:
         if r["kind"] in ("thesis", "paper"):
             extra = r["extra"] or {}
             out |= people | {"abstract": r["abstract"]}
-            if r["source"] == "nurj":
-                out["pdf"] = r.get("pdf")
+            out["pdf"] = r.get("pdf")
             if r["kind"] == "thesis":
                 out |= {"department": extra["department"], "academic_year": extra["academic_year"], "report": extra.get("report")}
             return out
@@ -272,12 +271,20 @@ class Index:
         projects' (see pipeline.projects.rows); otherwise use its rows as
         they are, matched to projects by owner."""
         self.projects = load_projects()
-        # A NURJ paper's PDF, as files.prowl.nu serves it (see pipeline.nurj_pdfs).
+        # A NURJ paper's PDF, and an MMSS thesis's paper, as files.prowl.nu
+        # serves them (see pipeline.nurj_pdfs and pipeline.mmss_pdfs). An MMSS
+        # thesis without one links the library, labelled as having no paper,
+        # so every paper the library has must be hosted.
         pdfs = {r["work"]: r["url"] for r in map(json.loads, (DATA_DIR / "nurj_pdfs.jsonl").open()) if r.get("lead")}
+        papers = {r["source"]: r["url"] for r in map(json.loads, (DATA_DIR / "mmss_pdfs.jsonl").open())}
         for p in self.projects:
             for r in p["records"]:
                 if r["source"] == "nurj":
                     r["pdf"] = pdfs.get(r["id"])
+                elif r["kind"] == "thesis" and (r["extra"] or {}).get("paper"):
+                    r["pdf"] = papers.get(r["url"])
+                    if strict and not r["pdf"]:
+                        raise SystemExit(f"{r['id']}'s paper is not in data/mmss_pdfs.jsonl; rerun pipeline.mmss_pdfs")
         index_rows = [json.loads(line) for line in (INDEX_DIR / "vectors.jsonl").open()]
         expected = {row for p in self.projects for row in rows(p)}
         if strict and {(r["id"], r["kind"], r["text"]) for r in index_rows} != expected:
