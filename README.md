@@ -16,6 +16,10 @@ Material that is not public stays out of this repository, in private repositorie
 - [`expo2020-videos`](https://github.com/ishanjmukherjee/expo2020-videos): the Expo 2020 presentations' YouTube videos, posted unlisted by the students.
 - [`expo2022-videos`](https://github.com/ishanjmukherjee/expo2022-videos): the voiceovers of the 2022 Expo's ForagerOne posters, also unlisted, downloaded by `backend/pipeline/fetch_forager_videos.py` into a checkout at `expo2022-videos-wt/expo2022-videos`.
 
+## Deployment
+
+Railway builds the `Dockerfile` and deploys the `web` service at prowl.nu on every push to `main`. The service's health check path is `/api/health`, set in the Railway service settings rather than a `railway.json`, so Railway keeps traffic on the old container until the new one has loaded the index and answers; without it, each deploy served 502s for the 10 to 25 seconds the server takes to start.
+
 ## Query log
 
 The site logs every search with the results it returned, every project page loaded, and each click, opened abstract and share of a result, to one Postgres table (`events`, in the Railway project's Postgres service). `backend/querylog.py` describes each field and writes the rows; the frontend sends the reports and the headers that tie a tab's requests together (`report` and `visitHeaders` in `frontend/src/App.tsx`).
