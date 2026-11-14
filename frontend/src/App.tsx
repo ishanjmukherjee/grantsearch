@@ -1,4 +1,4 @@
-import { createContext, Fragment, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 // A poster's listing: a poster presented by several students may be listed
 // once per presenter.
@@ -827,6 +827,32 @@ function Result({
   const listed = new Map<number, number>()
   for (const e of expo) listed.set(e.year, (listed.get(e.year) ?? 0) + 1)
 
+  // The links to a section's sources: each listing's page in its program, a
+  // thesis's report or list, a paper's PDF and post. Under a heading that
+  // names the source and year, brief, they don't name them again.
+  function sources(s: Section, brief: boolean): SourceLink[] {
+    const label = (name: string, what: string, own = true) =>
+      brief && own ? what[0].toUpperCase() + what.slice(1) : `${name} ${what}`
+    return [
+      ...(s.entries ?? []).map((e) => {
+        const what = `listing${listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''}`
+        const own = e.source === s.source && e.year === s.year
+        return sourceLink(e.id, e.source, e.url, label(`${SOURCE_NAMES[e.source]} ${e.year}`, what, own), true)
+      }),
+      ...(s.records ?? []).flatMap((r) =>
+        r.kind === 'thesis'
+          ? [sourceLink(r.id, r.source, r.url, thesisLink(r), r.url.endsWith('.pdf'))]
+          : [
+              ...(r.pdf ? [sourceLink(r.id, 'nurj-pdf', r.pdf, label(`NURJ ${r.year}`, 'paper'), true)] : []),
+              sourceLink(r.id, r.source, r.url, label(`NURJ ${r.year}`, paperLink(r))),
+            ],
+      ),
+    ]
+  }
+  // Where a section's abstract is from, when not from its own source.
+  const credit = (s: Section) =>
+    s.abstractSource ? [sourceLink(s.key, 'abstract', s.abstractSource.url, `Abstract: ${s.abstractSource.name}`)] : []
+
   // A section names its students only when they differ from the byline
   // above, and their advisors only when those differ from it too.
   function people(students: Student[]) {
@@ -841,6 +867,35 @@ function Result({
     const repeat = topShared !== null && students.every((x) => sameSet(x.advisors, topShared))
     return own ? byline(repeat ? students.map((x) => ({ ...x, advisors: [] })) : students) : null
   }
+
+  // The sections the card shows under its title. A thesis or paper with
+  // nothing of its own to show, neither title, people nor abstract, has none.
+  const all = [
+    ...parts.map((s) => ({
+      section: s,
+      heading:
+        s.title !== project.title
+          ? `${SOURCE_NAMES[s.source]} ${s.year}: ${s.title ?? 'untitled'}`
+          : years.length > 1 || written.length
+            ? `${SOURCE_NAMES[s.source]} ${s.year}`
+            : null,
+      who: people(s.students),
+    })),
+    ...written.map((w) => ({
+      section: w,
+      heading: !sameTitle(w.title, project.title) ? `${w.label}: ${w.title}` : multiple ? w.label! : null,
+      who: people(w.students),
+    })),
+  ]
+  const shown = all.filter((x) => x.section.entries || x.heading || x.who || x.section.abstract)
+  // With several sections, each one's links sit under it, and a grant's under
+  // the card's byline: the title and byline are the grant's, which has no
+  // section. A thesis or paper not shown has none either, so its links come
+  // after the last section. With one section or none, all the links do.
+  const apart = shown.length > 1
+  const rest = all.filter((x) => !apart || !shown.includes(x)).map((x) => x.section)
+  const winners = grants.map((g) => sourceLink(g.id, g.source, g.url, `${SOURCE_NAMES[g.source]} ${g.year} winners`))
+  const below = [...(apart ? [] : winners), ...rest.flatMap((s) => sources(s, false)), ...rest.flatMap(credit)]
 
   return (
     <article className="result" onClick={clicked} onAuxClick={clicked}>
@@ -875,78 +930,31 @@ function Result({
       <p className="people">
         <Marked text={byline(top)} />
       </p>
-      {parts.map((s) => {
-        const heading =
-          s.title !== project.title
-            ? `${SOURCE_NAMES[s.source]} ${s.year}: ${s.title ?? 'untitled'}`
-            : years.length > 1 || written.length
-              ? `${SOURCE_NAMES[s.source]} ${s.year}`
-              : null
-        return (
-          <Abstract key={s.key} section={s} heading={heading} people={people(s.students)} place={place} open={open} />
-        )
-      })}
-      {written.map((w) => {
-        const heading = !sameTitle(w.title, project.title) ? `${w.label}: ${w.title}` : multiple ? w.label! : null
-        const who = people(w.students)
-        if (!heading && !who && !w.abstract) return null
-        return <Abstract key={w.key} section={w} heading={heading} people={who} place={place} open={open} />
-      })}
-      <div className="links">
-        {grants.map((g) => (
-          <a key={g.id} href={g.url} target="_blank" rel="noreferrer" data-link={g.source} data-record={g.id}>
-            {SOURCE_NAMES[g.source]} {g.year} winners <ExternalIcon />
-          </a>
-        ))}
-        {expo.map((e) => (
-          <a key={e.id} href={e.url} target="_blank" rel="noreferrer" data-link={e.source} data-record={e.id}>
-            {SOURCE_NAMES[e.source]} {e.year} listing
-            {listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''} <PdfIcon /> <ExternalIcon />
-          </a>
-        ))}
-        {theses.map((t) => (
-          <a key={t.id} href={t.url} target="_blank" rel="noreferrer" data-link={t.source} data-record={t.id}>
-            {thesisLink(t)} {t.url.endsWith('.pdf') && <PdfIcon />} <ExternalIcon />
-          </a>
-        ))}
-        {papers.map((x) => (
-          <Fragment key={x.id}>
-            {x.pdf && (
-              <a href={x.pdf} target="_blank" rel="noreferrer" data-link="nurj-pdf" data-record={x.id}>
-                NURJ {x.year} paper <PdfIcon /> <ExternalIcon />
-              </a>
-            )}
-            <a href={x.url} target="_blank" rel="noreferrer" data-link={x.source} data-record={x.id}>
-              {paperLink(x)} <ExternalIcon />
-            </a>
-          </Fragment>
-        ))}
-        {parts
-          .filter((s) => s.abstractSource)
-          .map((s) => (
-            <a
-              key={`${s.key}-abstract`}
-              href={s.abstractSource!.url}
-              target="_blank"
-              rel="noreferrer"
-              data-link="abstract"
-              data-record={s.key}
-            >
-              Abstract: {s.abstractSource!.name} <ExternalIcon />
-            </a>
-          ))}
-      </div>
+      {apart && <Links links={winners} />}
+      {shown.map(({ section, heading, who }) => (
+        <Abstract
+          key={section.key}
+          section={section}
+          heading={heading}
+          people={who}
+          links={apart ? [...sources(section, heading !== null), ...credit(section)] : []}
+          place={place}
+          open={open}
+        />
+      ))}
+      <Links links={below} />
     </article>
   )
 }
 
-// Where a NURJ paper's link goes: its post on thenurj.com, Scribd, or the
-// Wayback Machine's capture of the Issuu volume it was printed in.
+// Where a NURJ paper's link goes, as its label says after "NURJ" and the
+// year: its post on thenurj.com, Scribd, or the Wayback Machine's capture of
+// the Issuu volume it was printed in.
 function paperLink(x: ProjectRecord) {
   const host = new URL(x.url).hostname
-  if (host === 'web.archive.org') return `NURJ ${x.year} on Issuu (archived)`
-  if (host.endsWith('scribd.com')) return `NURJ ${x.year} on Scribd`
-  return `NURJ ${x.year} post`
+  if (host === 'web.archive.org') return 'on Issuu (archived)'
+  if (host.endsWith('scribd.com')) return 'on Scribd'
+  return 'post'
 }
 
 // Where a thesis's link goes: its technical report, the MMSS library (behind
@@ -1004,6 +1012,7 @@ function writings(theses: ProjectRecord[], papers: ProjectRecord[]): Section[] {
       abstract: theses.find((r) => r.abstract)?.abstract ?? '',
       abstractSource: null,
       label: `${list(departments)} thesis ${t.year}`,
+      records: theses,
     })
   }
   for (const x of papers)
@@ -1016,6 +1025,7 @@ function writings(theses: ProjectRecord[], papers: ProjectRecord[]): Section[] {
       abstract: x.abstract ?? '',
       abstractSource: null,
       label: `NURJ ${x.year}`,
+      records: [x],
     })
   return out
 }
@@ -1039,6 +1049,15 @@ type Section = {
   abstract: string // '' where a thesis or paper has none
   abstractSource: ExpoEntry['abstract_source']
   label?: string // a thesis's or paper's name for itself in a heading
+  entries?: ExpoEntry[] // a poster's listings
+  records?: ProjectRecord[] // a thesis's records, or a paper's one
+}
+// A link to one of a project's sources, as the query log knows it (link and
+// record) and as the card words it.
+type SourceLink = { record: string; link: string; href: string; label: string; pdf: boolean }
+
+function sourceLink(record: string, link: string, href: string, label: string, pdf = false): SourceLink {
+  return { record, link, href, label, pdf }
 }
 
 function sameSet(a: string[], b: string[]) {
@@ -1063,9 +1082,11 @@ function sections(expo: ExpoEntry[]): Section[] {
         students: [],
         abstract: e.abstract,
         abstractSource: e.abstract_source,
+        entries: [],
       }
       byAbstract.set(e.abstract, s)
     }
+    s.entries!.push(e)
     const advisors = e.advisors
     for (const name of e.presenters) {
       const student = s.students.find((x) => x.name === name)
@@ -1161,12 +1182,14 @@ function Abstract({
   section,
   heading,
   people,
+  links,
   place,
   open: initiallyOpen,
 }: {
   section: Section
   heading: string | null
   people: string | null
+  links: SourceLink[]
   place: Place
   open: boolean
 }) {
@@ -1235,6 +1258,28 @@ function Abstract({
           )}
         </div>
       )}
+      <Links links={links} />
     </section>
+  )
+}
+
+// A row of links to sources, each opening in a new tab.
+function Links({ links }: { links: SourceLink[] }) {
+  if (!links.length) return null
+  return (
+    <div className="links">
+      {links.map((l) => (
+        <a
+          key={`${l.record} ${l.link}`}
+          href={l.href}
+          target="_blank"
+          rel="noreferrer"
+          data-link={l.link}
+          data-record={l.record}
+        >
+          {l.label} {l.pdf && <PdfIcon />} <ExternalIcon />
+        </a>
+      ))}
+    </div>
   )
 }

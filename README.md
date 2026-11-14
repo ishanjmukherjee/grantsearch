@@ -171,7 +171,10 @@ The site logs every search with the results it returned, every project page load
   - About 10 Expo presenters (Ortega Chavez, Polanco Molina, Maluff Masi, Morales Ghinaglia, Grosso Giordano, Noboa Hidalgo, Cabezas Parra, Assanuma Dutra, ...) and 9 Economics thesis students (Madrazo Labardini, Álvarez Gutiérrez, Haba Redondo, ...) are affected. SURG mostly is not: its pages give first and last names in separate columns.
   - The text alone cannot settle it: "Aileen Bai Yang" may have a middle name. One option is to let the word just before the surname also count as a surname when it is not a known given name. A wrong pin hides a topic search's results, so judge any change on `data/eval/names.jsonl`.
 - [ ] Hyperlink advisors and faculty to their faculty pages.
-- [x] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). `backend/pipeline/parse_expo.py` records the page each entry starts on, and the link reads "Expo 2024 listing (PDF)".
+- [x] Deep-link Expo results to the abstract's page in the program PDF (`#page=N`). `backend/pipeline/parse_expo.py` records the page each entry starts on, and the link reads "Expo 2024 listing (PDF)", or "Listing (PDF)" under a heading that names Expo 2024.
+- [x] Link each source under its own part of a result, where a result has several.
+  - A result with several sections (posters, a thesis, a NURJ paper) used to end in one row of links to all of them. Each section now ends with its own links, which leave out the source and year its heading gives ("Listing", "Paper", "Post"), and a grant's link to its winners page sits under the result's byline, since the title and byline are the grant's. At most 255 of the 7,437 projects have several sections.
+  - A result with one section is unchanged: its links follow the abstract in one row, named in full.
 - [ ] Google OAuth accounts, so visitors can save cards to their profile.
 - [ ] Let visitors upload papers or their own research done at Northwestern that is not indexed yet, reviewed before it is indexed.
 - [x] Log the queries visitors type in, what they were shown and what they did with it (see Query log above).

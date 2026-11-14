@@ -559,6 +559,18 @@ mark::selection {
   font-size: var(--text-small);
 }
 
+/* A section's own links, and a grant's under the card's byline: closer to
+   what they belong to than the next section is. */
+.abstract .links,
+.people + .links {
+  margin-top: 8px;
+}
+
+.abstract:has(> .links) + .abstract,
+.links + .abstract {
+  margin-top: 20px;
+}
+
 /* Grey: the sources are the last thing a reader needs, and purple is kept
    for what acts on the page. */
 .links a {
