@@ -960,7 +960,7 @@ function paperLink(x: ProjectRecord) {
 // Where a thesis's link goes: its technical report, the MMSS library (behind
 // a Northwestern login), or its department's list of honors theses.
 function thesisLink(t: ProjectRecord) {
-  if (t.report) return `Technical report ${t.report}`
+  if (t.report) return 'Technical report'
   if (department(t) === 'MMSS') return 'MMSS thesis library (Northwestern login)'
   const [from, to] = t.academic_year!.split('-')
   return `${t.department} honors theses, ${from}–${to.slice(2)}`
