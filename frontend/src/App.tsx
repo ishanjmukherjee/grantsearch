@@ -897,17 +897,17 @@ function Result({
   // section. A thesis or paper not shown has none either, so its links come
   // after the last section. With one section or none, all the links do.
   //
-  // A row of links names the source and year of each link's record ("NURJ
-  // 2015 post") only where it has to: when the row holds links of more than
-  // one record, or sits apart from its record's section. A row under its own
-  // section, the winners under a single grant's byline, or the one row of a
-  // card with one record leave them out ("Post", "Winners").
+  // A link to a record's own document names the record's source and year
+  // ("NURJ 2015 post") only where its row has to: when the row holds links of
+  // more than one record, or sits apart from its record's section. A row
+  // under its own section, or the one row of a card with one record, leaves
+  // them out ("Post", "Thesis"). A link to a page listing many records, a
+  // grant's winners or a thesis's list, always names it ("SURG 2015 winners").
   const apart = shown.length > 1
   const rest = all.filter((x) => !apart || !shown.includes(x)).map((x) => x.section)
-  const winners = (brief: boolean) =>
-    grants.map((g) => sourceLink(g.id, g.source, g.url, brief ? 'Winners' : `${SOURCE_NAMES[g.source]} ${g.year} winners`))
+  const winners = grants.map((g) => sourceLink(g.id, g.source, g.url, `${SOURCE_NAMES[g.source]} ${g.year} winners`))
   const one = !apart && grants.length + rest.length === 1
-  const below = [...(apart ? [] : winners(one)), ...rest.flatMap((s) => sources(s, one)), ...rest.flatMap(credit)]
+  const below = [...(apart ? [] : winners), ...rest.flatMap((s) => sources(s, one)), ...rest.flatMap(credit)]
 
   return (
     <article className="result" onClick={clicked} onAuxClick={clicked}>
@@ -942,7 +942,7 @@ function Result({
       <p className="people">
         <Marked text={byline(top)} />
       </p>
-      {apart && <Links links={winners(grants.length === 1)} />}
+      {apart && <Links links={winners} />}
       {shown.map(({ section, heading, who }) => (
         <Abstract
           key={section.key}
