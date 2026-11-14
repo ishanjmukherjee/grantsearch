@@ -842,9 +842,10 @@ function Result({
       ...(s.records ?? []).flatMap((r) =>
         r.kind === 'thesis'
           ? [
-              r.pdf
-                ? sourceLink(r.id, 'thesis-pdf', r.pdf, brief ? 'Thesis' : `${department(r)} thesis ${r.year}`, true)
-                : sourceLink(r.id, r.source, r.url, thesisLink(r), r.url.endsWith('.pdf')),
+              ...(r.pdf
+                ? [sourceLink(r.id, 'thesis-pdf', r.pdf, brief ? 'Thesis' : `${department(r)} thesis ${r.year}`, true)]
+                : []),
+              thesisLink(r),
             ]
           : [
               ...(r.pdf ? [sourceLink(r.id, 'nurj-pdf', r.pdf, label(`NURJ ${r.year}`, 'paper'), true)] : []),
@@ -969,14 +970,19 @@ function paperLink(x: ProjectRecord) {
   return 'post'
 }
 
-// Where a thesis without a paper Prowl hosts links: its technical report,
-// the MMSS library (whose catalog has the thesis but not its paper), or its
-// department's list of honors theses.
-function thesisLink(t: ProjectRecord) {
-  if (t.report) return 'Technical report'
-  if (department(t) === 'MMSS') return 'MMSS thesis library (paper unavailable)'
+// The MMSS thesis library's front page, behind a Northwestern login.
+const MMSS_LIBRARY = 'https://nuwildcat.sharepoint.com/sites/WNB-MMSS-Library/Thesis%20Library%20Public/'
+
+// A thesis's source: its technical report, its department's list of honors
+// theses, or the MMSS library. The library is linked at its front page, also
+// for a thesis whose paper Prowl hosts (the library's copy of which is the
+// same file), and says so where it has only the catalog entry.
+function thesisLink(t: ProjectRecord): SourceLink {
+  if (t.report) return sourceLink(t.id, t.source, t.url, 'Technical report', t.url.endsWith('.pdf'))
+  if (department(t) === 'MMSS')
+    return sourceLink(t.id, t.source, MMSS_LIBRARY, t.pdf ? 'MMSS thesis library' : 'MMSS thesis library (paper unavailable)')
   const [from, to] = t.academic_year!.split('-')
-  return `${t.department} honors theses, ${from}–${to.slice(2)}`
+  return sourceLink(t.id, t.source, t.url, `${t.department} honors theses, ${from}–${to.slice(2)}`, t.url.endsWith('.pdf'))
 }
 
 // Whether two titles are one however they are capitalized or punctuated.
