@@ -828,8 +828,8 @@ function Result({
   for (const e of expo) listed.set(e.year, (listed.get(e.year) ?? 0) + 1)
 
   // The links to a section's sources: each listing's page in its program, a
-  // thesis's report or list, a paper's PDF and post. Under a heading that
-  // names the source and year, brief, they don't name them again.
+  // thesis's paper, report or list, a paper's PDF and post. Brief, they don't
+  // name the section's source and year (see below for when).
   function sources(s: Section, brief: boolean): SourceLink[] {
     const label = (name: string, what: string, own = true) =>
       brief && own ? what[0].toUpperCase() + what.slice(1) : `${name} ${what}`
@@ -843,7 +843,7 @@ function Result({
         r.kind === 'thesis'
           ? [
               r.pdf
-                ? sourceLink(r.id, 'thesis-pdf', r.pdf, 'Paper', true)
+                ? sourceLink(r.id, 'thesis-pdf', r.pdf, brief ? 'Thesis' : `${department(r)} thesis ${r.year}`, true)
                 : sourceLink(r.id, r.source, r.url, thesisLink(r), r.url.endsWith('.pdf')),
             ]
           : [
@@ -896,10 +896,18 @@ function Result({
   // the card's byline: the title and byline are the grant's, which has no
   // section. A thesis or paper not shown has none either, so its links come
   // after the last section. With one section or none, all the links do.
+  //
+  // A row of links names the source and year of each link's record ("NURJ
+  // 2015 post") only where it has to: when the row holds links of more than
+  // one record, or sits apart from its record's section. A row under its own
+  // section, the winners under a single grant's byline, or the one row of a
+  // card with one record leave them out ("Post", "Winners").
   const apart = shown.length > 1
   const rest = all.filter((x) => !apart || !shown.includes(x)).map((x) => x.section)
-  const winners = grants.map((g) => sourceLink(g.id, g.source, g.url, `${SOURCE_NAMES[g.source]} ${g.year} winners`))
-  const below = [...(apart ? [] : winners), ...rest.flatMap((s) => sources(s, false)), ...rest.flatMap(credit)]
+  const winners = (brief: boolean) =>
+    grants.map((g) => sourceLink(g.id, g.source, g.url, brief ? 'Winners' : `${SOURCE_NAMES[g.source]} ${g.year} winners`))
+  const one = !apart && grants.length + rest.length === 1
+  const below = [...(apart ? [] : winners(one)), ...rest.flatMap((s) => sources(s, one)), ...rest.flatMap(credit)]
 
   return (
     <article className="result" onClick={clicked} onAuxClick={clicked}>
@@ -934,14 +942,14 @@ function Result({
       <p className="people">
         <Marked text={byline(top)} />
       </p>
-      {apart && <Links links={winners} />}
+      {apart && <Links links={winners(grants.length === 1)} />}
       {shown.map(({ section, heading, who }) => (
         <Abstract
           key={section.key}
           section={section}
           heading={heading}
           people={who}
-          links={apart ? [...sources(section, heading !== null), ...credit(section)] : []}
+          links={apart ? [...sources(section, true), ...credit(section)] : []}
           place={place}
           open={open}
         />
