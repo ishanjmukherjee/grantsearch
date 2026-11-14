@@ -829,30 +829,30 @@ function Result({
 
   // The links to a section's sources: each listing's page in its program, a
   // thesis's paper, report or list, a paper's PDF and post. Brief, they don't
-  // name the section's source and year (see below for when).
+  // name the section's source and year (see below for when). A thesis the
+  // MMSS library catalogues twice links the library once.
   function sources(s: Section, brief: boolean): SourceLink[] {
     const label = (name: string, what: string, own = true) =>
       brief && own ? what[0].toUpperCase() + what.slice(1) : `${name} ${what}`
-    return [
+    const links = [
       ...(s.entries ?? []).map((e) => {
         const what = `listing${listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''}`
         const own = e.source === s.source && e.year === s.year
         return sourceLink(e.id, e.source, e.url, label(`${SOURCE_NAMES[e.source]} ${e.year}`, what, own), true)
       }),
+      // The PDFs Prowl hosts come first, then where the records are from.
       ...(s.records ?? []).flatMap((r) =>
-        r.kind === 'thesis'
-          ? [
-              ...(r.pdf
-                ? [sourceLink(r.id, 'thesis-pdf', r.pdf, brief ? 'Thesis' : `${department(r)} thesis ${r.year}`, true)]
-                : []),
-              thesisLink(r),
-            ]
-          : [
-              ...(r.pdf ? [sourceLink(r.id, 'nurj-pdf', r.pdf, label(`NURJ ${r.year}`, 'paper'), true)] : []),
-              sourceLink(r.id, r.source, r.url, label(`NURJ ${r.year}`, paperLink(r))),
-            ],
+        !r.pdf
+          ? []
+          : r.kind === 'thesis'
+            ? [sourceLink(r.id, 'thesis-pdf', r.pdf, brief ? 'Thesis' : `Thesis ${r.year}`, true)]
+            : [sourceLink(r.id, 'nurj-pdf', r.pdf, label(`NURJ ${r.year}`, 'paper'), true)],
+      ),
+      ...(s.records ?? []).map((r) =>
+        r.kind === 'thesis' ? thesisLink(r) : sourceLink(r.id, r.source, r.url, label(`NURJ ${r.year}`, paperLink(r))),
       ),
     ]
+    return links.filter((l, i) => links.findIndex((m) => m.href === l.href && m.label === l.label) === i)
   }
   // Where a section's abstract is from, when not from its own source.
   const credit = (s: Section) =>
@@ -924,9 +924,11 @@ function Result({
             {SOURCE_NAMES[s.source]} {s.year}
           </span>
         ))}
-        {theses.map((t) => (
-          <span key={t.id} className="tag thesis">
-            {department(t)} thesis {t.year}
+        {/* One tag a year, also for a thesis two departments list: the
+            source links name the department. */}
+        {[...new Set(theses.map((t) => t.year))].map((year) => (
+          <span key={year} className="tag thesis">
+            Thesis {year}
           </span>
         ))}
         {papers.map((x) => (
