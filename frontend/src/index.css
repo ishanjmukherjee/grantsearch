@@ -416,25 +416,27 @@ h1 a {
   letter-spacing: 0.02em;
   border-radius: 6px;
   padding: 2px 8px;
+  /* Pulled toward --text so the 12px label clears 7:1 on its tint. */
+  color: color-mix(in srgb, var(--tag-color) 70%, var(--text));
 }
 
 .tag.surg {
-  color: var(--accent);
+  --tag-color: var(--accent);
   background: var(--accent-soft);
 }
 
 .tag.expo {
-  color: var(--expo);
+  --tag-color: var(--expo);
   background: var(--expo-soft);
 }
 
 .tag.thesis {
-  color: var(--thesis);
+  --tag-color: var(--thesis);
   background: var(--thesis-soft);
 }
 
 .tag.nurj {
-  color: var(--nurj);
+  --tag-color: var(--nurj);
   background: var(--nurj-soft);
 }
 
