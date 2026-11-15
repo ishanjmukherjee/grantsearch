@@ -523,7 +523,7 @@ function Search() {
             setPage(Math.ceil(data.total / PAGE))
             return
           }
-          // The search controls stay in view, so a new search or page can
+          // The search box stays in view, so a new search or page can
           // start deep in the old list; show the new list from its top.
           if (shown.current !== url) window.scrollTo(0, 0)
           shown.current = url
@@ -557,27 +557,27 @@ function Search() {
 
       <div className="controls">
         <SearchBox value={q} onChange={(value) => change({ q: value })} loading={loading} autoFocus />
-        <div className="filters">
-          <div className="segmented" role="group" aria-label="Source">
-            {(
-              [
-                ['', 'All'],
-                ['surg', 'SURG grants'],
-                ['expo', 'Expo projects'],
-                ['theses', 'Theses'],
-                ['nurj', 'NURJ papers'],
-              ] as const
-            ).map(([value, label]) => (
-              <button key={value} className={source === value ? 'on' : ''} onClick={() => change({ source: value })}>
-                {label}
-              </button>
-            ))}
-          </div>
-          <div className="years">
-            <YearSelect value={from} onChange={(value) => change({ from: value })} label="From year" />
-            <span>to</span>
-            <YearSelect value={to} onChange={(value) => change({ to: value })} label="To year" />
-          </div>
+      </div>
+      <div className="filters">
+        <div className="segmented" role="group" aria-label="Source">
+          {(
+            [
+              ['', 'All'],
+              ['surg', 'SURG grants'],
+              ['expo', 'Expo projects'],
+              ['theses', 'Theses'],
+              ['nurj', 'NURJ papers'],
+            ] as const
+          ).map(([value, label]) => (
+            <button key={value} className={source === value ? 'on' : ''} onClick={() => change({ source: value })}>
+              {label}
+            </button>
+          ))}
+        </div>
+        <div className="years">
+          <YearSelect value={from} onChange={(value) => change({ from: value })} label="From year" />
+          <span>to</span>
+          <YearSelect value={to} onChange={(value) => change({ to: value })} label="To year" />
         </div>
       </div>
 

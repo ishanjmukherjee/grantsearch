@@ -119,12 +119,14 @@ h1 a {
   white-space: nowrap;
 }
 
+/* Only the search box stays pinned; the filters below it scroll away, so the
+   pinned strip stays one row high however many filters there are. */
 .controls {
   position: sticky;
   top: 0;
   z-index: 1;
   background: var(--bg);
-  padding: 8px 0 16px;
+  padding: 8px 0 12px;
 }
 
 .searchbox {
@@ -303,7 +305,7 @@ h1 a {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: space-between;
-  margin-top: 12px;
+  margin-bottom: 16px;
 }
 
 .segmented {
