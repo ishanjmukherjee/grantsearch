@@ -102,11 +102,11 @@ const PAGE = 30
 const PAGER_SPAN = 9 // the most page numbers the pager shows at once, where they fit
 const SITE = 'Prowl'
 const CLAMP_LINES = 5 // matches the line-clamp of .abstract .text.clamped
-// How far a click beside an abstract's toggle still counts as on it. Unlike
-// a CSS hit area, which would lie over the text and stop a drag from ending
-// on it, this takes plain clicks only and leaves a drag to select.
-const TOGGLE_REACH_X = 8
-const TOGGLE_REACH_Y = 10
+// How far a click beside an abstract's Show more still counts as on it.
+// Unlike a CSS hit area, which would lie over the text and stop a drag from
+// ending on it, this takes plain clicks only and leaves a drag to select.
+const MORE_REACH_X = 8
+const MORE_REACH_Y = 10
 // A share status holds, then fades out with the icon (see .share.fading).
 const STATUS_HOLD_MS = 2000
 const STATUS_FADE_MS = 600 // matches the .share.fading transitions
@@ -1458,10 +1458,10 @@ function Abstract({
   const [overflows, setOverflows] = useState(false)
   const text = useRef<HTMLParagraphElement>(null)
   const body = useRef<HTMLSpanElement>(null)
-  const toggle = useRef<HTMLButtonElement>(null)
+  const more = useRef<HTMLButtonElement>(null)
   const quotes = useContext(Quotes)
-  // Counts the abstract's own lines, not the inline toggle's, and counts
-  // again when the card's width changes.
+  // Counts the abstract's lines, from its inline text's line boxes, and
+  // counts again when the card's width changes.
   useLayoutEffect(() => {
     if (!body.current) return
     const measure = () => {
@@ -1482,14 +1482,14 @@ function Abstract({
     <section
       className="abstract"
       onClick={(e) => {
-        const button = toggle.current
+        const button = more.current
         const target = e.target as Element
         if (!button || button.contains(target) || target.closest('a')) return
         if (!getSelection()?.isCollapsed) return
         const r = button.getBoundingClientRect()
         if (
-          Math.abs(e.clientX - (r.left + r.right) / 2) <= r.width / 2 + TOGGLE_REACH_X &&
-          Math.abs(e.clientY - (r.top + r.bottom) / 2) <= r.height / 2 + TOGGLE_REACH_Y
+          Math.abs(e.clientX - (r.left + r.right) / 2) <= r.width / 2 + MORE_REACH_X &&
+          Math.abs(e.clientY - (r.top + r.bottom) / 2) <= r.height / 2 + MORE_REACH_Y
         )
           button.click()
       }}
@@ -1510,19 +1510,11 @@ function Abstract({
             <span ref={body}>
               <Marked text={section.abstract} />
             </span>
-            {open && overflows && (
-              <>
-                {' '}
-                <button ref={toggle} className="more" aria-expanded="true" onClick={() => setOpen(false)}>
-                  Show less
-                </button>
-              </>
-            )}
           </p>
           {!open && overflows && (
             <button
-              ref={toggle}
-              className="more fade"
+              ref={more}
+              className="more"
               aria-expanded="false"
               onClick={() => {
                 report('expand', place, { record: section.key })

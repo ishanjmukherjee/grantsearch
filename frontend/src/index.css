@@ -711,17 +711,24 @@ mark::selection {
   position: relative;
 }
 
+/* Sits over the end of the last clamped line. The cut text fades into it
+   over about two characters, which is what says the text goes on. Once
+   opened, an abstract stays open. */
 .more {
-  position: relative;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   font: inherit;
+  font-size: var(--text-body);
+  line-height: 1.5;
   color: var(--accent);
-  background: none;
+  background: linear-gradient(to right, transparent, var(--bg) 1.5em);
   border: 0;
-  padding: 0;
+  padding: 0 0 0 1.75em;
   white-space: nowrap;
   cursor: pointer;
   /* Selecting the abstract, by dragging or by clicking three times,
-     leaves the toggle's words out. */
+     leaves the button's words out. */
   user-select: none;
 }
 
@@ -730,7 +737,7 @@ mark::selection {
    cover only where no text lies, beside the button on the right and the
    strip below it; a layer over the text would stop a drag from ending on
    it. Abstract's click handler reaches over the text instead, for plain
-   clicks only (TOGGLE_REACH_X and _Y). */
+   clicks only (MORE_REACH_X and _Y). */
 .more::before,
 .more::after {
   content: '';
@@ -746,18 +753,6 @@ mark::selection {
 .more::after {
   inset: 0 -8px 0 auto;
   width: 8px;
-}
-
-/* Sits over the end of the last clamped line. The cut text fades into it
-   over about two characters, which is what says the text goes on. */
-.more.fade {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: var(--text-body);
-  line-height: 1.5;
-  padding-left: 1.75em;
-  background: linear-gradient(to right, transparent, var(--bg) 1.5em);
 }
 
 .links {
