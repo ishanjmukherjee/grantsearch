@@ -531,14 +531,32 @@ mark::selection {
   padding: 0;
   white-space: nowrap;
   cursor: pointer;
+  /* Selecting the abstract, by dragging or by clicking three times,
+     leaves the toggle's words out. */
+  user-select: none;
 }
 
 /* A larger hit area than the words, for fingers. Padding would instead
-   grow the line box or paint the fade over the line above. */
+   grow the line box or paint the fade over the line above. These layers
+   cover only where no text lies, beside the button on the right and the
+   strip below it; a layer over the text would stop a drag from ending on
+   it. Abstract's click handler reaches over the text instead, for plain
+   clicks only (TOGGLE_REACH_X and _Y). */
+.more::before,
 .more::after {
   content: '';
   position: absolute;
-  inset: -10px -8px;
+}
+
+.more::before {
+  top: 100%;
+  bottom: -10px;
+  inset-inline: -8px;
+}
+
+.more::after {
+  inset: 0 -8px 0 auto;
+  width: 8px;
 }
 
 /* Sits over the end of the last clamped line. The cut text fades into it
