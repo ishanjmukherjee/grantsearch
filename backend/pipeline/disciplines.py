@@ -43,6 +43,12 @@ Usage: uv run python -m pipeline.disciplines [--batches DIR [--size 150] [--all]
 Without options, prints how many projects each discipline holds, as any of
 a project's disciplines and as its main one, and exits 1 if any project is
 pending.
+
+The brief and the frontend each keep their own copy of DISCIPLINES: the brief
+as the list its readers file under, the frontend
+(frontend/src/disciplines.json, each discipline as [id, label, area]) to name
+the filters and to know a discipline in a link before any search answers.
+Every run refuses to go on while either copy differs.
 """
 
 import argparse
@@ -56,6 +62,7 @@ from pipeline.records import merge_patch
 
 NAME = f"{GENERATED}/disciplines.jsonl"
 BRIEF = DATA_DIR.parent / "prompts" / "discipline.md"
+FRONTEND = DATA_DIR.parent / "frontend" / "src" / "disciplines.json"
 ABSTRACT = 1500
 
 # (id, label, area), in the order the site lists them. The brief describes
@@ -177,11 +184,13 @@ def merge(projects: list[dict], table: dict[str, dict], verdicts: list[dict]) ->
     return {p["id"]: out[p["id"]] for p in projects if p["id"] in out}, split
 
 
-def check_brief() -> None:
-    """Refuse to run when the brief does not describe exactly DISCIPLINES."""
+def check_copies() -> None:
+    """Refuse to run when the brief or the frontend does not list exactly DISCIPLINES."""
     described = re.findall(r"^- `([a-z-]+)` \(([^)]+)\)", BRIEF.read_text(), re.MULTILINE)
     if described != [(id, label) for id, label, _ in DISCIPLINES]:
         raise SystemExit(f"{BRIEF} does not list the disciplines as DISCIPLINES does")
+    if json.loads(FRONTEND.read_text()) != [list(d) for d in DISCIPLINES]:
+        raise SystemExit(f"{FRONTEND} does not list the disciplines as DISCIPLINES does")
 
 
 def main() -> None:
@@ -192,7 +201,7 @@ def main() -> None:
     ap.add_argument("--merge", type=Path, nargs="+", help="verdict files to add to the filed projects")
     args = ap.parse_args()
 
-    check_brief()
+    check_copies()
     # Every project with a card, a skip included: a project whose title gave
     # its card nothing to go on may still say enough to be filed.
     projects = load_projects()

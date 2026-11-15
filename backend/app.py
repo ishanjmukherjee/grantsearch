@@ -7,8 +7,6 @@
   may be given more than once and keeps the projects filed under any of them;
   "disciplines" is the ids of those to offer as filters, the likeliest first,
   and does not change with the ones chosen (see search).
-- GET /api/disciplines returns {"disciplines": [{"id", "label", "area"}, ...]},
-  every discipline in the order pipeline.disciplines lists them, area by area.
 - GET /api/project/NUMBER returns {"project": ..., "similar": [...]} for the
   project a share number leads to (see pipeline.share_ids), or 404.
 - GET /api/health returns {"ok": true} once the index is loaded.
@@ -42,7 +40,7 @@ from fastapi.staticfiles import StaticFiles
 
 import querylog
 import search
-from pipeline.disciplines import DISCIPLINES, IDS
+from pipeline.disciplines import IDS
 
 FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
 SITE = "Prowl"
@@ -110,11 +108,6 @@ def search_projects(
         "cause": cause if cause in CAUSES else None,
     })
     return {"results": [search.public(p) for p in results], "total": total, "disciplines": offered}
-
-
-@app.get("/api/disciplines")
-def discipline_list() -> dict:
-    return {"disciplines": [{"id": id, "label": label, "area": area} for id, label, area in DISCIPLINES]}
 
 
 @app.get("/api/project/{number}")

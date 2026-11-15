@@ -54,7 +54,10 @@ first and, of two as common, the one met first. Choosing a discipline thus
 leaves the others on offer. A query ranks every project that has vectors, so
 the number of matches in a discipline says nothing about the query, and no
 counts are given. With no query the disciplines are counted over every
-project the other filters keep.
+project the other filters keep, each project under its main discipline alone:
+the order is then of how much work is done in each, and Area & global studies,
+a second or third discipline of 545 projects and the main one of 23, does not
+stand ahead of History.
 
 A project's similar projects are those whose document or summary vectors are
 nearest any of its own; one without vectors uses a search for its title, or
@@ -332,13 +335,17 @@ class Index:
         self.bm25.index(bm25s.tokenize([fold(bm25_text(p)) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
 
         # filed[i, j]: project i is filed under discipline j of disciplines.IDS.
+        # main[i]: the j of its main discipline, or -1 when it has none.
         table = disciplines.load()
         if strict and (pending := disciplines.pending(self.projects, table)):
             raise SystemExit(f"{len(pending)} projects are not filed under disciplines; rerun pipeline.disciplines")
         column = {d: j for j, d in enumerate(disciplines.IDS)}
         self.filed = np.zeros((len(self.projects), len(column)), dtype=bool)
+        self.main = np.full(len(self.projects), -1)
         for i, p in enumerate(self.projects):
-            self.filed[i, [column[d] for d in disciplines.of(p, table)]] = True
+            if columns := [column[d] for d in disciplines.of(p, table)]:
+                self.filed[i, columns] = True
+                self.main[i] = columns[0]
 
         self.browse_orders = browse_orders(self.projects)
         self.shown = [shown_text(p) for p in self.projects]
@@ -380,12 +387,14 @@ class Index:
         best[i] = -np.inf
         return [self.projects[j] for j in np.argsort(-best, kind="stable")[:n]]
 
-    def offered(self, top: list[int]) -> list[str]:
-        """The disciplines of these projects, the commonest first and, of two
-        as common, the one met first."""
+    def offered(self, top: list[int], main: bool = False) -> list[str]:
+        """The disciplines of these projects, or with main their main ones,
+        the commonest first and, of two as common, the one met first."""
         if not len(top):
             return []
         filed = self.filed[top]
+        if main:
+            filed = filed & (self.main[top][:, None] == np.arange(filed.shape[1]))
         counts = filed.sum(axis=0)
         return [disciplines.IDS[j] for j in np.lexsort((filed.argmax(axis=0), -counts)) if counts[j]]
 
@@ -404,9 +413,9 @@ class Index:
         is the disciplines to keep, any of them; empty keeps every project."""
         within = self.filed[:, [disciplines.IDS.index(d) for d in chosen]].any(axis=1) if chosen else np.ones(len(self.projects), dtype=bool)
 
-        def page(ranked: list[int], top: list[int]) -> tuple[list[dict], int, list[str]]:
+        def page(ranked: list[int], offered: list[str]) -> tuple[list[dict], int, list[str]]:
             ranked = [i for i in ranked if within[i]]
-            return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked), self.offered(top)
+            return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked), offered
 
         keep = np.array([
             (source is None or any(r["source"] in FILTERS[source] for r in p["records"]))
@@ -419,7 +428,7 @@ class Index:
             query = re.sub(f"[{QUOTE_MARKS}]", " ", query)
         if not query.strip():
             order = [i for i in self.browse_orders[source] if keep[i]]
-            return page(order, order)
+            return page(order, self.offered(order, main=True))
         # The tokenizer drops stopwords and one-character words, which can
         # leave nothing to score ("a", "the"); the dense side still ranks.
         tokens = tokenize([query])[0]
@@ -442,7 +451,7 @@ class Index:
         if quoted:
             taken |= set(ranked)
             ranked += [i for i in self.browse_orders[None] if keep[i] and i not in taken]
-        return page(ranked, ranked[:FACET_N])
+        return page(ranked, self.offered(ranked[:FACET_N]))
 
 
 def main() -> None:

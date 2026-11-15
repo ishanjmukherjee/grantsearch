@@ -1,4 +1,5 @@
-import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import filed from './disciplines.json'
 
 // A poster's listing: a poster presented by several students may be listed
 // once per presenter.
@@ -65,6 +66,13 @@ const DEPARTMENTS: Record<string, string> = {
   'Mathematical Methods in the Social Sciences': 'MMSS',
 }
 const department = (r: ProjectRecord) => DEPARTMENTS[r.department!] ?? r.department!
+// The disciplines projects are filed under, area by area: the backend's list
+// (pipeline.disciplines), which checks this copy against its own.
+type Discipline = { id: string; label: string; area: string }
+const DISCIPLINES: Discipline[] = (filed as string[][]).map(([id, label, area]) => ({ id, label, area }))
+const DISCIPLINE = new Map(DISCIPLINES.map((d) => [d.id, d]))
+const AREAS = [...new Set(DISCIPLINES.map((d) => d.area))]
+const OFFERED = 12 // the most disciplines the row offers beside those chosen
 // Ordered to onboard visitors quickly: most start typing after two or three
 // prompts, so the first few do most of the work and should show the range of
 // the index.
@@ -109,7 +117,7 @@ const PRESS_MS = 250
 // The search in the page's URL. A value the controls can't show, as from an
 // old or hand-edited link, is dropped rather than sent on to the backend.
 // A search: its query, filters and page of results.
-type Query = { q: string; source: Source; from: string; to: string; page: number }
+type Query = { q: string; source: Source; from: string; to: string; disciplines: string[]; page: number }
 
 function readUrl(): Query {
   const p = new URLSearchParams(window.location.search)
@@ -121,18 +129,20 @@ function readUrl(): Query {
     source: source === 'surg' || source === 'expo' || source === 'theses' || source === 'nurj' ? source : '',
     from: year(p.get('from')),
     to: year(p.get('to')),
+    disciplines: [...new Set(p.getAll('discipline'))].filter((d) => DISCIPLINE.has(d)),
     // A page so large its offset loses precision would be sent in exponent form.
     page: page >= 1 && Number.isSafeInteger(page * PAGE) ? page : 1,
   }
 }
 
 // The page's URL for a search at page n; page 1 is left out.
-function searchUrl({ q, source, from, to }: Query, n: number) {
+function searchUrl({ q, source, from, to, disciplines }: Query, n: number) {
   const params = new URLSearchParams()
   if (q.trim()) params.set('q', q.trim())
   if (source) params.set('source', source)
   if (from) params.set('from', from)
   if (to) params.set('to', to)
+  for (const d of disciplines) params.append('discipline', d)
   if (n > 1) params.set('page', String(n))
   const qs = params.toString()
   return qs ? `?${qs}` : window.location.pathname
@@ -440,8 +450,17 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
 
 function Search() {
   const [query, setQuery] = useState(readUrl)
-  const { q, source, from, to, page } = query
+  const { q, source, from, to, disciplines, page } = query
   const [results, setResults] = useState<Project[] | null>(null)
+  // The disciplines the shown results' search offers, and whether it had no
+  // query.
+  const [offered, setOffered] = useState<{ ids: string[]; browsing: boolean }>({ ids: [], browsing: true })
+  // Whether the list of every discipline is open. New results then leave the
+  // page where it is, so the list does not move while it is chosen from.
+  const listOpen = useRef(false)
+  const onListOpen = useCallback((open: boolean) => {
+    listOpen.current = open
+  }, [])
   // The search the shown results answer: its number, and how many results
   // rank above the first shown.
   const [listed, setListed] = useState({ seq: 0, offset: 0 })
@@ -495,7 +514,7 @@ function Search() {
   }, [])
 
   useEffect(() => {
-    const url = searchUrl({ q, source, from, to, page }, page)
+    const url = searchUrl({ q, source, from, to, disciplines, page }, page)
     window.history.replaceState(null, '', url)
     const params = new URLSearchParams(url.startsWith('?') ? url : '')
     // The URL keeps the whole query; the search uses only its start.
@@ -525,11 +544,12 @@ function Search() {
           }
           // The search box stays in view, so a new search or page can
           // start deep in the old list; show the new list from its top.
-          if (shown.current !== url) window.scrollTo(0, 0)
+          if (shown.current !== url && !listOpen.current) window.scrollTo(0, 0)
           shown.current = url
           shownSeq = seq
           setListed({ seq, offset: (page - 1) * PAGE })
           setResults(data.results)
+          setOffered({ ids: data.disciplines, browsing: !used })
           setQuotes(quotePattern(used))
           setTotal(data.total)
           setError('')
@@ -546,7 +566,7 @@ function Search() {
       clearTimeout(timer)
       controller.abort()
     }
-  }, [q, source, from, to, page])
+  }, [q, source, from, to, disciplines, page])
 
   const pages = Math.ceil(total / PAGE)
   const length = q.trim().length
@@ -580,6 +600,14 @@ function Search() {
           <YearSelect value={to} onChange={(value) => change({ to: value })} label="To year" />
         </div>
       </div>
+
+      <Disciplines
+        offered={offered.ids}
+        browsing={offered.browsing}
+        chosen={disciplines}
+        onChange={(value) => change({ disciplines: value })}
+        onOpen={onListOpen}
+      />
 
       <main>
         {length > MAX_QUERY && (
@@ -671,6 +699,212 @@ function YearSelect({ value, onChange, label }: { value: string; onChange: (valu
         ))}
       </select>
     </span>
+  )
+}
+
+// The disciplines the row holds: those chosen, in the order chosen, then the
+// likeliest for the search, as the backend orders them. With no query no
+// result says which are likely, and that order is of size, so the row takes
+// the largest discipline of each area before the second largest of any, to
+// show the range of the index.
+function rowOf(offered: string[], chosen: string[], browsing: boolean) {
+  let rest = offered.filter((d) => DISCIPLINE.has(d))
+  if (browsing) {
+    const met = new Map<string, number>()
+    const turns = rest.map((d, i) => {
+      const area = DISCIPLINE.get(d)!.area
+      const turn = met.get(area) ?? 0
+      met.set(area, turn + 1)
+      return { d, turn, i }
+    })
+    rest = turns.sort((a, b) => a.turn - b.turn || a.i - b.i).map((x) => x.d)
+  }
+  return [...chosen, ...rest.filter((d) => !chosen.includes(d)).slice(0, OFFERED)]
+}
+
+const LIST_MARGIN = 12 // kept clear between the open list and the window's bottom
+
+// The discipline filter: a row of chips, each choosing or dropping one
+// discipline, and a button that opens the list of them all by area. Results
+// are of any of the disciplines chosen.
+//
+// The row is one line. With a mouse, a chip that doesn't fit in what is left
+// of the line is left out, and a later, shorter one may take its place; under
+// a finger the row scrolls sideways instead, fading at an edge that hides
+// more. Chosen chips come first and are always shown, taking further lines if
+// they must.
+function Disciplines({
+  offered,
+  browsing,
+  chosen,
+  onChange,
+  onOpen,
+}: {
+  offered: string[]
+  browsing: boolean
+  chosen: string[]
+  onChange: (value: string[]) => void
+  onOpen: (open: boolean) => void
+}) {
+  const [open, setOpen] = useState(false)
+  // The lines the row takes, the chips left out of it, and whether a
+  // scrolled row hides chips before or after those in view.
+  const [fit, setFit] = useState({ lines: 1, out: '', before: false, after: false })
+  const root = useRef<HTMLDivElement>(null)
+  const rail = useRef<HTMLDivElement>(null)
+  const opener = useRef<HTMLButtonElement>(null)
+  const list = useRef<HTMLDivElement>(null)
+  const row = rowOf(offered, chosen, browsing)
+  const key = row.join(' ')
+
+  useLayoutEffect(() => {
+    const el = rail.current!
+    // A changed row is read from its start, where the chosen chips are.
+    el.scrollLeft = 0
+    // Lays the chips out by their widths, which do not depend on where the
+    // row puts them: the chosen wrap, then each of the rest joins the last
+    // line if it fits there.
+    const measure = () => {
+      const style = getComputedStyle(el)
+      const gap = parseFloat(style.columnGap)
+      const width = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)
+      const out: string[] = []
+      let lines = 1
+      let x = 0
+      if (style.flexWrap !== 'nowrap')
+        row.forEach((id, i) => {
+          const w = Math.ceil(el.children[i].getBoundingClientRect().width)
+          if (i >= chosen.length && x + w > width) {
+            out.push(id)
+            return
+          }
+          if (x > 0 && x + w > width) {
+            lines += 1
+            x = 0
+          }
+          x += w + gap
+        })
+      const next = {
+        lines,
+        out: out.join(' '),
+        before: el.scrollLeft > 1,
+        after: el.scrollWidth - el.clientWidth - el.scrollLeft > 1,
+      }
+      setFit((f) =>
+        f.lines === next.lines && f.out === next.out && f.before === next.before && f.after === next.after ? f : next,
+      )
+    }
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(el)
+    el.addEventListener('scroll', measure, { passive: true })
+    // The chips are wider or narrower once the page's font has loaded.
+    let mounted = true
+    document.fonts.ready.then(() => mounted && measure())
+    return () => {
+      mounted = false
+      observer.disconnect()
+      el.removeEventListener('scroll', measure)
+    }
+    // row and chosen change only as key does.
+    // oxlint-disable-next-line react-hooks/exhaustive-deps
+  }, [key])
+
+  useEffect(() => {
+    onOpen(open)
+    if (!open) return
+    const el = list.current!
+    const room = () => window.innerHeight - el.getBoundingClientRect().top - LIST_MARGIN
+    // The list scrolls within what is left of the window below it.
+    const size = () => {
+      el.style.maxHeight = `${Math.max(room(), 0)}px`
+    }
+    // Where the whole list does not fit, the page scrolls to make room for
+    // it, at most until the row is just under the pinned controls.
+    const pinned = document.querySelector<HTMLElement>('.controls')!.offsetHeight
+    const short = Math.min(el.scrollHeight - room(), root.current!.getBoundingClientRect().top - pinned)
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (short > 0) window.scrollBy({ top: short, behavior: still ? 'auto' : 'smooth' })
+    size()
+    const outside = (e: PointerEvent) => {
+      if (!root.current!.contains(e.target as Node)) setOpen(false)
+    }
+    const escape = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return
+      setOpen(false)
+      opener.current!.focus()
+    }
+    document.addEventListener('pointerdown', outside)
+    document.addEventListener('keydown', escape)
+    window.addEventListener('resize', size)
+    window.addEventListener('scroll', size, { passive: true })
+    return () => {
+      document.removeEventListener('pointerdown', outside)
+      document.removeEventListener('keydown', escape)
+      window.removeEventListener('resize', size)
+      window.removeEventListener('scroll', size)
+    }
+  }, [open, onOpen])
+
+  const toggle = (id: string) => onChange(chosen.includes(id) ? chosen.filter((d) => d !== id) : [...chosen, id])
+  const chip = (id: string, inRow: boolean, hidden = false) => {
+    const on = chosen.includes(id)
+    return (
+      <button key={id} className={on ? 'chip on' : 'chip'} aria-pressed={on} inert={hidden} onClick={() => toggle(id)}>
+        {DISCIPLINE.get(id)!.label}
+        {on && inRow && (
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        )}
+      </button>
+    )
+  }
+  const fades = `${fit.before ? ' before' : ''}${fit.after ? ' after' : ''}`
+  const out = fit.out.split(' ')
+  return (
+    <div className="disciplines" ref={root}>
+      <div
+        className={`rail${fades}`}
+        ref={rail}
+        role="group"
+        aria-label="Disciplines"
+        style={{ '--lines': fit.lines } as React.CSSProperties}
+      >
+        {row.map((id) => chip(id, true, out.includes(id)))}
+      </div>
+      <button
+        className={open ? 'all open' : 'all'}
+        ref={opener}
+        aria-expanded={open}
+        aria-controls="all-disciplines"
+        aria-label="All disciplines"
+        onClick={() => setOpen(!open)}
+      >
+        More
+        <svg viewBox="4.75 7.75 14.5 8.5" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      {open && (
+        <div className="list" id="all-disciplines" ref={list} role="group" aria-label="All disciplines">
+          <p className="hint">
+            Choose one or more. Results match any of them.
+            {chosen.length > 0 && (
+              <button className="reset" onClick={() => onChange([])}>
+                Clear
+              </button>
+            )}
+          </p>
+          {AREAS.map((area) => (
+            <div key={area} className="area" role="group" aria-label={area}>
+              <h2>{area}</h2>
+              <div className="chips">{DISCIPLINES.filter((d) => d.area === area).map((d) => chip(d.id, false))}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 

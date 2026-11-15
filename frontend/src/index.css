@@ -124,7 +124,7 @@ h1 a {
 .controls {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2; /* over the open list of disciplines, which scrolls under it */
   background: var(--bg);
   padding: 8px 0 12px;
 }
@@ -377,6 +377,193 @@ h1 a {
   border-radius: 8px;
   padding: 6px calc(var(--inset) + var(--chevron) + var(--chevron-gap)) 6px var(--inset);
   cursor: pointer;
+}
+
+/* The discipline chips: one line of them, then the button for the rest.
+   They scroll away with the page rather than staying pinned. */
+.disciplines {
+  --chip: 31px; /* a chip's height: its line of text and padding */
+  --gap: 6px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+  margin-bottom: 16px;
+}
+
+/* Shows --lines lines of chips. Those left out go last and so wrap to
+   lines below, out of view. The padding, taken back by the margin, leaves
+   room for a chip's focus ring inside the clip. */
+.rail {
+  --ring: 4px;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding: var(--ring);
+  margin: calc(-1 * var(--ring));
+  max-height: calc(var(--lines, 1) * (var(--chip) + var(--gap)) - var(--gap) + 2 * var(--ring));
+  overflow: hidden;
+}
+
+.rail .chip[inert] {
+  order: 1;
+}
+
+.chip,
+.all {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: var(--chip);
+  border: 0;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: var(--track);
+  color: var(--muted);
+  font: inherit;
+  font-size: var(--text-meta);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.chip.on {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.chip svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+/* Opens a list as the year selects do, so it is drawn as they are. */
+.all {
+  color: var(--text);
+}
+
+.all svg {
+  width: 10px;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+
+.all.open svg {
+  transform: scaleY(-1);
+}
+
+@media (hover: hover) {
+  .chip:not(.on):hover {
+    color: var(--text);
+  }
+}
+
+/* Under a finger the row scrolls sideways instead, fading at an edge that
+   hides more of it. */
+@media (pointer: coarse) {
+  .rail {
+    --fade: 28px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rail.before {
+    mask-image: linear-gradient(to right, transparent, #000 var(--fade));
+  }
+
+  .rail.after {
+    mask-image: linear-gradient(to left, transparent, #000 var(--fade));
+  }
+
+  .rail.before.after {
+    mask-image: linear-gradient(to right, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent);
+  }
+}
+
+/* Every discipline by area, over the top of the results. Its chips are
+   filled as the row's are, but against its own surface, which in dark is
+   the colour of the page's --track. */
+.list {
+  --track: color-mix(in srgb, var(--text) 8%, var(--surface));
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.14);
+  padding: 14px 16px 16px;
+}
+
+.hint {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: var(--text-meta);
+}
+
+.reset {
+  flex: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+/* An area's name beside its chips, level with the first line of them. */
+.area {
+  display: grid;
+  grid-template-columns: 184px 1fr;
+  gap: 4px 12px;
+  padding: 8px 0;
+}
+
+.area + .area {
+  border-top: 1px solid var(--divider);
+}
+
+.area h2 {
+  margin: 0;
+  font-size: var(--text-meta);
+  font-weight: 600;
+  line-height: 21px;
+  padding: calc((var(--chip) - 21px) / 2) 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+@media (max-width: 560px) {
+  .area {
+    grid-template-columns: 1fr;
+  }
 }
 
 .notice {
