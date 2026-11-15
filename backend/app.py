@@ -1,9 +1,14 @@
 """HTTP API for project search.
 
-- GET /api/search?q=...&source=surg|expo|theses|nurj&from=YEAR&to=YEAR&n=20&offset=0
-  returns {"results": [...], "total": int}, each result as search.public
-  describes it; "total" counts the matches at every offset. An empty or
-  missing q browses all projects, most recent first.
+- GET /api/search?q=...&source=surg|expo|theses|nurj&from=YEAR&to=YEAR&discipline=ID&n=20&offset=0
+  returns {"results": [...], "total": int, "disciplines": [...]}, each result
+  as search.public describes it; "total" counts the matches at every offset.
+  An empty or missing q browses all projects, most recent first. discipline
+  may be given more than once and keeps the projects filed under any of them;
+  "disciplines" is the ids of those to offer as filters, the likeliest first,
+  and does not change with the ones chosen (see search).
+- GET /api/disciplines returns {"disciplines": [{"id", "label", "area"}, ...]},
+  every discipline in the order pipeline.disciplines lists them, area by area.
 - GET /api/project/NUMBER returns {"project": ..., "similar": [...]} for the
   project a share number leads to (see pipeline.share_ids), or 404.
 - GET /api/health returns {"ok": true} once the index is loaded.
@@ -29,7 +34,7 @@ import time
 from contextlib import asynccontextmanager
 from html import escape
 from pathlib import Path
-from typing import Literal
+from typing import Annotated, Literal
 
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, RedirectResponse, Response
@@ -37,6 +42,7 @@ from fastapi.staticfiles import StaticFiles
 
 import querylog
 import search
+from pipeline.disciplines import DISCIPLINES, IDS
 
 FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
 SITE = "Prowl"
@@ -79,18 +85,21 @@ def search_projects(
     source: Literal["surg", "expo", "theses", "nurj"] | None = None,
     year_from: int | None = Query(None, alias="from"),
     year_to: int | None = Query(None, alias="to"),
+    discipline: Annotated[list[Literal[tuple(IDS)]] | None, Query()] = None,
     n: int = Query(20, ge=1, le=50),
     offset: int = Query(0, ge=0),
 ) -> dict:
     years = None if year_from is None and year_to is None else (year_from or 0, year_to or 9999)
     start = time.perf_counter()
-    results, total = app.state.index.search(q, source, years, n, offset)
+    chosen = tuple(dict.fromkeys(discipline or ()))
+    results, total, offered = app.state.index.search(q, source, years, n, offset, chosen)
     cause = request.headers.get("x-cause")
     log(request, "search", {
         "q": q.replace("\x00", ""),  # Postgres refuses JSON holding a NUL
         "source": source,
         "from": year_from,
         "to": year_to,
+        "discipline": list(chosen),
         "n": n,
         "offset": offset,
         "total": total,
@@ -100,7 +109,12 @@ def search_projects(
         "shown": querylog.number(request.headers.get("x-shown")),
         "cause": cause if cause in CAUSES else None,
     })
-    return {"results": [search.public(p) for p in results], "total": total}
+    return {"results": [search.public(p) for p in results], "total": total, "disciplines": offered}
+
+
+@app.get("/api/disciplines")
+def discipline_list() -> dict:
+    return {"disciplines": [{"id": id, "label": label, "area": area} for id, label, area in DISCIPLINES]}
 
 
 @app.get("/api/project/{number}")

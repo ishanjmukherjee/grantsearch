@@ -45,6 +45,17 @@ browse order. An unclosed quote is ignored, so a phrase being typed does not
 empty the results before it is closed. The frontend finds and highlights the
 phrases the same way.
 
+Disciplines (see pipeline.disciplines) narrow the results to the projects
+filed under any of those chosen. Unlike the source and year filters they are
+applied to the finished ranking, so choosing one drops results without
+reordering those left. A search also says which disciplines to offer: those of
+its first FACET_N results before any discipline is chosen, the commonest
+first and, of two as common, the one met first. Choosing a discipline thus
+leaves the others on offer. A query ranks every project that has vectors, so
+the number of matches in a discipline says nothing about the query, and no
+counts are given. With no query the disciplines are counted over every
+project the other filters keep.
+
 A project's similar projects are those whose document or summary vectors are
 nearest any of its own; one without vectors uses a search for its title, or
 without one its first abstract, and has none if it has neither.
@@ -53,7 +64,7 @@ Results carry only real data (titles, people, years, abstracts, source links),
 as the project's records (see public); cards only aid ranking. Index rows are
 keyed by the record whose card they come from (see pipeline.projects.rows).
 
-Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj] [--years FROM TO] [-n 10]
+Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj] [--years FROM TO] [--discipline ID ...] [-n 10]
 """
 
 import argparse
@@ -67,7 +78,7 @@ import Stemmer
 from sentence_transformers import SentenceTransformer
 
 from people import People
-from pipeline import acronyms, share_ids
+from pipeline import acronyms, disciplines, share_ids
 from pipeline.projects import (
     DIM,
     INDEX_DIR,
@@ -85,6 +96,7 @@ RRF_K = 60
 # Low term-frequency saturation: containing a query word counts for more than
 # repeating it, which the cards' generated queries and concepts do a lot.
 BM25_K1 = 0.5
+FACET_N = 50  # the results a query's disciplines are counted over
 QUOTE_MARKS = "\"\u201c\u201d"
 QUOTED = re.compile(f"[{QUOTE_MARKS}]([^{QUOTE_MARKS}]*)[{QUOTE_MARKS}]")
 
@@ -319,6 +331,15 @@ class Index:
         self.bm25 = bm25s.BM25(k1=BM25_K1)
         self.bm25.index(bm25s.tokenize([fold(bm25_text(p)) for p in self.projects], stopwords="en", stemmer=stemmer, show_progress=False), show_progress=False)
 
+        # filed[i, j]: project i is filed under discipline j of disciplines.IDS.
+        table = disciplines.load()
+        if strict and (pending := disciplines.pending(self.projects, table)):
+            raise SystemExit(f"{len(pending)} projects are not filed under disciplines; rerun pipeline.disciplines")
+        column = {d: j for j, d in enumerate(disciplines.IDS)}
+        self.filed = np.zeros((len(self.projects), len(column)), dtype=bool)
+        for i, p in enumerate(self.projects):
+            self.filed[i, [column[d] for d in disciplines.of(p, table)]] = True
+
         self.browse_orders = browse_orders(self.projects)
         self.shown = [shown_text(p) for p in self.projects]
         self.acronyms = acronyms.expansions()
@@ -359,10 +380,34 @@ class Index:
         best[i] = -np.inf
         return [self.projects[j] for j in np.argsort(-best, kind="stable")[:n]]
 
-    def search(self, query: str, source: str | None = None, year_range: tuple[int, int] | None = None, n: int = 20, offset: int = 0) -> tuple[list[dict], int]:
+    def offered(self, top: list[int]) -> list[str]:
+        """The disciplines of these projects, the commonest first and, of two
+        as common, the one met first."""
+        if not len(top):
+            return []
+        filed = self.filed[top]
+        counts = filed.sum(axis=0)
+        return [disciplines.IDS[j] for j in np.lexsort((filed.argmax(axis=0), -counts)) if counts[j]]
+
+    def search(
+        self,
+        query: str,
+        source: str | None = None,
+        year_range: tuple[int, int] | None = None,
+        n: int = 20,
+        offset: int = 0,
+        chosen: tuple[str, ...] = (),
+    ) -> tuple[list[dict], int, list[str]]:
         """The n projects after the first offset matching the filters, ranked
-        for the query, or in browse order when it is empty, and how many match
-        in all."""
+        for the query, or in browse order when it is empty; how many match in
+        all; and the disciplines to offer (see the module docstring). chosen
+        is the disciplines to keep, any of them; empty keeps every project."""
+        within = self.filed[:, [disciplines.IDS.index(d) for d in chosen]].any(axis=1) if chosen else np.ones(len(self.projects), dtype=bool)
+
+        def page(ranked: list[int], top: list[int]) -> tuple[list[dict], int, list[str]]:
+            ranked = [i for i in ranked if within[i]]
+            return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked), self.offered(top)
+
         keep = np.array([
             (source is None or any(r["source"] in FILTERS[source] for r in p["records"]))
             and (year_range is None or any(year_range[0] <= y <= year_range[1] for y in years(p)))
@@ -373,7 +418,8 @@ class Index:
             keep &= np.array([all(any(q.search(t) for t in texts) for q in quoted) for texts in self.shown])
             query = re.sub(f"[{QUOTE_MARKS}]", " ", query)
         if not query.strip():
-            return [self.projects[i] for i in self.browse_orders[source] if keep[i]][offset : offset + n], int(keep.sum())
+            order = [i for i in self.browse_orders[source] if keep[i]]
+            return page(order, order)
         # The tokenizer drops stopwords and one-character words, which can
         # leave nothing to score ("a", "the"); the dense side still ranks.
         tokens = tokenize([query])[0]
@@ -396,7 +442,7 @@ class Index:
         if quoted:
             taken |= set(ranked)
             ranked += [i for i in self.browse_orders[None] if keep[i] and i not in taken]
-        return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked)
+        return page(ranked, ranked[:FACET_N])
 
 
 def main() -> None:
@@ -404,13 +450,15 @@ def main() -> None:
     parser.add_argument("query")
     parser.add_argument("--source", choices=FILTERS)
     parser.add_argument("--years", nargs=2, type=int, metavar=("FROM", "TO"))
+    parser.add_argument("--discipline", nargs="+", choices=disciplines.IDS, default=[], metavar="ID")
     parser.add_argument("-n", type=int, default=10)
     args = parser.parse_args()
 
-    results, _ = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n)
+    results, total, offered = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n, chosen=tuple(args.discipline))
     for rank, p in enumerate(results, 1):
         tags = [f"{TAGS[r['source']]} {r['year']}" for r in p["records"]]
         print(f"{rank:2}. {p['title'] or '(untitled)'}  [{', '.join(tags)}]")
+    print(f"{total} in all; disciplines offered: {', '.join(offered)}")
 
 
 if __name__ == "__main__":

@@ -16,7 +16,8 @@ without it (development, scripts) nothing is logged. Each row is
 - data: the rest, as JSON:
   - every kind: device ("mobile", "desktop" or "bot", read from the
     User-Agent, which is not kept) and sha, the commit the server runs
-  - search: q as sent, source, from, to, n, offset, total, results (the ids
+  - search: q as sent, source, from, to, discipline (the ids of the
+    disciplines chosen, empty for none), n, offset, total, results (the ids
     of the projects returned, in order), ms (how long the search took), and
     from the browser seq (the search's number within the visit), shown (the
     seq of the results on screen when it was sent, None before any) and
