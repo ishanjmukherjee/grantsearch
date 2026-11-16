@@ -64,7 +64,9 @@ nearest any of its own; one without vectors uses a search for its title, or
 without one its first abstract, and has none if it has neither.
 
 Results carry only real data (titles, people, years, abstracts, source links),
-as the project's records (see public); cards only aid ranking. Index rows are
+as the project's records (see public); cards only aid ranking. The one thing
+a result carries that no source prints is the disciplines the project is
+filed under, which the frontend sets apart from the source tags. Index rows are
 keyed by the record whose card they come from (see pipeline.projects.rows).
 
 Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj] [--years FROM TO] [--discipline ID ...] [-n 10]
@@ -201,7 +203,9 @@ def public(p: dict) -> dict:
     but made_title, a title written for a project whose sources print none,
     which is always shown as such ("Untitled Project: <made_title>").
 
-    {id, share, title, made_title, records}: each record is {id, source, kind, year,
+    {id, share, title, made_title, disciplines, records}: disciplines is
+    the ids of those the project is filed under, the main one first (see
+    pipeline.disciplines), and each record is {id, source, kind, year,
     title, url} with, for a grant, its students and advisors; for a thesis or
     paper, its students, advisors, abstract (None where its source gives
     none) and pdf (the url of the PDF Prowl hosts for a NURJ paper or MMSS
@@ -244,7 +248,14 @@ def public(p: dict) -> dict:
         ]
         return out | {"listings": listings}
 
-    return {"id": p["id"], "share": p["share"], "title": p["title"], "made_title": p["made_title"], "records": [shown(r) for r in p["records"]]}
+    return {
+        "id": p["id"],
+        "share": p["share"],
+        "title": p["title"],
+        "made_title": p["made_title"],
+        "disciplines": p["disciplines"],
+        "records": [shown(r) for r in p["records"]],
+    }
 
 
 def phrases(query: str) -> list[re.Pattern]:
@@ -343,7 +354,8 @@ class Index:
         self.filed = np.zeros((len(self.projects), len(column)), dtype=bool)
         self.main = np.full(len(self.projects), -1)
         for i, p in enumerate(self.projects):
-            if columns := [column[d] for d in disciplines.of(p, table)]:
+            p["disciplines"] = disciplines.of(p, table)
+            if columns := [column[d] for d in p["disciplines"]]:
                 self.filed[i, columns] = True
                 self.main[i] = columns[0]
 

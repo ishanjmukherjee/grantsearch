@@ -42,6 +42,7 @@ type Project = {
   share: number
   title: string | null
   made_title: string | null
+  disciplines: string[] // the ids of those it is filed under, the main one first
   records: ProjectRecord[]
 }
 type ExpoEntry = Listing & { year: number; source: string }
@@ -285,6 +286,15 @@ function quotePattern(query: string): RegExp | null {
 
 // The quoted phrases to highlight in results, if any.
 const Quotes = createContext<RegExp | null>(null)
+
+// The search page's discipline filter, for the disciplines named on its
+// results: those chosen, the link to the search with one chosen or dropped,
+// and what a click on that link does in place. Null on a project's page.
+const Filter = createContext<{
+  chosen: string[]
+  href: (id: string) => string
+  toggle: (id: string) => void
+} | null>(null)
 
 // What a project whose sources print no title is called: on the result
 // itself, as its heading; inside a project, a section says only "untitled".
@@ -570,6 +580,12 @@ function Search() {
 
   const pages = Math.ceil(total / PAGE)
   const length = q.trim().length
+  const toggled = (id: string) => (disciplines.includes(id) ? disciplines.filter((d) => d !== id) : [...disciplines, id])
+  const filter = {
+    chosen: disciplines,
+    href: (id: string) => searchUrl({ ...query, disciplines: toggled(id) }, 1),
+    toggle: (id: string) => change({ disciplines: toggled(id) }),
+  }
 
   return (
     <div className="page">
@@ -621,9 +637,11 @@ function Search() {
           <p className="notice">No projects match. Try different words or widen the filters.</p>
         )}
         <Quotes.Provider value={quotes}>
-          {results?.map((p, i) => (
-            <Result key={p.id} project={p} place={{ on: 'search', seq: listed.seq, rank: listed.offset + i + 1 }} />
-          ))}
+          <Filter.Provider value={filter}>
+            {results?.map((p, i) => (
+              <Result key={p.id} project={p} place={{ on: 'search', seq: listed.seq, rank: listed.offset + i + 1 }} />
+            ))}
+          </Filter.Provider>
         </Quotes.Provider>
         {pages > 1 && <Pager page={page} pages={pages} href={(n) => searchUrl(query, n)} onGo={goTo} />}
       </main>
@@ -1015,6 +1033,8 @@ function Result({
   open?: boolean
 }) {
   const place = { project: project.id, ...where }
+  const filter = useContext(Filter)
+  const filedUnder = project.disciplines.filter((d) => DISCIPLINE.has(d))
   // A click on any of the result's links, also one that opens it in a new
   // tab (a middle click is an auxclick).
   function clicked(e: React.MouseEvent) {
@@ -1175,6 +1195,33 @@ function Result({
             NURJ {x.year}
           </span>
         ))}
+        {/* The disciplines the project is filed under. Each is a link to
+            the search with it chosen, or dropped if it is chosen already;
+            on the search page a plain click changes the filter in place. */}
+        {filedUnder.length > 0 && (
+          <span className="filed">
+            {filedUnder.map((d) => {
+              const { label } = DISCIPLINE.get(d)!
+              const on = filter?.chosen.includes(d) ?? false
+              return (
+                <span key={d}>
+                  <a
+                    href={filter ? filter.href(d) : `/?discipline=${d}`}
+                    className={on ? 'on' : undefined}
+                    title={on ? `Stop filtering by ${label}` : `Filter by ${label}`}
+                    onClick={(e) => {
+                      if (!filter || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return
+                      e.preventDefault()
+                      filter.toggle(d)
+                    }}
+                  >
+                    {label}
+                  </a>
+                </span>
+              )
+            })}
+          </span>
+        )}
       </div>
       <h2>
         <a href={`/p/${project.share}`} data-link="page">

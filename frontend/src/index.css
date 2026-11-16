@@ -629,6 +629,46 @@ h1 a {
   background: var(--nurj-soft);
 }
 
+/* The disciplines a project is filed under, after its tags. Plain words
+   rather than tags: a tag is what a source says of the project, and these
+   are Prowl's own filing. Grey as the source links are; the accent marks
+   one the results are filtered by. */
+.filed {
+  align-self: center;
+  margin-left: 4px;
+  color: var(--muted);
+  font-size: var(--text-small);
+}
+
+.filed span + span::before {
+  content: '·';
+  margin: 0 5px;
+}
+
+/* Taller than its words, for fingers, without growing the line. */
+.filed a {
+  padding: 6px 0;
+  margin: -6px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.filed a.on {
+  color: var(--accent);
+}
+
+@media (hover: hover) {
+  .filed a:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .filed a.on:hover {
+    color: var(--accent);
+  }
+}
+
 .result h2 {
   font-size: var(--text-title);
   text-wrap: pretty;

@@ -69,7 +69,9 @@ The site logs every search with the results it returned, every project page load
     - The list of all disciplines lies over the top of the results and stays open while disciplines are chosen from it. New results do not scroll the page while it is open, so it stays under the pointer. Opening it scrolls the page only as far as it needs to fit, at most until the row is under the pinned search box.
     - The row scrolls away with the page rather than staying pinned with the search box.
     - The chosen disciplines are in the page's link as `discipline`, once each. One the frontend does not know is dropped. The frontend's list is `frontend/src/disciplines.json`, a copy of the backend's that `pipeline.disciplines` refuses to run without.
-    - Results still show only real data: a project's disciplines are not printed on it.
+  - [x] A result names the disciplines its project is filed under, after its source tags (`.filed` in `frontend/src/App.tsx`).
+    - They are plain grey words, not tags: a tag is what a source says of the project, and the disciplines are Prowl's filing, the one thing on a result that no source prints.
+    - Each is a link to the search with that discipline chosen. On the search page a click chooses it in place, as its chip would, and one the results are filtered by is in the accent and drops the filter. On a project's page it opens every project in the discipline.
 - [ ] Filter results by event and year, as two filters that combine: events (SURG, Expo, and each source added later, such as the Symposium, NURJ and the theses) and years (a range or a set). A project matches if any of its events falls in the chosen years, so "Expo, 2024" keeps a 2023 SURG grant presented at Expo 2024.
   - Make the "SURG 20xx" and "Expo 20xx" tags on each result (`frontend/src/App.tsx`) clickable: clicking one sets the event and year filters to that tag. The tags should then look clickable without crowding the result.
   - This matters more with each source added, as results mix more kinds of work across more years.
