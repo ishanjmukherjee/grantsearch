@@ -68,11 +68,11 @@ ABSTRACT = 1500
 # (id, label, area), in the order the site lists them. The brief describes
 # each one's scope under the same id.
 DISCIPLINES = [
-    ("biology", "Biology", "Life sciences"),
-    ("neuroscience", "Neuroscience", "Life sciences"),
-    ("medicine", "Medicine", "Health"),
-    ("public-health", "Public health", "Health"),
-    ("communication-disorders", "Communication sciences & disorders", "Health"),
+    ("biology", "Biology", "Life sciences & health"),
+    ("neuroscience", "Neuroscience", "Life sciences & health"),
+    ("medicine", "Medicine", "Life sciences & health"),
+    ("public-health", "Public health", "Life sciences & health"),
+    ("communication-disorders", "Communication sciences & disorders", "Life sciences & health"),
     ("chemistry", "Chemistry", "Physical sciences & math"),
     ("physics-astronomy", "Physics & astronomy", "Physical sciences & math"),
     ("earth-environment", "Earth & environment", "Physical sciences & math"),
@@ -107,6 +107,11 @@ DISCIPLINES = [
     ("journalism-communication", "Journalism & communication", "Arts & media"),
 ]
 IDS = [d[0] for d in DISCIPLINES]
+# Each area's disciplines, under the area's name as a link spells it
+# ("physical-sciences-math"); the frontend spells it by the same rule.
+AREAS: dict[str, list[str]] = {}
+for _id, _, _area in DISCIPLINES:
+    AREAS.setdefault(re.sub(r"[^a-z]+", "-", _area.lower()), []).append(_id)
 KINDS = {"surg": "SURG grant", "ay_urg": "AY URG grant", "expo": "Expo poster", "symposium": "Symposium poster", "nurj": "NURJ paper"}
 
 

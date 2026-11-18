@@ -12,13 +12,10 @@ Your job: for each project in your batch, say which of 37 disciplines it belongs
 
 These 37 are the only disciplines there are. Use the ids exactly as written. Each line says what has its home in the discipline.
 
-Life sciences
+Life sciences & health
 
 - `biology` (Biology): living things at every scale. Molecular and cell biology, genetics and genomics, biochemistry, microbiology, developmental and structural biology, physiology, synthetic biology, plant biology, evolutionary biology, animal behavior.
 - `neuroscience` (Neuroscience): the nervous system at any level, from molecules and circuits to brain imaging and behavior.
-
-Health
-
 - `medicine` (Medicine): disease, diagnosis and treatment. The clinical specialties (oncology, cardiology, dermatology, psychiatry, surgery and the rest), pharmacology, pathology, clinical and translational research, the health professions.
 - `public-health` (Public health): the health of populations. Epidemiology, global health, health disparities, health services and systems, nutrition, health behavior and promotion, gerontology.
 - `communication-disorders` (Communication sciences & disorders): speech, language and hearing science, audiology, speech-language pathology.

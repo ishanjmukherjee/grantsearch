@@ -386,9 +386,9 @@ h1 a {
   margin-bottom: 16px;
 }
 
-/* Shows --lines lines of chips. Those left out go last and so wrap to
-   lines below, out of view. The padding, taken back by the margin, leaves
-   room for a chip's focus ring inside the clip. */
+/* Shows one line of chips. Those left out go last and so wrap to lines
+   below, out of view. The padding, taken back by the margin, leaves room
+   for a chip's focus ring inside the clip. */
 .rail {
   --ring: 4px;
   flex: 1;
@@ -399,7 +399,7 @@ h1 a {
   gap: var(--gap);
   padding: var(--ring);
   margin: calc(-1 * var(--ring));
-  max-height: calc(var(--lines, 1) * (var(--chip) + var(--gap)) - var(--gap) + 2 * var(--ring));
+  max-height: calc(var(--chip) + 2 * var(--ring));
   overflow: hidden;
 }
 
@@ -446,6 +446,26 @@ h1 a {
   stroke-linecap: round;
 }
 
+/* How many chosen chips the row has no room for. As wide for 12 as for 2,
+   so that the count does not change what fits before it. */
+.chip.count {
+  justify-content: center;
+  min-width: 44px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* With none to count it is still measured, so it is out of the line
+   rather than undrawn: short as it is, it would fit after the last chip. */
+.chip.count[inert] {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* A whole area's chip, in the weight of its name in the list. */
+.chip.whole-area {
+  font-weight: 600;
+}
+
 /* Opens a list as the year selects do, so it is drawn as they are. */
 .all {
   color: var(--text);
@@ -482,6 +502,10 @@ h1 a {
   }
 
   .rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chip.count {
     display: none;
   }
 
@@ -536,24 +560,74 @@ h1 a {
   cursor: pointer;
 }
 
-/* An area's name beside its chips, level with the first line of them. */
+/* An area's name beside its chips, level with the first line of them.
+   Areas are set apart by space alone, three times that between an area's
+   lines of chips. */
 .area {
   display: grid;
-  grid-template-columns: 184px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 4px 12px;
-  padding: 8px 0;
-}
-
-.area + .area {
-  border-top: 1px solid var(--divider);
+  padding: 9px 0;
 }
 
 .area h2 {
   margin: 0;
   font-size: var(--text-meta);
   font-weight: 600;
-  line-height: 21px;
-  padding: calc((var(--chip) - 21px) / 2) 0;
+}
+
+/* An area's name, a checkbox for all of its disciplines: ticked when all
+   are chosen, struck through when some are. Its box lines up with the
+   list's edge, and the hover fill spreads out past it. */
+.whole {
+  --pad: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--chip);
+  margin-left: calc(-1 * var(--pad));
+  border: 0;
+  border-radius: 8px;
+  padding: 0 var(--pad);
+  background: none;
+  color: var(--text);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.whole svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.whole rect {
+  stroke: color-mix(in srgb, var(--muted) 60%, var(--surface));
+  stroke-width: 1.5;
+}
+
+.whole:not(.none) rect {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
+.whole path {
+  stroke: var(--surface);
+}
+
+@media (hover: hover) {
+  .whole:hover {
+    background: var(--track);
+  }
+
+  .whole.none:hover rect {
+    stroke: var(--muted);
+  }
 }
 
 .chips {

@@ -1,11 +1,13 @@
 """HTTP API for project search.
 
-- GET /api/search?q=...&source=surg|expo|theses|nurj&from=YEAR&to=YEAR&discipline=ID&n=20&offset=0
+- GET /api/search?q=...&source=surg|expo|theses|nurj&from=YEAR&to=YEAR&discipline=ID&area=AREA&n=20&offset=0
   returns {"results": [...], "total": int, "disciplines": [...], "empty":
   [...]}, each result
   as search.public describes it; "total" counts the matches at every offset.
   An empty or missing q browses all projects, most recent first. discipline
   may be given more than once and keeps the projects filed under any of them;
+  area, also more than once, stands for every discipline of an area
+  (pipeline.disciplines.AREAS);
   "disciplines" is the ids of those to offer as filters, the likeliest first,
   and "empty" is the ids of those none of the matches are filed under;
   neither changes with the ones chosen (see search).
@@ -44,7 +46,7 @@ from fastapi.staticfiles import StaticFiles
 
 import querylog
 import search
-from pipeline.disciplines import IDS
+from pipeline.disciplines import AREAS, IDS
 
 FRONTEND_DIR = Path(__file__).resolve().parents[1] / "frontend" / "dist"
 SITE = "Prowl"
@@ -88,12 +90,13 @@ def search_projects(
     year_from: int | None = Query(None, alias="from"),
     year_to: int | None = Query(None, alias="to"),
     discipline: Annotated[list[Literal[tuple(IDS)]] | None, Query()] = None,
+    area: Annotated[list[Literal[tuple(AREAS)]] | None, Query()] = None,
     n: int = Query(20, ge=1, le=50),
     offset: int = Query(0, ge=0),
 ) -> dict:
     years = None if year_from is None and year_to is None else (year_from or 0, year_to or 9999)
     start = time.perf_counter()
-    chosen = tuple(dict.fromkeys(discipline or ()))
+    chosen = tuple(dict.fromkeys([*(discipline or ()), *(d for a in area or () for d in AREAS[a])]))
     results, total, offered, empty = app.state.index.search(q, source, years, n, offset, chosen)
     cause = request.headers.get("x-cause")
     log(request, "search", {

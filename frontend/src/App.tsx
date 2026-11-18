@@ -73,6 +73,30 @@ type Discipline = { id: string; label: string; area: string }
 const DISCIPLINES: Discipline[] = (filed as string[][]).map(([id, label, area]) => ({ id, label, area }))
 const DISCIPLINE = new Map(DISCIPLINES.map((d) => [d.id, d]))
 const AREAS = [...new Set(DISCIPLINES.map((d) => d.area))]
+// The ids of each area's disciplines, and each area by its name in a link,
+// which the backend spells the same way (pipeline.disciplines).
+const MEMBERS = new Map(AREAS.map((area) => [area, DISCIPLINES.filter((d) => d.area === area).map((d) => d.id)]))
+const areaSlug = (area: string) => area.toLowerCase().replace(/[^a-z]+/g, '-')
+const AREA = new Map(AREAS.map((area) => [areaSlug(area), area]))
+
+// What is chosen, as the chips that say it: an area whose disciplines are
+// all chosen is one chip under its name, and any other discipline its own.
+// They are in the order chosen, an area where the first of its was.
+type Choice = { key: string; label: string; area: string | null; ids: string[] }
+function choices(chosen: string[]): Choice[] {
+  const out: Choice[] = []
+  const whole = new Set<string>()
+  for (const id of chosen) {
+    const { label, area } = DISCIPLINE.get(id)!
+    const ids = MEMBERS.get(area)!
+    if (!ids.every((d) => chosen.includes(d))) out.push({ key: id, label, area: null, ids: [id] })
+    else if (!whole.has(area)) {
+      whole.add(area)
+      out.push({ key: `area ${area}`, label: area, area, ids })
+    }
+  }
+  return out
+}
 const OFFERED = 12 // the most disciplines the row offers beside those chosen
 // How many projects the index holds, which the server writes in the page's
 // head; NaN where another server serves the page, as Vite's does.
@@ -133,20 +157,27 @@ function readUrl(): Query {
     source: source === 'surg' || source === 'expo' || source === 'theses' || source === 'nurj' ? source : '',
     from: year(p.get('from')),
     to: year(p.get('to')),
-    disciplines: [...new Set(p.getAll('discipline'))].filter((d) => DISCIPLINE.has(d)),
+    disciplines: [
+      ...new Set(
+        [...p].flatMap(([name, value]) =>
+          name === 'discipline' && DISCIPLINE.has(value) ? [value] : name === 'area' ? (MEMBERS.get(AREA.get(value)!) ?? []) : [],
+        ),
+      ),
+    ],
     // A page so large its offset loses precision would be sent in exponent form.
     page: page >= 1 && Number.isSafeInteger(page * PAGE) ? page : 1,
   }
 }
 
-// The page's URL for a search at page n; page 1 is left out.
+// The page's URL for a search at page n; page 1 is left out. A wholly chosen
+// area is named once, as area, in place of each of its disciplines.
 function searchUrl({ q, source, from, to, disciplines }: Query, n: number) {
   const params = new URLSearchParams()
   if (q.trim()) params.set('q', q.trim())
   if (source) params.set('source', source)
   if (from) params.set('from', from)
   if (to) params.set('to', to)
-  for (const d of disciplines) params.append('discipline', d)
+  for (const c of choices(disciplines)) params.append(c.area ? 'area' : 'discipline', c.area ? areaSlug(c.area) : c.key)
   if (n > 1) params.set('page', String(n))
   const qs = params.toString()
   return qs ? `?${qs}` : window.location.pathname
@@ -728,12 +759,12 @@ function YearSelect({ value, onChange, label }: { value: string; onChange: (valu
   )
 }
 
-// The disciplines the row holds: those chosen, in the order chosen, then the
-// likeliest for the search, as the backend orders them. With no query no
-// result says which are likely, and that order is of size, so the row takes
-// the largest discipline of each area before the second largest of any, to
-// show the range of the index.
-function rowOf(offered: string[], chosen: string[], browsing: boolean) {
+// The disciplines the row offers beside those chosen: the likeliest for the
+// search, as the backend orders them. With no query no result says which are
+// likely, and that order is of size, so the row takes the largest discipline
+// of each area before the second largest of any, to show the range of the
+// index.
+function offers(offered: string[], chosen: string[], browsing: boolean) {
   let rest = offered.filter((d) => DISCIPLINE.has(d))
   if (browsing) {
     const met = new Map<string, number>()
@@ -745,22 +776,24 @@ function rowOf(offered: string[], chosen: string[], browsing: boolean) {
     })
     rest = turns.sort((a, b) => a.turn - b.turn || a.i - b.i).map((x) => x.d)
   }
-  return [...chosen, ...rest.filter((d) => !chosen.includes(d)).slice(0, OFFERED)]
+  return rest.filter((d) => !chosen.includes(d)).slice(0, OFFERED)
 }
 
 const LIST_MARGIN = 12 // kept clear between the open list and the window's bottom
 
 // The discipline filter: a row of chips, each choosing or dropping one
-// discipline, and a button that opens the list of them all by area. Results
-// are of any of the disciplines chosen. The list draws a discipline none of
-// the search's results are in as an outline; the row offers only those some
-// are in.
+// discipline, and a button that opens the list of them all by area, where an
+// area's name chooses or drops all of its disciplines at once. Results are of
+// any of the disciplines chosen. The list draws a discipline none of the
+// search's results are in as an outline; the row offers only those some are
+// in.
 //
-// The row is one line. With a mouse, a chip that doesn't fit in what is left
-// of the line is left out, and a later, shorter one may take its place; under
-// a finger the row scrolls sideways instead, fading at an edge that hides
-// more. Chosen chips come first and are always shown, taking further lines if
-// they must.
+// The row is one line: what is chosen (see choices), then the disciplines
+// the search offers. With a mouse, an offered chip that doesn't fit in what
+// is left of the line is left out, and a later, shorter one may take its
+// place; chosen chips that don't fit are counted in a chip after those that
+// do, which opens the list, where all that is chosen shows. Under a finger
+// the row scrolls sideways instead, fading at an edge that hides more.
 function Disciplines({
   offered,
   browsing,
@@ -777,51 +810,60 @@ function Disciplines({
   onOpen: (open: boolean) => void
 }) {
   const [open, setOpen] = useState(false)
-  // The lines the row takes, the chips left out of it, and whether a
-  // scrolled row hides chips before or after those in view.
-  const [fit, setFit] = useState({ lines: 1, out: '', before: false, after: false })
+  // The chips left out of the row, how many of them are chosen, and whether
+  // a scrolled row hides chips before or after those in view.
+  const [fit, setFit] = useState({ out: '', uncounted: 0, before: false, after: false })
   const root = useRef<HTMLDivElement>(null)
   const rail = useRef<HTMLDivElement>(null)
   const opener = useRef<HTMLButtonElement>(null)
   const list = useRef<HTMLDivElement>(null)
-  const row = rowOf(offered, chosen, browsing)
-  const key = row.join(' ')
+  const held = choices(chosen)
+  const rest = offers(offered, chosen, browsing)
+  const key = [...held.map((c) => c.key), '', ...rest].join('|')
 
   useLayoutEffect(() => {
     const el = rail.current!
     // A changed row is read from its start, where the chosen chips are.
     el.scrollLeft = 0
     // Lays the chips out by their widths, which do not depend on where the
-    // row puts them: the chosen wrap, then each of the rest joins the last
-    // line if it fits there.
+    // row puts them. The row's children are the chosen chips, the chip that
+    // counts those left out, then the offered ones.
     const measure = () => {
       const style = getComputedStyle(el)
       const gap = parseFloat(style.columnGap)
       const width = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)
+      const w = (i: number) => Math.ceil(el.children[i].getBoundingClientRect().width)
       const out: string[] = []
-      let lines = 1
-      let x = 0
-      if (style.flexWrap !== 'nowrap')
-        row.forEach((id, i) => {
-          const w = Math.ceil(el.children[i].getBoundingClientRect().width)
-          if (i >= chosen.length && x + w > width) {
-            out.push(id)
-            return
-          }
-          if (x > 0 && x + w > width) {
-            lines += 1
-            x = 0
-          }
-          x += w + gap
+      let uncounted = 0
+      if (style.flexWrap !== 'nowrap') {
+        const count = w(held.length)
+        let x = 0
+        // A chosen chip is shown if the count of those after it still fits.
+        let shown = 0
+        while (shown < held.length) {
+          const last = shown === held.length - 1
+          if (x + w(shown) + (last ? 0 : gap + count) > width) break
+          x += w(shown) + gap
+          shown += 1
+        }
+        uncounted = held.length - shown
+        out.push(...held.slice(shown).map((c) => c.key))
+        rest.forEach((id, i) => {
+          const wide = w(held.length + 1 + i)
+          if (uncounted || x + wide > width) out.push(id)
+          else x += wide + gap
         })
+      }
       const next = {
-        lines,
-        out: out.join(' '),
+        out: out.join('|'),
+        uncounted,
         before: el.scrollLeft > 1,
         after: el.scrollWidth - el.clientWidth - el.scrollLeft > 1,
       }
       setFit((f) =>
-        f.lines === next.lines && f.out === next.out && f.before === next.before && f.after === next.after ? f : next,
+        f.out === next.out && f.uncounted === next.uncounted && f.before === next.before && f.after === next.after
+          ? f
+          : next,
       )
     }
     measure()
@@ -836,7 +878,7 @@ function Disciplines({
       observer.disconnect()
       el.removeEventListener('scroll', measure)
     }
-    // row and chosen change only as key does.
+    // held and rest change only as key does.
     // oxlint-disable-next-line react-hooks/exhaustive-deps
   }, [key])
 
@@ -876,40 +918,43 @@ function Disciplines({
     }
   }, [open, onOpen])
 
-  const toggle = (id: string) => onChange(chosen.includes(id) ? chosen.filter((d) => d !== id) : [...chosen, id])
-  const chip = (id: string, inRow: boolean, hidden = false) => {
-    const on = chosen.includes(id)
-    const none = !inRow && !on && empty.includes(id)
-    return (
-      <button
-        key={id}
-        className={`chip${on ? ' on' : ''}${none ? ' none' : ''}`}
-        title={none ? 'No results' : undefined}
-        aria-pressed={on}
-        inert={hidden}
-        onClick={() => toggle(id)}
-      >
-        {DISCIPLINE.get(id)!.label}
-        {on && inRow && (
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 6l12 12M18 6L6 18" />
-          </svg>
-        )}
-      </button>
-    )
-  }
-  const fades = `${fit.before ? ' before' : ''}${fit.after ? ' after' : ''}`
-  const out = fit.out.split(' ')
+  const drop = (ids: string[]) => onChange(chosen.filter((d) => !ids.includes(d)))
+  const toggle = (id: string) => (chosen.includes(id) ? drop([id]) : onChange([...chosen, id]))
+  const out = fit.out.split('|')
+  const cross = (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" />
+    </svg>
+  )
   return (
     <div className="disciplines" ref={root}>
-      <div
-        className={`rail${fades}`}
-        ref={rail}
-        role="group"
-        aria-label="Disciplines"
-        style={{ '--lines': fit.lines } as React.CSSProperties}
-      >
-        {row.map((id) => chip(id, true, out.includes(id)))}
+      <div className={`rail${fit.before ? ' before' : ''}${fit.after ? ' after' : ''}`} ref={rail} role="group" aria-label="Disciplines">
+        {held.map((c) => (
+          <button
+            key={c.key}
+            className={c.area ? 'chip on whole-area' : 'chip on'}
+            title={c.area ? c.ids.map((d) => DISCIPLINE.get(d)!.label).join(', ') : undefined}
+            aria-pressed
+            inert={out.includes(c.key)}
+            onClick={() => drop(c.ids)}
+          >
+            {c.label}
+            {cross}
+          </button>
+        ))}
+        <button
+          className="chip on count"
+          inert={!fit.uncounted}
+          aria-label={`${fit.uncounted} more chosen. Show all disciplines`}
+          onClick={() => setOpen(!open)}
+        >
+          +{fit.uncounted}
+        </button>
+        {rest.map((id) => (
+          <button key={id} className="chip" aria-pressed={false} inert={out.includes(id)} onClick={() => toggle(id)}>
+            {DISCIPLINE.get(id)!.label}
+          </button>
+        ))}
       </div>
       <button
         className={open ? 'all open' : 'all'}
@@ -927,19 +972,54 @@ function Disciplines({
       {open && (
         <div className="list" id="all-disciplines" ref={list} role="group" aria-label="All disciplines">
           <p className="hint">
-            Choose one or more. Results match any of them.
+            Choose disciplines or whole areas. Results match any of them.
             {chosen.length > 0 && (
               <button className="reset" onClick={() => onChange([])}>
                 Clear
               </button>
             )}
           </p>
-          {AREAS.map((area) => (
-            <div key={area} className="area" role="group" aria-label={area}>
-              <h2>{area}</h2>
-              <div className="chips">{DISCIPLINES.filter((d) => d.area === area).map((d) => chip(d.id, false))}</div>
-            </div>
-          ))}
+          {AREAS.map((area) => {
+            const ids = MEMBERS.get(area)!
+            const n = ids.filter((d) => chosen.includes(d)).length
+            const state = n === ids.length ? 'all' : n ? 'some' : 'none'
+            return (
+              <div key={area} className="area" role="group" aria-label={area}>
+                <h2>
+                  {/* Chooses the whole area, or drops it when it is all chosen. */}
+                  <button
+                    className={`whole ${state}`}
+                    role="checkbox"
+                    aria-checked={state === 'all' ? true : state === 'some' ? 'mixed' : false}
+                    onClick={() => (state === 'all' ? drop(ids) : onChange([...chosen, ...ids.filter((d) => !chosen.includes(d))]))}
+                  >
+                    <svg viewBox="0 0 16 16" aria-hidden="true">
+                      <rect x="1" y="1" width="14" height="14" rx="4" />
+                      {state !== 'none' && <path d={state === 'all' ? 'M4.5 8.2l2.4 2.4 4.6-5' : 'M4.75 8h6.5'} />}
+                    </svg>
+                    {area}
+                  </button>
+                </h2>
+                <div className="chips">
+                  {ids.map((id) => {
+                    const on = chosen.includes(id)
+                    const none = !on && empty.includes(id)
+                    return (
+                      <button
+                        key={id}
+                        className={`chip${on ? ' on' : ''}${none ? ' none' : ''}`}
+                        title={none ? 'No results' : undefined}
+                        aria-pressed={on}
+                        onClick={() => toggle(id)}
+                      >
+                        {DISCIPLINE.get(id)!.label}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
         </div>
       )}
     </div>
