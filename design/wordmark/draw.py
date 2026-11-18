@@ -1,4 +1,4 @@
-"""Draws the Prowl wordmark and writes it into the frontend.
+"""Draws the Prowl wordmark and the favicon's P, and writes both into the frontend.
 
     uv run --with numpy --with shapely python design/wordmark/draw.py
 
@@ -17,7 +17,8 @@ things are then decided by hand rather than by the pen:
   strokes' edges, so its three points are sharp.
 
 Round letters and points overshoot the lines they sit on by 10 units, as
-they must to look level with flat ones.
+they must to look level with flat ones. The favicon's P is the same letter
+drawn with a heavier pen, for a size where the wordmark's would break up.
 """
 
 import json
@@ -53,6 +54,7 @@ class Weight:
 
 
 MARK = Weight(118, 29, (80, 88), (42, 48), 326, 372, 26)
+ICON = Weight(160, 48, (108, 118), (58, 66), 368, 376, 31)
 
 WEDGE = 40  # how far a wedge reaches left of its stem
 WEDGE_DROP = 72  # and how far down the stem its underside joins
@@ -219,10 +221,23 @@ def wordmark():
     return unary_union(parts)
 
 
+def favicon(size=32, height=0.64):
+    """The P, white on the tile the site's icon has always had."""
+    p = round_crotches(Hand(ICON).P(), 3)
+    left, bottom, right, top = p.bounds
+    scale = size * height / (top - bottom)
+    dx, dy = (size - (right - left) * scale) / 2, size * (1 - height) / 2
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}"><rect width="{size}" height="{size}" rx="7" fill="#4e2a84"/>'
+        f'<path fill="#fff" fill-rule="evenodd" transform="translate({dx:.2f} {dy:.2f}) scale({scale:.5f})" d="{path(p, left, top)}"/></svg>\n'
+    )
+
+
 if __name__ == "__main__":
     frontend = Path(__file__).resolve().parents[2] / "frontend"
     mark = wordmark()
     left, bottom, right, top = mark.bounds
     out = {"width": round(right - left, 1), "height": round(top - bottom, 1), "path": path(mark, left, top)}
     (frontend / "src" / "wordmark.json").write_text(json.dumps(out, indent=2) + "\n")
+    (frontend / "public" / "favicon.svg").write_text(favicon())
     print(f"wordmark {out['width']} x {out['height']}, {len(out['path'])} bytes of path; cap height is {CAP / out['height']:.3f} of its height")
