@@ -74,6 +74,9 @@ const DISCIPLINES: Discipline[] = (filed as string[][]).map(([id, label, area]) 
 const DISCIPLINE = new Map(DISCIPLINES.map((d) => [d.id, d]))
 const AREAS = [...new Set(DISCIPLINES.map((d) => d.area))]
 const OFFERED = 12 // the most disciplines the row offers beside those chosen
+// How many projects the index holds, which the server writes in the page's
+// head; NaN where another server serves the page, as Vite's does.
+const PROJECTS = Number(document.querySelector<HTMLMetaElement>('meta[name="projects"]')?.content)
 // Ordered to onboard visitors quickly: most start typing after two or three
 // prompts, so the first few do most of the work and should show the range of
 // the index.
@@ -394,13 +397,13 @@ function Header({ lede }: { lede?: boolean }) {
       </h1>
       {lede && (
         <p className="lede">
-          Decades of Northwestern undergraduate research:{' '}
-          <a href="https://undergradresearch.northwestern.edu/funding/surg/">SURG</a> grants{' '}
-          <span className="nowrap">(2007–2024)</span>,{' '}
-          <a href="https://undergradresearch.northwestern.edu/share/expo/">Expo</a> projects{' '}
-          <span className="nowrap">(2003–2026)</span>, honors theses <span className="nowrap">(1980–2026)</span>, and{' '}
-          <a href="https://thenurj.com/">NURJ</a> papers <span className="nowrap">(2004–2026)</span>. Search by topic,
-          method, field, or person.
+          {/* The index's size, rounded down to a hundred so that it holds
+              as projects are added. */}
+          {PROJECTS >= 100 && `${(Math.floor(PROJECTS / 100) * 100).toLocaleString('en-US')} `}
+          Northwestern undergraduate research projects since {FIRST_YEAR}:{' '}
+          <a href="https://undergradresearch.northwestern.edu/funding/surg/">SURG</a> grants,{' '}
+          <a href="https://undergradresearch.northwestern.edu/share/expo/">Expo</a> projects, honors theses, and{' '}
+          <a href="https://thenurj.com/">NURJ</a> papers. Search by topic, method, field, or person.
         </p>
       )}
     </header>
@@ -462,9 +465,13 @@ function Search() {
   const [query, setQuery] = useState(readUrl)
   const { q, source, from, to, disciplines, page } = query
   const [results, setResults] = useState<Project[] | null>(null)
-  // The disciplines the shown results' search offers, and whether it had no
-  // query.
-  const [offered, setOffered] = useState<{ ids: string[]; browsing: boolean }>({ ids: [], browsing: true })
+  // The disciplines the shown results' search offers, those none of its
+  // results are in, and whether it had no query.
+  const [offered, setOffered] = useState<{ ids: string[]; empty: string[]; browsing: boolean }>({
+    ids: [],
+    empty: [],
+    browsing: true,
+  })
   // Whether the list of every discipline is open. New results then leave the
   // page where it is, so the list does not move while it is chosen from.
   const listOpen = useRef(false)
@@ -559,7 +566,7 @@ function Search() {
           shownSeq = seq
           setListed({ seq, offset: (page - 1) * PAGE })
           setResults(data.results)
-          setOffered({ ids: data.disciplines, browsing: !used })
+          setOffered({ ids: data.disciplines, empty: data.empty, browsing: !used })
           setQuotes(quotePattern(used))
           setTotal(data.total)
           setError('')
@@ -620,6 +627,7 @@ function Search() {
       <Disciplines
         offered={offered.ids}
         browsing={offered.browsing}
+        empty={offered.empty}
         chosen={disciplines}
         onChange={(value) => change({ disciplines: value })}
         onOpen={onListOpen}
@@ -744,7 +752,9 @@ const LIST_MARGIN = 12 // kept clear between the open list and the window's bott
 
 // The discipline filter: a row of chips, each choosing or dropping one
 // discipline, and a button that opens the list of them all by area. Results
-// are of any of the disciplines chosen.
+// are of any of the disciplines chosen. The list draws a discipline none of
+// the search's results are in as an outline; the row offers only those some
+// are in.
 //
 // The row is one line. With a mouse, a chip that doesn't fit in what is left
 // of the line is left out, and a later, shorter one may take its place; under
@@ -754,12 +764,14 @@ const LIST_MARGIN = 12 // kept clear between the open list and the window's bott
 function Disciplines({
   offered,
   browsing,
+  empty,
   chosen,
   onChange,
   onOpen,
 }: {
   offered: string[]
   browsing: boolean
+  empty: string[]
   chosen: string[]
   onChange: (value: string[]) => void
   onOpen: (open: boolean) => void
@@ -867,8 +879,16 @@ function Disciplines({
   const toggle = (id: string) => onChange(chosen.includes(id) ? chosen.filter((d) => d !== id) : [...chosen, id])
   const chip = (id: string, inRow: boolean, hidden = false) => {
     const on = chosen.includes(id)
+    const none = !inRow && !on && empty.includes(id)
     return (
-      <button key={id} className={on ? 'chip on' : 'chip'} aria-pressed={on} inert={hidden} onClick={() => toggle(id)}>
+      <button
+        key={id}
+        className={`chip${on ? ' on' : ''}${none ? ' none' : ''}`}
+        title={none ? 'No results' : undefined}
+        aria-pressed={on}
+        inert={hidden}
+        onClick={() => toggle(id)}
+      >
         {DISCIPLINE.get(id)!.label}
         {on && inRow && (
           <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -1,12 +1,14 @@
 """HTTP API for project search.
 
 - GET /api/search?q=...&source=surg|expo|theses|nurj&from=YEAR&to=YEAR&discipline=ID&n=20&offset=0
-  returns {"results": [...], "total": int, "disciplines": [...]}, each result
+  returns {"results": [...], "total": int, "disciplines": [...], "empty":
+  [...]}, each result
   as search.public describes it; "total" counts the matches at every offset.
   An empty or missing q browses all projects, most recent first. discipline
   may be given more than once and keeps the projects filed under any of them;
   "disciplines" is the ids of those to offer as filters, the likeliest first,
-  and does not change with the ones chosen (see search).
+  and "empty" is the ids of those none of the matches are filed under;
+  neither changes with the ones chosen (see search).
 - GET /api/project/NUMBER returns {"project": ..., "similar": [...]} for the
   project a share number leads to (see pipeline.share_ids), or 404.
 - GET /api/health returns {"ok": true} once the index is loaded.
@@ -14,6 +16,8 @@
   result (see querylog.report) and always answers 204.
 - GET /p/NUMBER serves the frontend's page with the project's title and a
   description in its head, for link previews.
+- GET / serves the frontend's page with the number of projects in the index
+  in its head, which the page's opening sentence gives.
 - Everything else serves the built frontend from frontend/dist, when it
   exists; in development the Vite dev server serves it instead.
 
@@ -90,7 +94,7 @@ def search_projects(
     years = None if year_from is None and year_to is None else (year_from or 0, year_to or 9999)
     start = time.perf_counter()
     chosen = tuple(dict.fromkeys(discipline or ()))
-    results, total, offered = app.state.index.search(q, source, years, n, offset, chosen)
+    results, total, offered, empty = app.state.index.search(q, source, years, n, offset, chosen)
     cause = request.headers.get("x-cause")
     log(request, "search", {
         "q": q.replace("\x00", ""),  # Postgres refuses JSON holding a NUL
@@ -107,7 +111,7 @@ def search_projects(
         "shown": querylog.number(request.headers.get("x-shown")),
         "cause": cause if cause in CAUSES else None,
     })
-    return {"results": [search.public(p) for p in results], "total": total, "disciplines": offered}
+    return {"results": [search.public(p) for p in results], "total": total, "disciplines": offered, "empty": empty}
 
 
 @app.get("/api/project/{number}")
@@ -179,5 +183,10 @@ if FRONTEND_DIR.exists():
             '<meta name="twitter:card" content="summary" />'
         )
         return HTMLResponse(page.replace(f"<title>{SITE}</title>", f"<title>{title}</title>{head}"))
+
+    @app.get("/", response_class=HTMLResponse)
+    def search_page() -> HTMLResponse:
+        held = f'<meta name="projects" content="{len(app.state.index.projects)}" />'
+        return HTMLResponse(page.replace("<title>", f"{held}<title>", 1))
 
     app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True))

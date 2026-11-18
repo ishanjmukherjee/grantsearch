@@ -114,11 +114,6 @@ h1 a {
   color: var(--text);
 }
 
-/* Keeps a year range from breaking at its en dash. */
-.nowrap {
-  white-space: nowrap;
-}
-
 /* Only the search box stays pinned; the filters below it scroll away, so the
    pinned strip stays one row high however many filters there are. */
 .controls {
@@ -433,6 +428,13 @@ h1 a {
 .chip.on {
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+/* A discipline none of the results are in: an outline, set back from the
+   filled chips, which can still be chosen. */
+.chip.none {
+  background: none;
+  box-shadow: inset 0 0 0 1px var(--border);
 }
 
 .chip svg {

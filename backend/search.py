@@ -51,13 +51,18 @@ applied to the finished ranking, so choosing one drops results without
 reordering those left. A search also says which disciplines to offer: those of
 its first FACET_N results before any discipline is chosen, the commonest
 first and, of two as common, the one met first. Choosing a discipline thus
-leaves the others on offer. A query ranks every project that has vectors, so
-the number of matches in a discipline says nothing about the query, and no
-counts are given. With no query the disciplines are counted over every
+leaves the others on offer. With no query the disciplines are counted over every
 project the other filters keep, each project under its main discipline alone:
 the order is then of how much work is done in each, and Area & global studies,
 a second or third discipline of 545 projects and the main one of 23, does not
 stand ahead of History.
+
+A search also says which disciplines are empty: those none of its results
+are filed under, again before any discipline is chosen, so that choosing one
+alone would leave nothing. It gives no counts beyond that. A query ranks
+every project that has vectors, so the number of its results in a discipline
+is how much of the index the discipline holds within the other filters, and
+says little about the query.
 
 A project's similar projects are those whose document or summary vectors are
 nearest any of its own; one without vectors uses a search for its title, or
@@ -410,6 +415,11 @@ class Index:
         counts = filed.sum(axis=0)
         return [disciplines.IDS[j] for j in np.lexsort((filed.argmax(axis=0), -counts)) if counts[j]]
 
+    def empty(self, ranked: list[int]) -> list[str]:
+        """The disciplines none of these projects are filed under."""
+        held = self.filed[np.asarray(ranked, dtype=int)].any(axis=0)
+        return [d for d, some in zip(disciplines.IDS, held) if not some]
+
     def search(
         self,
         query: str,
@@ -418,16 +428,18 @@ class Index:
         n: int = 20,
         offset: int = 0,
         chosen: tuple[str, ...] = (),
-    ) -> tuple[list[dict], int, list[str]]:
+    ) -> tuple[list[dict], int, list[str], list[str]]:
         """The n projects after the first offset matching the filters, ranked
         for the query, or in browse order when it is empty; how many match in
-        all; and the disciplines to offer (see the module docstring). chosen
-        is the disciplines to keep, any of them; empty keeps every project."""
+        all; the disciplines to offer; and the empty ones (see the module
+        docstring). chosen is the disciplines to keep, any of them; empty
+        keeps every project."""
         within = self.filed[:, [disciplines.IDS.index(d) for d in chosen]].any(axis=1) if chosen else np.ones(len(self.projects), dtype=bool)
 
-        def page(ranked: list[int], offered: list[str]) -> tuple[list[dict], int, list[str]]:
+        def page(ranked: list[int], offered: list[str]) -> tuple[list[dict], int, list[str], list[str]]:
+            empty = self.empty(ranked)
             ranked = [i for i in ranked if within[i]]
-            return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked), offered
+            return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked), offered, empty
 
         keep = np.array([
             (source is None or any(r["source"] in FILTERS[source] for r in p["records"]))
@@ -475,7 +487,7 @@ def main() -> None:
     parser.add_argument("-n", type=int, default=10)
     args = parser.parse_args()
 
-    results, total, offered = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n, chosen=tuple(args.discipline))
+    results, total, offered, _ = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n, chosen=tuple(args.discipline))
     for rank, p in enumerate(results, 1):
         tags = [f"{TAGS[r['source']]} {r['year']}" for r in p["records"]]
         print(f"{rank:2}. {p['title'] or '(untitled)'}  [{', '.join(tags)}]")
