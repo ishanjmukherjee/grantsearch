@@ -1,7 +1,8 @@
 """The records every source is parsed into, all in one shape, and their files.
 
 A record is one source's account of one piece of work: a SURG grant, an Expo
-or Symposium poster, an honors thesis, a NURJ paper. Each source's parser
+or Symposium poster, an honors thesis, a NURJ paper, a year of a Leopold
+Fellowship (fellows working on one faculty member's project). Each source's parser
 writes its records to data/records/<source>.jsonl (SOURCES), one per line,
 sorted by id. The stages after parsing (linking, cards, embedding, search)
 read these files and no parser's own output. A record holds only what its
@@ -11,19 +12,21 @@ the 2003 Symposium's untitled projects, is kept apart, keyed by record id.
 A record has these fields, always in this order:
 
 - id: "<prefix>-YYYY-NNN" ("surg-2023-014", "expo-2024-001",
-  "symposium-2009-001", "econ-2026-001"), or "nurj:<lead record>" for NURJ.
+  "symposium-2009-001", "econ-2026-001", "leopold-2024-001"), or
+  "nurj:<lead record>" for NURJ.
   Each parser keeps its ids stable across runs; cards, glosses, links and
   share numbers refer to them.
 - source: the file it is in, one of SOURCES.
-- kind: "grant", "presentation", "thesis" or "paper".
+- kind: "grant", "presentation", "thesis", "paper" or "fellowship".
 - year: the year of the grant, presentation or publication, or a thesis's
   graduating year.
 - title: as printed, or None when the source prints none (the 2003
   Symposium's program, the 2010-11 October academic-year URG post). How an
   untitled record is shown is the frontend's choice.
 - people: everyone the source names, students first, in the source's order.
-  Each is {role, first, last, ...}: role is "student" (an awardee, presenter
-  or author) or "advisor" (a faculty advisor, sponsor or thesis advisor).
+  Each is {role, first, last, ...}: role is "student" (an awardee, presenter,
+  author or fellow) or "advisor" (a faculty advisor, sponsor, thesis advisor
+  or a fellow's faculty mentor).
   first holds every given name as printed, a preferred name in parentheses
   included ("Xinyuan (Joyce)"); it is "" for someone named by surname alone.
   Then whatever the source adds: a student's school, majors, major, level,
@@ -53,8 +56,8 @@ from pipeline.parse_expo import INSTITUTION
 from pipeline.scrape_surg import DATA_DIR, PARTICLES, SUFFIXES, fold, split_name
 
 RECORDS_DIR = DATA_DIR / "records"
-SOURCES = ("surg", "ay_urg", "expo", "symposium", "theses", "nurj")
-KINDS = ("grant", "presentation", "thesis", "paper")
+SOURCES = ("surg", "ay_urg", "expo", "symposium", "theses", "nurj", "leopold")
+KINDS = ("grant", "presentation", "thesis", "paper", "fellowship")
 ROLES = ("student", "advisor")
 FIELDS = ("id", "source", "kind", "year", "title", "people", "abstract", "text", "url", "page", "listings", "extra")
 REQUIRED = FIELDS[:10]
