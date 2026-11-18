@@ -2202,7 +2202,7 @@
 {"id": "surg-2021-082", "records": ["surg-2021-082"], "disciplines": ["neuroscience"]}
 {"id": "surg-2021-083", "records": ["surg-2021-083"], "disciplines": ["biology"]}
 {"id": "surg-2021-084", "records": ["surg-2021-084"], "disciplines": ["psychology"]}
-{"id": "surg-2021-085", "records": ["surg-2021-085"], "disciplines": ["biology"]}
+{"id": "surg-2021-085", "records": ["expo-2022-015", "surg-2021-085"], "disciplines": ["biology"]}
 {"id": "surg-2021-086", "records": ["surg-2021-086"], "disciplines": ["psychology", "gender-sexuality"]}
 {"id": "surg-2021-087", "records": ["surg-2021-087"], "disciplines": ["psychology", "race-ethnicity"]}
 {"id": "surg-2021-088", "records": ["expo-2022-069", "surg-2021-088"], "disciplines": ["anthropology", "gender-sexuality", "area-studies"]}
@@ -2301,7 +2301,7 @@
 {"id": "surg-2021-182", "records": ["surg-2021-182"], "disciplines": ["history", "race-ethnicity"]}
 {"id": "surg-2021-183", "records": ["surg-2021-183"], "disciplines": ["biology"]}
 {"id": "surg-2021-184", "records": ["surg-2021-184"], "disciplines": ["neuroscience", "medicine"]}
-{"id": "surg-2021-185", "records": ["surg-2021-185"], "disciplines": ["materials-science", "chemistry"]}
+{"id": "surg-2021-185", "records": ["expo-2022-037", "surg-2021-185"], "disciplines": ["chemistry", "materials-science"]}
 {"id": "surg-2021-186", "records": ["surg-2021-186"], "disciplines": ["psychology"]}
 {"id": "surg-2021-187", "records": ["surg-2021-187"], "disciplines": ["engineering", "materials-science"]}
 {"id": "surg-2021-188", "records": ["surg-2021-188"], "disciplines": ["business-finance", "psychology"]}
@@ -4172,7 +4172,6 @@
 {"id": "expo-2022-010", "records": ["expo-2022-010"], "disciplines": ["biology", "neuroscience"]}
 {"id": "expo-2022-011", "records": ["expo-2022-011"], "disciplines": ["psychology"]}
 {"id": "expo-2022-013", "records": ["expo-2022-013"], "disciplines": ["biology"]}
-{"id": "expo-2022-015", "records": ["expo-2022-015"], "disciplines": ["biology"]}
 {"id": "expo-2022-016", "records": ["expo-2022-016", "nurj:scribd-683622799-17"], "disciplines": ["literature-languages", "gender-sexuality"]}
 {"id": "expo-2022-017", "records": ["expo-2022-017"], "disciplines": ["biology", "medicine"]}
 {"id": "expo-2022-019", "records": ["expo-2022-019"], "disciplines": ["education", "race-ethnicity"]}
@@ -4188,7 +4187,6 @@
 {"id": "expo-2022-031", "records": ["expo-2022-031"], "disciplines": ["psychology", "race-ethnicity"]}
 {"id": "expo-2022-032", "records": ["expo-2022-032"], "disciplines": ["public-policy", "race-ethnicity"]}
 {"id": "expo-2022-035", "records": ["expo-2022-035"], "disciplines": ["sociology", "education", "earth-environment"]}
-{"id": "expo-2022-037", "records": ["expo-2022-037"], "disciplines": ["chemistry", "materials-science"]}
 {"id": "expo-2022-039", "records": ["expo-2022-039", "polisci-2022-009"], "disciplines": ["political-science"]}
 {"id": "expo-2022-040", "records": ["expo-2022-040", "mmss-2022-006"], "disciplines": ["psychology"]}
 {"id": "expo-2022-041", "records": ["expo-2022-041"], "disciplines": ["psychology", "political-science"]}

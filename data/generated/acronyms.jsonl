@@ -466,7 +466,6 @@
 {"id": "ecls-k", "spelling": "ECLS-K", "expansion": "Early Childhood Longitudinal Study, Kindergarten Class", "proposed": ["Early Childhood Longitudinal Study, Kindergarten Class", "Early Childhood Longitudinal Study, Kindergarten Cohort"], "reason": "named dataset"}
 {"id": "ecm", "spelling": "ECM", "expansion": "extracellular matrix", "proposed": ["extracellular matrix"], "reason": "the dominant meaning"}
 {"id": "ecog", "spelling": "ECoG", "expansion": "electrocorticography", "proposed": ["electrocorticography"], "reason": "the dominant meaning here"}
-{"id": "ecr", "spelling": "ECR", "expansion": null, "proposed": ["electrical conductivity relaxation"], "reason": "site also uses it for electrochemical CO2 reduction"}
 {"id": "edm", "spelling": "EDM", "expansion": null, "proposed": ["electronic dance music"], "reason": "also electric dipole moment, electrical discharge machining"}
 {"id": "edta", "spelling": "EDTA", "expansion": "ethylenediaminetetraacetic acid", "proposed": ["ethylenediaminetetraacetic acid"], "reason": "hardly anything else"}
 {"id": "edx", "spelling": "EDX", "expansion": null, "proposed": ["energy-dispersive X-ray spectroscopy"], "reason": "also the edX online course platform"}
@@ -944,6 +943,7 @@
 {"id": "kosis", "spelling": "KOSIS", "expansion": "Korean Statistical Information Service", "proposed": ["Korean Statistical Information Service"], "reason": "named database"}
 {"id": "kospi", "spelling": "KOSPI", "expansion": "Korea Composite Stock Price Index", "proposed": ["Korea Composite Stock Price Index"], "reason": "named index"}
 {"id": "kras", "spelling": "KRAS", "expansion": "Kirsten rat sarcoma viral oncogene", "proposed": ["Kirsten rat sarcoma viral oncogene"], "reason": "gene name"}
+{"id": "ladco", "spelling": "LADCO", "expansion": "Lake Michigan Air Directors Consortium", "proposed": ["Lake Michigan Air Directors Consortium"], "reason": "named regional air agency; no other common meaning"}
 {"id": "lapd", "spelling": "LAPD", "expansion": "Los Angeles Police Department", "proposed": ["Los Angeles Police Department"], "reason": "the dominant meaning"}
 {"id": "larc", "spelling": "LARC", "expansion": "long-acting reversible contraception", "proposed": ["long-acting reversible contraception"], "reason": "the dominant meaning"}
 {"id": "lasd", "spelling": "LASD", "expansion": "Los Angeles County Sheriff's Department", "proposed": ["Los Angeles County Sheriff's Department"], "reason": "no rival in use"}
@@ -1394,7 +1394,6 @@
 {"id": "pka", "spelling": "PKA", "expansion": null, "proposed": ["protein kinase A"], "reason": "also pKa, the acid dissociation constant"}
 {"id": "pkc", "spelling": "PKC", "expansion": "protein kinase C", "proposed": ["protein kinase C"], "reason": "gene name"}
 {"id": "pki", "spelling": "PKI", "expansion": "public key infrastructure", "proposed": ["public key infrastructure"], "reason": "the dominant meaning"}
-{"id": "pld", "spelling": "PLD", "expansion": null, "proposed": ["pulsed laser deposition"], "reason": "also phospholipase D"}
 {"id": "plg", "spelling": "PLG", "expansion": "poly(lactide-co-glycolide)", "proposed": ["poly(lactide-co-glycolide)"], "reason": "the dominant meaning here"}
 {"id": "plga", "spelling": "PLGA", "expansion": "poly(lactic-co-glycolic acid)", "proposed": ["poly(lactic-co-glycolic acid)"], "reason": "polymer name, no rival"}
 {"id": "pll", "spelling": "PLL", "expansion": "phase-locked loop", "proposed": ["phase-locked loop"], "reason": "the dominant meaning"}
@@ -1675,7 +1674,6 @@
 {"id": "srte", "spelling": "SrTe", "expansion": "strontium telluride", "proposed": ["strontium telluride"], "reason": "chemical formula"}
 {"id": "ssb", "spelling": "SSB", "expansion": null, "proposed": ["sugar-sweetened beverage"], "reason": "also single-strand break and binding protein"}
 {"id": "ssdi", "spelling": "SSDI", "expansion": "Social Security Disability Insurance", "proposed": ["Social Security Disability Insurance"], "reason": "named program"}
-{"id": "ssi", "spelling": "SSI", "expansion": null, "proposed": ["surgical site infection"], "reason": "also Supplemental Security Income"}
 {"id": "ssim", "spelling": "SSIM", "expansion": "structural similarity index measure", "proposed": ["structural similarity index measure"], "reason": "no rival in use"}
 {"id": "sslp", "spelling": "SSLP", "expansion": "simple sequence length polymorphism", "proposed": ["simple sequence length polymorphism"], "reason": "no rival in use"}
 {"id": "ssnmr", "spelling": "SSNMR", "expansion": "solid-state nuclear magnetic resonance", "proposed": ["solid-state nuclear magnetic resonance"], "reason": "no rival in use"}

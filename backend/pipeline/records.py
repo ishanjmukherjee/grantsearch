@@ -31,7 +31,8 @@ A record has these fields, always in this order:
 - abstract: the abstract or description, or None. A poster listed once per
   presenter has its distinct abstracts joined (see fold_listings).
 - text: the work's full text, where the source has it and its parser reads
-  it (the Computer Science theses so far), or None.
+  it (the Computer Science theses, NURJ papers and Expo 2022's ForagerOne
+  posters so far), or None.
 - url: where a visitor can check the record: the winners page, program or
   guide PDF, thesis page or PDF, or NURJ's own copy.
 - page: the 1-based page of url the record starts on, or None.
@@ -223,7 +224,7 @@ def poster_groups(listings: list[dict]) -> list[list[dict]]:
     return list(groups.values())
 
 
-LISTING_EXTRAS = ("format", "subjects", "forager_id", "abstract_source", "project")
+LISTING_EXTRAS = ("format", "subjects", "department", "forager_id", "abstract_source", "project")
 
 
 def fold_listings(source: str, listings: list[dict]) -> list[dict]:
@@ -251,8 +252,9 @@ def fold_listings(source: str, listings: list[dict]) -> list[dict]:
         out.append(record(
             first["id"], source, "presentation", first["year"], first["title"], people,
             fold_abstracts([e["abstract"] for e in group]), first["source"], first["page"],
-            listings=[{k: v for k, v in e.items() if k not in ("year", "source")} for e in group] if len(group) > 1 else None,
+            listings=[{k: v for k, v in e.items() if k not in ("year", "source", "text")} for e in group] if len(group) > 1 else None,
             extra={k: first.get(k) for k in LISTING_EXTRAS},
+            text="\n\n".join(dict.fromkeys(e["text"] for e in group if e.get("text"))) or None,
         ))
     return out
 

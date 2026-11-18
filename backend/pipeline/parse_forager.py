@@ -1,4 +1,4 @@
-"""Expo 2020 listings, from the ForagerOne presentations in data/raw/forager/.
+"""Expo listings from ForagerOne: Expo 2020's, and what Expo 2022's adds to its program.
 
 Expo 2020 was held online, so it has no program of abstracts; the program
 guide (data/raw/expo/2020.pdf) lists only presenters and titles, by section.
@@ -22,16 +22,34 @@ has the guide's title and, as its abstract, the student's own abstract of
 the project from another venue, which abstract_source names ({name, url}),
 so that a result can say where the text is from.
 
+Expo 2022 was held in person with a printed program of abstracts, and its
+posters were also put on ForagerOne (event 627, data/raw/forager_nuexpo22/).
+Each one is matched to its program listing (see posted), which keeps the
+program's title, abstract and advisors and adds:
+
+- forager_id, format (poster or oral, as the submission form gives it),
+  subjects, and department, the form's free-text department, as typed.
+- each presenter's major, class year and school, and the split of their
+  name into first and last as they entered it, where they spell it as the
+  program does ("Alexi" "Ortega Chavez", which the program's names had as
+  "Alexi Ortega" "Chavez"). Pronouns, which the form also asks
+  for, are not kept.
+- the mentor the form names, where the program names no advisor like them.
+- text: the poster's text (poster.pdf, as scrape_forager redacted it), or
+  None for a poster that is all images.
+
 Used by pipeline.parse_expo, which writes the records.
 """
 
+import difflib
+import html
 import json
 import re
 
 import pymupdf
 
 from pipeline.parse_expo import PARTICLES, RAW_DIR, text
-from pipeline.records import words
+from pipeline.records import advisors, words
 
 FORAGER_DIR = RAW_DIR / "forager"
 SUPPLEMENTS = RAW_DIR / "expo2020_supplements.json"
@@ -81,6 +99,19 @@ ENTRY_X = 90  # entries start at the left margin; wrapped lines are indented
 # A leading label in an abstract, and a label line of its submission header.
 LEADING_LABEL = re.compile(r"\s*(?:Abstract|Description(?: and Artist[’']?s? Statement)?)\s*\n")
 HEADER_LABEL = re.compile(r"(?:Faculty|Doctoral Student|Graduate Student) (?:Advisor|Mentor)s?:")
+# The years whose program listings ForagerOne posters add to, and the
+# directory of each one's presentations.
+POSTED = {2022: RAW_DIR / "forager_nuexpo22"}
+# The submission form's fields, by id: the presentation's department, format
+# and mentor, and each presenter's schools.
+FORM_DEPARTMENT = "59088b36dba99947c708489d00d9e2de"
+FORM_FORMAT = "834db3d8f28b7efc13f2e074230c4ad9"
+FORM_MENTOR = "964181684a9956120f7898ccdeb61310"
+FORM_SCHOOLS = "3b3113123845a711d415a2c179ad80c9"
+FORMATS = {"Poster Presentation": "poster", "Oral Presentation": "oral"}
+# Surname similarity at which a mentor is an advisor the program already
+# names, spelled differently ("Grisinger" and the program's "Grisginer").
+SAME_SURNAME = 0.8
 # Minimum title-word overlap at which a short opening paragraph of an
 # abstract is its title, repeated.
 MIN_MATCH = 0.5
@@ -224,3 +255,88 @@ def entries(doc: pymupdf.Document) -> list[dict]:
     # Guide order, then the presentations the guide leaves out, by id.
     ranked = sorted(zip(order, out), key=lambda x: (x[0] is None, x[0] or 0, x[1].get("forager_id", 0)))
     return [e for _, e in ranked]
+
+
+def html_text(s: str | None) -> str:
+    """ForagerOne's HTML title or abstract as plain text, paragraphs kept."""
+    s = re.sub(r"</p>|<br\s*/?>", "\n", s or "")
+    return html.unescape(re.sub(r"<[^>]+>", "", s)).replace("\ufeff", "")
+
+
+def same_presenter(listed: dict, posted: dict) -> bool:
+    """Whether a program's presenter is a ForagerOne presenter: the same
+    letters in the full name, however it is split, or (for a name printed
+    otherwise, with a nickname or a typo) a shared surname."""
+    full = letters(f"{posted['firstName']} {posted['lastName']}")
+    return letters(f"{listed['first']} {listed['last']}") == full or names_surname(f"{listed['first']} {listed['last']}", posted["lastName"])
+
+
+def poster_text(path) -> str | None:
+    t = text("\n".join(page.get_text() for page in pymupdf.open(path)))
+    return t or None
+
+
+def advisor_named(advisor_line: str | None, mentor: dict) -> bool:
+    """Whether an advisor line names this mentor: a surname the same, or close
+    with the same first initial."""
+    for a in advisors(advisor_line):
+        x, y = letters(a["last"]), letters(mentor["last"])
+        if x == y or (a["first"][:1].lower() == mentor["first"][:1].lower() and difflib.SequenceMatcher(None, x, y).ratio() >= SAME_SURNAME):
+            return True
+    return False
+
+
+def posted(entries: list[dict], year: int) -> None:
+    """Add to a program's entries what their ForagerOne posters give (see the
+    module docstring). Each poster matches the entry naming one of its
+    presenters whose title and abstract are closest to its own; every poster
+    must match, and no two the same entry."""
+    matched = {}
+    for d in sorted(POSTED[year].iterdir()):
+        if not d.is_dir():
+            continue
+        pres = json.loads((d / "presentation.json").read_text())
+        title, summary = text(html_text(pres["title"])), text(html_text(pres["abstract"]))
+        found = [i for i, e in enumerate(entries) if any(same_presenter(p, q) for p in e["presenters"] for q in pres["presenters"])]
+        if not found:
+            raise SystemExit(f"ForagerOne presentation {pres['presentationId']} matches no {year} program listing")
+        i = max(found, key=lambda i: overlap(title, entries[i]["title"]) + overlap(summary, entries[i]["abstract"] or ""))
+        if i in matched:
+            raise SystemExit(f"ForagerOne presentations {matched[i]} and {pres['presentationId']} match one listing")
+        matched[i] = pres["presentationId"]
+        e = entries[i]
+        form = pres["submissionFormExtraValues"]
+        for q, extra in zip(pres["presenters"], form["presenters"], strict=True):
+            (j,) = [j for j, p in enumerate(e["presenters"]) if same_presenter(p, q)]
+            p = e["presenters"][j]
+            first, last = p["first"], p["last"]
+            # The program's name, split where the presenter split it, when
+            # both spell it alike ("Alexi Ortega" "Chavez" is "Alexi" "Ortega
+            # Chavez"). A name printed otherwise (a nickname, a typo) stays
+            # as printed.
+            full = f"{first} {last}".split()
+            given = len(text(q["firstName"]).split())
+            if letters(" ".join(full)) == letters(f"{q['firstName']} {q['lastName']}") and 0 < given < len(full):
+                first, last = " ".join(full[:given]), " ".join(full[given:])
+            e["presenters"][j] = {
+                **p,
+                "first": first,
+                "last": last,
+                "major": text(q.get("major") or "") or None,
+                "level": text(q.get("level") or "") or None,
+                "school": "; ".join(extra.get(FORM_SCHOOLS) or []) or None,
+            }
+        for mentor in advisors(text(form["presentation"][FORM_MENTOR])):
+            if not advisor_named(e["advisor"], mentor):
+                name = f"{mentor['first']} {mentor['last']}".strip()
+                e["advisor"] = f"{e['advisor']}, {name}" if e["advisor"] else name
+        # The form's department sometimes runs on into the title.
+        department = text(form["presentation"][FORM_DEPARTMENT])
+        department = text(department.removesuffix(text(html_text(pres["title"])))) or None
+        e |= {
+            "forager_id": pres["presentationId"],
+            "format": FORMATS[form["presentation"][FORM_FORMAT]],
+            "subjects": pres["subjects"],
+            "department": department,
+            "text": poster_text(d / "poster.pdf"),
+        }

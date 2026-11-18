@@ -14,6 +14,9 @@ type Listing = {
   // Where the abstract is from when the program printed none (Expo 2020's
   // one project never posted online has the student's abstract from elsewhere).
   abstract_source: { name: string; url: string } | null
+  // The listing's poster from ForagerOne, hosted at files.prowl.nu (Expo
+  // 2022's); slides when it has several pages.
+  pdf: { url: string; slides: boolean } | null
 }
 // One source's account of the project: a SURG or AY URG grant (with its
 // students and advisors), an Expo or Symposium poster (with its listings), or
@@ -1194,12 +1197,17 @@ function Result({
     const label = (name: string, what: string, own = true) =>
       brief && own ? what[0].toUpperCase() + what.slice(1) : `${name} ${what}`
     const links = [
-      ...(s.entries ?? []).map((e) => {
+      // Each listing's poster, where Prowl hosts it, then its program page.
+      ...(s.entries ?? []).flatMap((e) => {
         const what = `listing${listed.get(e.year)! > 1 && e.page ? `, p. ${e.page}` : ''}`
         const own = e.source === s.source && e.year === s.year
-        return sourceLink(e.id, e.source, e.url, label(`${SOURCE_NAMES[e.source]} ${e.year}`, what, own), true)
+        const name = `${SOURCE_NAMES[e.source]} ${e.year}`
+        return [
+          ...(e.pdf ? [sourceLink(e.id, 'expo-pdf', e.pdf.url, label(name, e.pdf.slides ? 'slides' : 'poster', own), true)] : []),
+          sourceLink(e.id, e.source, e.url, label(name, what, own), true),
+        ]
       }),
-      // The PDFs Prowl hosts come first, then where the records are from.
+      // A record's PDF that Prowl hosts comes first, then where it is from.
       ...(s.records ?? []).flatMap((r) =>
         !r.pdf
           ? []

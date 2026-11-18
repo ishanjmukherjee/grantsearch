@@ -17,3 +17,6 @@ data/cache/
 
 # MMSS papers, copied from the mmss-papers checkout by pipeline.mmss_pdfs
 data/pdfs/mmss/
+
+# Expo posters, copied from data/raw by pipeline.expo_pdfs
+data/pdfs/expo/

@@ -3,7 +3,8 @@ its predecessor, the Undergraduate Research Symposium, 2003-2011 (see
 pipeline.parse_symposium; their ids start "symposium-").
 
 Expo 2020, held online, has no printed abstracts; its listings come from
-ForagerOne (see pipeline.parse_forager). The printed ones come in two layouts:
+ForagerOne (see pipeline.parse_forager), as do the posters, majors and class
+years that Expo 2022's listings add to its program. The printed ones come in two layouts:
 
 - Programs (2012-2019, 2021-2023): presenter in bold, "Faculty Advisor:" in
   italics, title in bold, abstract in regular weight, small page footers and a
@@ -646,6 +647,7 @@ def main() -> None:
     # Imported here: pipeline.parse_symposium and pipeline.records use this
     # module's names.
     from pipeline import parse_symposium, records
+    from pipeline.parse_forager import POSTED, posted
 
     previous = records.expand_listings(records.load("expo", "symposium"))
     out = []
@@ -664,6 +666,8 @@ def main() -> None:
             entries = forager_entries(doc)
         elif year in PROGRAM_SECTIONS:
             entries = parse_program(doc, year)
+            if year in POSTED:
+                posted(entries, year)
         else:
             entries = parse_guide(doc, last_first=year in LAST_FIRST_YEARS)
         transcribe(year, entries)

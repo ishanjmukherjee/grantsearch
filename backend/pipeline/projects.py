@@ -120,8 +120,9 @@ def unrole(person: dict) -> dict:
 def entries(records: list[dict]) -> list[dict]:
     """The listings of the posters among records, by id: a poster listed once
     per presenter has several. Each is {id, record, source, year, title,
-    presenters, advisors, abstract, url, page, abstract_source}, presenters
-    and advisors as {first, last, ...}."""
+    presenters, advisors, abstract, url, page, abstract_source, forager_id},
+    presenters and advisors as {first, last, ...}, and forager_id the
+    ForagerOne poster's id, or None."""
     out = []
     for r in records:
         if r["kind"] != "presentation":
@@ -129,11 +130,11 @@ def entries(records: list[dict]) -> list[dict]:
         common = {"record": r["id"], "source": r["source"], "year": r["year"], "url": r["url"]}
         if "listings" in r:
             for e in r["listings"]:
-                out.append({"id": e["id"], **common, "title": e["title"], "presenters": e["presenters"], "advisors": [unrole(a) for a in advisors(e["advisor"])], "abstract": e["abstract"], "page": e["page"], "abstract_source": e.get("abstract_source")})
+                out.append({"id": e["id"], **common, "title": e["title"], "presenters": e["presenters"], "advisors": [unrole(a) for a in advisors(e["advisor"])], "abstract": e["abstract"], "page": e["page"], "abstract_source": e.get("abstract_source"), "forager_id": e.get("forager_id")})
         else:
             students = [unrole(p) for p in r["people"] if p["role"] == "student"]
             advisor_people = [unrole(p) for p in r["people"] if p["role"] == "advisor"]
-            out.append({"id": r["id"], **common, "title": r["title"], "presenters": students, "advisors": advisor_people, "abstract": r["abstract"], "page": r["page"], "abstract_source": r.get("extra", {}).get("abstract_source")})
+            out.append({"id": r["id"], **common, "title": r["title"], "presenters": students, "advisors": advisor_people, "abstract": r["abstract"], "page": r["page"], "abstract_source": r.get("extra", {}).get("abstract_source"), "forager_id": r.get("extra", {}).get("forager_id")})
     return sorted(out, key=lambda e: e["id"])
 
 

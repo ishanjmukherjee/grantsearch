@@ -217,7 +217,8 @@ def public(p: dict) -> dict:
     thesis, or None), and for a thesis its department, academic year and, for a
     Computer Science thesis, its technical report number; and for a poster,
     its listings, each {id, title, presenters, advisors, abstract,
-    url, page, abstract_source}, its url at the listing's page. A presenter who is
+    url, page, abstract_source, pdf}, its url at the listing's page and pdf
+    the poster Prowl hosts for it, {url, slides}, or None. A presenter who is
     one of a grant's awardees is named as the grant names them, so that the
     card shows one person once."""
     awardees = [a for g in grants(p) for a in students(g)]
@@ -247,6 +248,7 @@ def public(p: dict) -> dict:
                 "url": f"{e['url']}#page={e['page']}" if e["page"] else e["url"],
                 "page": e["page"],
                 "abstract_source": e["abstract_source"],
+                "pdf": e.get("pdf"),
             }
             for e in p["entries"]
             if e["record"] == r["id"]
@@ -308,6 +310,8 @@ class Index:
         # so every paper the library has must be hosted.
         pdfs = {r["work"]: r["url"] for r in map(json.loads, (DATA_DIR / "nurj_pdfs.jsonl").open()) if r.get("lead")}
         papers = {r["source"]: r["url"] for r in map(json.loads, (DATA_DIR / "mmss_pdfs.jsonl").open())}
+        posters = {r["forager_id"]: r for r in map(json.loads, (DATA_DIR / "expo_pdfs.jsonl").open())}
+        hosted = {r["year"] for r in posters.values()}
         for p in self.projects:
             for r in p["records"]:
                 if r["source"] == "nurj":
@@ -316,6 +320,14 @@ class Index:
                     r["pdf"] = papers.get(r["url"])
                     if strict and not r["pdf"]:
                         raise SystemExit(f"{r['id']}'s paper is not in data/mmss_pdfs.jsonl; rerun pipeline.mmss_pdfs")
+            # An Expo listing's ForagerOne poster, as files.prowl.nu serves it
+            # (see pipeline.expo_pdfs), for the years it hosts; one of several
+            # pages is slides.
+            for e in p["entries"]:
+                poster = posters.get(e["forager_id"]) if e["forager_id"] else None
+                if strict and e["forager_id"] and e["year"] in hosted and not poster:
+                    raise SystemExit(f"{e['id']}'s poster is not in data/expo_pdfs.jsonl; rerun pipeline.expo_pdfs")
+                e["pdf"] = poster and {"url": poster["url"], "slides": poster["pages"] > 1}
         index_rows = [json.loads(line) for line in (INDEX_DIR / "vectors.jsonl").open()]
         expected = {row for p in self.projects for row in rows(p)}
         if strict and {(r["id"], r["kind"], r["text"]) for r in index_rows} != expected:
