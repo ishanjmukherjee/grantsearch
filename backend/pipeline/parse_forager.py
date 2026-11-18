@@ -102,6 +102,9 @@ HEADER_LABEL = re.compile(r"(?:Faculty|Doctoral Student|Graduate Student) (?:Adv
 # The years whose program listings ForagerOne posters add to, and the
 # directory of each one's presentations.
 POSTED = {2022: RAW_DIR / "forager_nuexpo22"}
+# Every year's ForagerOne presentations, whose posters Prowl hosts (see
+# pipeline.expo_pdfs).
+HOSTED = {2020: FORAGER_DIR, **POSTED}
 # The submission form's fields, by id: the presentation's department, format
 # and mentor, and each presenter's schools.
 FORM_DEPARTMENT = "59088b36dba99947c708489d00d9e2de"

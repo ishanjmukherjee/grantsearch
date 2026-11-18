@@ -14,9 +14,9 @@ type Listing = {
   // Where the abstract is from when the program printed none (Expo 2020's
   // one project never posted online has the student's abstract from elsewhere).
   abstract_source: { name: string; url: string } | null
-  // The listing's poster from ForagerOne, hosted at files.prowl.nu (Expo
-  // 2022's); slides when it has several pages.
-  pdf: { url: string; slides: boolean } | null
+  // The listing's poster, slides or other document from ForagerOne, hosted at
+  // files.prowl.nu (Expo 2020's and 2022's).
+  pdf: { url: string; kind: 'poster' | 'slides' | 'document' } | null
 }
 // One source's account of the project: a SURG or AY URG grant (with its
 // students and advisors), an Expo or Symposium poster (with its listings), or
@@ -1203,7 +1203,7 @@ function Result({
         const own = e.source === s.source && e.year === s.year
         const name = `${SOURCE_NAMES[e.source]} ${e.year}`
         return [
-          ...(e.pdf ? [sourceLink(e.id, 'expo-pdf', e.pdf.url, label(name, e.pdf.slides ? 'slides' : 'poster', own), true)] : []),
+          ...(e.pdf ? [sourceLink(e.id, 'expo-pdf', e.pdf.url, label(name, PDF_NAMES[e.pdf.kind], own), true)] : []),
           sourceLink(e.id, e.source, e.url, label(name, what, own), true),
         ]
       }),
@@ -1470,6 +1470,9 @@ type Section = {
 // A link to one of a project's sources, as the query log knows it (link and
 // record) and as the card words it.
 type SourceLink = { record: string; link: string; href: string; label: string; pdf: boolean }
+
+// What a listing's hosted PDF is called on the card.
+const PDF_NAMES = { poster: 'poster', slides: 'slides', document: 'PDF' }
 
 function sourceLink(record: string, link: string, href: string, label: string, pdf = false): SourceLink {
   return { record, link, href, label, pdf }

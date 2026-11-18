@@ -218,7 +218,7 @@ def public(p: dict) -> dict:
     Computer Science thesis, its technical report number; and for a poster,
     its listings, each {id, title, presenters, advisors, abstract,
     url, page, abstract_source, pdf}, its url at the listing's page and pdf
-    the poster Prowl hosts for it, {url, slides}, or None. A presenter who is
+    the poster Prowl hosts for it, {url, kind}, or None. A presenter who is
     one of a grant's awardees is named as the grant names them, so that the
     card shows one person once."""
     awardees = [a for g in grants(p) for a in students(g)]
@@ -321,13 +321,13 @@ class Index:
                     if strict and not r["pdf"]:
                         raise SystemExit(f"{r['id']}'s paper is not in data/mmss_pdfs.jsonl; rerun pipeline.mmss_pdfs")
             # An Expo listing's ForagerOne poster, as files.prowl.nu serves it
-            # (see pipeline.expo_pdfs), for the years it hosts; one of several
-            # pages is slides.
+            # (see pipeline.expo_pdfs), for the years it hosts, as a poster,
+            # slides or a document.
             for e in p["entries"]:
                 poster = posters.get(e["forager_id"]) if e["forager_id"] else None
                 if strict and e["forager_id"] and e["year"] in hosted and not poster:
                     raise SystemExit(f"{e['id']}'s poster is not in data/expo_pdfs.jsonl; rerun pipeline.expo_pdfs")
-                e["pdf"] = poster and {"url": poster["url"], "slides": poster["pages"] > 1}
+                e["pdf"] = {"url": poster["url"], "kind": poster["kind"]} if poster and poster["url"] else None
         index_rows = [json.loads(line) for line in (INDEX_DIR / "vectors.jsonl").open()]
         expected = {row for p in self.projects for row in rows(p)}
         if strict and {(r["id"], r["kind"], r["text"]) for r in index_rows} != expected:
