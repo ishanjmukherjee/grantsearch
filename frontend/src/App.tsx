@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import filed from './disciplines.json'
+import wordmark from './wordmark.json'
 
 // A poster's listing: a poster presented by several students may be listed
 // once per presenter.
@@ -423,11 +424,24 @@ function usePrompt({ once = false, shown = true } = {}) {
   }
 }
 
+// The site's name as drawn letters, not type: design/wordmark/draw.py draws
+// them and writes the outline. It takes the text colour, and its name is the
+// heading's and the link's.
+function Wordmark() {
+  return (
+    <svg className="wordmark" viewBox={`0 0 ${wordmark.width} ${wordmark.height}`} role="img" aria-label={SITE}>
+      <path d={wordmark.path} fillRule="evenodd" />
+    </svg>
+  )
+}
+
 function Header({ lede }: { lede?: boolean }) {
   return (
     <header>
       <h1>
-        <a href="/">{SITE}</a>
+        <a href="/">
+          <Wordmark />
+        </a>
       </h1>
       {lede && (
         <p className="lede">

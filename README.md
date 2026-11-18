@@ -31,6 +31,15 @@ The site logs every search with the results it returned, every project page load
 - The app logs only when `DATABASE_URL` is set, which on Railway refers to the Postgres service's. The database has no public address, so it is read from inside the project.
 - To read the log, from a checkout linked to the Railway project: `railway ssh --service web python -m querylog export --days 7` prints it as JSON lines, and `railway connect Postgres` opens `psql` on it. Both go over SSH, so the machine's key must be registered with Railway first (`railway ssh keys add`).
 
+## Wordmark
+
+The site's name in the header is drawn, not set in a typeface. `design/wordmark/draw.py` draws the five letters as strokes of a broad-edged pen and writes their outline to `frontend/src/wordmark.json`, which the header renders as an SVG in the text colour (`Wordmark` in `frontend/src/App.tsx`).
+
+- The letters are a humanist italic, the hand scholars wrote in before it was cut as type. A pen held at 30 degrees gives the strokes their thick and thin: nothing is thickened or thinned by drawing.
+- The word stands low and wide, its capital and ascender rising little over the x-height.
+- Strokes that begin at the top are cut on one rising line and entered by a wedge. Strokes that end on the baseline are cut flat, all but the last: the l keeps the pen's exit, the one flourish in the word.
+- To change the drawing, edit the numbers in `draw.py` and run `uv run --with numpy --with shapely python design/wordmark/draw.py`. The docstrings of `draw.py` and `pen.py` say what each number moves. Check the result in the header at its real size, 32px tall on a desktop and 26px on a phone, before judging it enlarged.
+
 ## Roadmap
 
 - [x] Exact search with single or double quotes around a phrase.
