@@ -102,7 +102,8 @@ def components(ids: list[str], links: list[tuple[str, str]]) -> list[list[str]]:
 
     def find(x: str) -> str:
         while parent[x] != x:
-            x = parent[x] = parent[parent[x]]
+            parent[x] = parent[parent[x]]
+            x = parent[x]
         return x
 
     for a, b in links:

@@ -206,7 +206,8 @@ def poster_groups(listings: list[dict]) -> list[list[dict]]:
 
     def find(x: str) -> str:
         while parent[x] != x:
-            x = parent[x] = parent[parent[x]]
+            parent[x] = parent[parent[x]]
+            x = parent[x]
         return x
 
     by_year: dict[int, list[dict]] = {}
