@@ -325,8 +325,9 @@ h1 a {
   gap: var(--gap);
 }
 
-/* A phone has no room for the five in a line, so the years follow the last
-   of them on its line instead of taking a third. */
+/* A phone has no room for the five in a line, so they wrap, and the years
+   follow the last of them: on its line where they fit, or else on the next,
+   at the right either way. */
 @media (max-width: 560px) {
   .filters {
     gap: 8px var(--gap);
