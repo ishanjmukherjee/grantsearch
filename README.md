@@ -38,7 +38,7 @@ The site's name in the header is drawn, not set in a typeface. `design/wordmark/
 - The letters are a humanist italic, the hand scholars wrote in before it was cut as type. A pen held at 30 degrees gives the strokes their thick and thin: nothing is thickened or thinned by drawing.
 - The word stands low and wide, its capital and ascender rising little over the x-height.
 - Strokes that begin at the top are cut on one rising line and entered by a wedge. Strokes that end on the baseline are cut flat, all but the last: the l keeps the pen's exit, the one flourish in the word.
-- To change the drawing, edit the numbers in `draw.py` and run `uv run --with numpy --with shapely python design/wordmark/draw.py`. The docstrings of `draw.py` and `pen.py` say what each number moves. Check the result in the header at its real size, 32px tall on a desktop and 26px on a phone, before judging it enlarged.
+- To change the drawing, edit the numbers in `draw.py` and run `uv run --with numpy --with shapely python design/wordmark/draw.py`. The docstrings of `draw.py` and `pen.py` say what each number moves. Check the result in the header at its real size, 40px tall on a desktop and 30px on a phone, before judging it enlarged.
 
 ## Roadmap
 
