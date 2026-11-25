@@ -41,6 +41,7 @@ The site logs every search with the results it returned, every project page load
   - Keys of up to three characters were judged twice and are expanded only where both readings expand them. The two readings split on 84 of the 855, nearly always over a rival meaning one reader weighed more, so a few acronyms with a clear leading meaning stay as typed (RBC, CSF, API, BMI).
   - After a new source is carded, `uv run python -m pipeline.acronyms` lists the keys to judge: those without a verdict, and those for which a card now proposes a meaning the verdict was not judged against. Until they are judged they are not expanded. The same command checks the queries in `data/eval/acronyms.jsonl`, which must gain an expansion or stay as typed.
   - Not done: a query word matches a key only as a whole word, so "ipscs" and "iPSC-derived" are not expanded though "ipsc" is.
+- [ ] Expand acronyms that no card proposes, such as "rlhf", so a query that types one finds the projects that spell it out.
 - [ ] Mark the matched words and phrases in results for every query, not only quoted phrases. The guiding principle is that results should explain themselves.
   - Today `Marked` in `frontend/src/App.tsx` highlights only quoted phrases.
   - First, mark BM25 matches: the query words (by stem) wherever they appear in the title, people, advisors and abstract. This is cheap.
