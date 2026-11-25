@@ -6,8 +6,7 @@ grants, posters, NURJ papers and each other, NURJ papers with grants,
 posters and each other, and Leopold fellowships with every other source and
 each other. A pair is a candidate when
 some student on one record and some student on the other may be one person
-(see pipeline.records.same_person; for Leopold fellows, by any first name
-they are printed with, see may_be_one), in any years: for grants and posters, a
+(see may_be_one), in any years: for grants and posters, a
 window of one year before the grant to three after leaves out only 21 of 710
 pairs, all different students with one name. A record is never paired with
 itself, and pairs data/links.jsonl already judges, in either order, or
@@ -70,9 +69,9 @@ def may_be_one(a: dict, b: dict) -> bool:
     return any(records.first_match(x, y) for x in records.tokens(a["first"]) for y in records.tokens(b["first"]))
 
 
-def candidates(left: list[dict], right: list[dict], judged: set[frozenset], match=records.same_person) -> list[tuple[dict, dict]]:
-    """Unjudged pairs of a left and a right record that share a student by
-    match, each pair once, in id order."""
+def candidates(left: list[dict], right: list[dict], judged: set[frozenset]) -> list[tuple[dict, dict]]:
+    """Unjudged pairs of a left and a right record that share a student (see
+    may_be_one), each pair once, in id order."""
     by_surname: dict[str, list[dict]] = {}
     for b in right:
         for part in {s for p in students(b) for s in records.surname_parts(p["last"])}:
@@ -85,7 +84,7 @@ def candidates(left: list[dict], right: list[dict], judged: set[frozenset], matc
             key = frozenset((a["id"], b["id"]))
             if b["id"] == a["id"] or key in judged or key in seen:
                 continue
-            if any(match(x, y) for x in students(a) for y in students(b)):
+            if any(may_be_one(x, y) for x in students(a) for y in students(b)):
                 seen.add(key)
                 out.append((a, b))
     return sorted(out, key=lambda pair: (pair[0]["id"], pair[1]["id"]))
@@ -135,7 +134,7 @@ def main() -> None:
         pairs = mentor_candidates(left_records, judged)
         reason = "Same title, and a faculty mentor of one is a faculty mentor of the other."
     else:
-        pairs = candidates(left_records, right_records, judged, may_be_one if args.pairing == "leopold" else records.same_person)
+        pairs = candidates(left_records, right_records, judged)
         reason = "Same title, and a student of one is a student of the other."
     ids = [r["id"] for r in records.load(*records.SOURCES)]
     project = {i: n for n, group in enumerate(components(ids, same_links())) for i in group}
