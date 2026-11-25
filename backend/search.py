@@ -1,6 +1,7 @@
 """Hybrid search over projects: BM25 and dense retrieval fused with RRF.
 
-- BM25 covers every project: title, people, advisors, abstracts, and the
+- BM25 covers every project: title, people, advisors, abstracts (and what a
+  fellowship's faculty wrote of their project), and the
   card's fields, concepts, acronyms and generated queries (not the gloss).
 - Dense: the query is embedded on the CPU with QUERY_MODEL, which shares the
   index's embedding space, and a project scores
@@ -26,7 +27,9 @@ grants (by latest grant year) and projects without a grant (by latest Expo
 or Symposium year, or for a thesis or paper alone its year) are each sorted newest first, shuffled within a year by a hash of the id, and
 merged in proportion to their sizes so both run out together. Filtered to one
 source, browsing is newest first by that source's year; filtered to several,
-by the latest year any of them gives the project.
+by the latest year any of them gives the project. Leopold fellowships
+(2008-2026), faculty projects with no grant, run among the posters by their
+latest year.
 
 A query that names someone puts that person's projects first, ahead of the
 fused ranking, when people.People.pins is confident it is a name: most people
@@ -38,7 +41,7 @@ first.
 
 Quoted phrases ("spectral geometry", or between curly quotes as phones type
 them) keep only the projects that show each phrase: in the title, a name, an
-advisor line, an Expo title or an abstract, as public() gives them, ignoring
+advisor line, an Expo title, an abstract or a fellowship's description, as public() gives them, ignoring
 case and runs of whitespace, and not inside a longer word at either end. The
 rest is ranked as usual on the query with its quote marks dropped; a matching
 project the ranking leaves out, as when the phrase is all stopwords, follows in
@@ -76,7 +79,7 @@ a result carries that no source prints is the disciplines the project is
 filed under, which the frontend sets apart from the source tags. Index rows are
 keyed by the record whose card they come from (see pipeline.projects.rows).
 
-Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj ...] [--years FROM TO] [--discipline ID ...] [-n 10]
+Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj|leopold ...] [--years FROM TO] [--discipline ID ...] [-n 10]
 """
 
 import argparse
@@ -118,8 +121,8 @@ stemmer = Stemmer.Stemmer("english")
 
 # The record sources each source filter keeps: Expo includes its predecessor,
 # the Undergraduate Research Symposium.
-TAGS = {"surg": "SURG", "ay_urg": "AY URG", "expo": "Expo", "symposium": "Symposium", "theses": "Thesis", "nurj": "NURJ"}
-FILTERS = {"surg": ("surg",), "expo": ("expo", "symposium"), "theses": ("theses",), "nurj": ("nurj",)}
+TAGS = {"surg": "SURG", "ay_urg": "AY URG", "expo": "Expo", "symposium": "Symposium", "theses": "Thesis", "nurj": "NURJ", "leopold": "Leopold"}
+FILTERS = {"surg": ("surg",), "expo": ("expo", "symposium"), "theses": ("theses",), "nurj": ("nurj",), "leopold": ("leopold",)}
 
 
 def tokenize(texts: list[str]) -> list[list[str]]:
@@ -148,6 +151,14 @@ def students(r: dict) -> list[dict]:
     return [x for x in r["people"] if x["role"] == "student"]
 
 
+def mentors(r: dict) -> list[dict]:
+    return [x for x in r["people"] if x["role"] == "advisor"]
+
+
+def fellowships(p: dict) -> list[dict]:
+    return [r for r in p["records"] if r["kind"] == "fellowship"]
+
+
 def bm25_text(p: dict) -> str:
     parts = [p["title"]]
     for g in grants(p):
@@ -159,6 +170,8 @@ def bm25_text(p: dict) -> str:
             parts += [r["title"], *names(students(r)), advisor_line([a for a in r["people"] if a["role"] == "advisor"]), r["abstract"]]
     # A poster's listings repeat its title, advisor and abstract; count each once.
     parts += dict.fromkeys(x for e in p["entries"] for x in (e["title"], advisor_line(e["advisors"]), e["abstract"]))
+    # So do a project's fellowships, year after year, and a fellow may return.
+    parts += dict.fromkeys(x for r in fellowships(p) for x in (r["title"], r["extra"].get("description"), advisor_line(mentors(r)), r["abstract"], *names(students(r))))
     for card in (c["card"] for c in p["cards"]):
         parts += card["fields"] + card["concepts"] + card["queries"]
         parts += [f"{k} {v}" for k, v in card["acronyms"].items()]
@@ -198,6 +211,9 @@ def browse_orders(projects: list[dict]) -> dict[frozenset[str], list[int]]:
     def paper_year(p: dict) -> int:
         return max(r["year"] for r in p["records"] if r["source"] == "nurj")
 
+    def fellowship_year(p: dict) -> int:
+        return max(r["year"] for r in fellowships(p))
+
     def several(sources: tuple[str, ...]) -> list[int]:
         kept = {s for f in sources for s in FILTERS[f]}
         return newest_first(
@@ -210,6 +226,7 @@ def browse_orders(projects: list[dict]) -> dict[frozenset[str], list[int]]:
         "expo": newest_first(lambda p: p["entries"], expo_year),
         "theses": newest_first(lambda p: any(r["kind"] == "thesis" for r in p["records"]), thesis_year),
         "nurj": newest_first(lambda p: any(r["source"] == "nurj" for r in p["records"]), paper_year),
+        "leopold": newest_first(fellowships, fellowship_year),
     }
     return {
         frozenset(): order,
@@ -230,7 +247,12 @@ def public(p: dict) -> dict:
     paper, its students, advisors, abstract (None where its source gives
     none) and pdf (the url of the PDF Prowl hosts for a NURJ paper or MMSS
     thesis, or None), and for a thesis its department, academic year and, for a
-    Computer Science thesis, its technical report number; and for a poster,
+    Computer Science thesis, its technical report number; for a fellowship,
+    its students (the fellows) and advisors (the faculty whose project it
+    is), its academic year, the description its entry gives of the project
+    where it prints no title, or beside one (None otherwise), its abstract
+    (what the faculty member wrote in offering the project, or None) and
+    offered (the url of the document that is from, or None); and for a poster,
     its listings, each {id, title, presenters, advisors, abstract,
     url, page, abstract_source, pdf}, its url at the listing's page and pdf
     the poster Prowl hosts for it, {url, kind}, or None. A presenter who is
@@ -246,6 +268,9 @@ def public(p: dict) -> dict:
         people = {"students": names(students(r)), "advisors": [advisor_name(a) for a in r["people"] if a["role"] == "advisor"]}
         if r["kind"] == "grant":
             return out | people
+        if r["kind"] == "fellowship":
+            extra = r["extra"]
+            return out | people | {"academic_year": extra["academic_year"], "description": extra.get("description"), "abstract": r["abstract"], "offered": extra.get("offered", {}).get("url")}
         if r["kind"] in ("thesis", "paper"):
             extra = r["extra"] or {}
             out |= people | {"abstract": r["abstract"]}
@@ -299,6 +324,8 @@ def shown_text(p: dict) -> list[str]:
         texts += x.get("students", [])
         if x["kind"] in ("thesis", "paper"):
             texts += [x["title"], x["abstract"], ", ".join(x["advisors"])]
+        if x["kind"] == "fellowship":
+            texts += [x["title"], x["description"], x["abstract"], ", ".join(x["advisors"])]
         for e in x.get("listings", []):
             texts += [e["title"], e["abstract"], ", ".join(e["advisors"]), *e["presenters"]]
     return [t for t in texts if t]

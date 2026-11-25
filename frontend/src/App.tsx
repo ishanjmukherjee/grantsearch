@@ -22,11 +22,12 @@ type Listing = {
 // One source's account of the project: a SURG or AY URG grant (with its
 // students and advisors), an Expo or Symposium poster (with its listings), or
 // an honors thesis or NURJ paper (with its students, advisors and abstract,
-// which a thesis list may not give).
+// which a thesis list may not give), or a Leopold fellowship on a faculty
+// member's project (with its fellows as students and that faculty as advisors).
 type ProjectRecord = {
   id: string
   source: string
-  kind: 'grant' | 'presentation' | 'thesis' | 'paper'
+  kind: 'grant' | 'presentation' | 'thesis' | 'paper' | 'fellowship'
   year: number
   title: string | null
   url: string
@@ -38,6 +39,11 @@ type ProjectRecord = {
   academic_year?: string
   report?: string | null // a Computer Science thesis's technical report number
   pdf?: string | null // a NURJ paper's PDF or an MMSS thesis's paper, hosted at files.prowl.nu
+  // A fellowship's project as its entry describes it, where it prints no
+  // title or beside one; its abstract is what the faculty member wrote in
+  // offering the project, and offered the document that is from.
+  description?: string | null
+  offered?: string | null
 }
 // title is null when none of the project's sources prints one; made_title is
 // then a plain description of it written from its abstract, if it has one.
@@ -56,6 +62,7 @@ const SOURCES = [
   ['expo', 'Expo projects'],
   ['theses', 'Theses'],
   ['nurj', 'NURJ papers'],
+  ['leopold', 'Leopold fellows'],
 ] as const
 type Source = (typeof SOURCES)[number][0]
 
@@ -72,6 +79,7 @@ const SOURCE_NAMES: Record<string, string> = {
   symposium: 'Symposium',
   theses: 'Thesis',
   nurj: 'NURJ',
+  leopold: 'Leopold',
 }
 // A department as a thesis tag names it.
 const DEPARTMENTS: Record<string, string> = {
@@ -462,8 +470,10 @@ function Header({ lede }: { lede?: boolean }) {
           {PROJECTS >= 100 && `${(Math.floor(PROJECTS / 100) * 100).toLocaleString('en-US')} `}
           Northwestern undergraduate research projects since {FIRST_YEAR}:{' '}
           <a href="https://undergradresearch.northwestern.edu/funding/surg/">SURG</a> grants,{' '}
-          <a href="https://undergradresearch.northwestern.edu/share/expo/">Expo</a> projects, honors theses, and{' '}
-          <a href="https://thenurj.com/">NURJ</a> papers. Search by topic, method, field, or person.
+          <a href="https://undergradresearch.northwestern.edu/share/expo/">Expo</a> projects, honors theses,{' '}
+          <a href="https://thenurj.com/">NURJ</a> papers, and{' '}
+          <a href="https://historicalstudies.northwestern.edu/fellowships/leopold-fellows/">Leopold</a> fellowships. Search
+          by topic, method, field, or person.
         </p>
       )}
     </header>
@@ -1215,6 +1225,7 @@ function Result({
   const grants = project.records.filter((r) => r.kind === 'grant')
   const theses = project.records.filter((r) => r.kind === 'thesis')
   const papers = project.records.filter((r) => r.kind === 'paper')
+  const fellowships = project.records.filter((r) => r.kind === 'fellowship')
   const expo: ExpoEntry[] = project.records
     .flatMap((r) => (r.listings ?? []).map((e) => ({ ...e, year: r.year, source: r.source })))
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
@@ -1247,7 +1258,20 @@ function Result({
     lifted.set(name, lists.every((l) => sameSet(l, lists[0] ?? [])) ? (lists[0] ?? []) : null)
   }
   const top = names.map((name) => ({ name, advisors: lifted.get(name) ?? [] }))
-  const topShared = top.every((x) => sameSet(x.advisors, top[0].advisors)) ? top[0].advisors : null
+  const topShared = top.every((x) => sameSet(x.advisors, top[0]?.advisors ?? [])) ? (top[0]?.advisors ?? []) : null
+  // A faculty member's project that Leopold Fellows assisted on is theirs,
+  // not the fellows': it is named as such, and the fellows follow year by year.
+  const faculty = [...new Set(fellowships.flatMap((r) => r.advisors ?? []))]
+  const facultyLine = `Faculty project of ${list(faculty)}, assisted by Leopold Fellows`
+  // What the faculty wrote in offering the project, each text once.
+  const offered: Section[] = []
+  for (const r of fellowships)
+    if (r.abstract && !offered.some((s) => sameAbstract(s.abstract, r.abstract!)))
+      offered.push({ key: r.id, year: r.year, source: r.source, title: null, students: [], abstract: r.abstract, abstractSource: null, records: [r] })
+  // The pages listing the fellows: the current year's, and the earlier years'.
+  const lists = [...new Map(fellowships.map((r) => [r.url, r])).values()].map((r) =>
+    sourceLink(r.id, r.source, r.url, r.url.includes('previous') ? 'Previous Leopold Fellows' : `Leopold Fellows ${academicYear(r)}`),
+  )
   const years = [...new Map(parts.map((s) => [`${s.source} ${s.year}`, s])).values()]
   const multiple = parts.length + written.length > 1
   // Every listing gets its own link, also where its abstract is shown merged
@@ -1341,7 +1365,7 @@ function Result({
   const rest = all.filter((x) => !apart || !shown.includes(x)).map((x) => x.section)
   const winners = grants.map((g) => sourceLink(g.id, g.source, g.url, `${SOURCE_NAMES[g.source]} ${g.year} winners`))
   const one = !apart && grants.length + rest.length === 1
-  const below = [...(apart ? [] : winners), ...rest.flatMap((s) => sources(s, one)), ...rest.flatMap(credit)]
+  const below = [...(apart ? [] : winners), ...rest.flatMap((s) => sources(s, one)), ...rest.flatMap(credit), ...lists]
 
   return (
     <article className="result" onClick={clicked} onAuxClick={clicked}>
@@ -1361,6 +1385,13 @@ function Result({
         {papers.map((x) => (
           <Tag key={x.id} look="nurj" source="nurj" year={x.year} name="NURJ" />
         ))}
+        {/* One tag for all a project's fellowships, which can run to
+            fifteen years: the academic years they span. */}
+        {fellowships.length > 0 && (
+          <span className="tag leopold">
+            Leopold {fellowships[0].year}–{String(fellowships.at(-1)!.year + 1).slice(2)}
+          </span>
+        )}
         {/* The disciplines the project is filed under. Each is a link to
             the search with it chosen, or dropped if it is chosen already;
             on the search page a plain click changes the filter in place. */}
@@ -1395,7 +1426,7 @@ function Result({
         </a>
       </h2>
       <p className="people">
-        <Marked text={byline(top)} />
+        <Marked text={top.length ? byline(top) : facultyLine} />
       </p>
       {apart && <Links links={winners} />}
       {shown.map(({ section, heading, who }) => (
@@ -1409,8 +1440,114 @@ function Result({
           open={open}
         />
       ))}
+      {fellowships.length > 0 && (
+        <Fellows fellowships={fellowships} title={project.title} heading={top.length ? facultyLine : null} open={open} />
+      )}
+      {offered.map((section) => (
+        <Abstract
+          key={section.key}
+          section={section}
+          heading={`The project as offered to applicants, ${academicYear(section.records![0])}`}
+          people={null}
+          links={
+            section.records![0].offered
+              ? [
+                  sourceLink(
+                    section.key,
+                    'leopold-offered',
+                    section.records![0].offered,
+                    `Faculty projects ${academicYear(section.records![0])} (archived)`,
+                  ),
+                ]
+              : []
+          }
+          place={place}
+          open={open}
+        />
+      ))}
       <Links links={below} />
     </article>
+  )
+}
+
+// A fellowship's academic year, as "2019–20".
+const academicYear = (r: ProjectRecord) => r.academic_year!.replace('-', '–')
+
+// The rows a result shows of a project's fellowships before "Show earlier years".
+const FELLOW_ROWS = 3
+
+// A faculty project's Leopold Fellows, year by year, newest first, as the
+// title is the latest year's. A year whose entry titles or describes the
+// project otherwise than the result's title (see nearTitle) says how: a
+// project is retitled as it grows, and one year's fellows may work on one
+// part of it. A result
+// shows the latest FELLOW_ROWS rows until asked for the rest; a project's
+// own page, and a result whose quoted phrase is in a later row, shows all.
+function Fellows({
+  fellowships,
+  title,
+  heading,
+  open,
+}: {
+  fellowships: ProjectRecord[]
+  title: string | null
+  heading: string | null
+  open: boolean
+}) {
+  const quotes = useContext(Quotes)
+  const [all, setAll] = useState(open)
+  const rows: { key: string; when: string; fellows: string[]; as: string | null; on: string | null }[] = []
+  const named = (r: ProjectRecord) => r.title ?? r.description ?? null
+  // A year some of whose entries name the project otherwise says what each
+  // of its entries names it, also the one that names it as the result does.
+  const varied = new Set(fellowships.filter((r) => named(r) !== null && !nearTitle(named(r)!, title)).map((r) => r.year))
+  for (const r of [...fellowships].sort((a, b) => b.year - a.year || (a.id < b.id ? -1 : 1))) {
+    const name = varied.has(r.year) ? named(r) : null
+    let row = rows.find((x) => x.when === academicYear(r) && nearTitle(x.as ?? x.on, name))
+    if (!row) {
+      row = { key: r.id, when: academicYear(r), fellows: [], as: name && r.title, on: name && !r.title ? name : null }
+      rows.push(row)
+    }
+    row.fellows = [...new Set([...row.fellows, ...(r.students ?? [])])]
+  }
+  const hidden = rows.slice(FELLOW_ROWS)
+  const found =
+    quotes !== null &&
+    hidden.some((x) => [...x.fellows, x.as ?? '', x.on ?? ''].some((t) => new RegExp(quotes.source, 'iu').test(t)))
+  const shown = all || found ? rows : rows.slice(0, FELLOW_ROWS)
+  return (
+    <section className="fellows">
+      {heading && (
+        <h3>
+          <Marked text={heading} />
+        </h3>
+      )}
+      <ul>
+        {shown.map((x) => (
+          <li key={x.key}>
+            <span className="when">{x.when}</span>
+            <span>
+              <Marked text={list(x.fellows)} />
+              {x.as && (
+                <span className="as">
+                  , as “<Marked text={x.as} />”
+                </span>
+              )}
+              {x.on && (
+                <span className="as">
+                  , on <Marked text={x.on} />
+                </span>
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
+      {shown.length < rows.length && (
+        <button aria-expanded="false" onClick={() => setAll(true)}>
+          Show earlier years
+        </button>
+      )}
+    </section>
   )
 }
 
@@ -1443,6 +1580,19 @@ function thesisLink(t: ProjectRecord): SourceLink {
 function sameTitle(a: string | null, b: string | null) {
   const key = (t: string | null) => (t?.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).join(' ')
   return key(a) === key(b)
+}
+
+// Whether two titles of a project are one but for an article or an ending:
+// "A History of Laughter" and "The History of Laughter", "Small Business
+// in Poor Urban Communities" and "Small Businesses in...".
+function nearTitle(a: string | null, b: string | null) {
+  const words = (t: string | null) =>
+    (t?.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? []).filter((w) => !['a', 'an', 'the'].includes(w))
+  const [x, y] = [words(a), words(b)]
+  return (
+    x.length === y.length &&
+    x.every((w, i) => (w.startsWith(y[i]) || y[i].startsWith(w)) && Math.abs(w.length - y[i].length) <= 2)
+  )
 }
 
 // Whether two abstracts are one, perhaps one trimmed from the other: most of

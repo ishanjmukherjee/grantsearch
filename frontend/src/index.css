@@ -12,6 +12,8 @@
   --thesis-soft: #fbead2;
   --nurj: #1f5aa6;
   --nurj-soft: #dde9fb;
+  --leopold: #a3264f;
+  --leopold-soft: #fbe3ea;
   --error: #be2323;
   --mark: #ffcfa1;
   /* Between --text and --muted: abstracts stay readable but sit below titles. */
@@ -53,6 +55,8 @@
     --thesis-soft: #3d2a10;
     --nurj: #94bff5;
     --nurj-soft: #152a4a;
+    --leopold: #f5a3ba;
+    --leopold-soft: #47172a;
     --error: #fb8276;
     --mark: #f9b786;
     --pill: var(--accent-soft);
@@ -321,7 +325,7 @@ h1 a {
   gap: var(--gap);
 }
 
-/* A phone has no room for the four in a line, so the years follow the last
+/* A phone has no room for the five in a line, so the years follow the last
    of them on its line instead of taking a third. */
 @media (max-width: 560px) {
   .filters {
@@ -743,6 +747,11 @@ a.tag.on {
   background: var(--nurj-soft);
 }
 
+.tag.leopold {
+  --tag-color: var(--leopold);
+  background: var(--leopold-soft);
+}
+
 /* The disciplines a project is filed under, after its tags. Plain words
    rather than tags: a tag is what a source says of the project, and these
    are Prowl's own filing. Grey as the source links are; the accent marks
@@ -816,6 +825,46 @@ a.tag.on {
   color: var(--muted);
   font-size: var(--text-meta);
   margin: 0;
+}
+
+/* A faculty project's Leopold Fellows, a row a year: the year, then who. */
+.fellows ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  color: var(--soft);
+  font-size: var(--text-meta);
+}
+
+.fellows li {
+  display: grid;
+  grid-template-columns: 4.25em 1fr;
+  column-gap: 12px;
+  padding: 2px 0;
+}
+
+.fellows .when {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* What a year's entry calls the project, where not what the result does. */
+.fellows .as {
+  color: var(--muted);
+}
+
+.fellows button {
+  font: inherit;
+  font-size: var(--text-meta);
+  color: var(--accent);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.fellows + .abstract {
+  margin-top: 4px;
 }
 
 /* Sets a section's own byline apart from the card's when no heading does. */

@@ -1,6 +1,6 @@
 """HTTP API for project search.
 
-- GET /api/search?q=...&source=surg|expo|theses|nurj&from=YEAR&to=YEAR&discipline=ID&area=AREA&n=20&offset=0
+- GET /api/search?q=...&source=surg|expo|theses|nurj|leopold&from=YEAR&to=YEAR&discipline=ID&area=AREA&n=20&offset=0
   returns {"results": [...], "total": int, "disciplines": [...], "empty":
   [...]}, each result
   as search.public describes it; "total" counts the matches at every offset.
@@ -87,7 +87,7 @@ def log(request: Request, kind: str, data: dict) -> None:
 def search_projects(
     request: Request,
     q: str = Query("", max_length=2000),
-    source: Annotated[list[Literal["surg", "expo", "theses", "nurj"]] | None, Query()] = None,
+    source: Annotated[list[Literal["surg", "expo", "theses", "nurj", "leopold"]] | None, Query()] = None,
     year_from: int | None = Query(None, alias="from"),
     year_to: int | None = Query(None, alias="to"),
     discipline: Annotated[list[Literal[tuple(IDS)]] | None, Query()] = None,
@@ -145,9 +145,11 @@ async def event(request: Request) -> Response:
 def description(r: dict) -> str:
     """A link preview's description: the start of the first abstract (a
     poster's, else a thesis's or paper's), or who won a title-only grant or
-    wrote a title-only thesis."""
+    wrote a title-only thesis. A faculty project's is whose it is and which
+    Leopold Fellows assisted, not what the faculty member wrote in offering
+    it, which reads as a call for an assistant."""
     listings = sorted((e for x in r["records"] for e in x.get("listings", [])), key=lambda e: e["id"])
-    abstracts = [e["abstract"] for e in listings] + [x["abstract"] for x in r["records"] if x.get("abstract")]
+    abstracts = [e["abstract"] for e in listings] + [x["abstract"] for x in r["records"] if x.get("abstract") and x["kind"] != "fellowship"]
     if abstracts:
         text = " ".join(abstracts[0].split())
         return text if len(text) <= DESCRIPTION_CHARS else text[:DESCRIPTION_CHARS].rsplit(" ", 1)[0] + "…"
@@ -157,6 +159,12 @@ def description(r: dict) -> str:
 
     if grant := next((x for x in r["records"] if x["kind"] == "grant"), None):
         return f"{'AY URG' if grant['source'] == 'ay_urg' else 'SURG'} {grant['year']} grant awarded to {names(grant['students'])}."
+    if fellowships := [x for x in r["records"] if x["kind"] == "fellowship"]:
+        fellows = list(dict.fromkeys(name for x in fellowships for name in x["students"]))
+        first, last = fellowships[0]["academic_year"], fellowships[-1]["academic_year"]
+        when = first if first == last else f"{first} to {last}"
+        who = f"Leopold Fellow{'s' if len(fellows) > 1 else ''} {names(fellows)}" if len(fellows) <= 3 else f"{len(fellows)} Leopold Fellows"
+        return f"{names(fellowships[-1]['advisors'])}'s research, assisted by {who}, {when}."
     x = next(x for x in r["records"] if x["kind"] in ("thesis", "paper"))
     what = f"{x['department']} honors thesis" if x["kind"] == "thesis" else "NURJ paper"
     return f"{what} by {names(x['students'])}, {x['year']}."

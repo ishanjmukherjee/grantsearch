@@ -1,8 +1,9 @@
 """The people named on projects, and matching typed names against them.
 
-Each person is a distinct name in one role, "student" (a grant awardee or Expo
-presenter) or "advisor" (a grant's advisor, or one on an Expo listing's
-advisor line), with the projects that name them. A name is stored only as its parts:
+Each person is a distinct name in one role, "student" (a grant awardee, Expo
+presenter or Leopold Fellow) or "advisor" (a grant's advisor, one on an Expo
+listing's advisor line, or the faculty member a fellowship's project is
+under), with the projects that name them. A name is stored only as its parts:
 
 - first: given names, including a preferred name the source puts in
   parentheses ("Xinyuan (Joyce) Pu" has first names Xinyuan and Joyce)
@@ -100,7 +101,7 @@ class People:
         self.text_words: set[str] = set()
         found: dict[tuple, dict] = {}
         for p in projects:
-            mentions = [(x["role"], x) for r in p["records"] if r["kind"] == "grant" for x in r["people"]]
+            mentions = [(x["role"], x) for r in p["records"] if r["kind"] in ("grant", "fellowship") for x in r["people"]]
             for e in p["entries"]:
                 mentions += [("student", x) for x in e["presenters"]]
                 mentions += [("advisor", x) for x in e["advisors"]]

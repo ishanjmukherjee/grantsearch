@@ -112,7 +112,7 @@ IDS = [d[0] for d in DISCIPLINES]
 AREAS: dict[str, list[str]] = {}
 for _id, _, _area in DISCIPLINES:
     AREAS.setdefault(re.sub(r"[^a-z]+", "-", _area.lower()), []).append(_id)
-KINDS = {"surg": "SURG grant", "ay_urg": "AY URG grant", "expo": "Expo poster", "symposium": "Symposium poster", "nurj": "NURJ paper"}
+KINDS = {"surg": "SURG grant", "ay_urg": "AY URG grant", "expo": "Expo poster", "symposium": "Symposium poster", "nurj": "NURJ paper", "leopold": "Leopold fellowship on a faculty project"}
 
 
 def record_ids(p: dict) -> list[str]:
