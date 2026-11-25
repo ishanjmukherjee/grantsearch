@@ -1,0 +1,36 @@
+{"query": "history", "group": "history"}
+{"query": "american history", "group": "history"}
+{"query": "politics", "group": "history"}
+{"query": "religion", "group": "history"}
+{"query": "race", "group": "history"}
+{"query": "women", "group": "history"}
+{"query": "law", "group": "history"}
+{"query": "war", "group": "history"}
+{"query": "china", "group": "history"}
+{"query": "mexico", "group": "history"}
+{"query": "environment", "group": "history"}
+{"query": "cities", "group": "history"}
+{"query": "medicine", "group": "history"}
+{"query": "music", "group": "history"}
+{"query": "immigration", "group": "history"}
+{"query": "africa", "group": "history"}
+{"query": "germany", "group": "history"}
+{"query": "slavery", "group": "history"}
+{"query": "gender", "group": "history"}
+{"query": "archives", "group": "history"}
+{"query": "capitalism", "group": "history"}
+{"query": "empire", "group": "history"}
+{"query": "prisons", "group": "history"}
+{"query": "climate change", "group": "history"}
+{"query": "biology", "group": "other"}
+{"query": "machine learning", "group": "other"}
+{"query": "psychology of memory", "group": "other"}
+{"query": "cancer", "group": "other"}
+{"query": "poetry", "group": "other"}
+{"query": "economics", "group": "other"}
+{"query": "neuroscience", "group": "other"}
+{"query": "robotics", "group": "other"}
+{"query": "chemistry", "group": "other"}
+{"query": "statistics", "group": "other"}
+{"query": "public health", "group": "other"}
+{"query": "education", "group": "other"}

@@ -1,8 +1,9 @@
 """Name-search test set and report: does searching a person find their projects?
 
-Every person named on a project is a candidate: students (grant awardees and
-Expo presenters) and Expo advisors. Seeded random samples of them become
-queries, each in the forms people type:
+Every person named on a project is a candidate: students (grant awardees,
+Expo presenters and Leopold Fellows) and advisors (an Expo listing's, and
+the faculty a fellowship's project is under). Seeded random samples of them
+become queries, each in the forms people type:
 
 - full: "first last"
 - last_first: "last first", as the 2025-2026 Expo guides print names
@@ -78,8 +79,10 @@ def people() -> dict[str, list[tuple[dict, str]]]:
     found = defaultdict(list)
     for p in load_projects():
         for r in p["records"]:
-            if r["kind"] == "grant":
+            if r["kind"] in ("grant", "fellowship"):
                 found["student"] += [(x, p["id"]) for x in r["people"] if x["role"] == "student"]
+            if r["kind"] == "fellowship":
+                found["advisor"] += [(x, p["id"]) for x in r["people"] if x["role"] == "advisor"]
         for e in p["entries"]:
             found["student"] += [(x, p["id"]) for x in e["presenters"]]
             # Advisors named in full; one named by surname alone is no query.

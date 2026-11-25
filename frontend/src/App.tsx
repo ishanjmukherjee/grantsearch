@@ -343,15 +343,15 @@ const Quotes = createContext<RegExp | null>(null)
 // The search page's filters, for the disciplines and tags on its results.
 // For disciplines: those chosen, the link to the search with one chosen or
 // dropped, and what a click on that link does in place. For tags: the same
-// three, where a tag's filter is its source alone and its year alone. Null
-// on a project's page.
+// three, where a tag's filter is its source alone and its year alone, or
+// for a tag of several years its first to its last. Null on a project's page.
 const Filter = createContext<{
   chosen: string[]
   href: (id: string) => string
   toggle: (id: string) => void
-  tagged: (source: Source, year: number) => boolean
-  tagHref: (source: Source, year: number) => string
-  tagToggle: (source: Source, year: number) => void
+  tagged: (source: Source, year: number, last?: number) => boolean
+  tagHref: (source: Source, year: number, last?: number) => string
+  tagToggle: (source: Source, year: number, last?: number) => void
 } | null>(null)
 
 // What a project whose sources print no title is called: on the result
@@ -660,19 +660,20 @@ function Search() {
   const toggled = (id: string) => (disciplines.includes(id) ? disciplines.filter((d) => d !== id) : [...disciplines, id])
   // The sources with one chosen or dropped, in the order of their chips.
   const switched = (s: Source) => SOURCES.map(([v]) => v).filter((v) => sources.includes(v) !== (v === s))
-  // A tag's filter: its source alone and its year alone, or neither if the
-  // search is filtered to just that already.
-  const tagged = (s: Source, year: number) =>
-    sources.length === 1 && sources[0] === s && from === String(year) && to === String(year)
-  const tag = (s: Source, year: number) =>
-    tagged(s, year) ? { sources: [], from: '', to: '' } : { sources: [s], from: String(year), to: String(year) }
+  // A tag's filter: its source alone and its year alone (its years, for a
+  // tag of several), or neither if the search is filtered to just that
+  // already.
+  const tagged = (s: Source, year: number, last = year) =>
+    sources.length === 1 && sources[0] === s && from === String(year) && to === String(last)
+  const tag = (s: Source, year: number, last = year) =>
+    tagged(s, year, last) ? { sources: [], from: '', to: '' } : { sources: [s], from: String(year), to: String(last) }
   const filter = {
     chosen: disciplines,
     href: (id: string) => searchUrl({ ...query, disciplines: toggled(id) }, 1),
     toggle: (id: string) => change({ disciplines: toggled(id) }),
     tagged,
-    tagHref: (s: Source, year: number) => searchUrl({ ...query, ...tag(s, year) }, 1),
-    tagToggle: (s: Source, year: number) => change(tag(s, year)),
+    tagHref: (s: Source, year: number, last?: number) => searchUrl({ ...query, ...tag(s, year, last) }, 1),
+    tagToggle: (s: Source, year: number, last?: number) => change(tag(s, year, last)),
   }
 
   return (
@@ -1179,22 +1180,36 @@ function Pager({
 // in place, keeping the query and disciplines. The source is the filter the
 // tag's own source falls under: a Symposium tag filters to Expo projects, as
 // the source filter groups them. An AY URG tag falls under none, and is not
-// a link.
-function Tag({ look, source, year, name }: { look: string; source: Source | ''; year: number; name: string }) {
+// a link. A Leopold tag stands for all a project's fellowships, from year to
+// last: it reads as the academic years they span ("Leopold 2014–27" for
+// 2014-15 to 2026-27) and filters to those years.
+function Tag({
+  look,
+  source,
+  year,
+  last = year,
+  name,
+}: {
+  look: string
+  source: Source | ''
+  year: number
+  last?: number
+  name: string
+}) {
   const filter = useContext(Filter)
-  const on = source !== '' && (filter?.tagged(source, year) ?? false)
-  const label = `${name} ${year}`
+  const on = source !== '' && (filter?.tagged(source, year, last) ?? false)
+  const label = source === 'leopold' ? `${name} ${year}–${String(last + 1).slice(2)}` : `${name} ${year}`
   // The year dropdowns can't show a year outside theirs, so readUrl drops it.
   if (!source || !YEARS.includes(year)) return <span className={`tag ${look}`}>{label}</span>
   return (
     <a
-      href={filter ? filter.tagHref(source, year) : `/?source=${source}&from=${year}&to=${year}`}
+      href={filter ? filter.tagHref(source, year, last) : `/?source=${source}&from=${year}&to=${last}`}
       className={`tag ${look}${on ? ' on' : ''}`}
       title={on ? `Stop filtering by ${label}` : `Filter by ${label}`}
       onClick={(e) => {
         if (!filter || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return
         e.preventDefault()
-        filter.tagToggle(source, year)
+        filter.tagToggle(source, year, last)
       }}
     >
       {label}
@@ -1388,9 +1403,7 @@ function Result({
         {/* One tag for all a project's fellowships, which can run to
             fifteen years: the academic years they span. */}
         {fellowships.length > 0 && (
-          <span className="tag leopold">
-            Leopold {fellowships[0].year}–{String(fellowships.at(-1)!.year + 1).slice(2)}
-          </span>
+          <Tag look="leopold" source="leopold" year={fellowships[0].year} last={fellowships.at(-1)!.year} name="Leopold" />
         )}
         {/* The disciplines the project is filed under. Each is a link to
             the search with it chosen, or dropped if it is chosen already;
