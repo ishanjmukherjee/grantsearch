@@ -693,6 +693,31 @@ h1 a {
   color: color-mix(in srgb, var(--tag-color) 70%, var(--text));
 }
 
+/* A tag is a link to the search filtered to its source and year. */
+a.tag {
+  position: relative;
+  text-decoration: none;
+}
+
+/* Taller than the tag, for fingers, without growing the line. */
+a.tag::after {
+  content: '';
+  position: absolute;
+  inset: -6px -3px;
+}
+
+/* One the results are filtered by. */
+a.tag.on {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tag-color) 55%, transparent);
+}
+
+@media (hover: hover) {
+  a.tag:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
+
 .tag.surg {
   --tag-color: var(--accent);
   background: var(--accent-soft);

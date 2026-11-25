@@ -325,13 +325,18 @@ function quotePattern(query: string): RegExp | null {
 // The quoted phrases to highlight in results, if any.
 const Quotes = createContext<RegExp | null>(null)
 
-// The search page's discipline filter, for the disciplines named on its
-// results: those chosen, the link to the search with one chosen or dropped,
-// and what a click on that link does in place. Null on a project's page.
+// The search page's filters, for the disciplines and tags on its results.
+// For disciplines: those chosen, the link to the search with one chosen or
+// dropped, and what a click on that link does in place. For tags: the same
+// three, where a tag's filter is its source and its year alone. Null on a
+// project's page.
 const Filter = createContext<{
   chosen: string[]
   href: (id: string) => string
   toggle: (id: string) => void
+  tagged: (source: Source, year: number) => boolean
+  tagHref: (source: Source, year: number) => string
+  tagToggle: (source: Source, year: number) => void
 } | null>(null)
 
 // What a project whose sources print no title is called: on the result
@@ -636,10 +641,18 @@ function Search() {
   const pages = Math.ceil(total / PAGE)
   const length = q.trim().length
   const toggled = (id: string) => (disciplines.includes(id) ? disciplines.filter((d) => d !== id) : [...disciplines, id])
+  // A tag's filter: its source and its year alone, or neither if the search
+  // is filtered to just that already.
+  const tagged = (s: Source, year: number) => source === s && from === String(year) && to === String(year)
+  const tag = (s: Source, year: number) =>
+    tagged(s, year) ? { source: '' as const, from: '', to: '' } : { source: s, from: String(year), to: String(year) }
   const filter = {
     chosen: disciplines,
     href: (id: string) => searchUrl({ ...query, disciplines: toggled(id) }, 1),
     toggle: (id: string) => change({ disciplines: toggled(id) }),
+    tagged,
+    tagHref: (s: Source, year: number) => searchUrl({ ...query, ...tag(s, year) }, 1),
+    tagToggle: (s: Source, year: number) => change(tag(s, year)),
   }
 
   return (
@@ -1140,6 +1153,35 @@ function Pager({
   )
 }
 
+// A source tag, as "Expo 2026". It is a link to the search filtered to its
+// source and its year alone, or with both dropped if the search is filtered
+// to just that already; on the search page a plain click changes the filters
+// in place, keeping the query and disciplines. The source is the filter the
+// tag's own source falls under: a Symposium tag filters to Expo projects, as
+// the source filter groups them. An AY URG tag falls under none, and is not
+// a link.
+function Tag({ look, source, year, name }: { look: string; source: Source; year: number; name: string }) {
+  const filter = useContext(Filter)
+  const on = filter?.tagged(source, year) ?? false
+  const label = `${name} ${year}`
+  // The year dropdowns can't show a year outside theirs, so readUrl drops it.
+  if (!source || !YEARS.includes(year)) return <span className={`tag ${look}`}>{label}</span>
+  return (
+    <a
+      href={filter ? filter.tagHref(source, year) : `/?source=${source}&from=${year}&to=${year}`}
+      className={`tag ${look}${on ? ' on' : ''}`}
+      title={on ? `Stop filtering by ${label}` : `Filter by ${label}`}
+      onClick={(e) => {
+        if (!filter || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return
+        e.preventDefault()
+        filter.tagToggle(source, year)
+      }}
+    >
+      {label}
+    </a>
+  )
+}
+
 function Result({
   project,
   place: where,
@@ -1296,26 +1338,18 @@ function Result({
       <ShareButton project={project} place={place} />
       <div className="tags">
         {grants.map((g) => (
-          <span key={g.id} className="tag surg">
-            {SOURCE_NAMES[g.source]} {g.year}
-          </span>
+          <Tag key={g.id} look="surg" source={g.source === 'surg' ? 'surg' : ''} year={g.year} name={SOURCE_NAMES[g.source]} />
         ))}
         {years.map((s) => (
-          <span key={`${s.source} ${s.year}`} className="tag expo">
-            {SOURCE_NAMES[s.source]} {s.year}
-          </span>
+          <Tag key={`${s.source} ${s.year}`} look="expo" source="expo" year={s.year} name={SOURCE_NAMES[s.source]} />
         ))}
         {/* One tag a year, also for a thesis two departments list: the
             source links name the department. */}
         {[...new Set(theses.map((t) => t.year))].map((year) => (
-          <span key={year} className="tag thesis">
-            Thesis {year}
-          </span>
+          <Tag key={year} look="thesis" source="theses" year={year} name="Thesis" />
         ))}
         {papers.map((x) => (
-          <span key={x.id} className="tag nurj">
-            NURJ {x.year}
-          </span>
+          <Tag key={x.id} look="nurj" source="nurj" year={x.year} name="NURJ" />
         ))}
         {/* The disciplines the project is filed under. Each is a link to
             the search with it chosen, or dropped if it is chosen already;
