@@ -50,7 +50,14 @@ type Project = {
   records: ProjectRecord[]
 }
 type ExpoEntry = Listing & { year: number; source: string }
-type Source = '' | 'surg' | 'expo' | 'theses' | 'nurj'
+// The source filters, as the row of them reads.
+const SOURCES = [
+  ['surg', 'SURG grants'],
+  ['expo', 'Expo projects'],
+  ['theses', 'Theses'],
+  ['nurj', 'NURJ papers'],
+] as const
+type Source = (typeof SOURCES)[number][0]
 
 // The years any record falls in: the oldest thesis is from 1980.
 const FIRST_YEAR = 1980
@@ -149,16 +156,16 @@ const PRESS_MS = 250
 // The search in the page's URL. A value the controls can't show, as from an
 // old or hand-edited link, is dropped rather than sent on to the backend.
 // A search: its query, filters and page of results.
-type Query = { q: string; source: Source; from: string; to: string; disciplines: string[]; page: number }
+type Query = { q: string; sources: Source[]; from: string; to: string; disciplines: string[]; page: number }
 
 function readUrl(): Query {
   const p = new URLSearchParams(window.location.search)
-  const source = p.get('source')
+  const sources = p.getAll('source')
   const year = (y: string | null) => (YEARS.some((v) => String(v) === y) ? y! : '')
   const page = Number.parseInt(p.get('page') ?? '')
   return {
     q: p.get('q') ?? '',
-    source: source === 'surg' || source === 'expo' || source === 'theses' || source === 'nurj' ? source : '',
+    sources: SOURCES.map(([s]) => s).filter((s) => sources.includes(s)),
     from: year(p.get('from')),
     to: year(p.get('to')),
     disciplines: [
@@ -175,10 +182,10 @@ function readUrl(): Query {
 
 // The page's URL for a search at page n; page 1 is left out. A wholly chosen
 // area is named once, as area, in place of each of its disciplines.
-function searchUrl({ q, source, from, to, disciplines }: Query, n: number) {
+function searchUrl({ q, sources, from, to, disciplines }: Query, n: number) {
   const params = new URLSearchParams()
   if (q.trim()) params.set('q', q.trim())
-  if (source) params.set('source', source)
+  for (const s of sources) params.append('source', s)
   if (from) params.set('from', from)
   if (to) params.set('to', to)
   for (const c of choices(disciplines)) params.append(c.area ? 'area' : 'discipline', c.area ? areaSlug(c.area) : c.key)
@@ -328,8 +335,8 @@ const Quotes = createContext<RegExp | null>(null)
 // The search page's filters, for the disciplines and tags on its results.
 // For disciplines: those chosen, the link to the search with one chosen or
 // dropped, and what a click on that link does in place. For tags: the same
-// three, where a tag's filter is its source and its year alone. Null on a
-// project's page.
+// three, where a tag's filter is its source alone and its year alone. Null
+// on a project's page.
 const Filter = createContext<{
   chosen: string[]
   href: (id: string) => string
@@ -516,7 +523,7 @@ function ProjectPage({ number, onSearch }: { number: string; onSearch: (q: strin
 
 function Search() {
   const [query, setQuery] = useState(readUrl)
-  const { q, source, from, to, disciplines, page } = query
+  const { q, sources, from, to, disciplines, page } = query
   const [results, setResults] = useState<Project[] | null>(null)
   // The disciplines the shown results' search offers, those none of its
   // results are in, and whether it had no query.
@@ -584,7 +591,7 @@ function Search() {
   }, [])
 
   useEffect(() => {
-    const url = searchUrl({ q, source, from, to, disciplines, page }, page)
+    const url = searchUrl({ q, sources, from, to, disciplines, page }, page)
     window.history.replaceState(null, '', url)
     const params = new URLSearchParams(url.startsWith('?') ? url : '')
     // The URL keeps the whole query; the search uses only its start.
@@ -636,16 +643,19 @@ function Search() {
       clearTimeout(timer)
       controller.abort()
     }
-  }, [q, source, from, to, disciplines, page])
+  }, [q, sources, from, to, disciplines, page])
 
   const pages = Math.ceil(total / PAGE)
   const length = q.trim().length
   const toggled = (id: string) => (disciplines.includes(id) ? disciplines.filter((d) => d !== id) : [...disciplines, id])
-  // A tag's filter: its source and its year alone, or neither if the search
-  // is filtered to just that already.
-  const tagged = (s: Source, year: number) => source === s && from === String(year) && to === String(year)
+  // The sources with one chosen or dropped, in the order of their chips.
+  const switched = (s: Source) => SOURCES.map(([v]) => v).filter((v) => sources.includes(v) !== (v === s))
+  // A tag's filter: its source alone and its year alone, or neither if the
+  // search is filtered to just that already.
+  const tagged = (s: Source, year: number) =>
+    sources.length === 1 && sources[0] === s && from === String(year) && to === String(year)
   const tag = (s: Source, year: number) =>
-    tagged(s, year) ? { source: '' as const, from: '', to: '' } : { source: s, from: String(year), to: String(year) }
+    tagged(s, year) ? { sources: [], from: '', to: '' } : { sources: [s], from: String(year), to: String(year) }
   const filter = {
     chosen: disciplines,
     href: (id: string) => searchUrl({ ...query, disciplines: toggled(id) }, 1),
@@ -663,20 +673,20 @@ function Search() {
         <SearchBox value={q} onChange={(value) => change({ q: value })} loading={loading} autoFocus />
       </div>
       <div className="filters">
-        <div className="segmented" role="group" aria-label="Source">
-          {(
-            [
-              ['', 'All'],
-              ['surg', 'SURG grants'],
-              ['expo', 'Expo projects'],
-              ['theses', 'Theses'],
-              ['nurj', 'NURJ papers'],
-            ] as const
-          ).map(([value, label]) => (
-            <button key={value} className={source === value ? 'on' : ''} onClick={() => change({ source: value })}>
-              {label}
-            </button>
-          ))}
+        <div className="sources" role="group" aria-label="Sources">
+          {SOURCES.map(([value, label]) => {
+            const on = sources.includes(value)
+            return (
+              <button
+                key={value}
+                className={on ? 'chip on' : 'chip'}
+                aria-pressed={on}
+                onClick={() => change({ sources: switched(value) })}
+              >
+                {label}
+              </button>
+            )
+          })}
         </div>
         <div className="years">
           <YearSelect value={from} onChange={(value) => change({ from: value })} label="From year" />
@@ -1160,9 +1170,9 @@ function Pager({
 // tag's own source falls under: a Symposium tag filters to Expo projects, as
 // the source filter groups them. An AY URG tag falls under none, and is not
 // a link.
-function Tag({ look, source, year, name }: { look: string; source: Source; year: number; name: string }) {
+function Tag({ look, source, year, name }: { look: string; source: Source | ''; year: number; name: string }) {
   const filter = useContext(Filter)
-  const on = filter?.tagged(source, year) ?? false
+  const on = source !== '' && (filter?.tagged(source, year) ?? false)
   const label = `${name} ${year}`
   // The year dropdowns can't show a year outside theirs, so readUrl drops it.
   if (!source || !YEARS.includes(year)) return <span className={`tag ${look}`}>{label}</span>

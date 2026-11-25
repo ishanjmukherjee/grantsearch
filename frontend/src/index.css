@@ -306,35 +306,36 @@ h1 a {
 .filters {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.segmented {
-  display: inline-flex;
-  background: var(--track);
-  border: 1px solid transparent;
-  border-radius: 10px;
-  padding: 3px;
+/* The source filters: chips as the disciplines' are, since any number of
+   them can be chosen at once. A chosen one keeps its place and its width,
+   as in the list of every discipline, so choosing moves nothing. */
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
 }
 
-.segmented button {
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font: inherit;
-  font-size: var(--text-meta);
-  padding: 6px 12px;
-  border-radius: 7px;
-  cursor: pointer;
-}
+/* A phone has no room for the four in a line, so the years follow the last
+   of them on its line instead of taking a third. */
+@media (max-width: 560px) {
+  .filters {
+    gap: 8px var(--gap);
+    justify-content: flex-start;
+  }
 
-.segmented button.on {
-  background: var(--pill);
-  box-shadow: var(--pill-shadow);
-  color: var(--accent);
-  font-weight: 600;
+  .sources {
+    display: contents;
+  }
+
+  .years {
+    margin-left: auto;
+  }
 }
 
 .years {
@@ -384,9 +385,13 @@ h1 a {
 
 /* The discipline chips: one line of them, then the button for the rest.
    They scroll away with the page rather than staying pinned. */
+.filters,
 .disciplines {
   --chip: 31px; /* a chip's height: its line of text and padding */
   --gap: 6px;
+}
+
+.disciplines {
   position: relative;
   display: flex;
   align-items: flex-start;

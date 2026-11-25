@@ -25,7 +25,8 @@ single newest-first list would open on two years of posters alone. Instead,
 grants (by latest grant year) and projects without a grant (by latest Expo
 or Symposium year, or for a thesis or paper alone its year) are each sorted newest first, shuffled within a year by a hash of the id, and
 merged in proportion to their sizes so both run out together. Filtered to one
-source, browsing is newest first by that source's year.
+source, browsing is newest first by that source's year; filtered to several,
+by the latest year any of them gives the project.
 
 A query that names someone puts that person's projects first, ahead of the
 fused ranking, when people.People.pins is confident it is a name: most people
@@ -46,7 +47,8 @@ empty the results before it is closed. The frontend finds and highlights the
 phrases the same way.
 
 Disciplines (see pipeline.disciplines) narrow the results to the projects
-filed under any of those chosen. Unlike the source and year filters they are
+filed under any of those chosen, as several sources keep the projects any of
+them has a record of. Unlike the source and year filters they are
 applied to the finished ranking, so choosing one drops results without
 reordering those left. A search also says which disciplines to offer: those of
 its first FACET_N results before any discipline is chosen, the commonest
@@ -74,11 +76,12 @@ a result carries that no source prints is the disciplines the project is
 filed under, which the frontend sets apart from the source tags. Index rows are
 keyed by the record whose card they come from (see pipeline.projects.rows).
 
-Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj] [--years FROM TO] [--discipline ID ...] [-n 10]
+Usage: uv run python -m search QUERY [--source surg|expo|theses|nurj ...] [--years FROM TO] [--discipline ID ...] [-n 10]
 """
 
 import argparse
 import hashlib
+import itertools
 import json
 import re
 
@@ -166,8 +169,9 @@ def years(p: dict) -> set[int]:
     return {r["year"] for r in p["records"]}
 
 
-def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
-    """Project positions in browse order per source filter; see the module docstring."""
+def browse_orders(projects: list[dict]) -> dict[frozenset[str], list[int]]:
+    """Project positions in browse order for each set of source filters, the
+    empty set being no filter; see the module docstring."""
     def newest_first(keep, year) -> list[int]:
         ids = [i for i, p in enumerate(projects) if keep(p)]
         return sorted(ids, key=lambda i: (-year(projects[i]), hashlib.sha1(projects[i]["id"].encode()).hexdigest()))
@@ -194,12 +198,23 @@ def browse_orders(projects: list[dict]) -> dict[str | None, list[int]]:
     def paper_year(p: dict) -> int:
         return max(r["year"] for r in p["records"] if r["source"] == "nurj")
 
-    return {
-        None: order,
+    def several(sources: tuple[str, ...]) -> list[int]:
+        kept = {s for f in sources for s in FILTERS[f]}
+        return newest_first(
+            lambda p: any(r["source"] in kept for r in p["records"]),
+            lambda p: max(r["year"] for r in p["records"] if r["source"] in kept),
+        )
+
+    one = {
         "surg": granted,
         "expo": newest_first(lambda p: p["entries"], expo_year),
         "theses": newest_first(lambda p: any(r["kind"] == "thesis" for r in p["records"]), thesis_year),
         "nurj": newest_first(lambda p: any(r["source"] == "nurj" for r in p["records"]), paper_year),
+    }
+    return {
+        frozenset(): order,
+        **{frozenset([s]): ids for s, ids in one.items()},
+        **{frozenset(c): several(c) for n in range(2, len(FILTERS) + 1) for c in itertools.combinations(FILTERS, n)},
     }
 
 
@@ -435,7 +450,7 @@ class Index:
     def search(
         self,
         query: str,
-        source: str | None = None,
+        sources: tuple[str, ...] = (),
         year_range: tuple[int, int] | None = None,
         n: int = 20,
         offset: int = 0,
@@ -444,9 +459,10 @@ class Index:
         """The n projects after the first offset matching the filters, ranked
         for the query, or in browse order when it is empty; how many match in
         all; the disciplines to offer; and the empty ones (see the module
-        docstring). The source and years keep a project with a record that
-        meets both: a grant from one year and a paper from another is not a
-        grant from the paper's year. chosen is the disciplines to keep, any of
+        docstring). sources is the source filters to keep, any of them; empty
+        keeps every source. The sources and years keep a project with a record
+        that meets both: a grant from one year and a paper from another is not
+        a grant from the paper's year. chosen is the disciplines to keep, any of
         them; empty keeps every project."""
         within = self.filed[:, [disciplines.IDS.index(d) for d in chosen]].any(axis=1) if chosen else np.ones(len(self.projects), dtype=bool)
 
@@ -455,9 +471,10 @@ class Index:
             ranked = [i for i in ranked if within[i]]
             return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked), offered, empty
 
+        kept = {s for f in sources for s in FILTERS[f]}
         keep = np.array([
             any(
-                (source is None or r["source"] in FILTERS[source])
+                (not sources or r["source"] in kept)
                 and (year_range is None or year_range[0] <= r["year"] <= year_range[1])
                 for r in p["records"]
             )
@@ -468,7 +485,7 @@ class Index:
             keep &= np.array([all(any(q.search(t) for t in texts) for q in quoted) for texts in self.shown])
             query = re.sub(f"[{QUOTE_MARKS}]", " ", query)
         if not query.strip():
-            order = [i for i in self.browse_orders[source] if keep[i]]
+            order = [i for i in self.browse_orders[frozenset(sources)] if keep[i]]
             return page(order, self.offered(order, main=True))
         # The tokenizer drops stopwords and one-character words, which can
         # leave nothing to score ("a", "the"); the dense side still ranks.
@@ -491,20 +508,20 @@ class Index:
         ranked = pinned + [i for i in np.argsort(-fused, kind="stable") if fused[i] > 0 and i not in taken]
         if quoted:
             taken |= set(ranked)
-            ranked += [i for i in self.browse_orders[None] if keep[i] and i not in taken]
+            ranked += [i for i in self.browse_orders[frozenset()] if keep[i] and i not in taken]
         return page(ranked, self.offered(ranked[:FACET_N]))
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("query")
-    parser.add_argument("--source", choices=FILTERS)
+    parser.add_argument("--source", nargs="+", choices=FILTERS, default=[])
     parser.add_argument("--years", nargs=2, type=int, metavar=("FROM", "TO"))
     parser.add_argument("--discipline", nargs="+", choices=disciplines.IDS, default=[], metavar="ID")
     parser.add_argument("-n", type=int, default=10)
     args = parser.parse_args()
 
-    results, total, offered, _ = Index().search(args.query, args.source, tuple(args.years) if args.years else None, args.n, chosen=tuple(args.discipline))
+    results, total, offered, _ = Index().search(args.query, tuple(args.source), tuple(args.years) if args.years else None, args.n, chosen=tuple(args.discipline))
     for rank, p in enumerate(results, 1):
         tags = [f"{TAGS[r['source']]} {r['year']}" for r in p["records"]]
         print(f"{rank:2}. {p['title'] or '(untitled)'}  [{', '.join(tags)}]")

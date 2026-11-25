@@ -4,8 +4,9 @@
   returns {"results": [...], "total": int, "disciplines": [...], "empty":
   [...]}, each result
   as search.public describes it; "total" counts the matches at every offset.
-  An empty or missing q browses all projects, most recent first. discipline
-  may be given more than once and keeps the projects filed under any of them;
+  An empty or missing q browses all projects, most recent first. source may
+  be given more than once and keeps the projects any of them has a record of;
+  discipline, likewise, keeps the projects filed under any of them;
   area, also more than once, stands for every discipline of an area
   (pipeline.disciplines.AREAS);
   "disciplines" is the ids of those to offer as filters, the likeliest first,
@@ -86,7 +87,7 @@ def log(request: Request, kind: str, data: dict) -> None:
 def search_projects(
     request: Request,
     q: str = Query("", max_length=2000),
-    source: Literal["surg", "expo", "theses", "nurj"] | None = None,
+    source: Annotated[list[Literal["surg", "expo", "theses", "nurj"]] | None, Query()] = None,
     year_from: int | None = Query(None, alias="from"),
     year_to: int | None = Query(None, alias="to"),
     discipline: Annotated[list[Literal[tuple(IDS)]] | None, Query()] = None,
@@ -97,11 +98,12 @@ def search_projects(
     years = None if year_from is None and year_to is None else (year_from or 0, year_to or 9999)
     start = time.perf_counter()
     chosen = tuple(dict.fromkeys([*(discipline or ()), *(d for a in area or () for d in AREAS[a])]))
-    results, total, offered, empty = app.state.index.search(q, source, years, n, offset, chosen)
+    sources = tuple(dict.fromkeys(source or ()))
+    results, total, offered, empty = app.state.index.search(q, sources, years, n, offset, chosen)
     cause = request.headers.get("x-cause")
     log(request, "search", {
         "q": q.replace("\x00", ""),  # Postgres refuses JSON holding a NUL
-        "source": source,
+        "source": list(sources),
         "from": year_from,
         "to": year_to,
         "discipline": list(chosen),
