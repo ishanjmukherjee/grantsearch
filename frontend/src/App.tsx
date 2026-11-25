@@ -1460,7 +1460,7 @@ function Result({
         <Abstract
           key={section.key}
           section={section}
-          heading={`The project as offered to applicants, ${academicYear(section.records![0])}`}
+          heading={`Faculty-provided project description, ${academicYear(section.records![0])}`}
           people={null}
           links={
             section.records![0].offered
