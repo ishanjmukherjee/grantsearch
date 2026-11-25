@@ -88,8 +88,8 @@ The site's name in the header is drawn, not set in a typeface. `design/wordmark/
   - [x] A result names the disciplines its project is filed under, after its source tags (`.filed` in `frontend/src/App.tsx`).
     - They are plain grey words, not tags: a tag is what a source says of the project, and the disciplines are Prowl's filing, the one thing on a result that no source prints.
     - Each is a link to the search with that discipline chosen. On the search page a click chooses it in place, as its chip would, and one the results are filtered by is in the accent and drops the filter. On a project's page it opens every project in the discipline.
-- [ ] Filter results by event and year, as two filters that combine: events (SURG, Expo, and each source added later, such as the Symposium, NURJ and the theses) and years (a range or a set). A project matches if any of its events falls in the chosen years, so "Expo, 2024" keeps a 2023 SURG grant presented at Expo 2024.
-  - Make the "SURG 20xx" and "Expo 20xx" tags on each result (`frontend/src/App.tsx`) clickable: clicking one sets the event and year filters to that tag. The tags should then look clickable without crowding the result.
+- [x] Filter results by source and year, as two filters that combine: sources (SURG, Expo with the Symposium, theses, NURJ) and a range of years. A project matches if one of its records is from the chosen source and in the chosen years, so "Expo, 2024" keeps a 2023 SURG grant presented at Expo 2024, and "SURG, 2019" drops a 2018 grant written up in NURJ in 2019.
+  - [x] The "SURG 20xx", "Expo 20xx", "Thesis 20xx" and "NURJ 20xx" tags on each result (`Tag` in `frontend/src/App.tsx`) are links: clicking one sets the source and year filters to that tag, and clicking one the search is filtered to drops them. An AY URG tag is plain text, as no source filter keeps AY URG grants.
   - This matters more with each source added, as results mix more kinds of work across more years.
 - [ ] Autocomplete in the search box.
   - Suggest completions as a visitor types: people's names (from `backend/people.py`), project titles, disciplines and common topic terms.

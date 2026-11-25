@@ -444,8 +444,10 @@ class Index:
         """The n projects after the first offset matching the filters, ranked
         for the query, or in browse order when it is empty; how many match in
         all; the disciplines to offer; and the empty ones (see the module
-        docstring). chosen is the disciplines to keep, any of them; empty
-        keeps every project."""
+        docstring). The source and years keep a project with a record that
+        meets both: a grant from one year and a paper from another is not a
+        grant from the paper's year. chosen is the disciplines to keep, any of
+        them; empty keeps every project."""
         within = self.filed[:, [disciplines.IDS.index(d) for d in chosen]].any(axis=1) if chosen else np.ones(len(self.projects), dtype=bool)
 
         def page(ranked: list[int], offered: list[str]) -> tuple[list[dict], int, list[str], list[str]]:
@@ -454,8 +456,11 @@ class Index:
             return [self.projects[i] for i in ranked[offset : offset + n]], len(ranked), offered, empty
 
         keep = np.array([
-            (source is None or any(r["source"] in FILTERS[source] for r in p["records"]))
-            and (year_range is None or any(year_range[0] <= y <= year_range[1] for y in years(p)))
+            any(
+                (source is None or r["source"] in FILTERS[source])
+                and (year_range is None or year_range[0] <= r["year"] <= year_range[1])
+                for r in p["records"]
+            )
             for p in self.projects
         ])
         quoted = phrases(query)
