@@ -33,12 +33,13 @@ The site logs every search with the results it returned, every project page load
 
 ## Wordmark
 
-The site's name in the header is set in Newsreader Italic and drawn as an outline, not as live text. `design/wordmark/outline.py` shapes the word with HarfBuzz and writes its outline to `frontend/src/wordmark.json`, which the header renders as an SVG in the text colour (`Wordmark` in `frontend/src/App.tsx`). The page loads no font file for it, so the name cannot appear in a fallback face.
+The site's name in the header is drawn, not set in a typeface. `design/wordmark/draw.py` draws the five letters as strokes of a broad-edged pen and writes their outline to `frontend/src/wordmark.json`, which the header renders as an SVG in the text colour (`Wordmark` in `frontend/src/App.tsx`).
 
-- Newsreader is by Production Type and is licensed under the SIL Open Font License.
-- The word is the SemiBold weight of the display cut (`wght` 600, `opsz` 72), spaced and kerned by the font.
-- The favicon is the same face's P on the purple tile it has always had, from the cut for small text and at a heavier weight (`ICON` in `outline.py`): at 16px the display cut's thin strokes would vanish. The same run writes it to `frontend/public/favicon.svg`.
-- To redraw either, download `Newsreader-Italic[opsz,wght].ttf` from [google/fonts](https://github.com/google/fonts/tree/5bd87dfc525c8a0d1d8529d3684716e00c3fc59a/ofl/newsreader) and run `uv run --with uharfbuzz --with fonttools python design/wordmark/outline.py` with the file's path. Check the result in the header at its real size, 30px tall on a desktop and 24px on a phone, before judging it enlarged.
+- The letters are a humanist italic, the hand scholars wrote in before it was cut as type. A pen held at 30 degrees gives the strokes their thick and thin: nothing is thickened or thinned by drawing.
+- The word stands low and wide, its capital and ascender rising little over the x-height.
+- Strokes that begin at the top are cut on one rising line and entered by a wedge. Strokes that end on the baseline are cut flat, all but the last: the l keeps the pen's exit, the one flourish in the word.
+- The favicon is the wordmark's P on the purple tile it has always had, drawn with a heavier pen (`ICON` in `draw.py`): at 16px the wordmark's own P would break up. The same run writes it to `frontend/public/favicon.svg`.
+- To change the drawing, edit the numbers in `draw.py` and run `uv run --with numpy --with shapely python design/wordmark/draw.py`. The docstrings of `draw.py` and `pen.py` say what each number moves. Check the result in the header at its real size, 32px tall on a desktop and 26px on a phone, before judging it enlarged.
 
 ## Roadmap
 
