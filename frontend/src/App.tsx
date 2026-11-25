@@ -424,13 +424,13 @@ function usePrompt({ once = false, shown = true } = {}) {
   }
 }
 
-// The site's name as drawn letters, not type: design/wordmark/draw.py draws
-// them and writes the outline. It takes the text colour, and its name is the
-// heading's and the link's.
+// The site's name in Newsreader Italic, as an outline and not live text:
+// design/wordmark/outline.py writes it. It takes the text colour, and its name
+// is the heading's and the link's.
 function Wordmark() {
   return (
     <svg className="wordmark" viewBox={`0 0 ${wordmark.width} ${wordmark.height}`} role="img" aria-label={SITE}>
-      <path d={wordmark.path} fillRule="evenodd" />
+      <path d={wordmark.path} />
     </svg>
   )
 }

@@ -24,7 +24,7 @@
   --pill: var(--surface);
   --pill-shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 0 0 1px rgb(0 0 0 / 0.04);
   /* The type scale. Every font-size is one of these. */
-  --wordmark: 2rem; /* 32px, 26px on phones */
+  --wordmark: 1.875rem; /* 30px, 24px on phones */
   --text-title: 1.125rem; /* 18px */
   --text-body: 1rem; /* 16px */
   --text-meta: 0.875rem; /* 14px */
@@ -87,8 +87,8 @@ body {
   padding: 48px 16px 80px;
 }
 
-/* The heading holds only the wordmark, so it is as tall as the drawing and
-   no taller: a line box would add room for descenders the drawing lacks. */
+/* The heading holds only the wordmark, so it is as tall as the outline and
+   no taller: a line box would add room for descenders the word lacks. */
 h1 {
   margin: 0 0 16px;
   line-height: 0;
@@ -99,7 +99,7 @@ h1 a {
   color: inherit;
 }
 
-/* From the l's top to the baseline; the capital is 0.89 of this. */
+/* From the l's top to the baseline; the capital is 0.95 of this. */
 .wordmark {
   display: block;
   height: var(--wordmark);
@@ -1041,7 +1041,7 @@ h2.section {
     padding-top: 28px;
   }
   :root {
-    --wordmark: 1.625rem;
+    --wordmark: 1.5rem;
   }
 }
 
